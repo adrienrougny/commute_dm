@@ -1,0 +1,10 @@
+AD_brain_GSE95587: fusiform gyrus tissue sections of autopsy-confirmed Alzheimer's cases
+COVID19_cl_GSE147507: primary human lung epithelium (NHBE), lung alveolar (A549) cells, transformed lung alveolar (A549) transduced with a vector expressing human ACE2, transformed lung-derived Calu-3 cells, infected with SARS-CoV-2
+COVID19_dopaminergic_GSE174745: dopamine (DA) neurons derived from human pluripotent stem cells (hPSCs), infected with SARS-CoV-2
+COVID19_hipsc_GSE179923: hipsc-derived endothelial cells, infected with SARS-CoV-2
+COVID19_pbmc_GSE152418: peripheral blood mononuclear cells of COVID-19 patients
+COVID19_pbmc_GSE251849: peripheral blood mononuclear cells of COVID-19 patients (recovered, long)
+MS_brain_GSE123496: five different CNS regions (hippocampus, frontal cortex, internal capsule, corpus callosum, and parietal cortex) from multiple sclerosis patients
+PD_brain_GSE136666: substantia nigra and putamen from Parkinson's disease patients
+PD_brain_GSE216281: frontal cortex gene expression across Braak Lewy body stage groups (Braak Lewy body stage 0, 1-4, 5 and 6)
+PD_brain_GSE68719: post-mortem BA9 brain tissue of PD patients
