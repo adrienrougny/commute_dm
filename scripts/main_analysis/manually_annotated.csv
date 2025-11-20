@@ -1,0 +1,185 @@
+label	type	databases	identifiers	comment	
+neuron NR5A1+ NR2F2-	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000540; uniprot:Q13285; uniprot:P24468		
+Ubiquitin proteasome system	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0000502		
+'kiss and run' vesicle contact	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0036465	to check; too general	
+Viral dsRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Mesh:D012367;Mesh:D012330		
+angiotensin 3-7	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit		can’t find	
+structural proteins	Protein	uniprot;pr;interpro;mesh;ncbiprotein	Mesh:D015678	to check if viral	
+PRDX	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	mesh:D054464	to check	
+POa-derived GABAergic interneuron GAD1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0011005; mesh:D011301; uniprot:Q99259		
+double-stranded RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Mesh:D012330		
+fission constriction site	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	GO:0048285	To check;not exact	
+POa-derived cell NR2F2+ NRP2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000000; mesh:D011301; uniprot:P24468; uniprot:O60462		
+angiotensin 1-4	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit		can’t find	
+RADI cell (P80a) NR2F2+ TAC3+ CALB1+ CNR1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000099;mesh:D056547;mesh:D018891		
+ssRNAoligo	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	SO:0001199;mesh:D009841		
+pyramidal cell NR2F2+ CCK+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000598; uniprot:P24468; uniprot:P06307		
+Orf9b ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	uniprot:P0DTD2;Mesh:D012330	to check; can’t find exact gene orf9b (part of N); can’t find subgenomic RNA	
+SNCA expression	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0010467;hgnc:SNCA		
+mt DNA	Gene	hgnc.symbol;mgi;rgd;ncbigene	mesh:D004272	to check	
+CGE-derived cell PAX6+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000000;ncit:C73851;mesh:D000097803;uniprot:P26367		
+Orf7b ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740574;Mesh:D012330	can’t find subgenomic RNA	
+neural precursor cell NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; uniprot:P24468; uniprot:Q8IXZ3		
+Ryanodine receptor	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	mesh:D019837		
+Dopaminergic synapse	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0098691		
+TOMM37	Protein	uniprot;pr;interpro;mesh;ncbiprotein	uniprot:Q9P0U1	to check; typo?	
+generic peptide	Protein	uniprot;pr;interpro;mesh;ncbiprotein	CHEBI:16670		
+Several drugs	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit	CHEBI:23888		
+Dopamine metabolism	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0042417		
+I3PROPA	Protein	uniprot;pr;interpro;mesh;ncbiprotein		can’t find	
+protein oxidative damage	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0034599	too general	
+Orf3a ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740569;Mesh:D012330	can’t find subgenomic RNA	
+amphiphilic macromolecules	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit	CHEBI:33839;Mesh:D013501		
+GABAergic interneuron HTR3A+ NR2F1+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0011005; uniprot:P46098; uniprot:P10589; uniprot:P24468		
+generic protein	Protein	uniprot;pr;interpro;mesh;ncbiprotein	Mesh:D011506		
+transcription of proinflammatory proteins	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0009299;GO:0006954	too check; not exact; could replace inflammatory response by cytokines, chemokines, etc.	
+Orf8 (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740577;SO:0001201	can’t find term for positive strand outside of SO	
+Orf6 ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740572;Mesh:D012330	can’t find subgenomic RNA	
+RNA Polymerase II-dependent Transcription 	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0006366		
+pacemaking activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim		can’t find	
+RAGs	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein		can’t find	
+Orf9b (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	uniprot:P0DTD2;SO:0001201	to check; can’t find exact gene orf9b (part of N); can’t find subgenomic RNA;can’t find term for positive strand outside of SO	
+GABAergic interneuron HTR3A+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0011005; uniprot:P46098; uniprot:P24468		
+(-)gRNA (including ORF1a ORF1b)	Gene	hgnc.symbol;mgi;rgd;ncbigene	Ncbigene:43740578;SO:0001200	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+Nsp4 (+)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbiprotein:YP_009725300;SO:0001201	Can’t find gene;can’t find term for positive strand outside of SO	
+NR2F1 signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0023052;uniprot:P10589		
+MTOR AMPK signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0031929		
+Axonal remodeling and CDK5 signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	Mesh:D009473;GO:0023052;uniprot:Q00535		
+enhancer 643	Gene	hgnc.symbol;mgi;rgd;ncbigene		can’t find	
+Endoplasmic Reticulum activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0003674;GO:0005783	to check (not sure how much molecule function term can be applied to a cc)	
+Nsp4 (-)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbiprotein:YP_009725300;SO:0001200	Can’t find gene;can’t find term for negative strand outside of SO	
+Orf14 ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Uniprot:P0DTD3;Mesh:D012330	Can’t find gene;can’t find subgenomic RNA	
+ POa-derived cell NR2F2- NRP2-	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000000; mesh:D011301; uniprot:P24468; uniprot:O60462	typo: leading space	
+Suggestions for curation	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim		not relevant; to check	
+P33b neurogliaform cell NR2F2+ NOS1+ NPY+ ACTN2+ GAD2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000103; uniprot:P24468; uniprot:P29475; uniprot:P01303; uniprot:P35609; uniprot:Q05329		
+neural precursor cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; uniprot:P24468		
+Nsp6 (-)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbiprotein:YP_009742613;SO:0001200	Can’t find gene;can’t find term for negative strand outside of SO	
+non-vesicular iron import	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0033212	too general	
+Unfolded protein	Protein	uniprot;pr;interpro;mesh;ncbiprotein	GO:0051082	can’t find for protein, put binding activity	
+GABAergic interneuron NR2F2+ CCK+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0011005; uniprot:P24468; uniprot:P06307		
+L-type calcium channel Cav1.3 and Cav1.2	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	uniprot:Q13936;uniprot:Q01668		
+cyclic nucleotide phosphodiesterase	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	eccode:3.1.4.17	can’t find other dbs	
+outer membrane fusion	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	GO:0019064	to check	
+LRRK2 activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0003674;uniprot:Q5S007		
+ POa-derived cell NR2F2+ NRP2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000000; mesh:D011301; uniprot:P24468; uniprot:O60462	typo: leading space	
+mt mRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	mesh:C029305		
+M (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740571;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+D-Ala2-GIP-glu-PAL	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit		can’t find	
+Orf7a (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Uniprot:P0DTC7;SO:0001200	can’t find term for negative strand outside of SO	
+S ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740568;Mesh:D012330	can’t find subgenomic RNA	
+MGE -neural precursor cell LHX6+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; ncit:C25232;mesh:D000097803;uniprot:Q9UPM6; uniprot:P24468		
+Interferon 1 pathway	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0034340		
+cortical interneuron LHX6+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0008031; uniprot:Q9UPM6; uniprot:P24468		
+Signalling in striatal neurons	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0023052;BTO:0004225	can’t find term outside of BTO	
+Nsp3 (+)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbiprotein:YP_009725299;SO:0001201	can’t find term for positive strand outside of SO; can’t find term for gene	
+basket cell (P75b) NR2F2+ CCK+ CNR1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000118; uniprot:P24468; uniprot:P06307; uniprot:P21554		
+cortical GABAergic interneuron HTR3A+ VIP+ SP8+ NR2F1-	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0010011; uniprot:P46098; uniprot:P01282; uniprot:Q8IXZ3; uniprot:P10589		
+pyramidal cell	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000598		
+dsRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Mesh:D012330	harmonize: double-stranded RNA	
+cytokine storm	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim		can’t find	
+Go to 'SHH signaling' submap	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0023052; uniprot:Q15465	related: GO:0007224	
+RTC and transcription pw	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	R-HSA-9694682	change to “RTC and transcription”?; to check	
+neocortical interneuron NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0008031;mesh:D019579; uniprot:P24468; uniprot:Q8IXZ3		
+Endocytic vesicles	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0030139		
+DNA	Gene	hgnc.symbol;mgi;rgd;ncbigene	mesh:D004247		
+HCoVs Type I Ifn signalling(WP4868)	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	Wikipathways:WP4868		
+(+)sgRNA (2-9)	Gene	hgnc.symbol;mgi;rgd;ncbigene		can’t find	
+mitochondrial derived vesicle	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	GO:0099073		
+AQW051	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit	pubchem.compound:50914822		
+corticothalamic neuron	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein			
+mt DNA replication	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0006260;mesh:D004272		
+Orf6 (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740572;SO:0001200	can’t find term for negative strand outside of SO;can’t find subgenomic RNA	
+MDG548	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit	pubchem.compound:1020637		
+N (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740575;SO:0001200	can’t find term for negative strand outside of SO;can’t find subgenomic RNA	
+antiviral proteins	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	Mesh:D011506;Mesh:D000998		
+Maintenance of tight junction	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0045217	too general	
+GABAergic interneuron NR2F2+ GAD1+ GAD2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0011005;  uniprot:P24468; uniprot:Q99259; uniprot:Q05329		
+GABAergic interneuron NR2F2+ CALB2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0011005;  uniprot:P24468; uniprot:P22676		
+SARS-CoV infection	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	reactome:R-HSA-9694516		
+LGE - neural precursor cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; ncit:C25230; mesh:D000097803;uniprot:P24468		
+S (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740568;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+neuromelanin	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit	mesh:C014121		
+CGE- derived GABAergic cell NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000617; ncit:C73851; mesh:D000097803;uniprot:P24468; uniprot:Q8IXZ3		
+5'cap-viral-RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq		can’t find	
+P1788	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit		can’t find	
+Nsp6 (+)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbiprotein:YP_009725302;SO:0001201	can’t find term for positive strand outside of SO; can’t find term for gene	
+POa - derived cell NR2F2+ LHX6+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000000; mesh:D011301;uniprot:P24468; uniprot:Q9UPM6		
+MGE - neural precursor cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; ncit:C25232;mesh:D000097803; uniprot:P24468		
+SRR signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0023052; uniprot:Q9GZT4		
+Orf7b (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740574;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+Postsynaptic terminal of a DA neuron	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0098794;GO:0098691		
+I3LACT	Protein	uniprot;pr;interpro;mesh;ncbiprotein		can’t find	
+enhancer 840	Gene	hgnc.symbol;mgi;rgd;ncbigene		can’t find	
+Orf7a ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Uniprot:P0DTC7;Mesh:D012330	can’t find subgenomic RNA	
+T2	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0006909;CL:0000129		
+IFN-sensitive-response-element	Gene	hgnc.symbol;mgi;rgd;ncbigene	SO:0001715	can’t find outside of SO	
+OXPHOS subunits encoded in mtDNA	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	Hgnc.group:1974;GO:0006119	to check; homegenize: mtDNA encoded OXPHOS units	
+M ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740571;Mesh:D012330	can’t find subgenomic RNA	
+(+)gRNA (including ORF1a ORF1b)	Gene	hgnc.symbol;mgi;rgd;ncbigene	Ncbigene:43740578;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+damaged mt DNA	Gene	hgnc.symbol;mgi;rgd;ncbigene	Mesh:D004272;mesh:D004249		
+mRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	mesh:D012333		
+enhancer 1329	Gene	hgnc.symbol;mgi;rgd;ncbigene		can’t find	
+mtDNA encoded OXPHOS units	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	Hgnc.group:1974;GO:0006119	to check	
+viral accessory	Protein	uniprot;pr;interpro;mesh;ncbiprotein	mesh:D054334		
+neuron NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000540; uniprot:uniprot:P24468		
+Orf9b (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	uniprot:P0DTD2;SO:0001200	can’t find term for negative strand outside of SO;can’t find subgenomic RNA	
+MASP2 deposition	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim		can’t find term for deposition	
+CGE-derived Pax6+ cell	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000000;ncit:C73851;mesh:D000097803;uniprot:P26367	homogenize: CGE-derived cell PAX6+	
+Orf7a (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Uniprot:P0DTC7;SO:0001201	can’t find term for positive strand outside of SO; can’t find gene for orf7a;can’t find subgenomic RNA	
+Guanine nucleotide synthesis	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0046099		
+RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Mesh:D012313	can’t find term for negative strand outside of SO	
+cortical GABAergic interneuron NR2F1- RELN+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0010011; uniprot:P10589;uniprot:P78509		
+PI3K/AKT signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0023052;mesh:D019869;		
+ssRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	SO:0001199	can’t find term for single strand outside of SO	
+Glutathione metabolism	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0006749		
+Chaperone mediated autophagy	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0061684		
+mt DNA damage	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	Mesh:D004272;mesh:D004249	homogenize: damaged mt DNA	
+neuromelanin granules	Protein	uniprot;pr;interpro;mesh;ncbiprotein	GO:0048770;chebi:89634		
+E (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740570;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+FOXO3 activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0003674;uniprot:O43524		
+type I IFN response	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0034340		
+dihydroorotate dehydrogenase holoenzyme	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit	Eccode:1.3.5.2		
+basket cell (P57b) NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000118; uniprot:P24468	typo: P57b→P75b	
+HCoVs autophagy (WP4863)	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	Wikipathways:4863		
+6	Protein	uniprot;pr;interpro;mesh;ncbiprotein		don’t know where it comes from	
+cortical GABAergic interneuron HTR3A+ NR2F1+ PROX1+ CALB2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0010011; uniprot:P46098; uniprot:P10589; uniprot:Q9NZN1; uniprot:P22676		
+Nsp3 (-)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbiprotein:YP_009725299;SO:0001200	can’t find term for negative strand outside of SO; can’t find term for gene	
+GPX	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	interpro:IPR000889		
+dsRNA_vesicle	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	GO:0031410;Mesh:D012330		
+Orf14 (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Uniprot:P0DTD3;SO:0001200	can’t find term for negative strand outside of SO;can’t find subgenomic RNA	
+cholinergic cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000108;uniprot:P24468		
+Bcl-XL interacting BH3-only proteins	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein		can’t find; would be better to define this positively	
+neuron FOXP2+ NR2F1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000540; uniprot:O15409; uniprot:P10589		
+Orf3a (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740569;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+Mitochondrial biogenesis	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	reactome:R-HSA-1592230		
+Orf14 (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Uniprot:P0DTD3;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+cortical interneuron NR2F2+ RELN+ HTR3A+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0008031; uniprot:P24468; uniprot:P78509; uniprot:P46098		
+ubit_traget	Protein	uniprot;pr;interpro;mesh;ncbiprotein		typo? Can’t find	
+nsp2	Protein	uniprot;pr;interpro;mesh;ncbiprotein	Ncbiprotein:YP_009725298		
+Orf6  (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740572;SO:0001201	can’t find term for positive strand outside of SO;can’t find subgenomic RNA	
+Dopaminergic transcription	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0006351;GO:1903350		
+Cajal-Retzius cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000695; uniprot:P24468		
+enhancer 636	Gene	hgnc.symbol;mgi;rgd;ncbigene		can’t find	
+neocortical interneuron NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0008031;mesh:D019579; uniprot:P24468		
+CREB activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0003674;mesh:D017362		
+ivy cell NR2F2+ NOS1+ NPY+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042013; uniprot:P24468; uniprot:P29475; uniprot:P01303		
+pallial-derived cell TBR1+ LHX2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000000; ncit:C45874;mesh:D013687;uniprot:Q16650; uniprot:P50458		
+Wnt signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0016055		
+SHH signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim	GO:0023052	GO:0023052; uniprot:Q15465	related: GO:0007224
+radial glia like cells	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000681		
+DA3-CH	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit		can’t find; maybe CHEBI:194186	
+LYNUS	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim		can’t find	
+E ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740570;Mesh:D012330	can’t find subgenomic RNA	
+JNK	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	interpro:IPR008351		
+angiotensin 1-12	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit		can;t find	
+Purkinje cell NR2F2+ FOXP2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000121; uniprot:P24468; uniprot:O15409		
+MGE- neural precursor cell NR2F2+ NKX2-1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; ncit:C25232;mesh:D000097803; uniprot:P24468; uniprot:P43699		
+interneuron-selective cell NR2F2+ VIP+ CALB2+ PENK+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	pubmed:20130170; uniprot:P24468; uniprot:P01275; uniprot:P22676; uniprot:P01210	can’t find; previously annotated with pubmed	
+viral RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	mesh:D012367		
+radiatum-retrohippocampal cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	mesh:D056547;GO:0043005;mesh:D006179		
+ LGE-derived GABAergic cell	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:0000617;ncit:C25230;mesh:D000097803		
+N ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740575;Mesh:D012330	can’t find subgenomic RNA	
+ISGs	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq		can’t find; could have gene and response to each interferon type	
+S (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq	Ncbigene:43740568;SO:0001200	can’t find term for negative strand outside of SO;can’t find subgenomic RNA	
+MGE - neural precursor cell NR2F2+ SST+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; ncit:C25232;mesh:D000097803; uniprot:P24468;uniprot:P61278		
+LGE - neural precursor cell NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein	CL:4042021; ncit:C25230; mesh:D000097803;uniprot:P24468; uniprot:Q8IXZ3		

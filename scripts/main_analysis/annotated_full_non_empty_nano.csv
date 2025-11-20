@@ -1,0 +1,486 @@
+name	type	db	id (predicted)	label (predicted)	prediction correct	comment (predicted id)	uri (manual)	comment (uri manual)	
+filamentous actin	Complex	go	GO:0031941	filamentous actin	y				
+ephrin receptor	Receptor	UniProt	P29317	Ephrin type-A receptor 2	n	too specific	interpro:IPR050449		
+filamentous actin	Complex	go	GO:0005884	actin filament	y				
+Ca2+	Ion	CheBI	29108	calcium(2+) ion	n	output is not well formatted	Chebi:29108		
+DVL	GenericProtein	UniProt	P54792	Segment polarity protein dishevelled homolog DVL-1	y				
+Voltage-gated potassium channel	Complex	go	GO:0008076	voltage-gated potassium channel complex	y				
+Voltage-dependent calcium channel, T-type	Complex	go	GO:0005891	voltage-gated calcium channel complex	n	too general	mesh:D020747		
+L-glutamate	SimpleMolecule	chebi	CHEBI:29985	L-glutamate	y				
+TNF	GenericProtein	uniprot	P01375	Tumor necrosis factor	y				
+dopamine	SimpleMolecule	chebi	CHEBI:18243	dopamine	y				
+Ca2+	Ion	chebi	CHEBI:39124	calcium ion	n	too general	Chebi:29108		
+GDNF	GenericProtein	UniProt	P39905	Glial cell line-derived neurotrophic factor	y				
+NMDAR:ligand complex	Complex	go	GO:0017146	NMDA receptor complex	n	part only	GO:0017146		
+NR1 : NR2	Complex	go	GO:0017146	NMDA selective glutamate receptor complex	y				
+rapid-onset dystonia parkinsonism	Phenotype	mondo	MONDO:0007496	dystonia 12	y				
+K+	Ion	Chebi	CHEBI:29103	potassium(1+)	y				
+Ca2+	Ion	CHEBI	CHEBI:39124	calcium ion	n	too general	Chebi:29108		
+Na+	Ion	chebi	CHEBI:29101	sodium(1+)	y				
+DRD2	Receptor	uniprot	P14416	Dopamine D2 receptor	y				
+26S proteasome	Complex	go	GO:0000502	proteasome complex	n	too general	mesh:C061553		
+neurogliafrom cell NR2F2+ RELN+ ACTN2+ GABRA1+	Complex	GO	GO:1902711	GABA-A receptor complex	n	not possible;typo: “neurogliafrom”→”neurogliaform”	CL:0000693;uniprot:P24468;uniprot:P78509;uniprot:P35609;uniprot:P14867		
+cortical GABAergic interneuron  HTR3A+ NR2F1+ PROX1+ CALB2+	Complex	mesh	D059330	GABAergic Neurons	n	not possible	CL:0010011;uniprot:P46098;uniprot:P10589;uniprot:Q92786;uniprot:P22676		
+enhancer 611	Gene	HGNC	ZNF611	zinc finger protein 611	y				
+CGE- derived GABAergic cell HTR3A+ SP8+	Complex	MeSH	D059330	GABAergic Neurons	n	not possible	CL:0000617;ncit:C73851;mesh:D000097803;uniprot:P46098;uniprot:Q8IXZ3		
+CGE-derived GABAergic cell	Complex	cell ontology	CL:4042032	PAX6 GABAergic cortical interneuron	n	not possible	CL:0000617;ncit:C73851;mesh:D000097803		
+GABAergic interneuron NR2F2+ HTR3A+	Complex	go	GO:0021894	cerebral cortex GABAergic interneuron differentiation	n	not possible	CL:0011005;uniprot:P24468;uniprot:P46098		
+2-deoxyglucose	SimpleMolecule	CHEBI	CHEBI:15866	2-deoxy-D-glucose	y				
+astrocyte production	Phenotype	hp	HP:0100707	Abnormal astrocyte morphology	n		GO:0048708	to check	
+determination of ventral identity	Phenotype	GO	GO:0048264	determination of ventral identity	y				
+enhancer 654	Gene	hgnc.symbol	ZNF654	zinc finger protein 654	y				
+neocortical interneuron NR2F2+ SST+	Complex	cell ontology	CL:4023017	sst GABAergic cortical interneuron	n	not possible	mesh:D019579;uniprot:P24468;uniprot:P61278		
+MGE-derived GABAergic cell	Complex	MeSH	D059330	GABAergic neuron	n	not possible	CL:0000617;ncit:C25232;mesh:D000097803		
+cortical GABAergic interneuron  HTR3A+ VIP+ SP8+ NR2F1-	Complex	Cell Ontology	CL:4023016	VIP GABAergic cortical interneuron	n	not possible	CL:0010011;uniprot:P46098;uniprot:P01282;uniprot:Q8IXZ3;uniprot:P10589		
+ neural precursor cell proliferation	Phenotype	GO	GO:0061351	neural precursor cell proliferation	y				
+CGE- derived GABAergic cell HTR3A+ NR2F2+	Complex	Cell Ontology (CL)	CL:4023011	lamp5 GABAergic cortical interneuron	n	not possible	CL:0000617;ncit:C73851;mesh:D000097803;uniprot:P46098;uniprot:P24468		
+glucose homeostasis	Phenotype	hp	HP:0011014	Abnormal glucose homeostasis	n	too specific	GO:0042593		
+energy metabolism production	Phenotype	hp	HP:0003287	Abnormality of mitochondrial metabolism	n	too specific	GO:0006112	to check	
+captopril	Drug	DrugBank	DB01197	Captopril	y				
+free radical scavenger	SimpleMolecule	CHEBI	CHEBI:48578	radical scavenger	n	too general	Mesh:D016166		
+peroxynitrite	SimpleMolecule	CheBI	CHEBI:25941	peroxynitrite	y				
+GDNF	GenericProtein	UniProt	P39905	Glial cell line-derived neurotrophic factor	y				
+BDNF	GenericProtein	UniProt	P23560	Brain-derived neurotrophic factor	y				
+L-glutamate	SimpleMolecule	chebi	CHEBI:29985	L-glutamate	y				
+L-dopa	Drug	DrugBank	DB01235	Levodopa	y				
+dopamine	SimpleMolecule	chebi	CHEBI:18243	dopamine	y				
+histamine	SimpleMolecule	Chebi	CHEBI:18295	Histamine	y				
+norepinephrine	SimpleMolecule	pubchem.compound	439260	Norepinephrine	y				
+TNF	GenericProtein	UniProt	P01375	Tumor necrosis factor	y				
+L-glutamate	SimpleMolecule	chebi	CHEBI:16015	L-glutamic acid	n	CHEBI:29985	CHEBI:29985		
+serotonin	SimpleMolecule	chebi	CHEBI:28790	serotonin	y				
+GABA	SimpleMolecule	chebi	CHEBI:16865	gamma-aminobutyric acid	y				
+prostaglandin E2	SimpleMolecule	chebi	CHEBI:15551	prostaglandin E2	y				
+ROS	SimpleMolecule	Chebi	CHEBI:26523	reactive oxygen species	y				
+HSP70	RNA	hgnc.symbol	HGNC:5232	HSPA1A (HSP70-1)	y				
+Na+	Ion	chebi	CHEBI:29101	sodium(1+)	y				
+HSP70	GenericProtein	UniProt	P0DMV8	Heat shock 70 kDa protein 1A	n	too specific	hgnc.group:583		
+HSP40	GenericProtein	InterPro	IPR001623	DnaJ/Hsp40 chaperone	n		hgnc.group:584		
+HSP90	RNA	HGNC	HGNC:5253	Heat shock protein 90 alpha family class A member 1	n	too specific	hgnc.group:586		
+DNAJB	RNA	hgnc.symbol	DNAJB1	DNAJB1	n	too specific	hgnc.symbol:DNAJB1;hgnc.symbol:DNAJB2;hgnc.symbol:DNAJB3;hgnc.symbol:DNAJB4;hgnc.symbol:DNAJB5;hgnc.symbol:DNAJB6;hgnc.symbol:DNAJB7;hgnc.symbol:DNAJB8;hgnc.symbol:DNAJB9;hgnc.symbol:DNAJB11;hgnc.symbol:DNAJB12;hgnc.symbol:DNAJB13;hgnc.symbol:DNAJB14		
+Na+	Ion	chebi	CHEBI:29101	sodium ion	y				
+HSP40	GenericProtein	UniProt	P25685	DnaJ heat shock protein family (Hsp40) member 1	n	too specific	hgnc.group:584		
+HSP70	GenericProtein	uniprot	P0DMV8	Heat shock 70 kDa protein 1A	n	too specific	hgnc.group:583		
+NO	SimpleMolecule	ChEBI	CHEBI:16480	nitric oxide	y				
+Ca2+	Ion	chebi	CHEBI:29108	calcium(2+) [ChEBI:29108]	y				
+Na+	Ion	CHEBI	CHEBI:29101	sodium ion	y				
+NFE2L2	GenericProtein	uniprot	Q16236	NFE2L2 (NF-E2-related factor 2)	y				
+nuclear RCC RNA	RNA	hgnc.symbol	HGNC:53864	LNCARSR (lncRNA regulator of Akt signaling associated with HCC and RCC)	n	to check; can’t find			
+SCF-Cdc4 complex	Complex	go	GO:0019005	SCF ubiquitin ligase complex	n	too general	GO:0097660		
+Fe-S cluster	SimpleMolecule	chebi	CHEBI:30408	iron-sulfur cluster	y				
+KARS	GenericProtein	UniProt	Q15046	Lysine--tRNA ligase (LysRS KARS1)	y				
+GARS	GenericProtein	UniProt	P41250	Glycine--tRNA ligase	y				
+Respiratory Chain Components	Complex	go	GO:0045271	respiratory chain complex I	n	too specific;can’t find			
+Fe-S cluster	SimpleMolecule	Chebi	CHEBI:30408	iron-sulfur cluster	y				
+Fe-S cluster	SimpleMolecule	pubchem.compound	4082	Iron-sulfur cluster	n	a pubchem.substance	CHEBI:30408		
+mTORC1	Complex	GO	GO:0031931	TORC1 complex	y				
+NO	SimpleMolecule	chebi	CHEBI:16480	nitric oxide	y				
+nuclear RCC RNA	RNA	hgnc.symbol	LNCARSR	lncRNA regulator of Akt signaling associated with HCC and RCC	n	to check; can’t find			
+OXPHOS assembly factors	Complex	go	GO:0033108	mitochondrial respiratory chain complex assembly	n	To check;can’t find			
+K+	Ion	CHEBI	CHEBI:29103	potassium(1+) ion	y				
+H+	Ion	chebi	CHEBI:24636	proton	y				
+ribosome	Complex	go	GO:0005840	ribosome	y				
+HTRA2	GenericProtein	UniProt	O43464	Serine protease HTRA2, mitochondrial	y				
+mitochondrion	Complex	go	GO:0098798	mitochondrial protein-containing complex	n		GO:0005739		
+cAMP/cGMP protein kinase	GenericProtein	UniProt	PRKG1 (UniProt ID Q13976)	Protein kinase cGMP-dependent 1	n	output is not well formatted	Uniprot:Q13976		
+inner membrane fusion	Complex	GO	GO:1990627	mitochondrial inner membrane fusion	y	to check			
+mannose-6-phosphate isomerase	GenericProtein	UniProt	P34949	Mannose-6-phosphate isomerase	y				
+mannokinase	GenericProtein	UniProtKB/Swiss-Prot	P82680	mannokinase	y				
+hexokinase	GenericProtein	UniProt	P19367	Hexokinase-1	y				
+hexokinase	GenericProtein	UniProt	P19367	Hexokinase-1	y				
+mannokinase	GenericProtein	UniProt	P82680	mannokinase	y				
+mannose-6-phosphate isomerase	GenericProtein	uniprot	P00946	Mannose-6-phosphate isomerase	n	wrong organism	Uniprot:P34949		
+glucose	SimpleMolecule	pubchem.compound	5793	Glucose	y				
+(S)-lactate	SimpleMolecule	Chebi	CHEBI:16651	(S)-lactate	y				
+globular actin	Complex	Reactome	R-HSA-201857	G-actin [cytosol]	y				
+globular actin	Complex	go	GO:0005884	actin filament	n		Mesh:D000199	too general	
+cysteine	SimpleMolecule	pubchem.compound	5862	Cysteine	y				
+L-glutamic acid	SimpleMolecule	Chebi	CHEBI:16015	L-glutamic acid	y				
+L-cysteine	SimpleMolecule	chebi	CHEBI:15356	L-cysteine	y				
+MPTP	SimpleMolecule	pubchem.compound	1388	MPTP	y				
+L-type calcium channel Cav1.3 and Cav1.2	Complex	go	GO:0005891	voltage-gated calcium channel complex	n	too general	GO:1990454 	still too general; could put cav1.2 and cav2.3	HGNC:1390;HGNC:1391
+PKA catalytic subunit	Complex	GO	GO:0005952	cAMP-dependent protein kinase complex	n	container	UniProt: P17612;UniProt: P22694;UniProt: P22612		
+L-type calcium channel Cav1.3 and Cav1.2	Complex	go	GO:0005891	voltage-gated calcium channel complex	n	too general	GO:1990454 	still too general; could put cav1.2 and cav2.3	HGNC:1390;HGNC:1391
+Ca2+	Ion	chebi	CHEBI:29108	calcium(2+) ion	y				
+acetylcholine	SimpleMolecule	chebi	CHEBI:15355	Acetylcholine	y				
+PPP1R1B	GenericProtein	UniProt	Q9UD71	Protein phosphatase 1 regulatory inhibitor subunit 1B	y				
+K+	Ion	PubChem Compound	813	potassium ion	y				
+cAMP/cGMP protein kinase	GenericProtein	UniProt	Q13976	cGMP-dependent protein kinase 1	y				
+PG01037	Drug	pubchem.compound	11477180	PG01037 (dopamine D3 receptor antagonist)	y				
+CTSB	GenericProtein	uniprot	P07858	Cathepsin B	y				
+APP	GenericProtein	uniprot	P05067	Amyloid-beta precursor protein	y				
+Ca2+	Ion	pubchem.compound	271	calcium(II) ion	y				
+IL1B	GenericProtein	uniprot	P01584	Interleukin-1 beta	y				
+NO	SimpleMolecule	pubchem.compound	145068	Nitric oxide	y				
+prostaglandin E2	SimpleMolecule	pubchem.compound	5280360	Prostaglandin E2	y				
+Go to 'Iron metabolism' submap	Phenotype	MONDO	MONDO:0002279	iron metabolism disease	n		GO:0006879	to check	
+Cu1+	Ion	chebi	CHEBI:53472	copper(I) chloride	n		CHEBI:49552		
+ATP	SimpleMolecule	pubchem.compound	5957	Adenosine triphosphate	y				
+glutathione	SimpleMolecule	chebi	CHEBI:16856	glutathione	y				
+hydrogen peroxide	SimpleMolecule	chebi	CHEBI:16240	hydrogen peroxide	y				
+ADP	SimpleMolecule	pubchem.compound	6022	Adenosine diphosphate	y				
+FOXO3	GenericProtein	UniProt	O43524	FOXO3	y				
+SNX-BAR sub-complex	Complex	go	GO:0030905	retromer tubulation complex	y	to check			
+retromer VPS sub-complex	Complex	GO	GO:0030906	retromer, cargo-selective complex	y	to check			
+neutral sphingomyelinase	GenericProtein	UniProt	SMPD3	sphingomyelin phosphodiesterase 3, neutral membrane (neutral sphingomyelinase II)	n	output is not well formatted; too specific			
+retromer VPS sub-complex	Complex	GO	GO:0030906	retromer, cargo-selective complex	y	to check			
+CTSD (44kDa)	GenericProtein	uniprot	P07339	Cathepsin D	y				
+Ca2+	Ion	chebi	CHEBI:29108	calcium(2+) ion	y				
+hydrolase	GenericProtein	MeSH	D006867	Hydrolases	y				
+ceroid lipofuscinosis, neuronal	Phenotype	MESH	D009472	neuronal ceroid lipofuscinosis	y				
+APP	RNA	HGNC	HGNC:620	amyloid beta precursor protein	y				
+FTH1	RNA	hgnc.symbol	FTH1	Ferritin heavy chain 1	y				
+SLC40A1	RNA	hgnc.symbol	SLC40A1	SLC40A1	y				
+FTL	RNA	hgnc	HGNC:3999	ferritin light chain	y				
+TFRC	RNA	hgnc.symbol	TFRC	transferrin receptor	y				
+SLC11A2	RNA	hgnc.symbol	SLC11A2	Solute carrier family 11 member 2	y				
+Metabotropic Glutamate Receptor	Complex	GO	GO:0038037	G protein-coupled receptor dimeric complex	n	too general	hgnc.group:281		
+13J	SimpleMolecule	pubchem.compound	44263465	Benzamide derivative, 13j	y	to check			
+mortor activity	Phenotype	hp	HP:0002375	Hypokinesia	n	too specific;typo: motor activity	Mesh:D009043		
+Spermine NONOate	SimpleMolecule	pubchem.compound	5259	Spermine NONOate	n		Pubchem.compound:135412725		
+H+	Ion	pubchem.compound	1038	Hydrogen ion	y				
+Ca2+	Ion	pubchem.compound	271	calcium(2+) ion	y				
+BAX	GenericProtein	UniProt	Q07812	Apoptosis regulator BAX	y				
+L-glutamate	SimpleMolecule	CHEBI	CHEBI:29985	L-glutamate(1-)	y				
+glutamine	SimpleMolecule	CHEBI	CHEBI:18050	L-glutamine	y				
+L-serine	SimpleMolecule	chebi	CHEBI:17115	L-serine	y				
+glycyrrhizin	Drug	DrugBank	DB13751	Glycyrrhizic acid	y				
+Type I IFN	Complex	mesh	D053633	Receptor, Interferon alpha beta	y				
+TF NFE2L2	Complex	Reactome	R-HSA-9795932	NFE2L2 gene:p-AcK-NFE2L2:CREBBP,EP300:MAFK	n	too specific	Uniprot:Q16236		
+L-glutamate	SimpleMolecule	Chebi	CHEBI:29985	L-glutamate(1â)	y				
+IL6	GenericProtein	UniProt	P05231	Interleukin-6	y				
+nitric oxide	SimpleMolecule	chebi	CHEBI:16480	Nitric oxide	y				
+FASLG	GenericProtein	UniProt	P48023	Fas ligand	y				
+K+	Ion	chebi	CHEBI:29103	potassium(1+) ion	y				
+Na+	Ion	CHEBI	CHEBI:29101	sodium(1+)	y				
+Ca2+	Ion	chebi	CHEBI:29108	calcium(2+) ion	y				
+IFNG	GenericProtein	uniprot	P01579	Interferon gamma	y				
+IL1B	GenericProtein	uniprot	P01584	Interleukin-1 beta	y				
+SEMA3A	GenericProtein	UniProt	Q14563	Semaphorin-3A	y				
+cysteine	SimpleMolecule	chebi	CHEBI:15356	cysteine	y				
+prostaglandin E2	SimpleMolecule	pubchem.compound	5280360	Prostaglandin E2	y				
+Ca2+ channel (N and P/Q)	Complex	go	GO:0034704	calcium channel complex	n	too general	Uniprot:O00555;uniprot:Q00975		
+V-D Ca2+ channel, P/Q-A-1 subunit	GenericProtein	Uniprot	O00555	Calcium voltage-gated channel subunit alpha-1A	y				
+V-D Ca2+ channel, N-A-1 subunit	GenericProtein	UniProt	Q00975	Voltage-dependent calcium channel subunit alpha-1B	y				
+G-protein, beta subunit	GenericProtein	UniProt	P62899	G protein subunit beta-1	n		Uniprot:P62873		
+G-protein, gamma subunit	GenericProtein	UniProt	P63211	Guanine nucleotide-binding protein G(T) subunit gamma-T1	y				
+Ca2+ channel (N and P/Q)	Complex	GO	GO:0005891	voltage-gated calcium channel complex	y				
+clathrin, heavy chain	GenericProtein	UniProt	Q00610	Clathrin heavy chain 1	n	too specific	mesh:D033922		
+clathrin, light chain	GenericProtein	uniprot	P09496	Clathrin light chain A	n	too specific	mesh:D033941		
+clathrin, heavy chain	GenericProtein	UniProt	Q00610	CLTC (clathrin heavy chain 1)	n	too specific	mesh:D033922		
+clathrin, light chain	GenericProtein	UniProt	P09496-1	Clathrin light chain A	n	too specific	mesh:D033941		
+PG01037	Drug	pubchem.compound	11477180	PG01037 (D3 receptor antagonist)	y				
+clathrin, heavy chain	GenericProtein	UniProt	Q00610	Clathrin heavy chain 1	n	too specific	mesh:D033922		
+clathrin, light chain	GenericProtein	UniProt	P09496	Clathrin light chain A	n	too specific	mesh:D033941		
+V-ATPase proteolipid subunit	GenericProtein	UniProt	P27449	V-type proton ATPase 16 kDa proteolipid subunit c	y	to check if not too specific			
+dopamine	SimpleMolecule	pubchem.compound	681	Dopamine	y				
+H+	Ion	CHEBI	CHEBI:24636	proton	y				
+LRRK2	GenericProtein	UniProt	P27495	Leucine-rich repeat kinase 2	n		Uniprot:Q5S007		
+H+	Ion	chebi	CHEBI:15378	hydron	n	but actually correct; just we write protons with “H+”	CHEBI:24636		
+mir-184*	RNA	HGNC	MIR184	microRNA-184	y				
+Let7	RNA	ncbigene	MIRLET7A1	microRNA let-7a-1	y	to check			
+mir-184*	RNA	hgnc.symbol	MIR184	microRNA MIR184	y				
+Ragulator	Complex	go	GO:0071986	Ragulator complex	y				
+Let7	RNA	hgnc.symbol	MIRLET7A1	microRNA let-7a-1	y	to check			
+Ca2+	Ion	chebi	CHEBI:29108	calcium(2+) ion	y				
+26S proteasome	Complex	go	GO:0000502	proteasome complex	n	too general	mesh:C061553		
+Lewy body formation	Phenotype	HP (Human Phenotype Ontology)	HP:0100315	Lewy bodies	n		GO:0140121		
+Nicotine signaling	Phenotype	mondo	MONDO:0008575	nicotine dependence	n		GO:0071316		
+Actin filament organization	Phenotype	go	GO:0007015	actin filament organization	y				
+Histamine signaling	Phenotype	hp	HP:0034446	Elevated circulating histamine concentration	n		GO:0071420		
+Mitochondrial and ROS metabolism	Phenotype	hp	HP:0011922	Abnormal activity of mitochondrial respiratory chain	n	too specific	GO:0045333;GO:0072593	to check	
+Iron metabolism	Phenotype	hp	HP:0011031	Abnormality of iron homeostasis	n	too specific	GO:0006879	to check	
+Microtubules and axonal transport	Phenotype	mesh	D001370	Axonal Transport	y				
+Inflammation signaling	Phenotype	HP	HP:0012647	Abnormal inflammatory response	n	too specific	GO:0006954	too general;to check	
+Neuroinflammation	Phenotype	hp	HP:0033429	Neuroinflammation	y				
+Autophagy	Phenotype	hp	HP:0003736	Autophagic vacuoles	n		GO:0006914		
+Mitochondrial fission and fusion	Phenotype	hp	HP:0008322	Abnormal mitochondrial morphology	n	too specific	GO:0000266;GO:0008053		
+Cell death	Phenotype	GO	GO:0008219	cell death	y				
+TFEB activity	Phenotype	GO (Gene Ontology)	GO:0003700	Transcription factor TFEB activity	n		uniprot:P19484	related;to check	
+Mitophagy	Phenotype	MeSH	D063306	Mitophagy	y				
+Glycolysis	Phenotype	GO	GO:0006096	glycolytic process	n	related	GO:0061621		
+dopamine	SimpleMolecule	chebi	CHEBI:18243	dopamine	y				
+epilepsy, familial focal	Phenotype	MONDO	MONDO:0020310	familial focal epilepsy with variable foci	n	too specific	MONDO:0017704		
+KIF1	GenericProtein	UniProt	Q12756	KIF1A	n	too specific	uniprot:Q12756;uniprot:O60333;uniprot:O43896		
+Bcl-2:BH-3 only proteins	Complex	go	GO:0097136	Bcl-2 family protein complex	n	too general	GO:0097136	too general	
+BAX	GenericProtein	UniProt	Q07812	Apoptosis regulator BAX	y				
+HTRA2	GenericProtein	UniProt	O43464	Serine protease HTRA2, mitochondrial	y				
+cAMP/cGMP protein kinase	GenericProtein	Uniprot	P17612	cAMP-dependent protein kinase catalytic subunit alpha	n	too specific	"Interpro:IPR002374;interpro:IPR044109
+"		
+cAMP/cGMP protein kinase	GenericProtein	UniProt	Q13976	protein kinase, cGMP-dependent, type I	y	to check			
+ATXN3	GenericProtein	UniProt	P54252	Ataxin-3	y				
+PI3P	SimpleMolecule	pubchem.compound	6857403	Phosphatidylinositol 3-phosphate	n	typo? “PI3P”→”PIP3”	Pubchem.compound:6857403		
+SCF-Cdc4 complex	Complex	GO	GO:0019005	SCF ubiquitin ligase complex	n	too general	GO:0097660		
+mitochondrion	Complex	go	GO:0005739	mitochondrion	y				
+SNCA	GenericProtein	UniProt	P37840	Alpha-synuclein	y				
+MAP1LC3A	GenericProtein	uniprot	Q9H492	Microtubule-associated protein 1 light chain 3 alpha (MAP1LC3A)	y				
+GABARAPL1	GenericProtein	uniprot	Q9H0R8	GABARAPL1 (GABA type A receptor associated protein like 1)	y				
+HDAC6	GenericProtein	Uniprot	Q9UBN7	Histone deacetylase 6	y				
+Selinexor	Drug	drugbank	DB11942	Selinexor	y				
+Nsp3	GenericProtein	uniprot	P0DTD1	Non-structural protein 3 (nsp3) of SARS-CoV-2	n	too general	mesh:C000706267		
+Nsp4	GenericProtein	Uniprot	P0DTC1	Non-structural protein 4	n	too general	mesh:C000706290		
+F1	Complex	go	GO:0045261	proton-transporting ATP synthase complex, catalytic core F(1)	n	obsolete	GO:0016473		
+F0	Complex	go	GO:0005753	mitochondrial proton-transporting ATP synthase complex	n	obsolete	GO:0016473		
+F0	Complex	GO	GO:0000276	mitochondrial proton-transporting ATP synthase complex, coupling factor F(o)	n	obsolete	GO:0016473		
+F1	Complex	GO	GO:0045261	proton-transporting ATP synthase complex, catalytic core F(1)	n	obsolete	GO:0016473		
+Orf9c	GenericProtein	Uniprot	P0DTD3	Putative ORF9c protein	y				
+F1	Complex	go	GO:0045261	proton-transporting ATP synthase complex, catalytic core F(1)	n	not possible?			
+Nsp6	GenericProtein	uniprot	P0DTD1-1	Non-structural protein 6	n	too general	mesh:C000705767		
+Nsp4	GenericProtein	UniProt	P0DTC1	Non-structural protein 4	n	too general	mesh:C000706290		
+V0	Complex	GO	GO:0033176	proton-transporting V-type ATPase complex	n	too general	GO:0033176	either too precise or not precise enough	
+V1	Complex	GO	GO:0033176	proton-transporting V-type ATPase complex	n	too general	GO:0033176	either too precise or not precise enough	
+P1	Complex	go	GO:0032991	protein-containing complex	n	not possible?; either too precise or not precise enough	GO:0140358	either too precise or not precise enough	
+P0	Complex	GO	GO:0032991	protein-containing complex	n	not possible?; either too precise or not precise enough	GO:0140358	either too precise or not precise enough	
+V0	Complex	go	GO:0033176	proton-transporting V-type ATPase complex	n	too general	GO:0033176	either too precise or not precise enough	
+V1	Complex	GO	GO:0032991	protein-containing complex	n	too general	GO:0033176	either too precise or not precise enough	
+Nsp6	GenericProtein	UniProt	P0DTC6	Non-structural protein 6	n	too general	mesh:C000705767		
+V0	Complex	GO	GO:0033179	proton-transporting V-type ATPase, V0 domain	n	too general	GO:0033176	either too precise or not precise enough	
+V1	Complex	GO (Gene Ontology)	GO:0033180	proton-transporting V-type ATPase, V1 domain	n	too general	GO:0033176	either too precise or not precise enough	
+F1	Complex	go	GO:0045259	proton-transporting ATP synthase complex	n	obsolete	GO:0016473		
+F0	Complex	go	GO:0045263	proton-transporting ATP synthase complex, coupling factor F(o)	n	obsolete	GO:0016473		
+Loratadine	Drug	DrugBank	DB00455	Loratadine	y				
+Nsp6	GenericProtein	interpro	IPR044367	Non-structural protein 6 (NSP6)	n	too general	mesh:C000705767		
+Nsp4	GenericProtein	UniProt	P0DTC1	Non-structural protein 4	n	too general	mesh:C000706290		
+V0	Complex	GO	GO:0033176	proton-transporting V-type ATPase complex	n	too general	GO:0033176	either too precise or not precise enough	
+Nsp6	GenericProtein	interpro	IPR044367	Non-structural protein 6, betacoronavirus	n	too general	mesh:C000705767		
+Nsp6	GenericProtein	InterPro	IPR044367	Non-structural protein 6, betacoronavirus	n	too general	mesh:C000705767		
+Bafilomycin A1	Drug	DrugBank	DB06733	Bafilomycin A1	y				
+Loratadine	Drug	DrugBank	DB00455	Loratadine	y				
+Selinexor	Drug	DrugBank	DB11942	Selinexor	y				
+Bafilomycin A1	Drug	DrugBank	DB06733	Bafilomycin A1	y				
+Orf9c	GenericProtein	Uniprot	P0DTD3	ORF9c protein (SARS-CoV-2)	y				
+Nsp4	GenericProtein	UniProt	P0DTC1	Non-structural protein 4	n	too general	mesh:C000706290		
+Nsp4	GenericProtein	UniProt	P0DTC1	Non-structural protein 4 (nsp4) of SARS-CoV-2	n	too general	mesh:C000706290		
+Nsp3	GenericProtein	UniProt	P0DTD1	Non-structural protein 3 (nsp3)	n	too general	mesh:C000706267		
+Nsp4	GenericProtein	uniprot	P0DTC1	Non-structural protein 4 (nsp4)	n	too general	mesh:C000706290		
+Nsp6	GenericProtein	UniProt	P0DTD1-1	Non-structural protein 6 (NSP6)	n	too general	mesh:C000705767		
+Nsp4	GenericProtein	uniprot	P0DTC1	Non-structural protein 4 (nsp4)	n	too general	mesh:C000706290		
+Nsp6	GenericProtein	UniProt	P0DTD1-1	pp1ab-nsp6	n		mesh:C000705767		
+Nsp6	GenericProtein	interpro	IPR044367	Non-structural protein 6 (NSP6) from betacoronavirus	n	too general	mesh:C000705767		
+Nsp6	GenericProtein	UniProt	P0DTD1-1	pp1ab-nsp6	n		mesh:C000705767		
+P1	Complex	GO	GO:0043234	protein complex	n		GO:0140358	either too precise or not precise enough	
+Nsp4	GenericProtein	uniprot	P0DTC1	Non-structural protein 4	n	too general	mesh:C000706290		
+H+	Ion	pubchem.compound	1038	Hydrogen ion	y				
+AMDP2	GenericProtein	UniProt	Q01433	Adenosine monophosphate deaminase 2	y				
+NAPRT1	GenericProtein	uniprot	Q6XQN6	Nicotinate phosphoribosyltransferase	y				
+NRK1	GenericProtein	uniprot	Q9NWW6	Nicotinamide riboside kinase 1	y				
+Urea cycle	Phenotype	hp	HP:0001987	Hyperammonemia	n		GO:0000050		
+Histone N6-acetyl-L-lysine	SimpleMolecule	chebi	CHEBI:17752	N6-Acetyl-L-lysine	y				
+Nsp14	GenericProtein	UniProt	P0DTD1-1 (R-COV-9731277	 pp1ab-nsp14 fragment 5926-6452) Non-structural protein 14 (Exonuclease/ N7-methyltransferase domain)	n		mesh:C000709087		
+N	GenericProtein	uniprot	Q64960	Nucleoprotein	n	wrong organism	uniprot:P0DTC9		
+Orf8	GenericProtein	UniProt	P0DTC8	ORF8 protein	y				
+Nsp15	GenericProtein	UniProt	P0DTD1	Non-structural protein 15 (NendoU)	n	too general	mesh:C000657925		
+ubiquitin-proteasome complex	Complex	GO	GO:0000502	proteasome complex	y				
+Nsp3	GenericProtein	uniprot	P0C6U6	Non-structural protein 3	n		mesh:C000706267		
+IRF3	GenericProtein	uniprot	Q14653	Interferon regulatory factor 3	y				
+IRF7	GenericProtein	uniprot	Q92985	Interferon regulatory factor 7	y				
+vascular inflammation	Phenotype	hp	HP:0002633	Vasculitis	y				
+F9	GenericProtein	UniProt	P00740	Coagulation factor IX	y				
+Bradykinin	GenericProtein	InterPro	IPR009608	Bradykinin	y				
+aldosterone	SimpleMolecule	CheBI	CHEBI:27584	Aldosterone	y				
+BMPR1	Receptor	uniprot	P36894	bone morphogenetic protein receptor type-1A	n	too specific	Uniprot:P36894;uniprot:O00238		
+Orf10	GenericProtein	InterPro	IPR044342	ORF10 protein	y				
+Orf10	GenericProtein	UniProt	A0A663DJA2	ORF10 protein (SARS-CoV-2 ORF10)	y				
+LC3	GenericProtein	uniprot	Q9H492	Microtubule-associated protein 1 light chain 3 alpha	n	too specific	uniprot:Q9H492;uniprot:Q9GZQ8;uniprot:Q9BXW4		
+STING_p	GenericProtein	uniprot	Q86WV6	Stimulator of interferon response cGAMP interactor 1	y				
+HCoVs IFN induction WP4880	Phenotype	pw	WP4880	Host-pathogen interaction of human coronaviruses - interferon induction	y				
+ RRM1	GenericProtein	UniProt	P23921	Ribonucleoside-diphosphate reductase large subunit	y	typo: “ RRM1”→”RRM1”			
+LC3	GenericProtein	uniprot	Q9H492	MAP1LC3A (Microtubule-associated protein 1 light chain 3 alpha)	n	too specific	uniprot:Q9H492;uniprot:Q9GZQ8;uniprot:Q9BXW4		
+DNA damage	Phenotype	hp	HP:0003254	abnormality of DNA repair	n		mesh:D004249		
+STING_p	GenericProtein	uniprot	Q86WV6	STING1 (Stimulator of interferon genes protein)	y				
+nsp12	GenericProtein	UniProt	P0DTD1	RNA-directed RNA polymerase	n	too general	Mesh:C000706296		
+nsp15	GenericProtein	uniprot	P0DTD1	Non-structural protein 15 (NendoU endoribonuclease)	n	too general	mesh:C000657925		
+nsp10	GenericProtein	uniprot	P0DTD1	Non-structural protein 10	n	too general	mesh:C000705769		
+nsp8 (II)	GenericProtein	UniProt	P0DTD1	Non-structural protein 8 (NSP8)	n	too general	mesh:C000707895		
+nsp4	GenericProtein	Uniprot	P0DTC1	Non-structural protein 4	n	too general	mesh:C000706290		
+pp1a	GenericProtein	uniprot	P0DTC1	Replicase polyprotein 1a (pp1a)	y				
+nsp9	GenericProtein	uniprot	P0DTD1	Non-structural protein 9 (Nsp9)	n	too general	mesh:C000705768		
+nsp6	GenericProtein	interpro	IPR044367	Non-structural protein 6, betacoronavirus	n	too general	mesh:C000705767		
+nsp13	GenericProtein	uniprot	P0DTD1	Non-structural protein 13 (nsp13)	n	too general	Mesh:C000722450		
+nsp14	GenericProtein	uniprot	P0DTD1	Non-structural protein 14	n	too general	mesh:C000709087		
+nsp1	GenericProtein	uniprot	P0DTD1	Non-structural protein 1	n	too general	mesh:C000706293		
+nsp12	GenericProtein	Uniprot	P0DTD1	RNA-directed RNA polymerase nsp12	n	too general	Mesh:C000706296		
+nsp10	GenericProtein	MeSH	C000705769	NSP10 protein, SARS-CoV-2	y				
+nsp9	GenericProtein	Uniprot	P0DTD1	Non-structural protein 9 (Nsp9) from SARS-CoV-2	n	too general	mesh:C000705768		
+nsp12	GenericProtein	UniProt	P0DTD1	Non-structural protein 12 (nsp12) â RNA-directed RNA polymerase	n	too general	Mesh:C000706296		
+nsp10	GenericProtein	uniprot	P0DTD1	Non-structural protein 10 (nsp10) from SARS-CoV-2	n	too general	mesh:C000705769		
+pp1ab	GenericProtein	UniProt	P0DTD1-1	Replicase polyprotein 1ab	n	isoform	uniprot:P0DTD1		
+nsp16	GenericProtein	InterPro	IPR009461	Non-structural protein NSP16, coronavirus-like	n	too general	mesh:C000709423		
+nsp7	GenericProtein	UniProt	P0C6X7	Non-structural protein 7	n	too general; wrong organism	mesh:C000705669		
+nsp8 (I)	GenericProtein	UniProt	P0DTD1	Non-structural protein 8	n	too general	mesh:C000707895		
+nsp8 (II)	GenericProtein	uniprot	P0DTD1	Non-structural protein 8 (NSP8)	n	too general	mesh:C000707895		
+nsp9	GenericProtein	uniprot	P0DTD1	Non-structural protein 9	n	too general	mesh:C000705767		
+nsp12	GenericProtein	uniprot	P0DTD1	RNA-directed RNA polymerase	n	too general	Mesh:C000706296		
+nsp10	GenericProtein	uniprot	P0DTD1	Non-structural protein 10	n	too general	mesh:C000705769		
+nsp14	GenericProtein	uniprot	P0DTD1-1	Non-structural protein 14	n	too general;isoform	mesh:C000709087		
+nsp7	GenericProtein	MeSH	C000705669	NSP7 protein, SARS-CoV-2	y				
+nsp8 (I)	GenericProtein	uniprot	P0DTC1	Non-structural protein 8 (nsp8) of SARS-CoV-2	n	too general	mesh:C000707895		
+nsp8 (II)	GenericProtein	UniProt	P0DTD1	Non-structural protein 8 (NSP8)	n	too general	mesh:C000707895		
+pp1a	GenericProtein	uniprot	P62136	serine/threonine-protein phosphatase PP1-alpha catalytic subunit (PPP1CA)	n		uniprot:P0DTC1		
+pp1ab	GenericProtein	uniprot	P0C6X7	Replicase polyprotein 1ab	n	wrong organism	uniprot:P0DTD1		
+nsp7	GenericProtein	uniprot	P0DTD3	Non-structural protein 7 (NSP7)	n		mesh:C000705669		
+nsp11	GenericProtein	UniProt	P0DTC1	NSP11 (non-structural protein 11)	n	too general	mesh:C000657925		
+nsp3	GenericProtein	Uniprot	P0DTD1	Non-structural protein 3	n	too general	mesh:C000706267		
+nsp5	GenericProtein	UniProt	P0DTC1	3C-like proteinase (nsp5)	n	too general	mesh:C000706209		
+nsp9	GenericProtein	UniProt	P0DTD1	Non-structural protein 9 (nsp9)	n	too general	mesh:C000705767		
+nsp12	GenericProtein	Uniprot	P0DTD1	Non-structural protein 12	n	too general	Mesh:C000706296		
+nsp10	GenericProtein	UniProt	P0DTD1	Non-structural protein 10	n	too general	mesh:C000705769		
+nsp7	GenericProtein	UniProt	P0DTD1	Non-structural protein 7	n	too general	mesh:C000705669		
+nsp8 (I)	GenericProtein	UniProt	P0DTD1	Non-structural protein 8	n	too general	mesh:C000707895		
+nsp8 (II)	GenericProtein	interpro	IPR014829	Non-structural protein NSP8, coronavirus	n	too general	mesh:C000707895		
+nsp8 (I)	GenericProtein	UniProt	P0DTD1	Non-structural protein 8	n	too general	mesh:C000707895		
+nsp8 (II)	GenericProtein	uniprot	P0DTD1	Non-structural protein 8 (NSP8)	n	too general	mesh:C000707895		
+QGC001	Drug	drugbank	DB13107	Firibastat	y				
+REN	GenericProtein	UniProt	P00797	Renin	y				
+TRIM30a	GenericProtein	UniProt	P15533	Tripartite motif-containing protein 30A	n	wrong organism?;can’t find			
+IKBA	GenericProtein	UniProt	P25963	IÎºB alpha (IKBA)	y				
+IKBA	GenericProtein	uniprot	P25963	NF-kappa-B inhibitor alpha	y				
+HSP90	GenericProtein	uniprot	P07900	Heat shock protein HSP90-alpha	y				
+BID	GenericProtein	UniProt	P55957	BID (BH3-interacting domain death agonist)	y				
+Orf3a (-)ss sgmRNA	RNA	ncbigene	43740569	ORF3a protein	y				
+Nsp6	GenericProtein	InterPro	IPR044367	Non-structural protein 6 (NSP6)	n	too general	mesh:C000705767		
+Nsp10	GenericProtein	UniProt	P0DTD1	Non-structural protein 10	n	too general	mesh:C000705769		
+Nsp1	GenericProtein	Uniprot	P0DTD1	Non-structural protein 1 (nsp1) of SARS-CoV-2	n	too general	mesh:C000706293		
+Nsp11	GenericProtein	mesh	C000657925	nidoviral uridylate-specific endoribonuclease	y				
+Nsp9	GenericProtein	Uniprot	P0C6X1	Non-structural protein NSP9	n	too general;wrong organism	mesh:C000705768		
+Nsp12	GenericProtein	UniProt	P0DTD1	RNA-directed RNA polymerase	n	too general	Mesh:C000706296		
+Replication transcription complex	Complex	GO	GO:0031261	DNA replication preinitiation complex	n		mesh:D000086969		
+Nsp3	GenericProtein	uniprot	P0DTC1	Papain-like protease nsp3	n	too general	mesh:C000706267		
+Nsp16	GenericProtein	UniProt	P0DTD1	Non-structural protein 16 (nsp16)	n	too general	mesh:C000709423		
+Nsp7	GenericProtein	UniProt	P0DTD1	Non-structural protein 7	n	too general	mesh:C000705669		
+Nsp15	GenericProtein	UniProt	P0DTD1	Uridylate-specific endoribonuclease (NendoU)	n	too general	mesh:C000657925		
+Nsp8	GenericProtein	uniprot	P0DTD1	Non-structural protein 8	n	too general	mesh:C000707895		
+Orf8 (-)ss sgmRNA	RNA	ncbigene	43740577	ORF8 protein	y				
+Orf7b (-)ss sgmRNA	RNA	ncbigene	43740574	ORF7b	y				
+Replication transcription complex	Complex	GO	GO:0031261	DNA replication preinitiation complex	n		mesh:D000086969		
+Orf8 ds sgmRNA	RNA	ncbigene	43740577	ORF8 protein	y				
+Nsp4	GenericProtein	uniprot	P0DTC1	Non-structural protein 4	n	too general	mesh:C000706290		
+Nsp2	GenericProtein	uniprot	Q03243	Rotavirus NSP2	n	too general	Mesh:C000705667		
+Nsp14	GenericProtein	Uniprot	P0DTD2	Non-structural protein 14 (nsp14)	n	too general	mesh:C000709087		
+Nsp5	GenericProtein	Uniprot	P0DTD1	3C-like proteinase (nsp5) (SARS-CoV-2 main protease)	n	too general	mesh:C000706209		
+Nsp3-4	GenericProtein	UniProt	P0DTC1	Non-structural protein 3 (nsp3)	n	too general	mesh:C000706267;mesh:C000706290		
+H4-16	GenericProtein	UniProt	P62805	H4 histone 16	y				
+MPP5	GenericProtein	UniProt	Q8N3R9	MAGUK p55 subfamily member 5	y				
+Chromatin organization	Phenotype	go	GO:0006325	chromatin organization	y				
+H4-16	GenericProtein	uniprot	P62805	Histone H4	y				
+H4-16	GenericProtein	Uniprot	P62805	Histone H4	y				
+Activity of sodium channels	Phenotype	go	GO:0005272	sodium channel activity	y				
+MPP5	GenericProtein	Uniprot	Q8N3R9	MAGUK p55 subfamily member 5	y				
+MPP5	GenericProtein	UniProt	Q8N3R9	MAGUK p55 subfamily member 5	y				
+MPP5	GenericProtein	UniProt	Q8N3R9	MAGUK p55 subfamily member 5 (PALS1)	y				
+IKKb	GenericProtein	UniProt	O14920	Inhibitor of Nuclear Factor Kappa-B Kinase Subunit Beta (IKK-Î²)	y				
+NEMO	GenericProtein	Uniprot	Q9Y6K9	NF-kappa-B essential modulator	y				
+IKKa	GenericProtein	uniprot	O15111	I-kappa-B kinase alpha (IKK-Î±), CHUK	y				
+IKKa	GenericProtein	UniProt	O15111	Inhibitor of NF-ÎºB kinase subunit alpha (IKK-Î±)	y				
+EIF2AK	Gene	HGNC	EIF2AK4	eukaryotic translation initiation factor 2 alpha kinase 4	y				
+TRIF	GenericProtein	uniprot	Q8IUC6	TICAM1 (TRIF)	y				
+RIP1	GenericProtein	uniprot	Q13546	Receptor-interacting serine/threonine-protein kinase 1	y				
+Nsp6	GenericProtein	UniProt	P0DTC6	Non-structural protein 6	n		mesh:C000705767		
+IRAK1/4	GenericProtein	UniProt	P51617	Interleukin-1 receptor-associated kinase 1	n	too specific	Uniprot:P51617;uniprot:Q9NWZ3		
+IkB	GenericProtein	UniProt	P25963	NF-kappa-B inhibitor alpha (IÐºBÎ±)	n	too specific	Interpro:IPR051070		
+Orf8b	GenericProtein	Uniprot	Q80H93	Non-structural protein 8b	n	wrong organism	uniprot:P0DTC8		
+Orf8a	GenericProtein	uniprot	P0DTC8	ORF8 protein	n	too general; can’t find	uniprot:P0DTC8		
+EIF2AK	GenericProtein	uniprot	P19525	Eukaryotic translation initiation factor 2-alpha kinase 2	y				
+Orf6	GenericProtein	uniprot	P0DTC6	ORF6 protein	y				
+TRIF	GenericProtein	UniProt	Q8IUC6	TRIF	y				
+N	GenericProtein	UniProt	P0DTC9	Nucleocapsid protein (N)	y				
+Orf7a	GenericProtein	UniProt	P0DTC7	ORF7a protein	y				
+DDX58	GenericProtein	UniProt	O95786	RIG-I (DDX58)	y				
+Nsp15	GenericProtein	UniProt	P0DTD1	Uridylate-specific endoribonuclease (NendoU) Nsp15	n	too general	mesh:C000657925		
+Nsp10	GenericProtein	uniprot	P0DTD1	Non-structural protein 10	n	too general	mesh:C000705769		
+TRIF	GenericProtein	UniProt	Q8IUC6	TICAM1	y				
+NAP1	GenericProtein	uniprot	P55209	Nucleosome assembly protein 1-like 1 (NAP1L1)	n		Uniprot:O96009		
+TRIF	GenericProtein	UniProt	Q8IUC6	TIR domain-containing adaptor molecule 1 (TRIF)	y				
+IRAK1/4	GenericProtein	UniProt	P51617	Interleukin-1 receptor-associated kinase 1 (IRAK-1)	n	too specific	Uniprot:P51617;uniprot:Q9NWZ3		
+IKKb	GenericProtein	UniProt	O14920	Inhibitor of nuclear factor kappa-B kinase subunit beta	y				
+Nsp3	GenericProtein	UniProt	P0DTC1	Papain-like protease nsp3	n	too general	mesh:C000706267		
+TAK1	GenericProtein	UniProt	O43318	MAP3K7 (TAK1) - Mitogen-activated protein kinase kinase kinase 7	y				
+Nsp3	GenericProtein	UniProt	P0DTD1	Non-structural protein 3 (nsp3)	n	too general	mesh:C000706267		
+MNS	Drug	pubchem.compound	672296	3,4-Methylenedioxy-Î²-nitrostyrene	y				
+Nsp1	GenericProtein	uniprot	P0DTD1	Non-structural protein 1	n	too general	mesh:C000706293		
+pp1ab	GenericProtein	UniProt	P0DTD1	Replicase polyprotein 1ab	y				
+IkB	GenericProtein	UniProt	P25963	NF-kappa-B inhibitor alpha (IÎºBÎ±)	n	too specific	Interpro:IPR051070		
+Nsp5	GenericProtein	uniprot	P0DTD1	Non-structural protein 5 (nsp5)	n	too general	mesh:C000706209		
+Orf3a	GenericProtein	Uniprot	P0DTC3	ORF3a protein	y				
+IRAK1/4	GenericProtein	Uniprot	P51617	Interleukin-1 receptor-associated kinase 1	n	too specific	Uniprot:P51617;uniprot:Q9NWZ3		
+NAP1	GenericProtein	uniprot	P55209	Nucleosome assembly protein 1-like 1	n		Uniprot:O96009		
+TAK1	GenericProtein	UniProt	MAP3K7	Mitogen-activated protein kinase kinase kinase 7 (TAK1)	n		uniprot:O43318		
+GRL0617	Drug	drugbank	DB08656	GRL-0617	y				
+IkB	GenericProtein	UniProt	P48560	Inhibitor of NF-ÎºB alpha (IÎºBÎ±)	n		Interpro:IPR051070		
+EIF2AK	GenericProtein	uniprot	P19525	eukaryotic translation initiation factor 2-alpha kinase 2	n	too specific	uniprot:Q9BQI3		
+EIF2AK	GenericProtein	uniprot	P19525	EIF2AK2 (PKR)	n	too specific	uniprot:Q9BQI3		
+IkB	GenericProtein	UniProt	P25963	NFKB inhibitor alpha (IÎºBÎ±)	n	too specific	Interpro:IPR051070		
+RIP1	GenericProtein	uniprot	Q13546	Receptor-interacting serine/threonine-protein kinase 1	y				
+DDX58	GenericProtein	uniprot	O95786	Antiviral innate immune response receptor RIG-I	y				
+DDX58	GenericProtein	UniProt	O95786	RNA helicase DDX58	y				
+precursor protein N-terminus binding	GenericProtein	UniProt	P05067	Amyloid-beta precursor protein	n	to check;can’t find			
+Orf9b	GenericProtein	UniProt	P0DTD2	Orf9b protein (Betacoronavirus lipid-binding protein)	y				
+Fe-S	SimpleMolecule	pubchem.compound	14828	Iron(II) sulfide	y				
+Fe-S	SimpleMolecule	pubchem.compound	14828	Iron(II) sulfide	y				
+C12orf65	GenericProtein	UniProt	Q9H3J6	Probable peptide chain release factor C12orf65, mitochondrial	y				
+Nsp8	GenericProtein	InterPro	IPR014829	Non-structural protein NSP8, coronavirus	n		mesh:C000707895		
+Fe-S	SimpleMolecule	pubchem.compound	10290742	Iron(II) sulfide	n	related	Pubchem.compound:14828		
+Nsp6	GenericProtein	UniProt	P0DTD1-1	pp1ab-nsp6 (Non-structural protein 6)	n		mesh:C000705767		
+ATP5MD	GenericProtein	uniprot	Q96IX5	ATP synthase membrane subunit DAPIT	y				
+ATP5MPL	GenericProtein	UniProt	P56378	ATP synthase membrane subunit 6.8PL	y				
+Nsp7	GenericProtein	Uniprot	P0C6X7	Non-structural protein 7	n	too general;wrong organism	mesh:C000705669		
+Nsp4	GenericProtein	UniProt	P0DTC1	Non-structural protein 4 (nsp4)	n	too general	mesh:C000706290		
+Fe-S	SimpleMolecule	pubchem.compound	14828	Iron(II) sulfide	y				
+e-	Ion	chebi	CHEBI:24870	ion	n	too general	CHEBI:10545		
+Nsp5	GenericProtein	Uniprot	P0DTD1	3C-like proteinase (nsp5)	n	too general	mesh:C000706209		
+Orf9c	GenericProtein	UniProt	P0DTD3	Putative ORF9c protein	y				
+precursor protein N-terminus binding	GenericProtein	Uniprot	PREP_HUMAN (Q5JRX3)	Presequence protease, mitochondrial	n	to check; can’t find			
+ATP5MD	GenericProtein	uniprot	Q96IX5	ATP synthase membrane subunit DAPIT	y				
+ATP5MPL	GenericProtein	UniProt	P56378	ATP synthase membrane subunit 6.8PL	y				
+Fe-S	SimpleMolecule	pubchem.compound	14828	Iron(II) sulfide	y				
+MFN1	GenericProtein	uniprot	Q8IWA4	Mitofusin-1	y				
+MFN1	GenericProtein	uniprot	Q8IWA4	Mitofusin-1	y				
+ERO1A	GenericProtein	Uniprot	Q96HE7	Endoplasmic reticulum oxidoreductase 1 alpha	y				
+Orf10 (+)ss sgmRNA	RNA	ncbigene	43740576	ORF10 protein	y				
+Orf10	GenericProtein	interpro	IPR044342	ORF10 protein	y				
+Orf10	GenericProtein	InterPro	IPR044342	SARS-CoV-2 ORF10 protein	y				
+Orf10	GenericProtein	InterPro	IPR044342	ORF10 protein (SARS-CoV-2 ORF10 protein)	y				
+Orf10	GenericProtein	UniProt	A0A663DJA2	Hypothetical ORF10 protein	y				
+E2	GenericProtein	uniprot	P51668	Ubiquitin-conjugating enzyme E2 D1	y				
+Orf10	GenericProtein	InterPro	IPR044342	ORF10 protein	y				
+CSN5	Complex	go	GO:0008180	COP9 signalosome	y				
+E2	GenericProtein	uniprot	UBE2U_HUMAN	Ubiquitin-conjugating enzyme E2 U	n		uniprot:P51668		
+Orf10	GenericProtein	UniProt	A0A663DJA2	Hypothetical ORF10 protein	y				
+Orf10	GenericProtein	UniProt	A0A663DJA2	ORF10 protein	y				
+E1	GenericProtein	UniProt	P22314	ubiquitin-activating enzyme E1	y				
+E2	GenericProtein	UniProt	UBE2D1	ubiquitin-conjugating enzyme E2 D1	n		uniprot:P51668		
+Ub	SimpleMolecule	PubChem.compound	6224	Ubiquitin	n		interpro:PF00240		
+Orf10	GenericProtein	UniProt	A0A663DJA2	ORF10 protein	y				
+E2	GenericProtein	InterPro	IPR000608	Ubiquitin-conjugating (UBC), catalytic core domain	n		uniprot:P51668		
+Orf10	GenericProtein	UniProt	A0A663DJA2	Hypothetical ORF10 protein	y				
+Zonisamide	Drug	DrugBank	DB00909	Zonisamide	y				
+Neutrophil_activation	Phenotype	mesh	D018375	Neutrophil Activation	y				
+virus_replication	Phenotype	MeSH	D014779	Virus Replication	y				
+Zonisamide	Drug	DrugBank	DB00909	Zonisamide	y				
+PXLP	SimpleMolecule	chebi	CHEBI:18405	Pyridoxal phosphate	y	to check			
+monocarboxylates transported by SLC5A8	SimpleMolecule	pubchem.compound	3302	Lactic acid	n		CHEBI:35757		
+Epacadostat	Drug	DrugBank	DB11717	Epacadostat	y				
+celecoxib	Drug	DrugBank	DB00482	Celecoxib	y				
+HSP90	GenericProtein	UniProt	P07900	Heat shock protein HSP90 alpha 1 (HSPC1/HSP90AA1)	y				
+ORF9c	GenericProtein	UniProt	P0DTD3	ORF9c protein	y				
+DIPY	SimpleMolecule	CHEBI	CHEBI:30351	2,2'-Bipyridine	y	to check			
+CK2	GenericProtein	uniprot	P68400	Casein kinase II subunit alpha	n	too specific;actually a complex	GO:0005956		
+PPO	GenericProtein	UniProt	P43310	Polyphenol oxidase, chloroplastic	n		uniprot:P50336		
+Fe2+	Ion	chebi	CHEBI:29033	iron(2+)	y				
+IFN-III	GenericProtein	uniprot	Q8IZI9	Interferon lambda-3	n	too specific	interpro:IPR029177		
+ribosomal 40S subunit	Complex	go	GO:0022627	cytosolic small ribosomal subunit	y				
+nsp14	GenericProtein	Uniprot	P0DTD1	Non-structural protein 14 (nsp14)	n	too general	mesh:C000709087		
+ribosomal 40S subunit	Complex	Reactome	R-MMU-9633580	40S ribosomal subunit	n	should not have searched in  reactome	GO:0022627		
+nsp16	GenericProtein	UniProt	P0DTD1	Non-structural protein 16 (nsp16)	n	too general	mesh:C000709423		
+ribosomal 40S subunit	Complex	GO	GO:0022627	cytosolic small ribosomal subunit	y				
+ribosomal 60S subunit	Complex	go	GO:0022625	cytosolic large ribosomal subunit	y				
+ribosomal 40S subunit	Complex	Reactome	R-HSA-72392	40S ribosomal complex [cytosol]	n	should not have searched in  reactome	GO:0022627		
+ribosomal 60S subunit	Complex	GO (Gene Ontology)	GO:0022625	60S ribosomal subunit	y				
+ribosomal 60S subunit	Complex	go	GO:0022625	cytosolic large ribosomal subunit	y				
+IFN-III	Gene	HGNC	IFNL1	Interferon lambda 1	n	too specific	HGNC:18363;HGNC:18364;HGNC:18365;HGNC:44480		
+IFN-III	RNA	HGNC	HGNC:18365	Interferon lambda 3 (IFNL3)	n	too specific	HGNC:18363;HGNC:18364;HGNC:18365;HGNC:44480		
+IFNs	Complex	mesh	D050832	Interferon-Stimulated Gene Factor 3	n	complex might not be the right type	interpro:IPR029177		
+viral RNA+N-methyl-Guanine	RNA	HGNC	HGNC:10075	RNA guanine-7 methyltransferase	n		Mesh:D012367;CHEBI:25305		
+IRF1	GenericProtein	UniProt	P10914	Interferon regulatory factor 1	y				
+IFN-III	RNA	hgnc.symbol	IFNL3	Interferon lambda 3	n	too specific	HGNC:18363;HGNC:18364;HGNC:18365;HGNC:44480		
+IFN-III	GenericProtein	UniProt	Q8IZI9	Interferon lambda-3	n	too specific	interpro:IPR029177		

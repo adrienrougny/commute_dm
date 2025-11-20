@@ -1,0 +1,7106 @@
+[
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Endoplasmatic_Reticulum_stress",
+    "entity_id": "s_id_path_0_sa614",
+    "entity_name": "Unfolded protein",
+    "additional_annotations": [
+      [
+        "urn:miriam:SBO:0000252"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Endoplasmatic_Reticulum_stress",
+    "entity_id": "s_id_path_0_sa616",
+    "entity_name": "Unfolded protein",
+    "additional_annotations": [
+      [
+        "urn:miriam:SBO:0000252"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Endoplasmatic_Reticulum_stress",
+    "entity_id": "s_id_sa279",
+    "entity_name": "SARS-CoV infection",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000086382"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Endoplasmatic_Reticulum_stress",
+    "entity_id": "s_id_path_0_sa203",
+    "entity_name": "Unfolded protein",
+    "additional_annotations": [
+      [
+        "urn:miriam:SBO:0000252"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Postsynaptic_terminal_of_a_DA_neuron",
+    "entity_id": "s_id_path_0_csa2000",
+    "entity_name": "NR1 : NR2",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0017146"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Postsynaptic_terminal_of_a_DA_neuron",
+    "entity_id": "s_id_pdm1109",
+    "entity_name": "pacemaking activity",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D063226"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Postsynaptic_terminal_of_a_DA_neuron",
+    "entity_id": "s_id_path_0_csa352",
+    "entity_name": "NMDAR:ligand complex",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0017146"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Endocytic_vesicles",
+    "entity_id": "s_id_path_0_csa1807",
+    "entity_name": "retromer VPS sub-complex",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0030906"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Endocytic_vesicles",
+    "entity_id": "s_id_path_0_csa1809",
+    "entity_name": "retromer VPS sub-complex",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0030906"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Endocytic_vesicles",
+    "entity_id": "s_id_path_0_csa1269",
+    "entity_name": "SNX-BAR sub-complex",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0030905"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "SRR_signaling",
+    "entity_id": "s_id_sr199",
+    "entity_name": "mortor activity",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D009043"
+      ]
+    ],
+    "from": "new",
+    "comments": "typo: mortor->motor"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "SRR_signaling",
+    "entity_id": "s_id_sr75",
+    "entity_name": "13J",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:44263465"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "SRR_signaling",
+    "entity_id": "s_id_src3",
+    "entity_name": "Spermine NONOate",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:135412725"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Neuroinflammation",
+    "entity_id": "s_id_ne140",
+    "entity_name": "amphiphilic macromolecules",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:33839",
+        "urn:miriam:mesh:D013501"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Neuroinflammation",
+    "entity_id": "s_id_ne281",
+    "entity_name": "glycyrrhizin",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB13751"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Neuroinflammation",
+    "entity_id": "s_id_ne24c",
+    "entity_name": "MDG548",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:1020637"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Neuroinflammation",
+    "entity_id": "s_id_csa1693",
+    "entity_name": "TF NFE2L2",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q16236"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Iron_metabolism",
+    "entity_id": "s_id_irf2",
+    "entity_name": "'kiss and run' vesicle contact",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140029"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Iron_metabolism",
+    "entity_id": "s_id_ir1b7",
+    "entity_name": "non-vesicular iron import",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033212"
+      ]
+    ],
+    "from": "new",
+    "comments": "too general"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Microtubules_and_axonal_transport",
+    "entity_id": "s_id_pdm5c1",
+    "entity_name": "KIF1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q12756",
+        "urn:miriam:uniprot:O60333",
+        "urn:miriam:uniprot:O43896"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PI3K_AKT_signaling",
+    "entity_id": "s_id_pi5e",
+    "entity_name": "Let7",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc.symbol:MIRLET7A1"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PI3K_AKT_signaling",
+    "entity_id": "s_id_pi65",
+    "entity_name": "mir-184*",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc.symbol:MIR184"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PI3K_AKT_signaling",
+    "entity_id": "s_id_csa1836",
+    "entity_name": "Ragulator",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0071986"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PI3K_AKT_signaling",
+    "entity_id": "s_id_csa1837",
+    "entity_name": "RAGs",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A1990131"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PI3K_AKT_signaling",
+    "entity_id": "s_id_pi61",
+    "entity_name": "LYNUS",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016239"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PI3K_AKT_signaling",
+    "entity_id": "s_id_pi75",
+    "entity_name": "mir-184*",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc.symbol:MIR184"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PI3K_AKT_signaling",
+    "entity_id": "s_id_pi4f",
+    "entity_name": "Let7",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc.symbol:MIRLET7A1"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitophagy",
+    "entity_id": "s_id_path_0_csa1806",
+    "entity_name": "mitochondrial derived vesicle",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0099073"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitophagy",
+    "entity_id": "s_id_path_0_csa1805",
+    "entity_name": "mitochondrial derived vesicle",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0099073"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_fission_and_fusion",
+    "entity_id": "s_id_path_0_csa2056",
+    "entity_name": "mitochondrion",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0005739"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitophagy",
+    "entity_id": "s_id_path_0_csa983",
+    "entity_name": "mitochondrion",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0005739"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitophagy",
+    "entity_id": "s_id_pdm1155",
+    "entity_name": "generic protein",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A36080"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitophagy",
+    "entity_id": "s_id_pdm939",
+    "entity_name": "generic protein",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A36080"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Cell_death",
+    "entity_id": "s_id_csa1571",
+    "entity_name": "Bcl-XL interacting BH3-only proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR010479"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Cell_death",
+    "entity_id": "s_id_csa1570",
+    "entity_name": "Bcl-2:BH-3 only proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR010479",
+        "urn:miriam:uniprot:Q07817"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_path_0_csa1236",
+    "entity_name": "Ca2+ channel (N and P/Q)",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O00555",
+        "urn:miriam:uniprot:Q00975"
+      ],
+      [
+        "urn:miriam:obo.go:GO%3A0005891"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_path_0_csa2023",
+    "entity_name": "Ca2+ channel (N and P/Q)",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O00555",
+        "urn:miriam:uniprot:Q00975"
+      ],
+      [
+        "urn:miriam:obo.go:GO%3A0005891"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm81d",
+    "entity_name": "clathrin, heavy chain",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D033922"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm10f9",
+    "entity_name": "clathrin, heavy chain",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D033922"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm600",
+    "entity_name": "clathrin, heavy chain",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D033922"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm7c8",
+    "entity_name": "clathrin, light chain",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D033941"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm870",
+    "entity_name": "clathrin, light chain",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D033941"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdmb25",
+    "entity_name": "clathrin, light chain",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D033941"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm6f1",
+    "entity_name": "V-ATPase proteolipid subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P27449"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdmc53",
+    "entity_name": "V-D Ca2+ channel, N-A-1 subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q00975"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm77b",
+    "entity_name": "V-D Ca2+ channel, P/Q-A-1 subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O00555"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdme2f",
+    "entity_name": "G-protein, gamma subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P63211"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm1307",
+    "entity_name": "G-protein, beta subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P62873"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_synapse",
+    "entity_id": "s_id_pdm1219",
+    "entity_name": "PG01037",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:11477180"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Axonal_remodeling_and_CDK5_signaling",
+    "entity_id": "s_id_csa34",
+    "entity_name": "globular actin",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000199"
+      ],
+      [
+        "urn:miriam:reactome:R-HSA-201857"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Actin_filament_organization",
+    "entity_id": "s_id_csa1777",
+    "entity_name": "globular actin",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000199"
+      ],
+      [
+        "urn:miriam:reactome:R-HSA-201857"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Axonal_remodeling_and_CDK5_signaling",
+    "entity_id": "s_id_csa32",
+    "entity_name": "globular actin",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000199"
+      ],
+      [
+        "urn:miriam:reactome:R-HSA-201857"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Actin_filament_organization",
+    "entity_id": "s_id_csa1776",
+    "entity_name": "globular actin",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000199"
+      ],
+      [
+        "urn:miriam:reactome:R-HSA-201857"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Axonal_remodeling_and_CDK5_signaling",
+    "entity_id": "s_id_ax46",
+    "entity_name": "ephrin receptor",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR050449"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Suggestions_for_curation",
+    "entity_id": "s_id_scf6",
+    "entity_name": "energy metabolism production",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006112"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Suggestions_for_curation",
+    "entity_id": "s_id_scf5",
+    "entity_name": "TCA",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006099"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Suggestions_for_curation",
+    "entity_id": "s_id_sc9e",
+    "entity_name": "captopril",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB01197"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Suggestions_for_curation",
+    "entity_id": "s_id_scfc",
+    "entity_name": "free radical scavenger",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D016166"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Suggestions_for_curation",
+    "entity_id": "s_id_scbb",
+    "entity_name": "DA3-CH",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find; maybe CHEBI:194186"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Suggestions_for_curation",
+    "entity_id": "s_id_scbc",
+    "entity_name": "D-Ala2-GIP-glu-PAL",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Suggestions_for_curation",
+    "entity_id": "s_id_scf8",
+    "entity_name": "protein oxidative damage",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0034599"
+      ]
+    ],
+    "from": "new",
+    "comments": "too general"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_and_ROS_metabolism",
+    "entity_id": "s_id_mi36a",
+    "entity_name": "Cu1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:49552"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_and_ROS_metabolism",
+    "entity_id": "s_id_mi387",
+    "entity_name": "Cu1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:49552"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_and_ROS_metabolism",
+    "entity_id": "s_id_mi38d",
+    "entity_name": "Cu1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:49552"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm133e",
+    "entity_name": "SRR signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0023052",
+        "urn:miriam:uniprot:Q9GZT4"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm1106",
+    "entity_name": "Ubiquitin proteasome system",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0000502"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3601",
+    "entity_name": "proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A36080"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_csa1",
+    "entity_name": "mitochondrion",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0005739"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3592",
+    "entity_name": "proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A36080"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_csa11",
+    "entity_name": "apoptotoc neuron",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0051402"
+      ]
+    ],
+    "from": "new",
+    "comments": "typo: apoptotoc->apoptotic"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3552",
+    "entity_name": "Signalling in striatal neurons",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0023052",
+        "urn:miriam:bto:BTO%3A:0004225"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term outside of BTO"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3550",
+    "entity_name": "Postsynaptic terminal of a DA neuron",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0098794",
+        "urn:miriam:obo.go:GO%3A0098691"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3554",
+    "entity_name": "Lewy body formation",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140121"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3594",
+    "entity_name": "proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A36080"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3559",
+    "entity_name": "Mitochondrial fission and fusion",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0000266",
+        "urn:miriam:obo.go:GO%3A0008053"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3561",
+    "entity_name": "Dopaminergic transcription",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006351",
+        "urn:miriam:obo.go:GO%3A1903350"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_csa2",
+    "entity_name": "mitochondrion",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0005739"
+      ],
+      [
+        "urn:miriam:obo.go:GO%3A0005739"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmd01",
+    "entity_name": "Autophagy",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006914"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3558",
+    "entity_name": "Microglial phagocytosis",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006909",
+        "urn:miriam:cl:CL%3A0000129"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmc1b",
+    "entity_name": "Wnt signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016055"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3557",
+    "entity_name": "Endocytic vesicles",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0030139"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmab0",
+    "entity_name": "Inflammation signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006954"
+      ]
+    ],
+    "from": "new",
+    "comments": "too general;to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3563",
+    "entity_name": "Endoplasmic Reticulum activity",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0003674",
+        "urn:miriam:obo.go:GO%3A0005783"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check (not sure how much molecule function term can be applied to a cc)"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3553",
+    "entity_name": "Dopaminergic synapse",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0098691"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm869",
+    "entity_name": "SHH signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0023052"
+      ]
+    ],
+    "from": "new",
+    "comments": "urn:miriam:obo.go:GO%3A0023052; uniprot:Q15465"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3567",
+    "entity_name": "Chaperone mediated autophagy",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0061684"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmc19",
+    "entity_name": "Histamine signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0071420"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3560",
+    "entity_name": "Glutathione metabolism",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006749"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmf53",
+    "entity_name": "LRRK2 activity",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0003674",
+        "urn:miriam:uniprot:Q5S007"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3603",
+    "entity_name": "proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A36080"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3565",
+    "entity_name": "SNCA expression",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0010467",
+        "urn:miriam:hgnc:SNCA"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3551",
+    "entity_name": "CREB activity",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0003674",
+        "urn:miriam:mesh:D017362"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm133a",
+    "entity_name": "Cell death",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0008219"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm133d",
+    "entity_name": "Neuroinflammation",
+    "additional_annotations": [
+      [
+        "urn:miriam:hp:0033429"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm1347",
+    "entity_name": "Glycolysis",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0061621"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm134e",
+    "entity_name": "Nicotine signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0071316"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm133c",
+    "entity_name": "NR2F1 signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0023052",
+        "urn:miriam:uniprot:P10589"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm1350",
+    "entity_name": "Actin filament organization",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0007015"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmdde",
+    "entity_name": "PI3K/AKT signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0023052",
+        "urn:miriam:mesh:D019869",
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm134b",
+    "entity_name": "FOXO3 activity",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0003674",
+        "urn:miriam:uniprot:O43524"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3564",
+    "entity_name": "TFEB activity",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P19484"
+      ]
+    ],
+    "from": "new",
+    "comments": "related;to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm1345",
+    "entity_name": "Suggestions for curation",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "not relevant; to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm1341",
+    "entity_name": "Mitochondrial and ROS metabolism",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0045333",
+        "urn:miriam:obo.go:GO%3A0072593"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmb71",
+    "entity_name": "MTOR AMPK signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0031929"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_csa10",
+    "entity_name": "apoptotoc neuron",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0051402"
+      ]
+    ],
+    "from": "new",
+    "comments": "typo: apoptotoc->apoptotic"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3555",
+    "entity_name": "Dopamine metabolism",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0042417"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3566",
+    "entity_name": "Mitophagy",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D063306"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3556",
+    "entity_name": "Microtubules and axonal transport",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D001370"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdm12d1",
+    "entity_name": "Axonal remodeling and CDK5 signaling",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D009473",
+        "urn:miriam:obo.go:GO%3A0023052",
+        "urn:miriam:uniprot:Q00535"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_pdmbc7",
+    "entity_name": "Iron metabolism",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006879"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "PD_map_overview",
+    "entity_id": "s_id_sa3562",
+    "entity_name": "Mitochondrial biogenesis",
+    "additional_annotations": [
+      [
+        "urn:miriam:reactome:R-HSA-1592230"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Wnt_signaling",
+    "entity_id": "s_id_wn2a",
+    "entity_name": "DVL",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P54792"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "SNCA_expression",
+    "entity_id": "s_id_path_0_csa1646",
+    "entity_name": "globular actin",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000199"
+      ],
+      [
+        "urn:miriam:reactome:R-HSA-201857"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Ubiquitin_proteasome_system",
+    "entity_id": "s_id_csa122",
+    "entity_name": "26S proteasome",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0000502"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Dopaminergic_transcription",
+    "entity_id": "s_id_pdm1211",
+    "entity_name": "pacemaking activity",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa104",
+    "entity_name": "POa - derived cell NR2F2+ LHX6+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000000",
+        "urn:miriam:mesh:D011301",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:Q9UPM6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa67",
+    "entity_name": "CGE-derived Pax6+ cell",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000000",
+        "urn:miriam:ncit:C73851",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P26367"
+      ]
+    ],
+    "from": "new",
+    "comments": "homogenize: CGE-derived cell PAX6+"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa24",
+    "entity_name": "neocortical interneuron NR2F2+ SST+",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D019579",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P61278"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa65",
+    "entity_name": "POa-derived GABAergic interneuron GAD1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:mesh:D011301",
+        "urn:miriam:uniprot:Q99259"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa35",
+    "entity_name": "basket cell (P75b) NR2F2+ CCK+ CNR1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000118",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P06307",
+        "urn:miriam:uniprot:P21554"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa25",
+    "entity_name": "LGE - neural precursor cell NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:ncit:C25230",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa2",
+    "entity_name": "GABAergic interneuron NR2F2+ CALB2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P22676"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa68",
+    "entity_name": "P33b neurogliaform cell NR2F2+ NOS1+ NPY+ ACTN2+ GAD2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000103",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P29475",
+        "urn:miriam:uniprot:P01303",
+        "urn:miriam:uniprot:P35609",
+        "urn:miriam:uniprot:Q05329"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa99",
+    "entity_name": "GABAergic interneuron HTR3A+ NR2F1+ NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:uniprot:P46098",
+        "urn:miriam:uniprot:P10589",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa89",
+    "entity_name": "neuron FOXP2+ NR2F1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000540",
+        "urn:miriam:uniprot:O15409",
+        "urn:miriam:uniprot:P10589"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr183",
+    "entity_name": "enhancer 636",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa9",
+    "entity_name": "CGE-derived cell PAX6+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000000",
+        "urn:miriam:ncit:C73851",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P26367"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr163",
+    "entity_name": "glucose homeostasis",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0042593"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa76",
+    "entity_name": "cortical interneuron NR2F2+ RELN+ HTR3A+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0008031",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P78509",
+        "urn:miriam:uniprot:P46098"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa87",
+    "entity_name": "Purkinje cell NR2F2+ FOXP2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000121",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:O15409"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa102",
+    "entity_name": "MGE- neural precursor cell NR2F2+ NKX2-1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:ncit:C25232",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P43699"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa55",
+    "entity_name": "cortical GABAergic interneuron  HTR3A+ NR2F1+ PROX1+ CALB2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0010011",
+        "urn:miriam:uniprot:P46098",
+        "urn:miriam:uniprot:P10589",
+        "urn:miriam:uniprot:Q92786",
+        "urn:miriam:uniprot:P22676"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr181",
+    "entity_name": "enhancer 840",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr168",
+    "entity_name": "2-deoxyglucose",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:15866"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa42",
+    "entity_name": "CGE-derived GABAergic cell",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000617",
+        "urn:miriam:ncit:C73851",
+        "urn:miriam:mesh:D000097803"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr17a",
+    "entity_name": "enhancer 654",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc.symbol:ZNF654"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr172",
+    "entity_name": "enhancer 654",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc.symbol:ZNF654"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa77",
+    "entity_name": "GABAergic interneuron NR2F2+ HTR3A+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P46098"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa79",
+    "entity_name": "Cajal-Retzius cell NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000695",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa48",
+    "entity_name": " POa-derived cell NR2F2+ NRP2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000000",
+        "urn:miriam:mesh:D011301",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:O60462"
+      ]
+    ],
+    "from": "new",
+    "comments": "typo: leading space"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr14d",
+    "entity_name": "enhancer 643",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa56",
+    "entity_name": "CGE-derived GABAergic cell",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000617",
+        "urn:miriam:ncit:C73851",
+        "urn:miriam:mesh:D000097803"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa49",
+    "entity_name": " POa-derived cell NR2F2- NRP2-",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000000",
+        "urn:miriam:mesh:D011301",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:O60462"
+      ]
+    ],
+    "from": "new",
+    "comments": "typo: leading space"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa53",
+    "entity_name": " LGE-derived GABAergic cell",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000617",
+        "urn:miriam:ncit:C25230",
+        "urn:miriam:mesh:D000097803"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr14e",
+    "entity_name": "enhancer 611",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc:ZNF611"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr16f",
+    "entity_name": "enhancer 1329",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa71",
+    "entity_name": "CGE- derived GABAergic cell NR2F2+ SP8+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000617",
+        "urn:miriam:ncit:C73851",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:Q8IXZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa46",
+    "entity_name": "corticothalamic neuron",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr173",
+    "entity_name": "enhancer 643",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr184",
+    "entity_name": "enhancer 840",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa52",
+    "entity_name": "MGE-derived GABAergic cell",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000617",
+        "urn:miriam:ncit:C25232",
+        "urn:miriam:mesh:D000097803"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa47",
+    "entity_name": "POa-derived cell NR2F2+ NRP2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000000",
+        "urn:miriam:mesh:D011301",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:O60462"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa72",
+    "entity_name": "neurogliafrom cell NR2F2+ RELN+ ACTN2+ GABRA1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000693",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P78509",
+        "urn:miriam:uniprot:P35609",
+        "urn:miriam:uniprot:P14867"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa83",
+    "entity_name": "GABAergic interneuron NR2F2+ CCK+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P06307"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa54",
+    "entity_name": "cortical GABAergic interneuron  HTR3A+ VIP+ SP8+ NR2F1-",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0010011",
+        "urn:miriam:uniprot:P46098",
+        "urn:miriam:uniprot:P01282",
+        "urn:miriam:uniprot:Q8IXZ3",
+        "urn:miriam:uniprot:P10589"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa103",
+    "entity_name": "neuron NR5A1+ NR2F2-",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000540",
+        "urn:miriam:uniprot:Q13285",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa74",
+    "entity_name": "neuron NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000540",
+        "urn:miriam:uniprot:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa27",
+    "entity_name": "neocortical interneuron NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0008031",
+        "urn:miriam:mesh:D019579",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr16e",
+    "entity_name": "enhancer 611",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc:ZNF611"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr176",
+    "entity_name": "enhancer 611",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc:ZNF611"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa43",
+    "entity_name": "cortical GABAergic interneuron NR2F1- RELN+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0010011",
+        "urn:miriam:uniprot:P10589",
+        "urn:miriam:uniprot:P78509"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa98",
+    "entity_name": "GABAergic interneuron HTR3A+ NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:uniprot:P46098",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa23",
+    "entity_name": "MGE - neural precursor cell NR2F2+ SST+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:ncit:C25232",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P61278"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa73",
+    "entity_name": "interneuron-selective cell NR2F2+ VIP+ CALB2+ PENK+",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P01275",
+        "urn:miriam:uniprot:P22676",
+        "urn:miriam:uniprot:P01210"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find; previously annotated with pubmed"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa95",
+    "entity_name": "pyramidal cell",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000598"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa84",
+    "entity_name": "cholinergic cell NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000108",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr180",
+    "entity_name": "enhancer 636",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa60",
+    "entity_name": "cortical interneuron LHX6+ NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0008031",
+        "urn:miriam:uniprot:Q9UPM6",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr105",
+    "entity_name": "astrocyte production",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0048708"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa88",
+    "entity_name": "pyramidal cell NR2F2+ CCK+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000598",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P06307"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr16c",
+    "entity_name": "enhancer 654",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc.symbol:ZNF654"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa100",
+    "entity_name": "CGE- derived GABAergic cell HTR3A+ NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000617",
+        "urn:miriam:ncit:C73851",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P46098",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa80",
+    "entity_name": "neural precursor cell NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa59",
+    "entity_name": "MGE - neural precursor cell NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:ncit:C25232",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa28",
+    "entity_name": "neocortical interneuron NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0008031",
+        "urn:miriam:mesh:D019579",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa58",
+    "entity_name": "LGE - neural precursor cell NR2F2+ SP8+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:ncit:C25230",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:Q8IXZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa63",
+    "entity_name": "POa-derived GABAergic interneuron GAD1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:mesh:D011301",
+        "urn:miriam:uniprot:Q99259"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa30",
+    "entity_name": "RADI cell (P80a) NR2F2+ TAC3+ CALB1+ CNR1+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000099",
+        "urn:miriam:mesh:D056547",
+        "urn:miriam:mesh:D018891"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa81",
+    "entity_name": "GABAergic interneuron NR2F2+ GAD1+ GAD2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0011005",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:Q99259",
+        "urn:miriam:uniprot:Q05329"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa8",
+    "entity_name": "pallial-derived cell TBR1+ LHX2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000000",
+        "urn:miriam:ncit:C45874",
+        "urn:miriam:mesh:D013687",
+        "urn:miriam:uniprot:Q16650",
+        "urn:miriam:uniprot:P50458"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa101",
+    "entity_name": "CGE- derived GABAergic cell HTR3A+ SP8+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000617",
+        "urn:miriam:ncit:C73851",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:P46098",
+        "urn:miriam:uniprot:Q8IXZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa61",
+    "entity_name": "MGE -neural precursor cell LHX6+ NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:ncit:C25232",
+        "urn:miriam:mesh:D000097803",
+        "urn:miriam:uniprot:Q9UPM6",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa85",
+    "entity_name": "radiatum-retrohippocampal cell NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D056547",
+        "urn:miriam:obo.go:GO%3A0043005",
+        "urn:miriam:mesh:D006179"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa82",
+    "entity_name": "ivy cell NR2F2+ NOS1+ NPY+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042013",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:P29475",
+        "urn:miriam:uniprot:P01303"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr1b1",
+    "entity_name": "determination of ventral identity",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0048264"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa39",
+    "entity_name": "basket cell (P57b) NR2F2+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000118",
+        "urn:miriam:uniprot:P24468"
+      ]
+    ],
+    "from": "new",
+    "comments": "typo: P57b\u2192P75b"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa86",
+    "entity_name": "radial glia like cells",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0000681"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_nr16b",
+    "entity_name": "enhancer 1329",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa26",
+    "entity_name": "neocortical interneuron NR2F2+ SP8+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A0008031",
+        "urn:miriam:mesh:D019579",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:Q8IXZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "NR2F1_signaling",
+    "entity_id": "s_id_csa75",
+    "entity_name": "neural precursor cell NR2F2+ SP8+",
+    "additional_annotations": [
+      [
+        "urn:miriam:cl:CL%3A4042021",
+        "urn:miriam:uniprot:P24468",
+        "urn:miriam:uniprot:Q8IXZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_fission_and_fusion",
+    "entity_id": "s_id_path_0_csa2044",
+    "entity_name": "inner membrane fusion",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A1990627"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_fission_and_fusion",
+    "entity_id": "s_id_path_0_csa2055",
+    "entity_name": "fission constriction site",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0048285"
+      ]
+    ],
+    "from": "new",
+    "comments": "To check;not exact"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_fission_and_fusion",
+    "entity_id": "s_id_path_0_csa2052",
+    "entity_name": "outer membrane fusion",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0019064"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check"
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Endoplasmic_Reticulum_activity",
+    "entity_id": "s_id_pdm1236",
+    "entity_name": "HSP40",
+    "additional_annotations": [
+      [
+        "hgnc.group:584"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Endoplasmic_Reticulum_activity",
+    "entity_id": "s_id_pdm10cd",
+    "entity_name": "HSP40",
+    "additional_annotations": [
+      [
+        "hgnc.group:584"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Endoplasmic_Reticulum_activity",
+    "entity_id": "s_id_pdmba3",
+    "entity_name": "NO",
+    "additional_annotations": [
+      [
+        "urn:miriam:stitch:MWUXSHHQAYIFBG"
+      ],
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A16480"
+      ],
+      [
+        "urn:miriam:inchikey:MWUXSHHQAYIFBG-UHFFFAOYSA-N"
+      ],
+      [
+        "urn:miriam:inchi:InChI=1S/NO/c1-2"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdm768",
+    "entity_name": "nuclear RCC RNA",
+    "additional_annotations": [
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdmc61",
+    "entity_name": "nuclear RCC RNA",
+    "additional_annotations": [
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdm941",
+    "entity_name": "nuclear RCC RNA",
+    "additional_annotations": [
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdmf5c",
+    "entity_name": "nuclear RCC RNA",
+    "additional_annotations": [
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdmfd9",
+    "entity_name": "GARS",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P41250"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdm8f4",
+    "entity_name": "KARS",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q15046"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_path_0_csa1883",
+    "entity_name": "OXPHOS assembly factors",
+    "additional_annotations": [
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdmd35",
+    "entity_name": "Fe-S cluster",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:30408"
+      ],
+      [
+        "urn:miriam:obo.chebi:30408"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdm837",
+    "entity_name": "Fe-S cluster",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:30408"
+      ],
+      [
+        "urn:miriam:obo.chebi:30408"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdmdda",
+    "entity_name": "Fe-S cluster",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:30408"
+      ],
+      [
+        "urn:miriam:obo.chebi:30408"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_path_0_csa1558",
+    "entity_name": "mTORC1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0031931"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_path_0_csa1469",
+    "entity_name": "Respiratory Chain Components",
+    "additional_annotations": [
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_pdm7cd",
+    "entity_name": "NO",
+    "additional_annotations": [
+      [
+        "urn:miriam:stitch:MWUXSHHQAYIFBG"
+      ],
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A16480"
+      ],
+      [
+        "urn:miriam:inchikey:MWUXSHHQAYIFBG-UHFFFAOYSA-N"
+      ],
+      [
+        "urn:miriam:inchi:InChI=1S/NO/c1-2"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "PD_DM_CD",
+    "map": "Mitochondrial_biogenesis",
+    "entity_id": "s_id_path_0_csa1886",
+    "entity_name": "OXPHOS subunits encoded in mtDNA",
+    "additional_annotations": [
+      [
+        "Hgnc.group:1974",
+        "urn:miriam:obo.go:GO%3A0006119"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check; homegenize: mtDNA encoded OXPHOS units"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "JNK_pathway",
+    "entity_id": "s_id_sa50",
+    "entity_name": "6",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "don't know where it comes from"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "JNK_pathway",
+    "entity_id": "s_id_sa38",
+    "entity_name": "N",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:1798174255"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009724397.2"
+      ],
+      [
+        "urn:miriam:hgnc.symbol:N"
+      ],
+      [
+        "urn:miriam:uniprot:P0DTC9"
+      ],
+      [
+        "urn:miriam:ncbigene:1489678"
+      ],
+      [
+        "urn:miriam:ncbiprotein:BCD58761"
+      ],
+      [
+        "urn:miriam:uniprot:P59595"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "HMOX1_pathway",
+    "entity_id": "s_id_sa171",
+    "entity_name": "ORF9c",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "HMOX1_pathway",
+    "entity_id": "s_id_sa119",
+    "entity_name": "PPO",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P50336"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "HMOX1_pathway",
+    "entity_id": "s_id_sa526",
+    "entity_name": "CK2",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0005956"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "NLRP3_inflammasome_activation",
+    "entity_id": "s_id_sa44",
+    "entity_name": "HSP90",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR001404"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "HMOX1_pathway",
+    "entity_id": "s_id_sa396",
+    "entity_name": "HSP90",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR001404"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "HMOX1_pathway",
+    "entity_id": "s_id_sa192",
+    "entity_name": "DIPY",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:30351"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa76",
+    "entity_name": "V1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa60",
+    "entity_name": "V1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa62",
+    "entity_name": "V1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa74",
+    "entity_name": "V1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa168",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa65",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa71",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa63",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa197",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa144",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa228",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa59",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa167",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa77",
+    "entity_name": "V0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa61",
+    "entity_name": "V0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa75",
+    "entity_name": "V0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa63",
+    "entity_name": "V0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0033176"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa84",
+    "entity_name": "P1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa198",
+    "entity_name": "Orf9c",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:AIA62288"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa188",
+    "entity_name": "Bafilomycin A1",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB06733"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa3",
+    "entity_name": "Nsp4 (+)",
+    "additional_annotations": [
+      [
+        "Ncbiprotein:YP_009725300",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "Can't find gene;can't find term for positive strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa219",
+    "entity_name": "Nsp3 (-)",
+    "additional_annotations": [
+      [
+        "Ncbiprotein:YP_009725299",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO; can't find term for gene"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa101",
+    "entity_name": "F1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ],
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa212",
+    "entity_name": "Several drugs",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:23888"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa99",
+    "entity_name": "F1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ],
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa57",
+    "entity_name": "F1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ],
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa54",
+    "entity_name": "F1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ],
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa56",
+    "entity_name": "F0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa98",
+    "entity_name": "F0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa55",
+    "entity_name": "F0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa165",
+    "entity_name": "Nsp3",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:1802476807"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009725299"
+      ],
+      [
+        "urn:miriam:wikipathways:WP4868"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa207",
+    "entity_name": "Bafilomycin A1",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB06733"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa47",
+    "entity_name": "Nsp6 (+)",
+    "additional_annotations": [
+      [
+        "Ncbiprotein:YP_009725302",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO; can't find term for gene"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa200",
+    "entity_name": "Loratadine",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB00455"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa192",
+    "entity_name": "Orf9c",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:AIA62288"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa215",
+    "entity_name": "Several drugs",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:23888"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa162",
+    "entity_name": "Nsp3",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:1802476807"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009725299"
+      ],
+      [
+        "urn:miriam:wikipathways:WP4868"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa216",
+    "entity_name": "Loratadine",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB00455"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa220",
+    "entity_name": "Nsp4 (-)",
+    "additional_annotations": [
+      [
+        "Ncbiprotein:YP_009725300",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "Can't find gene;can't find term for negative strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa70",
+    "entity_name": "P0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa73",
+    "entity_name": "P0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa82",
+    "entity_name": "P0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa72",
+    "entity_name": "P1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa81",
+    "entity_name": "P1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa71",
+    "entity_name": "P1",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa48",
+    "entity_name": "Nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725302"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613.1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009742613"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa83",
+    "entity_name": "P0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0140358"
+      ]
+    ],
+    "from": "new",
+    "comments": "either too precise or not precise enough"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa187",
+    "entity_name": "Selinexor",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB11942"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa218",
+    "entity_name": "Nsp6 (-)",
+    "additional_annotations": [
+      [
+        "Ncbiprotein:YP_009742613",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "Can't find gene;can't find term for negative strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa190",
+    "entity_name": "Selinexor",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB11942"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_csa100",
+    "entity_name": "F0",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0016473"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa193",
+    "entity_name": "M",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:1796318601"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009724393.1"
+      ],
+      [
+        "urn:miriam:uniprot:P0DTC5"
+      ],
+      [
+        "urn:miriam:ncbiprotein:APO40582"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp4_and_Nsp6_protein_interactions",
+    "entity_id": "s_id_sa160",
+    "entity_name": "Nsp3 (+)",
+    "additional_annotations": [
+      [
+        "Ncbiprotein:YP_009725299",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO; can't find term for gene"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa48",
+    "entity_name": "H4-16",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P62805"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa40",
+    "entity_name": "H4-16",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P62805"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa8",
+    "entity_name": "H4-16",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P62805"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa64",
+    "entity_name": "MPP5",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8N3R9"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa53",
+    "entity_name": "MPP5",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8N3R9"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa78",
+    "entity_name": "Chromatin organization",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006325"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa30_active",
+    "entity_name": "MPP5",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8N3R9"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa30",
+    "entity_name": "MPP5",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8N3R9"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa74",
+    "entity_name": "Maintenance of tight junction",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0045217"
+      ]
+    ],
+    "from": "new",
+    "comments": "too general"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa73",
+    "entity_name": "Activity of sodium channels",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0005272"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "E_protein_interactions",
+    "entity_id": "s_id_sa77",
+    "entity_name": "RNA Polymerase II-dependent Transcription ",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006366"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa110",
+    "entity_name": "STING_p",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q86WV6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa168",
+    "entity_name": "STING_p",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q86WV6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa175",
+    "entity_name": "HCoVs Type I Ifn signalling(WP4868)",
+    "additional_annotations": [
+      [
+        "urn:miriam:wp:WP4868"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa166",
+    "entity_name": " RRM1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P23921"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa132",
+    "entity_name": "LC3",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q9H492",
+        "urn:miriam:uniprot:Q9GZQ8",
+        "urn:miriam:uniprot:Q9BXW4"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa162",
+    "entity_name": "RTC and transcription pw",
+    "additional_annotations": [
+      [
+        "R-HSA-9694682"
+      ]
+    ],
+    "from": "new",
+    "comments": "change to \u201cRTC and transcription\u201d?; to check"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa163",
+    "entity_name": "DNA damage",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D004249"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa178",
+    "entity_name": "HCoVs IFN induction WP4880",
+    "additional_annotations": [
+      [
+        "urn:miriam:wp:WP4880"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa177",
+    "entity_name": "HCoVs autophagy (WP4863)",
+    "additional_annotations": [
+      [
+        "urn:miriam:wp:4863"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa64",
+    "entity_name": "P1788",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa142",
+    "entity_name": "DNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D004247"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa94",
+    "entity_name": "LC3",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q9H492",
+        "urn:miriam:uniprot:Q9GZQ8",
+        "urn:miriam:uniprot:Q9BXW4"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Pyrimidine_deprivation",
+    "entity_id": "s_id_sa176",
+    "entity_name": "Interferon 1 pathway",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0034340"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Kynurenine_synthesis_pathway",
+    "entity_id": "s_id_sa323",
+    "entity_name": "celecoxib",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB00482"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Kynurenine_synthesis_pathway",
+    "entity_id": "s_id_sa338",
+    "entity_name": "monocarboxylates transported by SLC5A8",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:35757"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Kynurenine_synthesis_pathway",
+    "entity_id": "s_id_sa50",
+    "entity_name": "PXLP",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:18405"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Kynurenine_synthesis_pathway",
+    "entity_id": "s_id_sa334",
+    "entity_name": "monocarboxylates transported by SLC5A8",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:35757"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Kynurenine_synthesis_pathway",
+    "entity_id": "s_id_sa3",
+    "entity_name": "Epacadostat",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB11717"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf3a_protein_interactions",
+    "entity_id": "s_id_sa57",
+    "entity_name": "TRIM30a",
+    "additional_annotations": [
+      [
+        ""
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf3a_protein_interactions",
+    "entity_id": "s_id_sa41",
+    "entity_name": "double-stranded RNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa14",
+    "entity_name": "ssRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:SO:0001199"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for single strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf3a_protein_interactions",
+    "entity_id": "s_id_sa42",
+    "entity_name": "ssRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:SO:0001199"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for single strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Coagulation_pathway",
+    "entity_id": "s_id_sa530",
+    "entity_name": "vascular inflammation",
+    "additional_annotations": [
+      [
+        "urn:miriam:hp:0002633"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Coagulation_pathway",
+    "entity_id": "s_id_sa416",
+    "entity_name": "cytokine storm",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Coagulation_pathway",
+    "entity_id": "s_id_sa417",
+    "entity_name": "MASP2 deposition",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find term for deposition"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp14_and_metabolism",
+    "entity_id": "s_id_sa412",
+    "entity_name": "Urea cycle",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0000050"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp14_and_metabolism",
+    "entity_id": "s_id_sa138",
+    "entity_name": "NAPRT1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q6XQN6"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp14_and_metabolism",
+    "entity_id": "s_id_sa305",
+    "entity_name": "AMDP2",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q01433"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp14_and_metabolism",
+    "entity_id": "s_id_sa411",
+    "entity_name": "Guanine nucleotide synthesis",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0046099"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp14_and_metabolism",
+    "entity_id": "s_id_sa104",
+    "entity_name": "NRK1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q9NWW6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa653",
+    "entity_name": "damaged mt DNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D004272",
+        "urn:miriam:mesh:D004249"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa639",
+    "entity_name": "Fe-S",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:14828"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa204",
+    "entity_name": "Fe-S",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:14828"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa198",
+    "entity_name": "Fe-S",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:14828"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa231",
+    "entity_name": "Fe-S",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:14828"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_csa103",
+    "entity_name": "mtDNA encoded OXPHOS units",
+    "additional_annotations": [
+      [
+        "Hgnc.group:1974",
+        "urn:miriam:obo.go:GO%3A0006119"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa645",
+    "entity_name": "e-",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A10545"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa651",
+    "entity_name": "e-",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A10545"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa650",
+    "entity_name": "e-",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.chebi:CHEBI%3A10545"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa319",
+    "entity_name": "ATP5MD",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q96IX5"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa322",
+    "entity_name": "ATP5MPL",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P56378"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa500",
+    "entity_name": "TCA",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006099"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa699",
+    "entity_name": "TOMM37",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q9P0U1"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check; typo?"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa463",
+    "entity_name": "mt DNA replication",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0006260",
+        "urn:miriam:mesh:D004272"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa461",
+    "entity_name": "mt DNA damage",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D004272",
+        "urn:miriam:mesh:D004249"
+      ]
+    ],
+    "from": "new",
+    "comments": "homogenize: damaged mt DNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Electron_Transport_Chain_disruption",
+    "entity_id": "s_id_sa457",
+    "entity_name": "C12orf65",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q9H3J6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2298",
+    "entity_name": "Orf3a (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740569"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2107",
+    "entity_name": "Orf8 (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740577",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2106",
+    "entity_name": "Orf7b (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740574",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2343",
+    "entity_name": "M ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740571",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2104",
+    "entity_name": "Orf3a (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740569",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2344",
+    "entity_name": "E ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740570",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2347",
+    "entity_name": "Orf6 ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740572",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2108",
+    "entity_name": "Orf6  (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740572",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2113",
+    "entity_name": "M (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740571",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2318",
+    "entity_name": "Orf7b (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740574"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2295",
+    "entity_name": "S (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740568",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2354",
+    "entity_name": "N ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740575",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2325",
+    "entity_name": "S (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740568",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2302",
+    "entity_name": "Orf7b (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740574"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_csa410",
+    "entity_name": "Replication transcription complex",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000086969"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2355",
+    "entity_name": "N (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740575",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2109",
+    "entity_name": "Orf9b (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD2",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check; can't find exact gene orf9b (part of N); can't find subgenomic RNA;can't find term for positive strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2345",
+    "entity_name": "S ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740568",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2324",
+    "entity_name": "Orf7a (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTC7",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2351",
+    "entity_name": "Orf14 ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD3",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "Can't find gene;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2301",
+    "entity_name": "Orf14 (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD3",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2321",
+    "entity_name": "Orf8 (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740577"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2296",
+    "entity_name": "Orf7a (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTC7",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2322",
+    "entity_name": "Orf3a (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740569"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2110",
+    "entity_name": "Orf14 (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD3",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2348",
+    "entity_name": "Orf3a ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740569",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2349",
+    "entity_name": "Orf8 ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740577"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2299",
+    "entity_name": "Orf8 (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740577"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2112",
+    "entity_name": "S (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740568",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2352",
+    "entity_name": "Orf7b ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740574",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2350",
+    "entity_name": "Orf9b ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD2",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check; can't find exact gene orf9b (part of N); can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2319",
+    "entity_name": "Orf14 (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD3",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2323",
+    "entity_name": "Orf6 (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740572",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2111",
+    "entity_name": "E (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740570",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2320",
+    "entity_name": "Orf9b (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD2",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2300",
+    "entity_name": "Orf9b (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD2",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2346",
+    "entity_name": "Orf7a ds sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTC7",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2297",
+    "entity_name": "Orf6 (-)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740572",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_csa408",
+    "entity_name": "Replication transcription complex",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D000086969"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Virus_replication_cycle",
+    "entity_id": "s_id_sa2105",
+    "entity_name": "Orf7a (+)ss sgmRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTC7",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO; can't find gene for orf7a;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Renin-angiotensin_pathway",
+    "entity_id": "s_id_sa138",
+    "entity_name": "angiotensin 1-4",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Renin-angiotensin_pathway",
+    "entity_id": "s_id_sa121",
+    "entity_name": "angiotensin 1-12",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can;t find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Renin-angiotensin_pathway",
+    "entity_id": "s_id_sa160",
+    "entity_name": "angiotensin 3-7",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Renin-angiotensin_pathway",
+    "entity_id": "s_id_sa161",
+    "entity_name": "QGC001",
+    "additional_annotations": [
+      [
+        "urn:miriam:drugbank:DB13107"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "TGFbeta_signalling",
+    "entity_id": "s_id_sa46",
+    "entity_name": "BMPR1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P36894",
+        "urn:miriam:uniprot:O00238"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph51",
+    "entity_name": "nsp9",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705767"
+      ],
+      [
+        "urn:miriam:mesh:C000705768"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph40",
+    "entity_name": "pp1ab",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009724389"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph45",
+    "entity_name": "nsp3",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706267"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph66",
+    "entity_name": "nsp11",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000657925"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph20",
+    "entity_name": "(+)sgRNA (2-9)",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph52",
+    "entity_name": "nsp15",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000657925"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph67",
+    "entity_name": "nsp5",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706209"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph56",
+    "entity_name": "nsp6",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705767"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph43",
+    "entity_name": "nsp10",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705769"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph60",
+    "entity_name": "nsp10",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705769"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph58",
+    "entity_name": "nsp10",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705769"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph59",
+    "entity_name": "nsp10",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705769"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph35",
+    "entity_name": "nsp14",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725309"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph55",
+    "entity_name": "nsp14",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725309"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph38",
+    "entity_name": "nsp14",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725309"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph65",
+    "entity_name": "nsp14",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725309"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph57",
+    "entity_name": "nsp12",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706296"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph64",
+    "entity_name": "nsp12",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706296"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph68",
+    "entity_name": "nsp12",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706296"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph47",
+    "entity_name": "nsp12",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706296"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph16",
+    "entity_name": "(-)gRNA (including ORF1a ORF1b)",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740578",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph54",
+    "entity_name": "nsp14",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725309"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph19",
+    "entity_name": "viral accessory",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D054334"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph33",
+    "entity_name": "nsp7",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705669"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph50",
+    "entity_name": "nsp8 (II)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph37",
+    "entity_name": "nsp2",
+    "additional_annotations": [
+      [
+        "Ncbiprotein:YP_009725298"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph36",
+    "entity_name": "nsp16",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbiprotein:YP_009725311"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph46",
+    "entity_name": "pp1a",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTC1"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph44",
+    "entity_name": "nsp9",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705767"
+      ],
+      [
+        "urn:miriam:mesh:C000705768"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph48",
+    "entity_name": "nsp9",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705767"
+      ],
+      [
+        "urn:miriam:mesh:C000705768"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph15",
+    "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740578",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph14",
+    "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740578",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph27",
+    "entity_name": "nsp7",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705669"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph24",
+    "entity_name": "nsp7",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705669"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph21",
+    "entity_name": "nsp7",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705669"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph28",
+    "entity_name": "nsp7",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705669"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph29",
+    "entity_name": "nsp8 (II)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph26",
+    "entity_name": "nsp8 (II)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph23",
+    "entity_name": "nsp8 (II)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph22",
+    "entity_name": "nsp8 (II)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph25",
+    "entity_name": "nsp8 (I)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph32",
+    "entity_name": "nsp8 (I)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph30",
+    "entity_name": "nsp8 (I)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph31",
+    "entity_name": "nsp8 (I)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph12",
+    "entity_name": "(-)gRNA (including ORF1a ORF1b)",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740578",
+        "urn:miriam:SO:0001200"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph13",
+    "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740578",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph62",
+    "entity_name": "nsp12",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706296"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph49",
+    "entity_name": "nsp8 (I)",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000707895"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph63",
+    "entity_name": "pp1a",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTC1"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph42",
+    "entity_name": "nsp9",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705767"
+      ],
+      [
+        "urn:miriam:mesh:C000705768"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph53",
+    "entity_name": "pp1ab",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTD1"
+      ],
+      [
+        "urn:miriam:ncbiprotein:YP_009724389"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph39",
+    "entity_name": "nsp1",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706293"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph17",
+    "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:43740578",
+        "urn:miriam:SO:0001201"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for positive strand outside of SO;can't find subgenomic RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph61",
+    "entity_name": "nsp10",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000705769"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph34",
+    "entity_name": "nsp13",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000722450"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph41",
+    "entity_name": "nsp4",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:C000706290"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "SARS-CoV-2_RTC_and_transcription",
+    "entity_id": "s_id_glyph18",
+    "entity_name": "structural proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D015678"
+      ]
+    ],
+    "from": "new",
+    "comments": "to check if viral"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa139",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa271",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa216",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa155",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa162",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa114",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa131",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa239",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa231",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa246",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa107",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa202",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa43",
+    "entity_name": "Ub",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:PF00240"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_csa23",
+    "entity_name": "CSN5",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0008180"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Orf10_Cul2_pathway",
+    "entity_id": "s_id_sa105",
+    "entity_name": "ubit_traget",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "typo? Can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "NLRP3_inflammasome_activation",
+    "entity_id": "s_id_sa82",
+    "entity_name": "IKBA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P25963"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "NLRP3_inflammasome_activation",
+    "entity_id": "s_id_sa113",
+    "entity_name": "IKBA",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P25963"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa82",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa97",
+    "entity_name": "IFN-III",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR029177"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa420",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa437",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa401",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa438",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa123",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa84",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa149",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa119",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa107",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa49",
+    "entity_name": "ribosomal 40S subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ],
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa32",
+    "entity_name": "ribosomal 40S subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ],
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa45",
+    "entity_name": "ribosomal 40S subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ],
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa46",
+    "entity_name": "ribosomal 60S subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0022625"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa33",
+    "entity_name": "ribosomal 60S subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0022625"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa128",
+    "entity_name": "RNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012313"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for negative strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa125",
+    "entity_name": "dsRNA_vesicle",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0031410",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa76",
+    "entity_name": "viral RNA+N-methyl-Guanine",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012367",
+        "urn:miriam:obo.chebi:25305"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa75",
+    "entity_name": "viral RNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012367"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa16",
+    "entity_name": "IFN-sensitive-response-element",
+    "additional_annotations": [
+      [
+        "urn:miriam:SO:0001715"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa14",
+    "entity_name": "ISGs",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find; could have gene and response to each interferon type"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa15",
+    "entity_name": "ISGs",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find; could have gene and response to each interferon type"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa47",
+    "entity_name": "ribosomal 60S subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0022625"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa48",
+    "entity_name": "ribosomal 40S subunit",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ],
+      [
+        "urn:miriam:obo.go:GO%3A0022627"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa53",
+    "entity_name": "IFNs",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR029177"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_csa59",
+    "entity_name": "antiviral proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D011506",
+        "urn:miriam:mesh:D000998"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa77",
+    "entity_name": "5'cap-viral-RNA",
+    "additional_annotations": [
+      []
+    ],
+    "from": "new",
+    "comments": "can't find"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa90",
+    "entity_name": "IFN-III",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc:18363",
+        "urn:miriam:hgnc:18364",
+        "urn:miriam:hgnc:18365",
+        "urn:miriam:hgnc:44480"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_lambda_pathway",
+    "entity_id": "s_id_sa91",
+    "entity_name": "IFN-III",
+    "additional_annotations": [
+      [
+        "urn:miriam:hgnc:18363",
+        "urn:miriam:hgnc:18364",
+        "urn:miriam:hgnc:18365",
+        "urn:miriam:hgnc:44480"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp9_protein_interactions",
+    "entity_id": "s_id_sa1254",
+    "entity_name": "ssRNAoligo",
+    "additional_annotations": [
+      [
+        "urn:miriam:SO:0001199",
+        "urn:miriam:mesh:D009841"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp9_protein_interactions",
+    "entity_id": "s_id_sa1194",
+    "entity_name": "virus_replication",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D014779"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp9_protein_interactions",
+    "entity_id": "s_id_sa1253",
+    "entity_name": "ssRNAoligo",
+    "additional_annotations": [
+      [
+        "urn:miriam:SO:0001199",
+        "urn:miriam:mesh:D009841"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Nsp9_protein_interactions",
+    "entity_id": "s_id_sa1278",
+    "entity_name": "Neutrophil_activation",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D018375"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa431",
+    "entity_name": "ssRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:SO:0001199"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for single strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa432",
+    "entity_name": "ssRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:SO:0001199"
+      ]
+    ],
+    "from": "new",
+    "comments": "can't find term for single strand outside of SO"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa26",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_csa87",
+    "entity_name": "ubiquitin-proteasome complex",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0000502"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa6",
+    "entity_name": "dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": "harmonize: double-stranded RNA"
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "PAMP_signalling",
+    "entity_id": "s_id_sa480",
+    "entity_name": "transcription of proinflammatory proteins",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0009299",
+        "urn:miriam:obo.go:GO%3A0006954"
+      ]
+    ],
+    "from": "new",
+    "comments": "too check; not exact; could replace inflammatory response by cytokines, chemokines, etc."
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa276",
+    "entity_name": "IkB",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR051070"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa257",
+    "entity_name": "TAK1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O43318"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa315",
+    "entity_name": "IRAK1/4",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P51617",
+        "urn:miriam:uniprot:Q9NWZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa294",
+    "entity_name": "IRAK1/4",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P51617",
+        "urn:miriam:uniprot:Q9NWZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa292",
+    "entity_name": "IRAK1/4",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P51617",
+        "urn:miriam:uniprot:Q9NWZ3"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa258",
+    "entity_name": "TAK1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O43318"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa186",
+    "entity_name": "Viral dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012367",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa261",
+    "entity_name": "NEMO",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q9Y6K9"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa262",
+    "entity_name": "IKKa",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O15111"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa264",
+    "entity_name": "IKKb",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O14920"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa267",
+    "entity_name": "IKKb",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O14920"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa199",
+    "entity_name": "Orf8a",
+    "additional_annotations": [
+      [
+        "urn:miriam:ncbigene:1489676"
+      ],
+      [
+        "urn:miriam:uniprot:Q7TFA0"
+      ]
+    ],
+    "from": "existent",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa191",
+    "entity_name": "Orf8b",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:P0DTC8"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa265",
+    "entity_name": "NEMO",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q9Y6K9"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa249",
+    "entity_name": "TRIF",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8IUC6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa295",
+    "entity_name": "TRIF",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8IUC6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa246",
+    "entity_name": "TRIF",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8IUC6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa152",
+    "entity_name": "DDX58",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O95786"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa278",
+    "entity_name": "IkB",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR051070"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa266",
+    "entity_name": "IKKa",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O15111"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa200",
+    "entity_name": "DDX58",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O95786"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa250",
+    "entity_name": "RIP1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q13546"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa247",
+    "entity_name": "RIP1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q13546"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa237",
+    "entity_name": "MNS",
+    "additional_annotations": [
+      [
+        "urn:miriam:pubchem.compound:672296"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa240",
+    "entity_name": "TRIF",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:Q8IUC6"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa259",
+    "entity_name": "Viral dsRNA",
+    "additional_annotations": [
+      [
+        "urn:miriam:mesh:D012367",
+        "urn:miriam:mesh:D012330"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa270",
+    "entity_name": "IkB",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR051070"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa260",
+    "entity_name": "type I IFN response",
+    "additional_annotations": [
+      [
+        "urn:miriam:obo.go:GO%3A0034340"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa273",
+    "entity_name": "IkB",
+    "additional_annotations": [
+      [
+        "urn:miriam:interpro:IPR051070"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa155",
+    "entity_name": "DDX58",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O95786"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa296",
+    "entity_name": "NAP1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O96009"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  },
+  {
+    "collection": "COVID_DM_CD",
+    "map": "Interferon_1_pathway",
+    "entity_id": "s_id_sa297",
+    "entity_name": "NAP1",
+    "additional_annotations": [
+      [
+        "urn:miriam:uniprot:O96009"
+      ]
+    ],
+    "from": "new",
+    "comments": ""
+  }
+]

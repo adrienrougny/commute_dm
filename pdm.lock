@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:a344b71855ba4c122cb66355c5f0dcacfd8445db09cae891ab11fa13bbed7176"
+content_hash = "sha256:5b4f69327cb77646a2cd2bde70366bc45dcc6d7f77bf0da7b53ec79727dbd24f"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -928,15 +928,15 @@ files = [
 
 [[package]]
 name = "jupyterlab"
-version = "4.4.2"
+version = "4.4.9"
 requires_python = ">=3.9"
 summary = "JupyterLab computational environment"
 groups = ["default"]
 dependencies = [
     "async-lru>=1.0.0",
-    "httpx>=0.25.0",
+    "httpx<1,>=0.25.0",
     "importlib-metadata>=4.8.3; python_version < \"3.10\"",
-    "ipykernel>=6.5.0",
+    "ipykernel!=6.30.0,>=6.5.0",
     "jinja2>=3.0.3",
     "jupyter-core",
     "jupyter-lsp>=2.0.0",
@@ -950,8 +950,8 @@ dependencies = [
     "traitlets",
 ]
 files = [
-    {file = "jupyterlab-4.4.2-py3-none-any.whl", hash = "sha256:857111a50bed68542bf55dca784522fe728f9f88b4fe69e8c585db5c50900419"},
-    {file = "jupyterlab-4.4.2.tar.gz", hash = "sha256:afa9caf28c0cb966488be18e5e8daba9f018a1c4273a406b7d5006344cbc6d16"},
+    {file = "jupyterlab-4.4.9-py3-none-any.whl", hash = "sha256:394c902827350c017430a8370b9f40c03c098773084bc53930145c146d3d2cb2"},
+    {file = "jupyterlab-4.4.9.tar.gz", hash = "sha256:ea55aca8269909016d5fde2dc09b97128bc931230183fe7e2920ede5154ad9c2"},
 ]
 
 [[package]]
@@ -1175,7 +1175,7 @@ name = "minervapy"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "http://github.com/adrienrougny/minervapy.git"
-revision = "3074406e33f9eff2b6d07bf847e7ae7a5527ab07"
+revision = "0ad538ff09b1b16776491ac5b829bef5f60a945a"
 summary = "Default template for PDM package"
 groups = ["default"]
 dependencies = [
@@ -1199,11 +1199,10 @@ files = [
 
 [[package]]
 name = "momapy"
-version = "0.1.0"
+version = "0.1.3"
 requires_python = ">=3.10"
 git = "http://github.com/adrienrougny/momapy.git"
-ref = "develop"
-revision = "4c4f9b4d661ec17eca7238936c979061d8602f0a"
+revision = "c00cd9092ce555587a1e91f068365c1657102a79"
 summary = "A library for working with molecular maps"
 groups = ["default"]
 dependencies = [
@@ -1311,7 +1310,7 @@ files = [
 
 [[package]]
 name = "neo4j"
-version = "5.28.1"
+version = "5.28.2"
 requires_python = ">=3.7"
 summary = "Neo4j Bolt driver for Python"
 groups = ["default"]
@@ -1319,8 +1318,8 @@ dependencies = [
     "pytz",
 ]
 files = [
-    {file = "neo4j-5.28.1-py3-none-any.whl", hash = "sha256:6755ef9e5f4e14b403aef1138fb6315b120631a0075c138b5ddb2a06b87b09fd"},
-    {file = "neo4j-5.28.1.tar.gz", hash = "sha256:ae8e37a1d895099062c75bc359b2cce62099baac7be768d0eba7180c1298e214"},
+    {file = "neo4j-5.28.2-py3-none-any.whl", hash = "sha256:5c53b5c3eee6dee7e920c9724391aa38d7135a651e71b766da00533b92a91a94"},
+    {file = "neo4j-5.28.2.tar.gz", hash = "sha256:7d38e27e4f987a45cc9052500c6ee27325cb23dae6509037fe31dd7ddaed70c7"},
 ]
 
 [[package]]
@@ -1328,7 +1327,7 @@ name = "neo4j-dm"
 version = "0.1.0"
 requires_python = ">=3.10"
 git = "http://github.com/adrienrougny/neo4j_dm.git"
-revision = "734b4173bd5289963b78c7413c2a6f0fa895772a"
+revision = "271e0849a9a725f030f26ff748ca1ffd69651df5"
 summary = "Default template for PDM package"
 groups = ["default"]
 dependencies = [
@@ -1336,22 +1335,22 @@ dependencies = [
     "momapy @ git+http://github.com/adrienrougny/momapy.git@develop",
     "momapy-kb @ git+http://github.com/adrienrougny/momapy_kb.git",
     "pandas>=2.2.3",
-    "pygraphviz>=1.14",
+    "pydot>=4.0.1",
     "rpy2>=3.5.17",
 ]
 
 [[package]]
 name = "neomodel"
-version = "5.4.5"
+version = "5.5.3"
 requires_python = ">=3.9"
 summary = "An object mapper for the neo4j graph database."
 groups = ["default"]
 dependencies = [
-    "neo4j~=5.28.1",
+    "neo4j~=5.28.2",
 ]
 files = [
-    {file = "neomodel-5.4.5-py3-none-any.whl", hash = "sha256:872cd0ec79a98483f46ad8904e5fd3b9fb36671d1d0f2f1ec9dc78056d02db90"},
-    {file = "neomodel-5.4.5.tar.gz", hash = "sha256:9bf314e7e8e36ebfa773ef9eae5fb6c07b304de802394acacae157d15457cc8c"},
+    {file = "neomodel-5.5.3-py3-none-any.whl", hash = "sha256:5568512757d868b224b6d4beeb2e2fa94912ed1286e11bd032e17a9c9355d742"},
+    {file = "neomodel-5.5.3.tar.gz", hash = "sha256:fe36a48843ec9376210804ce90ac7e627da0895290f6702c7cc7dc00f2d66c9e"},
 ]
 
 [[package]]
@@ -1367,20 +1366,20 @@ files = [
 
 [[package]]
 name = "notebook"
-version = "7.4.2"
+version = "7.4.7"
 requires_python = ">=3.8"
 summary = "Jupyter Notebook - A web-based notebook environment for interactive computing"
 groups = ["default"]
 dependencies = [
     "jupyter-server<3,>=2.4.0",
     "jupyterlab-server<3,>=2.27.1",
-    "jupyterlab<4.5,>=4.4.0",
+    "jupyterlab<4.5,>=4.4.9",
     "notebook-shim<0.3,>=0.2",
     "tornado>=6.2.0",
 ]
 files = [
-    {file = "notebook-7.4.2-py3-none-any.whl", hash = "sha256:9ccef602721aaa5530852e3064710b8ae5415c4e2ce26f8896d0433222755259"},
-    {file = "notebook-7.4.2.tar.gz", hash = "sha256:e739defd28c3f615a6bfb0a2564bd75018a9cc6613aa00bbd9c15e68eed2de1b"},
+    {file = "notebook-7.4.7-py3-none-any.whl", hash = "sha256:362b7c95527f7dd3c4c84d410b782872fd9c734fb2524c11dd92758527b6eda6"},
+    {file = "notebook-7.4.7.tar.gz", hash = "sha256:3f0a04027dfcee8a876de48fba13ab77ec8c12f72f848a222ed7f5081b9e342a"},
 ]
 
 [[package]]
@@ -1722,6 +1721,20 @@ files = [
 ]
 
 [[package]]
+name = "pydot"
+version = "4.0.1"
+requires_python = ">=3.8"
+summary = "Python interface to Graphviz's Dot"
+groups = ["default"]
+dependencies = [
+    "pyparsing>=3.1.0",
+]
+files = [
+    {file = "pydot-4.0.1-py3-none-any.whl", hash = "sha256:869c0efadd2708c0be1f916eb669f3d664ca684bc57ffb7ecc08e70d5e93fee6"},
+    {file = "pydot-4.0.1.tar.gz", hash = "sha256:c2148f681c4a33e08bf0e26a9e5f8e4099a82e0e2a068098f32ce86577364ad5"},
+]
+
+[[package]]
 name = "pygments"
 version = "2.19.1"
 requires_python = ">=3.8"
@@ -1743,16 +1756,6 @@ dependencies = [
 ]
 files = [
     {file = "pygobject-3.52.3.tar.gz", hash = "sha256:00e427d291e957462a8fad659a9f9c8be776ff82a8b76bdf402f1eaeec086d82"},
-]
-
-[[package]]
-name = "pygraphviz"
-version = "1.14"
-requires_python = ">=3.10"
-summary = "Python interface to Graphviz"
-groups = ["default"]
-files = [
-    {file = "pygraphviz-1.14.tar.gz", hash = "sha256:c10df02377f4e39b00ae17c862f4ee7e5767317f1c6b2dfd04cea6acc7fc2bea"},
 ]
 
 [[package]]

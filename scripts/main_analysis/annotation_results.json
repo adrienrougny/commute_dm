@@ -1,0 +1,5394 @@
+[
+    {
+        "additional_annotations": [
+            [
+                "GO:0051082"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find for protein, put binding activity",
+        "entity_id": "s_id_path_0_sa614",
+        "entity_name": "Unfolded protein",
+        "entry": "Endoplasmatic_Reticulum_stress",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0051082"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find for protein, put binding activity",
+        "entity_id": "s_id_path_0_sa616",
+        "entity_name": "Unfolded protein",
+        "entry": "Endoplasmatic_Reticulum_stress",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "reactome:R-HSA-9694516"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa279",
+        "entity_name": "SARS-CoV infection",
+        "entry": "Endoplasmatic_Reticulum_stress",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0051082"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find for protein, put binding activity",
+        "entity_id": "s_id_path_0_sa203",
+        "entity_name": "Unfolded protein",
+        "entry": "Endoplasmatic_Reticulum_stress",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0017146"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa2000",
+        "entity_name": "NR1 : NR2",
+        "entry": "Postsynaptic_terminal_of_a_DA_neuron",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0017146"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa352",
+        "entity_name": "NMDAR:ligand complex",
+        "entry": "Postsynaptic_terminal_of_a_DA_neuron",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0030906"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1807",
+        "entity_name": "retromer VPS sub-complex",
+        "entry": "Endocytic_vesicles",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0030906"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1809",
+        "entity_name": "retromer VPS sub-complex",
+        "entry": "Endocytic_vesicles",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0030905"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1269",
+        "entity_name": "SNX-BAR sub-complex",
+        "entry": "Endocytic_vesicles",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D009043"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sr199",
+        "entity_name": "mortor activity",
+        "entry": "SRR_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "pubchem.compound:135412725"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_src3",
+        "entity_name": "Spermine NONOate",
+        "entry": "SRR_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "drugbank:DB13751"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_ne281",
+        "entity_name": "glycyrrhizin",
+        "entry": "Neuroinflammation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q16236"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa1693",
+        "entity_name": "TF NFE2L2",
+        "entry": "Neuroinflammation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q12756",
+                "uniprot:O60333",
+                "uniprot:O43896"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm5c1",
+        "entity_name": "KIF1",
+        "entry": "Microtubules_and_axonal_transport",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:MIRLET7A1"
+            ],
+            [
+                "hgnc.symbol:MIRLET7A1"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pi5e",
+        "entity_name": "Let7",
+        "entry": "PI3K_AKT_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc:MIR184"
+            ],
+            [
+                "hgnc.symbol:MIR184"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pi65",
+        "entity_name": "mir-184*",
+        "entry": "PI3K_AKT_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0071986"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa1836",
+        "entity_name": "Ragulator",
+        "entry": "PI3K_AKT_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_csa1837",
+        "entity_name": "RAGs",
+        "entry": "PI3K_AKT_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc:MIR184"
+            ],
+            [
+                "hgnc.symbol:MIR184"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pi75",
+        "entity_name": "mir-184*",
+        "entry": "PI3K_AKT_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:MIRLET7A1"
+            ],
+            [
+                "hgnc.symbol:MIRLET7A1"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pi4f",
+        "entity_name": "Let7",
+        "entry": "PI3K_AKT_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0099073"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1806",
+        "entity_name": "mitochondrial derived vesicle",
+        "entry": "Mitophagy",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0099073"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1805",
+        "entity_name": "mitochondrial derived vesicle",
+        "entry": "Mitophagy",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0005739"
+            ],
+            [
+                "go:0005739"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa2056",
+        "entity_name": "mitochondrion",
+        "entry": "Mitochondrial_fission_and_fusion",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0005739"
+            ],
+            [
+                "go:0005739"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa983",
+        "entity_name": "mitochondrion",
+        "entry": "Mitophagy",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.chebi:CHEBI%3A36080"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm1155",
+        "entity_name": "generic protein",
+        "entry": "Mitophagy",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.chebi:CHEBI%3A36080"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm939",
+        "entity_name": "generic protein",
+        "entry": "Mitophagy",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find; would be better to define this positively",
+        "entity_id": "s_id_csa1571",
+        "entity_name": "Bcl-XL interacting BH3-only proteins",
+        "entry": "Cell_death",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0097136"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "too general",
+        "entity_id": "s_id_csa1570",
+        "entity_name": "Bcl-2:BH-3 only proteins",
+        "entry": "Cell_death",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0005891"
+            ],
+            [
+                "uniprot:O00555",
+                "uniprot:Q00975"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1236",
+        "entity_name": "Ca2+ channel (N and P/Q)",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0005891"
+            ],
+            [
+                "uniprot:O00555",
+                "uniprot:Q00975"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa2023",
+        "entity_name": "Ca2+ channel (N and P/Q)",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D033922"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm81d",
+        "entity_name": "clathrin, heavy chain",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D033922"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm10f9",
+        "entity_name": "clathrin, heavy chain",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D033922"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm600",
+        "entity_name": "clathrin, heavy chain",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D033941"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm7c8",
+        "entity_name": "clathrin, light chain",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D033941"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm870",
+        "entity_name": "clathrin, light chain",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D033941"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmb25",
+        "entity_name": "clathrin, light chain",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P27449"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm6f1",
+        "entity_name": "V-ATPase proteolipid subunit",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q00975"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmc53",
+        "entity_name": "V-D Ca2+ channel, N-A-1 subunit",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O00555"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm77b",
+        "entity_name": "V-D Ca2+ channel, P/Q-A-1 subunit",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P63211"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdme2f",
+        "entity_name": "G-protein, gamma subunit",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P62873"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm1307",
+        "entity_name": "G-protein, beta subunit",
+        "entry": "Dopaminergic_synapse",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D000199"
+            ],
+            [
+                "reactome:R-HSA-201857"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa34",
+        "entity_name": "globular actin",
+        "entry": "Axonal_remodeling_and_CDK5_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D000199"
+            ],
+            [
+                "reactome:R-HSA-201857"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa1777",
+        "entity_name": "globular actin",
+        "entry": "Actin_filament_organization",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D000199"
+            ],
+            [
+                "reactome:R-HSA-201857"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa32",
+        "entity_name": "globular actin",
+        "entry": "Axonal_remodeling_and_CDK5_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D000199"
+            ],
+            [
+                "reactome:R-HSA-201857"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa1776",
+        "entity_name": "globular actin",
+        "entry": "Actin_filament_organization",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:IPR050449"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_ax46",
+        "entity_name": "ephrin receptor",
+        "entry": "Axonal_remodeling_and_CDK5_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0006112"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "to check",
+        "entity_id": "s_id_scf6",
+        "entity_name": "energy metabolism production",
+        "entry": "Suggestions_for_curation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.go:GO%3A0006099"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_scf5",
+        "entity_name": "TCA",
+        "entry": "Suggestions_for_curation",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:drugbank:DB01197"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sc9e",
+        "entity_name": "captopril",
+        "entry": "Suggestions_for_curation",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0034599"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "too general",
+        "entity_id": "s_id_scf8",
+        "entity_name": "protein oxidative damage",
+        "entry": "Suggestions_for_curation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:49552"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_mi36a",
+        "entity_name": "Cu1+",
+        "entry": "Mitochondrial_and_ROS_metabolism",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:49552"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_mi387",
+        "entity_name": "Cu1+",
+        "entry": "Mitochondrial_and_ROS_metabolism",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:49552"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_mi38d",
+        "entity_name": "Cu1+",
+        "entry": "Mitochondrial_and_ROS_metabolism",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0023052",
+                " uniprot:Q9GZT4"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm133e",
+        "entity_name": "SRR signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0000502"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm1106",
+        "entity_name": "Ubiquitin proteasome system",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3601",
+        "entity_name": "proteins",
+        "entry": "PD_map_overview",
+        "from": "absent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0005739"
+            ],
+            [
+                "go:0005739"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa1",
+        "entity_name": "mitochondrion",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3592",
+        "entity_name": "proteins",
+        "entry": "PD_map_overview",
+        "from": "absent"
+    },
+    {
+        "additional_annotations": [],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa11",
+        "entity_name": "apoptotoc neuron",
+        "entry": "PD_map_overview",
+        "from": "absent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0023052",
+                "BTO:0004225"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find term outside of BTO",
+        "entity_id": "s_id_sa3552",
+        "entity_name": "Signalling in striatal neurons",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0098794",
+                "GO:0098691"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3550",
+        "entity_name": "Postsynaptic terminal of a DA neuron",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140121"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3554",
+        "entity_name": "Lewy body formation",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3594",
+        "entity_name": "proteins",
+        "entry": "PD_map_overview",
+        "from": "absent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0000266",
+                "go:0008053"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3559",
+        "entity_name": "Mitochondrial fission and fusion",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0006351",
+                "GO:1903350"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3561",
+        "entity_name": "Dopaminergic transcription",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0005739"
+            ],
+            [
+                "go:0005739"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa2",
+        "entity_name": "mitochondrion",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.go:GO%3A0006914"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmd01",
+        "entity_name": "Autophagy",
+        "entry": "PD_map_overview",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3558",
+        "entity_name": "Microglial phagocytosis",
+        "entry": "PD_map_overview",
+        "from": "absent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0016055"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmc1b",
+        "entity_name": "Wnt signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0030139"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3557",
+        "entity_name": "Endocytic vesicles",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0006954"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "too general;to check",
+        "entity_id": "s_id_pdmab0",
+        "entity_name": "Inflammation signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0003674",
+                "GO:0005783"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "to check (not sure how much molecule function term can be applied to a cc)",
+        "entity_id": "s_id_sa3563",
+        "entity_name": "Endoplasmic Reticulum activity",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0098691"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3553",
+        "entity_name": "Dopaminergic synapse",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0023052"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "GO:0023052; uniprot:Q15465",
+        "entity_id": "s_id_pdm869",
+        "entity_name": "SHH signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0061684"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3567",
+        "entity_name": "Chaperone mediated autophagy",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0071420"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmc19",
+        "entity_name": "Histamine signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0006749"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3560",
+        "entity_name": "Glutathione metabolism",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0003674",
+                "uniprot:Q5S007"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmf53",
+        "entity_name": "LRRK2 activity",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3603",
+        "entity_name": "proteins",
+        "entry": "PD_map_overview",
+        "from": "absent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0010467",
+                "hgnc:SNCA"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3565",
+        "entity_name": "SNCA expression",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0003674",
+                "mesh:D017362"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3551",
+        "entity_name": "CREB activity",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0008219"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm133a",
+        "entity_name": "Cell death",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "HP:0033429"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm133d",
+        "entity_name": "Neuroinflammation",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0061621"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm1347",
+        "entity_name": "Glycolysis",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0071316"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm134e",
+        "entity_name": "Nicotine signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0023052",
+                "uniprot:P10589"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm133c",
+        "entity_name": "NR2F1 signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0007015"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm1350",
+        "entity_name": "Actin filament organization",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0023052",
+                "mesh:D019869",
+                ""
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmdde",
+        "entity_name": "PI3K/AKT signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0003674",
+                "uniprot:O43524"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm134b",
+        "entity_name": "FOXO3 activity",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P19484"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "related;to check",
+        "entity_id": "s_id_sa3564",
+        "entity_name": "TFEB activity",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "not relevant; to check",
+        "entity_id": "s_id_pdm1345",
+        "entity_name": "Suggestions for curation",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0045333",
+                "go:0072593"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "to check",
+        "entity_id": "s_id_pdm1341",
+        "entity_name": "Mitochondrial and ROS metabolism",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0031929"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmb71",
+        "entity_name": "MTOR AMPK signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa10",
+        "entity_name": "apoptotoc neuron",
+        "entry": "PD_map_overview",
+        "from": "absent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0042417"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3555",
+        "entity_name": "Dopamine metabolism",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D063306"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3566",
+        "entity_name": "Mitophagy",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D001370"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3556",
+        "entity_name": "Microtubules and axonal transport",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D009473",
+                "GO:0023052",
+                "uniprot:Q00535"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm12d1",
+        "entity_name": "Axonal remodeling and CDK5 signaling",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0006879"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "to check",
+        "entity_id": "s_id_pdmbc7",
+        "entity_name": "Iron metabolism",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "reactome:R-HSA-1592230"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3562",
+        "entity_name": "Mitochondrial biogenesis",
+        "entry": "PD_map_overview",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P54792"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_wn2a",
+        "entity_name": "DVL",
+        "entry": "Wnt_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D000199"
+            ],
+            [
+                "reactome:R-HSA-201857"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1646",
+        "entity_name": "globular actin",
+        "entry": "SNCA_expression",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.go:GO%3A0000502"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa122",
+        "entity_name": "26S proteasome",
+        "entry": "Ubiquitin_proteasome_system",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr183",
+        "entity_name": "enhancer 636",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0042593"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr163",
+        "entity_name": "glucose homeostasis",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr181",
+        "entity_name": "enhancer 840",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "CHEBI:15866"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr168",
+        "entity_name": "2-deoxyglucose",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc.symbol:ZNF654"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr17a",
+        "entity_name": "enhancer 654",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc.symbol:ZNF654"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr172",
+        "entity_name": "enhancer 654",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr14d",
+        "entity_name": "enhancer 643",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc:ZNF611"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr14e",
+        "entity_name": "enhancer 611",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr16f",
+        "entity_name": "enhancer 1329",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr173",
+        "entity_name": "enhancer 643",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr184",
+        "entity_name": "enhancer 840",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc:ZNF611"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr16e",
+        "entity_name": "enhancer 611",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc:ZNF611"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr176",
+        "entity_name": "enhancer 611",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr180",
+        "entity_name": "enhancer 636",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0048708"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "to check",
+        "entity_id": "s_id_nr105",
+        "entity_name": "astrocyte production",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc.symbol:ZNF654"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr16c",
+        "entity_name": "enhancer 654",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0048264"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_nr1b1",
+        "entity_name": "determination of ventral identity",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_nr16b",
+        "entity_name": "enhancer 1329",
+        "entry": "NR2F1_signaling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:1990627"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa2044",
+        "entity_name": "inner membrane fusion",
+        "entry": "Mitochondrial_fission_and_fusion",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0048285"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "To check;not exact",
+        "entity_id": "s_id_path_0_csa2055",
+        "entity_name": "fission constriction site",
+        "entry": "Mitochondrial_fission_and_fusion",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0019064"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "to check",
+        "entity_id": "s_id_path_0_csa2052",
+        "entity_name": "outer membrane fusion",
+        "entry": "Mitochondrial_fission_and_fusion",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc.group:584"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm1236",
+        "entity_name": "HSP40",
+        "entry": "Endoplasmic_Reticulum_activity",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc.group:584"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm10cd",
+        "entity_name": "HSP40",
+        "entry": "Endoplasmic_Reticulum_activity",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.chebi:CHEBI%3A16480"
+            ],
+            [
+                "urn:miriam:inchi:InChI=1S/NO/c1-2"
+            ],
+            [
+                "urn:miriam:inchikey:MWUXSHHQAYIFBG-UHFFFAOYSA-N"
+            ],
+            [
+                "urn:miriam:stitch:MWUXSHHQAYIFBG"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmba3",
+        "entity_name": "NO",
+        "entry": "Endoplasmic_Reticulum_activity",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm768",
+        "entity_name": "nuclear RCC RNA",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmc61",
+        "entity_name": "nuclear RCC RNA",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm941",
+        "entity_name": "nuclear RCC RNA",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmf5c",
+        "entity_name": "nuclear RCC RNA",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P41250"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmfd9",
+        "entity_name": "GARS",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q15046"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm8f4",
+        "entity_name": "KARS",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:30408"
+            ],
+            [
+                "CHEBI:30408"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmd35",
+        "entity_name": "Fe-S cluster",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:30408"
+            ],
+            [
+                "CHEBI:30408"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm837",
+        "entity_name": "Fe-S cluster",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:30408"
+            ],
+            [
+                "CHEBI:30408"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdmdda",
+        "entity_name": "Fe-S cluster",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.go:GO%3A0031931"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1558",
+        "entity_name": "mTORC1",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_path_0_csa1469",
+        "entity_name": "Respiratory Chain Components",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.chebi:CHEBI%3A16480"
+            ],
+            [
+                "urn:miriam:inchi:InChI=1S/NO/c1-2"
+            ],
+            [
+                "urn:miriam:inchikey:MWUXSHHQAYIFBG-UHFFFAOYSA-N"
+            ],
+            [
+                "urn:miriam:stitch:MWUXSHHQAYIFBG"
+            ]
+        ],
+        "collection": "PD_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_pdm7cd",
+        "entity_name": "NO",
+        "entry": "Mitochondrial_biogenesis",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "don\u2019t know where it comes from",
+        "entity_id": "s_id_sa50",
+        "entity_name": "6",
+        "entry": "JNK_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbiprotein:BCD58761"
+            ],
+            [
+                "urn:miriam:ncbiprotein:YP_009724397.2"
+            ],
+            [
+                "urn:miriam:ncbigene:1489678"
+            ],
+            [
+                "urn:miriam:ncbiprotein:1798174255"
+            ],
+            [
+                "urn:miriam:hgnc.symbol:N"
+            ],
+            [
+                "urn:miriam:uniprot:P0DTC9"
+            ],
+            [
+                "urn:miriam:uniprot:P59595"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa38",
+        "entity_name": "N",
+        "entry": "JNK_pathway",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P50336"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa119",
+        "entity_name": "PPO",
+        "entry": "HMOX1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0005956"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa526",
+        "entity_name": "CK2",
+        "entry": "HMOX1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:interpro:IPR001404"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa44",
+        "entity_name": "HSP90",
+        "entry": "NLRP3_inflammasome_activation",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:interpro:IPR001404"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa396",
+        "entity_name": "HSP90",
+        "entry": "HMOX1_pathway",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "CHEBI:30351"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa192",
+        "entity_name": "DIPY",
+        "entry": "HMOX1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa76",
+        "entity_name": "V1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa60",
+        "entity_name": "V1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa62",
+        "entity_name": "V1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa74",
+        "entity_name": "V1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa77",
+        "entity_name": "V0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa61",
+        "entity_name": "V0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa75",
+        "entity_name": "V0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0033176"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa63",
+        "entity_name": "V0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa84",
+        "entity_name": "P1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "drugbank:DB06733"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa188",
+        "entity_name": "Bafilomycin A1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ],
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa101",
+        "entity_name": "F1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "CHEBI:23888"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa212",
+        "entity_name": "Several drugs",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ],
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa99",
+        "entity_name": "F1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ],
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa57",
+        "entity_name": "F1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ],
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa54",
+        "entity_name": "F1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa56",
+        "entity_name": "F0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa98",
+        "entity_name": "F0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa55",
+        "entity_name": "F0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "drugbank:DB06733"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa207",
+        "entity_name": "Bafilomycin A1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "CHEBI:23888"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa215",
+        "entity_name": "Several drugs",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa70",
+        "entity_name": "P0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa73",
+        "entity_name": "P0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa82",
+        "entity_name": "P0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa72",
+        "entity_name": "P1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa81",
+        "entity_name": "P1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa71",
+        "entity_name": "P1",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0140358"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "either too precise or not precise enough",
+        "entity_id": "s_id_csa83",
+        "entity_name": "P0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0016473"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa100",
+        "entity_name": "F0",
+        "entry": "Nsp4_and_Nsp6_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P62805"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa48",
+        "entity_name": "H4-16",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P62805"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa40",
+        "entity_name": "H4-16",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P62805"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa8",
+        "entity_name": "H4-16",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8N3R9"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa64",
+        "entity_name": "MPP5",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8N3R9"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa53",
+        "entity_name": "MPP5",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0006325"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa78",
+        "entity_name": "Chromatin organization",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8N3R9"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa30_active",
+        "entity_name": "MPP5",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8N3R9"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa30",
+        "entity_name": "MPP5",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0045217"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "too general",
+        "entity_id": "s_id_sa74",
+        "entity_name": "Maintenance of tight junction",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0005272"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa73",
+        "entity_name": "Activity of sodium channels",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0006366"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa77",
+        "entity_name": "RNA Polymerase II-dependent Transcription ",
+        "entry": "E_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q86WV6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa110",
+        "entity_name": "STING_p",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q86WV6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa168",
+        "entity_name": "STING_p",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Wikipathways:WP4868"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa175",
+        "entity_name": "HCoVs Type I Ifn signalling(WP4868)",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P23921"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa166",
+        "entity_name": " RRM1",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q9H492",
+                "uniprot:Q9GZQ8",
+                "uniprot:Q9BXW4"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa132",
+        "entity_name": "LC3",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "R-HSA-9694682"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "change to \u201cRTC and transcription\u201d?; to check",
+        "entity_id": "s_id_sa162",
+        "entity_name": "RTC and transcription pw",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:mesh:D004249"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa163",
+        "entity_name": "DNA damage",
+        "entry": "Pyrimidine_deprivation",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "pw:WP4880"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa178",
+        "entity_name": "HCoVs IFN induction WP4880",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Wikipathways:4863"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa177",
+        "entity_name": "HCoVs autophagy (WP4863)",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D004247"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa142",
+        "entity_name": "DNA",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q9H492",
+                "uniprot:Q9GZQ8",
+                "uniprot:Q9BXW4"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa94",
+        "entity_name": "LC3",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0034340"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa176",
+        "entity_name": "Interferon 1 pathway",
+        "entry": "Pyrimidine_deprivation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "drugbank:DB00482"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa323",
+        "entity_name": "celecoxib",
+        "entry": "Kynurenine_synthesis_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:35757"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa338",
+        "entity_name": "monocarboxylates transported by SLC5A8",
+        "entry": "Kynurenine_synthesis_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "CHEBI:18405"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa50",
+        "entity_name": "PXLP",
+        "entry": "Kynurenine_synthesis_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "chebi:35757"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa334",
+        "entity_name": "monocarboxylates transported by SLC5A8",
+        "entry": "Kynurenine_synthesis_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "drugbank:DB11717"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa3",
+        "entity_name": "Epacadostat",
+        "entry": "Kynurenine_synthesis_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                ""
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa57",
+        "entity_name": "TRIM30a",
+        "entry": "Orf3a_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa41",
+        "entity_name": "double-stranded RNA",
+        "entry": "Orf3a_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "SO:0001199"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for single strand outside of SO",
+        "entity_id": "s_id_sa14",
+        "entity_name": "ssRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "SO:0001199"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for single strand outside of SO",
+        "entity_id": "s_id_sa42",
+        "entity_name": "ssRNA",
+        "entry": "Orf3a_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "HP:0002633"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa530",
+        "entity_name": "vascular inflammation",
+        "entry": "Coagulation_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "go:0000050"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa412",
+        "entity_name": "Urea cycle",
+        "entry": "Nsp14_and_metabolism",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:uniprot:Q6XQN6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa138",
+        "entity_name": "NAPRT1",
+        "entry": "Nsp14_and_metabolism",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q01433"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa305",
+        "entity_name": "AMDP2",
+        "entry": "Nsp14_and_metabolism",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q9NWW6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa104",
+        "entity_name": "NRK1",
+        "entry": "Nsp14_and_metabolism",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D004272",
+                "mesh:D004249"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa653",
+        "entity_name": "damaged mt DNA",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "pubchem.compound:14828"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa639",
+        "entity_name": "Fe-S",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "pubchem.compound:14828"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa204",
+        "entity_name": "Fe-S",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "pubchem.compound:14828"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa198",
+        "entity_name": "Fe-S",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "pubchem.compound:14828"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa231",
+        "entity_name": "Fe-S",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.chebi:CHEBI%3A10545"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa645",
+        "entity_name": "e-",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.chebi:CHEBI%3A10545"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa651",
+        "entity_name": "e-",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.chebi:CHEBI%3A10545"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa650",
+        "entity_name": "e-",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q96IX5"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa319",
+        "entity_name": "ATP5MD",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P56378"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa322",
+        "entity_name": "ATP5MPL",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:obo.go:GO%3A0006099"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa500",
+        "entity_name": "TCA",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q9P0U1"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "to check; typo?",
+        "entity_id": "s_id_sa699",
+        "entity_name": "TOMM37",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0006260",
+                "mesh:D004272"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa463",
+        "entity_name": "mt DNA replication",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D004272",
+                "mesh:D004249"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "homogenize: damaged mt DNA",
+        "entity_id": "s_id_sa461",
+        "entity_name": "mt DNA damage",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q9H3J6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa457",
+        "entity_name": "C12orf65",
+        "entry": "Electron_Transport_Chain_disruption",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:43740569"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa2298",
+        "entity_name": "Orf3a (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740577",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO",
+        "entity_id": "s_id_sa2107",
+        "entity_name": "Orf8 (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740574",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2106",
+        "entity_name": "Orf7b (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740571",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2343",
+        "entity_name": "M ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740569",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2104",
+        "entity_name": "Orf3a (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740570",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2344",
+        "entity_name": "E ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740572",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2347",
+        "entity_name": "Orf6 ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740572",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2108",
+        "entity_name": "Orf6  (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740571",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2113",
+        "entity_name": "M (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:43740574"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa2318",
+        "entity_name": "Orf7b (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740568",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2295",
+        "entity_name": "S (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740575",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2354",
+        "entity_name": "N ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740568",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2325",
+        "entity_name": "S (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:43740574"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa2302",
+        "entity_name": "Orf7b (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D000086969"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa410",
+        "entity_name": "Replication transcription complex",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740575",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2355",
+        "entity_name": "N (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P0DTD2",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "to check; can\u2019t find exact gene orf9b (part of N); can\u2019t find subgenomic RNA;can\u2019t find term for positive strand outside of SO",
+        "entity_id": "s_id_sa2109",
+        "entity_name": "Orf9b (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740568",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2345",
+        "entity_name": "S ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTC7",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO",
+        "entity_id": "s_id_sa2324",
+        "entity_name": "Orf7a (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTD3",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "Can\u2019t find gene;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2351",
+        "entity_name": "Orf14 ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTD3",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2301",
+        "entity_name": "Orf14 (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:43740577"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa2321",
+        "entity_name": "Orf8 (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTC7",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO",
+        "entity_id": "s_id_sa2296",
+        "entity_name": "Orf7a (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:43740569"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa2322",
+        "entity_name": "Orf3a (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTD3",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2110",
+        "entity_name": "Orf14 (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740569",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2348",
+        "entity_name": "Orf3a ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:43740577"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa2349",
+        "entity_name": "Orf8 ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "ncbigene:43740577"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa2299",
+        "entity_name": "Orf8 (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740568",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2112",
+        "entity_name": "S (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740574",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2352",
+        "entity_name": "Orf7b ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P0DTD2",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "to check; can\u2019t find exact gene orf9b (part of N); can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2350",
+        "entity_name": "Orf9b ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTD3",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2319",
+        "entity_name": "Orf14 (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740572",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2323",
+        "entity_name": "Orf6 (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740570",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2111",
+        "entity_name": "E (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P0DTD2",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2320",
+        "entity_name": "Orf9b (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P0DTD2",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2300",
+        "entity_name": "Orf9b (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTC7",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2346",
+        "entity_name": "Orf7a ds sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740572",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2297",
+        "entity_name": "Orf6 (-)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D000086969"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa408",
+        "entity_name": "Replication transcription complex",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Uniprot:P0DTC7",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO; can\u2019t find gene for orf7a;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_sa2105",
+        "entity_name": "Orf7a (+)ss sgmRNA",
+        "entry": "Virus_replication_cycle",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P36894",
+                "uniprot:O00238"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa46",
+        "entity_name": "BMPR1",
+        "entry": "TGFbeta_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705767"
+            ],
+            [
+                "mesh:C000705768"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph51",
+        "entity_name": "nsp9",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:uniprot:P0DTD1"
+            ],
+            [
+                "urn:miriam:ncbiprotein:YP_009724389"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph40",
+        "entity_name": "pp1ab",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706267"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph45",
+        "entity_name": "nsp3",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000657925"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph66",
+        "entity_name": "nsp11",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_glyph20",
+        "entity_name": "(+)sgRNA (2-9)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000657925"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph52",
+        "entity_name": "nsp15",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706209"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph67",
+        "entity_name": "nsp5",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705767"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph56",
+        "entity_name": "nsp6",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705769"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph43",
+        "entity_name": "nsp10",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705769"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph60",
+        "entity_name": "nsp10",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705769"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph58",
+        "entity_name": "nsp10",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705769"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph59",
+        "entity_name": "nsp10",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbiprotein:YP_009725309"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph35",
+        "entity_name": "nsp14",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbiprotein:YP_009725309"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph55",
+        "entity_name": "nsp14",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbiprotein:YP_009725309"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph38",
+        "entity_name": "nsp14",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbiprotein:YP_009725309"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph65",
+        "entity_name": "nsp14",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706296"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph57",
+        "entity_name": "nsp12",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706296"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph64",
+        "entity_name": "nsp12",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706296"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph68",
+        "entity_name": "nsp12",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706296"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph47",
+        "entity_name": "nsp12",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740578",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_glyph16",
+        "entity_name": "(-)gRNA (including ORF1a ORF1b)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbiprotein:YP_009725309"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph54",
+        "entity_name": "nsp14",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D054334"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph19",
+        "entity_name": "viral accessory",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705669"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph33",
+        "entity_name": "nsp7",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph50",
+        "entity_name": "nsp8 (II)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbiprotein:YP_009725298"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph37",
+        "entity_name": "nsp2",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbiprotein:YP_009725311"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph36",
+        "entity_name": "nsp16",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:uniprot:P0DTC1"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph46",
+        "entity_name": "pp1a",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705767"
+            ],
+            [
+                "mesh:C000705768"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph44",
+        "entity_name": "nsp9",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705767"
+            ],
+            [
+                "mesh:C000705768"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph48",
+        "entity_name": "nsp9",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740578",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_glyph15",
+        "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740578",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_glyph14",
+        "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705669"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph27",
+        "entity_name": "nsp7",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705669"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph24",
+        "entity_name": "nsp7",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705669"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph21",
+        "entity_name": "nsp7",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705669"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph28",
+        "entity_name": "nsp7",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph29",
+        "entity_name": "nsp8 (II)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph26",
+        "entity_name": "nsp8 (II)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph23",
+        "entity_name": "nsp8 (II)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph22",
+        "entity_name": "nsp8 (II)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph25",
+        "entity_name": "nsp8 (I)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph32",
+        "entity_name": "nsp8 (I)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph30",
+        "entity_name": "nsp8 (I)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph31",
+        "entity_name": "nsp8 (I)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740578",
+                "SO:0001200"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_glyph12",
+        "entity_name": "(-)gRNA (including ORF1a ORF1b)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740578",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_glyph13",
+        "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706296"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph62",
+        "entity_name": "nsp12",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000707895"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph49",
+        "entity_name": "nsp8 (I)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:uniprot:P0DTC1"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph63",
+        "entity_name": "pp1a",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705767"
+            ],
+            [
+                "mesh:C000705768"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph42",
+        "entity_name": "nsp9",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:uniprot:P0DTD1"
+            ],
+            [
+                "urn:miriam:ncbiprotein:YP_009724389"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph53",
+        "entity_name": "pp1ab",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706293"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph39",
+        "entity_name": "nsp1",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Ncbigene:43740578",
+                "SO:0001201"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for positive strand outside of SO;can\u2019t find subgenomic RNA",
+        "entity_id": "s_id_glyph17",
+        "entity_name": "(+)gRNA (including ORF1a ORF1b)",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000705769"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph61",
+        "entity_name": "nsp10",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000722450"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph34",
+        "entity_name": "nsp13",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:C000706290"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_glyph41",
+        "entity_name": "nsp4",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D015678"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "to check if viral",
+        "entity_id": "s_id_glyph18",
+        "entity_name": "structural proteins",
+        "entry": "SARS-CoV-2_RTC_and_transcription",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa139",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa271",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa216",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa155",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa162",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa114",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa131",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa239",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa231",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa246",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa107",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa202",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:PF00240"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa43",
+        "entity_name": "Ub",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0008180"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa23",
+        "entity_name": "CSN5",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "typo? Can\u2019t find",
+        "entity_id": "s_id_sa105",
+        "entity_name": "ubit_traget",
+        "entry": "Orf10_Cul2_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P25963"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa82",
+        "entity_name": "IKBA",
+        "entry": "NLRP3_inflammasome_activation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P25963"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa113",
+        "entity_name": "IKBA",
+        "entry": "NLRP3_inflammasome_activation",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa82",
+        "entity_name": "dsRNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:IPR029177"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa97",
+        "entity_name": "IFN-III",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa420",
+        "entity_name": "dsRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa437",
+        "entity_name": "dsRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa401",
+        "entity_name": "dsRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa438",
+        "entity_name": "dsRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa123",
+        "entity_name": "dsRNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa84",
+        "entity_name": "dsRNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa149",
+        "entity_name": "dsRNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa119",
+        "entity_name": "dsRNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa107",
+        "entity_name": "dsRNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0022627"
+            ],
+            [
+                "go:0022627"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa49",
+        "entity_name": "ribosomal 40S subunit",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0022627"
+            ],
+            [
+                "go:0022627"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa32",
+        "entity_name": "ribosomal 40S subunit",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0022627"
+            ],
+            [
+                "go:0022627"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa45",
+        "entity_name": "ribosomal 40S subunit",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0022625"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa46",
+        "entity_name": "ribosomal 60S subunit",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0022625"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa33",
+        "entity_name": "ribosomal 60S subunit",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012313"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for negative strand outside of SO",
+        "entity_id": "s_id_sa128",
+        "entity_name": "RNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0031410",
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa125",
+        "entity_name": "dsRNA_vesicle",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D012367",
+                "chebi:25305"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa76",
+        "entity_name": "viral RNA+N-methyl-Guanine",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D012367"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa75",
+        "entity_name": "viral RNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "SO:0001715"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find outside of SO",
+        "entity_id": "s_id_sa16",
+        "entity_name": "IFN-sensitive-response-element",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find; could have gene and response to each interferon type",
+        "entity_id": "s_id_sa14",
+        "entity_name": "ISGs",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find; could have gene and response to each interferon type",
+        "entity_id": "s_id_sa15",
+        "entity_name": "ISGs",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0022625"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa47",
+        "entity_name": "ribosomal 60S subunit",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0022627"
+            ],
+            [
+                "go:0022627"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa48",
+        "entity_name": "ribosomal 40S subunit",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:IPR029177"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa53",
+        "entity_name": "IFNs",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D011506",
+                "Mesh:D000998"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa59",
+        "entity_name": "antiviral proteins",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            []
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find",
+        "entity_id": "s_id_sa77",
+        "entity_name": "5'cap-viral-RNA",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc:18363",
+                "hgnc:18364",
+                "hgnc:18365",
+                "hgnc:44480"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa90",
+        "entity_name": "IFN-III",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "hgnc:18363",
+                "hgnc:18364",
+                "hgnc:18365",
+                "hgnc:44480"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa91",
+        "entity_name": "IFN-III",
+        "entry": "Interferon_lambda_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "mesh:D018375"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa1278",
+        "entity_name": "Neutrophil_activation",
+        "entry": "Nsp9_protein_interactions",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "SO:0001199"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for single strand outside of SO",
+        "entity_id": "s_id_sa431",
+        "entity_name": "ssRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "SO:0001199"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "can\u2019t find term for single strand outside of SO",
+        "entity_id": "s_id_sa432",
+        "entity_name": "ssRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa26",
+        "entity_name": "dsRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0000502"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_csa87",
+        "entity_name": "ubiquitin-proteasome complex",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "Mesh:D012330"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "harmonize: double-stranded RNA",
+        "entity_id": "s_id_sa6",
+        "entity_name": "dsRNA",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0009299",
+                "GO:0006954"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "too check; not exact; could replace inflammatory response by cytokines, chemokines, etc.",
+        "entity_id": "s_id_sa480",
+        "entity_name": "transcription of proinflammatory proteins",
+        "entry": "PAMP_signalling",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:IPR051070"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa276",
+        "entity_name": "IkB",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O43318"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa257",
+        "entity_name": "TAK1",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P51617",
+                "uniprot:Q9NWZ3"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa315",
+        "entity_name": "IRAK1/4",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P51617",
+                "uniprot:Q9NWZ3"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa294",
+        "entity_name": "IRAK1/4",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P51617",
+                "uniprot:Q9NWZ3"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa292",
+        "entity_name": "IRAK1/4",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O43318"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa258",
+        "entity_name": "TAK1",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q9Y6K9"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa261",
+        "entity_name": "NEMO",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O15111"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa262",
+        "entity_name": "IKKa",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O14920"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa264",
+        "entity_name": "IKKb",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O14920"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa267",
+        "entity_name": "IKKb",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "urn:miriam:ncbigene:1489676"
+            ],
+            [
+                "urn:miriam:uniprot:Q7TFA0"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa199",
+        "entity_name": "Orf8a",
+        "entry": "Interferon_1_pathway",
+        "from": "existent"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:P0DTC8"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa191",
+        "entity_name": "Orf8b",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q9Y6K9"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa265",
+        "entity_name": "NEMO",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8IUC6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa249",
+        "entity_name": "TRIF",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8IUC6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa295",
+        "entity_name": "TRIF",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8IUC6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa246",
+        "entity_name": "TRIF",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:IPR051070"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa278",
+        "entity_name": "IkB",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O15111"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa266",
+        "entity_name": "IKKa",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q13546"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa250",
+        "entity_name": "RIP1",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q13546"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa247",
+        "entity_name": "RIP1",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "pubchem.compound:672296"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa237",
+        "entity_name": "MNS",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:Q8IUC6"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa240",
+        "entity_name": "TRIF",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:IPR051070"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa270",
+        "entity_name": "IkB",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "GO:0034340"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa260",
+        "entity_name": "type I IFN response",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "interpro:IPR051070"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa273",
+        "entity_name": "IkB",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O96009"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa296",
+        "entity_name": "NAP1",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    },
+    {
+        "additional_annotations": [
+            [
+                "uniprot:O96009"
+            ]
+        ],
+        "collection": "COVID_DM_CD",
+        "comments": "",
+        "entity_id": "s_id_sa297",
+        "entity_name": "NAP1",
+        "entry": "Interferon_1_pathway",
+        "from": "new"
+    }
+]

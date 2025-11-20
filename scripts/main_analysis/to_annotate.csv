@@ -1,0 +1,187 @@
+neuron NR5A1+ NR2F2-	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Ubiquitin proteasome system	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+'kiss and run' vesicle contact	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Viral dsRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+angiotensin 3-7	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit
+structural proteins	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+PRDX	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+POa-derived GABAergic interneuron GAD1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+double-stranded RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+fission constriction site	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+POa-derived cell NR2F2+ NRP2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+angiotensin 1-4	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit
+RADI cell (P80a) NR2F2+ TAC3+ CALB1+ CNR1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+ssRNAoligo	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+pyramidal cell NR2F2+ CCK+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Orf9b ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+SNCA expression	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+mt DNA	Gene	hgnc.symbol;mgi;rgd;ncbigene
+CGE-derived cell PAX6+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Orf7b ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+neural precursor cell NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Ryanodine receptor	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Dopaminergic synapse	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+TOMM37	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+generic peptide	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+Several drugs	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit
+Dopamine metabolism	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+I3PROPA	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+protein oxidative damage	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Orf3a ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+amphiphilic macromolecules	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit
+GABAergic interneuron HTR3A+ NR2F1+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+generic protein	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+transcription of proinflammatory proteins	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Orf8 (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Orf6 ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+RNA Polymerase II-dependent Transcription 	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+pacemaking activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+RAGs	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Orf9b (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+GABAergic interneuron HTR3A+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+(-)gRNA (including ORF1a ORF1b)	Gene	hgnc.symbol;mgi;rgd;ncbigene
+Nsp4 (+)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+NR2F1 signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+MTOR AMPK signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Axonal remodeling and CDK5 signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+enhancer 643	Gene	hgnc.symbol;mgi;rgd;ncbigene
+Endoplasmic Reticulum activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Nsp4 (-)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Orf14 ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+ POa-derived cell NR2F2- NRP2-	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Suggestions for curation	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+P33b neurogliaform cell NR2F2+ NOS1+ NPY+ ACTN2+ GAD2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+neural precursor cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Nsp6 (-)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+non-vesicular iron import	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Unfolded protein	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+GABAergic interneuron NR2F2+ CCK+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+L-type calcium channel
+Cav1.3 and Cav1.2	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+cyclic nucleotide phosphodiesterase	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+outer membrane fusion	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+LRRK2 activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+ POa-derived cell NR2F2+ NRP2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+mt mRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+M (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+D-Ala2-GIP-glu-PAL	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit
+Orf7a (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+S ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+MGE -neural precursor cell LHX6+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Interferon 1 pathway	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+cortical interneuron LHX6+ NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Signalling in striatal neurons	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Nsp3 (+)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+basket cell (P75b) NR2F2+ CCK+ CNR1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+cortical GABAergic interneuron
+ HTR3A+ VIP+ SP8+ NR2F1-	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+pyramidal cell	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+dsRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+cytokine storm	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Go to 'SHH signaling' submap	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+RTC and transcription pw	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+neocortical interneuron NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Endocytic vesicles	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+DNA	Gene	hgnc.symbol;mgi;rgd;ncbigene
+HCoVs Type I Ifn signalling(WP4868)	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+(+)sgRNA (2-9)	Gene	hgnc.symbol;mgi;rgd;ncbigene
+mitochondrial derived vesicle	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+AQW051	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit
+corticothalamic neuron	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+mt DNA replication	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Orf6 (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+MDG548	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit
+N (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+antiviral proteins	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Maintenance of tight junction	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+GABAergic interneuron NR2F2+ GAD1+ GAD2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+GABAergic interneuron NR2F2+ CALB2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+SARS-CoV infection	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+LGE - neural precursor cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+S (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+neuromelanin	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit
+CGE- derived GABAergic cell NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+5'cap-viral-RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+P1788	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit
+Nsp6 (+)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+POa - derived cell NR2F2+ LHX6+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+MGE - neural precursor cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+SRR signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Orf7b (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Postsynaptic terminal of a DA neuron	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+I3LACT	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+enhancer 840	Gene	hgnc.symbol;mgi;rgd;ncbigene
+Orf7a ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Microglial phagocytosis	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+IFN-sensitive-response-element	Gene	hgnc.symbol;mgi;rgd;ncbigene
+OXPHOS subunits encoded in mtDNA	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+M ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+(+)gRNA (including ORF1a ORF1b)	Gene	hgnc.symbol;mgi;rgd;ncbigene
+damaged mt DNA	Gene	hgnc.symbol;mgi;rgd;ncbigene
+mRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+enhancer 1329	Gene	hgnc.symbol;mgi;rgd;ncbigene
+mtDNA encoded OXPHOS units	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+viral accessory	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+neuron NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Orf9b (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+MASP2 deposition	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+CGE-derived Pax6+ cell	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Orf7a (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Guanine nucleotide synthesis	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+cortical GABAergic interneuron NR2F1- RELN+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+PI3K/AKT signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+ssRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Glutathione metabolism	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Chaperone mediated autophagy	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+mt DNA damage	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+neuromelanin granules	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+E (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+FOXO3 activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+type I IFN response	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+dihydroorotate dehydrogenase holoenzyme	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit
+basket cell (P57b) NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+HCoVs autophagy (WP4863)	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+6	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+cortical GABAergic interneuron
+ HTR3A+ NR2F1+ PROX1+ CALB2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Nsp3 (-)	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+GPX	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+dsRNA_vesicle	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Orf14 (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+cholinergic cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Bcl-XL interacting BH3-only proteins	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+neuron FOXP2+ NR2F1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Orf3a (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Mitochondrial biogenesis	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Orf14 (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+cortical interneuron NR2F2+ RELN+ HTR3A+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+ubit_traget	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+nsp2	Protein	uniprot;pr;interpro;mesh;ncbiprotein
+Orf6  (+)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+Dopaminergic transcription	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+Cajal-Retzius cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+enhancer 636	Gene	hgnc.symbol;mgi;rgd;ncbigene
+neocortical interneuron NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+CREB activity	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+ivy cell NR2F2+ NOS1+ NPY+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+pallial-derived cell TBR1+ LHX2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+Wnt signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+SHH signaling	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+radial glia like cells	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+DA3-CH	Drug	drugbank;obo.chebi;pubchem.compound;mesh;ncit
+LYNUS	Phenotype	hp;snomedct;mesh;obo.go;wikipathways;reactome;doid;mondo;mesh;omim
+E ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+JNK	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+angiotensin 1-12	SimpleMolecule	obo.chebi;pubchem.compound;mesh;ncit
+Purkinje cell NR2F2+ FOXP2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+MGE- neural precursor cell NR2F2+ NKX2-1+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+interneuron-selective cell NR2F2+ VIP+ CALB2+ PENK+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+viral RNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+radiatum-retrohippocampal cell NR2F2+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+ LGE-derived GABAergic cell	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+N ds sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+ISGs	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+S (-)ss sgmRNA	RNA	hgnc.symbol;mgi;rgd;ncbigene;refseq
+MGE - neural precursor cell NR2F2+ SST+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
+LGE - neural precursor cell NR2F2+ SP8+	Complex	obo.go;pr;mesh;cl;clo;uniprot;ncbiprotein
