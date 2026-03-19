@@ -8,9 +8,6 @@ dependencies = [
   "jupyterlab-freeze>=0.1.0",
   "neomodel>=5.4.3",
   "pybiomart>=0.2.0",
-  "momapy @ git+http://github.com/adrienrougny/momapy.git",
-  "momapy_kb @ git+http://github.com/adrienrougny/momapy_kb.git",
-  "neo4j_dm @ git+http://github.com/adrienrougny/neo4j_dm.git",
   "minervapy @ git+http://github.com/adrienrougny/minervapy.git",
   "pickleshare>=0.7.5",
 ]
@@ -21,6 +18,12 @@ license = { text = "MIT" }
 [tool.pdm]
 distribution = true
 
+[tool.pdm.dev-dependencies]
+dev = [
+    "-e file:///home/rougny/code/cd2bel#egg=cd2bel",
+    "-e file:///home/rougny/code/momapy_bel#egg=momapy-bel",
+    "-e file:///home/rougny/code/neo4j_dm#egg=neo4j-dm",
+]
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"

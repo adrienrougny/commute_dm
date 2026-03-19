@@ -1,0 +1,143 @@
+﻿collection;map;entity_id;entity_name;additional_annotations;from;comments;Suggestion
+PD_DM_CD;SRR_signaling;s_id_sr199;mortor activity;mesh:D009043;new;typo: mortor->motor;ok
+PD_DM_CD;Iron_metabolism;s_id_ir1b7;non-vesicular iron import;GO:0033212;new;too general;GO:0098711
+PD_DM_CD;Suggestions_for_curation;s_id_scf6;energy metabolism production;GO:0006112;new;to check;skip
+PD_DM_CD;Suggestions_for_curation;s_id_scbb;DA3-CH;;new;"can't find; maybe CHEBI:194186";skip
+PD_DM_CD;Suggestions_for_curation;s_id_scbc;D-Ala2-GIP-glu-PAL;;new;can't find;skip
+PD_DM_CD;Suggestions_for_curation;s_id_scf8;protein oxidative damage;GO:0034599;new;too general;skip
+PD_DM_CD;PD_map_overview;s_id_csa11;apoptotoc neuron;GO:0051402;new;typo: apoptotoc->apoptotic;ok
+PD_DM_CD;PD_map_overview;s_id_sa3552;Signalling in striatal neurons;GO:0023052, bto:BTO:0004225;new;can't find term outside of BTO;mesh:D009473+mesh:D000094242
+PD_DM_CD;PD_map_overview;s_id_pdmab0;Inflammation signaling;GO:0006954;new;"too general;to check";ok
+PD_DM_CD;PD_map_overview;s_id_sa3563;Endoplasmic Reticulum activity;GO:0003674, GO:0005783;new;to check (not sure how much molecule function term can be applied to a cc);GO:0010256
+PD_DM_CD;PD_map_overview;s_id_pdm869;SHH signaling;GO:0023052;new;"urn:miriam:obo.go:GO%3A0023052; uniprot:Q15465";GO:0007224
+PD_DM_CD;PD_map_overview;s_id_sa3564;TFEB activity;uniprot:P19484;new;"related;to check";ok
+PD_DM_CD;PD_map_overview;s_id_pdm1345;Suggestions for curation;;new;"not relevant; to check";skip
+PD_DM_CD;PD_map_overview;s_id_pdm1341;Mitochondrial and ROS metabolism;GO:0045333, GO:0072593;new;to check;ok
+PD_DM_CD;PD_map_overview;s_id_csa10;apoptotoc neuron;GO:0051402;new;typo: apoptotoc->apoptotic;ok
+PD_DM_CD;PD_map_overview;s_id_pdmbc7;Iron metabolism;GO:0006879;new;to check;ok
+PD_DM_CD;Dopaminergic_transcription;s_id_pdm1211;pacemaking activity;;new;can't find;mesh:D063226
+PD_DM_CD;NR2F1_signaling;s_id_csa67;CGE-derived Pax6+ cell;CL:0000000, ncit:C73851, mesh:D000097803, uniprot:P26367;new;homogenize: CGE-derived cell PAX6+;ok
+PD_DM_CD;NR2F1_signaling;s_id_nr183;enhancer 636;;new;can't find;ncbigene:110120723
+PD_DM_CD;NR2F1_signaling;s_id_nr181;enhancer 840;;new;can't find;ncbigene:110120783
+PD_DM_CD;NR2F1_signaling;s_id_csa48;POa-derived cell NR2F2+ NRP2+;CL:0000000, mesh:D011301, uniprot:P24468, uniprot:O60462;new;typo: leading space;ok
+PD_DM_CD;NR2F1_signaling;s_id_nr14d;enhancer 643;;new;can't find;ncbigene:110121062
+PD_DM_CD;NR2F1_signaling;s_id_csa49;POa-derived cell NR2F2- NRP2-;CL:0000000, mesh:D011301, uniprot:P24468, uniprot:O60462;new;typo: leading space;CL:0000000+mesh:D011301+uniprot.isoform:P24468-0+uniprot.isoform:O60462-0
+PD_DM_CD;NR2F1_signaling;s_id_nr16f;enhancer 1329;;new;can't find;ncbigene:110121062
+PD_DM_CD;NR2F1_signaling;s_id_nr173;enhancer 643;;new;can't find;ncbigene:110121062
+PD_DM_CD;NR2F1_signaling;s_id_nr184;enhancer 840;;new;can't find;ncbigene:110120783
+PD_DM_CD;NR2F1_signaling;s_id_csa73;interneuron-selective cell NR2F2+ VIP+ CALB2+ PENK+;uniprot:P24468, uniprot:P01275, uniprot:P22676, uniprot:P01210;new;"can't find; previously annotated with pubmed";CL:0000099+uniprot:P24468+uniprot:P01275+uniprot:P22676+uniprot:P01210
+PD_DM_CD;NR2F1_signaling;s_id_nr180;enhancer 636;;new;can't find;ncbigene:110120723
+PD_DM_CD;NR2F1_signaling;s_id_nr105;astrocyte production;GO:0048708;new;to check;ok
+PD_DM_CD;NR2F1_signaling;s_id_csa39;basket cell (P57b) NR2F2+;;new;typo: P57b→P75b;skip
+PD_DM_CD;NR2F1_signaling;s_id_nr16b;enhancer 1329;;new;can't find;ncbigene:110121062
+PD_DM_CD;Mitochondrial_fission_and_fusion;s_id_path_0_csa2055;fission constriction site;GO:0048285;new;"To check;not exact";GO:0090692
+PD_DM_CD;Mitochondrial_fission_and_fusion;s_id_path_0_csa2052;outer membrane fusion;GO:0019064;new;to check;GO:1990626
+PD_DM_CD;Mitochondrial_biogenesis;s_id_path_0_csa1886;OXPHOS subunits encoded in mtDNA;Hgnc.group:1974, GO:0006119;new;"to check; homegenize: mtDNA encoded OXPHOS units";ok
+COVID_DM_CD;JNK_pathway;s_id_sa50;6;;new;don't know where it comes from;NCBI_Gene:43740572
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa76;V1;GO:0033176;new;either too precise or not precise enough;GO:0033180
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa60;V1;GO:0033176;new;either too precise or not precise enough;GO:0033180
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa62;V1;GO:0033176;new;either too precise or not precise enough;GO:0033180
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa74;V1;GO:0033176;new;either too precise or not precise enough;GO:0033180
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa77;V0;GO:0033176;new;either too precise or not precise enough;GO:0033179
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa61;V0;GO:0033176;new;either too precise or not precise enough;GO:0033179
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa75;V0;GO:0033176;new;either too precise or not precise enough;GO:0033179
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa63;V0;GO:0033176;new;either too precise or not precise enough;GO:0033179
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa84;P1;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_sa3;Nsp4 (+);Ncbiprotein:YP_009725300, SO:0001201;new;"Can't find gene;can't find term for positive strand outside of SO";PR:000050273+GO:0039690
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_sa219;Nsp3 (-);Ncbiprotein:YP_009725299, SO:0001200;new;"can't find term for negative strand outside of SO; can't find term for gene";PR:000050272+GO:0039689
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_sa47;Nsp6 (+);Ncbiprotein:YP_009725302, SO:0001201;new;"can't find term for positive strand outside of SO; can't find term for gene";PR:000050275+GO:0039690
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_sa220;Nsp4 (-);Ncbiprotein:YP_009725300, SO:0001200;new;"Can't find gene;can't find term for negative strand outside of SO";PR:000050273+GO:0039689
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa70;P0;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa73;P0;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa82;P0;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa72;P1;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa81;P1;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa71;P1;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_csa83;P0;GO:0140358;new;either too precise or not precise enough;mesh:D000073779
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_sa218;Nsp6 (-);Ncbiprotein:YP_009742613, SO:0001200;new;"Can't find gene;can't find term for negative strand outside of SO";PR:000050275+GO:0039689
+COVID_DM_CD;Nsp4_and_Nsp6_protein_interactions;s_id_sa160;Nsp3 (+);Ncbiprotein:YP_009725299, SO:0001201;new;"can't find term for positive strand outside of SO; can't find term for gene";PR:000050272+GO:0039690
+COVID_DM_CD;E_protein_interactions;s_id_sa74;Maintenance of tight junction;GO:0045217;new;too general;ok
+COVID_DM_CD;Pyrimidine_deprivation;s_id_sa162;RTC and transcription pw;R-HSA-9694682;new;"change to “RTC and transcription”?; to check";GO:0032774
+COVID_DM_CD;Pyrimidine_deprivation;s_id_sa64;P1788;;new;can't find;mesh:C503349
+COVID_DM_CD;PAMP_signalling;s_id_sa14;ssRNA;SO:0001199;new;can't find term for single strand outside of SO;mesh:D022661
+COVID_DM_CD;Orf3a_protein_interactions;s_id_sa42;ssRNA;SO:0001199;new;can't find term for single strand outside of SO;mesh:D022661
+COVID_DM_CD;Coagulation_pathway;s_id_sa416;cytokine storm;;new;can't find;mesh:D000080424
+COVID_DM_CD;Coagulation_pathway;s_id_sa417;MASP2 deposition;;new;can't find term for deposition;UNIPROT:O00187+GO:0043476
+COVID_DM_CD;Electron_Transport_Chain_disruption;s_id_csa103;mtDNA encoded OXPHOS units;Hgnc.group:1974, GO:0006119;new;to check;ok
+COVID_DM_CD;Electron_Transport_Chain_disruption;s_id_sa699;TOMM37;uniprot:Q9P0U1;new;"to check; typo?";ok
+COVID_DM_CD;Electron_Transport_Chain_disruption;s_id_sa461;mt DNA damage;mesh:D004272, mesh:D004249;new;homogenize: damaged mt DNA;ok
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2107;Orf8 (+)ss sgmRNA;ncbigene:43740577, SO:0001201;new;can't find term for positive strand outside of SO;ncbigene:43740577+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2106;Orf7b (+)ss sgmRNA;ncbigene:43740574, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740574+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2343;M ds sgmRNA;ncbigene:43740571, mesh:D012330;new;can't find subgenomic RNA;ncbigene:43740571+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2104;Orf3a (+)ss sgmRNA;ncbigene:43740569, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740569+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2344;E ds sgmRNA;ncbigene:43740570, mesh:D012330;new;can't find subgenomic RNA;ncbigene:43740570+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2347;Orf6 ds sgmRNA;ncbigene:43740572, mesh:D012330;new;can't find subgenomic RNA;ncbigene:43740572+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2108;Orf6  (+)ss sgmRNA;ncbigene:43740572, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740572+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2113;M (+)ss sgmRNA;ncbigene:43740571, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740571+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2295;S (-)ss sgmRNA;ncbigene:43740568, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";ncbigene:43740568+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2354;N ds sgmRNA;ncbigene:43740575, mesh:D012330;new;can't find subgenomic RNA;ncbigene:43740575+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2325;S (-)ss sgmRNA;ncbigene:43740568, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";ncbigene:43740568+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2355;N (-)ss sgmRNA;ncbigene:43740575, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";ncbigene:43740575+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2109;Orf9b (+)ss sgmRNA;uniprot:P0DTD2, SO:0001201;new;"to check; can't find exact gene orf9b (part of N); can't find subgenomic RNA;can't find term for positive strand outside of SO";uniprot:P0DTD2+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2345;S ds sgmRNA;ncbigene:43740568, mesh:D012330;new;can't find subgenomic RNA;ncbigene:43740568+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2324;Orf7a (-)ss sgmRNA;uniprot:P0DTC7, SO:0001200;new;can't find term for negative strand outside of SO;uniprot:P0DTC7+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2351;Orf14 ds sgmRNA;uniprot:P0DTD3, mesh:D012330;new;"Can't find gene;can't find subgenomic RNA";uniprot:P0DTD3+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2301;Orf14 (-)ss sgmRNA;uniprot:P0DTD3, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";uniprot:P0DTD3+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2296;Orf7a (-)ss sgmRNA;uniprot:P0DTC7, SO:0001200;new;can't find term for negative strand outside of SO;uniprot:P0DTC7+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2110;Orf14 (+)ss sgmRNA;uniprot:P0DTD3, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";uniprot:P0DTD3+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2348;Orf3a ds sgmRNA;ncbigene:43740569, mesh:D012330;new;can't find subgenomic RNA;ncbigene:43740569+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2112;S (+)ss sgmRNA;ncbigene:43740568, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740568+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2352;Orf7b ds sgmRNA;ncbigene:43740574, mesh:D012330;new;can't find subgenomic RNA;ncbigene:43740574+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2350;Orf9b ds sgmRNA;uniprot:P0DTD2, mesh:D012330;new;"to check; can't find exact gene orf9b (part of N); can't find subgenomic RNA";uniprot:P0DTD2+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2319;Orf14 (-)ss sgmRNA;uniprot:P0DTD3, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";uniprot:P0DTD3+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2323;Orf6 (-)ss sgmRNA;ncbigene:43740572, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";ncbigene:43740572+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2111;E (+)ss sgmRNA;ncbigene:43740570, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740570+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2320;Orf9b (-)ss sgmRNA;uniprot:P0DTD2, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";uniprot:P0DTD2+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2300;Orf9b (-)ss sgmRNA;uniprot:P0DTD2, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";uniprot:P0DTD2+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2346;Orf7a ds sgmRNA;uniprot:P0DTC7, mesh:D012330;new;can't find subgenomic RNA;uniprot:P0DTC7+mesh:D012330+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2297;Orf6 (-)ss sgmRNA;ncbigene:43740572, SO:0001200;new;"can't find term for negative strand outside of SO;can't find subgenomic RNA";ncbigene:43740572+GO:0039689+mesh:D000094762
+COVID_DM_CD;Virus_replication_cycle;s_id_sa2105;Orf7a (+)ss sgmRNA;uniprot:P0DTC7, SO:0001201;new;"can't find term for positive strand outside of SO; can't find gene for orf7a;can't find subgenomic RNA";uniprot:P0DTC7+mesh:D000094762
+COVID_DM_CD;Renin-angiotensin_pathway;s_id_sa138;angiotensin 1-4;;new;can't find;chebi:80129
+COVID_DM_CD;Renin-angiotensin_pathway;s_id_sa121;angiotensin 1-12;;new;"can;t find";skip
+COVID_DM_CD;Renin-angiotensin_pathway;s_id_sa160;angiotensin 3-7;;new;can't find;pubchem:164131
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph20;(+)sgRNA (2-9);;new;can't find;skip
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph16;(-)gRNA (including ORF1a ORF1b);ncbigene:43740578, SO:0001200;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740578+mesh:D000094762
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph15;(+)gRNA (including ORF1a ORF1b);ncbigene:43740578, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740578+mesh:D000094762
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph14;(+)gRNA (including ORF1a ORF1b);ncbigene:43740578, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740578+mesh:D000094762
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph12;(-)gRNA (including ORF1a ORF1b);ncbigene:43740578, SO:0001200;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740578+mesh:D000094762
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph13;(+)gRNA (including ORF1a ORF1b);ncbigene:43740578, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740578+mesh:D000094762
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph17;(+)gRNA (including ORF1a ORF1b);ncbigene:43740578, SO:0001201;new;"can't find term for positive strand outside of SO;can't find subgenomic RNA";ncbigene:43740578+mesh:D000094762
+COVID_DM_CD;SARS-CoV-2_RTC_and_transcription;s_id_glyph18;structural proteins;mesh:D015678;new;to check if viral;ok
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa139;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa271;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa216;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa155;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa162;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa114;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa131;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa239;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa231;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa246;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa107;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa202;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Orf10_Cul2_pathway;s_id_sa105;ubit_traget;;new;typo? Can't find;CHEBI:36080
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa82;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;PAMP_signalling;s_id_sa420;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;PAMP_signalling;s_id_sa437;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;PAMP_signalling;s_id_sa401;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;PAMP_signalling;s_id_sa438;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa123;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa84;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa149;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa119;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa107;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa128;RNA;mesh:D012313;new;can't find term for negative strand outside of SO;mesh:D012313+GO:0039689
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa16;IFN-sensitive-response-element;SO:0001715;new;can't find outside of SO;GO:0140888
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa14;ISGs;;new;"can't find; could have gene and response to each interferon type";GO:0140888
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa15;ISGs;;new;"can't find; could have gene and response to each interferon type";GO:0140888
+COVID_DM_CD;Interferon_lambda_pathway;s_id_sa77;5'cap-viral-RNA;;new;can't find;GO:0006370
+COVID_DM_CD;PAMP_signalling;s_id_sa431;ssRNA;SO:0001199;new;can't find term for single strand outside of SO;mesh:D022661
+COVID_DM_CD;PAMP_signalling;s_id_sa432;ssRNA;SO:0001199;new;can't find term for single strand outside of SO;mesh:D022661
+COVID_DM_CD;PAMP_signalling;s_id_sa26;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;PAMP_signalling;s_id_sa6;dsRNA;mesh:D012330;new;harmonize: double-stranded RNA;ok
+COVID_DM_CD;PAMP_signalling;s_id_sa480;transcription of proinflammatory proteins;GO:0009299, GO:0006954;new;"too check; not exact; could replace inflammatory response by cytokines, chemokines, etc.";skip

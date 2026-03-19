@@ -1208,7 +1208,7 @@
     "additional_annotations": [
       [
         "urn:miriam:obo.go:GO%3A0010467",
-        "urn:miriam:hgnc:SNCA"
+        "urn:miriam:hgnc.symbol:SNCA"
       ]
     ],
     "from": "new",
@@ -1842,7 +1842,7 @@
     "entity_name": "enhancer 654",
     "additional_annotations": [
       [
-        "urn:miriam:hgnc.symbol:ZNF654"
+        "urn:miriam:ncbigene:110120733"
       ]
     ],
     "from": "new",
@@ -1855,7 +1855,7 @@
     "entity_name": "enhancer 654",
     "additional_annotations": [
       [
-        "urn:miriam:hgnc.symbol:ZNF654"
+        "urn:miriam:ncbigene:110120733"
       ]
     ],
     "from": "new",
@@ -1941,8 +1941,8 @@
       [
         "urn:miriam:cl:CL%3A0000000",
         "urn:miriam:mesh:D011301",
-        "urn:miriam:uniprot:P24468",
-        "urn:miriam:uniprot:O60462"
+        "urn:miriam:uniprot.isoform:P24468-0",
+        "urn:miriam:uniprot.isoform:O60462-0"
       ]
     ],
     "from": "new",
@@ -1970,7 +1970,7 @@
     "entity_name": "enhancer 611",
     "additional_annotations": [
       [
-        "urn:miriam:hgnc:ZNF611"
+        "urn:miriam:ncbigene:110120908"
       ]
     ],
     "from": "new",
@@ -2111,7 +2111,7 @@
         "urn:miriam:uniprot:P46098",
         "urn:miriam:uniprot:P01282",
         "urn:miriam:uniprot:Q8IXZ3",
-        "urn:miriam:uniprot:P10589"
+        "urn:miriam:uniprot.isoform:P10589-0"
       ]
     ],
     "from": "new",
@@ -2126,7 +2126,7 @@
       [
         "urn:miriam:cl:CL%3A0000540",
         "urn:miriam:uniprot:Q13285",
-        "urn:miriam:uniprot:P24468"
+        "urn:miriam:uniprot.isoform:P24468-0"
       ]
     ],
     "from": "new",
@@ -2168,7 +2168,7 @@
     "entity_name": "enhancer 611",
     "additional_annotations": [
       [
-        "urn:miriam:hgnc:ZNF611"
+        "urn:miriam:ncbigene:110120908"
       ]
     ],
     "from": "new",
@@ -2181,7 +2181,7 @@
     "entity_name": "enhancer 611",
     "additional_annotations": [
       [
-        "urn:miriam:hgnc:ZNF611"
+        "urn:miriam:ncbigene:110120908"
       ]
     ],
     "from": "new",
@@ -2338,7 +2338,7 @@
     "entity_name": "enhancer 654",
     "additional_annotations": [
       [
-        "urn:miriam:hgnc.symbol:ZNF654"
+        "urn:miriam:ncbigene:110120733"
       ]
     ],
     "from": "new",
