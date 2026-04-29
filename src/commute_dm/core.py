@@ -7,36 +7,36 @@ import pathlib
 import pandas
 import pybiomart
 import frozendict
-import momapy.celldesigner.core
-import momapy.celldesigner.io.pickle
+import momapy.celldesigner
 import momapy.io
 import momapy.core
 import momapy.geometry
 import momapy.builder
 import momapy.rendering.skia
 import momapy.rendering.core
-import momapy_kb.neo4j.core
-import neo4j_dm.core
-import neo4j_dm.ig
-import neo4j_dm.queries
-import neo4j_dm.gea
+import momapy_kb.lpg.session  # noqa: F401
+import momapy_kb.lpg.backends.neo4j  # noqa: F401
+import commute_dm.ig
+import commute_dm.queries
+import commute_dm.gea  # noqa: F401
 
-import commute_dm.utils
+import momapy_kb.core
+
+import commute_dm.utils  # noqa: F401
 
 
-def get_interface():
+def get_interface(session):
     query = """
        CALL () {
             MATCH
                 (dm_cd_collection:Collection),
                 (dm_cd_collection)-[:HAS_ENTRY]->(dm_cd_entry:CollectionEntry),
-                (dm_cd_entry)-[:HAS_RDF_ANNOTATIONS]->(dm_cd_annotations:Mapping),
-                (dm_cd_entry)-[:HAS_MODEL]->(dm_cd_model:CellDesignerModel),
-                (dm_cd_entry)-[:HAS_IDS]->(dm_cd_ids:Mapping),
+                (dm_cd_entry)-[:HAS_ELEMENT_TO_ANNOTATIONS]->(dm_cd_annotations:Mapping),
+                (dm_cd_entry)-[:HAS_OBJ]->(dm_cd_map:CellDesignerMap)-[:HAS_MODEL]->(dm_cd_model:CellDesignerModel),
                 (dm_cd_annotations)-[:HAS_ITEM]->(dm_cd_annotations_item:Item),
                 (dm_cd_annotations_item)-[:HAS_KEY]->(dm_cd_protein:Protein),
                 (dm_cd_annotations_item)-[:HAS_VALUE]->(dm_cd_annotations_bag:Bag),
-                (dm_cd_annotations_bag)-[:HAS_ELEMENT]->(dm_cd_annotation:RDFAnnotation)
+                (dm_cd_annotations_bag)-[:HAS_ITEM]->(dm_cd_annotation:RDFAnnotation)
             WITH
                 split(dm_cd_annotation.resources[0], ":")[2] AS dm_cd_namespace,
                 split(dm_cd_annotation.resources[0], ":")[-1] AS dm_cd_identifier,
@@ -51,7 +51,7 @@ def get_interface():
             MATCH
                 (ad_collection:Collection {name: "AD_KG_BEL"}),
                 (ad_collection)-[:HAS_ENTRY]->(ad_entry:CollectionEntry),
-                (ad_entry)-[:HAS_MODEL]->(ad_model:BELModel),
+                (ad_entry)-[:HAS_OBJ]->(ad_model:BELModel),
                 (ad_model)-[:HAS_SUBGRAPH]->(ad_subgraph),
                 (ad_subgraph)-[:HAS_NODE]->(ad_protein:Protein)
             WHERE
@@ -68,28 +68,29 @@ def get_interface():
         RETURN
             identifier, collections_entries_proteins
     """
-    result, meta = momapy_kb.neo4j.core.run(query)
+    result = session.execute_query(query)
     interface = {}
     for row in result:
-        identifier = row[0]
+        identifier = row["identifier"]
         interface[identifier] = [
             {
                 "collection": collection_entry_protein[0],
                 "entry": collection_entry_protein[1],
                 "node": collection_entry_protein[2],
             }
-            for collection_entry_protein in row[1]
+            for collection_entry_protein in row["collections_entries_proteins"]
         ]
     return interface
 
 
 def get_subgraphs_relative_to_interface(
+    session,
     collection_name,
     mode: typing.Literal["downstream", "upstream"],
     max_level=-1,
     exclude_labels=None,
 ):
-    interface = get_interface()
+    interface = get_interface(session)
     subgraphs = collections.defaultdict(list)
     for identifier in interface:
         nodes_with_context = interface[identifier]
@@ -98,9 +99,10 @@ def get_subgraphs_relative_to_interface(
             if collection["name"] == collection_name:
                 entry = node_with_context["entry"]
                 source_node = node_with_context["node"]
-                nodes, relationships = neo4j_dm.queries.get_subgraph(
+                nodes, relationships = commute_dm.queries.get_subgraph(
+                    session,
                     source_node,
-                    relationship_types=neo4j_dm.ig.INFLUENCES,
+                    relationship_types=commute_dm.ig.INFLUENCES,
                     mode=mode,
                     max_level=max_level,
                     exclude_labels=exclude_labels,
@@ -120,9 +122,10 @@ def get_subgraphs_relative_to_interface(
 
 
 def get_pd_subgraphs_downstream_of_interface(
-    max_level=-1, exclude_labels=None
+    session, max_level=-1, exclude_labels=None
 ):
     return get_subgraphs_relative_to_interface(
+        session,
         "PD_DM_CD",
         "downstream",
         max_level=max_level,
@@ -131,9 +134,10 @@ def get_pd_subgraphs_downstream_of_interface(
 
 
 def get_covid_subgraphs_upstream_of_interface(
-    max_level=-1, exclude_labels=None
+    session, max_level=-1, exclude_labels=None
 ):
     return get_subgraphs_relative_to_interface(
+        session,
         "COVID_DM_CD",
         "upstream",
         max_level=max_level,
@@ -141,18 +145,18 @@ def get_covid_subgraphs_upstream_of_interface(
     )
 
 
-def get_n_random_nodes_from_collection(collection_name, n):
+def get_n_random_nodes_from_collection(session, collection_name, n):
     query = f"""
         MATCH (collection:Collection {{name: "{collection_name}"}})-[:HAS_ENTRY]->(entry:CollectionEntry)-[:HAS_MODEL]->(model:Model)-[:HAS_SPECIES]->(node:Protein)
         RETURN node
         ORDER BY rand()
         LIMIT {n}
     """
-    result, _ = momapy_kb.neo4j.core.run(query)
-    return utils.flatten_list(result)
+    result = session.execute_query(query)
+    return [row["node"] for row in result]
 
 
-def make_gene_sets_from_subgraphs_relative_to_interface(subgraphs):
+def make_gene_sets_from_subgraphs_relative_to_interface(session, subgraphs):
     named_gene_sets = []
     for identifier in subgraphs:
         for subgraph in subgraphs[identifier]:
@@ -161,7 +165,7 @@ def make_gene_sets_from_subgraphs_relative_to_interface(subgraphs):
             entry = source_node_with_context["entry"]
             nodes = subgraph["nodes"]
             gene_set_id = f"{identifier}_{source_node['id_']}_{entry['id_']}"
-            gene_set = neo4j_dm.gea.make_gene_set_from_nodes(nodes)
+            gene_set = commute_dm.gea.make_gene_set_from_nodes(session, nodes)
             named_gene_set = {
                 "id": gene_set_id,
                 "description": gene_set_id,
@@ -171,34 +175,37 @@ def make_gene_sets_from_subgraphs_relative_to_interface(subgraphs):
     return named_gene_sets
 
 
-def _get_dummy_identifier_node(identifier):
+def _get_dummy_identifier_node(session, identifier):
     query = f"""
-        MATCH (collection:Collection {{name: 'DUMMY_MAP'}})-[:HAS_ENTRY]->(entry:CollectionEntry)-[:HAS_MODEL]->(model)-[:HAS_SPECIES]->(species {{name: '{identifier}'}})
+        MATCH (collection:Collection {{name: 'DUMMY_MAP'}})-[:HAS_ENTRY]->(entry:CollectionEntry)-[:HAS_OBJ]->(map:CellDesignerMap)-[:HAS_MODEL]->(model)-[:HAS_SPECIES]->(species {{name: '{identifier}'}})
         RETURN species
     """
-    result, _ = momapy_kb.neo4j.core.run(query)
+    result = session.execute_query(query)
     if result:
-        return result[0][0]
+        return result[0]["species"]
     return None
 
 
 def _make_dummy_map_from_interface(interface):
-    dummy_map = momapy.celldesigner.core.CellDesignerMapBuilder()
-    dummy_model = dummy_map.new_model()
+    dummy_map = momapy.builder.new_builder_object(momapy.celldesigner.CellDesignerMap)
+    dummy_model = momapy.builder.new_builder_object(
+        momapy.celldesigner.CellDesignerModel
+    )
     dummy_map.model = dummy_model
-    dummy_layout = dummy_map.new_layout()
+    dummy_layout = momapy.builder.new_builder_object(
+        momapy.celldesigner.CellDesignerLayout
+    )
     dummy_map.layout = dummy_layout
     dummy_layout_model_mapping = momapy.core.LayoutModelMappingBuilder()
     dummy_map.layout_model_mapping = dummy_layout_model_mapping
-    dummy_ids = {}
     for identifier in interface:
-        species = dummy_model.new_element(momapy.celldesigner.core.Unknown)
+        species = momapy.builder.new_builder_object(momapy.celldesigner.Unknown)
         species.id_ = identifier
         species.name = identifier
         species = momapy.builder.object_from_builder(species)
         dummy_model.species.add(species)
-        species_layout = dummy_layout.new_element(
-            momapy.celldesigner.core.UnknownLayout
+        species_layout = momapy.builder.new_builder_object(
+            momapy.celldesigner.UnknownLayout
         )
         species_layout.position = momapy.geometry.Point(0, 0)
         species_layout.width = 80
@@ -209,28 +216,24 @@ def _make_dummy_map_from_interface(interface):
         species_layout.label = species_text_layout
         species_layout = momapy.builder.object_from_builder(species_layout)
         dummy_layout.layout_elements.append(species_layout)
-        dummy_map.add_mapping(species, species_layout)
-        dummy_ids[species] = [species.id_]
+        dummy_map.layout_model_mapping.add_mapping(species_layout, species)
     dummy_map = momapy.builder.object_from_builder(dummy_map)
-    dummy_ids = frozendict.frozendict(
-        {key: frozenset(val) for key, val in dummy_ids.items()}
-    )
-    return dummy_map, dummy_ids
+    return dummy_map
 
 
-def _save_interface_to_db(interface, dummy_map, dummy_ids):
-    collection_entry = neo4j_dm.core.CollectionEntry(
+def _save_interface_to_db(session, interface, dummy_map):
+    collection_entry = momapy_kb.core.CollectionEntry(
         id_="dummy_map",
-        model=dummy_map.model,
-        rdf_annotations=None,
+        obj=dummy_map,
+        element_to_annotations=None,
         file_path=None,
-        ids=dummy_ids,
     )
-    neo4j_dm.core.save_collections_from_entries(
-        [("DUMMY_MAP", [collection_entry])]
+    session.save_collections_from_entries(
+        [("DUMMY_MAP", [collection_entry])],
+        with_membership_edges=True,
     )
     for identifier in interface:
-        identifier_node = _get_dummy_identifier_node(identifier)
+        identifier_node = _get_dummy_identifier_node(session, identifier)
         pd_nodes = set(
             [
                 node_with_context["node"]
@@ -240,7 +243,7 @@ def _save_interface_to_db(interface, dummy_map, dummy_ids):
         )
         for pd_node in pd_nodes:
             commute_dm.utils.merge_relationship(
-                identifier_node, pd_node, neo4j_dm.ig.POSITIVE_INFLUENCE
+                session, identifier_node, pd_node, commute_dm.ig.POSITIVE_INFLUENCE
             )
         covid_nodes = set(
             [
@@ -251,37 +254,23 @@ def _save_interface_to_db(interface, dummy_map, dummy_ids):
         )
         for covid_node in covid_nodes:
             commute_dm.utils.merge_relationship(
-                covid_node, identifier_node, neo4j_dm.ig.POSITIVE_INFLUENCE
+                session, covid_node, identifier_node, commute_dm.ig.POSITIVE_INFLUENCE
             )
 
 
-def _remove_interface_from_db():
+def _remove_interface_from_db(session):
     query = """
         MATCH
-            (collection:Collection {name: "DUMMY_MAP"})-[:HAS_ENTRY]->(entry)-[:HAS_MODEL]->(model)-[:HAS_SPECIES]->(species),
-            (entry)-[:HAS_IDS]->(mapping)-[:HAS_ITEM]->(item)-[:HAS_VALUE]->(ids)-[:HAS_ELEMENT]->(id)
-         DETACH DELETE collection, entry, model, species, mapping, item, ids, id
+            (collection:Collection {name: "DUMMY_MAP"})-[:HAS_ENTRY]->(entry)-[:HAS_OBJ]->(map:CellDesignerMap)
+        OPTIONAL MATCH (map)-[*0..]->(descendant)
+        DETACH DELETE collection, entry, map, descendant
     """
-    momapy_kb.neo4j.core.run(query)
-
-
-def _make_maps_and_ids_from_dir_paths(dir_paths):
-    entry_id_to_map = {}
-    entry_id_to_ids = {}
-    for dir_path in dir_paths:
-        for input_file_path in glob.glob(os.path.join(dir_path, "*.pickle")):
-            input_file_name = os.path.basename(input_file_path)
-            entry_id, _ = os.path.splitext(input_file_name)
-            read_result = momapy.io.read(input_file_path)
-            entry_id_to_map[entry_id] = read_result.obj
-            entry_id_to_ids[entry_id] = read_result.ids
-    return entry_id_to_map, entry_id_to_ids
+    session.execute_query(query)
 
 
 def make_and_render_igs_from_interface(
+    session,
     interface,
-    covid_dir_path,
-    pd_dir_path,
     output_dir_path,
     max_levels=None,
     min_n_nodes=None,
@@ -292,16 +281,12 @@ def make_and_render_igs_from_interface(
 ):
     if max_levels is None:
         max_levels = [-1]
-    entry_id_to_map, entry_id_to_ids = _make_maps_and_ids_from_dir_paths(
-        [covid_dir_path, pd_dir_path]
-    )
-    dummy_map, dummy_ids = _make_dummy_map_from_interface(interface)
-    _save_interface_to_db(interface, dummy_map, dummy_ids)
-    entry_id_to_map["dummy_map"] = dummy_map
-    entry_id_to_ids["dummy_map"] = dummy_ids
+    commute_dm.queries.prewarm_session(session)
+    dummy_map = _make_dummy_map_from_interface(interface)
+    _save_interface_to_db(session, interface, dummy_map)
     for identifier in interface:
         map_layouts = []
-        identifier_node = _get_dummy_identifier_node(identifier)
+        identifier_node = _get_dummy_identifier_node(session, identifier)
         for max_level in max_levels:
             if identifier != "AGTR1" and max_level != 3:
                 continue
@@ -309,23 +294,21 @@ def make_and_render_igs_from_interface(
             covid_ids = []
             pd_and_covid_ids = []
             central_ids = []
-            downstream_nodes, downstream_relationships = (
-                neo4j_dm.queries.get_subgraph(
-                    identifier_node,
-                    neo4j_dm.ig.INFLUENCES,
-                    mode="downstream",
-                    max_level=max_level,
-                    filter_output_relationships=True,
-                )
+            downstream_nodes, downstream_relationships = commute_dm.queries.get_subgraph(
+                session,
+                identifier_node,
+                commute_dm.ig.INFLUENCES,
+                mode="downstream",
+                max_level=max_level,
+                filter_output_relationships=True,
             )
-            upstream_nodes, upstream_relationships = (
-                neo4j_dm.queries.get_subgraph(
-                    identifier_node,
-                    neo4j_dm.ig.INFLUENCES,
-                    mode="upstream",
-                    max_level=max_level,
-                    filter_output_relationships=True,
-                )
+            upstream_nodes, upstream_relationships = commute_dm.queries.get_subgraph(
+                session,
+                identifier_node,
+                commute_dm.ig.INFLUENCES,
+                mode="upstream",
+                max_level=max_level,
+                filter_output_relationships=True,
             )
             if min_n_nodes is not None:
                 if (
@@ -334,36 +317,24 @@ def make_and_render_igs_from_interface(
                 ):
                     continue
             nodes = list(set(downstream_nodes + upstream_nodes))
-            node_ids_and_context = neo4j_dm.queries.get_ids_and_context(nodes)
-            for (
-                node,
-                ids_and_context,
-            ) in node_ids_and_context:
-                collection_names = set(
-                    [
-                        id_and_context[2]["name"]
-                        for id_and_context in ids_and_context
-                    ]
-                )
-                for id_, _, _ in ids_and_context:
-                    if collection_names == set(["COVID_DM_CD"]):
-                        covid_ids.append(id_)
-                    elif collection_names == set(["PD_DM_CD"]):
-                        pd_ids.append(id_)
-                    elif collection_names == set(["PD_DM_CD", "COVID_DM_CD"]):
-                        pd_and_covid_ids.append(id_)
-                    elif collection_names == set(["DUMMY_MAP"]):
-                        central_ids.append(id_)
-            relationships = list(
-                set(downstream_relationships + upstream_relationships)
+            node_to_collections = commute_dm.queries.get_collections_for_nodes(
+                session, nodes
             )
-            ig = neo4j_dm.ig.make_ig_from_nodes_and_relationships(
-                nodes, relationships
-            )
-            map_layout = neo4j_dm.ig.make_map_layout_from_ig(
+            for node, collection_names in node_to_collections.items():
+                node_id = node["id_"]
+                if collection_names == {"COVID_DM_CD"}:
+                    covid_ids.append(node_id)
+                elif collection_names == {"PD_DM_CD"}:
+                    pd_ids.append(node_id)
+                elif collection_names == {"PD_DM_CD", "COVID_DM_CD"}:
+                    pd_and_covid_ids.append(node_id)
+                elif collection_names == {"DUMMY_MAP"}:
+                    central_ids.append(node_id)
+            relationships = list(set(downstream_relationships + upstream_relationships))
+            ig = commute_dm.ig.make_ig_from_nodes_and_relationships(nodes, relationships)
+            map_layout = commute_dm.ig.make_map_layout_from_ig(
+                session=session,
                 ig=ig,
-                entry_id_to_map=entry_id_to_map,
-                entry_id_to_ids=entry_id_to_ids,
                 label=f"max_level = {max_level}",
                 color_node_ids=[
                     (
@@ -389,16 +360,17 @@ def make_and_render_igs_from_interface(
         if map_layouts:
             momapy.rendering.core.render_layout_elements(
                 layout_elements=map_layouts,
-                output_file=output_file_path,
+                file_path=output_file_path,
                 format_="pdf",
                 renderer="skia",
                 multi_pages=True,
                 to_top_left=False,
             )
-    _remove_interface_from_db()
+    _remove_interface_from_db(session)
 
 
 def make_goat_analysis_from_interface(
+    session,
     interface,
     gene_lists_dir_path,
     output_dir_path,
@@ -409,8 +381,8 @@ def make_goat_analysis_from_interface(
     p_value_cutoff=0.05,
     score_type="effectsize",
 ):
-    dummy_map, dummy_ids = _make_dummy_map_from_interface(interface)
-    _save_interface_to_db(interface, dummy_map, dummy_ids)
+    dummy_map = _make_dummy_map_from_interface(interface)
+    _save_interface_to_db(session, interface, dummy_map)
     summary = {}
     for identifier in interface:
         summary[identifier] = {}
@@ -425,17 +397,19 @@ def make_goat_analysis_from_interface(
     for max_level in max_levels:
         named_gene_sets = {}
         for identifier in interface:
-            identifier_node = _get_dummy_identifier_node(identifier)
-            upstream_nodes, _ = neo4j_dm.queries.get_subgraph(
+            identifier_node = _get_dummy_identifier_node(session, identifier)
+            upstream_nodes, _ = commute_dm.queries.get_subgraph(
+                session,
                 identifier_node,
-                neo4j_dm.ig.INFLUENCES,
+                commute_dm.ig.INFLUENCES,
                 mode="upstream",
                 max_level=max_level,
                 filter_output_relationships=True,
             )
-            downstream_nodes, _ = neo4j_dm.queries.get_subgraph(
+            downstream_nodes, _ = commute_dm.queries.get_subgraph(
+                session,
                 identifier_node,
-                neo4j_dm.ig.INFLUENCES,
+                commute_dm.ig.INFLUENCES,
                 mode="downstream",
                 max_level=max_level,
                 filter_output_relationships=True,
@@ -453,16 +427,16 @@ def make_goat_analysis_from_interface(
             elif mode == "upstream_and_downstream":
                 nodes = upstream_nodes + downstream_nodes
             kept_identifiers.add(identifier)
-            gene_set = neo4j_dm.gea.make_gene_set_from_nodes(
-                nodes, with_subunits=with_subunits
+            gene_set = commute_dm.gea.make_gene_set_from_nodes(
+                session, nodes, with_subunits=with_subunits
             )
             named_gene_sets[identifier] = gene_set
-        gmt_df = neo4j_dm.gea.make_gmt_df_from_named_gene_sets(named_gene_sets)
+        gmt_df = commute_dm.gea.make_gmt_df_from_named_gene_sets(named_gene_sets)
         for gene_list_file_path in glob.glob(
             os.path.join(gene_lists_dir_path, "*.csv")
         ):
             gene_list_file_name = os.path.basename(gene_list_file_path)
-            goat_result_df = neo4j_dm.gea.make_goat_analysis(
+            goat_result_df = commute_dm.gea.make_goat_analysis(
                 gmt_df_or_file_path=gmt_df,
                 source="INTERFACE",
                 gene_list_file_path=gene_list_file_path,
@@ -486,9 +460,7 @@ def make_goat_analysis_from_interface(
             summary_data[gene_list_file_name].append(
                 summary[identifier][gene_list_file_name]
             )
-            summary_order[identifier] += len(
-                summary[identifier][gene_list_file_name]
-            )
+            summary_order[identifier] += len(summary[identifier][gene_list_file_name])
     summary_order = [
         item[0]
         for item in sorted(
@@ -504,30 +476,29 @@ def make_goat_analysis_from_interface(
         summary_df, left_on="identifier", right_on="identifier", how="left"
     )
     summary_df.to_csv(output_summary_file_path)
-    _remove_interface_from_db()
+    _remove_interface_from_db(session)
 
 
 def make_goat_analysis_from_pd(
+    session,
     gene_lists_dir_path,
     output_dir_path,
     with_subunits=False,
     p_value_cutoff=0.05,
     score_type="effectsize",
 ):
-    named_gene_sets = neo4j_dm.gea.make_named_gene_sets_from_collection(
-        "PD_DM_CD", with_subunits=with_subunits
+    named_gene_sets = commute_dm.gea.make_named_gene_sets_from_collection(
+        session, "PD_DM_CD", with_subunits=with_subunits
     )
     summary = {}
     for name in named_gene_sets:
         summary[name] = {}
-    gmt_df = neo4j_dm.gea.make_gmt_df_from_named_gene_sets(named_gene_sets)
+    gmt_df = commute_dm.gea.make_gmt_df_from_named_gene_sets(named_gene_sets)
     gene_list_file_names = []
-    for gene_list_file_path in glob.glob(
-        os.path.join(gene_lists_dir_path, "*.csv")
-    ):
+    for gene_list_file_path in glob.glob(os.path.join(gene_lists_dir_path, "*.csv")):
         gene_list_file_name = os.path.basename(gene_list_file_path)
         gene_list_file_names.append(gene_list_file_name)
-        goat_df = neo4j_dm.gea.make_goat_analysis(
+        goat_df = commute_dm.gea.make_goat_analysis(
             gmt_df_or_file_path=gmt_df,
             source="PD_DM_CD",
             gene_list_file_path=gene_list_file_path,
@@ -555,9 +526,7 @@ def make_goat_analysis_from_pd(
 
 def _get_xrefs_for_ensembl_ids(ensembl_ids, batch_size):
     server = pybiomart.Server(host="http://www.ensembl.org")
-    dataset = server.marts["ENSEMBL_MART_ENSEMBL"].datasets[
-        "hsapiens_gene_ensembl"
-    ]
+    dataset = server.marts["ENSEMBL_MART_ENSEMBL"].datasets["hsapiens_gene_ensembl"]
     start = 0
     xrefs_dfs = []
     while start < len(ensembl_ids):
@@ -630,9 +599,7 @@ def make_goat_gene_lists(
     p_value_cutoff=0.01,
 ):
     hgnc_df = pandas.read_csv(hgnc_dataset_file_path, delimiter="\t")
-    for gene_list_file_path in glob.glob(
-        os.path.join(gene_lists_dir_path, "*.csv")
-    ):
+    for gene_list_file_path in glob.glob(os.path.join(gene_lists_dir_path, "*.csv")):
         gene_list_file_name = os.path.basename(gene_list_file_path)
         gene_list_df = pandas.read_csv(gene_list_file_path, delimiter="\t")
         gene_list_df = gene_list_df.rename(
@@ -675,6 +642,7 @@ def make_goat_gene_lists(
 
 
 def make_intersection_analysis_from_interface(
+    session,
     interface,
     gene_lists_dir_path,
     output_dir_path,
@@ -684,25 +652,27 @@ def make_intersection_analysis_from_interface(
     min_n_nodes=None,
     min_n_hgnc=None,
 ):
-    dummy_map, dummy_ids = _make_dummy_map_from_interface(interface)
-    _save_interface_to_db(interface, dummy_map, dummy_ids)
+    dummy_map = _make_dummy_map_from_interface(interface)
+    _save_interface_to_db(session, interface, dummy_map)
     if max_levels is None:
         max_levels = [-1]
     summary = collections.defaultdict(lambda: collections.defaultdict(dict))
     for max_level in max_levels:
         named_gene_sets = {}
         for identifier in interface:
-            identifier_node = _get_dummy_identifier_node(identifier)
-            upstream_nodes, _ = neo4j_dm.queries.get_subgraph(
+            identifier_node = _get_dummy_identifier_node(session, identifier)
+            upstream_nodes, _ = commute_dm.queries.get_subgraph(
+                session,
                 identifier_node,
-                neo4j_dm.ig.INFLUENCES,
+                commute_dm.ig.INFLUENCES,
                 mode="upstream",
                 max_level=max_level,
                 filter_output_relationships=True,
             )
-            downstream_nodes, _ = neo4j_dm.queries.get_subgraph(
+            downstream_nodes, _ = commute_dm.queries.get_subgraph(
+                session,
                 identifier_node,
-                neo4j_dm.ig.INFLUENCES,
+                commute_dm.ig.INFLUENCES,
                 mode="downstream",
                 max_level=max_level,
                 filter_output_relationships=True,
@@ -719,7 +689,8 @@ def make_intersection_analysis_from_interface(
                 nodes = upstream_nodes
             elif mode == "upstream_and_downstream":
                 nodes = upstream_nodes + downstream_nodes
-            gene_set = neo4j_dm.gea.make_gene_set_from_nodes(
+            gene_set = commute_dm.gea.make_gene_set_from_nodes(
+                session,
                 nodes,
                 namespace="hgnc.symbol",
                 with_subunits=with_subunits,
@@ -740,9 +711,7 @@ def make_intersection_analysis_from_interface(
                 result_data["identifier"].append(identifier)
                 result_data["gene_set"].append(list(gene_set))
                 result_data["genes_signif"].append(list(genes_signif))
-                result_data["genes_intersection"].append(
-                    list(genes_intersection)
-                )
+                result_data["genes_intersection"].append(list(genes_intersection))
                 summary[identifier][gene_list_file_name][max_level] = (
                     len(genes_intersection),
                     len(gene_set),
@@ -760,31 +729,21 @@ def make_intersection_analysis_from_interface(
         for gene_list_file_name in summary[identifier]:
             result = []
             for max_level in summary[identifier][gene_list_file_name]:
-                summary_result = summary[identifier][gene_list_file_name][
-                    max_level
-                ]
-                result.append(
-                    f"{max_level}: {summary_result[0]}/{summary_result[1]}"
-                )
-                summary_order[identifier].append(
-                    summary_result[0] / summary_result[1]
-                )
+                summary_result = summary[identifier][gene_list_file_name][max_level]
+                result.append(f"{max_level}: {summary_result[0]}/{summary_result[1]}")
+                summary_order[identifier].append(summary_result[0] / summary_result[1])
             summary_data[gene_list_file_name].append(result)
     summary_order_df = pandas.DataFrame(
         {
             "identifier": summary_order.keys(),
-            "score": [
-                sum(result) / len(result) for result in summary_order.values()
-            ],
+            "score": [sum(result) / len(result) for result in summary_order.values()],
         }
     )
-    summary_order_df = summary_order_df.sort_values(
-        by="score", ascending=False
-    )
+    summary_order_df = summary_order_df.sort_values(by="score", ascending=False)
     output_summary_file_path = os.path.join(output_dir_path, "summary.csv")
     summary_df = pandas.DataFrame(summary_data)
     summary_df = summary_order_df.merge(
         summary_df, left_on="identifier", right_on="identifier", how="left"
     )
     summary_df.to_csv(output_summary_file_path)
-    _remove_interface_from_db()
+    _remove_interface_from_db(session)

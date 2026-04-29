@@ -5,7 +5,6 @@ import lxml.etree
 import functools
 import operator
 
-import momapy_kb.neo4j.core
 import neo4j
 
 
@@ -245,126 +244,11 @@ def subgraph_to_cypherl(
         f.write("\n".join(cypherl_commands))
 
 
-def get_subgraph_from_query_results(query_results):
-    nodes = []
-    relationships = []
-    for result_element in flatten_list(query_results):
-        if isinstance(result_element, neo4j.graph.Node):
-            nodes.append(result_element)
-        elif isinstance(result_element, neo4j.graph.Relationship):
-            relationships.append(result_element)
-    return nodes, relationships
-
-
-def get_ids(nodes):
-    node_element_ids = [node.element_id for node in nodes]
-    query = f"""
-        MATCH
-            (node:ModelElement)
-        WHERE
-            elementId(node.) IN {node_element_ids}
-        OPTIONAL MATCH
-            (node)<-[:HAS_KEY]-(node_item:Item),
-            (node_item)-[:HAS_VALUE]->(node_bag:Bag)-[:HAS_ELEMENT]->(node_id:String)
-        RETURN node, collect(node_id.value)
-    """
-    result, _ = momapy_kb.neo4j.core.query(query)
-    return result
-
-
-def get_annotations(nodes):
-    node_element_ids = [node.element_id for node in nodes]
-    query = f"""
-        MATCH
-            (node:ModelElement)
-        WHERE
-            elementId(node.) IN {node_element_ids}
-        OPTIONAL MATCH
-            (node)<-[:HAS_KEY]-(node_item:Item),
-            (node_item)-[:HAS_VALUE]->(node_bag:Bag)-[:HAS_ELEMENT]->(node_annotation:RDFAnnotation)
-        RETURN node, collect(node_annotation)
-    """
-    result, _ = momapy_kb.neo4j.core.query(query)
-    return result
-
-
-def make_gene_set_from_nodes(nodes, namespace="ncbigene"):
-    gene_set = set()
-    for node, annotations in get_annotations(nodes):
-        for annotation in annotations:
-            for resource in annotation["resources"]:
-                if namespace in resource:
-                    identifier = resource.split(":")[-1]
-                    gene_set.add(identifier)
-    return gene_set
-
-
-def make_gmt_file_from_gene_sets(
-    gene_sets: list[tuple[str, str, list[str]]], output_file_path
-):
-    gene_set_strings = []
-    for gene_set in gene_sets:
-        gene_set_string = (
-            f"{gene_set[0]}\t{gene_set[1]}\t{'\t'.join(gene_set[2])}"
-        )
-        gene_set_strings.append(gene_set_string)
-    with open(output_file_path, "w") as f:
-        f.write("\n".join(gene_set_strings))
-
-
-def get_interface():
-    query = """
-       CALL () {
-            MATCH
-                (dm_cd_collection:Collection),
-                (dm_cd_collection)-[:HAS_ENTRY]->(dm_cd_entry:CollectionEntry),
-                (dm_cd_entry)-[:HAS_RDF_ANNOTATIONS]->(dm_cd_annotations:Mapping),
-                (dm_cd_entry)-[:HAS_MODEL]->(dm_cd_model:CellDesignerModel),
-                (dm_cd_entry)-[:HAS_IDS]->(dm_cd_ids:Mapping),
-                (dm_cd_annotations)-[:HAS_ITEM]->(dm_cd_annotations_item:Item),
-                (dm_cd_annotations_item)-[:HAS_KEY]->(dm_cd_protein:Protein),
-                (dm_cd_annotations_item)-[:HAS_VALUE]->(dm_cd_annotations_bag:Bag),
-                (dm_cd_annotations_bag)-[:HAS_ELEMENT]->(dm_cd_annotation:RDFAnnotation)
-            WITH
-                split(dm_cd_annotation.resources[0], ":")[2] AS dm_cd_namespace,
-                split(dm_cd_annotation.resources[0], ":")[-1] AS dm_cd_identifier,
-                dm_cd_collection AS dm_cd_collection,
-                dm_cd_entry AS dm_cd_entry,
-                dm_cd_protein AS dm_cd_protein
-            WHERE
-                dm_cd_namespace = "hgnc.symbol"
-            RETURN
-                dm_cd_identifier AS identifier, dm_cd_collection AS collection, dm_cd_entry AS entry, dm_cd_protein AS protein
-            UNION
-            MATCH
-                (ad_collection:Collection {name: "AD_KG_BEL"}),
-                (ad_collection)-[:HAS_ENTRY]->(ad_entry:CollectionEntry),
-                (ad_entry)-[:HAS_MODEL]->(ad_model:BELModel),
-                (ad_model)-[:HAS_SUBGRAPH]->(ad_subgraph),
-                (ad_subgraph)-[:HAS_NODE]->(ad_protein:Protein)
-            WHERE
-                ad_protein.namespace = "HGNC"
-            RETURN
-                ad_protein.name AS identifier, ad_collection AS collection, ad_entry AS entry, ad_protein AS protein
-        }
-        WITH
-            identifier AS identifier,
-            collect(DISTINCT [collection]) AS collections,
-            collect(DISTINCT [collection, entry, protein]) AS collections_entries_proteins
-        WHERE
-            size(collections) >= 3
-        RETURN
-            identifier, collections_entries_proteins
-    """
-    result, meta = momapy_kb.neo4j.core.run(query)
-    return result
-
-
-def merge_relationship(start_node, end_node, relationship_type):
+def merge_relationship(session, start_node, end_node, relationship_type):
     query = f"""
         MATCH (start_node), (end_node)
         WHERE elementId(start_node) = '{start_node.element_id}'
         AND elementId(end_node) = '{end_node.element_id}'
         MERGE (start_node)-[r:{relationship_type}]->(end_node)
     """
-    momapy_kb.neo4j.core.run(query)
+    session.execute_query(query)
