@@ -6,14 +6,12 @@ authors = [{ name = "Adrien Rougny", email = "adrienrougny@gmail.com" }]
 dependencies = [
   "jupyterlab-freeze>=0.1.0",
   "jupyterlab>=4.5.6",
-  "cd2bel",
-  "momapy-bel",
   "pydot",
   "boltons",
-  "rpy2",
+  # "rpy2",
   "pybiomart>=0.2.0",
   "momapy-kb[neo4j]",
-  "momapy[all]",
+  "momapy[skia]",
   "fieldz-kb",
   "pylpg",
 ]
@@ -26,8 +24,6 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv.sources]
-cd2bel = { path = "../../../code/cd2bel", editable = true }
-momapy-bel = { path = "../../../code/momapy_bel", editable = true }
 momapy-kb = { path = "../../../code/momapy_kb", editable = true }
 momapy = { path = "../../../code/momapy", editable = true }
 fieldz-kb = { path = "../../../code/fieldz_kb", editable = true }

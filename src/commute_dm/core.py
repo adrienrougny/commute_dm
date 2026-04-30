@@ -259,13 +259,31 @@ def _save_interface_to_db(session, interface, dummy_map):
 
 
 def _remove_interface_from_db(session):
-    query = """
+    # First, drop the POSITIVE_INFLUENCE edges merged in _save_interface_to_db
+    # between dummy identifier species and real species. If left in place, the
+    # variable-length traversal below would follow them into the real graph
+    # and DETACH DELETE would corrupt shared nodes.
+    session.execute_query(
+        """
+        MATCH
+            (:Collection {name: "DUMMY_MAP"})-[:HAS_ENTRY]->(:CollectionEntry)
+                -[:HAS_OBJ]->(:CellDesignerMap)-[:HAS_MODEL]->(:CellDesignerModel)
+                -[:HAS_SPECIES]->(species)
+        OPTIONAL MATCH (species)-[r_out:POSITIVE_INFLUENCE]->()
+        OPTIONAL MATCH ()-[r_in:POSITIVE_INFLUENCE]->(species)
+        DELETE r_out, r_in
+        """
+    )
+    # Now the dummy subgraph is isolated from the rest of the graph along
+    # outgoing edges, so the structural cleanup is safe.
+    session.execute_query(
+        """
         MATCH
             (collection:Collection {name: "DUMMY_MAP"})-[:HAS_ENTRY]->(entry)-[:HAS_OBJ]->(map:CellDesignerMap)
         OPTIONAL MATCH (map)-[*0..]->(descendant)
         DETACH DELETE collection, entry, map, descendant
-    """
-    session.execute_query(query)
+        """
+    )
 
 
 def make_and_render_igs_from_interface(
