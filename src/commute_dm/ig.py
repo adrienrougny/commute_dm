@@ -23,7 +23,7 @@ INFLUENCES = [
     NEGATIVE_INFLUENCE,
     NECESSARY_POSITIVE_INFLUENCE,
 ]
-POINTS_PER_INCH = 96
+POINTS_PER_INCH = 72
 
 
 class InfluenceGraph(dict):
@@ -358,9 +358,12 @@ def make_map_layout_from_ig(
     ig,
     color_node_ids: list[tuple[list[str], str]] | None = None,
     label=None,
+    extra_node_layout_elements=None,
 ):
     if color_node_ids is None:
         color_node_ids = []
+    if extra_node_layout_elements is None:
+        extra_node_layout_elements = {}
 
     relationship_type_to_cd_class = {
         POSITIVE_INFLUENCE: momapy.celldesigner.PositiveInfluenceLayout,
@@ -369,19 +372,22 @@ def make_map_layout_from_ig(
         NEGATIVE_INFLUENCE: momapy.celldesigner.InhibitionLayout,
     }
     ig_nodes = list(ig.get_nodes())
-    element_ids = [n.element_id for n in ig_nodes]
+    db_nodes = [n for n in ig_nodes if n not in extra_node_layout_elements]
+    element_ids = [n.element_id for n in db_nodes]
     rows = session.cypher_query_as_layout_elements(
         "UNWIND $eids AS eid MATCH (n) WHERE elementId(n) = eid RETURN n AS node",
         params={"eids": element_ids},
     )
     node_to_layout_element = {}
-    for ig_node, layout_elements in zip(ig_nodes, rows):
+    for ig_node, layout_elements in zip(db_nodes, rows):
         if not layout_elements:
             raise RuntimeError(
                 f"no layout for IG node id_={ig_node.get('id_')} "
                 f"labels={set(ig_node.labels)}"
             )
         node_to_layout_element[ig_node] = layout_elements[0]
+    for ig_node, layout_element in extra_node_layout_elements.items():
+        node_to_layout_element[ig_node] = layout_element
     layout_builder = momapy.builder.new_builder_object(
         momapy.celldesigner.CellDesignerLayout
     )
@@ -389,9 +395,10 @@ def make_map_layout_from_ig(
     id_to_dot_node = {}
     for node in ig_nodes:
         layout_element = node_to_layout_element[node]
+        own_bbox = layout_element.own_bbox()
         dot_node = pydot.Node(node["id_"])
-        dot_node.set("width", layout_element.width / POINTS_PER_INCH)
-        dot_node.set("height", layout_element.height / POINTS_PER_INCH)
+        dot_node.set("width", own_bbox.width / POINTS_PER_INCH)
+        dot_node.set("height", own_bbox.height / POINTS_PER_INCH)
         dot_graph.add_node(dot_node)
         id_to_dot_node[node["id_"]] = dot_node
     for node in ig_nodes:
@@ -430,8 +437,8 @@ def make_map_layout_from_ig(
             continue
         start_layout_element = node_id_to_layout_element_moved[start_node["id_"]]
         end_layout_element = node_id_to_layout_element_moved[end_node["id_"]]
-        start_point = start_layout_element.border(end_layout_element.center())
-        end_point = end_layout_element.border(start_layout_element.center())
+        start_point = start_layout_element.own_border(end_layout_element.center())
+        end_point = end_layout_element.own_border(start_layout_element.center())
         if start_point is None:
             start_point = start_layout_element.north_west()
         if end_point is None:
@@ -447,16 +454,6 @@ def make_map_layout_from_ig(
             layout_element_builder = node_id_to_layout_element_moved.get(node_id)
             if layout_element_builder is not None:
                 layout_element_builder.fill = color
-    for layout_element_builder in node_id_to_layout_element_moved.values():
-        if layout_element_builder.label is not None:
-            layout_element_builder.label.font_size = 18.0
-            bbox = momapy.positioning.fit(
-                [layout_element_builder.label.bbox()], xsep=5, ysep=5
-            )
-            if bbox.width > layout_element_builder.width:
-                layout_element_builder.width = bbox.width
-            if bbox.height > layout_element_builder.height:
-                layout_element_builder.height = bbox.height
     bbox = momapy.positioning.fit(layout_builder.layout_elements)
     if label is not None:
         text_layout = momapy.core.TextLayout(

@@ -165,7 +165,13 @@ def get_subgraph(
     if blacklist_nodes is None:
         blacklist_nodes = []
     blacklist_node_ids = [node.element_id for node in blacklist_nodes]
-    node_element_id = node.element_id
+    if isinstance(node, list):
+        seed_nodes = node
+    else:
+        seed_nodes = [node]
+    if not seed_nodes:
+        return [], []
+    seed_element_ids = [n.element_id for n in seed_nodes]
     if mode == "downstream":
         relationship_types_for_filter = [
             f"{relationship_type}>" for relationship_type in relationship_types
@@ -183,8 +189,9 @@ def get_subgraph(
         WHERE elementId(blacklist_node) IN {blacklist_node_ids}
         WITH collect(blacklist_node) AS blacklist_nodes
         MATCH (node)
-        WHERE elementId(node) = "{node_element_id}"
-        CALL apoc.path.subgraphAll(node, {{
+        WHERE elementId(node) IN {seed_element_ids}
+        WITH collect(node) AS seed_nodes, blacklist_nodes
+        CALL apoc.path.subgraphAll(seed_nodes, {{
             relationshipFilter: "{relationship_filter}",
             labelFilter: "{label_filter}",
             minLevel: {min_level},

@@ -175,115 +175,64 @@ def make_gene_sets_from_subgraphs_relative_to_interface(session, subgraphs):
     return named_gene_sets
 
 
-def _get_dummy_identifier_node(session, identifier):
-    query = f"""
-        MATCH (collection:Collection {{name: 'DUMMY_MAP'}})-[:HAS_ENTRY]->(entry:CollectionEntry)-[:HAS_OBJ]->(map:CellDesignerMap)-[:HAS_MODEL]->(model)-[:HAS_SPECIES]->(species {{name: '{identifier}'}})
-        RETURN species
-    """
-    result = session.execute_query(query)
-    if result:
-        return result[0]["species"]
-    return None
+class _SyntheticNode:
+    def __init__(self, identifier):
+        self.element_id = f"synthetic:{identifier}"
+        self.labels = frozenset()
+        self._graph = None
+        self._props = {"id_": identifier, "name": identifier}
+
+    def __getitem__(self, key):
+        return self._props[key]
+
+    def get(self, key, default=None):
+        return self._props.get(key, default)
 
 
-def _make_dummy_map_from_interface(interface):
-    dummy_map = momapy.builder.new_builder_object(momapy.celldesigner.CellDesignerMap)
-    dummy_model = momapy.builder.new_builder_object(
-        momapy.celldesigner.CellDesignerModel
-    )
-    dummy_map.model = dummy_model
-    dummy_layout = momapy.builder.new_builder_object(
-        momapy.celldesigner.CellDesignerLayout
-    )
-    dummy_map.layout = dummy_layout
-    dummy_layout_model_mapping = momapy.core.LayoutModelMappingBuilder()
-    dummy_map.layout_model_mapping = dummy_layout_model_mapping
-    for identifier in interface:
-        species = momapy.builder.new_builder_object(momapy.celldesigner.Unknown)
-        species.id_ = identifier
-        species.name = identifier
-        species = momapy.builder.object_from_builder(species)
-        dummy_model.species.add(species)
-        species_layout = momapy.builder.new_builder_object(
-            momapy.celldesigner.UnknownLayout
+class _SyntheticRelationship:
+    def __init__(self, start_node, end_node, type_):
+        self.start_node = start_node
+        self.end_node = end_node
+        self.type = type_
+        self._graph = None
+
+
+def _split_interface_seeds(interface):
+    seeds = {}
+    for identifier, nodes_with_context in interface.items():
+        covid = list(
+            {
+                nwc["node"]
+                for nwc in nodes_with_context
+                if nwc["collection"]["name"] == "COVID_DM_CD"
+            }
         )
-        species_layout.position = momapy.geometry.Point(0, 0)
-        species_layout.width = 80
-        species_layout.height = 40
-        species_text_layout = momapy.core.TextLayout(
-            text=identifier, position=species_layout.position
+        pd = list(
+            {
+                nwc["node"]
+                for nwc in nodes_with_context
+                if nwc["collection"]["name"] == "PD_DM_CD"
+            }
         )
-        species_layout.label = species_text_layout
-        species_layout = momapy.builder.object_from_builder(species_layout)
-        dummy_layout.layout_elements.append(species_layout)
-        dummy_map.layout_model_mapping.add_mapping(species_layout, species)
-    dummy_map = momapy.builder.object_from_builder(dummy_map)
-    return dummy_map
+        seeds[identifier] = {"covid": covid, "pd": pd}
+    return seeds
 
 
-def _save_interface_to_db(session, interface, dummy_map):
-    collection_entry = momapy_kb.core.CollectionEntry(
-        id_="dummy_map",
-        obj=dummy_map,
-        element_to_annotations=None,
-        file_path=None,
-    )
-    session.save_collections_from_entries(
-        [("DUMMY_MAP", [collection_entry])],
-        with_membership_edges=True,
-    )
-    for identifier in interface:
-        identifier_node = _get_dummy_identifier_node(session, identifier)
-        pd_nodes = set(
-            [
-                node_with_context["node"]
-                for node_with_context in interface[identifier]
-                if node_with_context["collection"]["name"] == "PD_DM_CD"
-            ]
-        )
-        for pd_node in pd_nodes:
-            commute_dm.utils.merge_relationship(
-                session, identifier_node, pd_node, commute_dm.ig.POSITIVE_INFLUENCE
-            )
-        covid_nodes = set(
-            [
-                node_with_context["node"]
-                for node_with_context in interface[identifier]
-                if node_with_context["collection"]["name"] == "COVID_DM_CD"
-            ]
-        )
-        for covid_node in covid_nodes:
-            commute_dm.utils.merge_relationship(
-                session, covid_node, identifier_node, commute_dm.ig.POSITIVE_INFLUENCE
-            )
+def _make_synthetic_central_layout_element(identifier):
+    layout = momapy.builder.new_builder_object(momapy.celldesigner.UnknownLayout)
+    layout.position = momapy.geometry.Point(0, 0)
+    layout.width = 80
+    layout.height = 40
+    layout.label = momapy.core.TextLayout(text=identifier, position=layout.position)
+    return momapy.builder.object_from_builder(layout)
 
 
-def _remove_interface_from_db(session):
-    # First, drop the POSITIVE_INFLUENCE edges merged in _save_interface_to_db
-    # between dummy identifier species and real species. If left in place, the
-    # variable-length traversal below would follow them into the real graph
-    # and DETACH DELETE would corrupt shared nodes.
-    session.execute_query(
-        """
-        MATCH
-            (:Collection {name: "DUMMY_MAP"})-[:HAS_ENTRY]->(:CollectionEntry)
-                -[:HAS_OBJ]->(:CellDesignerMap)-[:HAS_MODEL]->(:CellDesignerModel)
-                -[:HAS_SPECIES]->(species)
-        OPTIONAL MATCH (species)-[r_out:POSITIVE_INFLUENCE]->()
-        OPTIONAL MATCH ()-[r_in:POSITIVE_INFLUENCE]->(species)
-        DELETE r_out, r_in
-        """
-    )
-    # Now the dummy subgraph is isolated from the rest of the graph along
-    # outgoing edges, so the structural cleanup is safe.
-    session.execute_query(
-        """
-        MATCH
-            (collection:Collection {name: "DUMMY_MAP"})-[:HAS_ENTRY]->(entry)-[:HAS_OBJ]->(map:CellDesignerMap)
-        OPTIONAL MATCH (map)-[*0..]->(descendant)
-        DETACH DELETE collection, entry, map, descendant
-        """
-    )
+def _adjust_max_level(max_level):
+    # Old (dummy) scheme: dummy at level 0, real seeds at level 1.
+    # New scheme: real seeds at level 0, so subtract 1 to keep node counts equal.
+    if max_level < 0:
+        return max_level
+    return max_level - 1
 
 
 def make_and_render_igs_from_interface(
@@ -300,32 +249,29 @@ def make_and_render_igs_from_interface(
     if max_levels is None:
         max_levels = [-1]
     commute_dm.queries.prewarm_session(session)
-    dummy_map = _make_dummy_map_from_interface(interface)
-    _save_interface_to_db(session, interface, dummy_map)
+    seeds_by_identifier = _split_interface_seeds(interface)
     for identifier in interface:
         map_layouts = []
-        identifier_node = _get_dummy_identifier_node(session, identifier)
+        seeds = seeds_by_identifier[identifier]
         for max_level in max_levels:
-            if identifier != "AGTR1" and max_level != 3:
-                continue
             pd_ids = []
             covid_ids = []
             pd_and_covid_ids = []
-            central_ids = []
+            adjusted_max_level = _adjust_max_level(max_level)
             downstream_nodes, downstream_relationships = commute_dm.queries.get_subgraph(
                 session,
-                identifier_node,
+                seeds["pd"],
                 commute_dm.ig.INFLUENCES,
                 mode="downstream",
-                max_level=max_level,
+                max_level=adjusted_max_level,
                 filter_output_relationships=True,
             )
             upstream_nodes, upstream_relationships = commute_dm.queries.get_subgraph(
                 session,
-                identifier_node,
+                seeds["covid"],
                 commute_dm.ig.INFLUENCES,
                 mode="upstream",
-                max_level=max_level,
+                max_level=adjusted_max_level,
                 filter_output_relationships=True,
             )
             if min_n_nodes is not None:
@@ -346,17 +292,31 @@ def make_and_render_igs_from_interface(
                     pd_ids.append(node_id)
                 elif collection_names == {"PD_DM_CD", "COVID_DM_CD"}:
                     pd_and_covid_ids.append(node_id)
-                elif collection_names == {"DUMMY_MAP"}:
-                    central_ids.append(node_id)
             relationships = list(set(downstream_relationships + upstream_relationships))
-            ig = commute_dm.ig.make_ig_from_nodes_and_relationships(nodes, relationships)
+            central_node = _SyntheticNode(identifier)
+            synthetic_relationships = []
+            for covid_seed in seeds["covid"]:
+                synthetic_relationships.append(
+                    _SyntheticRelationship(
+                        covid_seed, central_node, commute_dm.ig.POSITIVE_INFLUENCE
+                    )
+                )
+            for pd_seed in seeds["pd"]:
+                synthetic_relationships.append(
+                    _SyntheticRelationship(
+                        central_node, pd_seed, commute_dm.ig.POSITIVE_INFLUENCE
+                    )
+                )
+            ig = commute_dm.ig.make_ig_from_nodes_and_relationships(
+                nodes + [central_node], relationships + synthetic_relationships
+            )
             map_layout = commute_dm.ig.make_map_layout_from_ig(
                 session=session,
                 ig=ig,
                 label=f"max_level = {max_level}",
                 color_node_ids=[
                     (
-                        central_ids,
+                        [identifier],
                         interface_nodes_color,
                     ),
                     (
@@ -372,6 +332,9 @@ def make_and_render_igs_from_interface(
                         common_nodes_color,
                     ),
                 ],
+                extra_node_layout_elements={
+                    central_node: _make_synthetic_central_layout_element(identifier)
+                },
             )
             map_layouts.append(map_layout)
         output_file_path = os.path.join(output_dir_path, f"{identifier}.pdf")
@@ -384,7 +347,6 @@ def make_and_render_igs_from_interface(
                 multi_pages=True,
                 to_top_left=False,
             )
-    _remove_interface_from_db(session)
 
 
 def make_goat_analysis_from_interface(
@@ -399,8 +361,7 @@ def make_goat_analysis_from_interface(
     p_value_cutoff=0.05,
     score_type="effectsize",
 ):
-    dummy_map = _make_dummy_map_from_interface(interface)
-    _save_interface_to_db(session, interface, dummy_map)
+    seeds_by_identifier = _split_interface_seeds(interface)
     summary = {}
     for identifier in interface:
         summary[identifier] = {}
@@ -414,22 +375,23 @@ def make_goat_analysis_from_interface(
     kept_identifiers = set([])
     for max_level in max_levels:
         named_gene_sets = {}
+        adjusted_max_level = _adjust_max_level(max_level)
         for identifier in interface:
-            identifier_node = _get_dummy_identifier_node(session, identifier)
+            seeds = seeds_by_identifier[identifier]
             upstream_nodes, _ = commute_dm.queries.get_subgraph(
                 session,
-                identifier_node,
+                seeds["covid"],
                 commute_dm.ig.INFLUENCES,
                 mode="upstream",
-                max_level=max_level,
+                max_level=adjusted_max_level,
                 filter_output_relationships=True,
             )
             downstream_nodes, _ = commute_dm.queries.get_subgraph(
                 session,
-                identifier_node,
+                seeds["pd"],
                 commute_dm.ig.INFLUENCES,
                 mode="downstream",
-                max_level=max_level,
+                max_level=adjusted_max_level,
                 filter_output_relationships=True,
             )
             if min_n_nodes is not None:
@@ -494,7 +456,6 @@ def make_goat_analysis_from_interface(
         summary_df, left_on="identifier", right_on="identifier", how="left"
     )
     summary_df.to_csv(output_summary_file_path)
-    _remove_interface_from_db(session)
 
 
 def make_goat_analysis_from_pd(
@@ -670,29 +631,29 @@ def make_intersection_analysis_from_interface(
     min_n_nodes=None,
     min_n_hgnc=None,
 ):
-    dummy_map = _make_dummy_map_from_interface(interface)
-    _save_interface_to_db(session, interface, dummy_map)
+    seeds_by_identifier = _split_interface_seeds(interface)
     if max_levels is None:
         max_levels = [-1]
     summary = collections.defaultdict(lambda: collections.defaultdict(dict))
     for max_level in max_levels:
         named_gene_sets = {}
+        adjusted_max_level = _adjust_max_level(max_level)
         for identifier in interface:
-            identifier_node = _get_dummy_identifier_node(session, identifier)
+            seeds = seeds_by_identifier[identifier]
             upstream_nodes, _ = commute_dm.queries.get_subgraph(
                 session,
-                identifier_node,
+                seeds["covid"],
                 commute_dm.ig.INFLUENCES,
                 mode="upstream",
-                max_level=max_level,
+                max_level=adjusted_max_level,
                 filter_output_relationships=True,
             )
             downstream_nodes, _ = commute_dm.queries.get_subgraph(
                 session,
-                identifier_node,
+                seeds["pd"],
                 commute_dm.ig.INFLUENCES,
                 mode="downstream",
-                max_level=max_level,
+                max_level=adjusted_max_level,
                 filter_output_relationships=True,
             )
             if min_n_nodes is not None:
@@ -764,4 +725,3 @@ def make_intersection_analysis_from_interface(
         summary_df, left_on="identifier", right_on="identifier", how="left"
     )
     summary_df.to_csv(output_summary_file_path)
-    _remove_interface_from_db(session)
