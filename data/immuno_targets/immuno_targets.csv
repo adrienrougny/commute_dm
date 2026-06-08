@@ -1,0 +1,251 @@
+Target	UniProtID	ProteinName
+AGER	Q15109	Advanced glycosylation end product-specific receptor
+AGRP	O00253	Agouti-related protein
+ANGPT1	Q15389	Angiopoietin-1
+ANGPT2	O15123	Angiopoietin-2
+ANXA1	P04083	Annexin A1
+AREG	P15514	Amphiregulin
+BDNF	P23560	Brain-derived neurotrophic factor
+BMP7	P18075	Bone morphogenetic protein 7
+BST2	Q10589	Bone marrow stromal antigen 2
+C1QA	P02745	Complement C1q A chain
+CALCA	P01258	Calcitonin [Cleaved into: Calcitonin; Katacalcin
+CCL1	P22362	C-C motif chemokine 1
+CCL11	P51671	Eotaxin
+CCL13	Q99616	C-C motif chemokine 13
+CCL14	Q16627	C-C motif chemokine 14
+CCL15	Q16663	C-C motif chemokine 15
+CCL16	O15467	C-C motif chemokine 16
+CCL17	Q92583	C-C motif chemokine 17
+CCL19	Q99731	C-C motif chemokine 19
+CCL2	P13500	C-C motif chemokine 2
+CCL20	P78556	C-C motif chemokine 20
+CCL21	O00585	C-C motif chemokine 21
+CCL22	O00626	C-C motif chemokine 22
+CCL23	P55773	C-C motif chemokine 23
+CCL24	O00175	C-C motif chemokine 24
+CCL25	O15444	C-C motif chemokine 25
+CCL26	Q9Y258	C-C motif chemokine 26
+CCL27	Q9Y4X3	C-C motif chemokine 27
+CCL28	Q9NRJ3	C-C motif chemokine 28
+CCL3	P10147	C-C motif chemokine 3
+CCL4	P13236	C-C motif chemokine ligand 4
+CCL5	P13501	C-C motif chemokine 5
+CCL7	P80098	C-C motif chemokine 7
+CCL8	P80075	C-C motif chemokine 8
+CD200	P41217	OX-2 membrane glycoprotein
+CD200R1	Q8TD46	Cell surface glycoprotein CD200 receptor 1
+CD27	P26842	CD27 antigen
+CD274	Q9NZQ7	Programmed cell death 1 ligand 1, PD-L1
+CD276	Q5ZPR3	CD276 molecule
+CD3E	P07766	T-cell surface glycoprotein CD3 epsilon chain
+CD4	P01730	T-cell surface glycoprotein CD4
+CD40	P25942	CD40 molecule
+CD40LG	P29965	CD40 ligand
+CD46	P15529	Membrane cofactor protein
+CD70	P32970	CD70 antigen
+CD80	P33681	T-lymphocyte activation antigen CD80
+CD83	Q01151	CD83 antigen
+CD93	Q9NPY3	Complement component C1q receptor
+CEACAM5	P06731	Carcinoembryonic antigen related cell adhesion molecule 5
+CHI3L1	P36222	Chitinase-3-like protein 1
+CLEC4A	Q9UMR7	C-type lectin domain family 4 member A
+CNTF	P26441	Ciliary neurotrophic factor
+CRP	P02741	C-reactive protein
+CSF1	P09603	Macrophage colony-stimulating factor 1
+CSF1R	P07333	Macrophage colony-stimulating factor 1 receptor
+CSF2	P04141	Granulocyte-macrophage colony-stimulating factor
+CSF2RB	P32927	Cytokine receptor common subunit beta
+CSF3	P09919	Granulocyte colony-stimulating factor, G-CSF
+CSF3R	Q99062	Granulocyte colony-stimulating factor receptor
+CST7	O76096	Cystatin-F
+CTF1	Q16619	Cardiotrophin-1
+CTLA4	P16410	Cytotoxic T-lymphocyte protein 4
+CTSS	P25774	Cathepsin S
+CX3CL1	P78423	Fractalkine
+CXADR	P78310	Coxsackievirus and adenovirus receptor
+CXCL1	P09341	Growth-regulated alpha protein
+CXCL10	P02778	C-X-C motif chemokine 10
+CXCL11	O14625	C-X-C motif chemokine 11
+CXCL12	P48061	Stromal cell-derived factor 1
+CXCL13	O43927	C-X-C motif chemokine 13
+CXCL14	O95715	C-X-C motif chemokine 14
+CXCL16	Q9H2A7	C-X-C motif chemokine 16
+CXCL2	P19875	C-X-C motif chemokine ligand 2
+CXCL3	P19876	C-X-C motif chemokine ligand 3
+CXCL5	P42830	C-X-C motif chemokine 5
+CXCL6	P80162	C-X-C motif chemokine 6
+CXCL8	P10145	Interleukin-8, IL8
+CXCL9	Q07325	C-X-C motif chemokine 9
+EGF	P01133	Pro-epidermal growth factor
+EPO	P01588	Erythropoietin
+FASLG	P48023	Tumor necrosis factor ligand superfamily member 6
+FGF19	O95750	Fibroblast growth factor 19
+FGF2	P09038	Fibroblast growth factor 2
+FGF21	Q9NSA1	Fibroblast growth factor 21
+FGF23	Q9GZV9	Fibroblast growth factor 23
+FLT1	P17948	Vascular endothelial growth factor receptor 1
+FLT3LG	P49771	Fms-related tyrosine kinase 3 ligand
+FLT4	P35916	Vascular endothelial growth factor receptor 3
+FTH1	P02794	Ferritin heavy chain 1
+FURIN	P09958	Furin
+GDF15	Q99988	Growth/differentiation factor 15
+GDF2	Q9UK05	Growth/differentiation factor 2
+GFAP	P14136	Glial fibrillary acidic protein
+GRN	P28799	Progranulin
+GZMA	P12544	Granzyme A
+GZMB	P10144	Granzyme B
+HAVCR1	Q96D42	Hepatitis A virus cellular receptor 1
+HGF	P14210	Hepatocyte growth factor
+HLA-DRA	P01903	Major histocompatibility complex, class II, DR alpha
+ICAM1	P05362	Intercellular adhesion molecule 1
+ICOSLG	O75144	ICOS ligand
+IFNA1; IFNA13	P01562	Interferon alpha-1/13
+IFNA2	P01563	Interferon alpha-2
+IFNB1	P01574	Interferon beta
+IFNG	P01579	Interferon gamma
+IFNL1	Q8IU54	Interferon lambda-1
+IFNW1	P05000	Interferon omega-1
+IKBKG	Q9Y6K9	Inhibitor of nuclear factor kappa B kinase subunit gamma
+IL10	P22301	Interleukin-10
+IL10RB	Q08334	Interleukin-10 receptor subunit beta
+IL11	P20809	Interleukin-11
+IL12B	P29460	Interleukin-12 subunit beta
+IL12p70	P29459|P29460	Interleukin-12 subunit beta|Interleukin-12 subunit alpha
+IL12RB1	P42701	Interleukin-12 receptor subunit beta-1
+IL13	P35225	Interleukin-13
+IL13RA2	Q14627	Interleukin 13 receptor subunit alpha 2
+IL15	P40933	Interleukin-15
+IL15RA	Q13261	Interleukin-15 receptor subunit alpha
+IL16	Q14005	Pro-interleukin-16
+IL17A	Q16552	Interleukin-17A
+IL17A|IL17F	Q16552|Q96PD4	 Interleukin-17A|Interleukin-17F
+IL17B	Q9UHF5	Interleukin-17B
+IL17C	Q9P0M4	Interleukin-17C
+IL17F	Q96PD4	Interleukin-17F
+IL17RA	Q96F46	Interleukin-17 receptor A
+IL17RB	Q9NRM6	Interleukin-17 receptor B
+IL18	Q14116	Interleukin-18
+IL18BP	O95998	Interleukin-18-binding protein
+IL18R1	Q13478	Interleukin-18 receptor 1
+IL19	Q9UHD0	Interleukin-19
+IL1B	P01584	Interleukin-1 beta
+IL1R1	P14778	Interleukin-1 receptor type 1
+IL1R2	P27930	Interleukin-1 receptor type 2
+IL1RL1	Q01638	Interleukin-1 receptor-like 1
+IL1RN	P18510	Interleukin-1 receptor antagonist protein
+IL2	P60568	Interleukin-2
+IL20	Q9NYY1	Interleukin-20
+IL22	Q9GZX6	Interleukin-22
+IL23	P29460|Q9NPF7	Interleukin-12 subunit beta|Interleukin-23 subunit alpha
+IL24	Q13007	Interleukin-24
+IL27	Q8NEV9|Q14213	Interleukin 27|Interleukin-27 subunit beta
+IFNL2; IFNL3	Q8IZJ0; Q8IZI9	Interferon lambda-2; Interferon lambda-3
+IL2RA	P01589	Interleukin-2 receptor subunit alpha
+IL2RB	P14784	Interleukin-2 receptor subunit beta
+IL32	P24001	Interleukin-32
+IL33	O95760	Interleukin 33
+IL34	Q6ZMJ4	Interleukin-34
+IL36A	Q9UHA7	Interleukin-36 alpha
+IL36B	Q9NZH7	Interleukin-36 beta
+IL36G	Q9NZH8	Interleukin-36 gamma
+IL3RA	P26951	Interleukin-3 receptor subunit alpha
+IL4	P05112	Interleukin-4
+IL4R	P24394	Interleukin-4 receptor subunit alpha
+IL5	P05113	Interleukin-5
+IL5RA	Q01344	Interleukin-5 receptor subunit alpha
+IL6	P05231	Interleukin-6
+IL6R	P08887	Interleukin-6 receptor subunit alpha
+IL6ST	P40189	Interleukin-6 receptor subunit beta
+IL7	P13232	Interleukin-7
+IL7R	P16871	Interleukin-7 receptor subunit alpha
+IL9	P15248	Interleukin-9
+IRAK4	Q9NWZ3	Interleukin-1 receptor-associated kinase 4
+KDR	P35968	Vascular endothelial growth factor receptor 2
+KITLG	P21583	Kit ligand
+KLRK1	P26718	NKG2-D type II integral membrane protein
+KNG1	P01042	Kininogen-1
+LAG3	P18627	Lymphocyte activation gene 3 protein
+LAMP3	Q9UQV4	Lysosomal associated membrane protein 3
+LCN2	P80188	Neutrophil gelatinase-associated lipocalin
+LGALS9	O00182	Galectin-9
+LIF	P15018	Leukemia inhibitory factor
+LILRB2	Q8N423	Leukocyte immunoglobulin-like receptor subfamily B member 2
+LTA	P01374	Lymphotoxin-alpha
+LTA|LTB	P01374|Q06643	Lymphotoxin-alpha|Lymphotoxin-beta
+MERTK	Q12866	MER proto-oncogene, tyrosine kinase
+MICA	Q29983	MHC class I polypeptide-related sequence A
+MICB	Q29980	MHC class I polypeptide-related sequence B
+MIF	P14174	Macrophage migration inhibitory factor
+MMP1	P03956	Interstitial collagenase
+MMP12	P39900	Macrophage metalloelastase
+MMP3	P08254	Stromelysin-1
+MMP8	P22894	Neutrophil collagenase
+MMP9	P14780	Matrix metalloproteinase-9
+MPO	P05164	Myeloperoxidase
+MUC16	Q8WXI7	Mucin-16
+NAMPT	P43490	Nicotinamide phosphoribosyltransferase
+NCR1	O76036	Natural cytotoxicity triggering receptor 1
+NGF	P01138	Beta-nerve growth factor
+NTF3	P20783	Neurotrophin-3
+OSM	P13725	Oncostatin-M
+OSMR	Q99650	Oncostatin-M-specific receptor subunit beta
+PDCD1	Q15116	Programmed cell death protein 1
+PDCD1LG2	Q9BQ51	Programmed cell death 1 ligand 2
+PDGFA	P04085	Platelet-derived growth factor subunit A
+PDGFB	P01127	Platelet-derived growth factor subunit B
+PTX3	P26022	Pentraxin-related protein PTX3
+S100A12	P80511	Protein S100-A12
+S100A9	P06702	Protein S100-A9
+SCG2	P13521	Secretogranin II
+SDC1	P18827	Syndecan 1
+SELE	P16581	E-selectin
+SELP	P16109	P-selectin
+SIRPA	P78324	Tyrosine-protein phosphatase non-receptor type substrate 1
+SLAMF1	Q13291	Signaling lymphocytic activation molecule
+SPP1	P10451	Osteopontin
+TAFA5	Q7Z5A7	Chemokine-like protein TAFA-5
+TEK	Q02763	Angiopoietin-1 receptor
+TGFB1	P01137	Transforming growth factor beta-1 proprotein
+THBS2	P35442	Thrombospondin-2
+THPO	P40225	Thrombopoietin
+TIMP1	P01033	Metalloproteinase inhibitor 1
+TIMP2	P16035	Metalloproteinase inhibitor 2
+TLR3	O15455	Toll-like receptor 3
+TNF	P01375	Tumor necrosis factor
+TNFRSF11A	Q9Y6Q6	TNF receptor superfamily member 11a
+TNFRSF11B	O00300	Tumor necrosis factor receptor superfamily member 11B
+TNFRSF13B	O14836	Tumor necrosis factor receptor superfamily member 13B
+TNFRSF13C	Q96RJ3	Tumor necrosis factor receptor superfamily member 13C
+TNFRSF14	Q92956	Tumor necrosis factor receptor superfamily member 14
+TNFRSF17	Q02223	Tumor necrosis factor receptor superfamily member 17
+TNFRSF18	Q9Y5U5	Tumor necrosis factor receptor superfamily member 18
+TNFRSF1A	P19438	Tumor necrosis factor receptor superfamily member 1A
+TNFRSF1B	P20333	Tumor necrosis factor receptor superfamily member 1B
+TNFRSF21	O75509	Tumor necrosis factor receptor superfamily member 21
+TNFRSF4	P43489	Tumor necrosis factor receptor superfamily member 4
+TNFRSF8	P28908	Tumor necrosis factor receptor superfamily member 8
+TNFRSF9	Q07011	Tumor necrosis factor receptor superfamily member 9
+TNFSF10	P50591	Tumor necrosis factor ligand superfamily member 10
+TNFSF11	O14788	Tumor necrosis factor ligand superfamily member 11
+TNFSF12	O43508	Tumor necrosis factor ligand superfamily member 12
+TNFSF13	O75888	TNF superfamily member 13
+TNFSF14	O43557	Tumor necrosis factor ligand superfamily member 14
+TNFSF15	O95150	Tumor necrosis factor ligand superfamily member 15
+TNFSF18	Q9UNG2	Tumor necrosis factor ligand superfamily member 18
+TNFSF4	P23510	Tumor necrosis factor ligand superfamily member 4
+TNFSF8	P32971	Tumor necrosis factor ligand superfamily member 8
+TNFSF9	P41273	Tumor necrosis factor ligand superfamily member 9
+TREM1	Q9NP99	Triggering receptor expressed on myeloid cells 1
+TREM2	Q9NZC2	Triggering receptor expressed on myeloid cells 2
+VCAM1	P19320	Vascular cell adhesion protein 1
+VEGFA	P15692	Vascular endothelial growth factor A
+VEGFC	P49767	Vascular endothelial growth factor C
+VEGFD	O43915	Vascular endothelial growth factor D
+VSNL1	P62760	Visinin-like protein 1
+VSTM1	Q6UX27	V-set and transmembrane domain containing 1
+WNT16	Q9UBV4	Wnt family member 16
+WNT7A	O00755	Protein Wnt-7a
+PGF	P49763	Placenta growth factor
+TGFB3	P10600	Transforming growth factor beta-3 proprotein
+TSLP	Q969D9	Thymic stromal lymphopoietin

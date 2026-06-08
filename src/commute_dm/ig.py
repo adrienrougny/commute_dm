@@ -1,4 +1,5 @@
 import copy
+import math
 
 import pydot
 import momapy.geometry
@@ -427,6 +428,10 @@ def make_map_layout_from_ig(
         _translate_layout_element(layout_element_builder, tx, ty)
         layout_builder.layout_elements.append(layout_element_builder)
         node_id_to_layout_element_moved[node["id_"]] = layout_element_builder
+    directed_pairs = {
+        (r.start_node["id_"], r.end_node["id_"]) for r in ig.get_relationships()
+    }
+    bezier_offset = 30.0
     for relationship in ig.get_relationships():
         start_node = relationship.start_node
         end_node = relationship.end_node
@@ -437,16 +442,84 @@ def make_map_layout_from_ig(
             continue
         start_layout_element = node_id_to_layout_element_moved[start_node["id_"]]
         end_layout_element = node_id_to_layout_element_moved[end_node["id_"]]
-        start_point = start_layout_element.own_border(end_layout_element.center())
-        end_point = end_layout_element.own_border(start_layout_element.center())
-        if start_point is None:
-            start_point = start_layout_element.north_west()
-        if end_point is None:
-            end_point = end_layout_element.north_east()
         arc = momapy.builder.new_builder_object(
             relationship_type_to_cd_class[relationship.type]
         )
-        arc.segments = [momapy.geometry.Segment(start_point, end_point)]
+        start_id = start_node["id_"]
+        end_id = end_node["id_"]
+        is_self_loop = start_id == end_id
+        is_bidirectional = (
+            not is_self_loop and (end_id, start_id) in directed_pairs
+        )
+        if is_self_loop:
+            start_point = start_layout_element.own_angle(120)
+            end_point = start_layout_element.own_angle(60)
+            if start_point is None:
+                start_point = start_layout_element.north_west()
+            if end_point is None:
+                end_point = start_layout_element.north_east()
+            center = start_layout_element.center()
+            start_dx, start_dy = start_point.x - center.x, start_point.y - center.y
+            end_dx, end_dy = end_point.x - center.x, end_point.y - center.y
+            start_length = math.hypot(start_dx, start_dy) or 1.0
+            end_length = math.hypot(end_dx, end_dy) or 1.0
+            start_control_point = momapy.geometry.Point(
+                start_point.x + start_dx / start_length * bezier_offset,
+                start_point.y + start_dy / start_length * bezier_offset,
+            )
+            end_control_point = momapy.geometry.Point(
+                end_point.x + end_dx / end_length * bezier_offset,
+                end_point.y + end_dy / end_length * bezier_offset,
+            )
+            arc.segments = [
+                momapy.geometry.CubicBezierCurve(
+                    start_point, end_point, start_control_point, end_control_point
+                )
+            ]
+            layout_builder.layout_elements.append(arc)
+            continue
+        if is_bidirectional:
+            start_center = start_layout_element.center()
+            end_center = end_layout_element.center()
+            delta_x = end_center.x - start_center.x
+            delta_y = end_center.y - start_center.y
+            length = math.hypot(delta_x, delta_y)
+            if length == 0:
+                start_point = start_layout_element.own_border(end_center)
+                end_point = end_layout_element.own_border(start_center)
+                if start_point is None:
+                    start_point = start_layout_element.north_west()
+                if end_point is None:
+                    end_point = end_layout_element.north_east()
+                arc.segments = [momapy.geometry.Segment(start_point, end_point)]
+            else:
+                normal_x = -delta_y / length
+                normal_y = delta_x / length
+                middle_x = (start_center.x + end_center.x) / 2
+                middle_y = (start_center.y + end_center.y) / 2
+                control_point = momapy.geometry.Point(
+                    middle_x + bezier_offset * normal_x,
+                    middle_y + bezier_offset * normal_y,
+                )
+                start_point = start_layout_element.own_border(control_point)
+                end_point = end_layout_element.own_border(control_point)
+                if start_point is None:
+                    start_point = start_layout_element.north_west()
+                if end_point is None:
+                    end_point = end_layout_element.north_east()
+                arc.segments = [
+                    momapy.geometry.QuadraticBezierCurve(
+                        start_point, end_point, control_point
+                    )
+                ]
+        else:
+            start_point = start_layout_element.own_border(end_layout_element.center())
+            end_point = end_layout_element.own_border(start_layout_element.center())
+            if start_point is None:
+                start_point = start_layout_element.north_west()
+            if end_point is None:
+                end_point = end_layout_element.north_east()
+            arc.segments = [momapy.geometry.Segment(start_point, end_point)]
         layout_builder.layout_elements.append(arc)
     for node_ids, color_name in color_node_ids:
         color = getattr(momapy.coloring, color_name)
@@ -454,15 +527,14 @@ def make_map_layout_from_ig(
             layout_element_builder = node_id_to_layout_element_moved.get(node_id)
             if layout_element_builder is not None:
                 layout_element_builder.fill = color
-    bbox = momapy.positioning.fit(layout_builder.layout_elements)
     if label is not None:
+        bbox = momapy.positioning.fit(layout_builder.layout_elements)
         text_layout = momapy.core.TextLayout(
             text=label, position=momapy.positioning.below_of(bbox.south(), 50)
         )
         layout_builder.layout_elements.append(text_layout)
-        bbox = momapy.positioning.fit(layout_builder.layout_elements, xsep=50, ysep=50)
-    layout_builder.position = bbox.position
-    layout_builder.width = bbox.width
-    layout_builder.height = bbox.height
+    momapy.positioning.set_fit(
+        layout_builder, layout_builder.layout_elements, xsep=15.0, ysep=15.0
+    )
     layout = momapy.builder.object_from_builder(layout_builder)
     return layout
