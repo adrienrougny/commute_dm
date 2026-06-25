@@ -1,9 +1,11 @@
 import copy
+import dataclasses
 import math
 
 import pydot
 import momapy.geometry
 import momapy.core
+import momapy.core.mapping
 import momapy.coloring
 import momapy.positioning
 import momapy.celldesigner
@@ -354,24 +356,152 @@ def _translate_layout_element(layout_element, tx, ty):
         _translate_layout_element(sub_layout_element, tx, ty)
 
 
-def make_map_layout_from_ig(
+RELATIONSHIP_TYPE_TO_CD_LAYOUT_CLASS = {
+    POSITIVE_INFLUENCE: momapy.celldesigner.PositiveInfluenceLayout,
+    NECESSARY_POSITIVE_INFLUENCE: momapy.celldesigner.TriggeringLayout,
+    REACTANT_TO_PRODUCT: momapy.celldesigner.TriggeringLayout,
+    NEGATIVE_INFLUENCE: momapy.celldesigner.InhibitionLayout,
+}
+
+RELATIONSHIP_TYPE_TO_CD_MODEL_CLASS = {
+    POSITIVE_INFLUENCE: momapy.celldesigner.PositiveInfluence,
+    NECESSARY_POSITIVE_INFLUENCE: momapy.celldesigner.Triggering,
+    REACTANT_TO_PRODUCT: momapy.celldesigner.Triggering,
+    NEGATIVE_INFLUENCE: momapy.celldesigner.NegativeInfluence,
+}
+
+# Single shared compartment for every species. We do not model compartments in
+# the influence-graph view; collapsing everything into one `default`
+# compartment (no `outside` parent) sidesteps the CellDesigner reader's
+# compartment-ordering, which crashes on dangling `outside` references.
+DEFAULT_COMPARTMENT = momapy.celldesigner.Compartment(id_="default", name="default")
+
+
+def _walk_subunits(species):
+    """Yield every species transitively contained in ``species.subunits``."""
+    for subunit in getattr(species, "subunits", None) or ():
+        yield subunit
+        yield from _walk_subunits(subunit)
+
+
+def _iter_templates(species):
+    """Yield the template of ``species`` and of every (transitive) subunit.
+
+    Subunit (included-species) protein templates must also be declared in the
+    model's ``species_templates`` for the writer to emit them.
+    """
+    template = getattr(species, "template", None)
+    if template is not None:
+        yield template
+    for subunit in getattr(species, "subunits", None) or ():
+        yield from _iter_templates(subunit)
+
+
+def _canon_template(template, template_canon):
+    """Return a content-canonical copy of ``template`` with a globally unique
+    ``id_``.
+
+    Species reconstructed from different source maps reuse the same template
+    ids (e.g. ``p_4`` names a different protein in each map). The CellDesigner
+    writer keys xml ids by ``id_``, so two content-distinct templates sharing an
+    ``id_`` would be emitted as one ``<protein>`` and the reader would then find
+    several model elements under that id (``get_one`` raises). Interning by
+    content — ``id_`` is excluded from template equality/hashing — collapses
+    content-equal templates to one instance and gives content-distinct
+    templates distinct ids.
+    """
+    existing = template_canon.get(template)
+    if existing is not None:
+        return existing
+    rebuilt = dataclasses.replace(
+        template, id_=f"species_template_{len(template_canon)}"
+    )
+    template_canon[template] = rebuilt
+    return rebuilt
+
+
+def _register_or_reuse(element, cache):
+    """Intern ``element`` by content in ``cache`` (pd2af's ``register_or_reuse``).
+
+    Frozen momapy dataclasses exclude ``id_`` from equality/hashing, so two
+    content-equal elements collapse to a single Python identity end to end.
+    This is what keeps ``model.species`` / ``model.modulations`` and the
+    layout-to-model mapping in agreement: every modulation endpoint and every
+    mapped glyph references the same canonical instance that lives in the model,
+    so nothing is silently dropped by the model's ``frozenset`` fields.
+    """
+    existing = cache.get(element)
+    if existing is not None:
+        return existing
+    cache[element] = element
+    return element
+
+
+def _normalize_species(species, top_level, species_canon, template_canon):
+    """Return the content-canonical, compartment-normalized form of ``species``.
+
+    Top-level species get the shared ``DEFAULT_COMPARTMENT``; species reached as
+    a complex's subunit get ``compartment=None``. This single difference keeps a
+    free-floating entity distinct from its complexed twin (so the writer emits
+    the free one top-level and the complexed one only as an included species)
+    without the fragile id-based "promotion" — content interning then does the
+    rest. Templates are content-canonicalized too, and the result is interned in
+    ``species_canon`` so content-equal species share one instance.
+    """
+    replacements = {
+        "compartment": DEFAULT_COMPARTMENT if top_level else None
+    }
+    template = getattr(species, "template", None)
+    if template is not None:
+        replacements["template"] = _canon_template(template, template_canon)
+    subunits = getattr(species, "subunits", None)
+    if subunits:
+        replacements["subunits"] = frozenset(
+            _normalize_species(subunit, False, species_canon, template_canon)
+            for subunit in subunits
+        )
+    normalized = dataclasses.replace(species, **replacements)
+    existing = species_canon.get(normalized)
+    if existing is not None:
+        return existing
+    # Give the canonical a globally unique ``id_``. Species ids from different
+    # source maps are namespaced and so usually distinct, but interning by
+    # content (``id_`` excluded) plus a fresh unique id guarantees the writer
+    # never emits two content-distinct species under one id (the reader indexes
+    # model elements by id and ``get_one`` raises on a collision).
+    canonical = dataclasses.replace(normalized, id_=f"species_{len(species_canon)}")
+    species_canon[canonical] = canonical
+    return canonical
+
+
+def _populate_ig_layout(
     session,
     ig,
-    color_node_ids: list[tuple[list[str], str]] | None = None,
-    label=None,
-    extra_node_layout_elements=None,
+    layout_builder,
+    color_node_ids,
+    label,
+    extra_node_layout_elements,
+    node_id_to_species=None,
+    obj_cache=None,
+    species_canon=None,
+    template_canon=None,
 ):
-    if color_node_ids is None:
-        color_node_ids = []
-    if extra_node_layout_elements is None:
-        extra_node_layout_elements = {}
+    """Fill ``layout_builder`` with the glyphs and arcs of ``ig``.
 
-    relationship_type_to_cd_class = {
-        POSITIVE_INFLUENCE: momapy.celldesigner.PositiveInfluenceLayout,
-        NECESSARY_POSITIVE_INFLUENCE: momapy.celldesigner.TriggeringLayout,
-        REACTANT_TO_PRODUCT: momapy.celldesigner.TriggeringLayout,
-        NEGATIVE_INFLUENCE: momapy.celldesigner.InhibitionLayout,
-    }
+    Glyphs are fetched from the DB (or taken from
+    ``extra_node_layout_elements``), positioned with graphviz, and arcs are
+    created for every influence relationship. Returns:
+      - ``node_id_to_layout_element``: {node["id_"]: glyph builder} (moved
+        to their final position),
+      - ``arc_pairs``: list of ``(arc_builder, relationship)`` for every arc
+        created, so callers can build a layout-to-model mapping, and
+      - ``subunit_mappings``: list of ``(child_layout_builder,
+        subunit_model_element)`` for the subunit glyphs of complex nodes, so a
+        complex is drawn with its subunits. Empty unless ``node_id_to_species``
+        / ``obj_cache`` / ``species_canon`` are supplied (the model-building path).
+    """
+    relationship_type_to_cd_class = RELATIONSHIP_TYPE_TO_CD_LAYOUT_CLASS
+    arc_pairs = []
     ig_nodes = list(ig.get_nodes())
     db_nodes = [n for n in ig_nodes if n not in extra_node_layout_elements]
     element_ids = [n.element_id for n in db_nodes]
@@ -389,9 +519,6 @@ def make_map_layout_from_ig(
         node_to_layout_element[ig_node] = layout_elements[0]
     for ig_node, layout_element in extra_node_layout_elements.items():
         node_to_layout_element[ig_node] = layout_element
-    layout_builder = momapy.builder.new_builder_object(
-        momapy.celldesigner.CellDesignerLayout
-    )
     dot_graph = pydot.Dot(graph_type="digraph")
     id_to_dot_node = {}
     for node in ig_nodes:
@@ -445,6 +572,16 @@ def make_map_layout_from_ig(
         arc = momapy.builder.new_builder_object(
             relationship_type_to_cd_class[relationship.type]
         )
+        # Record the specific endpoint glyphs on the arc (as pd2af does). The
+        # writer reads `arc.source`/`arc.target` to pick the baseReactant /
+        # baseProduct aliases; without them it falls back to the modulation's
+        # source/target species and picks that species' *first* glyph for both
+        # ends. With content interning a single species can have several glyphs,
+        # so that fallback would emit the wrong alias — and for an edge between
+        # two glyphs of the same species it would emit the *same* alias for both
+        # ends, a fake self-loop the reader cannot lay out.
+        arc.source = start_layout_element
+        arc.target = end_layout_element
         start_id = start_node["id_"]
         end_id = end_node["id_"]
         is_self_loop = start_id == end_id
@@ -452,31 +589,17 @@ def make_map_layout_from_ig(
             not is_self_loop and (end_id, start_id) in directed_pairs
         )
         if is_self_loop:
-            start_point = start_layout_element.own_angle(120)
-            end_point = start_layout_element.own_angle(60)
-            if start_point is None:
-                start_point = start_layout_element.north_west()
-            if end_point is None:
-                end_point = start_layout_element.north_east()
-            center = start_layout_element.center()
-            start_dx, start_dy = start_point.x - center.x, start_point.y - center.y
-            end_dx, end_dy = end_point.x - center.x, end_point.y - center.y
-            start_length = math.hypot(start_dx, start_dy) or 1.0
-            end_length = math.hypot(end_dx, end_dy) or 1.0
-            start_control_point = momapy.geometry.Point(
-                start_point.x + start_dx / start_length * bezier_offset,
-                start_point.y + start_dy / start_length * bezier_offset,
-            )
-            end_control_point = momapy.geometry.Point(
-                end_point.x + end_dx / end_length * bezier_offset,
-                end_point.y + end_dy / end_length * bezier_offset,
-            )
-            arc.segments = [
-                momapy.geometry.CubicBezierCurve(
-                    start_point, end_point, start_control_point, end_control_point
-                )
-            ]
+            # Build the self-loop between two NAMED anchors (as pd2af does) so
+            # the writer can match the segment endpoints to anchor names and
+            # emit `<linkAnchor position="NNW/NNE">`. Border/own_angle points
+            # do not match a named anchor, so the writer would fall back to the
+            # "center" anchor and the reader's own_border(center) would return
+            # None (zero-length line) and crash.
+            start_point = start_layout_element.anchor_point("north_north_west")
+            end_point = start_layout_element.anchor_point("north_north_east")
+            arc.segments = [momapy.geometry.Segment(start_point, end_point)]
             layout_builder.layout_elements.append(arc)
+            arc_pairs.append((arc, relationship))
             continue
         if is_bidirectional:
             start_center = start_layout_element.center()
@@ -521,6 +644,7 @@ def make_map_layout_from_ig(
                 end_point = end_layout_element.north_east()
             arc.segments = [momapy.geometry.Segment(start_point, end_point)]
         layout_builder.layout_elements.append(arc)
+        arc_pairs.append((arc, relationship))
     for node_ids, color_name in color_node_ids:
         color = getattr(momapy.coloring, color_name)
         for node_id in node_ids:
@@ -536,5 +660,353 @@ def make_map_layout_from_ig(
     momapy.positioning.set_fit(
         layout_builder, layout_builder.layout_elements, xsep=15.0, ysep=15.0
     )
-    layout = momapy.builder.object_from_builder(layout_builder)
-    return layout
+    subunit_mappings = _collect_complex_subunit_mappings(
+        session,
+        ig_nodes,
+        extra_node_layout_elements,
+        node_id_to_layout_element_moved,
+        node_id_to_species,
+        obj_cache,
+        species_canon,
+        template_canon,
+    )
+    return node_id_to_layout_element_moved, arc_pairs, subunit_mappings
+
+
+def _collect_complex_subunit_mappings(
+    session,
+    ig_nodes,
+    extra_node_layout_elements,
+    node_id_to_layout_element,
+    node_id_to_species,
+    obj_cache,
+    species_canon,
+    template_canon,
+):
+    """For every complex node, pair each subunit glyph (a child of the complex's
+    ``ComplexLayout``) with its subunit model element.
+
+    The CellDesigner writer only draws a subunit when ``mapping.get_mapping``
+    yields a layout that is an actual child of the complex layout (writer.py
+    ``_collect_complex_aliases``). We get those pairs from the **input maps'
+    own** ``LayoutModelMapping`` stored in the DB, read in the *forward*
+    (alias -> model element) direction: each child alias of the complex's
+    ``ComplexLayout`` has exactly one subunit species as its ``HAS_VALUE``.
+
+    Reading forward avoids the species -> aliases ambiguity that a reverse
+    lookup suffers from. A subunit species is shared across every complex and
+    map it appears in (content interning), so it resolves to *many* aliases and
+    there is no way to tell which one belongs to *this* complex; the child
+    alias, by contrast, names its subunit unambiguously.
+
+    The reconstructed ``complex_glyph`` lost its source-node identity, so we
+    join the stored child rows to its child builders by ``id_`` (unique within
+    a single source map) and, for a complex drawn in several maps, select the
+    source ``ComplexLayout`` whose child set overlaps the reconstructed glyph's
+    children the most. Each subunit model element is normalized as a subunit
+    (``top_level=False``) and interned in the shared ``species_canon``, so it is
+    the very canonical instance held in the complex's ``subunits``.
+
+    Returns a list of ``(child_layout_builder, normalized_subunit_model)``.
+    """
+    subunit_mappings = []
+    if (
+        node_id_to_species is None
+        or obj_cache is None
+        or species_canon is None
+        or template_canon is None
+    ):
+        return subunit_mappings
+    for node in ig_nodes:
+        if node in extra_node_layout_elements:
+            continue
+        species = node_id_to_species.get(node["id_"])
+        if not isinstance(species, momapy.celldesigner.Complex):
+            continue
+        complex_glyph = node_id_to_layout_element.get(node["id_"])
+        if complex_glyph is None:
+            continue
+        id_to_child = {}
+        stack = list(getattr(complex_glyph, "layout_elements", []) or [])
+        while stack:
+            child = stack.pop()
+            child_id = getattr(child, "id_", None)
+            if child_id is not None:
+                id_to_child[child_id] = child
+            stack.extend(getattr(child, "layout_elements", []) or [])
+        if not id_to_child:
+            continue
+        # Read the input maps' stored LayoutModelMapping in the forward
+        # direction: for every child alias of every ComplexLayout of this
+        # complex species, the subunit species it was mapped to in its source
+        # map. One alias maps to exactly one subunit, so this sidesteps the
+        # shared-subunit -> many-aliases ambiguity of the reverse lookup.
+        # ``subunit:Species`` also matches nested complexes (CellDesigner
+        # Complex is a Species subclass), so HAS_LAYOUT_ELEMENT* recursion pairs
+        # subunits at every nesting level.
+        mapping_rows = session.execute_query(
+            "MATCH (c) WHERE elementId(c) = $eid "
+            "MATCH (c)<-[:HAS_VALUE]-(:Item)-[:HAS_KEY]->(cl:ComplexLayout) "
+            "MATCH (cl)-[:HAS_LAYOUT_ELEMENT*]->(child)"
+            "<-[:HAS_KEY]-(:Item)-[:HAS_VALUE]->(subunit:Species) "
+            "RETURN elementId(cl) AS alias_id, child.id_ AS child_id, "
+            "subunit AS subunit",
+            params={"eid": node.element_id},
+        )
+        alias_to_children = {}
+        for mapping_row in mapping_rows:
+            child_id = mapping_row["child_id"]
+            if child_id is None:
+                continue
+            alias_to_children.setdefault(mapping_row["alias_id"], {})[
+                child_id
+            ] = mapping_row["subunit"]
+        if not alias_to_children:
+            continue
+        # The reconstructed complex_glyph came from one source map's alias; pick
+        # the alias whose child ids overlap the glyph's children the most (id_
+        # is unique within a map but collides across maps, so the whole set, not
+        # a single id, identifies the source alias).
+        source_alias = max(
+            alias_to_children,
+            key=lambda alias: len(
+                alias_to_children[alias].keys() & id_to_child.keys()
+            ),
+        )
+        child_id_to_subunit_node = {
+            child_id: subunit_node
+            for child_id, subunit_node in alias_to_children[source_alias].items()
+            if child_id in id_to_child
+        }
+        if not child_id_to_subunit_node:
+            continue
+        # Reconstruct each mapped subunit species once; normalizing as a subunit
+        # interns it (via species_canon) to the same canonical instance held in
+        # the complex's ``subunits``, so the writer pairs glyph and model by
+        # identity.
+        subunit_eids = list(
+            {node_.element_id for node_ in child_id_to_subunit_node.values()}
+        )
+        model_rows = session.execute_query_as_objects(
+            "UNWIND $eids AS eid MATCH (n) WHERE elementId(n) = eid "
+            "RETURN n AS node",
+            params={"eids": subunit_eids},
+            node_id_to_object=obj_cache,
+        )
+        eid_to_subunit_model = {}
+        for subunit_eid, objects in zip(subunit_eids, model_rows):
+            if not objects:
+                continue
+            eid_to_subunit_model[subunit_eid] = _normalize_species(
+                objects[0], False, species_canon, template_canon
+            )
+        for child_id, subunit_node in child_id_to_subunit_node.items():
+            child_builder = id_to_child.get(child_id)
+            subunit_model = eid_to_subunit_model.get(subunit_node.element_id)
+            if child_builder is None or subunit_model is None:
+                continue
+            subunit_mappings.append((child_builder, subunit_model))
+    return subunit_mappings
+
+
+def make_map_layout_from_ig(
+    session,
+    ig,
+    color_node_ids: list[tuple[list[str], str]] | None = None,
+    label=None,
+    extra_node_layout_elements=None,
+):
+    if color_node_ids is None:
+        color_node_ids = []
+    if extra_node_layout_elements is None:
+        extra_node_layout_elements = {}
+    layout_builder = momapy.builder.new_builder_object(
+        momapy.celldesigner.CellDesignerLayout
+    )
+    _populate_ig_layout(
+        session,
+        ig,
+        layout_builder,
+        color_node_ids,
+        label,
+        extra_node_layout_elements,
+    )
+    return momapy.builder.object_from_builder(layout_builder)
+
+
+def _make_ig_model(
+    session, ig, extra_node_model_elements, obj_cache, species_canon, template_canon
+):
+    """Build the CellDesigner model (species + templates + modulations) of an IG.
+
+    Mirrors pd2af's model pass: each IG node's species is reconstructed, its
+    compartment normalized and its template canonicalized, then **interned by
+    content** (``_register_or_reuse``). Because momapy excludes ``id_`` from
+    equality, content-equal species from different source maps collapse to a
+    single canonical instance — several IG nodes can therefore share one model
+    species (drawn later as several aliases), and crucially every modulation
+    endpoint and every mapped glyph then references the exact instance that
+    lives in ``model.species`` (nothing is dropped by the model's frozenset).
+    Modulations are interned the same way. Returns
+    ``(node_id_to_species, model, relationship_to_modulation)``.
+    """
+    node_id_to_species = {}
+    ig_nodes = list(ig.get_nodes())
+    db_nodes = [n for n in ig_nodes if n not in extra_node_model_elements]
+    element_ids = [n.element_id for n in db_nodes]
+    rows = session.execute_query_as_objects(
+        "UNWIND $eids AS eid MATCH (n) WHERE elementId(n) = eid RETURN n AS node",
+        params={"eids": element_ids},
+        node_id_to_object=obj_cache,
+    )
+    for ig_node, objects in zip(db_nodes, rows):
+        if not objects:
+            raise RuntimeError(
+                f"no model element for IG node id_={ig_node.get('id_')} "
+                f"labels={set(ig_node.labels)}"
+            )
+        node_id_to_species[ig_node["id_"]] = _normalize_species(
+            objects[0], True, species_canon, template_canon
+        )
+    for ig_node, species in extra_node_model_elements.items():
+        node_id_to_species[ig_node["id_"]] = _normalize_species(
+            species, True, species_canon, template_canon
+        )
+
+    species = list(node_id_to_species.values())
+    species_templates = frozenset(
+        template for s in species for template in _iter_templates(s)
+    )
+    relationship_to_modulation = {}
+    modulation_canon = {}
+    for relationship in ig.get_relationships():
+        modulation_class = RELATIONSHIP_TYPE_TO_CD_MODEL_CLASS.get(relationship.type)
+        if modulation_class is None:
+            continue
+        source = node_id_to_species.get(relationship.start_node["id_"])
+        target = node_id_to_species.get(relationship.end_node["id_"])
+        if source is None or target is None:
+            continue
+        relationship_to_modulation[relationship] = _register_or_reuse(
+            modulation_class(source=source, target=target), modulation_canon
+        )
+
+    model = momapy.celldesigner.CellDesignerModel(
+        species=frozenset(species),
+        species_templates=species_templates,
+        compartments=frozenset([DEFAULT_COMPARTMENT]),
+        modulations=frozenset(relationship_to_modulation.values()),
+    )
+    return node_id_to_species, model, relationship_to_modulation
+
+
+def _assign_unique_layout_ids(layout_builder):
+    """Give every layout element (and descendant) a globally unique ``id_``.
+
+    Layout-element (alias) ids are not namespaced across the source maps, so
+    glyphs from different maps collide on ``id_`` (e.g. ``pdme90`` is a
+    free-standing CASP1 alias in one map and a complex-subunit CASP1 alias in
+    another). The writer emits ``<speciesAlias id=...>`` from the glyph ``id_``
+    and the reader indexes model elements by alias id, so a duplicate makes the
+    reader resolve one alias to two species. The layout-to-model mapping is keyed
+    by object identity, so renumbering ids here is safe.
+    """
+    counter = 0
+    stack = list(layout_builder.layout_elements)
+    while stack:
+        element = stack.pop()
+        if hasattr(element, "id_"):
+            # Glyphs and arcs are builders (mutable); the only frozen layout
+            # elements are extras created directly, e.g. the map-label
+            # TextLayout, whose uuid id never collides — skip those.
+            try:
+                element.id_ = f"le{counter}"
+                counter += 1
+            except dataclasses.FrozenInstanceError:
+                pass
+        children = getattr(element, "layout_elements", None)
+        if children:
+            stack.extend(children)
+
+
+def make_celldesigner_map_from_ig(
+    session,
+    ig,
+    color_node_ids: list[tuple[list[str], str]] | None = None,
+    label=None,
+    extra_node_layout_elements=None,
+    extra_node_model_elements=None,
+):
+    """Build a full ``CellDesignerMap`` (model + layout + mapping) from an IG.
+
+    Mirrors pd2af's ``build_map``: a model pass (``_make_ig_model``) reconstructs
+    the species and builds the ``CellDesignerModel`` and modulations; a layout
+    pass (``_populate_ig_layout``) builds the glyphs, the influence arcs and the
+    complex-subunit glyph pairs; then the ``LayoutModelMapping`` ties them
+    together and the whole map is finalized in a single ``object_from_builder``
+    pass so layout builders used as mapping keys resolve to the same frozen
+    objects as in the layout. ``obj_cache`` / ``species_canon`` are shared across
+    both passes so a complex's subunit and its mapped layout agree on identity.
+    """
+    if color_node_ids is None:
+        color_node_ids = []
+    if extra_node_layout_elements is None:
+        extra_node_layout_elements = {}
+    if extra_node_model_elements is None:
+        extra_node_model_elements = {}
+
+    obj_cache = {}
+    species_canon = {}
+    template_canon = {}
+
+    node_id_to_species, model, relationship_to_modulation = _make_ig_model(
+        session, ig, extra_node_model_elements, obj_cache, species_canon, template_canon
+    )
+
+    layout_builder = momapy.builder.new_builder_object(
+        momapy.celldesigner.CellDesignerLayout
+    )
+    node_id_to_layout_element, arc_pairs, subunit_mappings = _populate_ig_layout(
+        session,
+        ig,
+        layout_builder,
+        color_node_ids,
+        label,
+        extra_node_layout_elements,
+        node_id_to_species=node_id_to_species,
+        obj_cache=obj_cache,
+        species_canon=species_canon,
+        template_canon=template_canon,
+    )
+    # Renumber layout-element ids to be globally unique (the complex-subunit
+    # matching in _populate_ig_layout has already run on the original DB ids).
+    _assign_unique_layout_ids(layout_builder)
+
+    mapping_builder = momapy.core.mapping.LayoutModelMappingBuilder()
+    for node_id, layout_element in node_id_to_layout_element.items():
+        modeled_species = node_id_to_species.get(node_id)
+        if modeled_species is not None:
+            mapping_builder.add_mapping(layout_element, modeled_species)
+    for child_layout_element, subunit_model in subunit_mappings:
+        mapping_builder.add_mapping(child_layout_element, subunit_model)
+    for arc, relationship in arc_pairs:
+        modulation = relationship_to_modulation.get(relationship)
+        if modulation is None:
+            continue
+        source_le = node_id_to_layout_element.get(relationship.start_node["id_"])
+        target_le = node_id_to_layout_element.get(relationship.end_node["id_"])
+        if source_le is None or target_le is None:
+            continue
+        mapping_builder.add_mapping(
+            frozenset([arc, source_le, target_le]),
+            modulation,
+            anchor=arc,
+        )
+
+    map_builder = momapy.builder.new_builder_object(
+        momapy.celldesigner.CellDesignerMap
+    )
+    map_builder.model = model
+    map_builder.layout = layout_builder
+    map_builder.layout_model_mapping = mapping_builder
+    return momapy.builder.object_from_builder(map_builder)

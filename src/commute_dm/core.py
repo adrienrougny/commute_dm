@@ -9,11 +9,10 @@ import pybiomart
 import frozendict
 import momapy.celldesigner
 import momapy.io
+import momapy.io.core
 import momapy.core
 import momapy.geometry
 import momapy.builder
-import momapy.rendering.skia
-import momapy.rendering.core
 import momapy_kb.lpg.session  # noqa: F401
 import momapy_kb.lpg.backends.neo4j  # noqa: F401
 import commute_dm.ig
@@ -227,6 +226,11 @@ def _make_synthetic_central_layout_element(identifier):
     return momapy.builder.object_from_builder(layout)
 
 
+def _make_synthetic_central_model_element(identifier):
+    # Pairs with the UnknownLayout above; Unknown species needs no template.
+    return momapy.celldesigner.Unknown(id_=f"synthetic:{identifier}", name=identifier)
+
+
 def _adjust_max_level(max_level):
     # Old (dummy) scheme: dummy at level 0, real seeds at level 1.
     # New scheme: real seeds at level 0, so subtract 1 to keep node counts equal.
@@ -235,7 +239,7 @@ def _adjust_max_level(max_level):
     return max_level - 1
 
 
-def make_and_render_igs_from_interface(
+def make_and_write_cd_maps_from_interface(
     session,
     interface,
     output_dir_path,
@@ -251,7 +255,6 @@ def make_and_render_igs_from_interface(
     commute_dm.queries.prewarm_session(session)
     seeds_by_identifier = _split_interface_seeds(interface)
     for identifier in interface:
-        map_layouts = []
         seeds = seeds_by_identifier[identifier]
         for max_level in max_levels:
             pd_ids = []
@@ -310,7 +313,7 @@ def make_and_render_igs_from_interface(
             ig = commute_dm.ig.make_ig_from_nodes_and_relationships(
                 nodes + [central_node], relationships + synthetic_relationships
             )
-            map_layout = commute_dm.ig.make_map_layout_from_ig(
+            cd_map = commute_dm.ig.make_celldesigner_map_from_ig(
                 session=session,
                 ig=ig,
                 label=f"max_level = {max_level}",
@@ -335,17 +338,15 @@ def make_and_render_igs_from_interface(
                 extra_node_layout_elements={
                     central_node: _make_synthetic_central_layout_element(identifier)
                 },
+                extra_node_model_elements={
+                    central_node: _make_synthetic_central_model_element(identifier)
+                },
             )
-            map_layouts.append(map_layout)
-        output_file_path = os.path.join(output_dir_path, f"{identifier}.pdf")
-        if map_layouts:
-            momapy.rendering.core.render_layout_elements(
-                layout_elements=map_layouts,
-                file_path=output_file_path,
-                format_="pdf",
-                renderer="skia",
-                multi_pages=True,
-                to_top_left=False,
+            output_file_path = os.path.join(
+                output_dir_path, f"{identifier}_max_level_{max_level}.xml"
+            )
+            momapy.io.core.write(
+                cd_map, output_file_path, writer="celldesigner"
             )
 
 
