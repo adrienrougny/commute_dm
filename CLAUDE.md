@@ -46,11 +46,12 @@ is shared mutable state — `2_0` calls `session.delete_all()` and rebuilds it.
 Notebooks are numbered `<stage>_<step>`, with **`<step>` gapped by 10** (`_00`, `_10`, `_20`, …)
 so a new notebook can be inserted between two others (e.g. `4_05`) without renumbering the rest.
 
-Every notebook starts with `%run 0_10_load_paths.ipynb`, which restores path constants saved by
+Every notebook starts with `%store -r`, which restores path constants saved by
 `0_00` via IPython's `%store`. So **`0_00_make_paths` must be run once first** to populate the
 store; afterwards any notebook can be opened standalone.
 
-- `0_00` / `0_10` — define and load all `*_DATA_DIR` / `*_FILE` path constants (rooted at `data/`).
+- `0_00` — define and store all `*_DATA_DIR` / `*_FILE` path constants (rooted at `data/`); every
+  other notebook restores them with `%store -r`.
 - `1_00_make_bel_files` — prepare BEL KG inputs.
 - `2_00_save_collections` — wipe the DB, import BEL KG cypher dumps (`cypher-shell`), then load
   the CellDesigner XML maps into named **Collections** (`COVID_DM_CD`, `PD_DM_CD`, plus
