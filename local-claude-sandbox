@@ -1,2 +1,2 @@
 #!/bin/bash
-claude-sandbox -m ~/code/momapy -m ~/code/momapy_kb -m ~/code/fieldz_kb -m ~/code/pylpg "$@"
+claude-sandbox -m ~/code/momapy -m ~/code/momapy_kb -m ~/code/fieldz_kb -m ~/code/pylpg -m ~/code/pd2af "$@"

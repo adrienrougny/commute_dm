@@ -17,8 +17,9 @@ dependencies = [
   "matplotlib>=3.10.9",
   "powerlaw",
   "scipy",
+  "networkx>=3.4.2",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 readme = "README.md"
 license = { text = "MIT" }
 
@@ -31,6 +32,10 @@ momapy-kb = { path = "../../../code/momapy_kb", editable = true }
 momapy = { path = "../../../code/momapy", editable = true }
 fieldz-kb = { path = "../../../code/fieldz_kb", editable = true }
 pylpg = { path = "../../../code/pylpg", editable = true }
+pd2af = { path = "../../../code/pd2af", editable = true }
 
 [dependency-groups]
-dev = ["jupyter-ruff>=0.3.1"]
+dev = [
+    "jupyter-ruff>=0.3.1",
+    "pd2af",
+]
