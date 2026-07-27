@@ -25,31 +25,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s_id_sa1611">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa1611"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -212,31 +188,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s165">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s165"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1579,31 +1531,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s3908">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s3908"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -2192,31 +2120,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s_id_sa1611">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s4073"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -2227,7 +2131,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:speciesIdentity>
 </celldesigner:annotation>
 </celldesigner:species>
-<celldesigner:species id="s4084" name="ACE2">
+<celldesigner:species id="s4088" name="ACE2">
 <celldesigner:notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -2247,7 +2151,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
-<celldesigner:complexSpecies>s4083</celldesigner:complexSpecies>
+<celldesigner:complexSpecies>s4087</celldesigner:complexSpecies>
 <celldesigner:speciesIdentity>
 <celldesigner:class>PROTEIN</celldesigner:class>
 <celldesigner:proteinReference>p_s_id_sa1551</celldesigner:proteinReference>
@@ -2260,7 +2164,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:speciesIdentity>
 </celldesigner:annotation>
 </celldesigner:species>
-<celldesigner:species id="s4085" name="S">
+<celldesigner:species id="s4089" name="S">
 <celldesigner:notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -2295,7 +2199,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
-<celldesigner:complexSpecies>s4083</celldesigner:complexSpecies>
+<celldesigner:complexSpecies>s4087</celldesigner:complexSpecies>
 <celldesigner:speciesIdentity>
 <celldesigner:class>PROTEIN</celldesigner:class>
 <celldesigner:proteinReference>p_s_id_sa1550</celldesigner:proteinReference>
@@ -2308,7 +2212,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:speciesIdentity>
 </celldesigner:annotation>
 </celldesigner:species>
-<celldesigner:species id="s4086" name="SLC6A19">
+<celldesigner:species id="s4090" name="SLC6A19">
 <celldesigner:notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -2328,7 +2232,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
-<celldesigner:complexSpecies>s4083</celldesigner:complexSpecies>
+<celldesigner:complexSpecies>s4087</celldesigner:complexSpecies>
 <celldesigner:speciesIdentity>
 <celldesigner:class>PROTEIN</celldesigner:class>
 <celldesigner:proteinReference>pr107</celldesigner:proteinReference>
@@ -2525,7 +2429,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:complexSpeciesAlias>
-<celldesigner:complexSpeciesAlias id="csa368" species="s4083" compartmentAlias="ca283">
+<celldesigner:complexSpeciesAlias id="csa368" species="s4087" compartmentAlias="ca283">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="6405.0" y="815.0" w="200.0" h="150.0"/>
 <celldesigner:font size="12"/>
@@ -2693,7 +2597,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:complexSpeciesAlias>
-<celldesigner:complexSpeciesAlias id="csa430" species="s4083" compartmentAlias="ca292">
+<celldesigner:complexSpeciesAlias id="csa430" species="s4087" compartmentAlias="ca292">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="2847.5" y="802.5" w="205.0" h="155.0"/>
 <celldesigner:font size="12"/>
@@ -3558,7 +3462,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:complexSpeciesAlias>
 </celldesigner:listOfComplexSpeciesAliases>
 <celldesigner:listOfSpeciesAliases>
-<celldesigner:speciesAlias id="sa2175" species="s4084" complexSpeciesAlias="csa430">
+<celldesigner:speciesAlias id="sa2175" species="s4088" complexSpeciesAlias="csa430">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="2857.5" y="872.5" w="90.0" h="60.0"/>
 <celldesigner:font size="12"/>
@@ -3588,13 +3492,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3607,13 +3511,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-24.5" y="138.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3645,13 +3549,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="243.25" y="124.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3665,13 +3569,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="11.25" y="51.375"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3703,13 +3607,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="209.5" y="74.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3722,13 +3626,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-30.0" y="167.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3742,13 +3646,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="15.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3780,13 +3684,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="15.0" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3800,13 +3704,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="12.5" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3819,13 +3723,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="17.5" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3838,13 +3742,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="5052.1875" y="1530.625"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3858,13 +3762,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="12.5" y="52.5"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3877,13 +3781,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-47.0" y="178.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3896,13 +3800,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="12.5" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3916,13 +3820,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="23.25" y="220.25"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3935,13 +3839,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3955,13 +3859,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="700.0" y="73.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3974,13 +3878,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="198.25" y="9.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4004,7 +3908,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
-<celldesigner:speciesAlias id="sa2176" species="s4085" complexSpeciesAlias="csa430">
+<celldesigner:speciesAlias id="sa2176" species="s4089" complexSpeciesAlias="csa430">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="2857.5" y="817.5" w="90.0" h="50.0"/>
 <celldesigner:font size="12"/>
@@ -4014,13 +3918,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4033,13 +3937,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-9.5" y="19.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4052,13 +3956,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-25.6875" y="101.875"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4071,13 +3975,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="1605.0" y="132.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4091,13 +3995,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4130,13 +4034,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="31.5625" y="253.375"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4149,13 +4053,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="11.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4169,13 +4073,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="12.5" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4188,17 +4092,17 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
-<celldesigner:speciesAlias id="sa2177" species="s4085" complexSpeciesAlias="csa430">
+<celldesigner:speciesAlias id="sa2177" species="s4089" complexSpeciesAlias="csa430">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="2952.5" y="817.5" w="90.0" h="50.0"/>
 <celldesigner:font size="12"/>
@@ -4208,13 +4112,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="105.0" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4227,17 +4131,17 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="4927.1875" y="273.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
-<celldesigner:speciesAlias id="sa1551" species="s4084" complexSpeciesAlias="csa368">
+<celldesigner:speciesAlias id="sa1551" species="s4088" complexSpeciesAlias="csa368">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="6420.0" y="880.0" w="90.0" h="60.0"/>
 <celldesigner:font size="12"/>
@@ -4267,17 +4171,17 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="47.5"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
-<celldesigner:speciesAlias id="sa1550" species="s4085" complexSpeciesAlias="csa368">
+<celldesigner:speciesAlias id="sa1550" species="s4089" complexSpeciesAlias="csa368">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="6505.0" y="825.0" w="90.0" h="50.0"/>
 <celldesigner:font size="12"/>
@@ -4287,13 +4191,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="100.0" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4325,13 +4229,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-39.0" y="186.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4344,13 +4248,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-47.0" y="123.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4363,13 +4267,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="4947.1875" y="1518.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4382,13 +4286,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-9.5" y="23.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4422,13 +4326,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="15.0" y="55.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4441,13 +4345,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="1610.0" y="202.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4460,13 +4364,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="209.5" y="194.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4480,13 +4384,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="1120.0" y="492.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4499,13 +4403,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="1610.0" y="322.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4518,13 +4422,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-42.5" y="39.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4537,13 +4441,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-62.5" y="94.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4576,13 +4480,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4595,13 +4499,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-44.0" y="76.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4615,13 +4519,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="1240.0" y="492.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4635,13 +4539,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="5960.0" y="480.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4654,13 +4558,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-44.5" y="159.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4673,13 +4577,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-0.9375" y="40.875"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4692,13 +4596,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-44.0" y="131.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4711,13 +4615,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-49.5" y="94.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4730,17 +4634,17 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="4927.1875" y="323.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
-<celldesigner:speciesAlias id="sa2174" species="s4085" complexSpeciesAlias="csa368">
+<celldesigner:speciesAlias id="sa2174" species="s4089" complexSpeciesAlias="csa368">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="6415.0" y="825.0" w="90.0" h="50.0"/>
 <celldesigner:font size="12"/>
@@ -4750,13 +4654,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4769,13 +4673,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="4927.1875" y="373.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4807,13 +4711,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-32.0" y="63.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4826,13 +4730,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="1117.5" y="413.625"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4845,13 +4749,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="12.5" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4883,13 +4787,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4902,13 +4806,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-29.5" y="78.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4921,13 +4825,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-47.5" y="149.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4940,13 +4844,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="184.5" y="4.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4978,13 +4882,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-35.0" y="97.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4997,13 +4901,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-15.0" y="42.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5017,13 +4921,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="166.5625" y="263.375"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5056,13 +4960,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="8.75" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5075,13 +4979,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="12.5" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5095,13 +4999,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5114,13 +5018,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-30.6875" y="161.875"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5133,13 +5037,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="233.25" y="64.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5162,7 +5066,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
-<celldesigner:speciesAlias id="sa2699" species="s4086" complexSpeciesAlias="csa368">
+<celldesigner:speciesAlias id="sa2699" species="s4090" complexSpeciesAlias="csa368">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="6515.0" y="885.0" w="80.0" h="40.0"/>
 <celldesigner:font size="12"/>
@@ -5239,7 +5143,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
-<celldesigner:speciesAlias id="sa2704" species="s4086" complexSpeciesAlias="csa430">
+<celldesigner:speciesAlias id="sa2704" species="s4090" complexSpeciesAlias="csa430">
 <celldesigner:activity>inactive</celldesigner:activity>
 <celldesigner:bounds x="2957.5" y="882.5" w="80.0" h="40.0"/>
 <celldesigner:font size="12"/>
@@ -5288,13 +5192,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5308,13 +5212,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="110.0" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5346,13 +5250,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="5043.1875" y="1905.625"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5385,13 +5289,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="60.0" y="20.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5425,13 +5329,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5445,13 +5349,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="245.0" y="71.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5656,13 +5560,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="3520.0" y="130.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5694,13 +5598,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="3930.0" y="45.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5751,13 +5655,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="1670.0" y="145.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5770,13 +5674,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="15.0" y="7.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5808,13 +5712,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="7.5" y="62.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5903,13 +5807,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="53.75" y="45.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5941,13 +5845,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="45.0" y="1890.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6152,13 +6056,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="7.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6190,13 +6094,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="12.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7334,13 +7238,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-35.0" y="120.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7353,13 +7257,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="-5.0" y="75.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7372,13 +7276,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="50.0" y="30.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7392,13 +7296,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7411,13 +7315,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7430,13 +7334,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="2132.5" y="115.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7449,13 +7353,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="2132.5" y="160.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7468,13 +7372,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="2132.5" y="70.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7488,13 +7392,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="50.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7507,13 +7411,13 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:innerPosition x="10.0" y="12.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9999" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7583,7 +7487,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <celldesigner:gene id="gn2" name="TMPRSS2" type="GENE"/>
 </celldesigner:listOfGenes>
 <celldesigner:listOfRNAs>
-<celldesigner:RNA id="r_s_id_sa2314" name="(_minus_)ss_space_gRNA" type="RNA"/>
+<celldesigner:RNA id="r_s_id_sa2314" name="(-)ss gRNA" type="RNA"/>
 <celldesigner:RNA id="r_s_id_sa1611" name="(+)ss gRNA" type="RNA"/>
 <celldesigner:RNA id="r_s_id_sa1675" name="(+)ss gRNA" type="RNA"/>
 <celldesigner:RNA id="r_s_id_sa1553" name="(_plus_)ss_space_gRNA" type="RNA">
@@ -7988,31 +7892,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:rnaReference>r_s_id_sa1675</celldesigner:rnaReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa1675">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa1675"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_sa2001" id="s_id_sa2001" name="ORF7a" compartment="s_id_ca197" initialAmount="0" charge="0">
 <annotation>
@@ -8084,7 +7964,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_csa441" id="s_id_csa441" name="S1:NRP1_space_complex" compartment="s_id_ca189" initialAmount="0">
+<species metaid="s_id_csa441" id="s_id_csa441" name="S1:NRP1 complex" compartment="s_id_ca189" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -8339,7 +8219,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_sa1544" id="s_id_sa1544" name="Camostat_space_mesylate" compartment="c31" initialAmount="0" charge="0">
+<species metaid="s_id_sa1544" id="s_id_sa1544" name="Camostat mesylate" compartment="c31" initialAmount="0" charge="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -8655,7 +8535,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:extension>
 </annotation>
 </species>
-<species metaid="s646" id="s646" name="(_minus_)ss_space_gRNA" compartment="s_id_ca189" initialAmount="0">
+<species metaid="s646" id="s646" name="(-)ss gRNA" compartment="s_id_ca189" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -8664,33 +8544,9 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:rnaReference>r_s_id_sa2314</celldesigner:rnaReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s646">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001200"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s646"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001200"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></annotation>
 </species>
-<species metaid="s3716" id="s3716" name="Replication_space_transcription_space_complex" compartment="s_id_ca189" initialAmount="0">
+<species metaid="s3716" id="s3716" name="Replication transcription complex" compartment="s_id_ca189" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -8715,7 +8571,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:extension>
 </annotation>
 </species>
-<species metaid="s3733" id="s3733" name="Heparan_space_sulfate" compartment="s_id_ca189" initialAmount="0">
+<species metaid="s3733" id="s3733" name="Heparan sulfate" compartment="s_id_ca189" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>innerSurface</celldesigner:positionToCompartment>
@@ -9595,7 +9451,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s3854" id="s3854" name="AP_minus_2_space_adaptor_space_complex:SARS_minus_Cov_minus_2_space_protein" compartment="s_id_ca189" initialAmount="0">
+<species metaid="s3854" id="s3854" name="AP-2 adaptor complex:SARS-Cov-2 protein" compartment="s_id_ca189" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9615,7 +9471,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s3863" id="s3863" name="AP_minus_2_space_adaptor_space_complex:ACE2" compartment="s_id_ca189" initialAmount="0">
+<species metaid="s3863" id="s3863" name="AP-2 adaptor complex:ACE2" compartment="s_id_ca189" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9809,7 +9665,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_sa188" id="s_id_sa188" name="bafilomycin_space_A1" compartment="s_id_ca189" initialAmount="0" charge="0">
+<species metaid="s_id_sa188" id="s_id_sa188" name="bafilomycin A1" compartment="s_id_ca189" initialAmount="0" charge="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10340,7 +10196,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <rdf:Description rdf:about="#s4045">
 <bqbiol:is>
 <rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:11876"/>
+<rdf:li rdf:resource="urn:miriam:hgnc:11876"/>
 </rdf:Bag>
 </bqbiol:is>
 </rdf:Description>
@@ -10360,7 +10216,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <rdf:Description rdf:about="#s4046">
 <bqbiol:is>
 <rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:11876"/>
+<rdf:li rdf:resource="urn:miriam:hgnc:11876"/>
 </rdf:Bag>
 </bqbiol:is>
 </rdf:Description>
@@ -10678,7 +10534,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:extension>
 </annotation>
 </species>
-<species metaid="s4083" id="s4083" name="ACE2:SLC6A19:S" compartment="c41" initialAmount="0">
+<species metaid="s4087" id="s4087" name="ACE2:SLC6A19:S" compartment="c41" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10701,7 +10557,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:baseReactant>
 </celldesigner:baseReactants>
 <celldesigner:baseProducts>
-<celldesigner:baseProduct species="s4083" alias="csa430">
+<celldesigner:baseProduct species="s4087" alias="csa430">
 <celldesigner:linkAnchor position="W"/>
 </celldesigner:baseProduct>
 </celldesigner:baseProducts>
@@ -10727,7 +10583,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:lineDirection index="2" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.23504351242093335,0.34095566706467917 0.9129054918345396,-0.1263398671308389</celldesigner:editPoints>
+<celldesigner:editPoints>0.2350435124209369,0.34095566706468183 0.9129054918345396,-0.12633986713083623</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 <celldesigner:reactantLink reactant="s_id_csa374" alias="csa352" targetLineIndex="-1,0">
@@ -10764,7 +10620,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:editPoints>0.03600490859819061,-0.1863023219260187</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s3733" aliases="sa2369" targetLineIndex="0,3" editPoints="0.09847771638045091,-0.039436156445258774 0.23668091682811634,0.3056769783869093">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s3733" aliases="sa2369" targetLineIndex="0,3" editPoints="0.0984777163804518,-0.039436156445258774 0.23668091682811723,0.3056769783869093">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -10844,7 +10700,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </speciesReference>
 </listOfReactants>
 <listOfProducts>
-<speciesReference metaid="CDMT00016" species="s4083">
+<speciesReference metaid="CDMT00016" species="s4087">
 <annotation>
 <celldesigner:extension>
 <celldesigner:alias>csa430</celldesigner:alias>
@@ -10891,7 +10747,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:baseProduct>
 </celldesigner:baseProducts>
 <celldesigner:listOfReactantLinks>
-<celldesigner:reactantLink reactant="s4083" alias="csa430" targetLineIndex="-1,0">
+<celldesigner:reactantLink reactant="s4087" alias="csa430" targetLineIndex="-1,0">
 <celldesigner:linkAnchor position="E"/>
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
@@ -10900,7 +10756,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:lineDirection index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.2877841751602501,-0.4184381906830037 0.9666657582483555,0.048467987506890964</celldesigner:editPoints>
+<celldesigner:editPoints>0.28778417516024923,-0.4184381906830019 0.9666657582483555,0.04846798750689274</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -11015,7 +10871,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:extension>
 </annotation>
 </speciesReference>
-<speciesReference metaid="CDMT00123" species="s4083">
+<speciesReference metaid="CDMT00123" species="s4087">
 <annotation>
 <celldesigner:extension>
 <celldesigner:alias>csa430</celldesigner:alias>
@@ -11120,7 +10976,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s3831" aliases="sa1525" targetLineIndex="-1,3" editPoints="0.43006330399821735,0.31882246960221394 0.7847282809782712,-0.15958920571914703">
+<celldesigner:modification type="CATALYSIS" modifiers="s3831" aliases="sa1525" targetLineIndex="-1,3" editPoints="0.43006330399823156,0.31882246960222105 0.7847282809782783,-0.15958920571913993">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -11202,7 +11058,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:baseReactant>
 </celldesigner:baseReactants>
 <celldesigner:baseProducts>
-<celldesigner:baseProduct species="s4083" alias="csa368">
+<celldesigner:baseProduct species="s4087" alias="csa368">
 <celldesigner:linkAnchor position="ESE"/>
 </celldesigner:baseProduct>
 </celldesigner:baseProducts>
@@ -11216,7 +11072,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:lineDirection index="2" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.12180650497867873,0.21394968084461752 0.8770200219483613,-0.21601085310700796</celldesigner:editPoints>
+<celldesigner:editPoints>0.12180650497867873,0.21394968084462107 0.8770200219483613,-0.2160108531070044</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 <celldesigner:reactantLink reactant="s_id_csa374" alias="csa366" targetLineIndex="-1,0">
@@ -11242,7 +11098,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:lineDirection index="3" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.011789485433240543,0.015349782119319144 0.4410842048903536,-0.31437241212926104 0.8014782311628146,0.15485669983488215</celldesigner:editPoints>
+<celldesigner:editPoints>0.011789485433240543,0.015349782119319144 0.4410842048903483,-0.31437241212926814 0.8014782311628075,0.15485669983487504</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -11366,7 +11222,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </speciesReference>
 </listOfReactants>
 <listOfProducts>
-<speciesReference metaid="CDMT00210" species="s4083">
+<speciesReference metaid="CDMT00210" species="s4087">
 <annotation>
 <celldesigner:extension>
 <celldesigner:alias>csa368</celldesigner:alias>
@@ -11448,7 +11304,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:lineDirection index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.06648656103368022,-0.2491306849777679 0.999999999961898,1.4277645732363453E-10</celldesigner:editPoints>
+<celldesigner:editPoints>0.06648656103367845,-0.2491306849777608 0.9999999999618963,1.4278356275099213E-10</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 <celldesigner:reactantLink reactant="s339" alias="sa2025" targetLineIndex="-1,0">
@@ -11486,7 +11342,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:lineDirection index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.09312158888564515,0.19505367076242663 0.9075033882210235,-0.19374458572369946</celldesigner:editPoints>
+<celldesigner:editPoints>0.09312158888564159,0.19505367076241953 0.9075033882210191,-0.19374458572370656</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s_id_sa2067" alias="sa2067" targetLineIndex="-1,1">
@@ -11524,7 +11380,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_csa441" aliases="csa441" targetLineIndex="-1,7" editPoints="-2.472086861606826E-4,0.05039328169475521 0.8028957183239829,0.054333170130444586 0.8031669912262647,-9.65581677857541E-4">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_csa441" aliases="csa441" targetLineIndex="-1,7" editPoints="-2.472086861606826E-4,0.050393281694755654 0.8028957183239829,0.05433317013044503 0.8031669912262647,-9.65581677857541E-4">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -11802,7 +11658,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
 <celldesigner:baseReactants>
-<celldesigner:baseReactant species="s4083" alias="csa368">
+<celldesigner:baseReactant species="s4087" alias="csa368">
 <celldesigner:linkAnchor position="WSW"/>
 </celldesigner:baseReactant>
 </celldesigner:baseReactants>
@@ -11937,7 +11793,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </rdf:RDF>
 </annotation>
 <listOfReactants>
-<speciesReference metaid="CDMT00058" species="s4083">
+<speciesReference metaid="CDMT00058" species="s4087">
 <annotation>
 <celldesigner:extension>
 <celldesigner:alias>csa368</celldesigner:alias>
@@ -12992,7 +12848,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:lineDirection index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.051296422074820214,-0.07048508366570339 0.7050455730711107,0.40528923107598125</celldesigner:editPoints>
+<celldesigner:editPoints>0.051296422074820214,-0.07048508366569983 0.7050455730711072,0.4052892310759848</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -13568,7 +13424,31 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:editPoints>0.7378897533677296,-0.439782293007168</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re10356"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:33083006"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:33476648"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:694009"/></rdf:Bag></bqbiol:occursIn><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.bto:BTO%3A0000567"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re10356">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:33083006"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:33476648"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:obo.bto:BTO%3A0000567"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00190" species="s3863">
 <annotation>
@@ -13910,7 +13790,41 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 <celldesigner:editPoints>0.7612667478684543,0.4263093788063341</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re10364"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:33083006"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32923629"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:33476648"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.bto:BTO%3A0000837"/></rdf:Bag></bqbiol:occursIn><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:11320"/></rdf:Bag></bqbiol:occursIn><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re10364">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:33083006"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:32923629"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:33476648"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:obo.bto:BTO%3A0000837"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:11320"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00203" species="s3854">
 <annotation>
@@ -14401,7 +14315,7 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s3988" aliases="sa3056" targetLineIndex="-1,7" editPoints="0.48306021698605495,0.13365716034286024 0.5541725782001103,-0.12335527767642773">
+<celldesigner:modification type="CATALYSIS" modifiers="s3988" aliases="sa3056" targetLineIndex="-1,7" editPoints="0.48306021698605495,0.13365716034286024 0.5541725782001121,-0.12335527767642773">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>

@@ -8,7 +8,7 @@ dependencies = [
   "jupyterlab>=4.5.6",
   "pydot",
   "boltons",
-  # "rpy2",
+  "rpy2",
   "pybiomart>=0.2.0",
   "momapy-kb[neo4j]",
   "momapy[skia]",
@@ -35,7 +35,4 @@ pylpg = { path = "../../../code/pylpg", editable = true }
 pd2af = { path = "../../../code/pd2af", editable = true }
 
 [dependency-groups]
-dev = [
-    "jupyter-ruff>=0.3.1",
-    "pd2af",
-]
+dev = ["jupyter-ruff>=0.3.1", "pd2af"]

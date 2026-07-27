@@ -5369,13 +5369,13 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:innerPosition x="1720.8125" y="869.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5407,13 +5407,13 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:innerPosition x="2985.8125" y="1539.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7353,13 +7353,13 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:innerPosition x="3975.8125" y="104.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7372,13 +7372,13 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:innerPosition x="3975.8125" y="54.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -10123,7 +10123,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s241" id="s241" name="holo_space_transferrin" compartment="c7" initialAmount="0">
+<species metaid="s241" id="s241" name="holo transferrin" compartment="c7" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10758,7 +10758,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:extension>
 </annotation>
 </species>
-<species metaid="s458" id="s458" name="CASP1_space_tetramer" compartment="c1" initialAmount="0" charge="0">
+<species metaid="s458" id="s458" name="CASP1 tetramer" compartment="c1" initialAmount="0" charge="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>

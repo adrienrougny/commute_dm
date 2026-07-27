@@ -489,36 +489,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s_id_glyph15">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740578"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_glyph15"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1007,36 +978,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s_id_glyph14">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740578"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_glyph14"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1054,31 +996,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s_id_glyph12">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001200"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740578"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_glyph12"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001200"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1338,13 +1256,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="825.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="361.0" y="950.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1357,13 +1275,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="80.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1156.0" y="560.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="4" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1376,13 +1294,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="60.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1296.0" y="1170.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1395,13 +1313,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="110.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1296.0" y="1240.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1414,13 +1332,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="57.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1301.0" y="550.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1433,13 +1351,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="110.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="701.0" y="520.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1452,13 +1370,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="85.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1151.0" y="1180.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="4" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1471,13 +1389,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="500.0" y="800.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="361.0" y="1035.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1490,13 +1408,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="375.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="436.0" y="465.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1509,13 +1427,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1851.0" y="880.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1528,13 +1446,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1851.0" y="1160.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1547,13 +1465,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="875.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="491.0" y="950.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1566,13 +1484,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="152.5" y="242.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1431.0" y="470.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1585,13 +1503,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="701.0" y="380.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1604,13 +1522,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="925.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="231.0" y="1035.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1623,13 +1541,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="90.0" y="17.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9a9b" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1201.0" y="390.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1642,13 +1560,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="145.0" y="270.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1426.0" y="1090.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1661,13 +1579,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="225.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="436.0" y="225.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1680,13 +1598,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="150.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="701.0" y="815.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1699,13 +1617,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="75.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1851.0" y="1235.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="4" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1718,13 +1636,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="140.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1851.0" y="1310.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1737,13 +1655,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="235.0" y="240.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="281.0" y="300.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1756,13 +1674,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1151.0" y="1105.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1775,13 +1693,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="600.0" y="735.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="701.0" y="920.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1794,13 +1712,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="175.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="436.0" y="145.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1813,13 +1731,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="600.0" y="457.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9a9b" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="2075.0" y="775.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1832,13 +1750,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="775.0" y="645.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="2086.0" y="1055.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1851,13 +1769,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1301.0" y="480.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1889,13 +1807,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="590.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="431.0" y="740.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1908,13 +1826,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="775.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="231.0" y="950.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1927,13 +1845,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="525.0" y="232.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9a9b" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1920.0" y="530.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1946,13 +1864,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="60.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1851.0" y="949.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1965,13 +1883,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="600.0" y="970.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1706.0" y="1230.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -1984,13 +1902,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1296.0" y="1100.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2041,13 +1959,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="150.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1156.0" y="635.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2060,13 +1978,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="540.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="431.0" y="655.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2079,13 +1997,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="107.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1301.0" y="620.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2098,13 +2016,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="60.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="701.0" y="450.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2117,13 +2035,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="165.0" y="67.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9a9b" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="86.0" y="15.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2136,13 +2054,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="325.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="436.0" y="385.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2155,13 +2073,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="7.5" y="152.5"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1151.0" y="1255.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2174,13 +2092,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="87.5" y="42.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9a9b" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1201.0" y="1010.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2193,13 +2111,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="275.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="436.0" y="305.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2231,13 +2149,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1156.0" y="485.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2250,13 +2168,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="105.0" y="240.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="106.0" y="300.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2269,13 +2187,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="600.0" y="422.5"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9a9b" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="2076.0" y="685.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2288,13 +2206,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="110.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1851.0" y="1019.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2307,13 +2225,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="87.5" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9a9b" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="1201.0" y="935.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2326,13 +2244,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="875.0" y="645.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="2286.0" y="1055.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2345,13 +2263,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="425.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="436.0" y="545.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2364,13 +2282,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="701.0" y="665.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="2" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2421,13 +2339,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="500.0" y="900.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="231.0" y="1115.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2440,13 +2358,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="390.0" y="640.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="431.0" y="825.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2459,13 +2377,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="10.0" y="80.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="701.0" y="740.0"/>
 <celldesigner:boxSize width="90.0" height="50.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="open" prefix="free input" label="4" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2497,13 +2415,13 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:innerPosition x="500.0" y="850.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcdcd" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="491.0" y="1035.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffffff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2595,9 +2513,9 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:protein id="p_s_id_glyph66" name="Nsp11" type="GENERIC"/>
 <celldesigner:protein id="p_s_id_glyph50" name="Nsp8" type="GENERIC"/>
 <celldesigner:protein id="p_s_id_glyph30" name="Nsp8" type="GENERIC"/>
-<celldesigner:protein id="p_s_id_glyph19" name="viral_space_accessory" type="GENERIC"/>
+<celldesigner:protein id="p_s_id_glyph19" name="viral accessory" type="GENERIC"/>
 <celldesigner:protein id="p_s_id_glyph56" name="Nsp6" type="GENERIC"/>
-<celldesigner:protein id="p_s_id_glyph18" name="structural_space_proteins" type="GENERIC"/>
+<celldesigner:protein id="p_s_id_glyph18" name="structural proteins" type="GENERIC"/>
 </celldesigner:listOfProteins>
 <celldesigner:listOfGenes>
 <celldesigner:gene id="g_s_id_glyph15" name="(+)ss gRNA (with ORF1a ORF1b)" type="GENE"/>
@@ -2944,36 +2862,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:catalyzed reaction="glyph78"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_glyph17">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740578"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_glyph17"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_glyph46" id="s_id_glyph46" name="pp1a" compartment="s_id_glyph1" initialConcentration="0">
 <annotation>
@@ -3062,66 +2951,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:catalyzed reaction="glyph88"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_glyph20">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740570"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740577"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740572"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740571"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740568"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740574"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740573"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740569"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740575"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_glyph20"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_glyph3" id="s_id_glyph3" name="replication transcription complex" compartment="s_id_glyph1" initialConcentration="0">
 <annotation>
@@ -3231,36 +3061,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:catalyzed reaction="glyph85"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_glyph13">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740578"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:refseq:NC_045512"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_glyph13"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001201"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_glyph6" id="s_id_glyph6" name="complex" compartment="s_id_glyph1" initialConcentration="0">
 <annotation>
@@ -3362,33 +3163,9 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:geneReference>g_s_id_glyph16</celldesigner:geneReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_glyph16">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001200"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:43740578"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001041"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_glyph16"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001200"/></rdf:Bag></bqbiol:is><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf></rdf:Description></rdf:RDF></annotation>
 </species>
-<species metaid="s_id_glyph2" id="s_id_glyph2" name="replication_space_transcription_space_complex" compartment="s_id_glyph1" initialConcentration="0">
+<species metaid="s_id_glyph2" id="s_id_glyph2" name="replication transcription complex" compartment="s_id_glyph1" initialConcentration="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -3508,7 +3285,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_glyph19" id="s_id_glyph19" name="viral_space_accessory" compartment="s_id_glyph1" initialConcentration="0">
+<species metaid="s_id_glyph19" id="s_id_glyph19" name="viral accessory" compartment="s_id_glyph1" initialConcentration="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -3603,7 +3380,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_glyph18" id="s_id_glyph18" name="structural_space_proteins" compartment="s_id_glyph1" initialConcentration="0">
+<species metaid="s_id_glyph18" id="s_id_glyph18" name="structural proteins" compartment="s_id_glyph1" initialConcentration="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -3682,7 +3459,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph86"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00002" species="s_id_glyph3">
 <annotation>
@@ -3742,7 +3519,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph87"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00005" species="s_id_glyph73">
 <annotation>
@@ -3804,7 +3581,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph85"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00007" species="s_id_glyph73">
 <annotation>
@@ -3877,7 +3654,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph76"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00009" species="s_id_glyph49">
 <annotation>
@@ -3964,7 +3741,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph77"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00013" species="s_id_glyph5">
 <annotation>
@@ -4034,7 +3811,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph81"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00018" species="s70">
 <annotation>
@@ -4113,7 +3890,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph88"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00020" species="s70">
 <annotation>
@@ -4218,7 +3995,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:editPoints omittedShapeIndex="1">0.24212034383954162,0.4283667621776508</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph79"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00023" species="s_id_glyph40">
 <annotation>
@@ -4333,7 +4110,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph80"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00029" species="s_id_glyph2">
 <annotation>
@@ -4526,7 +4303,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 <celldesigner:editPoints omittedShapeIndex="1">0.6446647920674855,0.47861476986828455</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph82"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00035" species="s_id_glyph63">
 <annotation>
@@ -4658,7 +4435,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph83"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00048" species="s70">
 <annotation>
@@ -4722,7 +4499,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph78"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00050" species="s70">
 <annotation>
@@ -4794,7 +4571,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#glyph84"><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00052" species="s_id_glyph54">
 <annotation>

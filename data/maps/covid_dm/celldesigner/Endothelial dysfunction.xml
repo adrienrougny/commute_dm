@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:celldesigner="http://www.sbml.org/2001/ns/celldesigner" level="2" version="4">
 <model metaid="defense_response_to_the_virus" id="defense_response_to_the_virus">
 <annotation>
@@ -130,7 +130,7 @@
 <head>
 <title/>
 </head>
-<body/>
+<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1846"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P15509"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -147,7 +147,7 @@
 <head>
 <title/>
 </head>
-<body/>
+<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1847"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P32927"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -164,7 +164,7 @@
 <head>
 <title/>
 </head>
-<body/>
+<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1849"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P15509"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -181,7 +181,7 @@
 <head>
 <title/>
 </head>
-<body/>
+<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1850"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P32927"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -441,7 +441,7 @@
 <head>
 <title/>
 </head>
-<body/>
+<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1882"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:Q02763"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -458,7 +458,7 @@
 <head>
 <title/>
 </head>
-<body/>
+<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1883"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:O15123"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1912,13 +1912,13 @@
 <celldesigner:innerPosition x="780.0" y="1535.0"/>
 <celldesigner:boxSize width="240.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffcc99ff" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="60.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2651,16 +2651,7 @@ PMID:7509919
 <celldesigner:rnaReference>rn2</celldesigner:rnaReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s1836">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mirbase:MI0000091"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1836"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mirbase:MI0000091"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:hgnc:31634"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s1837" id="s1837" name="MIR33A" compartment="c10" initialAmount="0">
 <annotation>
@@ -2674,16 +2665,7 @@ PMID:7509919
 <celldesigner:catalyzed reaction="re75"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s1837">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mirbase:MI0000091"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1837"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mirbase:MI0000091"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:hgnc:31634"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s1838" id="s1838" name="NR4A1" compartment="c10" initialAmount="0">
 <annotation>
@@ -2786,7 +2768,7 @@ PMID:7509919
 </celldesigner:extension>
 </annotation>
 </species>
-<species metaid="s1852" id="s1852" name="M2_space_sentinel_space_macrophage" compartment="c10" initialAmount="0">
+<species metaid="s1852" id="s1852" name="M2 sentinel macrophage" compartment="c10" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -3140,7 +3122,7 @@ PMID:7509919
 <celldesigner:proteinReference>pr388</celldesigner:proteinReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1885"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:Q02763"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s1886" id="s1886" name="ANGPT2" compartment="c11" initialAmount="0">
 <annotation>
@@ -3151,7 +3133,7 @@ PMID:7509919
 <celldesigner:proteinReference>pr389</celldesigner:proteinReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s1886"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:O15123"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s1887" id="s1887" name="vascular permeability" compartment="c11" initialAmount="0">
 <annotation>

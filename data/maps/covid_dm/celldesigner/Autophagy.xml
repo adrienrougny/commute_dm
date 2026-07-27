@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:celldesigner="http://www.sbml.org/2001/ns/celldesigner" level="2" version="4">
 <model metaid="Autophagy" id="Autophagy">
 <annotation>
@@ -2479,13 +2479,13 @@
 <celldesigner:innerPosition x="1602.5" y="903.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2612,13 +2612,13 @@
 <celldesigner:innerPosition x="15.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -2669,13 +2669,13 @@
 <celldesigner:innerPosition x="15.0" y="11.25"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3068,13 +3068,13 @@
 <celldesigner:innerPosition x="11.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3201,13 +3201,13 @@
 <celldesigner:innerPosition x="10.0" y="60.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3335,13 +3335,13 @@
 <celldesigner:innerPosition x="10.0" y="63.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3411,13 +3411,13 @@
 <celldesigner:innerPosition x="15.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3449,13 +3449,13 @@
 <celldesigner:innerPosition x="10.0" y="63.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3677,13 +3677,13 @@
 <celldesigner:innerPosition x="10.0" y="100.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3696,13 +3696,13 @@
 <celldesigner:innerPosition x="4055.0" y="360.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3965,7 +3965,7 @@
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s610" id="s610" name="H_plus_" compartment="c2" initialAmount="0" charge="0">
+<species metaid="s610" id="s610" name="H+" compartment="c2" initialAmount="0" charge="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -4025,7 +4025,7 @@
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_csa94" id="s_id_csa94" name="V_minus_type_space_proton_space_ATPase" compartment="c1" initialAmount="0" charge="0">
+<species metaid="s_id_csa94" id="s_id_csa94" name="V-type proton ATPase" compartment="c1" initialAmount="0" charge="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -4087,7 +4087,7 @@ Not sure if the binding happens in the ER, in the cytoplasm or at the nucleus
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s10" id="s10" name="H_plus_" compartment="c6" initialAmount="0">
+<species metaid="s10" id="s10" name="H+" compartment="c6" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -4112,7 +4112,7 @@ Not sure if the binding happens in the ER, in the cytoplasm or at the nucleus
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s11" id="s11" name="V_minus_ATPase" compartment="c1" initialAmount="0">
+<species metaid="s11" id="s11" name="V-ATPase" compartment="c1" initialAmount="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -4142,7 +4142,7 @@ http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s15" id="s15" name="V_minus_ATPase:Nsp6" compartment="c1" initialAmount="0">
+<species metaid="s15" id="s15" name="V-ATPase:Nsp6" compartment="c1" initialAmount="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -4472,7 +4472,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s46" id="s46" name="V_minus_ATPase" compartment="c6" initialAmount="0">
+<species metaid="s46" id="s46" name="V-ATPase" compartment="c6" initialAmount="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -4505,7 +4505,7 @@ http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s47" id="s47" name="V_minus_ATPase:Nsp6" compartment="c6" initialAmount="0">
+<species metaid="s47" id="s47" name="V-ATPase:Nsp6" compartment="c6" initialAmount="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -4547,7 +4547,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:extension>
 </annotation>
 </species>
-<species metaid="s61" id="s61" name="V_minus_ATPase" compartment="c4" initialAmount="0">
+<species metaid="s61" id="s61" name="V-ATPase" compartment="c4" initialAmount="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -4577,7 +4577,7 @@ http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s65" id="s65" name="V_minus_ATPase:Nsp6" compartment="c4" initialAmount="0">
+<species metaid="s65" id="s65" name="V-ATPase:Nsp6" compartment="c4" initialAmount="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -5195,16 +5195,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.4121806703628157,0.49222735127385553</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re10">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:37482689"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re10"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:37482689"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00029" species="s639">
 <annotation>
@@ -5252,16 +5243,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re11">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:37482689"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re11"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:37482689"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00035" species="s26">
 <annotation>
@@ -5705,21 +5687,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re1">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:34997207"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re1"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34997207"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00073" species="s15">
 <annotation>
@@ -5763,21 +5731,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.12056199706918136,0.2720646836516951 0.9564233745533066,-0.09833663264519155</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re17">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:34997207"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re17"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34997207"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00075" species="s47">
 <annotation>
@@ -5828,16 +5782,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re13">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re13"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00077" species="s30">
 <annotation>
@@ -5901,16 +5846,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re21">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re21"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00080" species="s37">
 <annotation>
@@ -5992,16 +5928,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re22">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re22"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00084" species="s38">
 <annotation>
@@ -6122,21 +6049,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.45774253528870545,-0.18820260894101193 0.5785265198926322,0.10647604853238035 0.9767409218837049,-0.056745552283727685</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re25">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:34997207"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re25"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34997207"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00091" species="s65">
 <annotation>
@@ -6290,16 +6203,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.020955569005769448,0.06895635954889756 0.9364106871549112,-0.2092468841483741</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#CDMT00097">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#CDMT00097"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00098" species="s41">
 <annotation>
@@ -6342,21 +6246,7 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.9981825220757541,0.04259312970704543</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re28">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:39445785"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re28"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:39445785"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00001" species="s_id_csa18">
 <annotation>

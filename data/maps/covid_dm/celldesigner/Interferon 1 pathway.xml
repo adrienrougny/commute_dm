@@ -2703,7 +2703,17 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <head>
 <title/>
 </head>
-<body/>
+<body>
+<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+<rdf:Description rdf:about="#s291">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:uniprot:Q07325"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -2720,7 +2730,17 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <head>
 <title/>
 </head>
-<body/>
+<body>
+<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+<rdf:Description rdf:about="#s292">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:uniprot:O14625"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -3116,13 +3136,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="3968.75" y="1126.75"/>
 <celldesigner:boxSize width="190.0" height="70.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="fff7f7f7" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="225.0" height="80.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="fff7f7f7" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:complexSpeciesAlias>
@@ -3895,13 +3915,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5808.75" y="1786.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -3972,13 +3992,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="10.0" y="65.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4030,13 +4050,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="3938.75" y="461.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4049,13 +4069,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="948.75" y="731.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4259,13 +4279,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="938.125" y="1811.125"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4318,13 +4338,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="3348.75" y="886.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4472,13 +4492,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5063.75" y="461.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4491,13 +4511,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5298.75" y="1389.25"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4529,13 +4549,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="2668.75" y="1321.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4682,13 +4702,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="1718.75" y="751.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4779,13 +4799,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5793.75" y="1566.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4836,13 +4856,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="4313.75" y="1136.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4931,13 +4951,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="1163.75" y="1876.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5008,13 +5028,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="948.75" y="641.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5239,13 +5259,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="3513.75" y="886.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5354,13 +5374,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="1718.75" y="706.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5430,13 +5450,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="948.75" y="776.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5758,13 +5778,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="948.75" y="686.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5816,13 +5836,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5513.75" y="1591.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5913,13 +5933,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="2483.75" y="506.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6201,13 +6221,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="4128.75" y="1356.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6355,13 +6375,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="100.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6393,13 +6413,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="1718.75" y="661.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6910,13 +6930,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="4923.75" y="1856.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6929,13 +6949,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="4838.75" y="861.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6967,13 +6987,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5573.75" y="1291.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7024,13 +7044,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5423.75" y="1571.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7502,13 +7522,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7656,13 +7676,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5138.75" y="1386.75"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7713,13 +7733,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="326.25" y="196.25"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="90.0" height="25.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7770,13 +7790,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5778.75" y="1201.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7789,13 +7809,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="5423.75" y="1621.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7884,13 +7904,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="4288.75" y="1946.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7979,13 +7999,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="3790.625" y="435.625"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7998,13 +8018,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="3720.625" y="265.625"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -8227,13 +8247,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="3790.625" y="345.625"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="3fff0000" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -8265,13 +8285,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="1423.75" y="1011.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -8285,13 +8305,13 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:innerPosition x="1823.75" y="2246.75"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -8688,7 +8708,7 @@ The antiviral activity of IFN-I is mediated by the induction of numerous interfe
 <celldesigner:protein id="p_s_id_sa317" name="Nsp10" type="GENERIC"/>
 <celldesigner:protein id="p_s_id_sa154" name="IFIH1" type="GENERIC"/>
 <celldesigner:protein id="p_s_id_sa265" name="IKBKG" type="GENERIC"/>
-<celldesigner:protein id="p_s_id_sa314" name="IRAK1_slash_4" type="GENERIC"/>
+<celldesigner:protein id="p_s_id_sa314" name="IRAK1/4" type="GENERIC"/>
 <celldesigner:protein id="p_s_id_sa217" name="PYCARD" type="GENERIC"/>
 <celldesigner:protein id="p_s_id_sa245" name="TLR3" type="RECEPTOR"/>
 <celldesigner:protein id="p_s_id_sa68" name="STAT1" type="GENERIC">
@@ -8878,7 +8898,7 @@ Pubmed_ID: 31226023
 </html>
 </celldesigner:notes>
 </celldesigner:RNA>
-<celldesigner:RNA id="r_s_id_sa186" name="Viral_space_dsRNA" type="RNA">
+<celldesigner:RNA id="r_s_id_sa186" name="viral dsRNA" type="RNA">
 <celldesigner:notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8952,19 +8972,6 @@ HGNC_ID: 8086
 EntrezGene_ID: 4938
 RefSeq_ID: NM_001032409
 Pubmed_ID: 31226023
-</body>
-</html>
-</celldesigner:notes>
-</celldesigner:RNA>
-<celldesigner:RNA id="r_s_id_sa259" name="Viral_space_dsRNA" type="RNA">
-<celldesigner:notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-Pubmed_ID: 31226023, 19052324
-SIGNOR-SCISOVG : Double-stranded RNA (dsRNA) is generated during replication of positive -strand RNA and DNA viruses.
 </body>
 </html>
 </celldesigner:notes>
@@ -10070,7 +10077,7 @@ Pubmed_ID: 31226023
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_sa186" id="s_id_sa186" name="Viral_space_dsRNA" compartment="s_id_ca2" initialAmount="0">
+<species metaid="s_id_sa186" id="s_id_sa186" name="viral dsRNA" compartment="s_id_ca2" initialAmount="0">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10109,6 +10116,11 @@ SIGNOR-SCISOVG : Double-stranded RNA (dsRNA) is generated during replication of 
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
 </rdf:Bag>
 </bqbiol:isPartOf>
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001169"/>
+</rdf:Bag>
+</bqbiol:is>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -12030,39 +12042,6 @@ Pubmed_ID: 31226023
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_sa162" id="s_id_sa162" name="Viral replication" compartment="s_id_ca2" initialAmount="0">
-<annotation>
-<celldesigner:extension>
-<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
-<celldesigner:speciesIdentity>
-<celldesigner:class>PHENOTYPE</celldesigner:class>
-<celldesigner:name>Viral_space_replication</celldesigner:name>
-</celldesigner:speciesIdentity>
-<celldesigner:listOfCatalyzedReactions>
-<celldesigner:catalyzed reaction="re69"/>
-</celldesigner:listOfCatalyzedReactions>
-</celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa162">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:31226023"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:19052324"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D014779"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
-</species>
 <species metaid="s_id_sa151" id="s_id_sa151" name="MAVS" compartment="s_id_ca6" initialAmount="0">
 <annotation>
 <celldesigner:extension>
@@ -12583,7 +12562,7 @@ Pubmed_ID: 31226023
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s_id_sa314" id="s_id_sa314" name="IRAK1_slash_4" compartment="s_id_ca2" initialAmount="0">
+<species metaid="s_id_sa314" id="s_id_sa314" name="IRAK1/4" compartment="s_id_ca2" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13038,50 +13017,6 @@ Pubmed_ID: 31226023
 <rdf:li rdf:resource="urn:miriam:uniprot:Q8IUC6"/>
 </rdf:Bag>
 </bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
-</species>
-<species metaid="s_id_sa259" id="s_id_sa259" name="Viral_space_dsRNA" compartment="s_id_ca10" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 31226023, 19052324
-SIGNOR-SCISOVG : Double-stranded RNA (dsRNA) is generated during replication of positive -strand RNA and DNA viruses.
-</body>
-</html>
-</notes>
-<annotation>
-<celldesigner:extension>
-<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
-<celldesigner:speciesIdentity>
-<celldesigner:class>RNA</celldesigner:class>
-<celldesigner:rnaReference>r_s_id_sa259</celldesigner:rnaReference>
-</celldesigner:speciesIdentity>
-<celldesigner:listOfCatalyzedReactions>
-<celldesigner:catalyzed reaction="re96"/>
-<celldesigner:catalyzed reaction="re113"/>
-</celldesigner:listOfCatalyzedReactions>
-</celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa259">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:31226023"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:19052324"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -13709,6 +13644,88 @@ SIGNOR-SCISOVG
 <celldesigner:catalyzed reaction="re192"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
+</annotation>
+</species>
+<species metaid="s_id_sa162" id="s_id_sa162" name="viral_space_replication" compartment="s_id_ca2" initialAmount="0">
+<annotation>
+<celldesigner:extension>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+<celldesigner:speciesIdentity>
+<celldesigner:class>PHENOTYPE</celldesigner:class>
+<celldesigner:name>viral_space_replication</celldesigner:name>
+</celldesigner:speciesIdentity>
+<celldesigner:listOfCatalyzedReactions>
+<celldesigner:catalyzed reaction="re69"/>
+</celldesigner:listOfCatalyzedReactions>
+</celldesigner:extension>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#s_id_sa162">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:31226023"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:19052324"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:mesh:D014779"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
+</species>
+<species metaid="s_id_sa259" id="s_id_sa259" name="viral dsRNA" compartment="s_id_ca10" initialAmount="0">
+<notes>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title/>
+</head>
+<body>Pubmed_ID: 31226023, 19052324
+SIGNOR-SCISOVG : Double-stranded RNA (dsRNA) is generated during replication of positive -strand RNA and DNA viruses.
+</body>
+</html>
+</notes>
+<annotation>
+<celldesigner:extension>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+<celldesigner:speciesIdentity>
+<celldesigner:class>RNA</celldesigner:class>
+<celldesigner:rnaReference>r_s_id_sa186</celldesigner:rnaReference>
+</celldesigner:speciesIdentity>
+<celldesigner:listOfCatalyzedReactions>
+<celldesigner:catalyzed reaction="re96"/>
+<celldesigner:catalyzed reaction="re113"/>
+</celldesigner:listOfCatalyzedReactions>
+</celldesigner:extension>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#s_id_sa259">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:31226023"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:19052324"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isPartOf>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:isPartOf>
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:obo.so:SO%3A0001169"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
 </annotation>
 </species>
 </listOfSpecies>
@@ -14695,7 +14712,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa123" aliases="sa123" targetLineIndex="0,4" editPoints="0.1168953202626799,0.21857179307127916 0.8944843737316486,-0.1972939513633878">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa123" aliases="sa123" targetLineIndex="0,4" editPoints="0.11689532026268168,0.21857179307128272 0.8944843737316486,-0.1972939513633878">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -14853,7 +14870,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa151" aliases="sa151" targetLineIndex="0,6" editPoints="0.1021410038540429,0.0809195771265836 0.48775253996512546,-0.4058198596659601">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa151" aliases="sa151" targetLineIndex="0,6" editPoints="0.10214100385405445,0.08091957712659248 0.48775253996512546,-0.4058198596659601">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -15408,7 +15425,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa123" aliases="sa123" targetLineIndex="0,3" editPoints="0.4568045832716434,-0.17650070265962015 0.5867024985585951,0.15969038421073378">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa123" aliases="sa123" targetLineIndex="0,3" editPoints="0.4568045832716301,-0.1765007026596166 0.5867024985585951,0.15969038421073378">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -15438,6 +15455,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -15636,7 +15658,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa61" aliases="sa61" targetLineIndex="-1,5" editPoints="0.09666336922546925,-0.07435472181593994 0.4683998009443773,0.4089137926269082">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa61" aliases="sa61" targetLineIndex="-1,5" editPoints="0.0966633692254728,-0.07435472181593994 0.4683998009443773,0.4089137926269082">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -15671,6 +15693,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -15745,7 +15772,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa140" aliases="sa140" targetLineIndex="0,5" editPoints="0.006573885624714393,0.10956498543191961 0.928927884142964,0.0471256405966729">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa140" aliases="sa140" targetLineIndex="0,5" editPoints="0.006573885624714393,0.10956498543192095 0.928927884142964,0.04712564059667357">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="unknown"/>
@@ -16141,7 +16168,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa204" aliases="sa204" targetLineIndex="0,5" editPoints="0.25151392806866524,-0.11501343374862572 0.42445874367779146,0.2631861251657739">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa204" aliases="sa204" targetLineIndex="0,5" editPoints="0.2515139280686688,-0.11501343374862572 0.42445874367779146,0.2631861251657739">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -16176,6 +16203,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -16270,6 +16302,11 @@ SIGNOR-SCISOVG
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
 </rdf:Bag>
 </bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -16346,6 +16383,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -16426,6 +16468,11 @@ SIGNOR-SCISOVG
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
 </rdf:Bag>
 </bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -16501,6 +16548,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -16684,6 +16736,11 @@ SIGNOR-SCISOVG
 <rdf:li rdf:resource="urn:miriam:wikipathways:WP4868"/>
 </rdf:Bag>
 </bqbiol:isPartOf>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -16727,7 +16784,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa151" aliases="sa151" targetLineIndex="0,2" editPoints="0.39918219507334474,-0.21542436841132684 0.624731344550951,0.2025190854763057">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa151" aliases="sa151" targetLineIndex="0,2" editPoints="0.3991821950733554,-0.21542436841133217 0.624731344550951,0.2025190854763057">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -16829,7 +16886,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa172" aliases="sa172" targetLineIndex="-1,7" editPoints="0.2072964828282151,-0.13818794787318822 0.5149588644889809,0.3233380433467996">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa172" aliases="sa172" targetLineIndex="-1,7" editPoints="0.20729648282821422,-0.13818794787318822 0.5149588644889809,0.3233380433467996">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -17230,6 +17287,11 @@ SIGNOR-SCISOVG
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
 </rdf:Bag>
 </bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 <bqbiol:isDescribedBy>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:pubmed:25135833"/>
@@ -17513,7 +17575,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa131" aliases="sa131" targetLineIndex="0,2" editPoints="0.6913099213630477,-0.29624510328561193 0.8464552764388297,0.0657980900963393">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa131" aliases="sa131" targetLineIndex="0,2" editPoints="0.6913099213630384,-0.2962451032856084 0.8464552764388297,0.0657980900963393">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -17572,6 +17634,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -17726,6 +17793,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -17992,7 +18064,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_csa2" aliases="csa2" targetLineIndex="-1,7" editPoints="0.39902949951894673,0.19425992981740592 0.5906249516655127,-0.19929646368082388">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_csa2" aliases="csa2" targetLineIndex="-1,7" editPoints="0.39902949951893163,0.1942599298173988 0.5906249516655127,-0.19929646368082388">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -18005,7 +18077,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_csa3" aliases="csa3" targetLineIndex="0,6" editPoints="0.22612773243137507,-0.2420103054471454 0.7600158404874913,0.25683996881596105">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_csa3" aliases="csa3" targetLineIndex="0,6" editPoints="0.22612773243137507,-0.2420103054471463 0.7600158404874913,0.25683996881596105">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -18104,7 +18176,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa166" aliases="sa166" targetLineIndex="-1,6" editPoints="0.041191476814275596,0.18788929711050753 0.9678914944050936,-0.014824763525475432">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa166" aliases="sa166" targetLineIndex="-1,6" editPoints="0.04119147681427293,0.18788929711050753 0.9678914944050909,-0.01482476352547521">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -18321,6 +18393,11 @@ SIGNOR-SCISOVG
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
 </rdf:Bag>
 </bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -18482,7 +18559,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa31" aliases="sa31" targetLineIndex="-1,2" editPoints="0.1546858466447567,-0.6821297828230617 1.2832765033389115,-0.4235409545572781 1.1769295332569276,0.04054411767519306">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa31" aliases="sa31" targetLineIndex="-1,2" editPoints="0.1546858466447567,-0.6821297828230617 1.2832765033389115,-0.4235409545572781 1.176929533256927,0.04054411767519295">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -18582,7 +18659,7 @@ SIGNOR-SCISOVG
 <celldesigner:editPoints>0.004827620812686284,-0.13162809872090997 1.0034842828474169,-0.09500114951161409</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa27" aliases="sa27" targetLineIndex="0,2" editPoints="0.06697962651447065,-0.7370051028223519 1.2135950754201745,-0.6326115444945476 1.1506865282147272,0.058349787309840084">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa27" aliases="sa27" targetLineIndex="0,2" editPoints="0.06697962651447109,-0.737005102822352 1.2135950754201745,-0.6326115444945476 1.1506865282147272,0.058349787309840084">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -18687,7 +18764,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa61" aliases="sa61" targetLineIndex="0,4" editPoints="-0.004812433083197121,0.01649521300333512 0.916747636403449,0.2853578318524679">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa61" aliases="sa61" targetLineIndex="0,4" editPoints="-0.004812433083197121,0.016495213003334896 0.916747636403449,0.2853578318524679">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -18795,7 +18872,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa131" aliases="sa131" targetLineIndex="0,3" editPoints="0.5063812304247621,0.01874487844106376 0.5077496376502832,-0.01822179150888603">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa131" aliases="sa131" targetLineIndex="0,3" editPoints="0.5063812304247604,0.01874487844106376 0.5077496376502832,-0.01822179150888603">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -18808,7 +18885,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_csa8" aliases="csa8" targetLineIndex="0,6" editPoints="0.4876015102304283,-0.08854254913262083 0.5195230986299944,0.0872488061543093">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_csa8" aliases="csa8" targetLineIndex="0,6" editPoints="0.4876015102304274,-0.08854254913262061 0.5195230986299944,0.0872488061543093">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -18833,6 +18910,11 @@ SIGNOR-SCISOVG
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 </rdf:Description>
@@ -19096,7 +19178,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa140" aliases="sa140" targetLineIndex="0,6" editPoints="0.3362166012244572,-0.23917616952530452 0.6722301158258377,0.23316738405249282">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa140" aliases="sa140" targetLineIndex="0,6" editPoints="0.33621660122456287,-0.23917616952537912 0.6722301158258377,0.23316738405249282">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -19587,7 +19669,7 @@ SIGNOR-SCISOVG
 <celldesigner:lineDirection index="3" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.4708870793758374,0.14705265419150293 0.5538143766632466,-0.13022297106029224 0.9917665392246103,0.004988163465429962</celldesigner:editPoints>
+<celldesigner:editPoints>0.4708870793758374,0.14705265419150293 0.5538143766632458,-0.13022297106029224 0.9917665392246098,0.00498816346542974</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 <celldesigner:reactantLink reactant="s_id_sa257" alias="sa257" targetLineIndex="-1,0">
@@ -20460,7 +20542,7 @@ SIGNOR-SCISOVG
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.4111855963213089,0.49204877979646966</celldesigner:editPoints>
+<celldesigner:editPoints>0.411185596321308,0.49204877979646966</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -20843,7 +20925,7 @@ SIGNOR-SCISOVG
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa132" aliases="sa132" targetLineIndex="-1,3" editPoints="0.5027747685720536,-0.016759717609657443 0.503884720398907,0.016537727244275935">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa132" aliases="sa132" targetLineIndex="-1,3" editPoints="0.5027747685720518,-0.016759717609657443 0.5038847203989105,0.016537727244275935">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -20856,7 +20938,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa304" aliases="sa307" targetLineIndex="-1,3" editPoints="0.4869649211590774,-0.08927987820843919 0.5194851589250069,0.0880973241078844">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa304" aliases="sa307" targetLineIndex="-1,3" editPoints="0.4869649211590854,-0.08927987820844052 0.5194851589250042,0.08809732410788484">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -20869,7 +20951,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa167" aliases="sa309" targetLineIndex="-1,2" editPoints="0.8564330463070409,0.10142237186193537 0.8702633697427604,-0.015363952634479539">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa167" aliases="sa309" targetLineIndex="-1,2" editPoints="0.8564330463070418,0.10142237186193537 0.8702633697427604,-0.015363952634479539">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -20882,7 +20964,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa308" aliases="sa308" targetLineIndex="0,7" editPoints="0.82657575102587,-0.12714104588098207 0.8496884520634458,0.023120406555508843">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa308" aliases="sa308" targetLineIndex="0,7" editPoints="0.82657575102587,-0.12714104588098163 0.8496884520634458,0.023120406555508843">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -20908,7 +20990,7 @@ SIGNOR-SCISOVG
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s_id_sa226" aliases="sa134" targetLineIndex="-1,3" editPoints="0.46991503623688935,0.12531485349162086 0.5363092100792155,-0.12365499914551314">
+<celldesigner:modification type="INHIBITION" modifiers="s_id_sa226" aliases="sa134" targetLineIndex="-1,3" editPoints="0.4699150362368574,0.12531485349161287 0.5363092100792191,-0.12365499914551226">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>

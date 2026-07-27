@@ -63,21 +63,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D050776"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P01031"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop2"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01031"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D050776"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -164,21 +150,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D050776"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P01031"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop5"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01031"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D050776"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -439,16 +411,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D003179"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#copf"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D003179"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -574,21 +537,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D015943"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.pr:PR:000035911"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop14"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.pr:PR:000035911"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D015943"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -611,26 +560,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D015951"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:brenda:3.4.21.6"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.pr:PR%3A000035937"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop15"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.6"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.pr:PR%3A000035937"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D015951"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -734,21 +664,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D050776"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P01031"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop19"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01031"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D050776"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -847,16 +763,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D003179"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop1d"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D003179"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -874,21 +781,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D050678"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P06681"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop1e"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P06681"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D050678"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1068,21 +961,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D005341"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:brenda:3.4.21.7"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop25"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.7"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D005341"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1282,21 +1161,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D015949"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.pr:PR:000035935"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop2c"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.pr:PR:000035935"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D015949"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1319,21 +1184,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D015944"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P00451"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop2d"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P00451"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D015944"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -1518,21 +1369,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D050776"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P01031"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop34"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01031"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D050776"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -2270,16 +2107,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D013917"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop4e"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D013917"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -2437,21 +2265,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D050776"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P01031"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop54"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01031"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D050776"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -2523,16 +2337,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D013917"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop57"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D013917"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -4629,13 +4434,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="1030.0" y="195.0"/>
 <celldesigner:boxSize width="240.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="240.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4705,13 +4510,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="1800.0" y="1170.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -4991,13 +4796,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="1980.0" y="120.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5181,13 +4986,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="3170.0" y="645.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -5779,13 +5584,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="10.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6123,13 +5928,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="1195.0" y="1375.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="180.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffff9900" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -6736,13 +6541,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="100.0" y="10.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7155,13 +6960,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="2735.0" y="450.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -7365,7 +7170,7 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="735.0" y="1005.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffccffcc" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
@@ -7731,7 +7536,7 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="1150.0" y="680.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffccffcc" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
@@ -7885,7 +7690,7 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="530.0" y="500.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffccffcc" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
@@ -8038,7 +7843,7 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="1135.0" y="970.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffccffcc" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
@@ -8095,13 +7900,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="535.0" y="90.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -8400,13 +8205,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="15.0" y="55.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -8495,13 +8300,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="720.0" y="2020.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -8953,13 +8758,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="95.0" y="55.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -9221,13 +9026,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="180.0" y="245.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -9316,13 +9121,13 @@ Description: Thrombosis model of COVID-19
 <celldesigner:innerPosition x="10.0" y="7.5"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:usualView>
 <celldesigner:briefView>
 <celldesigner:innerPosition x="0.0" y="0.0"/>
 <celldesigner:boxSize width="80.0" height="40.0"/>
 <celldesigner:singleLine width="1.0"/>
-<celldesigner:paint color="ffffcccc" scheme="Color"/>
+<celldesigner:paint color="ffffccdd" scheme="Color"/>
 </celldesigner:briefView>
 <celldesigner:info state="empty" angle="-1.5707963267948966"/>
 </celldesigner:speciesAlias>
@@ -10116,7 +9921,7 @@ Description: Thrombosis model of COVID-19
 <celldesigner:protein id="cop1bf" name="F5a" type="GENERIC"/>
 <celldesigner:protein id="cop1c0" name="C5b" type="GENERIC"/>
 <celldesigner:protein id="cop1c1" name="F5a" type="GENERIC"/>
-<celldesigner:protein id="cop1c2" name="D_minus_dimer" type="GENERIC"/>
+<celldesigner:protein id="cop1c2" name="D-dimer" type="GENERIC"/>
 <celldesigner:protein id="cop1c3" name="F12a" type="GENERIC"/>
 <celldesigner:protein id="cop1c4" name="F10a" type="GENERIC"/>
 <celldesigner:protein id="cop1c5" name="AGTR1" type="RECEPTOR"/>
@@ -10328,7 +10133,16 @@ Description: Thrombosis model of COVID-19
 <celldesigner:extension>
 <celldesigner:name>infected cell</celldesigner:name>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop22b"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#cop22b">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 </compartment>
 <compartment metaid="cop22c" id="cop22c" name="Weibel-Palade body" size="1" units="volume" outside="cop22b">
 <annotation>
@@ -10351,7 +10165,16 @@ Description: Thrombosis model of COVID-19
 <celldesigner:extension>
 <celldesigner:name>infected cell</celldesigner:name>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop22d"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#cop22d">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 </compartment>
 <compartment metaid="c9" id="c9" name="alveolar epithelium" size="1" units="volume" outside="cop22e">
 <annotation>
@@ -10786,7 +10609,7 @@ Description: Thrombosis model of COVID-19
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="cop240" id="cop240" name="septal_space_capillary_space_necrosis" compartment="cop22a" initialAmount="0">
+<species metaid="cop240" id="cop240" name="septal capillary necrosis" compartment="cop22a" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -11265,7 +11088,7 @@ ACE2 functions as a carboxypeptidase, cleaving a single residue from angiotensin
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="cop252" id="cop252" name="C4d_space_deposition" compartment="cop22a" initialAmount="0">
+<species metaid="cop252" id="cop252" name="C4d deposition" compartment="cop22a" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -11992,7 +11815,7 @@ A highly soluble, elongated protein complex found in blood plasma and involved i
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="cop26d" id="cop26d" name="D_minus_dimer" compartment="cop228" initialAmount="0" charge="0">
+<species metaid="cop26d" id="cop26d" name="D-dimer" compartment="cop228" initialAmount="0" charge="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -12348,7 +12171,7 @@ A protein complex produced by sequentially activated components of the complemen
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="cop27a" id="cop27a" name="C5b_minus_9_space_deposition" compartment="cop22e" initialAmount="0">
+<species metaid="cop27a" id="cop27a" name="C5b-9 deposition" compartment="cop22e" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -12528,7 +12351,7 @@ A protein complex produced by sequentially activated components of the complemen
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="cop281" id="cop281" name="platelet_space_aggregation" compartment="cop22e" initialAmount="0">
+<species metaid="cop281" id="cop281" name="platelet aggregation" compartment="cop22e" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13421,7 +13244,7 @@ ACE2-Spike complex
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="cop2a7" id="cop2a7" name="MASP2_space_deposition" compartment="cop22a" initialAmount="0">
+<species metaid="cop2a7" id="cop2a7" name="MASP2 deposition" compartment="cop22a" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13774,7 +13597,7 @@ ACE2-Spike complex
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="cop2b6" id="cop2b6" name="TAT_space_complex" compartment="cop228" initialAmount="0" charge="0">
+<species metaid="cop2b6" id="cop2b6" name="TAT complex" compartment="cop228" initialAmount="0" charge="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -15756,7 +15579,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 <celldesigner:lineDirection arm="2" index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints num0="0" num1="1" num2="1" tShapeIndex="0">0.23584905660376165,0.4245283018867845 0.257069408740362,-0.43701799485860704 0.3833333333333364,0.19166666666665932</celldesigner:editPoints>
+<celldesigner:editPoints num0="0" num1="1" num2="1" tShapeIndex="0">0.23584905660375455,0.4245283018867845 0.25706940874036244,-0.4370179948586035 0.3833333333333364,0.19166666666665932</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
 <celldesigner:modification type="CATALYSIS" modifiers="cop288" aliases="copdd" targetLineIndex="0,3">
@@ -16392,7 +16215,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="cop277" aliases="copc5" targetLineIndex="0,5" editPoints="0.28484359266035125,-0.25537294919293174 0.7304520761628355,0.2416598092175235">
+<celldesigner:modification type="CATALYSIS" modifiers="cop277" aliases="copc5" targetLineIndex="0,5" editPoints="0.2848435926603477,-0.25537294919293174 0.7304520761628319,0.2416598092175235">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -16500,7 +16323,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="cop2aa" aliases="cop110" targetLineIndex="-1,2" editPoints="0.013493359986732623,-0.027080130056017837 0.8145967826895677,0.3720899199685772">
+<celldesigner:modification type="CATALYSIS" modifiers="cop2aa" aliases="cop110" targetLineIndex="-1,2" editPoints="0.0134933599867324,-0.027080130056017615 0.8145967826895677,0.37208991996857743">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -16699,6 +16522,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:8136018"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -16783,7 +16611,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="cop267" aliases="cop17a" targetLineIndex="-1,6" editPoints="-0.021667120951474494,0.06732361967158962 0.8844763547349412,0.3589526257004092">
+<celldesigner:modification type="CATALYSIS" modifiers="cop267" aliases="cop17a" targetLineIndex="-1,6" editPoints="-0.02166712095147494,0.06732361967158962 0.8844763547349408,0.3589526257004101">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -17015,7 +16843,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.3978494623655884,0.005120327700971927</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="TRIGGER" modifiers="cop244" aliases="cop82" targetLineIndex="0,2" editPoints="0.44035182624288893,0.1049901932284607 0.4941399342629502,-0.12060889244274264">
+<celldesigner:modification type="TRIGGER" modifiers="cop244" aliases="cop82" targetLineIndex="0,2" editPoints="0.4403518262428898,0.1049901932284607 0.4941399342629511,-0.12060889244274264">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -17042,6 +16870,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:22449964"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -17180,6 +17013,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:2117226"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -17254,7 +17092,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 <celldesigner:editPoints num0="0" num1="1" num2="0" tShapeIndex="0">0.6759999999999913,0.4679999999999956 0.0,0.6909090909090807</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="cop27e" aliases="csa11" targetLineIndex="0,3" editPoints="0.8825157445276242,0.31703264259025943">
+<celldesigner:modification type="CATALYSIS" modifiers="cop27e" aliases="csa11" targetLineIndex="0,3" editPoints="0.8825157445276224,0.3170326425902559">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="unknown"/>
@@ -17570,6 +17408,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:2117226"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -18433,6 +18276,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:11290788"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -18998,6 +18846,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32367170"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19073,6 +18926,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32302438"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19152,6 +19010,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32336612"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19430,6 +19293,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32299776"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19477,7 +19345,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 <celldesigner:lineDirection index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.9982892941118449,-0.04132528733741986 1.0000000000000009,7.216449660063518E-16</celldesigner:editPoints>
+<celldesigner:editPoints>0.9982892941118457,-0.041325287337419914 1.0000000000000018,6.661338147750939E-16</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -19498,6 +19366,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32299776"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19569,6 +19442,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32171076"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19644,6 +19522,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32367170"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19824,6 +19707,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32302438"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -19878,7 +19766,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 <celldesigner:editPoints>0.27895390498063755,0.3059494441723132 0.8250131672168628,-0.19192104240730856</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="TRIGGER" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,3" editPoints="0.5589773400007232,-0.2836447930684045 0.7637427097111593,0.11988527158326967">
+<celldesigner:modification type="TRIGGER" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,3" editPoints="0.5589773400007225,-0.2836447930684045 0.7637427097111587,0.11988527158326967">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -19893,6 +19781,15 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#cop333">
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00168" species="cop2d2">
@@ -19978,6 +19875,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32299776"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -20065,6 +19967,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:2437112"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -20145,6 +20052,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:doi:10.1101%2F2020.04.25.20077842"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -20346,7 +20258,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,7" editPoints="0.5376140718766473,-0.43138659258310064 0.9292900833436155,0.0567383028159103">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,7" editPoints="0.5376140718766464,-0.43138659258310064 0.9292900833436146,0.0567383028159103">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -20381,6 +20293,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32359396"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -20441,7 +20358,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,7" editPoints="0.6393348218631472,-0.40107513043969156 0.9217406480937393,0.04909458815720491">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,7" editPoints="0.6393348218631463,-0.40107513043969156 0.9217406480937385,0.04909458815720491">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -20476,6 +20393,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32286245"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -20548,6 +20470,15 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#cop33b">
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00200" species="cop2bc">
@@ -20634,6 +20565,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32286245"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -20707,7 +20643,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop274" aliases="copc1" targetLineIndex="-1,6" editPoints="0.04761533749729274,-0.18928513353134147 0.9881021215032657,0.04729760699736918">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop274" aliases="copc1" targetLineIndex="-1,6" editPoints="0.047615337497290966,-0.18928513353134147 0.9881021215032639,0.04729760699736918">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -20729,6 +20665,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32286245"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -21185,7 +21126,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,3" editPoints="0.7455433046410976,-0.3673005192134582 0.9408538330174262,0.029139042235305723">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop244" aliases="cop9b" targetLineIndex="-1,3" editPoints="0.7455433046410967,-0.3673005192134564 0.9408538330174253,0.029139042235305723">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -21220,6 +21161,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32504360"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -21411,6 +21357,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32172226"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -22661,6 +22612,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32048163"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -22779,6 +22735,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <bqbiol:occursIn>
 <rdf:Bag>
 <rdf:li rdf:resource="urn:miriam:taxonomy:9615"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
 </rdf:Bag>
 </bqbiol:occursIn>
 <bqbiol:isDescribedBy>
@@ -23105,7 +23066,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop25e" aliases="copa0" targetLineIndex="-1,4" editPoints="0.4047433327016723,0.08288372551204226 0.4449907850106616,-0.11365531613522073">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop25e" aliases="copa0" targetLineIndex="-1,4" editPoints="0.4047433327016705,0.08288372551204226 0.4449907850106598,-0.11365531613522073">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -23118,7 +23079,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop27f" aliases="copd3" targetLineIndex="-1,5" editPoints="0.5517498784502357,-0.13792319972708533 0.6105619534397437,0.09734943961913523">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="cop27f" aliases="copd3" targetLineIndex="-1,5" editPoints="0.5517498784502362,-0.13792319972708533 0.6105619534397442,0.09734943961913523">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -23301,7 +23262,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 <celldesigner:lineDirection arm="2" index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints num0="2" num1="1" num2="2" tShapeIndex="0">0.30500000000000327,0.0 0.30500000000000327,0.0 0.4999999999999929,0.4999999999999991 0.8545454545454447,3.552713678800501E-15 0.8545454545454447,3.552713678800501E-15 0.09165302782324147,0.5040916530278192</celldesigner:editPoints>
+<celldesigner:editPoints num0="2" num1="1" num2="2" tShapeIndex="0">0.30500000000000327,3.552713678800501E-15 0.30500000000000327,3.552713678800501E-15 0.49999999999998934,0.5000000000000009 0.8545454545454447,-3.552713678800501E-15 0.8545454545454447,-3.552713678800501E-15 0.09165302782324147,0.504091653027821</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
 <celldesigner:modification type="CATALYSIS" modifiers="cop290" aliases="cop178" targetLineIndex="0,3" editPoints="0.6662017378026013,0.4715686401271775">
@@ -23733,6 +23694,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:32525548"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>
@@ -24422,7 +24388,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:GateMember>
-<celldesigner:GateMember type="CATALYSIS" aliases="cop139" targetLineIndex="-1,0" editPoints="0.08364611260054389,-0.10080428954423182 0.775335120643426,-0.1651474530831054">
+<celldesigner:GateMember type="CATALYSIS" aliases="cop139" targetLineIndex="-1,0" editPoints="0.08364611260054389,-0.10080428954423093 0.775335120643426,-0.16514745308310452">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -24564,7 +24530,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="UNKNOWN_CATALYSIS" modifiers="cop27c" aliases="copcf" targetLineIndex="-1,2" editPoints="0.004857771519953147,0.009891884554617869 0.8105517684934016,-0.3857736057454555">
+<celldesigner:modification type="UNKNOWN_CATALYSIS" modifiers="cop27c" aliases="copcf" targetLineIndex="-1,2" editPoints="0.004857771519953147,0.009891884554618091 0.8105517684934016,-0.3857736057454553">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -24634,7 +24600,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="UNKNOWN_CATALYSIS" modifiers="cop27c" aliases="copcf" targetLineIndex="-1,2" editPoints="0.005781084811566473,0.008639371402918039 0.6964988284767468,-0.4535583592830543">
+<celldesigner:modification type="UNKNOWN_CATALYSIS" modifiers="cop27c" aliases="copcf" targetLineIndex="-1,2" editPoints="0.005781084811566473,0.008639371402917817 0.6964988284767468,-0.45355835928305455">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -24763,7 +24729,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 <celldesigner:lineDirection index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.4950205007971127,0.27801732777327715 0.7333210674599029,-0.14628595862426863</celldesigner:editPoints>
+<celldesigner:editPoints>0.4950205007971127,0.27801732777327715 0.7333210674599064,-0.14628595862427574</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -25059,6 +25025,15 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re10382">
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00309" species="cop2e8">
@@ -26210,7 +26185,7 @@ inhibiting various carbonic anhydrases in vascular tissue
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="TRIGGER" modifiers="cop2f5" aliases="cop16f" targetLineIndex="-1,2" editPoints="0.2274538967208679,0.2819598078022342 0.8332401496254178,-0.206721344582851">
+<celldesigner:modification type="TRIGGER" modifiers="cop2f5" aliases="cop16f" targetLineIndex="-1,2" editPoints="0.2274538967208688,0.28195980780223506 0.8332401496254178,-0.2067213445828501">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -26592,6 +26567,11 @@ inhibiting various carbonic anhydrases in vascular tissue
 <rdf:li rdf:resource="urn:miriam:pubmed:12045105"/>
 </rdf:Bag>
 </bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
 </rdf:Description>
 </rdf:RDF>
 </annotation>

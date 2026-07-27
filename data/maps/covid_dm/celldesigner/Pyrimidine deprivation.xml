@@ -6513,13 +6513,13 @@ Charge: 0
 </rdf:RDF>
 </annotation>
 </species>
-<species metaid="s148" id="s148" name="HCoVs_space_Type_space_I_space_Ifn_space_signalling (WP4868)" compartment="c10" initialAmount="0">
+<species metaid="s148" id="s148" name="HCoVs Type I Ifn signalling (WP4868)" compartment="c10" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
 <celldesigner:speciesIdentity>
 <celldesigner:class>PHENOTYPE</celldesigner:class>
-<celldesigner:name>HCoVs_space_Type_space_I_space_Ifn_space_signalling (WP4868)</celldesigner:name>
+<celldesigner:name>HCoVs_space_Type_space_I_space_Ifn_space_signalling_space_(WP4868)</celldesigner:name>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -6774,7 +6774,7 @@ Charge: 0
 </listOfModifiers>
 </reaction>
 <reaction metaid="re9" id="re9" reversible="false">
-<annotation>
+<notes><html xmlns="http://www.w3.org/1999/xhtml"><head><title/></head><body>https://identifiers.org/reactome:R-HSA-15869</body></html></notes><annotation>
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
 <celldesigner:baseReactants>
@@ -6821,15 +6821,6 @@ Charge: 0
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re9">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:reactome:REACT_1698"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00008" species="s_id_sa23">
@@ -8180,7 +8171,7 @@ Charge: 0
 </listOfProducts>
 </reaction>
 <reaction metaid="re2" id="re2" reversible="false">
-<annotation>
+<notes><html xmlns="http://www.w3.org/1999/xhtml"><head><title/></head><body>https://identifiers.org/reactome:R-HSA-73577.6</body></html></notes><annotation>
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
 <celldesigner:baseReactants>
@@ -8290,15 +8281,6 @@ Charge: 0
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re2">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:reactome:REACT_73577"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00060" species="s_id_sa1">
@@ -8447,7 +8429,7 @@ Charge: 0
 </listOfModifiers>
 </reaction>
 <reaction metaid="re4" id="re4" reversible="false">
-<annotation>
+<notes><html xmlns="http://www.w3.org/1999/xhtml"><head><title/></head><body>https://identifiers.org/reactome:R-HSA-15869</body></html></notes><annotation>
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
 <celldesigner:baseReactants>
@@ -8509,15 +8491,6 @@ Charge: 0
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re4">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:reactome:REACT_1698"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00072" species="s_id_sa3">
@@ -8945,7 +8918,7 @@ Charge: 0
 </listOfProducts>
 </reaction>
 <reaction metaid="re7" id="re7" reversible="false">
-<annotation>
+<notes><html xmlns="http://www.w3.org/1999/xhtml"><head><title/></head><body>https://identifiers.org/reactome:R-HSA-15869</body></html></notes><annotation>
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
 <celldesigner:baseReactants>
@@ -9005,15 +8978,6 @@ Charge: 0
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re7">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:reactome:REACT_1698"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00092" species="s_id_sa6">
@@ -9296,7 +9260,7 @@ Charge: 0
 </listOfProducts>
 </reaction>
 <reaction metaid="re5" id="re5" reversible="false">
-<annotation>
+<notes><html xmlns="http://www.w3.org/1999/xhtml"><head><title/></head><body>https://identifiers.org/reactome:R-HSA-15869</body></html></notes><annotation>
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
 <celldesigner:baseReactants>
@@ -9377,21 +9341,7 @@ Charge: 0
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re5">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:reactome:REACT_1698"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:doi:10.1101%2F2020.03.11.983056"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re5"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:doi:10.1101%2F2020.03.11.983056"/></rdf:Bag></bqbiol:isDescribedBy></rdf:Description></rdf:RDF></annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00105" species="s_id_sa4">
 <annotation>
@@ -9750,7 +9700,7 @@ Charge: 0
 </listOfModifiers>
 </reaction>
 <reaction metaid="re3" id="re3" reversible="false">
-<annotation>
+<notes><html xmlns="http://www.w3.org/1999/xhtml"><head><title/></head><body>https://identifiers.org/reactome:R-HSA-15869</body></html></notes><annotation>
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
 <celldesigner:baseReactants>
@@ -9811,15 +9761,6 @@ Charge: 0
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#re3">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:reactome:REACT_1698"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
 </annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00118" species="s_id_sa2">

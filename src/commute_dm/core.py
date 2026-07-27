@@ -24,50 +24,54 @@ import momapy_kb.core
 import commute_dm.utils  # noqa: F401
 
 
-def get_interface(session):
+def get_interface(
+    session,
+    collection_names=("COVID_DM_CD", "PD_DM_CD", "AD_KG_BEL"),
+):
+    """Compute the shared-UniProt protein interface between given collections.
+
+    All collections (CellDesigner maps and the BEL KGs alike) now carry their
+    protein cross-references as uniform UniProt RDF annotations
+    (`urn:miriam:uniprot:<id>` on a `:Protein` annotation key), so the interface
+    is a single join over those annotations -- no CellDesigner/BEL special casing,
+    no reaching inside BEL nodes, no `hgnc.symbol`. A UniProt id is in the
+    interface when it is shared by **all** of `collection_names`.
+
+    Args:
+        collection_names: the collections to intersect. Passing an explicit set
+            is what distinguishes, e.g., the AF collections from the non-AF ones.
+
+    Returns:
+        A dict mapping each shared UniProt accession to the list of
+        `{"collection": <Collection node>, "entry": <CollectionEntry node>,
+        "node": <Protein node>}` it was found in.
+    """
+    collection_names = list(collection_names)
     query = """
-       CALL () {
-            MATCH
-                (dm_cd_collection:Collection),
-                (dm_cd_collection)-[:HAS_ENTRY]->(dm_cd_entry:CollectionEntry),
-                (dm_cd_entry)-[:HAS_ELEMENT_TO_ANNOTATIONS]->(dm_cd_annotations:Mapping),
-                (dm_cd_entry)-[:HAS_OBJ]->(dm_cd_map:CellDesignerMap)-[:HAS_MODEL]->(dm_cd_model:CellDesignerModel),
-                (dm_cd_annotations)-[:HAS_ITEM]->(dm_cd_annotations_item:Item),
-                (dm_cd_annotations_item)-[:HAS_KEY]->(dm_cd_protein:Protein),
-                (dm_cd_annotations_item)-[:HAS_VALUE]->(dm_cd_annotations_bag:Bag),
-                (dm_cd_annotations_bag)-[:HAS_ITEM]->(dm_cd_annotation:RDFAnnotation)
-            WITH
-                split(dm_cd_annotation.resources[0], ":")[2] AS dm_cd_namespace,
-                split(dm_cd_annotation.resources[0], ":")[-1] AS dm_cd_identifier,
-                dm_cd_collection AS dm_cd_collection,
-                dm_cd_entry AS dm_cd_entry,
-                dm_cd_protein AS dm_cd_protein
-            WHERE
-                dm_cd_namespace = "hgnc.symbol"
-            RETURN
-                dm_cd_identifier AS identifier, dm_cd_collection AS collection, dm_cd_entry AS entry, dm_cd_protein AS protein
-            UNION
-            MATCH
-                (ad_collection:Collection {name: "AD_KG_BEL"}),
-                (ad_collection)-[:HAS_ENTRY]->(ad_entry:CollectionEntry),
-                (ad_entry)-[:HAS_OBJ]->(ad_model:BELModel),
-                (ad_model)-[:HAS_SUBGRAPH]->(ad_subgraph),
-                (ad_subgraph)-[:HAS_NODE]->(ad_protein:Protein)
-            WHERE
-                ad_protein.namespace = "HGNC"
-            RETURN
-                ad_protein.name AS identifier, ad_collection AS collection, ad_entry AS entry, ad_protein AS protein
-        }
+        MATCH
+            (collection:Collection)-[:HAS_ENTRY]->(entry:CollectionEntry),
+            (entry)-[:HAS_ELEMENT_TO_ANNOTATIONS]->(annotations:Mapping)-[:HAS_ITEM]->(item:Item),
+            (item)-[:HAS_KEY]->(protein:Protein),
+            (item)-[:HAS_VALUE]->(annotations_bag:Bag)-[:HAS_ITEM]->(annotation:RDFAnnotation)
+        WHERE
+            collection.name IN $collection_names
+        UNWIND annotation.resources AS resource
+        WITH collection, entry, protein, resource
+        WHERE resource STARTS WITH "urn:miriam:uniprot:"
+        WITH split(resource, ":")[-1] AS identifier, collection, entry, protein
         WITH
             identifier AS identifier,
-            collect(DISTINCT [collection]) AS collections,
+            collect(DISTINCT collection.name) AS matched_collections,
             collect(DISTINCT [collection, entry, protein]) AS collections_entries_proteins
         WHERE
-            size(collections) >= 3
+            size(matched_collections) = size($collection_names)
         RETURN
             identifier, collections_entries_proteins
     """
-    result = session.execute_query(query)
+    result = session.execute_query(
+        query,
+        params={"collection_names": collection_names},
+    )
     interface = {}
     for row in result:
         identifier = row["identifier"]
