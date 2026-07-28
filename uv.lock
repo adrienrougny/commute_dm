@@ -1801,7 +1801,6 @@ provides-extras = ["test"]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "casq", specifier = ">=1.4.4" },
     { name = "griffe-fieldz", specifier = ">=0.1.2" },
     { name = "griffe-inherited-docstrings", specifier = ">=1.1.1" },
     { name = "mkdocs-gen-files", specifier = ">=0.5.0" },
