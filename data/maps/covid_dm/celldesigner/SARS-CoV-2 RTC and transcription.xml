@@ -2560,7 +2560,7 @@ Assembly of the Replication Transcription Complex and Transcription of SARS-CoV-
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="s_id_glyph1" id="s_id_glyph1" name="double membrane vesicle viral factory" size="1" units="volume" outside="c2">
 <annotation>
 <celldesigner:extension>

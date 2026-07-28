@@ -2189,7 +2189,7 @@ All of the contents of a cell excluding the plasma membrane and nucleus, but inc
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="s_id_ca4" id="s_id_ca4" name="cell_space_membrane" size="1" units="volume" outside="s_id_ca5">
+<compartment metaid="s_id_ca4" id="s_id_ca4" name="cell membrane" size="1" units="volume" outside="s_id_ca5">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -2202,7 +2202,7 @@ The membrane surrounding a cell that separates the cell from its external enviro
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>cell_space_membrane</celldesigner:name>
+<celldesigner:name>cell membrane</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca4">
@@ -2215,11 +2215,11 @@ The membrane surrounding a cell that separates the cell from its external enviro
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
-<compartment metaid="s_id_ca7" id="s_id_ca7" name="extracellular_space_region" size="1" units="volume" outside="default">
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
+<compartment metaid="s_id_ca7" id="s_id_ca7" name="extracellular region" size="1" units="volume" outside="default">
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>extracellular_space_region</celldesigner:name>
+<celldesigner:name>extracellular region</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca7">

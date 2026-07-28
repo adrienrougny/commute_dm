@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:celldesigner="http://www.sbml.org/2001/ns/celldesigner" level="2" version="4">
 <model metaid="untitled" id="untitled">
 <notes>
@@ -14,7 +14,7 @@ Sara Sadat Aghamiri, Computational Systems Biology Engineer; Institut national d
  Vidisha Singh, GenHotel Laboratory, University of Evry-Paris Saclay, Évry, France
 <br/>
 <br/>
-Anna Niarakis, University of Évry Val d&apos;Essonne, Évry, France
+Anna Niarakis, University of Évry Val d'Essonne, Évry, France
 <br/>
 <br/>
 Description from Fung and Liu, 2019:
@@ -9102,10 +9102,10 @@ Pubmed_ID: 31226023
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="s_id_ca1" id="s_id_ca1" name="cell_space_membrane" size="1" units="volume" outside="s_id_ca2">
+<compartment metaid="s_id_ca1" id="s_id_ca1" name="cell membrane" size="1" units="volume" outside="s_id_ca2">
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>cell_space_membrane</celldesigner:name>
+<celldesigner:name>cell membrane</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca1">
@@ -9118,10 +9118,10 @@ Pubmed_ID: 31226023
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="s_id_ca9" id="s_id_ca9" name="endoplasmic_space_reticulum" size="1" units="volume" outside="s_id_ca2">
+<compartment metaid="s_id_ca9" id="s_id_ca9" name="endoplasmic reticulum" size="1" units="volume" outside="s_id_ca2">
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>endoplasmic_space_reticulum</celldesigner:name>
+<celldesigner:name>endoplasmic reticulum</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca9">
@@ -9134,11 +9134,11 @@ Pubmed_ID: 31226023
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
-<compartment metaid="s_id_ca8" id="s_id_ca8" name="extracellular_space_region" size="1" units="volume" outside="default">
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
+<compartment metaid="s_id_ca8" id="s_id_ca8" name="extracellular region" size="1" units="volume" outside="default">
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>extracellular_space_region</celldesigner:name>
+<celldesigner:name>extracellular region</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca8">
@@ -9302,20 +9302,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa34" id="s_id_sa34" name="IFNB1" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: IFNB1
-Previous Symbols: IFNB
-HGNC_ID: 5434
-EntrezGene_ID: 3456
-RefSeq_ID: NM_002176
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -9450,19 +9436,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa298" id="s_id_sa298" name="ISG15" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: ISG15
-Previous Symbols: G1P2
-HGNC_ID: 4053
-EntrezGene_ID: 9636
-RefSeq_ID: NM_005101
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -9732,20 +9705,6 @@ RefSeq_ID: NM_005101
 </annotation>
 </species>
 <species metaid="s_id_sa33" id="s_id_sa33" name="IFNB1" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: IFNB1
-Previous Symbols: IFNB
-HGNC_ID: 5434
-EntrezGene_ID: 3456
-RefSeq_ID: NM_002176
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10078,16 +10037,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa186" id="s_id_sa186" name="viral dsRNA" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 31226023, 19052324
-SIGNOR-SCISOVG : Double-stranded RNA (dsRNA) is generated during replication of positive -strand RNA and DNA viruses.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10208,19 +10157,6 @@ SIGNOR-SCISOVG : Double-stranded RNA (dsRNA) is generated during replication of 
 </annotation>
 </species>
 <species metaid="s_id_sa299" id="s_id_sa299" name="ISG15" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: ISG15
-Previous Symbols: G1P2
-HGNC_ID: 4053
-EntrezGene_ID: 9636
-RefSeq_ID: NM_005101
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10282,19 +10218,6 @@ RefSeq_ID: NM_005101
 </annotation>
 </species>
 <species metaid="s_id_sa77" id="s_id_sa77" name="OAS3" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: OAS3
-HGNC_ID: 8088
-EntrezGene_ID: 4940
-RefSeq_ID: NM_006187
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10410,16 +10333,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa321" id="s_id_sa321" name="Azithromycin" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-HMDB0014352
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10893,19 +10806,6 @@ HMDB0014352
 </annotation>
 </species>
 <species metaid="s_id_sa74" id="s_id_sa74" name="OAS2" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: OAS2
-HGNC_ID: 8087
-EntrezGene_ID: 4939
-RefSeq_ID: NM_001032731
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -11292,16 +11192,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_csa25" id="s_id_csa25" name="TRAF3:TBK1:IKBKE" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 24622840
-SIGNOR-SCISOVG
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -11677,16 +11567,6 @@ SIGNOR-SCISOVG
 </annotation>
 </species>
 <species metaid="s_id_csa19" id="s_id_csa19" name="TBK1:IKBKE" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 31226023, 24622840
-SIGNOR-SCISOVG
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -11906,19 +11786,6 @@ SIGNOR-SCISOVG
 </annotation>
 </species>
 <species metaid="s_id_sa78" id="s_id_sa78" name="OAS3" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: OAS3
-HGNC_ID: 8088
-EntrezGene_ID: 4940
-RefSeq_ID: NM_006187
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -12209,20 +12076,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa44" id="s_id_sa44" name="OAS1" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: OAS1
-Previous Symbols: OIAS
-HGNC_ID: 8086
-EntrezGene_ID: 4938
-RefSeq_ID: NM_001032409
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -12282,19 +12135,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa38" id="s_id_sa38" name="IFNA1" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: IFNA1
-HGNC_ID: 5417
-EntrezGene_ID: 3439
-RefSeq_ID: NM_024013
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -12618,20 +12458,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa45" id="s_id_sa45" name="OAS1" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: OAS1
-Previous Symbols: OIAS
-HGNC_ID: 8086
-EntrezGene_ID: 4938
-RefSeq_ID: NM_001032409
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -12712,19 +12538,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa73" id="s_id_sa73" name="OAS2" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: OAS2
-HGNC_ID: 8087
-EntrezGene_ID: 4939
-RefSeq_ID: NM_001032731
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13163,19 +12976,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s_id_sa39" id="s_id_sa39" name="IFNA1" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: IFNA1
-HGNC_ID: 5417
-EntrezGene_ID: 3439
-RefSeq_ID: NM_024013
-Pubmed_ID: 31226023
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13498,16 +13298,6 @@ Pubmed_ID: 31226023
 </annotation>
 </species>
 <species metaid="s288" id="s288" name="Azithromycin" compartment="s_id_ca10" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-HMDB0014352
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13531,16 +13321,6 @@ HMDB0014352
 </annotation>
 </species>
 <species metaid="s290" id="s290" name="RIG1:MDA5" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 31226023, 19052324
-SIGNOR-SCISOVG
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13646,7 +13426,7 @@ SIGNOR-SCISOVG
 </celldesigner:extension>
 </annotation>
 </species>
-<species metaid="s_id_sa162" id="s_id_sa162" name="viral_space_replication" compartment="s_id_ca2" initialAmount="0">
+<species metaid="s_id_sa162" id="s_id_sa162" name="viral replication" compartment="s_id_ca2" initialAmount="0">
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -13680,16 +13460,6 @@ SIGNOR-SCISOVG
 </annotation>
 </species>
 <species metaid="s_id_sa259" id="s_id_sa259" name="viral dsRNA" compartment="s_id_ca10" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 31226023, 19052324
-SIGNOR-SCISOVG : Double-stranded RNA (dsRNA) is generated during replication of positive -strand RNA and DNA viruses.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>

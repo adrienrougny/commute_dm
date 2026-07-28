@@ -2020,7 +2020,7 @@ GeneID:1906
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="c1" id="c1" name="nucleus" size="1" units="volume" outside="c3">
 <annotation>
 <celldesigner:extension>
@@ -2120,19 +2120,6 @@ GeneID:1906
 </listOfCompartments>
 <listOfSpecies>
 <species metaid="s_id_sa1006" id="s_id_sa1006" name="EDN1" compartment="c3" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: EDN1
-HGNC_ID: 3176
-EntrezGene_ID: 1906
-RefSeq_ID: NM_001955
-GeneID:1906
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -2173,19 +2160,6 @@ GeneID:1906
 </annotation>
 </species>
 <species metaid="s_id_sa1007" id="s_id_sa1007" name="EDN1" compartment="c1" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Symbol: EDN1
-HGNC_ID: 3176
-EntrezGene_ID: 1906
-RefSeq_ID: NM_001955
-GeneID:1906
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -2229,16 +2203,6 @@ GeneID:1906
 </annotation>
 </species>
 <species metaid="s988" id="s988" name="EDN1:EDNRA" compartment="c3" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 7509919
-PMID:7509919
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -2469,16 +2433,6 @@ PMID:7509919
 </annotation>
 </species>
 <species metaid="s1823" id="s1823" name="EDN1:EDNRA" compartment="c9" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 7509919
-PMID:7509919
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4802,15 +4756,6 @@ PMID:7509919
 </listOfModifiers>
 </reaction>
 <reaction metaid="re86" id="re86" reversible="false" fast="false">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>33318627
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>

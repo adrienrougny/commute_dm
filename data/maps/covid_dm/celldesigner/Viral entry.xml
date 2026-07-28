@@ -108,26 +108,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s_id_sa2376">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P0DTC2"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:interpro:IPR002551"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa2376"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:interpro:IPR002551"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P0DTC2"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -239,31 +220,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s3706">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P0DTC2"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P59594"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:W6A028"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s3706"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P59594"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:W6A028"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P0DTC2"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -2171,31 +2128,7 @@ Set of pathways encompassing the replication cycle of SARS-CoV-2: attachment, en
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-<rdf:Description rdf:about="#s3911">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P0DTC2"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P59594"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:W6A028"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s4089"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P59594"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:W6A028"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P0DTC2"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -7559,8 +7492,8 @@ RefSeq_ID: NC_045512
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
-<compartment metaid="s_id_ca189" id="s_id_ca189" name="epithelial_space_cell" size="1" units="volume" outside="c31">
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
+<compartment metaid="s_id_ca189" id="s_id_ca189" name="epithelial cell" size="1" units="volume" outside="c31">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7573,7 +7506,7 @@ All of the contents of a cell excluding the plasma membrane and nucleus, but inc
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>epithelial_space_cell</celldesigner:name>
+<celldesigner:name>epithelial cell</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca189">
@@ -7586,7 +7519,7 @@ All of the contents of a cell excluding the plasma membrane and nucleus, but inc
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="s_id_ca197" id="s_id_ca197" name="SARS_minus_CoV_minus_2_space_virion" size="1" units="volume" outside="c31">
+<compartment metaid="s_id_ca197" id="s_id_ca197" name="SARS-CoV-2 virion" size="1" units="volume" outside="c31">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7599,7 +7532,7 @@ The complete fully infectious extracellular virus particle.
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>SARS_minus_CoV_minus_2_space_virion</celldesigner:name>
+<celldesigner:name>SARS-CoV-2 virion</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca197">
@@ -7617,7 +7550,7 @@ The complete fully infectious extracellular virus particle.
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="s_id_ca201" id="s_id_ca201" name="SARS_minus_CoV_minus_2_space_virion" size="1" units="volume" outside="s_id_ca206">
+<compartment metaid="s_id_ca201" id="s_id_ca201" name="SARS-CoV-2 virion" size="1" units="volume" outside="s_id_ca206">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7630,7 +7563,7 @@ The complete fully infectious extracellular virus particle.
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>SARS_minus_CoV_minus_2_space_virion</celldesigner:name>
+<celldesigner:name>SARS-CoV-2 virion</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca201">
@@ -7750,18 +7683,6 @@ A vacuole to which materials ingested by endocytosis are delivered.
 </annotation>
 </species>
 <species metaid="s_id_csa374" id="s_id_csa374" name="nucleocapsid" compartment="s_id_ca197" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: viral nucleocapsid
-SARS-CoV-2 (+)gRNA: NC_045512.2
-N: P0DTC9
-The complete protein-nucleic acid complex that is the packaged form of the genome in a virus particle.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -8243,18 +8164,6 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </annotation>
 </species>
 <species metaid="s163" id="s163" name="nucleocapsid" compartment="s_id_ca201" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: viral nucleocapsid
-SARS-CoV-2 (+)gRNA: NC_045512.2
-N: P0DTC9
-The complete protein-nucleic acid complex that is the packaged form of the genome in a virus particle.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -9533,18 +9442,6 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </annotation>
 </species>
 <species metaid="s3906" id="s3906" name="nucleocapsid" compartment="s_id_ca189" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: viral nucleocapsid
-SARS-CoV-2 (+)gRNA: NC_045512.2
-N: P0DTC9
-The complete protein-nucleic acid complex that is the packaged form of the genome in a virus particle.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -9666,17 +9563,6 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </annotation>
 </species>
 <species metaid="s_id_sa188" id="s_id_sa188" name="bafilomycin A1" compartment="s_id_ca189" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-[PMID:9572882]
-[PMID: 32353859]
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -10464,18 +10350,6 @@ The complete protein-nucleic acid complex that is the packaged form of the genom
 </annotation>
 </species>
 <species metaid="s4071" id="s4071" name="nucleocapsid" compartment="c43" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: viral nucleocapsid
-SARS-CoV-2 (+)gRNA: NC_045512.2
-N: P0DTC9
-The complete protein-nucleic acid complex that is the packaged form of the genome in a virus particle.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>

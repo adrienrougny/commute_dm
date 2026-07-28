@@ -560,7 +560,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop15"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.6"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.pr:PR%3A000035937"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D015951"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop15"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.pr:PR%3A000035937"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D015951"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.6"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -961,7 +961,7 @@ Description: Thrombosis model of COVID-19
 <title/>
 </head>
 <body>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop25"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.7"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D005341"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop25"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D005341"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.7"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -10111,10 +10111,10 @@ Description: Thrombosis model of COVID-19
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="cop22a" id="cop22a" name="endothelium,_space_vascular" size="1" units="volume" outside="cop22e">
+<compartment metaid="cop22a" id="cop22a" name="endothelium, vascular" size="1" units="volume" outside="cop22e">
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>endothelium,_space_vascular</celldesigner:name>
+<celldesigner:name>endothelium, vascular</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#cop22a">
@@ -10127,7 +10127,7 @@ Description: Thrombosis model of COVID-19
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="cop22b" id="cop22b" name="infected cell" size="1" units="volume" outside="cop22e">
 <annotation>
 <celldesigner:extension>
@@ -11007,31 +11007,7 @@ A highly soluble, elongated protein complex found in blood plasma and involved i
 <celldesigner:catalyzed reaction="cop317"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#cop24f">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D003179"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D051561"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:brenda:3.4.21.47"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:12440962"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop24f"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D003179"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D051561"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.47"/></rdf:Bag></bqbiol:is><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:12440962"/></rdf:Bag></bqbiol:isDescribedBy></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="cop250" id="cop250" name="s86" compartment="cop228" initialAmount="0">
 <notes>
@@ -11725,31 +11701,7 @@ A highly soluble, elongated protein complex found in blood plasma and involved i
 <celldesigner:catalyzed reaction="cop318"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#cop26a">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:brenda:34.4.21.47"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:pubmed:12440962"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D051566"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D003179"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop26a"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:12440962"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D051566"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D003179"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.47"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="cop26b" id="cop26b" name="C2a:C4b" compartment="cop228" initialAmount="0">
 <annotation>
@@ -11764,31 +11716,7 @@ A highly soluble, elongated protein complex found in blood plasma and involved i
 <celldesigner:catalyzed reaction="cop318"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#cop26b">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D051574"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:mesh:D050678"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:hgnc:1324"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:brenda:3.4.21.43"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop26b"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D051574"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:mesh:D050678"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:hgnc:1324"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.43"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="cop26c" id="cop26c" name="F5a" compartment="cop228" initialAmount="0" charge="0">
 <annotation>
@@ -11907,21 +11835,7 @@ A highly soluble, elongated protein complex found in blood plasma and involved i
 </celldesigner:state>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#cop270">
-<bqbiol:isDescribedBy>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:brenda:3.4.21.6"/>
-</rdf:Bag>
-</bqbiol:isDescribedBy>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.pr:PR%3A000035937"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#cop270"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.pr:PR%3A000035937"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:brenda:3.4.21.6"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="cop271" id="cop271" name="AGTR1" compartment="cop229" initialAmount="0">
 <annotation>
@@ -12869,16 +12783,6 @@ A protein complex produced by sequentially activated components of the complemen
 </annotation>
 </species>
 <species metaid="cop297" id="cop297" name="ACE2:S" compartment="cop22a" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>HGNC_ID: 13557
-ACE2-Spike complex
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -14607,10 +14511,9 @@ ACE2-Spike complex
 <head>
 <title/>
 </head>
-<body>Pubmed_ID: 8702639, 10544250, 10825173
+<body>Pubmed_ID: 8702639
 [FBN1-FBN2 interaction ]
-PMID:8702639
-PMID:10825173, 10544250
+PMID: 8702639
 </body>
 </html>
 </notes>
@@ -14644,16 +14547,6 @@ PMID:10825173, 10544250
 </annotation>
 </species>
 <species metaid="cop2e6" id="cop2e6" name="LOXL1:FBLN5" compartment="cop228" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 14745449
-PMID:14745449
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -14705,16 +14598,6 @@ PMID:8702639
 </annotation>
 </species>
 <species metaid="cop2e8" id="cop2e8" name="FBN1:FBLN2:FBLN5:Nsp9" compartment="cop228" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 32353859
-PMID:32353859
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -14786,22 +14669,6 @@ PMID:32353859
 </annotation>
 </species>
 <species metaid="cop2ec" id="cop2ec" name="zonisamide" compartment="cop22e" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-Formula: C8H8N2O3S | CAS: 68291-97-4 | ATC: N03AX15
-for use as an adjunctive therapy in adults with partial-onset seizures
-may be a carbonic anhydrase inhibitor
-may act by blocking repetitive firing of voltage-gated sodium channels leading to a reduction of T-type calcium channel currents,
- or by binding allosterically to GABA receptors. 
-latter action may inhibit the uptake of the inhibitory neurotransmitter GABA 
-while enhancing the uptake of the excitatory neurotransmitter glutamate.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>

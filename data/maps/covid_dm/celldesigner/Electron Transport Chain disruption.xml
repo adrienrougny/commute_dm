@@ -19289,7 +19289,7 @@ All of the contents of a cell excluding the plasma membrane and nucleus, but inc
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_ca4"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </compartment>
-<compartment metaid="s_id_ca3" id="s_id_ca3" name="mitochondrial_space_nucleoid" size="1" units="volume" outside="s_id_ca2">
+<compartment metaid="s_id_ca3" id="s_id_ca3" name="mitochondrial nucleoid" size="1" units="volume" outside="s_id_ca2">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19302,7 +19302,7 @@ The region of a mitochondrion to which the DNA is confined.
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>mitochondrial_space_nucleoid</celldesigner:name>
+<celldesigner:name>mitochondrial nucleoid</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca3">
@@ -19341,7 +19341,7 @@ A semiautonomous, self replicating organelle that occurs in varying numbers, sha
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="s_id_ca2" id="s_id_ca2" name="mitochondrial matrix" size="1" units="volume" outside="s_id_ca1">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19476,16 +19476,6 @@ The gel-like material, with considerable fine structure, that lies in the matrix
 </annotation>
 </species>
 <species metaid="s_id_csa94" id="s_id_csa94" name="TIMM23:TIMM17A:TIMM17B" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: TIM23 mitochondrial import inner membrane translocase complex
-The protein transport machinery of the mitochondrial inner membrane that typically transports proteins that possess a matrix-targeting N-terminal presequence. The TIM23 complex contains three essential Tim proteins: Tim17 and Tim23 are thought to build a preprotein translocation channel while Tim44 interacts transiently with the matrix heat-shock protein Hsp70 to form an ATP-driven import motor.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -19691,16 +19681,6 @@ The protein transport machinery of the mitochondrial inner membrane that typical
 </annotation>
 </species>
 <species metaid="s_id_csa23" id="s_id_csa23" name="complex 2" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: respiratory chain complex II
-A part of the respiratory chain, containing the four polypeptide subunits of succinate dehydrogenase, flavin-adenine dinucleotide and iron-sulfur. Catalyzes the oxidation of succinate by ubiquinone. Connects the TCA cycle with the respiratory chain.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -19854,16 +19834,6 @@ A part of the respiratory chain, containing the four polypeptide subunits of suc
 </annotation>
 </species>
 <species metaid="s_id_csa57" id="s_id_csa57" name="mt replication" compartment="s_id_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: mitochondrial DNA replication
-The process in which new strands of DNA are synthesized in the mitochondrion.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -19895,16 +19865,6 @@ The process in which new strands of DNA are synthesized in the mitochondrion.
 </annotation>
 </species>
 <species metaid="s_id_csa34" id="s_id_csa34" name="complex 3" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: respiratory chain complex III
-A protein complex that transfers electrons from ubiquinol to cytochrome c and translocates two protons across a membrane. The complex contains a core structure of three catalytic subunits: cytochrome b, the Rieske iron sulfur protein (ISP), and cytochrome c1, which are arranged in an integral membrane-bound dimeric complex; additional subunits are present, and vary among different species.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -20376,16 +20336,6 @@ A protein complex that transfers electrons from ubiquinol to cytochrome c and tr
 </annotation>
 </species>
 <species metaid="s_id_csa47" id="s_id_csa47" name="ATP synthase" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: mitochondrial proton-transporting ATP synthase complex
-A proton-transporting ATP synthase complex found in the mitochondrial membrane.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -20467,16 +20417,6 @@ A proton-transporting ATP synthase complex found in the mitochondrial membrane.
 </annotation>
 </species>
 <species metaid="s_id_csa24" id="s_id_csa24" name="complex 2" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: respiratory chain complex II
-A part of the respiratory chain, containing the four polypeptide subunits of succinate dehydrogenase, flavin-adenine dinucleotide and iron-sulfur. Catalyzes the oxidation of succinate by ubiquinone. Connects the TCA cycle with the respiratory chain.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -20502,17 +20442,6 @@ A part of the respiratory chain, containing the four polypeptide subunits of suc
 </annotation>
 </species>
 <species metaid="s_id_csa20" id="s_id_csa20" name="complex 1" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: respiratory chain complex I
-Pubmed_ID: 19355884
-Respiratory chain complex I is an enzyme of the respiratory chain. It consists of several polypeptide chains and is L-shaped, with a horizontal arm lying in the membrane and a vertical arm that projects into the matrix. The electrons of NADH enter the chain at this complex.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -20853,16 +20782,6 @@ Respiratory chain complex I is an enzyme of the respiratory chain. It consists o
 </annotation>
 </species>
 <species metaid="s_id_csa35" id="s_id_csa35" name="complex 4" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: respiratory chain complex IV
-A part of the respiratory chain, containing the 13 polypeptide subunits of cytochrome c oxidase, including cytochrome a and cytochrome a3. Catalyzes the oxidation of reduced cytochrome c by dioxygen (O2).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -20883,16 +20802,6 @@ A part of the respiratory chain, containing the 13 polypeptide subunits of cytoc
 </annotation>
 </species>
 <species metaid="s_id_csa84" id="s_id_csa84" name="complex 2" compartment="s_id_ca2" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: respiratory chain complex II
-A part of the respiratory chain, containing the four polypeptide subunits of succinate dehydrogenase, flavin-adenine dinucleotide and iron-sulfur. Catalyzes the oxidation of succinate by ubiquinone. Connects the TCA cycle with the respiratory chain.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -20962,16 +20871,6 @@ A part of the respiratory chain, containing the four polypeptide subunits of suc
 </annotation>
 </species>
 <species metaid="s_id_csa92" id="s_id_csa92" name="TOM complex" compartment="s_id_ca1" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: mitochondrial outer membrane translocase complex
-A large complex of the mitochondrial outer membrane that mediates transport of proteins into all mitochondrial compartments.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -21036,8 +20935,8 @@ A large complex of the mitochondrial outer membrane that mediates transport of p
 <head>
 <title/>
 </head>
-<body>Pubmed_ID: 32353859, 25997101
-Nsp6 binds DNAJC11 [PMID: 32353859]
+<body>Pubmed_ID: 25997101
+Nsp6 binds DNAJC11
 </body>
 </html>
 </notes>
@@ -21066,17 +20965,6 @@ Nsp6 binds DNAJC11 [PMID: 32353859]
 </annotation>
 </species>
 <species metaid="s_id_csa29" id="s_id_csa29" name="TIM complex" compartment="s_id_ca2" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-[PMID: 27554484]
-TIM Complex: Involved in the import and insertion of hydrophobic membrane proteins into the mitochondrial inner membrane. Regulates import of transmembrane proteins into the inner mitochondrial membrane. [PMID: 32353859]
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -21105,16 +20993,6 @@ TIM Complex: Involved in the import and insertion of hydrophobic membrane protei
 </annotation>
 </species>
 <species metaid="s374" id="s374" name="F-ATPase:Nsp6" compartment="s_id_ca2" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-Nsp6 binds ATP5MG [PMID: 32353859]
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -21326,9 +21204,8 @@ Nsp6 binds ATP5MG [PMID: 32353859]
 <head>
 <title/>
 </head>
-<body>Pubmed_ID: 32353859
-Tim29 is a novel subunit of the human TIM22 translocase and is involved in complex assembly and stability. [PMID:27554484]
-Nsp6 binds TIMM9, 10, 10B and 29. [PMID: 32353859]
+<body>Tim29 is a novel subunit of the human TIM22 translocase and is involved in complex assembly and stability. [PMID: 27554484]
+Nsp6 binds TIMM9, 10, 10B and 29.
 </body>
 </html>
 </notes>
@@ -22287,16 +22164,6 @@ Nsp6 binds TIMM9, 10, 10B and 29. [PMID: 32353859]
 </annotation>
 </species>
 <species metaid="s570" id="s570" name="TOM complex" compartment="s_id_ca1" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-TOM complex is made from TOMM 5, 7, 20, 22, 40 and 70.[https://www.genenames.org/data/genegroup/#!/group/1229]
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -22351,20 +22218,6 @@ TOM complex is made from TOMM 5, 7, 20, 22, 40 and 70.[https://www.genenames.org
 </annotation>
 </species>
 <species metaid="s_id_sa1412" id="s_id_sa1412" name="suramin" compartment="s_id_ca2" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-Formula: C51H40N6O23S6 | CAS: 145-63-1 | ATC: P01CX02
-A polyanionic compound with an unknown mechanism of action. 
-used in the treatment of African trypanosomiasis
-used clinically with diethylcarbamazine to kill the adult Onchocerca
-also been shown to have potent antineoplastic properties
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -22499,16 +22352,6 @@ also been shown to have potent antineoplastic properties
 </annotation>
 </species>
 <species metaid="s1244" id="s1244" name="SIRT5:suramin" compartment="s_id_ca2" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 17355872
-Pubmed:17355872
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>

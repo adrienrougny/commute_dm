@@ -8627,10 +8627,10 @@ Charge: 0
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="s_id_path_1_ca8" id="s_id_path_1_ca8" name="early_space_endosome" size="1" units="volume" outside="s_id_path_0_ca6">
+<compartment metaid="s_id_path_1_ca8" id="s_id_path_1_ca8" name="early endosome" size="1" units="volume" outside="s_id_path_0_ca6">
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>early_space_endosome</celldesigner:name>
+<celldesigner:name>early endosome</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_path_1_ca8">
@@ -8643,7 +8643,7 @@ Charge: 0
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="s_id_path_0_ca2" id="s_id_path_0_ca2" name="nucleus" size="1" units="volume" outside="s_id_path_0_ca6">
 <annotation>
 <celldesigner:extension>
@@ -8831,17 +8831,6 @@ MAM (mitochondria-associated endoplasmic reticulum membrane)
 </annotation>
 </species>
 <species metaid="s_id_path_1_csa14" id="s_id_path_1_csa14" name="SIGMAR1:ITPR3" compartment="s_id_path_1_ca9" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 30590907
-Under continuous ER Ca2+ depletion, Sig-1R was triggered to dissociate from BiP to bind IP3R3 (=ITPR3) and redistribute from MAM to the entire ER network (17981125).
-SigR1(=SIGMAR1) interacts with BiP (=HSPA5=GRP78) in normal condition. When ER is under stress or when ER Ca2+ is depleted, SigR1 switches its interacting partner from BiP to IP3R. This process protects IP3R from degradation, resulting in restoration of Ca2+ transfer from the ER to mitochondria (PMID:30590907).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -8908,9 +8897,9 @@ SigR1(=SIGMAR1) interacts with BiP (=HSPA5=GRP78) in normal condition. When ER i
 <head>
 <title/>
 </head>
-<body>Pubmed_ID: 30590033, 29491369
-GRP75 (=HSPA9) localizes in mitochondria-associated membranes (MAMs) and acts as a bridging molecule between the two organelles by assembling the IP3R-GRP75-VDAC complex, which is involved in the transport of Ca2+ from the endoplasmic reticulum (ER) to mitochondria (PMID:30590033).
-In mammalian cells, four types of connectors between ER and mitochondria have been identified. One of these connectors comprises IP3R3(= ITPR3) that forms a complex with the 75 kDa glucose-regulated protein GRP75 (= HSPA9) and the mitochondrial voltage-dependent anion channel 1 (VDAC1), which serves as a calcium exchange platform between ER and mitochondria. These three proteins are referred to as tethering and calcium signaling proteins at MAMs (PMID:29491369).
+<body>Pubmed_ID: 29491369
+GRP75 (=HSPA9) localizes in mitochondria-associated membranes (MAMs) and acts as a bridging molecule between the two organelles by assembling the IP3R-GRP75-VDAC complex, which is involved in the transport of Ca2+ from the endoplasmic reticulum (ER) to mitochondria.
+In mammalian cells, four types of connectors between ER and mitochondria have been identified. One of these connectors comprises IP3R3(= ITPR3) that forms a complex with the 75 kDa glucose-regulated protein GRP75 (= HSPA9) and the mitochondrial voltage-dependent anion channel 1 (VDAC1), which serves as a calcium exchange platform between ER and mitochondria. These three proteins are referred to as tethering and calcium signaling proteins at MAMs (PMID: 29491369).
 </body>
 </html>
 </notes>
@@ -8975,18 +8964,6 @@ In mammalian cells, four types of connectors between ER and mitochondria have be
 </annotation>
 </species>
 <species metaid="s_id_path_1_csa13" id="s_id_path_1_csa13" name="SIGMAR1:HSPA5" compartment="s_id_path_1_ca9" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 30590907, 25704011
-IP were performed in wild-type CHO cells. Endogenous Sig-1Rs co-immunoprecipitated BiP (=HSPA5=GRP78), and conversely BiP co-immunoprecipitated endogenous Sig-1Rs. Importantly, efficient coIP of these endogenous proteins requires using lysates from MAM in which both Sig-1Rs and BiP are enriched. No other ER chaperones, including GRP94, calnexin, calreticulin, PDI, ERp57, and cyclophilin B could be detected in immunoprecipitants of endogenous Sig-1Rs, indicating a highly specific interaction between Sig-1Rs and BiP (PMID:17981125).
-BiP(= GRP78 = HSPA5) regulates the chaperone activity of the sigma-1 receptor. The sigma-1 receptor forming a complex with BiP is in a dormant state, whereas the free sigma-1 receptor that dissociates from BiP exerts maximum chaperone activity. The association between sigma-1 receptors and BiP is Ca2+-dependent, and thus the depletion of ER Ca2+ activates the sigma-1 receptor chaperone. Importantly, even in the presence of ER Ca2+, sigma-1 receptor agonists cause the dissociation of BiP from sigma-1 receptors, leading to activation of sigma-1 receptor chaperone (PMID:25704011).
-When ER is under stress or when ER Ca2+ is depleted, SigR1 switches its interacting partner from BiP (=HSPA5=GRP78) to IP3R (=ITPR3). This process protects IP3R from degradation, resulting in restoration of Ca2+ transfer from the ER to mitochondria.(PMID:30590907)
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9022,16 +8999,6 @@ When ER is under stress or when ER Ca2+ is depleted, SigR1 switches its interact
 </annotation>
 </species>
 <species metaid="s_id_path_1_csa17" id="s_id_path_1_csa17" name="MFN2" compartment="s_id_path_1_ca9" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-In mammalian cells, four types of connectors between ER and mitochondria have been identified. One of them comprises MFN2, a dynamin-related GTPase identified at the ER surface, contributes to ER and mitochondria tethering either by homologous interaction between ER-associated MFN2 and mitochondrial MFN2 or by heterologous interaction with mitofusin 1 (MFN1), a homolog protein only located at the outer mitochondrial membrane (PMID:29491369).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9091,16 +9058,6 @@ In mammalian cells, four types of connectors between ER and mitochondria have be
 </annotation>
 </species>
 <species metaid="s_id_path_1_csa18" id="s_id_path_1_csa18" name="PACS2:ADAM17" compartment="s_id_path_1_ca8" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>The sorting protein PACS-2 was identified as a regulator of ADAM17 trafficking and ErbB signalling. PACS-2 regulates cell-surface availability of mature ADAM17. It was found that PACS-2 interacted with mature ADAM17, and that PACS-2/ADAM17 co-localization overlapped substantially with transferrin-positive early endosomes. PACS-2 knockdown decreases the recycling and stability of internalized ADAM17. Hence, PACS-2 sustains ADAM17 cell-surface activity by diverting ADAM17 away from degradative pathways (PMID:26108729).
-The metalloproteinase ADAM17 is responsible for mediating ACE2 shedding from the cell membrane-bound domain, which can be promoted by Ang II, and release of ACE2 as a soluble form in plasma impairing brain ACE2 compensatory activity and thus contributing to the development of neurogenic hypertension. ADAM17 (a disintegrin and metalloproteinase 17)-mediated proteolytic cleavage of ACE2 is upregulated by endocytosed SARS-CoV-2 spike proteins (PMID:32264791).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9140,15 +9097,6 @@ The metalloproteinase ADAM17 is responsible for mediating ACE2 shedding from the
 </annotation>
 </species>
 <species metaid="s_id_path_1_csa1" id="s_id_path_1_csa1" name="FIS1:BCAP31" compartment="s_id_path_1_ca9" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Fis1 and Bap31 interact. The Fis1-Bap31 complex (ARCosome) that spans the mitochondria-ER interface serves as a platform to activate the initiator procaspase-8, and thereby bridges two critical organelles for apoptosis signalling (PMID:21183955).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9180,8 +9128,8 @@ The metalloproteinase ADAM17 is responsible for mediating ACE2 shedding from the
 <title/>
 </head>
 <body>Pubmed_ID: 29491369
-In mammalian cells, four types of connectors between ER and mitochondria have been identified. One of these connectors relies on vesicle-associated membrane protein-associated protein B (VAPB), an ER protein binding the mitochondrial protein tyrosine phosphatase-interacting protein 51 (PTPIP51 = RMDN3).(PMID:29491369)
-It is shown that the VAPB-PTPIP51 tethers regulate autophagy and that expression of a synthetic linker protein that artificially tethers ER and mitochondria also reduces autophagosome formation, and that this artificial tether rescues the effects of siRNA loss of VAPB or PTPIP51 on autophagy.Overexpression of VAPB or PTPIP51 to tighten ER-mitochondria contacts impairs, whereas small interfering RNA (siRNA)-mediated loss of VAPB or PTPIP51 to loosen contacts stimulates, autophagosome formation (PMID:28132811).
+In mammalian cells, four types of connectors between ER and mitochondria have been identified. One of these connectors relies on vesicle-associated membrane protein-associated protein B (VAPB), an ER protein binding the mitochondrial protein tyrosine phosphatase-interacting protein 51 (PTPIP51 = RMDN3).(PMID: 29491369)
+It is shown that the VAPB-PTPIP51 tethers regulate autophagy and that expression of a synthetic linker protein that artificially tethers ER and mitochondria also reduces autophagosome formation, and that this artificial tether rescues the effects of siRNA loss of VAPB or PTPIP51 on autophagy.Overexpression of VAPB or PTPIP51 to tighten ER-mitochondria contacts impairs, whereas small interfering RNA (siRNA)-mediated loss of VAPB or PTPIP51 to loosen contacts stimulates, autophagosome formation.
 </body>
 </html>
 </notes>
@@ -9260,16 +9208,6 @@ It is shown that the VAPB-PTPIP51 tethers regulate autophagy and that expression
 </annotation>
 </species>
 <species metaid="s_id_path_1_csa4" id="s_id_path_1_csa4" name="MFN1:MFN2" compartment="s_id_path_1_ca9" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 29491369
-In mammalian cells, four types of connectors between ER and mitochondria have been identified. One of them comprises MFN2, a dynamin-related GTPase identified at the ER surface, contributes to ER and mitochondria tethering either by homologous interaction between ER-associated MFN2 and mitochondrial MFN2 or by heterologous interaction with mitofusin 1 (MFN1), a homolog protein only located at the outer mitochondrial membrane (PMID:29491369).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9295,16 +9233,6 @@ In mammalian cells, four types of connectors between ER and mitochondria have be
 </annotation>
 </species>
 <species metaid="s_id_path_1_csa16" id="s_id_path_1_csa16" name="MCU:MICU1:MICU2:SMDT1" compartment="s_id_path_1_ca3" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-MICU1, MICU2, MCUb and EMRE were detected by protein immunoblotting after immunoprecipitation of MCU-FLAG from HEK-293T and HeLa cells. EMRE was required for the interaction of MCU with MICU1 and MICU2. EMRE is essential for in vivo uniporter current and additionally bridges the calcium-sensing role of MICU1 and MICU2 with the calcium conducting role of MCU. It is proposed that EMRE interacts with MICU1 and MICU2 in the IMS and with MCU oligomers in the inner membrane, thus linking the calcium sensing activity of MICU1 and MICU2 to the channel activity of MCU, as in cells lacking EMRE, the interaction between MCU-FLAG and MICU1 and MICU2 was completely lost. Similarly, MCU was not associated with immunoprecipitated MICU1-FLAG in cells lacking EMRE. In the absence of EMRE, MCU still oligomerized and interacted with MCUb. Moreover, in the absence of EMRE, the interaction between MICU1 and MICU2 was intact. These data indicate that loss of EMRE specifically interrupted the association of MCU with MICU1 and MICU2. Furthermore, MCUb, MICU1 and MICU2 appear to be dispensable for MCU-EMRE interaction because in cells lacking MCUb or MICU1, EMRE was still associated with immunoprecipitated MCU-FLAG (PMID:24231807).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -9381,7 +9309,7 @@ MICU1, MICU2, MCUb and EMRE were detected by protein immunoblotting after immuno
 <title/>
 </head>
 <body>Pubmed_ID: 26968367
-MICU1, MICU2, MCUb and EMRE were detected by protein immunoblotting after immunoprecipitation of MCU-FLAG from HEK-293T and HeLa cells. EMRE was required for the interaction of MCU with MICU1 and MICU2. EMRE is essential for in vivo uniporter current and additionally bridges the calcium-sensing role of MICU1 and MICU2 with the calcium conducting role of MCU. It is proposed that EMRE interacts with MICU1 and MICU2 in the IMS and with MCU oligomers in the inner membrane, thus linking the calcium sensing activity of MICU1 and MICU2 to the channel activity of MCU, as in cells lacking EMRE, the interaction between MCU-FLAG and MICU1 and MICU2 was completely lost. Similarly, MCU was not associated with immunoprecipitated MICU1-FLAG in cells lacking EMRE. In the absence of EMRE, MCU still oligomerized and interacted with MCUb. Moreover, in the absence of EMRE, the interaction between MICU1 and MICU2 was intact. These data indicate that loss of EMRE specifically interrupted the association of MCU with MICU1 and MICU2. Furthermore, MCUb, MICU1 and MICU2 appear to be dispensable for MCU-EMRE interaction because in cells lacking MCUb or MICU1, EMRE was still associated with immunoprecipitated MCU-FLAG (PMID:24231807).
+MICU1, MICU2, MCUb and EMRE were detected by protein immunoblotting after immunoprecipitation of MCU-FLAG from HEK-293T and HeLa cells. EMRE was required for the interaction of MCU with MICU1 and MICU2. EMRE is essential for in vivo uniporter current and additionally bridges the calcium-sensing role of MICU1 and MICU2 with the calcium conducting role of MCU. It is proposed that EMRE interacts with MICU1 and MICU2 in the IMS and with MCU oligomers in the inner membrane, thus linking the calcium sensing activity of MICU1 and MICU2 to the channel activity of MCU, as in cells lacking EMRE, the interaction between MCU-FLAG and MICU1 and MICU2 was completely lost. Similarly, MCU was not associated with immunoprecipitated MICU1-FLAG in cells lacking EMRE. In the absence of EMRE, MCU still oligomerized and interacted with MCUb. Moreover, in the absence of EMRE, the interaction between MICU1 and MICU2 was intact. These data indicate that loss of EMRE specifically interrupted the association of MCU with MICU1 and MICU2. Furthermore, MCUb, MICU1 and MICU2 appear to be dispensable for MCU-EMRE interaction because in cells lacking MCUb or MICU1, EMRE was still associated with immunoprecipitated MCU-FLAG.
 </body>
 </html>
 </notes>
@@ -9419,15 +9347,6 @@ MICU1, MICU2, MCUb and EMRE were detected by protein immunoblotting after immuno
 </annotation>
 </species>
 <species metaid="s269" id="s269" name="HSPA5:S" compartment="c10" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>More than one host-cell receptor is reported to be recognized by the viral spike protein, among them is the cell-surface Heat Shock Protein A5 (HSPA5), also termed GRP78 or BiP. Upon viral infection, HSPA5 is upregulated, then translocating to the cell membrane where it is subjected to be recognized by the SARS-CoV-2 spike (PMID:32340551).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
@@ -9448,15 +9367,6 @@ MICU1, MICU2, MCUb and EMRE were detected by protein immunoblotting after immuno
 </annotation>
 </species>
 <species metaid="s281" id="s281" name="ACE2:S (SARS)" compartment="s_id_path_0_ca6" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>ACE2 must be cell attached to function as a SARS-CoV receptor(PMID:19411314).
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>

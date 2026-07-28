@@ -12,6 +12,7 @@ dependencies = [
   "pybiomart>=0.2.0",
   "momapy-kb[neo4j]",
   "momapy[skia]",
+  "pd2af",
   "fieldz-kb",
   "pylpg",
   "matplotlib>=3.10.9",

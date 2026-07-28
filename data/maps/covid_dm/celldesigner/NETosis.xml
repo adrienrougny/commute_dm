@@ -949,8 +949,8 @@ RefSeq_ID: NC_045512
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
-<compartment metaid="s_id_ca189" id="s_id_ca189" name="epithelial_space_cell" size="1" units="volume" outside="c31">
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
+<compartment metaid="s_id_ca189" id="s_id_ca189" name="epithelial cell" size="1" units="volume" outside="c31">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -963,11 +963,11 @@ All of the contents of a cell excluding the plasma membrane and nucleus, but inc
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>epithelial_space_cell</celldesigner:name>
+<celldesigner:name>epithelial cell</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_ca189"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </compartment>
-<compartment metaid="s_id_ca197" id="s_id_ca197" name="SARS_minus_CoV_minus_2_space_virion" size="1" units="volume" outside="c31">
+<compartment metaid="s_id_ca197" id="s_id_ca197" name="SARS-CoV-2 virion" size="1" units="volume" outside="c31">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -980,7 +980,7 @@ The complete fully infectious extracellular virus particle.
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>SARS_minus_CoV_minus_2_space_virion</celldesigner:name>
+<celldesigner:name>SARS-CoV-2 virion</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca197">
@@ -1042,18 +1042,6 @@ The complete fully infectious extracellular virus particle.
 </annotation>
 </species>
 <species metaid="s_id_csa374" id="s_id_csa374" name="nucleocapsid" compartment="s_id_ca197" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: viral nucleocapsid
-SARS-CoV-2 (+)gRNA: NC_045512.2
-N: P0DTC9
-The complete protein-nucleic acid complex that is the packaged form of the genome in a virus particle.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>

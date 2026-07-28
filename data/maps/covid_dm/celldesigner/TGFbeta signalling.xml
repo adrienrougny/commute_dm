@@ -2679,7 +2679,7 @@ All of the contents of a cell excluding the plasma membrane and nucleus, but inc
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_ca1"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="c3" id="c3" name="extracellular region" size="1" units="volume" outside="default">
 <annotation>
 <celldesigner:extension>
@@ -3254,31 +3254,7 @@ All of the contents of a cell excluding the plasma membrane and nucleus, but inc
 <celldesigner:catalyzed reaction="re8"/>
 </celldesigner:listOfCatalyzedReactions>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa84">
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P59635"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:694009"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P0DTC7"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-<bqbiol:isPartOf>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
-</rdf:Bag>
-</bqbiol:isPartOf>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa84"><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:694009"/></rdf:Bag></bqbiol:isPartOf><bqbiol:isPartOf><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:isPartOf><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P59635"/></rdf:Bag></bqbiol:is><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P0DTC7"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_sa10" id="s_id_sa10" name="TGFB1" compartment="c3" initialAmount="0" charge="0">
 <annotation>

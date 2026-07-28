@@ -3627,7 +3627,7 @@ A semiautonomous, self replicating organelle that occurs in varying numbers, sha
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="s_id_ca5" id="s_id_ca5" name="mitochondrial_space_matrix" size="1" units="volume" outside="s_id_ca6">
+<compartment metaid="s_id_ca5" id="s_id_ca5" name="mitochondrial matrix" size="1" units="volume" outside="s_id_ca6">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -3640,7 +3640,7 @@ The gel-like material, with considerable fine structure, that lies in the matrix
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>mitochondrial_space_matrix</celldesigner:name>
+<celldesigner:name>mitochondrial matrix</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca5">
@@ -3705,7 +3705,7 @@ A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="s_id_ca3" id="s_id_ca3" name="Golgi_space_apparatus" size="1" units="volume" outside="s_id_ca2">
+<compartment metaid="s_id_ca3" id="s_id_ca3" name="Golgi apparatus" size="1" units="volume" outside="s_id_ca2">
 <notes>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -3718,7 +3718,7 @@ A membrane-bound cytoplasmic organelle of the endomembrane system that further p
 </notes>
 <annotation>
 <celldesigner:extension>
-<celldesigner:name>Golgi_space_apparatus</celldesigner:name>
+<celldesigner:name>Golgi apparatus</celldesigner:name>
 </celldesigner:extension>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
 <rdf:Description rdf:about="#s_id_ca3">
@@ -3757,7 +3757,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </rdf:RDF>
 </annotation>
 </compartment>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="c7" id="c7" name="extracellular region" size="1" units="volume" outside="default">
 <annotation>
 <celldesigner:extension>
@@ -3855,16 +3855,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:rnaReference>r_s_id_sa93</celldesigner:rnaReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa93">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:Q14116"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa93"><bqbiol:encodes><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:Q14116"/></rdf:Bag></bqbiol:encodes></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_sa153" id="s_id_sa153" name="NADPH" compartment="s_id_ca2" initialAmount="0" charge="0">
 <annotation>
@@ -4282,21 +4273,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:rnaReference>r_s_id_sa94</celldesigner:rnaReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa94">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:3553"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P01584"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa94"><bqbiol:encodes><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01584"/></rdf:Bag></bqbiol:encodes></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_csa23" id="s_id_csa23" name="NFkB" compartment="s_id_ca1" initialAmount="0">
 <annotation>
@@ -4797,21 +4774,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:geneReference>g_s_id_sa96</celldesigner:geneReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa96">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:ncbigene:3553"/>
-</rdf:Bag>
-</bqbiol:is>
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:P01584"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa96"><bqbiol:encodes><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01584"/></rdf:Bag></bqbiol:encodes></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_sa156" id="s_id_sa156" name="Biliverdin" compartment="s_id_ca2" initialAmount="0" charge="0">
 <annotation>
@@ -4970,16 +4933,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:geneReference>g_s_id_sa95</celldesigner:geneReference>
 </celldesigner:speciesIdentity>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#s_id_sa95">
-<bqbiol:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:uniprot:Q14116"/>
-</rdf:Bag>
-</bqbiol:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s_id_sa95"><bqbiol:encodes><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:Q14116"/></rdf:Bag></bqbiol:encodes></rdf:Description></rdf:RDF></annotation>
 </species>
 <species metaid="s_id_sa162" id="s_id_sa162" name="s876" compartment="s_id_ca5" initialAmount="0">
 <annotation>
@@ -5546,7 +5500,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:editPoints num0="1" num1="1" num2="1" tShapeIndex="0">0.9824794185941315,0.10856126172310887 0.7707006369426743,-0.420382165605095 0.9955038882374523,0.06690214302670983 0.6115569823434992,0.03130016051364337</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa175" aliases="sa175" targetLineIndex="0,2" editPoints="0.07369671238760978,-0.44113799225046524 1.1045665469097492,-0.268920411723629 1.0580212548754693,0.009693057066138433">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa175" aliases="sa175" targetLineIndex="0,2" editPoints="0.07369671238760978,-0.44113799225046546 1.1045665469097492,-0.26892041172362946 1.0580212548754693,0.009693057066138433">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -5885,7 +5839,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.3306121921855585,0.47043359846399957</celldesigner:editPoints>
+<celldesigner:editPoints>0.3306121921855585,0.4704335984640209</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s_id_sa171" alias="sa171" targetLineIndex="-1,1">
@@ -5918,7 +5872,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="2" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.012647615715753346,-0.15948793984411314 1.0063982055973781,-0.080682134274082</celldesigner:editPoints>
+<celldesigner:editPoints>0.012647615715749794,-0.15948793984411314 1.0063982055973781,-0.080682134274082</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -6155,7 +6109,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.1430145404323433,0.3500876770999808</celldesigner:editPoints>
+<celldesigner:editPoints>0.1430145404323433,0.35008767709998256</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -6193,7 +6147,21 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re22"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:31034780"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re22">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:31034780"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00055" species="s_id_sa15">
 <annotation>
@@ -7083,7 +7051,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.07409479317364576,0.26192509386884133</celldesigner:editPoints>
+<celldesigner:editPoints>0.07409479317364531,0.26192509386884133</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -7094,7 +7062,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="BOOLEAN_LOGIC_GATE_OR" modifiers="s_id_sa91,s_id_sa90,s_id_sa135,s_id_sa136,s_id_sa2,s_id_csa3,s_id_sa142" aliases="sa91,sa90,sa135,sa136,sa1,csa3,sa142" modificationType="PHYSICAL_STIMULATION" targetLineIndex="-1,6" editPoints="0.12295810185749012,0.05766446361814204 1684.0,1456.5">
+<celldesigner:modification type="BOOLEAN_LOGIC_GATE_OR" modifiers="s_id_sa91,s_id_sa90,s_id_sa135,s_id_sa136,s_id_sa2,s_id_csa3,s_id_sa142" aliases="sa91,sa90,sa135,sa136,sa1,csa3,sa142" modificationType="PHYSICAL_STIMULATION" targetLineIndex="-1,6" editPoints="0.12295810185749012,0.05766446361814026 1684.0,1456.5">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="unknown"/>
@@ -7103,7 +7071,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_sa91" aliases="sa91" targetLineIndex="-1,0" editPoints="0.9163766530774566,0.27682211395048917">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_sa91" aliases="sa91" targetLineIndex="-1,0" editPoints="0.9163766530774557,0.27682211395048917">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="unknown"/>
@@ -7115,7 +7083,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_sa90" aliases="sa90" targetLineIndex="-1,0" editPoints="0.7952874403405423,0.40349142193747944">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_sa90" aliases="sa90" targetLineIndex="-1,0" editPoints="0.7952874403405419,0.40349142193747767">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="unknown"/>
@@ -7168,7 +7136,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_sa142" aliases="sa142" targetLineIndex="-1,0" editPoints="0.8872797838332156,-0.31625048463851946">
+<celldesigner:modification type="PHYSICAL_STIMULATION" modifiers="s_id_sa142" aliases="sa142" targetLineIndex="-1,0" editPoints="0.8872797838332156,-0.3162504846385197">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="unknown"/>
@@ -7503,7 +7471,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.05051986071810166,0.21901507799949416</celldesigner:editPoints>
+<celldesigner:editPoints>0.05051986071810344,0.2190150779994937</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s_id_sa102" alias="sa102" targetLineIndex="-1,1">
@@ -7514,7 +7482,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.04412263286332685,0.20536753914028028</celldesigner:editPoints>
+<celldesigner:editPoints>0.04412263286332685,0.2053675391402794</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -7838,7 +7806,46 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re59"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:doi:10.1016%2Fj.bbrc.2020.05.206"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:26331680"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34952919"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:39379362"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:39726395"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:392815"/></rdf:Bag></bqbiol:occursIn><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re59">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:doi:10.1016%2Fj.bbrc.2020.05.206"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:26331680"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:34952919"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:39379362"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:39726395"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:392815"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00090" species="s_id_sa141">
 <annotation>
@@ -7906,7 +7913,46 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re60"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:doi:10.1016%2Fj.bbrc.2020.05.206"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:26331680"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34952919"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:39379362"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:39726395"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:392815"/></rdf:Bag></bqbiol:occursIn><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re60">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:doi:10.1016%2Fj.bbrc.2020.05.206"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:26331680"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:34952919"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:39379362"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:39726395"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:392815"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00074" species="s_id_sa144">
 <annotation>
@@ -8031,7 +8077,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.6327116212338577,0.4820659971305581</celldesigner:editPoints>
+<celldesigner:editPoints>0.6327116212338582,0.4820659971305581</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 <celldesigner:reactantLink reactant="s_id_sa153" alias="sa153" targetLineIndex="-1,0">
@@ -8042,7 +8088,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.8732673267326729,0.33267326732673297</celldesigner:editPoints>
+<celldesigner:editPoints>0.8732673267326727,0.33267326732673297</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -8055,7 +8101,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.12673267326710658,0.3326732673267969</celldesigner:editPoints>
+<celldesigner:editPoints>0.12673267326732152,0.33267326732673475</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s_id_sa155" alias="sa155" targetLineIndex="-1,1">
@@ -8066,7 +8112,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.36728837876624,0.48206599713045417</celldesigner:editPoints>
+<celldesigner:editPoints>0.36728837876614406,0.4820659971305572</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s_id_sa158" alias="sa158" targetLineIndex="-1,1">
@@ -8077,7 +8123,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.12673267326731796,-0.3326732673267756</celldesigner:editPoints>
+<celldesigner:editPoints>0.12673267326732685,-0.33267326732673297</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s_id_sa163" alias="sa163" targetLineIndex="-1,1">
@@ -8088,7 +8134,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.6104029568197991,0.48765888398088153</celldesigner:editPoints>
+<celldesigner:editPoints>0.6104029568196196,0.4876588839808895</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -8216,7 +8262,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa163" aliases="sa163" targetLineIndex="-1,7" editPoints="0.02858868436199824,0.28306587836967 0.8777863194710145,0.1972998252836744 0.859294947675016,0.014210728443234899">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa163" aliases="sa163" targetLineIndex="-1,7" editPoints="0.02858868436199824,0.2830658783696691 0.8777863194710154,0.1972998252836735 0.859294947675016,0.014210728443234899">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -8302,7 +8348,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:editPoints>0.3450045582194452,0.4753697645278372</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa165" aliases="sa165" targetLineIndex="-1,2" editPoints="-0.03809113098528982,0.12761499078047756 0.8801039687879779,0.40168224261043584">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa165" aliases="sa165" targetLineIndex="-1,2" editPoints="-0.03809113098528982,0.12761499078047578 0.8801039687879779,0.4016822426104376">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -8378,7 +8424,7 @@ A complex system of membrane-bounded compartments located between endoplasmic re
 <celldesigner:editPoints>0.12185091980403939,-0.3271135477887621</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa165" aliases="sa165" targetLineIndex="-1,3" editPoints="-0.02940132359199943,-0.12219658895080343 0.9158751057675669,-0.3496364743200715">
+<celldesigner:modification type="CATALYSIS" modifiers="s_id_sa165" aliases="sa165" targetLineIndex="-1,3" editPoints="-0.029401323591992323,-0.12219658895076613 0.9158751057675669,-0.3496364743200715">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>

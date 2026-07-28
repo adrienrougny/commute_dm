@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:celldesigner="http://www.sbml.org/2001/ns/celldesigner" level="2" version="4">
 <model metaid="Adaptive_immunity" id="Adaptive_immunity">
 <annotation>
@@ -12,7 +12,17 @@
 <head>
 <title/>
 </head>
-<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s3"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P04439"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
+<body>
+<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+<rdf:Description rdf:about="#s3">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:uniprot:P04439"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -29,7 +39,17 @@
 <head>
 <title/>
 </head>
-<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s5"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P01889"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
+<body>
+<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+<rdf:Description rdf:about="#s5">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:uniprot:P01889"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -46,7 +66,17 @@
 <head>
 <title/>
 </head>
-<body><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#s6"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:uniprot:P10321"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></body>
+<body>
+<rdf:RDF xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+<rdf:Description rdf:about="#s6">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:uniprot:P10321"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</body>
 </html>
 </celldesigner:notes>
 <celldesigner:annotation>
@@ -955,7 +985,7 @@
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" name="default" size="1" units="volume"/>
 <compartment metaid="c2" id="c2" name="infected cell" size="1" units="volume" outside="c1">
 <annotation>
 <celldesigner:extension>
@@ -1737,7 +1767,7 @@
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="TRIGGER" modifiers="s18" aliases="sa16" targetLineIndex="-1,2" editPoints="0.3697531518498475,-0.5418827542601289 1.052067493129504,-0.07630625038158856">
+<celldesigner:modification type="TRIGGER" modifiers="s18" aliases="sa16" targetLineIndex="-1,2" editPoints="0.3697531518498478,-0.5418827542601293 1.052067493129504,-0.07630625038158856">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -2747,7 +2777,7 @@
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:GateMember>
-<celldesigner:GateMember type="MODULATION" aliases="sa35" targetLineIndex="-1,0" editPoints="0.1468627450980362,0.23078431372548636 0.858627450980392,-0.22215686274509783">
+<celldesigner:GateMember type="MODULATION" aliases="sa35" targetLineIndex="-1,0" editPoints="0.14686274509803798,0.23078431372549035 0.858627450980392,-0.22215686274509783">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>

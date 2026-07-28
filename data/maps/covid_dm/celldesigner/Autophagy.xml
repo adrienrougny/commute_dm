@@ -3797,22 +3797,13 @@
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="c1" id="c1" name="endoplasmic reticulum" size="1" units="volume" outside="c2">
 <annotation>
 <celldesigner:extension>
 <celldesigner:name>endoplasmic reticulum</celldesigner:name>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-<rdf:Description rdf:about="#c1">
-<bqmodel:is>
-<rdf:Bag>
-<rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0005783"/>
-</rdf:Bag>
-</bqmodel:is>
-</rdf:Description>
-</rdf:RDF>
-</annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#c1"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0005783"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
 </compartment>
 <compartment metaid="c4" id="c4" name="lysosome" size="1" units="volume" outside="c2">
 <annotation>
@@ -4026,17 +4017,6 @@
 </annotation>
 </species>
 <species metaid="s_id_csa94" id="s_id_csa94" name="V-type proton ATPase" compartment="c1" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Name: lysosomal proton-transporting V-type ATPase complex
-Charge: 0
-A proton-transporting two-sector ATPase complex found in the lysosomal membrane, where it acts as a proton pump to mediate acidification of the lysosomal lumen.
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4057,17 +4037,6 @@ A proton-transporting two-sector ATPase complex found in the lysosomal membrane,
 </annotation>
 </species>
 <species metaid="s_id_csa18" id="s_id_csa18" name="Nsp6:SIGMAR1" compartment="c1" initialAmount="0" charge="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>Pubmed_ID: 32353859
-Nsp6 binds SIGMAR1 [PMID: 32353859]
-Not sure if the binding happens in the ER, in the cytoplasm or at the nucleus
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4113,16 +4082,6 @@ Not sure if the binding happens in the ER, in the cytoplasm or at the nucleus
 </annotation>
 </species>
 <species metaid="s11" id="s11" name="V-ATPase" compartment="c1" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4143,16 +4102,6 @@ http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
 </annotation>
 </species>
 <species metaid="s15" id="s15" name="V-ATPase:Nsp6" compartment="c1" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-Nsp6 binds ATP6AP1 [PMID: 32353859]
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4473,16 +4422,6 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </annotation>
 </species>
 <species metaid="s46" id="s46" name="V-ATPase" compartment="c6" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4506,16 +4445,6 @@ http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
 </annotation>
 </species>
 <species metaid="s47" id="s47" name="V-ATPase:Nsp6" compartment="c6" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-Nsp6 binds ATP6AP1 [PMID: 32353859]
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4548,16 +4477,6 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </annotation>
 </species>
 <species metaid="s61" id="s61" name="V-ATPase" compartment="c4" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -4578,16 +4497,6 @@ http://www.ebi.ac.uk/interpro/entry/InterPro/IPR008388/
 </annotation>
 </species>
 <species metaid="s65" id="s65" name="V-ATPase:Nsp6" compartment="c4" initialAmount="0">
-<notes>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title/>
-</head>
-<body>
-Nsp6 binds ATP6AP1 [PMID: 32353859]
-</body>
-</html>
-</notes>
 <annotation>
 <celldesigner:extension>
 <celldesigner:positionToCompartment>transmembrane</celldesigner:positionToCompartment>
@@ -5195,7 +5104,21 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.4121806703628157,0.49222735127385553</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re10"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:37482689"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re10">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:37482689"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00029" species="s639">
 <annotation>
@@ -5243,7 +5166,21 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re11"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:37482689"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re11">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:37482689"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00035" species="s26">
 <annotation>
@@ -5687,7 +5624,26 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re1"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34997207"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re1">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:34997207"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00073" species="s15">
 <annotation>
@@ -5731,7 +5687,26 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.12056199706918136,0.2720646836516951 0.9564233745533066,-0.09833663264519155</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re17"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34997207"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re17">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:34997207"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00075" species="s47">
 <annotation>
@@ -5782,7 +5757,21 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re13"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re13">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00077" species="s30">
 <annotation>
@@ -5846,7 +5835,21 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re21"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re21">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00080" species="s37">
 <annotation>
@@ -5928,7 +5931,21 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 </celldesigner:modification>
 </celldesigner:listOfModification>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re22"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re22">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00084" species="s38">
 <annotation>
@@ -6046,10 +6063,29 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:lineDirection index="3" value="unknown"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.45774253528870545,-0.18820260894101193 0.5785265198926322,0.10647604853238035 0.9767409218837049,-0.056745552283727685</celldesigner:editPoints>
+<celldesigner:editPoints>0.45774253528870545,-0.18820260894101193 0.5785265198926322,0.10647604853238035 0.9767409218837049,-0.05674555228372724</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re25"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:34997207"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re25">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:34997207"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00091" species="s65">
 <annotation>
@@ -6203,7 +6239,21 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.020955569005769448,0.06895635954889756 0.9364106871549112,-0.2092468841483741</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#CDMT00097"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:40332329"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#CDMT00097">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:40332329"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00098" species="s41">
 <annotation>
@@ -6246,7 +6296,26 @@ Nsp6 binds ATP6AP1 [PMID: 32353859]
 <celldesigner:editPoints>0.9981825220757541,0.04259312970704543</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#re28"><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:32353859"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:isDescribedBy><rdf:Bag><rdf:li rdf:resource="urn:miriam:pubmed:39445785"/></rdf:Bag></bqbiol:isDescribedBy><bqbiol:occursIn><rdf:Bag><rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/></rdf:Bag></bqbiol:occursIn></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#re28">
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:32353859"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:isDescribedBy>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:pubmed:39445785"/>
+</rdf:Bag>
+</bqbiol:isDescribedBy>
+<bqbiol:occursIn>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:taxonomy:2697049"/>
+</rdf:Bag>
+</bqbiol:occursIn>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 <listOfReactants>
 <speciesReference metaid="CDMT00001" species="s_id_csa18">
 <annotation>

@@ -7798,7 +7798,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="c3" id="c3" name="mitochondrial matrix" size="1" units="volume" outside="c4">
 <annotation>
 <celldesigner:extension>
@@ -7868,7 +7868,16 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:extension>
 <celldesigner:name>cell</celldesigner:name>
 </celldesigner:extension>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"><rdf:Description rdf:about="#c1"><bqbiol:is><rdf:Bag><rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/></rdf:Bag></bqbiol:is></rdf:Description></rdf:RDF></annotation>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+<rdf:Description rdf:about="#c1">
+<bqbiol:is>
+<rdf:Bag>
+<rdf:li rdf:resource="urn:miriam:obo.clo:CL%3A0000000"/>
+</rdf:Bag>
+</bqbiol:is>
+</rdf:Description>
+</rdf:RDF>
+</annotation>
 </compartment>
 <compartment metaid="c7" id="c7" name="extracellular region" size="1" units="volume" outside="default">
 <annotation>
@@ -11569,7 +11578,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.8852768207267516,0.31868757649253254</celldesigner:editPoints>
+<celldesigner:editPoints>0.8852768207267516,0.3186875764925343</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 <celldesigner:reactantLink reactant="s13" alias="sa25" targetLineIndex="-1,0">
@@ -11580,7 +11589,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.968619119387494,0.1743448334321691</celldesigner:editPoints>
+<celldesigner:editPoints>0.9686191193874922,0.1743448334321691</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -11593,7 +11602,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.1629406206931776,0.36931148752960885</celldesigner:editPoints>
+<celldesigner:editPoints>0.16294062069322734,0.3693114875296106</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s16" alias="sa28" targetLineIndex="-1,1">
@@ -11605,7 +11614,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="2" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.3882080440834251,-0.16499454954781 0.541208675174131,0.194993558556547</celldesigner:editPoints>
+<celldesigner:editPoints>0.3882080440834171,-0.16499454954782244 0.5412086751741212,0.19499355855652745</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s15" alias="sa27" targetLineIndex="-1,1">
@@ -11616,7 +11625,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.4377706288262395,0.49611239186633505</celldesigner:editPoints>
+<celldesigner:editPoints>0.4377706288262466,0.49611239186632616</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s19" alias="sa31" targetLineIndex="-1,1">
@@ -11627,7 +11636,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.16294062069323445,-0.36931148752968923</celldesigner:editPoints>
+<celldesigner:editPoints>0.16294062069322734,-0.3693114875296253</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -11810,7 +11819,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.9415210021838263,0.23464697873740192</celldesigner:editPoints>
+<celldesigner:editPoints>0.9415210021838263,0.2346469787374037</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -11822,7 +11831,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.02552185774312221,0.1577038126376622</celldesigner:editPoints>
+<celldesigner:editPoints>0.025521857743115106,0.15770381263766176</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -12494,7 +12503,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.8846416382252542,0.3194539249146757</celldesigner:editPoints>
+<celldesigner:editPoints>0.8846416382252542,0.31945392491467395</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -12507,7 +12516,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.1153583617747529,-0.3194539249146864</celldesigner:editPoints>
+<celldesigner:editPoints>0.11535836177474224,-0.3194539249146704</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -12529,7 +12538,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="INHIBITION" modifiers="s11" aliases="sa23" targetLineIndex="-1,3" editPoints="0.40077694617155313,-0.25712159728720607 0.6923591974222996,0.1973693729270476">
+<celldesigner:modification type="INHIBITION" modifiers="s11" aliases="sa23" targetLineIndex="-1,3" editPoints="0.40077694617155224,-0.25712159728720607 0.6923591974223005,0.1973693729270476">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -12879,7 +12888,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.7856572457528266,0.41036561496912327</celldesigner:editPoints>
+<celldesigner:editPoints>0.7856572457527626,0.41036561496907353</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -13474,7 +13483,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:editPoints>0.11353489885432122,9.306139250355727E-4 0.1136020805808915,-0.007265556716549604</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s132" aliases="csa11" targetLineIndex="-1,3" editPoints="0.5842132219425693,-0.0029708768385745543 0.5843211345076256,0.002113835612398418">
+<celldesigner:modification type="CATALYSIS" modifiers="s132" aliases="csa11" targetLineIndex="-1,3" editPoints="0.5842952752947248,-0.0029712941013073646 0.5843211345076291,0.002113835612398418">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -13542,7 +13551,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:editPoints>0.46077195824762196,-0.10950582122346564 0.5142333970508282,0.11544598109048998</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s239" aliases="csa12" targetLineIndex="-1,3" editPoints="0.5812971309587383,-0.10953100947253525 0.6149722233082606,0.07254892345065933">
+<celldesigner:modification type="CATALYSIS" modifiers="s239" aliases="csa12" targetLineIndex="-1,3" editPoints="0.5806854968683872,-0.10941576221639693 0.6149722233082606,0.07254892345065933">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -13670,7 +13679,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.8466005321575905,0.31529581447156607 0.9685192538088288,-0.011724239630728661">
+<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.846712977732432,0.31533769209596674 0.9685192538088288,-0.011724239630728661">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -13749,7 +13758,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.8206386548658418,0.3362789666929089 0.964537716612992,-0.014531633311745562">
+<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.8207627175417112,0.33632980474227336 0.964537716612992,-0.014531633311745562">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -13823,7 +13832,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.7860162646658884,0.3643530923800926 0.9630157156545511,-0.01714384164360294">
+<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.7861470201054486,0.3644137032744099 0.9630157156545511,-0.01714384164360294">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -13985,7 +13994,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,3" editPoints="0.07125879276498326,-0.13525220397468551 0.8546658652028509,0.27585033764040734">
+<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,3" editPoints="0.07193603533557491,-0.1365376390311015 0.8546658652028509,0.27585033764040734">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -14155,7 +14164,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:editPoints>0.13691132911248793,6.711339662324178E-4 0.13704203273947435,-0.004230186114025258</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.6704130829874666,0.4086631102191267 0.9410400711039113,-0.035940151724970226">
+<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.6701291544456529,0.40849003614894186 0.9410400711039113,-0.035940151724970226">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -14229,7 +14238,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.7513553634524501,0.392314423760628 0.9657213394017652,-0.017898338967182736">
+<celldesigner:modification type="CATALYSIS" modifiers="s560" aliases="sa43" targetLineIndex="-1,2" editPoints="0.751494081541177,0.3923868543436668 0.9657213394017652,-0.017898338967182736">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -14505,7 +14514,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s162" aliases="csa13" targetLineIndex="-1,3" editPoints="0.40125183079456406,-0.2118673476055264 0.6183238165182559,0.20153109452073892">
+<celldesigner:modification type="CATALYSIS" modifiers="s162" aliases="csa13" targetLineIndex="-1,3" editPoints="0.4003064405243393,-0.21136816650868795 0.6183238165182594,0.20153109452073537">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -14790,7 +14799,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s16" aliases="sa28" targetLineIndex="-1,2" editPoints="0.5836738824508831,0.33585327063422055 0.832415293307232,-0.09643034157140118">
+<celldesigner:modification type="CATALYSIS" modifiers="s16" aliases="sa28" targetLineIndex="-1,2" editPoints="0.5836738824508867,0.3358532706342223 0.832415293307232,-0.0964303415713994">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -15310,7 +15319,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s212" aliases="sa190" targetLineIndex="-1,6" editPoints="0.47549921763999947,-0.13580839206491802 0.5509210750473486,0.1282624333448139">
+<celldesigner:modification type="CATALYSIS" modifiers="s212" aliases="sa190" targetLineIndex="-1,6" editPoints="0.4754992176399959,-0.13580839206491713 0.5509210750473414,0.12826243334481569">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -15323,7 +15332,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:linkTarget>
 <celldesigner:line width="1.0" color="ff000000"/>
 </celldesigner:modification>
-<celldesigner:modification type="CATALYSIS" modifiers="s794" aliases="sa526" targetLineIndex="-1,7" editPoints="0.6430128676876645,0.17572403774333267 0.7123597284420882,-0.07860699602716892">
+<celldesigner:modification type="CATALYSIS" modifiers="s794" aliases="sa526" targetLineIndex="-1,7" editPoints="0.6428664896335601,0.17568403521150522 0.7123597284420882,-0.0786069960271707">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -15406,7 +15415,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s221" aliases="sa196" targetLineIndex="-1,3" editPoints="0.006844231113588228,0.0521052297194915 0.9898830009034092,-0.07702085935601843">
+<celldesigner:modification type="CATALYSIS" modifiers="s221" aliases="sa196" targetLineIndex="-1,3" editPoints="0.006844231113588117,0.05210522971949061 0.9898830009034092,-0.07702085935601843">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -15511,7 +15520,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s223" aliases="sa198" targetLineIndex="-1,2" editPoints="0.0341451746325081,-0.12373122373954715 0.9633790983533528,0.1327024689125862">
+<celldesigner:modification type="CATALYSIS" modifiers="s223" aliases="sa198" targetLineIndex="-1,2" editPoints="0.03414517463250788,-0.12373122373954626 0.9633790983533528,0.1327024689125862">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -15670,7 +15679,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s238" aliases="csa22" targetLineIndex="-1,2" editPoints="0.16365468166260255,-0.430842495664538 1.037849489243758,-0.09964376356203974">
+<celldesigner:modification type="CATALYSIS" modifiers="s238" aliases="csa22" targetLineIndex="-1,2" editPoints="0.16394097754210124,-0.43159620726000636 1.0378494892437584,-0.09964376356203974">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -15956,7 +15965,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.25142580956983807,0.4338327694538435</celldesigner:editPoints>
+<celldesigner:editPoints>0.2514258095698416,0.43383276945384</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -16040,7 +16049,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:editPoints>0.2606613623287184,-0.12412445825177087 0.4465761223464142,0.26353517983504027</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s282" aliases="sa241" targetLineIndex="-1,2" editPoints="0.4506967915882445,0.17228751691593436 0.5781952397466608,-0.16124298225260203">
+<celldesigner:modification type="CATALYSIS" modifiers="s282" aliases="sa241" targetLineIndex="-1,2" editPoints="0.45069679158824094,0.17228751691593347 0.578195239746659,-0.16124298225260292">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -16253,7 +16262,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.8353483463442584,-0.3708658606614632</celldesigner:editPoints>
+<celldesigner:editPoints>0.8384169225942535,-0.36806791017668683</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -16317,7 +16326,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s775" aliases="csa101" targetLineIndex="-1,3" editPoints="0.7492028997548186,-0.005915785159476883 0.7492655207846379,0.0019798259077710156">
+<celldesigner:modification type="CATALYSIS" modifiers="s775" aliases="csa101" targetLineIndex="-1,3" editPoints="0.7492031761891953,-0.005915787342230416 0.749265520784637,0.0019798259077710156">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -16437,7 +16446,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:editPoints>0.6422950350550849,0.47932465302618255</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="TRIGGER" modifiers="s171" aliases="sa493" targetLineIndex="-1,2" editPoints="0.8194598496000438,0.08663356316132731">
+<celldesigner:modification type="TRIGGER" modifiers="s171" aliases="sa493" targetLineIndex="-1,2" editPoints="0.8194598496000403,0.08663356316132731">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="vertical"/>
@@ -16904,7 +16913,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.93010064040757,-0.25497733060212857</celldesigner:editPoints>
+<celldesigner:editPoints>0.929547048858332,-0.2559088369265443</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s152" alias="sa382" targetLineIndex="-1,1">
@@ -16915,7 +16924,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.7603273041348757,-0.4268837016353064</celldesigner:editPoints>
+<celldesigner:editPoints>0.758426608449497,-0.428037017143696</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s519" alias="sa383" targetLineIndex="-1,1">
@@ -16926,7 +16935,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.7763869598813358,0.4166656314210897</celldesigner:editPoints>
+<celldesigner:editPoints>0.7758516183779811,0.417020244878163</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 <celldesigner:productLink product="s789" alias="csa81" targetLineIndex="-1,1">
@@ -16938,7 +16947,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="2" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.11546877819797885,-0.4463237621928684 1.0527362666573064,-0.20384253913327122</celldesigner:editPoints>
+<celldesigner:editPoints>0.11476221957031996,-0.4454790212374906 1.0525268580140956,-0.20389648600741417</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -17138,7 +17147,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.8651887357698698,-0.3415218693828621</celldesigner:editPoints>
+<celldesigner:editPoints>0.8651887357699124,-0.3415218693828621</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -17481,7 +17490,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="vertical"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.8745451340445207,0.33123396951932094</celldesigner:editPoints>
+<celldesigner:editPoints>0.8745451340445385,0.3312339695193671</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -17492,7 +17501,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="CATALYSIS" modifiers="s458" aliases="csa93" targetLineIndex="-1,2" editPoints="0.8058853813824314,0.08414506975314318 0.8168900204461345,-0.01911909851947513">
+<celldesigner:modification type="CATALYSIS" modifiers="s458" aliases="csa93" targetLineIndex="-1,2" editPoints="0.806105478887222,0.0841680508374516 0.816890020446138,-0.01911909851947513">
 <celldesigner:connectScheme connectPolicy="square">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="horizontal"/>
@@ -17673,7 +17682,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="horizontal"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.1435421691434584,-0.3506248919016519</celldesigner:editPoints>
+<celldesigner:editPoints>0.1419882739077707,-0.34903811250415373</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -17742,7 +17751,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="1" value="unknown"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.5609018090260847,0.18602160547185065</celldesigner:editPoints>
+<celldesigner:editPoints>0.5609018090260811,0.18602160547184976</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:reactantLink>
 </celldesigner:listOfReactantLinks>
@@ -17812,7 +17821,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 <celldesigner:lineDirection index="3" value="unknown"/>
 </celldesigner:listOfLineDirection>
 </celldesigner:connectScheme>
-<celldesigner:editPoints>0.10308896564170311,-0.3413947891071416 0.2824513936835107,-0.4405107861789723 1.013457259606847,-0.2298639048827944</celldesigner:editPoints>
+<celldesigner:editPoints>0.10308896564170489,-0.3413947891071416 0.2824513936835107,-0.44051078617896167 1.013457259606847,-0.2298639048827944</celldesigner:editPoints>
 <celldesigner:line width="1.0" color="ff000000" type="Straight"/>
 </celldesigner:productLink>
 </celldesigner:listOfProductLinks>
@@ -17823,7 +17832,7 @@ Emek Demir, Oregon Health &amp; Science University (OHSU), Portland, Oregon
 </celldesigner:connectScheme>
 <celldesigner:line width="1.0" color="ff000000"/>
 <celldesigner:listOfModification>
-<celldesigner:modification type="TRIGGER" modifiers="s171" aliases="sa493" targetLineIndex="-1,2" editPoints="0.13080567135085985,0.33836427008948355">
+<celldesigner:modification type="TRIGGER" modifiers="s171" aliases="sa493" targetLineIndex="-1,2" editPoints="0.1308056713508634,0.3383642700894849">
 <celldesigner:connectScheme connectPolicy="direct">
 <celldesigner:listOfLineDirection>
 <celldesigner:lineDirection index="0" value="unknown"/>

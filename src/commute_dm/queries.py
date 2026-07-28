@@ -1,9 +1,5 @@
-import typing
-
 import fieldz_kb.lpg.core
 import momapy.celldesigner
-
-import commute_dm.ig
 
 
 def prewarm_session(session):
@@ -147,67 +143,19 @@ def get_ids_and_context(session, nodes):
     return formatted_result
 
 
-def get_subgraph(
-    session,
-    node,
-    relationship_types=None,
-    exclude_labels=None,
-    mode: typing.Literal["all", "downstream", "upstream"] = "all",
-    min_level=0,
-    max_level=-1,
-    filter_output_relationships=False,
-    blacklist_nodes=None,
-):
-    if relationship_types is None:
-        relationship_types = []
-    if exclude_labels is None:
-        exclude_labels = []
-    if blacklist_nodes is None:
-        blacklist_nodes = []
-    blacklist_node_ids = [node.element_id for node in blacklist_nodes]
-    if isinstance(node, list):
-        seed_nodes = node
-    else:
-        seed_nodes = [node]
-    if not seed_nodes:
-        return [], []
-    seed_element_ids = [n.element_id for n in seed_nodes]
-    if mode == "downstream":
-        relationship_types_for_filter = [
-            f"{relationship_type}>" for relationship_type in relationship_types
-        ]
-    elif mode == "upstream":
-        relationship_types_for_filter = [
-            f"<{relationship_type}" for relationship_type in relationship_types
-        ]
-    else:
-        relationship_types_for_filter = []
-    relationship_filter = "|".join(relationship_types_for_filter)
-    label_filter = "|".join([f"-{label}" for label in exclude_labels])
-    query = f"""
-        MATCH (blacklist_node)
-        WHERE elementId(blacklist_node) IN {blacklist_node_ids}
-        WITH collect(blacklist_node) AS blacklist_nodes
-        MATCH (node)
-        WHERE elementId(node) IN {seed_element_ids}
-        WITH collect(node) AS seed_nodes, blacklist_nodes
-        CALL apoc.path.subgraphAll(seed_nodes, {{
-            relationshipFilter: "{relationship_filter}",
-            labelFilter: "{label_filter}",
-            minLevel: {min_level},
-            maxLevel: {max_level},
-            blacklistNodes: blacklist_nodes
-        }})
-        YIELD nodes, relationships
-        RETURN nodes AS nodes, relationships AS relationships
+def get_nodes(session, element_ids):
+    """Return the DB nodes for the given element ids.
+
+    The AF traversal (`commute_dm.ig`) works on element ids only; this is the
+    bridge to the node-taking helpers here and in `commute_dm.gea`.
     """
-    result = session.execute_query(query)
-    nodes = result[0]["nodes"]
-    relationships = result[0]["relationships"]
-    if filter_output_relationships:
-        relationships = [
-            relationship
-            for relationship in relationships
-            if relationship.type in relationship_types
-        ]
-    return nodes, relationships
+    element_ids = list(element_ids)
+    if not element_ids:
+        return []
+    query = """
+        UNWIND $element_ids AS element_id
+        MATCH (node) WHERE elementId(node) = element_id
+        RETURN node AS node
+    """
+    result = session.execute_query(query, params={"element_ids": element_ids})
+    return [row["node"] for row in result]

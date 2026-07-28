@@ -7532,7 +7532,7 @@ Metabolic interactions of the SARS-CoV-2 Nsp14 with the human galactose, nicotin
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="c1" id="c1" name="cell" size="1" units="volume" outside="c3">
 <annotation>
 <celldesigner:extension>

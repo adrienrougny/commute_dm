@@ -2025,7 +2025,7 @@ Description: JNK pathway activation during SARS-CoV infection
 </unitDefinition>
 </listOfUnitDefinitions>
 <listOfCompartments>
-<compartment metaid="default" id="default" size="1" units="volume"/>
+<compartment metaid="default" id="default" size="1" units="volume" name="default"/>
 <compartment metaid="c5" id="c5" name="cell" size="1" units="volume" outside="c2">
 <annotation>
 <celldesigner:extension>
