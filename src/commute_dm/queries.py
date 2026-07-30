@@ -146,7 +146,7 @@ def get_ids_and_context(session, nodes):
 def get_nodes(session, element_ids):
     """Return the DB nodes for the given element ids.
 
-    The AF traversal (`commute_dm.ig`) works on element ids only; this is the
+    The AF walk (`commute_dm.submaps`) works on node ids only; this is the
     bridge to the node-taking helpers here and in `commute_dm.gea`.
     """
     element_ids = list(element_ids)

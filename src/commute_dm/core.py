@@ -1,4 +1,5 @@
 import collections
+import dataclasses
 import glob
 import os.path
 import pathlib
@@ -6,6 +7,7 @@ import pathlib
 import pandas
 import pybiomart
 import momapy.celldesigner
+import momapy.coloring
 import momapy.io
 import momapy.io.core
 import momapy.core
@@ -13,9 +15,10 @@ import momapy.geometry
 import momapy.builder
 import momapy_kb.lpg.session  # noqa: F401
 import momapy_kb.lpg.backends.neo4j  # noqa: F401
+import pd2af.celldesigner.building_layout
 import pd2af.utils
-import commute_dm.ig
 import commute_dm.queries
+import commute_dm.submaps
 
 import commute_dm.utils  # noqa: F401
 
@@ -157,230 +160,198 @@ def _split_interface_seeds(
     interface,
     upstream_collection_name=UPSTREAM_COLLECTION_NAME,
     downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
+    node_id_to_object=None,
+    source_map=None,
 ):
-    """Split each interface entry into its upstream and downstream seed ids.
+    """Split each interface entry into its upstream and downstream seed node ids.
 
     The keys are `"upstream"` / `"downstream"` rather than the collections they
     happen to come from, so pointing the analysis at another pair of collections
-    (e.g. COVID -> AD) is a parameter change, not a rewrite. Seeds are DB
-    element ids, which is what the AF traversal index is keyed on.
+    (e.g. COVID -> AD) is a parameter change, not a rewrite. Seeds are DB node
+    ids, which is what the influence graph is keyed on.
+
+    Passing `node_id_to_object` and `source_map` keeps only the seeds that are
+    species **of the model**: an interface protein that appears solely as a
+    complex subunit is not one, so it has no glyph of its own and cannot seed a
+    walk. The map path filters; the gene-set path, which loads no map, does not
+    -- such a seed reaches nothing there either way.
     """
+    filtering = node_id_to_object is not None and source_map is not None
+
+    def keep(node_id):
+        if not filtering:
+            return True
+        return node_id_to_object.get(node_id) in source_map.model.species
+
     seeds = {}
     for identifier, nodes_with_context in interface.items():
-        upstream = sorted(
-            {
-                nwc["node"].element_id
-                for nwc in nodes_with_context
-                if nwc["collection"]["name"] == upstream_collection_name
-            }
-        )
-        downstream = sorted(
-            {
-                nwc["node"].element_id
-                for nwc in nodes_with_context
-                if nwc["collection"]["name"] == downstream_collection_name
-            }
-        )
-        seeds[identifier] = {"upstream": upstream, "downstream": downstream}
+        seeds[identifier] = {
+            key: sorted(
+                {
+                    nwc["node"].element_id
+                    for nwc in nodes_with_context
+                    if nwc["collection"]["name"] == collection_name
+                    and keep(nwc["node"].element_id)
+                }
+            )
+            for key, collection_name in (
+                ("upstream", upstream_collection_name),
+                ("downstream", downstream_collection_name),
+            )
+        }
     return seeds
 
 
-def _select_around_seeds(index, seeds, max_level):
-    """Upstream and downstream element-id selections around one seed set.
+def _select_around_seeds(influences, seeds, max_level):
+    """Upstream and downstream node-id selections around one seed set.
 
     `max_level` means hops, plainly: the old `_adjust_max_level` compensated a
     dummy-seed scheme that no longer exists.
+
+    One `Influences` covers both collections, as one `AfIndex` used to. The two
+    AF influence graphs share no node, so this is equivalent to walking each
+    collection separately -- but should a future pair of collections share
+    nodes, that stops being true, and the fix is to load one `Influences` per
+    collection and pass the upstream one here and the downstream one there.
     """
-    upstream_nodes = commute_dm.ig.select_nodes(
-        index, seeds["upstream"], "upstream", max_level
-    )
-    downstream_nodes = commute_dm.ig.select_nodes(
-        index, seeds["downstream"], "downstream", max_level
-    )
-    return upstream_nodes, downstream_nodes
-
-
-def _make_synthetic_central_layout_element(display_name):
-    layout = momapy.builder.new_builder_object(momapy.celldesigner.UnknownLayout)
-    layout.position = momapy.geometry.Point(0, 0)
-    layout.width = 80
-    layout.height = 40
-    layout.label = momapy.core.TextLayout(text=display_name, position=layout.position)
-    return momapy.builder.object_from_builder(layout)
-
-
-def _make_synthetic_central_model_element(identifier, display_name):
-    # Pairs with the UnknownLayout above; Unknown species needs no template.
-    # The name is what a reader sees (the HGNC symbol). The id_ is only unique
-    # within this run -- `commute_dm.ig._renumber_ids` rewrites it before the
-    # map is written, like every other id.
-    return momapy.celldesigner.Unknown(
-        id_=f"synthetic:{identifier}", name=display_name
+    return (
+        influences.upstream(seeds["upstream"], max_level),
+        influences.downstream(seeds["downstream"], max_level),
     )
 
 
-def _make_color_element_ids(
-    index,
-    species_ids,
-    upstream_collection_name,
-    downstream_collection_name,
-    upstream_nodes_color,
-    downstream_nodes_color,
-    common_nodes_color,
+def load_submap_inputs(
+    session,
+    upstream_collection_name=UPSTREAM_COLLECTION_NAME,
+    downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
 ):
-    """Colour groups by **membership** in the two chosen collections.
+    """Everything :func:`make_and_write_submaps_from_interface` needs, once per run.
 
-    Membership, not set equality: with `integration_mode="hash"` a species node
-    is shared by every collection that contains it (an AF collection shares its
-    species with the non-AF one it was derived from), so testing
-    `collection_names == {name}` matches nothing. The groups come from the
-    traversal index, not `queries.get_collections_for_nodes`, whose Cypher
-    traverses `(:CellDesignerMap)` and so returns `{}` for BEL nodes.
+    Returns `(influences, source_map, node_id_to_object)`. The influence graph
+    is two small queries; the source map is every stored map of both
+    collections hydrated as momapy objects, which takes a few minutes and a
+    couple of hundred megabytes. Only the map path needs it -- the gene-set
+    analyses call `commute_dm.submaps.load_signed_influences` on its own.
     """
-    upstream_only = []
-    downstream_only = []
-    common = []
-    for species_id in species_ids:
-        collection_names = index.get_collections(species_id)
-        in_upstream = upstream_collection_name in collection_names
-        in_downstream = downstream_collection_name in collection_names
-        if in_upstream and in_downstream:
-            common.append(species_id)
-        elif in_upstream:
-            upstream_only.append(species_id)
-        elif in_downstream:
-            downstream_only.append(species_id)
-    return [
-        (upstream_only, upstream_nodes_color),
-        (downstream_only, downstream_nodes_color),
-        (common, common_nodes_color),
-    ]
+    collection_names = [upstream_collection_name, downstream_collection_name]
+    influences = commute_dm.submaps.load_signed_influences(session, collection_names)
+    node_id_to_object = {}
+    source_map = commute_dm.submaps.load_collections_as_map(
+        session, collection_names, node_id_to_object
+    )
+    return influences, source_map, node_id_to_object
 
 
-def make_and_write_cd_maps_from_interface(
+def make_and_write_submaps_from_interface(
     session,
     interface,
-    index,
+    influences,
+    source_map,
+    node_id_to_object,
     output_dir_path,
     upstream_collection_name=UPSTREAM_COLLECTION_NAME,
     downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
     display_names=None,
     max_levels=None,
     min_n_nodes=None,
-    include_compartment_layouts=False,
-    upstream_nodes_color="blue",
-    downstream_nodes_color="green",
-    common_nodes_color="pink",
-    interface_nodes_color="red",
+    upstream_fill=momapy.coloring.lightblue,
+    downstream_fill=momapy.coloring.lightgreen,
+    interface_fill=momapy.coloring.red,
 ):
-    """Render, per interface identifier, the sub-map upstream of the identifier's
+    """Write, per interface identifier, the sub-map upstream of the identifier's
     upstream seeds and downstream of its downstream seeds.
 
-    The sub-map is a **selection** of stored AF elements (see `commute_dm.ig`),
-    joined by a synthetic central node standing for the interface identifier
-    itself. `index` is the AF adjacency index, built once per run with
-    `commute_dm.ig.load_af_index`.
+    The sub-map holds the stored AF elements the walk selected (see
+    `commute_dm.submaps`), joined by a synthetic central node standing for the
+    interface identifier itself. `influences`, `source_map` and
+    `node_id_to_object` come from :func:`load_submap_inputs`, once per run.
 
     Output is one directory per interface protein,
-    `<output_dir_path>/<display_name>/max_level_<n>.xml`.
+    `<output_dir_path>/<display_name>/max_level_<n>.xml`. Compartments are
+    always drawn: without their glyphs no box appears and species are not
+    grouped by compartment either, since `make_auto_layout` clusters on *mapped*
+    compartments.
 
-    `include_compartment_layouts` draws the compartments: compartments are
-    always in the model, but without their glyphs no box is drawn and species
-    are not grouped by compartment either (`make_auto_layout` clusters on
-    *mapped* compartments). Off by default, since it changes every output map.
+    A species is filled by which walk reached it: `upstream_fill` for the
+    upstream selection, `downstream_fill` for the downstream one. That is the
+    same partition the old colouring by collection membership produced, because
+    the two AF influence graphs share no node -- and it is why the old third "in
+    both collections" colour is gone: it could never fire on a *selected*
+    species. (201 species nodes are in both collections, but all 201 are complex
+    subunits, which no modulation points at.)
 
     The interface is keyed by UniProt accession, but maps and directory names use
     the readable `display_names` (HGNC symbols, see
-    :func:`get_interface_display_names`) — computed here when not supplied. The
-    accession does *not* survive into the map: `_renumber_ids` rewrites every
-    `id_`, the synthetic node's included. The returned stats carry both columns,
-    which is the join back to the accession-keyed analyses in `4_20`.
+    :func:`get_interface_display_names`) -- computed here when not supplied. The
+    accession does *not* survive into the map: `renumber_ids` rewrites every
+    `id_`, the synthetic node's included.
 
-    Returns a `DataFrame` of per-map assembly counts, one row per written map.
-    Worth reading rather than discarding: `n_elements_without_glyph` counts
-    selected species that are drawn *only* as complex subunits in every source
-    map and so cannot stand alone in the output (they and their arcs are left
-    out), and `n_extra_influences_dropped` counts seed connections to the
-    central node lost the same way.
+    Returns a `DataFrame` with one row per written map, holding the accession,
+    the display name, the level and the element counts. The counts are what a
+    change in the selection or the assembly shows up in.
     """
     if max_levels is None:
         max_levels = [-1]
     if display_names is None:
         display_names = get_interface_display_names(session, interface)
-    commute_dm.queries.prewarm_session(session)
     seeds_by_identifier = _split_interface_seeds(
-        interface, upstream_collection_name, downstream_collection_name
+        interface,
+        upstream_collection_name,
+        downstream_collection_name,
+        node_id_to_object=node_id_to_object,
+        source_map=source_map,
     )
-    # One hydration cache for the whole run: required for speed (momapy_kb
-    # hydrates by lazy per-relationship round-trips) and for correctness (the
-    # layout-model mapping is identity-keyed -- see `commute_dm.ig`).
-    cache = {}
     records = []
     for identifier in interface:
         seeds = seeds_by_identifier[identifier]
         for max_level in max_levels:
-            upstream_nodes, downstream_nodes = _select_around_seeds(
-                index, seeds, max_level
+            upstream_node_ids, downstream_node_ids = _select_around_seeds(
+                influences, seeds, max_level
             )
             if min_n_nodes is not None:
                 if (
-                    len(upstream_nodes) < min_n_nodes
-                    or len(downstream_nodes) < min_n_nodes
+                    len(upstream_node_ids) < min_n_nodes
+                    or len(downstream_node_ids) < min_n_nodes
                 ):
                     continue
-            nodes = commute_dm.ig.close_over_gates(
-                index, upstream_nodes | downstream_nodes
+            node_ids = influences.close_over_gates(
+                upstream_node_ids | downstream_node_ids
             )
-            modulation_ids = commute_dm.ig.induced_modulations(index, nodes)
-            species_ids = {node for node in nodes if node in index.species}
-            gate_ids = {node for node in nodes if node in index.gates}
             display_name = display_names[identifier]
-            central_model_element = _make_synthetic_central_model_element(
-                identifier, display_name
+            central = momapy.celldesigner.Unknown(name=display_name)
+            central_layout_element = dataclasses.replace(
+                pd2af.celldesigner.building_layout.make_synthetic_layout(central, 0),
+                fill=interface_fill,
             )
-            central_layout_element = _make_synthetic_central_layout_element(
-                display_name
-            )
+            # Species only: a boolean logic gate keeps the fill it is stored with.
+            fills = {
+                node_id_to_object[node_id]: upstream_fill
+                for node_id in influences.species_only(upstream_node_ids)
+            }
+            fills |= {
+                node_id_to_object[node_id]: downstream_fill
+                for node_id in influences.species_only(downstream_node_ids)
+            }
+            positive_influence = momapy.celldesigner.PositiveInfluence
             extra_influences = [
-                (
-                    seed,
-                    central_model_element,
-                    momapy.celldesigner.PositiveInfluence,
-                    momapy.celldesigner.PositiveInfluenceLayout,
-                )
-                for seed in seeds["upstream"]
-                if seed in nodes
+                (node_id_to_object[node_id], central, positive_influence)
+                for node_id in seeds["upstream"]
+                if node_id in node_ids
             ] + [
-                (
-                    central_model_element,
-                    seed,
-                    momapy.celldesigner.PositiveInfluence,
-                    momapy.celldesigner.PositiveInfluenceLayout,
-                )
-                for seed in seeds["downstream"]
-                if seed in nodes
+                (central, node_id_to_object[node_id], positive_influence)
+                for node_id in seeds["downstream"]
+                if node_id in node_ids
             ]
-            color_element_ids = _make_color_element_ids(
-                index,
-                species_ids,
-                upstream_collection_name,
-                downstream_collection_name,
-                upstream_nodes_color,
-                downstream_nodes_color,
-                common_nodes_color,
-            ) + [([central_model_element], interface_nodes_color)]
-            cd_map, stats = commute_dm.ig.make_celldesigner_map_from_selection(
-                session=session,
-                cache=cache,
-                element_ids=species_ids | gate_ids,
-                modulation_ids=modulation_ids,
-                color_element_ids=color_element_ids,
-                extra_elements=[(central_model_element, central_layout_element)],
+            cd_map = commute_dm.submaps.make_submap_from_model_elements(
+                source_map,
+                {node_id_to_object[node_id] for node_id in node_ids},
+                fills=fills,
+                extra_species=[(central, central_layout_element)],
                 extra_influences=extra_influences,
-                with_compartment_layouts=include_compartment_layouts,
             )
             # Stored arc geometry is not reusable across a merge; `make_auto_layout`
-            # repositions every glyph and rebuilds every arc's segments.
+            # repositions every glyph, rebuilds every arc's segments and fits the
+            # root layout.
             cd_map = pd2af.utils.make_auto_layout(cd_map)
             # One directory per interface protein, named after it; the levels of
             # one protein belong together and are what gets compared.
@@ -395,37 +366,47 @@ def make_and_write_cd_maps_from_interface(
                     "identifier": identifier,
                     "display_name": display_name,
                     "max_level": max_level,
-                    **stats,
+                    "n_species": len(cd_map.model.species),
+                    "n_modulations": len(cd_map.model.modulations),
+                    "n_gates": len(cd_map.model.boolean_logic_gates),
+                    "n_compartments": len(cd_map.model.compartments),
+                    "n_templates": len(cd_map.model.species_templates),
+                    "n_layout_elements": len(cd_map.layout.layout_elements),
                 }
             )
     return pandas.DataFrame(records)
 
 
-def _select_nodes_for_gene_set(index, seeds, max_level, mode, min_n_nodes):
-    """The species nodes of one identifier's selection, or `None` if too small.
+def _select_nodes_for_gene_set(influences, seeds, max_level, mode, min_n_nodes):
+    """The species node ids of one identifier's selection, or `None` if too small.
 
     Gates are excluded: they carry no annotation, so they cannot contribute to a
     gene set.
     """
-    upstream_nodes, downstream_nodes = _select_around_seeds(index, seeds, max_level)
+    upstream_node_ids, downstream_node_ids = _select_around_seeds(
+        influences, seeds, max_level
+    )
     if min_n_nodes is not None:
-        if len(upstream_nodes) < min_n_nodes or len(downstream_nodes) < min_n_nodes:
+        if (
+            len(upstream_node_ids) < min_n_nodes
+            or len(downstream_node_ids) < min_n_nodes
+        ):
             return None
     if mode == "downstream":
-        nodes = downstream_nodes
+        node_ids = downstream_node_ids
     elif mode == "upstream":
-        nodes = upstream_nodes
+        node_ids = upstream_node_ids
     elif mode == "upstream_and_downstream":
-        nodes = upstream_nodes | downstream_nodes
+        node_ids = upstream_node_ids | downstream_node_ids
     else:
         raise ValueError(f"unknown mode {mode!r}")
-    return {node for node in nodes if node in index.species}
+    return influences.species_only(node_ids)
 
 
 def make_goat_analysis_from_interface(
     session,
     interface,
-    index,
+    influences,
     gene_lists_dir_path,
     output_dir_path,
     upstream_collection_name=UPSTREAM_COLLECTION_NAME,
@@ -457,7 +438,7 @@ def make_goat_analysis_from_interface(
         for identifier in interface:
             seeds = seeds_by_identifier[identifier]
             node_ids = _select_nodes_for_gene_set(
-                index, seeds, max_level, mode, min_n_nodes
+                influences, seeds, max_level, mode, min_n_nodes
             )
             if node_ids is None:
                 continue
@@ -681,7 +662,7 @@ def make_goat_gene_lists(
 def make_intersection_analysis_from_interface(
     session,
     interface,
-    index,
+    influences,
     gene_lists_dir_path,
     output_dir_path,
     upstream_collection_name=UPSTREAM_COLLECTION_NAME,
@@ -704,7 +685,7 @@ def make_intersection_analysis_from_interface(
         for identifier in interface:
             seeds = seeds_by_identifier[identifier]
             node_ids = _select_nodes_for_gene_set(
-                index, seeds, max_level, mode, min_n_nodes
+                influences, seeds, max_level, mode, min_n_nodes
             )
             if node_ids is None:
                 continue
