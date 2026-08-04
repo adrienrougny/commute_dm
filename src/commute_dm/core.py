@@ -26,34 +26,20 @@ import commute_dm.submaps
 import commute_dm.utils  # noqa: F401
 
 
-# The collections the analysis runs on, and the interface they are joined over.
-# Referenced by string across modules -- change them here only.
+# Which collections an analysis runs on is a **notebook** decision, not a library
+# one: every entry point below takes the upstream and downstream collection names
+# (and the interface collection names) as required arguments, and each notebook
+# defines them itself. No pairing is hard-coded here.
 #
 # The downstream side may be an activity-flow CellDesigner collection or a BEL
 # knowledge graph: `load_submap_inputs` builds the BEL side as an in-memory map (see
 # `commute_dm.bel_submaps`), after which both sides are ordinary members of one
-# `source_map` and nothing below distinguishes them.
-UPSTREAM_COLLECTION_NAME = "COVID_DM_CD_AF"
-DOWNSTREAM_COLLECTION_NAME = "PD_DM_CD_AF"
+# `source_map` and nothing below distinguishes them. Which of the two a name is,
+# is the one collection fact the library still needs to know:
+#
 # The BEL collections whose downstream side is derived from their influence-graph
 # projection rather than from stored CellDesigner elements.
 BEL_COLLECTION_NAMES = frozenset({"AD_KG_BEL", "PD_KG_BEL", "COVID_KG_BEL", "CBM_KG_BEL"})
-# Every name here must be distinct: `get_interface` compares
-# `size(collect(DISTINCT collection.name))` against `size($collection_names)`, so a
-# repeated name makes it return `{}` with no error.
-INTERFACE_COLLECTION_NAMES = (
-    UPSTREAM_COLLECTION_NAME,
-    DOWNSTREAM_COLLECTION_NAME,
-    "AD_KG_BEL",
-)
-
-# The COVID x AD pairing, for the sub-maps of `4_15`. The AD side is the BEL KG.
-AD_UPSTREAM_COLLECTION_NAME = "COVID_DM_CD_AF"
-AD_DOWNSTREAM_COLLECTION_NAME = "AD_KG_BEL"
-AD_INTERFACE_COLLECTION_NAMES = (
-    AD_UPSTREAM_COLLECTION_NAME,
-    AD_DOWNSTREAM_COLLECTION_NAME,
-)
 
 
 def _gea():
@@ -70,7 +56,7 @@ def _gea():
 
 def get_interface(
     session,
-    collection_names=INTERFACE_COLLECTION_NAMES,
+    collection_names,
 ):
     """Compute the shared-UniProt protein interface between given collections.
 
@@ -84,6 +70,10 @@ def get_interface(
     Args:
         collection_names: the collections to intersect. Passing an explicit set
             is what distinguishes, e.g., the AF collections from the non-AF ones.
+            Every name must be **distinct**: the query compares
+            `size(collect(DISTINCT collection.name))` against
+            `size($collection_names)`, so a repeated name makes this return `{}`
+            with no error.
 
     Returns:
         A dict mapping each shared UniProt accession to the list of
@@ -156,9 +146,11 @@ def get_interface_display_names(session, interface, namespace="hgnc.symbol"):
 
     When the annotations give no single symbol, a BEL node's `name` property is
     tried: it holds the bare namespace identifier (`p(HGNC:"MAPT")` -> `MAPT`).
-    Without this about half the COVID x AD interface would be named by accession,
-    because `commute_dm.queries.get_identifiers` matches `(node:ModelElement)` and
-    BEL nodes carry `:BELModelElement` instead, so they contribute no annotation.
+    That fallback is no longer load-bearing -- `2_00` writes `hgnc.symbol` on the
+    BEL proteins and labels them `ModelElement`, so they answer
+    `commute_dm.queries.get_identifiers` like any other node, and none of the 189
+    COVID x AD interface proteins falls through to its accession. It is kept for
+    a node the HGNC dataset does not resolve.
     """
     identifier_to_symbol = {}
     for identifier, nodes_with_context in interface.items():
@@ -191,8 +183,8 @@ def get_interface_display_names(session, interface, namespace="hgnc.symbol"):
 
 def _split_interface_seeds(
     interface,
-    upstream_collection_name=UPSTREAM_COLLECTION_NAME,
-    downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
+    upstream_collection_name,
+    downstream_collection_name,
     node_id_to_object=None,
     source_map=None,
     downstream_node_id_expansion=None,
@@ -270,8 +262,8 @@ def _select_around_seeds(influences, seeds, max_level):
 
 def load_submap_inputs(
     session,
-    upstream_collection_name=UPSTREAM_COLLECTION_NAME,
-    downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
+    upstream_collection_name,
+    downstream_collection_name,
 ):
     """Everything :func:`make_and_write_submaps_from_interface` needs, once per run.
 
@@ -345,6 +337,54 @@ def load_submap_inputs(
     return influences, source_map, node_id_to_object, seed_expansion, bel_stats
 
 
+def load_gene_set_inputs(
+    session,
+    upstream_collection_name,
+    downstream_collection_name,
+):
+    """`(influences, seed_expansion)` for the gene-set analyses (a few seconds).
+
+    What :func:`load_submap_inputs` returns minus the drawing material. The GOAT
+    and intersection analyses walk node ids and read annotations off the database;
+    they never hydrate a momapy object, so the couple of minutes and couple of
+    hundred megabytes the `source_map` costs would buy them nothing.
+
+    Everything else is the same, and for the same reasons: a BEL downstream side
+    contributes its influence-graph projection (`commute_dm.bel_submaps`) merged
+    into the same `Influences` -- the two node-id spaces are disjoint -- and the
+    downstream seeds are widened to the interface proteins' activity forms,
+    because BEL keeps the causal wiring on `act(p(X))` while the UniProt
+    annotation that puts X in the interface sits on `p(X)`.
+    """
+    collection_names = [upstream_collection_name, downstream_collection_name]
+    bel_collection_names = [
+        collection_name
+        for collection_name in collection_names
+        if collection_name in BEL_COLLECTION_NAMES
+    ]
+    cd_collection_names = [
+        collection_name
+        for collection_name in collection_names
+        if collection_name not in BEL_COLLECTION_NAMES
+    ]
+    influences = commute_dm.submaps.load_signed_influences(session, cd_collection_names)
+    seed_expansion = {}
+    if bel_collection_names:
+        nodes, edges = commute_dm.bel_submaps.load_bel_projection(
+            session, bel_collection_names
+        )
+        influences = commute_dm.bel_submaps.merge_influences(
+            influences, commute_dm.bel_submaps.make_bel_influences(nodes, edges)
+        )
+        if downstream_collection_name in BEL_COLLECTION_NAMES:
+            seed_expansion = commute_dm.bel_submaps.load_activity_seed_expansion(
+                session,
+                _interface_node_ids(session, collection_names, downstream_collection_name),
+                projected_node_ids=nodes.keys(),
+            )
+    return influences, seed_expansion
+
+
 def _interface_node_ids(session, collection_names, collection_name):
     """The nodes of one collection that carry an interface UniProt annotation.
 
@@ -369,8 +409,8 @@ def make_and_write_submaps_from_interface(
     source_map,
     node_id_to_object,
     output_dir_path,
-    upstream_collection_name=UPSTREAM_COLLECTION_NAME,
-    downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
+    upstream_collection_name,
+    downstream_collection_name,
     display_names=None,
     max_levels=None,
     min_n_nodes=None,
@@ -538,24 +578,66 @@ def _select_nodes_for_gene_set(influences, seeds, max_level, mode, min_n_nodes):
     return influences.species_only(node_ids)
 
 
+def _add_display_name_column(df, identifier_column, display_names):
+    """Insert a readable `display_name` beside a frame's identifier column.
+
+    The analyses are keyed by UniProt accession, because that is what joins the
+    collections into the interface and what is guaranteed unique -- but it is not
+    what anyone reads a result table with. The HGNC symbol goes in next to it
+    rather than replacing it, for the same reason
+    :func:`get_interface_display_names` disambiguates a shared symbol with its
+    accession: `BBC3` is the symbol of two accessions in the current data, so a
+    symbol-keyed table could silently conflate two interface proteins.
+
+    A no-op on an empty frame, which is what `make_goat_analysis` returns when
+    every gene set was filtered out.
+    """
+    if identifier_column not in df.columns:
+        return df
+    display_name = df[identifier_column].map(
+        lambda identifier: display_names.get(identifier, identifier)
+    )
+    df.insert(df.columns.get_loc(identifier_column) + 1, "display_name", display_name)
+    return df
+
+
 def make_goat_analysis_from_interface(
     session,
     interface,
     influences,
     gene_lists_dir_path,
     output_dir_path,
-    upstream_collection_name=UPSTREAM_COLLECTION_NAME,
-    downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
+    upstream_collection_name,
+    downstream_collection_name,
     mode="downstream",
     max_levels=None,
     with_subunits=False,
     min_n_nodes=None,
+    downstream_node_id_expansion=None,
+    display_names=None,
     p_value_cutoff=0.05,
     score_type="effectsize",
 ):
+    """GOAT enrichment of each interface protein's selection against the gene lists.
+
+    Gene sets are `ncbigene` identifiers, which is what `goat.test_genesets` joins
+    the gene lists on (their `gene` column, written by :func:`make_goat_gene_lists`
+    from the HGNC dataset's `entrez_id`).
+
+    `downstream_node_id_expansion` comes from :func:`load_gene_set_inputs` and is
+    what makes a BEL downstream side work; it is empty for a CellDesigner one.
+
+    Every output carries a `display_name` column beside `identifier` -- see
+    :func:`_add_display_name_column`.
+    """
     gea = _gea()
+    if display_names is None:
+        display_names = get_interface_display_names(session, interface)
     seeds_by_identifier = _split_interface_seeds(
-        interface, upstream_collection_name, downstream_collection_name
+        interface,
+        upstream_collection_name,
+        downstream_collection_name,
+        downstream_node_id_expansion=downstream_node_id_expansion,
     )
     summary = {}
     for identifier in interface:
@@ -600,6 +682,9 @@ def make_goat_analysis_from_interface(
                 f"{pathlib.Path(gene_list_file_name).stem}_{max_level}.csv"
             )
             output_file_path = os.path.join(output_dir_path, output_file_name)
+            goat_result_df = _add_display_name_column(
+                goat_result_df, "id", display_names
+            )
             goat_result_df.to_csv(output_file_path)
             for _, row in goat_result_df.iterrows():
                 if row["signif"]:
@@ -609,6 +694,9 @@ def make_goat_analysis_from_interface(
     summary_order = collections.defaultdict(int)
     for identifier in summary:
         summary_data["identifier"].append(identifier)
+        summary_data["display_name"].append(
+            display_names.get(identifier, identifier)
+        )
         for gene_list_file_name in summary[identifier]:
             summary_data[gene_list_file_name].append(
                 summary[identifier][gene_list_file_name]
@@ -800,17 +888,36 @@ def make_intersection_analysis_from_interface(
     influences,
     gene_lists_dir_path,
     output_dir_path,
-    upstream_collection_name=UPSTREAM_COLLECTION_NAME,
-    downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
+    upstream_collection_name,
+    downstream_collection_name,
     mode="downstream",
     max_levels=None,
     with_subunits=False,
     min_n_nodes=None,
+    downstream_node_id_expansion=None,
+    display_names=None,
     min_n_hgnc=None,
 ):
+    """How much of each interface protein's selection is significantly DE.
+
+    The naive counterpart to :func:`make_goat_analysis_from_interface`: the
+    selection's gene set -- `hgnc.symbol` here, since that is what the gene lists'
+    `symbol` column holds -- is intersected with the genes the gene list marks
+    `signif`, rather than tested against the whole effect-size ranking. One CSV
+    per gene list per level, plus a `summary.csv` ordering the interface proteins
+    by the mean `|intersection| / |gene set|`.
+
+    Every output carries a `display_name` column beside `identifier` -- see
+    :func:`_add_display_name_column`.
+    """
     gea = _gea()
+    if display_names is None:
+        display_names = get_interface_display_names(session, interface)
     seeds_by_identifier = _split_interface_seeds(
-        interface, upstream_collection_name, downstream_collection_name
+        interface,
+        upstream_collection_name,
+        downstream_collection_name,
+        downstream_node_id_expansion=downstream_node_id_expansion,
     )
     if max_levels is None:
         max_levels = [-1]
@@ -844,6 +951,9 @@ def make_intersection_analysis_from_interface(
                     continue
                 genes_intersection = gene_set.intersection(genes_signif)
                 result_data["identifier"].append(identifier)
+                result_data["display_name"].append(
+                    display_names.get(identifier, identifier)
+                )
                 result_data["gene_set"].append(list(gene_set))
                 result_data["genes_signif"].append(list(genes_signif))
                 result_data["genes_intersection"].append(list(genes_intersection))
@@ -861,6 +971,9 @@ def make_intersection_analysis_from_interface(
     summary_order = collections.defaultdict(list)
     for identifier in summary:
         summary_data["identifier"].append(identifier)
+        summary_data["display_name"].append(
+            display_names.get(identifier, identifier)
+        )
         for gene_list_file_name in summary[identifier]:
             result = []
             for max_level in summary[identifier][gene_list_file_name]:

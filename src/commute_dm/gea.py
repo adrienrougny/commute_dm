@@ -40,13 +40,24 @@ def make_named_gene_sets_from_collection(
 def make_gene_set_from_nodes(
     session, nodes, namespace="ncbigene", with_subunits=False
 ):
+    """The `namespace` identifiers annotating the given nodes, as one set.
+
+    Goes through `commute_dm.queries.get_annotated_nodes` rather than
+    `get_subunits`, so a BEL node contributes the annotations of the entity terms
+    it is built from: an `Activity` is drawn from its subject always, a `Complex`
+    from its members when `with_subunits`. On the CellDesigner side that is the
+    same thing `get_subunits` did -- a species plus, optionally, its subunits.
+    """
     nodes = list(nodes)
-    if with_subunits:
-        nodes_and_subunits = commute_dm.queries.get_subunits(session, nodes)
-        for _, subunits in nodes_and_subunits:
-            nodes += subunits
+    annotated_nodes = []
+    for _, nodes_for_node in commute_dm.queries.get_annotated_nodes(
+        session, nodes, with_subunits=with_subunits
+    ):
+        annotated_nodes += nodes_for_node
     gene_set = set()
-    identifiers = commute_dm.queries.get_identifiers(session, nodes, namespace)
+    identifiers = commute_dm.queries.get_identifiers(
+        session, annotated_nodes, namespace
+    )
     for _, identifiers in identifiers:
         for identifier in identifiers:
             gene_set.add(identifier)
@@ -80,6 +91,55 @@ def make_gmt_file_from_gmt_df(gmt_df, output_file_path):
         gmt_df.to_csv(output_file_path, sep="\t", mode="w", index=False, header=False)
 
 
+CRAN_REPOS = "https://cloud.r-project.org"
+
+
+def _ensure_r_packages(r_packages, utils):
+    """Install `r_packages` from CRAN if missing, without ever prompting.
+
+    Two things here are what keep a notebook from hanging, and both are about
+    `install.packages` rather than about the packages:
+
+    * **It is only called when something is actually missing.**
+      `install.packages` validates the library path *before* it looks at what it
+      was asked to install, so calling it with an empty vector still warns
+      ``'lib = "/usr/lib/R/library"' is not writable`` and then asks "Would you
+      like to use a personal library instead?" -- an interactive prompt with no
+      stdin behind it in a notebook, which simply blocks. It used to be called
+      unconditionally, on every gene list of every level of every mode of every
+      pairing.
+    * **An explicit, writable `lib` is passed**, created if needed. The default
+      is `.libPaths()[1]`, which is the system library on a distro R and is not
+      writable by the user -- the same prompt again, this time for real. R's own
+      per-user library (`R_LIBS_USER`) is the right target and is already on
+      `.libPaths()`, but only once it exists.
+
+    `repos` is passed explicitly rather than through `chooseCRANmirror`, which is
+    itself interactive when it cannot pick a mirror.
+    """
+    missing_r_packages = [
+        r_package
+        for r_package in r_packages
+        if not rpy2.robjects.packages.isinstalled(r_package)
+    ]
+    if not missing_r_packages:
+        return
+    base = rpy2.robjects.packages.importr("base")
+    library_path = str(base.Sys_getenv("R_LIBS_USER")[0])
+    if not library_path or library_path == "NA":
+        raise RuntimeError(
+            "R_LIBS_USER is unset, so there is no writable library to install "
+            f"{missing_r_packages} into. Install them in R by hand, or set "
+            "R_LIBS_USER."
+        )
+    base.dir_create(library_path, recursive=True, showWarnings=False)
+    utils.install_packages(
+        rpy2.robjects.vectors.StrVector(missing_r_packages),
+        lib=library_path,
+        repos=CRAN_REPOS,
+    )
+
+
 def make_goat_analysis(
     gmt_df_or_file_path,
     source,
@@ -101,15 +161,8 @@ def make_goat_analysis(
             rpy2_df = rpy2.robjects.conversion.get_conversion().py2rpy(pandas_df)
         return rpy2_df
 
-    r_packages = ["goat"]
     utils = rpy2.robjects.packages.importr("utils")
-    utils.chooseCRANmirror(ind=1)
-    r_packages_to_install = [
-        r_package
-        for r_package in r_packages
-        if not rpy2.robjects.packages.isinstalled(r_package)
-    ]
-    utils.install_packages(rpy2.robjects.vectors.StrVector(r_packages_to_install))
+    _ensure_r_packages(["goat"], utils)
     goat = rpy2.robjects.packages.importr("goat")
     temp_file_path = None
     if isinstance(gmt_df_or_file_path, pandas.DataFrame):

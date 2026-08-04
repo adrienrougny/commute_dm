@@ -93,6 +93,76 @@ def get_subunits(session, nodes, recursive=True):
     return [(row["node"], row["subunits"]) for row in result]
 
 
+# The edges along which a node's annotations may sit on *another* node.
+# `HAS_SUBUNIT` is the CellDesigner one; the rest are
+# `commute_dm.bel_terms.MEMBER_EDGE_TYPES`, the `HAS__*` edges by which a BEL term
+# holds another entity -- a complex's or composite's members, and an activity's
+# subject. Repeated here rather than imported so this module keeps depending on
+# none of the BEL machinery; `bel_terms` is where the classification is decided,
+# and a new member edge type has to be added in both.
+_ANNOTATED_NODE_EDGE_TYPES = (
+    "HAS_SUBUNIT",
+    "HAS__PROTEIN",
+    "HAS__ABUNDANCE",
+    "HAS__COMPLEX",
+    "HAS__COMPOSITE",
+    "HAS__GENE",
+    "HAS__RNA",
+    "HAS__MICRO_RNA",
+)
+# A BEL complex nests a handful of levels deep at most; the bound is a guard
+# against a cycle in the term graph, not a modelling choice.
+_ANNOTATED_NODE_MAX_DEPTH = 10
+
+
+def get_annotated_nodes(session, nodes, with_subunits=False):
+    """`[(node, [node, ...]), ...]`: the nodes whose annotations stand for each input.
+
+    A CellDesigner species carries its own cross-references, so it is always its
+    own annotated node, and its subunits are reached by `HAS_SUBUNIT` when
+    `with_subunits`. A BEL node is different: the cross-references are attached
+    (by `2_00`) to the `:Protein` terms, which the nodes the influence walk
+    actually selects -- mostly `Activity` and `Complex` -- only *contain*. So the
+    `HAS__*` member edges are followed, with the same distinction the
+    CellDesigner side makes:
+
+    * an **activity's subject is always followed**: `act(p(X))` is X in another
+      form, the way an active CellDesigner species is still that species, so its
+      genes are its subject's whether or not subunits are wanted;
+    * a **complex's or composite's members are followed only when
+      `with_subunits`**, exactly as `HAS_SUBUNIT` is.
+
+    The input node is always included in its own list, which is what makes the
+    caller uniform: a node that is itself annotated needs no traversal, and one
+    that is not simply contributes nothing of its own.
+    """
+    node_element_ids = [node.element_id for node in nodes]
+    if not node_element_ids:
+        return []
+    edge_types = "|".join(_ANNOTATED_NODE_EDGE_TYPES)
+    query = f"""
+        UNWIND $element_ids AS element_id
+        MATCH (node) WHERE elementId(node) = element_id
+        OPTIONAL MATCH
+            path = (node)-[:{edge_types}*1..{_ANNOTATED_NODE_MAX_DEPTH}]->(part)
+        WHERE
+            all(inner IN nodes(path)[0..-1] WHERE
+                CASE
+                    WHEN inner:BELModelElement THEN inner:Activity OR $with_subunits
+                    ELSE $with_subunits
+                END)
+        RETURN node AS node, collect(DISTINCT part) AS parts
+    """
+    result = session.execute_query(
+        query,
+        params={
+            "element_ids": node_element_ids,
+            "with_subunits": bool(with_subunits),
+        },
+    )
+    return [(row["node"], [row["node"]] + row["parts"]) for row in result]
+
+
 def get_identifiers(session, nodes, namespace="ncbigene"):
     formatted_result = []
     for node, annotations in get_annotations(session, nodes):
