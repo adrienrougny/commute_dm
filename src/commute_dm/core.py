@@ -16,22 +16,43 @@ import momapy.builder
 import momapy_kb.lpg.session  # noqa: F401
 import momapy_kb.lpg.backends.neo4j  # noqa: F401
 import pd2af.celldesigner.building_layout
+import pd2af.celldesigner.building_model
 import pd2af.utils
+import commute_dm.bel_submaps
+import commute_dm.bel_terms
 import commute_dm.queries
 import commute_dm.submaps
 
 import commute_dm.utils  # noqa: F401
 
 
-# The activity-flow collections the analysis now runs on, and the interface
-# they are joined with the AD BEL KG over. Referenced by string across modules
-# -- change them here only.
+# The collections the analysis runs on, and the interface they are joined over.
+# Referenced by string across modules -- change them here only.
+#
+# The downstream side may be an activity-flow CellDesigner collection or a BEL
+# knowledge graph: `load_submap_inputs` builds the BEL side as an in-memory map (see
+# `commute_dm.bel_submaps`), after which both sides are ordinary members of one
+# `source_map` and nothing below distinguishes them.
 UPSTREAM_COLLECTION_NAME = "COVID_DM_CD_AF"
 DOWNSTREAM_COLLECTION_NAME = "PD_DM_CD_AF"
+# The BEL collections whose downstream side is derived from their influence-graph
+# projection rather than from stored CellDesigner elements.
+BEL_COLLECTION_NAMES = frozenset({"AD_KG_BEL", "PD_KG_BEL", "COVID_KG_BEL", "CBM_KG_BEL"})
+# Every name here must be distinct: `get_interface` compares
+# `size(collect(DISTINCT collection.name))` against `size($collection_names)`, so a
+# repeated name makes it return `{}` with no error.
 INTERFACE_COLLECTION_NAMES = (
     UPSTREAM_COLLECTION_NAME,
     DOWNSTREAM_COLLECTION_NAME,
     "AD_KG_BEL",
+)
+
+# The COVID x AD pairing, for the sub-maps of `4_15`. The AD side is the BEL KG.
+AD_UPSTREAM_COLLECTION_NAME = "COVID_DM_CD_AF"
+AD_DOWNSTREAM_COLLECTION_NAME = "AD_KG_BEL"
+AD_INTERFACE_COLLECTION_NAMES = (
+    AD_UPSTREAM_COLLECTION_NAME,
+    AD_DOWNSTREAM_COLLECTION_NAME,
 )
 
 
@@ -132,6 +153,12 @@ def get_interface_display_names(session, interface, namespace="hgnc.symbol"):
     symbol is suffixed with its accession, for *both* identifiers sharing it,
     rather than letting two maps collide on one file name. An identifier with no
     symbol keeps its accession.
+
+    When the annotations give no single symbol, a BEL node's `name` property is
+    tried: it holds the bare namespace identifier (`p(HGNC:"MAPT")` -> `MAPT`).
+    Without this about half the COVID x AD interface would be named by accession,
+    because `commute_dm.queries.get_identifiers` matches `(node:ModelElement)` and
+    BEL nodes carry `:BELModelElement` instead, so they contribute no annotation.
     """
     identifier_to_symbol = {}
     for identifier, nodes_with_context in interface.items():
@@ -141,6 +168,12 @@ def get_interface_display_names(session, interface, namespace="hgnc.symbol"):
             session, nodes, namespace
         ):
             symbols.update(identifiers)
+        if len(symbols) != 1:
+            symbols = {
+                node["name"]
+                for node in nodes
+                if node.get("namespace") == "HGNC" and node.get("name")
+            }
         if len(symbols) == 1:
             identifier_to_symbol[identifier] = symbols.pop()
     symbol_counts = collections.Counter(identifier_to_symbol.values())
@@ -162,6 +195,7 @@ def _split_interface_seeds(
     downstream_collection_name=DOWNSTREAM_COLLECTION_NAME,
     node_id_to_object=None,
     source_map=None,
+    downstream_node_id_expansion=None,
 ):
     """Split each interface entry into its upstream and downstream seed node ids.
 
@@ -175,28 +209,42 @@ def _split_interface_seeds(
     complex subunit is not one, so it has no glyph of its own and cannot seed a
     walk. The map path filters; the gene-set path, which loads no map, does not
     -- such a seed reaches nothing there either way.
+
+    `downstream_node_id_expansion` is a `{node_id: {node_id, ...}}` map adding, for
+    each downstream seed, the other nodes standing for the same entity. It exists
+    because an annotation is not always carried by the node holding the wiring: in a
+    BEL KG the UniProt annotation sits on `p(HGNC:X)` while the causal edges hang off
+    `act(p(HGNC:X))` (see `commute_dm.bel_submaps.load_activity_seed_expansion`). The
+    expansion is applied **before** the filter, so an expanded seed still has to be a
+    species of the model to survive.
     """
     filtering = node_id_to_object is not None and source_map is not None
+    downstream_node_id_expansion = downstream_node_id_expansion or {}
 
     def keep(node_id):
         if not filtering:
             return True
         return node_id_to_object.get(node_id) in source_map.model.species
 
+    def seed_node_ids(nodes_with_context, collection_name, expand):
+        node_ids = {
+            nwc["node"].element_id
+            for nwc in nodes_with_context
+            if nwc["collection"]["name"] == collection_name
+        }
+        if expand:
+            node_ids = node_ids.union(
+                *(downstream_node_id_expansion.get(node_id, ()) for node_id in node_ids)
+            )
+        return sorted(node_id for node_id in node_ids if keep(node_id))
+
     seeds = {}
     for identifier, nodes_with_context in interface.items():
         seeds[identifier] = {
-            key: sorted(
-                {
-                    nwc["node"].element_id
-                    for nwc in nodes_with_context
-                    if nwc["collection"]["name"] == collection_name
-                    and keep(nwc["node"].element_id)
-                }
-            )
-            for key, collection_name in (
-                ("upstream", upstream_collection_name),
-                ("downstream", downstream_collection_name),
+            key: seed_node_ids(nodes_with_context, collection_name, expand)
+            for key, collection_name, expand in (
+                ("upstream", upstream_collection_name, False),
+                ("downstream", downstream_collection_name, True),
             )
         }
     return seeds
@@ -227,19 +275,91 @@ def load_submap_inputs(
 ):
     """Everything :func:`make_and_write_submaps_from_interface` needs, once per run.
 
-    Returns `(influences, source_map, node_id_to_object)`. The influence graph
-    is two small queries; the source map is every stored map of both
-    collections hydrated as momapy objects, which takes a few minutes and a
-    couple of hundred megabytes. Only the map path needs it -- the gene-set
-    analyses call `commute_dm.submaps.load_signed_influences` on its own.
+    Returns `(influences, source_map, node_id_to_object, seed_expansion,
+    bel_stats)`. The
+    influence graph is a few small queries; the source map is every stored map of
+    the CellDesigner collections hydrated as momapy objects, which takes a couple
+    of minutes and a couple of hundred megabytes. Only the map path needs it -- the
+    gene-set analyses call `commute_dm.submaps.load_signed_influences` on its own.
+
+    A collection named in `BEL_COLLECTION_NAMES` has no stored CellDesigner
+    elements, so its side is built out of its influence-graph projection instead
+    (~0.4 s, `commute_dm.bel_submaps`) and merged into the same `source_map`. After
+    the merge a BEL node id resolves through `node_id_to_object` to a species of
+    `source_map.model` exactly as a stored one does, which is why nothing below
+    this function distinguishes the two.
+
+    `seed_expansion` is empty unless the downstream side is BEL; see
+    :func:`_split_interface_seeds`. `bel_stats` reports what the BEL side became
+    -- species collapsed by interning, templates interned from the source map,
+    complexes, subunits, badges -- and is empty when there is no BEL side.
     """
     collection_names = [upstream_collection_name, downstream_collection_name]
-    influences = commute_dm.submaps.load_signed_influences(session, collection_names)
+    bel_collection_names = [
+        collection_name
+        for collection_name in collection_names
+        if collection_name in BEL_COLLECTION_NAMES
+    ]
+    cd_collection_names = [
+        collection_name
+        for collection_name in collection_names
+        if collection_name not in BEL_COLLECTION_NAMES
+    ]
+    influences = commute_dm.submaps.load_signed_influences(session, cd_collection_names)
     node_id_to_object = {}
     source_map = commute_dm.submaps.load_collections_as_map(
-        session, collection_names, node_id_to_object
+        session, cd_collection_names, node_id_to_object
     )
-    return influences, source_map, node_id_to_object
+    seed_expansion = {}
+    bel_stats = {}
+    if bel_collection_names:
+        nodes, edges = commute_dm.bel_submaps.load_bel_projection(
+            session, bel_collection_names
+        )
+        terms = commute_dm.bel_terms.load_bel_terms(session, bel_collection_names)
+        # **The source map must exist first.** BEL templates are interned against
+        # it (`bel_terms` invariant (a)), and the set they are interned against
+        # has to be the one `make_submap_from_model_elements` re-derives -- by
+        # value, from the species -- not just `model.species_templates`.
+        existing_templates = frozenset(
+            source_map.model.species_templates
+        ) | frozenset(
+            pd2af.celldesigner.building_model.collect_templates_from_species(
+                source_map.model.species
+            )
+        )
+        bel_map, species_by_node_id, bel_stats = commute_dm.bel_submaps.make_bel_map(
+            nodes, terms, edges, existing_templates=existing_templates
+        )
+        source_map = commute_dm.bel_submaps.merge_with_source_map(source_map, bel_map)
+        influences = commute_dm.bel_submaps.merge_influences(
+            influences, commute_dm.bel_submaps.make_bel_influences(nodes, edges)
+        )
+        node_id_to_object.update(species_by_node_id)
+        if downstream_collection_name in BEL_COLLECTION_NAMES:
+            seed_expansion = commute_dm.bel_submaps.load_activity_seed_expansion(
+                session,
+                _interface_node_ids(session, collection_names, downstream_collection_name),
+                projected_node_ids=nodes.keys(),
+            )
+    return influences, source_map, node_id_to_object, seed_expansion, bel_stats
+
+
+def _interface_node_ids(session, collection_names, collection_name):
+    """The nodes of one collection that carry an interface UniProt annotation.
+
+    Only used to scope the seed expansion query to the proteins that can seed a
+    walk, rather than to every protein of the knowledge graph.
+    """
+    interface = get_interface(session, collection_names)
+    return sorted(
+        {
+            nwc["node"].element_id
+            for nodes_with_context in interface.values()
+            for nwc in nodes_with_context
+            if nwc["collection"]["name"] == collection_name
+        }
+    )
 
 
 def make_and_write_submaps_from_interface(
@@ -254,6 +374,7 @@ def make_and_write_submaps_from_interface(
     display_names=None,
     max_levels=None,
     min_n_nodes=None,
+    downstream_node_id_expansion=None,
     upstream_fill=momapy.coloring.lightblue,
     downstream_fill=momapy.coloring.lightgreen,
     interface_fill=momapy.coloring.red,
@@ -300,6 +421,7 @@ def make_and_write_submaps_from_interface(
         downstream_collection_name,
         node_id_to_object=node_id_to_object,
         source_map=source_map,
+        downstream_node_id_expansion=downstream_node_id_expansion,
     )
     records = []
     for identifier in interface:
@@ -319,8 +441,10 @@ def make_and_write_submaps_from_interface(
             )
             display_name = display_names[identifier]
             central = momapy.celldesigner.Unknown(name=display_name)
+            # Fitted rather than pd2af's plain synthetic layout: an `Unknown`'s
+            # default glyph is 60x30, which a display name overflows.
             central_layout_element = dataclasses.replace(
-                pd2af.celldesigner.building_layout.make_synthetic_layout(central, 0),
+                commute_dm.bel_terms.make_fitted_synthetic_layout(central, 0),
                 fill=interface_fill,
             )
             # Species only: a boolean logic gate keeps the fill it is stored with.
@@ -366,7 +490,18 @@ def make_and_write_submaps_from_interface(
                     "identifier": identifier,
                     "display_name": display_name,
                     "max_level": max_level,
+                    # top-level only; a complex's members are counted apart
                     "n_species": len(cd_map.model.species),
+                    "n_subunits": sum(
+                        len(list(commute_dm.submaps.iter_subunits(species)))
+                        for species in cd_map.model.species
+                    ),
+                    "n_modifications": sum(
+                        len(getattr(species, "modifications", ()) or ())
+                        for species in commute_dm.submaps.iter_species_and_subunits(
+                            cd_map.model.species
+                        )
+                    ),
                     "n_modulations": len(cd_map.model.modulations),
                     "n_gates": len(cd_map.model.boolean_logic_gates),
                     "n_compartments": len(cd_map.model.compartments),

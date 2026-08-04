@@ -370,22 +370,248 @@ def count_mapping_entries(cd_maps):
 
 
 # ---------------------------------------------------------------------------
+# identity invariants
+# ---------------------------------------------------------------------------
+#
+# momapy elements are equal by value with `id_` excluded, and both this module
+# and the CellDesigner writer rely on *object identity* in places where a
+# value-equal duplicate would go unnoticed until the written file is read back.
+# The four checks below are run on every sub-map just before `renumber_ids`, so
+# a violation is a loud failure here rather than a `KeyError` in the reader.
+#
+# They are cheap (a walk of the sub-map, which holds tens of elements) and they
+# hold for stored-only data too -- hash integration makes one database node
+# exactly one Python object -- so they are not BEL-specific; the BEL side is
+# simply the one that has to *establish* them (see `commute_dm.bel_terms`).
+
+
+def iter_subunits(species):
+    """Every subunit of `species`, at any depth."""
+    for subunit in getattr(species, "subunits", ()) or ():
+        yield subunit
+        yield from iter_subunits(subunit)
+
+
+def iter_species_and_subunits(species_list):
+    """Every species of `species_list` and, recursively, its subunits.
+
+    A complex's members are not top-level species, so `model.species` alone
+    misses them -- and they are where half the modifications and templates of a
+    BEL sub-map live.
+    """
+    for species in species_list:
+        yield species
+        yield from iter_subunits(species)
+
+
+def _get_template_residues(template):
+    """A protein template's `modification_residues`, a gene/RNA one's `regions`."""
+    for field_name in ("modification_residues", "regions"):
+        container = getattr(template, field_name, None)
+        if container is not None:
+            return container
+    return ()
+
+
+def check_species_template_identity(cd_map):
+    """One template *object* per template value. Invariant (a).
+
+    `make_submap_from_model_elements` derives `model.species_templates` by value
+    via `collect_templates_from_species`, so two value-equal but distinct
+    template objects collapse into one member of that frozenset while each
+    species keeps pointing at its own object. The writer then emits a single
+    `<protein>` and the other species emit a `<proteinReference>` to an id that
+    was never written -- the file is written without error and fails to read back
+    with a `KeyError`.
+    """
+    identities = collections.defaultdict(set)
+    for species in iter_species_and_subunits(cd_map.model.species):
+        template = getattr(species, "template", None)
+        if template is not None:
+            identities[template].add(id(template))
+    duplicated = [
+        template for template, ids in identities.items() if len(ids) > 1
+    ]
+    if duplicated:
+        raise RuntimeError(
+            f"{len(duplicated)} species template(s) exist as several distinct "
+            f"objects with the same value, e.g. {duplicated[0].name!r}. They would "
+            "collapse into one `<protein>` declaration while the other species "
+            "reference an id that is never written. Intern templates by value."
+        )
+
+
+def check_modification_residue_identity(cd_map):
+    """A modification's residue *is* an object of its template's container. Invariant (b).
+
+    The writer emits `<modification residue=...>` from the modification and
+    `<modificationResidue id=...>` from the template independently; after
+    `renumber_ids` two value-equal residue objects carry two different ids, so
+    the modification names a residue the list does not declare and the reader's
+    unguarded lookup raises.
+    """
+    for species in iter_species_and_subunits(cd_map.model.species):
+        template = getattr(species, "template", None)
+        modifications = getattr(species, "modifications", ()) or ()
+        if not modifications:
+            continue
+        residue_ids = {id(residue) for residue in _get_template_residues(template)}
+        for modification in modifications:
+            residue = modification.residue
+            if residue is None:
+                raise RuntimeError(
+                    f"a modification of species {species.name!r} has no residue; the "
+                    "reader looks a modification's residue up unguarded."
+                )
+            if id(residue) not in residue_ids:
+                raise RuntimeError(
+                    f"species {species.name!r} has a modification on residue "
+                    f"{residue.name!r} that is not an object of its template's "
+                    "residue container. The written modification would name a "
+                    "residue that is never declared."
+                )
+
+
+def find_subunit_top_level_aliases(cd_map):
+    """`[(complex, subunit)]` where a subunit object *is* a top-level species.
+
+    The writer keys `build_subunit_to_complex` by `id(subunit)` and skips any
+    species whose `id()` is in that index, so such a species is written as
+    neither `<species>` nor `<speciesAlias>` while its modulations still point at
+    it -- a file that writes cleanly and fails to read back with `KeyError`.
+
+    This is **not** a BEL problem. Hash integration makes one database node
+    exactly one Python object, so a stored species that the walk selects *and*
+    that a selected complex holds as a subunit is one object playing both roles;
+    it reaches a selection as a boolean-gate input or as an interface seed.
+    Measured on COVID x AD before the fix: 7 such pairs over 5 of 101 maps
+    (`CASP1` in `NLRP3 oligomer:PYCARD:CASP1`, `TRAF2` in `TRAF2:ERN1:unfolded
+    protein`), and those 5 were exactly the 5 that failed to read back. It is
+    latent in COVID -> PD too; that pairing's maps simply never select such a
+    pair.
+
+    :func:`make_submap_from_model_elements` resolves it by giving the standalone
+    occurrence its own object, so this must find nothing -- which is what
+    :func:`check_identity_invariants` asserts.
+    """
+    top_level_ids = {id(species) for species in cd_map.model.species}
+    aliases = []
+    for complex_ in cd_map.model.species:
+        for subunit in iter_subunits(complex_):
+            if id(subunit) in top_level_ids:
+                aliases.append((complex_, subunit))
+    return aliases
+
+
+def check_subunit_layouts(cd_map):
+    """Every subunit is drawn inside its complex, and is its own object. Invariant (c).
+
+    The writer emits an included species' alias only when
+    `get_child_layout_elements(subunit, complex)` returns a layout that is also
+    in the complex layout's `layout_elements`, so both the nesting and the
+    mapping entry are needed. And no subunit object may *be* a top-level species
+    -- see :func:`find_subunit_top_level_aliases`.
+    """
+    aliases = find_subunit_top_level_aliases(cd_map)
+    if aliases:
+        complex_, subunit = aliases[0]
+        raise RuntimeError(
+            f"{len(aliases)} subunit(s) are the same object as a top-level species, "
+            f"e.g. {subunit.name!r} of complex {complex_.name!r}. The writer would "
+            "emit neither a species nor an alias for the standalone occurrence, and "
+            "the file would fail to read back."
+        )
+    for complex_ in cd_map.model.species:
+        subunits = getattr(complex_, "subunits", ()) or ()
+        if not subunits:
+            continue
+        complex_layout_elements = [
+            key
+            for key in cd_map.get_mapping(complex_) or []
+            if not isinstance(key, frozenset)
+        ]
+        for subunit in subunits:
+            drawn = [
+                layout_element
+                for complex_layout in complex_layout_elements
+                for layout_element in cd_map.layout_model_mapping
+                .get_child_layout_elements(subunit, complex_)
+                if layout_element in complex_layout.layout_elements
+            ]
+            if not drawn:
+                raise RuntimeError(
+                    f"subunit {subunit.name!r} of complex {complex_.name!r} has no "
+                    "mapped layout element nested in the complex's glyph, so the "
+                    "writer emits no alias for it."
+                )
+
+
+def check_compartment_identity(cd_map):
+    """One compartment *object* per compartment value. Invariant (d).
+
+    The same collapse as invariant (a), one level down: the writer emits one
+    `<compartment>` per member of the model's compartment frozenset, so two
+    value-equal compartment objects leave a species referencing an id that was
+    never written.
+    """
+    identities = collections.defaultdict(set)
+    for species in cd_map.model.species:
+        compartment = species.compartment
+        if compartment is not None:
+            identities[compartment].add(id(compartment))
+    for compartment in cd_map.model.compartments:
+        identities[compartment].add(id(compartment))
+        if compartment.outside is not None:
+            identities[compartment.outside].add(id(compartment.outside))
+    duplicated = [
+        compartment for compartment, ids in identities.items() if len(ids) > 1
+    ]
+    if duplicated:
+        raise RuntimeError(
+            f"{len(duplicated)} compartment(s) exist as several distinct objects "
+            f"with the same value, e.g. {duplicated[0].name!r}. One of them would "
+            "not be written, and the species inside it would reference an unknown "
+            "compartment id."
+        )
+
+
+def check_identity_invariants(cd_map):
+    """The four identity invariants, in one call."""
+    check_species_template_identity(cd_map)
+    check_modification_residue_identity(cd_map)
+    check_subunit_layouts(cd_map)
+    check_compartment_identity(cd_map)
+
+
+# ---------------------------------------------------------------------------
 # assembly
 # ---------------------------------------------------------------------------
 
 
-def get_layout_element_for_model_element(cd_map, model_element):
+def get_layout_element_for_model_element(cd_map, model_element, preferred_ids=None):
     """The layout element the map draws `model_element` with.
 
     A species and a boolean logic gate have exactly one. A compartment drawn in
     several of the merged maps has one per map, and the root `default`
     compartment has none; the lowest id keeps the choice deterministic.
+
+    `preferred_ids` is a set of `id()`s to choose from first. It exists for the
+    species that are drawn **both** standalone and as a complex subunit: those
+    have two glyphs, and passing the ids of `cd_map.layout.layout_elements`
+    picks the standalone one rather than the glyph nested inside the complex.
     """
     layout_elements = [
         key
         for key in cd_map.get_mapping(model_element) or []
         if not isinstance(key, frozenset)
     ]
+    if preferred_ids:
+        preferred = [
+            layout_element
+            for layout_element in layout_elements
+            if id(layout_element) in preferred_ids
+        ]
+        layout_elements = preferred or layout_elements
     return min(
         layout_elements,
         key=lambda layout_element: layout_element.id_ or "",
@@ -473,19 +699,73 @@ def make_submap_from_model_elements(
     mapping = momapy.core.mapping.LayoutModelMappingBuilder()
     layout_element_of = {}
 
+    model_elements = list(model_elements)
+    # A selected species that a selected complex also holds as a subunit is
+    # **one object**: hash integration makes one database node exactly one
+    # Python object, and such a species reaches the selection as a boolean-gate
+    # input or as an interface seed. The writer indexes subunits by `id()` and
+    # skips any species whose `id()` is in that index, so it would emit neither
+    # `<species>` nor `<speciesAlias>` for the standalone occurrence while its
+    # modulations still point at it -- a file that writes cleanly and fails to
+    # read back with `KeyError` (measured: exactly the 5 of 101 COVID x AD maps
+    # that hit this). The standalone occurrence therefore gets its **own
+    # object**, and its own glyph.
+    #
+    # The copy is value-*equal* to the original, which is what keeps the rest of
+    # this function unchanged: `layout_element_of` and `fills` are equality-keyed,
+    # so either object looks the two up. Only `model.species` membership and the
+    # modulations' endpoints care about identity, and both are handled below.
+    subunit_ids = {
+        id(subunit)
+        for model_element in model_elements
+        for subunit in iter_subunits(model_element)
+    }
+    promoted = {
+        id(model_element): dataclasses.replace(model_element)
+        for model_element in model_elements
+        if id(model_element) in subunit_ids
+    }
+    # The stored glyphs that are drawn at the top level of a map -- as opposed to
+    # nested inside a complex's glyph. A species drawn both ways has one of each.
+    top_level_layout_element_ids = {
+        id(layout_element) for layout_element in source_map.layout.layout_elements
+    }
+
+    def resolve(model_element):
+        return promoted.get(id(model_element), model_element)
+
     for model_element in model_elements:
-        layout_element = get_layout_element_for_model_element(source_map, model_element)
+        layout_element = get_layout_element_for_model_element(
+            source_map, model_element, preferred_ids=top_level_layout_element_ids
+        )
         if layout_element is None:
             raise RuntimeError(
                 f"no layout element for {type(model_element).__name__} "
                 f"{model_element.id_!r}: every species and boolean logic gate of a "
                 "stored map is expected to be drawn exactly once"
             )
+        resolved_model_element = resolve(model_element)
+        if (
+            resolved_model_element is not model_element
+            and id(layout_element) not in top_level_layout_element_ids
+        ):
+            # The species has no standalone glyph, only the one nested in the
+            # complex. Reusing that object would put the same layout element both
+            # at the top level and inside the complex, and the equality-keyed
+            # mapping would then hold one of the two model elements only. A
+            # nudged position is enough to make the copy value-distinct; every
+            # position here is thrown away by `make_auto_layout` anyway.
+            layout_element = dataclasses.replace(
+                layout_element,
+                position=momapy.geometry.Point(
+                    layout_element.position.x + 0.5, layout_element.position.y
+                ),
+            )
         fill = fills.get(model_element)
         if fill is not None:
             layout_element = dataclasses.replace(layout_element, fill=fill)
-        layout_element_of[model_element] = layout_element
-        mapping.add_mapping(layout_element, model_element)
+        layout_element_of[resolved_model_element] = layout_element
+        mapping.add_mapping(layout_element, resolved_model_element)
         # `dataclasses.replace` is shallow, so the descendants below are the
         # stored objects either way and resolve in the stored mapping. The
         # source map already knows what the sub-elements of a layout element
@@ -511,16 +791,44 @@ def make_submap_from_model_elements(
         for model_element in layout_element_of
         if isinstance(model_element, momapy.celldesigner.BooleanLogicGate)
     }
-    modulations = [
-        modulation
-        for modulation in source_map.model.modulations
-        if isinstance(modulation, SIGNED_MODULATION_CLASSES)
-        and modulation.source in layout_element_of
-        and modulation.target in layout_element_of
-    ] + [
-        modulation_class(source=source, target=target)
-        for source, target, modulation_class in extra_influences
-    ]
+    # `(modulation as the sub-map holds it, the stored modulation it came from)`.
+    # The pair is needed because a modulation whose endpoint was promoted above
+    # has to be rebuilt on the promoted object -- the writer resolves a
+    # participant by identity -- while the *stored* one is what
+    # `get_arc_for_modulation` looks the reusable arc up by (identity again, so a
+    # rebuilt copy would silently fall back to a synthesized arc).
+    #
+    # Deduplicated, and induced first so a modulation the source map draws keeps
+    # its stored arc. `model.modulations` is a frozenset while the loop below
+    # appends one arc per list element, so a duplicate would give two arcs for
+    # one modulation -- and `extra_influences` can hold duplicates whenever
+    # `node_id_to_object` is many-to-one, which it is on the BEL side (several
+    # BEL node ids can stand for one species).
+    modulation_pairs = {}
+    for stored_modulation in source_map.model.modulations:
+        if not isinstance(stored_modulation, SIGNED_MODULATION_CLASSES):
+            continue
+        if (
+            stored_modulation.source not in layout_element_of
+            or stored_modulation.target not in layout_element_of
+        ):
+            continue
+        modulation = stored_modulation
+        if (
+            id(stored_modulation.source) in promoted
+            or id(stored_modulation.target) in promoted
+        ):
+            modulation = dataclasses.replace(
+                stored_modulation,
+                source=resolve(stored_modulation.source),
+                target=resolve(stored_modulation.target),
+            )
+        modulation_pairs.setdefault(modulation, (modulation, stored_modulation))
+    for source, target, modulation_class in extra_influences:
+        modulation = modulation_class(source=resolve(source), target=resolve(target))
+        modulation_pairs.setdefault(modulation, (modulation, None))
+    modulation_pairs = list(modulation_pairs.values())
+    modulations = [modulation for modulation, _ in modulation_pairs]
 
     compartments = pd2af.celldesigner.building_model.collect_ancestor_compartments(
         {
@@ -555,10 +863,14 @@ def make_submap_from_model_elements(
         mapping.add_mapping(layout_element, compartment)
     layout_elements.extend(layout_element_of.values())
 
-    for modulation in modulations:
+    for modulation, stored_modulation in modulation_pairs:
         source_layout_element = layout_element_of[modulation.source]
         target_layout_element = layout_element_of[modulation.target]
-        arc = get_arc_for_modulation(source_map, modulation)
+        arc = (
+            None
+            if stored_modulation is None
+            else get_arc_for_modulation(source_map, stored_modulation)
+        )
         if arc is not None:
             # reused like a node; only its geometry is worthless once maps are
             # merged, and `make_auto_layout` rebuilds every segment anyway
@@ -612,6 +924,7 @@ def make_submap_from_model_elements(
         ),
         layout_model_mapping=mapping.build(),
     )
+    check_identity_invariants(cd_map)
     return renumber_ids(cd_map)
 
 
