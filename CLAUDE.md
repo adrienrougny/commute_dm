@@ -85,31 +85,36 @@ store; afterwards any notebook can be opened standalone.
   hits it (BEL is annotated before the maps are loaded); a re-run always would.
 - `3_00_get_interfaces` — query proteins present across collections (joined on **UniProt RDF
   annotations**), write `data/.../interface/*.json` — five files (`covid_pd`, `covid_ad`,
-  `covid_pd_ad`, the AF three-way `covid_af_pd_af_ad` used by `4_10`/`4_20`, and the AF two-way
-  `covid_af_ad` used by `4_15`).
+  `covid_pd_ad`, the AF three-way `covid_af_pd_af_ad` and the AF two-way `covid_af_ad`, both used
+  by `4_10`/`4_20` — one per pairing).
 - `4_00_make_goat_gene_lists` — turn raw RNA-seq DE CSVs (`data/rnaseq/`) into GOAT gene-list
   CSVs, mapping Ensembl→Entrez/symbol via the HGNC dataset.
-- `4_10_make_interface_graphs` — load the influence structure and the drawing material once
-  (`core.load_submap_inputs`, ~3 min), then assemble and write a CellDesigner map per interface
-  protein at several `MAX_LEVELS`.
-- `4_15_make_interface_ad_graphs` — the same, **COVID upstream × AD BEL KG downstream**. The AD
-  side comes from the KG's influence-graph projection via `bel_submaps` + `bel_terms` — real
-  activity-flow content, not text boxes: badges, nested subunits, active borders, `loc()` boxes —
-  merged into the same `source_map`; ~2.5 min to load (one CellDesigner collection instead of two,
-  plus the BEL term graph). The `bel_stats` cell reports what the KG became, and the last cell
-  **reads every written file back**, which is the assertion the identity invariants exist for.
-  `MAX_LEVELS` is
-  `[1,2,3]`, not `4_10`'s `[2,3,4,5,6]`: the AD influence graph is much denser (median downstream
-  selection 3/6/18 nodes at 1/2/3 hops, but 140 at four and ~960 unbounded). Current output:
-  **101 maps over 45 proteins** (16 at level 1, 40 at 2, 45 at 3), from an interface of 189 — the
-  binding constraint is `MIN_N_NODES=5` on the **COVID upstream** side, not the AD side. (The
-  earlier "74 maps over 33 proteins, interface 169" figures went with an older DB state; the walk
-  itself is untouched by the activity-flow rework — `Influences` is built from the same queries on
-  the same node ids, and the seed filter is a value test that the interning does not change.)
+- `4_10_make_interface_graphs` — **both pairings**, in a `PAIRINGS` list of the same shape as
+  `4_20`'s: per pairing the collection names, the interface tuple, `max_levels` and the output
+  directory. Load the influence structure and the drawing material once per pairing
+  (`core.load_submap_inputs`, ~3 min for COVID→PD, ~2.5 min for COVID→AD — one CellDesigner
+  collection instead of two, plus the BEL term graph), then assemble and write a CellDesigner map
+  per interface protein at every level. The `bel_stats` cell reports what a BEL downstream side
+  became (`{}` for COVID→PD), and the last cell **reads every written file back**, which is the
+  assertion the identity invariants exist for. There is no `4_15`: the notebook that used to hold
+  COVID→AD differed from this one by a dead import, that one display cell, and a
+  `downstream_node_id_expansion` kwarg that is already a no-op when empty (`core.py:214`).
+  For COVID→AD the downstream side comes from the KG's influence-graph projection via
+  `bel_submaps` + `bel_terms` — real activity-flow content, not text boxes: badges, nested
+  subunits, active borders, `loc()` boxes — merged into the same `source_map`.
+  `max_levels` stays per pairing, and that is a property of the downstream graph, not of the code:
+  `[1,2,3]` for AD against `[2,3,4,5,6]` for PD, because the AD influence graph is much denser
+  (median downstream selection 3/6/18 nodes at 1/2/3 hops, but 140 at four and ~960 unbounded).
+  Current COVID→AD output: **101 maps over 45 proteins** (16 at level 1, 40 at 2, 45 at 3), from an
+  interface of 189 — the binding constraint is `MIN_N_NODES=5` on the **COVID upstream** side, not
+  the AD side. (The earlier "74 maps over 33 proteins, interface 169" figures went with an older DB
+  state; the walk itself is untouched by the activity-flow rework — `Influences` is built from the
+  same queries on the same node ids, and the seed filter is a value test that the interning does
+  not change.)
 - `4_20_make_interface_goat_analysis` — GOAT enrichment + intersection analyses of interface
   subgraphs vs. the gene lists, for **both pairings and all three modes** (`upstream`,
-  `downstream`, `upstream_and_downstream`): a `PAIRINGS` list holds, per pairing, what `4_10` and
-  `4_15` hold in their own parameter cells (collection names, interface tuple, `MAX_LEVELS`) plus
+  `downstream`, `upstream_and_downstream`): a `PAIRINGS` list holds, per pairing, what `4_10`
+  holds in its own (collection names, interface tuple, `max_levels`) plus
   the output directory per analysis and mode. COVID→PD writes under `INTERFACE_ANALYSIS_DIR`,
   COVID→AD under `INTERFACE_AD_ANALYSIS_DIR`. There is no `4_25`: one notebook covers both, since
   the only thing that ever distinguished them was annotation coverage.
@@ -404,10 +409,9 @@ activity-flow content via `bel_terms`. `core.load_submap_inputs` merges that map
 ### `core.py` — analysis orchestration
 Ties queries + submaps + bel_submaps + gea together for the interface workflows.
 **No pairing is hard-coded in the library.** `get_interface`, `load_submap_inputs` and the three
-interface entry points all take the collection names as **required** arguments, and each notebook
-defines its own `UPSTREAM_COLLECTION_NAME` / `DOWNSTREAM_COLLECTION_NAME` /
-`INTERFACE_COLLECTION_NAMES` in its parameter cell (COVID→PD in `4_10`, COVID→AD in `4_15`, whose
-downstream side is the AD BEL KG, and **both** in `4_20`, as a `PAIRINGS` list). The only
+interface entry points all take the collection names as **required** arguments, and both `4_10`
+and `4_20` define them per pairing in a `PAIRINGS` list in their parameter cell — COVID→PD and
+COVID→AD, the latter with the AD BEL KG downstream. The only
 collection fact `core.py` still holds is
 `BEL_COLLECTION_NAMES`, which is a *kind* of collection, not a choice of one.
 Every name in an interface tuple must be **distinct**:
