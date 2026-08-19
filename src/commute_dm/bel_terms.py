@@ -1,10 +1,10 @@
 """BEL terms as real activity-flow CellDesigner content.
 
-`commute_dm.bel_submaps` turns a BEL knowledge graph's influence-graph
+`commute_dm.bel_export` turns a BEL knowledge graph's influence-graph
 projection into an in-memory `CellDesignerMap`. This module is the half that
 knows what a BEL *term* is: it reads the term graph out of Neo4j, describes each
 term in CellDesigner vocabulary, and builds the frozen momapy species and glyphs.
-`bel_submaps` imports `bel_terms`, never the reverse.
+`bel_export` imports `bel_terms`, never the reverse.
 
 **The structure is fully relational.** Every sub-term of a BEL term -- a `pmod`,
 a `var`, a `frag`, a `loc`, each complex member, an activity's subject -- is its
@@ -33,12 +33,15 @@ carried by *object identity* instead. Each is enforced by a check in
 produces a file that writes without error and then fails to read back with a
 `KeyError`.
 
-(a) **One template object per `(template_class, name)`, interned against the
-source map.** `submaps.make_submap_from_model_elements` derives
-`model.species_templates` *by value*; two value-equal but distinct template
-objects collapse there while each species keeps its own object, so the writer
-emits one `<protein>` and the other species emit a `<proteinReference>` to an id
-that was never written. See :func:`make_build_context`.
+(a) **One template object per `(template_class, name)` within the export.**
+`submaps.make_submap_from_model_elements` derives `model.species_templates` *by
+value*; two value-equal but distinct template objects collapse there while each
+species keeps its own object, so the writer emits one `<protein>` and the other
+species emit a `<proteinReference>` to an id that was never written. See
+:func:`make_build_context`. Identity with the *stored* collections' templates is
+not established here: the export is standalone, and the save merges value-equal
+elements into one database node (hash integration with a seeded
+`object_key_to_node`, see `2_10`).
 
 (b) **`Modification.residue` *is* an object inside its species' template's
 residue container.** The writer emits the modification's residue id and the
@@ -53,7 +56,17 @@ writer keys `build_subunit_to_complex` by `id(subunit)` and skips any species
 whose `id()` is in that index. `p(HGNC:"APP")` is both a projected node and a
 member of several complexes, so memoising species by node id would make APP's own
 glyph disappear. :func:`make_species` therefore always builds a **fresh object
-tree**; interning happens only at the top level, in `bel_submaps`.
+tree**; interning happens only at the top level, in `bel_export`.
+
+This one is an **in-memory property of the export only, and does not survive the
+save**: a top-level `p(X)` and the same `p(X)` inside a complex are value-equal,
+so hash integration stores them as one node and hydration returns one object.
+A source map built from the stored collection therefore has hundreds of subunits
+that *are* their top-level species (651 in AD), and that is expected --
+`submaps.make_submap_from_model_elements` promotes such a species to its own
+object per sub-map, before the invariant checks run. Never run
+`check_identity_invariants` on a source map; it is a pre-write check for
+sub-maps.
 
 (d) **One compartment object per `(collection, location)`, hanging off an undrawn
 per-collection root.** Same collapse as (a), one level down -- and the root
@@ -77,6 +90,8 @@ import momapy.core.layout
 import momapy.drawing
 import momapy.geometry
 import pd2af.celldesigner.building_layout
+
+import commute_dm.submaps
 
 
 # ---------------------------------------------------------------------------
@@ -523,18 +538,47 @@ def _name_suffix_part(kind, payload):
     return payload
 
 
-def describe_term(term, cache=None):
+def collect_activity_subject_term_ids(terms):
+    """`{id(term)}` for every term that is the subject of some activity.
+
+    `act(p(X))` and `p(X)` are meant to describe identically, so that they
+    intern to one species and become one database node: the projection has no
+    edge between the two, and keeping them apart severs every upstream ->
+    downstream path that runs through one and out of the other (6889 of them at
+    two hops in the AD KG, which three hops cannot recover). Making them one
+    node means the *subject* has to carry the active border too, so being active
+    stops being a property of the term alone and becomes this set.
+
+    Pass **every loaded term**, not just the projected roots: a protein is drawn
+    active whenever BEL asserts any activity of it, including in a statement
+    that mentions only the abundance, and including where the activity term
+    itself is not projected.
+    """
+    subject_term_ids = set()
+    for term in terms:
+        if term.node_class != "Activity":
+            continue
+        for member in term.members():
+            subject_term_ids.add(id(member))
+    return frozenset(subject_term_ids)
+
+
+def describe_term(term, cache=None, active_term_ids=frozenset()):
     """The :class:`TermDescription` of one BEL term. Pure, DB-free, memoised.
 
     `cache` is `{id(term): TermDescription}` and is shared across a whole build,
     so a term reached as a projected node and as a complex member is described
-    once. Raises on a cycle, on a BEL class with no CellDesigner counterpart and
-    on a modifier this module cannot route.
+    once. `active_term_ids` is what
+    :func:`collect_activity_subject_term_ids` returns: a term in it is described
+    active, exactly as an `act(...)` of it is. Raises on a cycle, on a BEL class
+    with no CellDesigner counterpart and on a modifier this module cannot route.
     """
-    return _describe_term(term, {} if cache is None else cache, set())
+    return _describe_term(
+        term, {} if cache is None else cache, set(), active_term_ids
+    )
 
 
-def _describe_term(term, cache, in_progress):
+def _describe_term(term, cache, in_progress, active_term_ids):
     if id(term) in cache:
         return cache[id(term)]
     if id(term) in in_progress:
@@ -544,19 +588,23 @@ def _describe_term(term, cache, in_progress):
         )
     in_progress.add(id(term))
     try:
-        description = _describe_term_uncached(term, cache, in_progress)
+        description = _describe_term_uncached(
+            term, cache, in_progress, active_term_ids
+        )
     finally:
         in_progress.discard(id(term))
     cache[id(term)] = description
     return description
 
 
-def _describe_term_uncached(term, cache, in_progress):
+def _describe_term_uncached(term, cache, in_progress, active_term_ids):
     if term.node_class == "Activity":
         # `act(p(X))` *is* X in an active state: it takes its subject's class and
         # its subject's members, and the `ma()` code is dropped. Two activities
         # of one subject therefore describe identically and collapse into one
-        # species -- accepted, and measured at 75 of the AD KG's 549.
+        # species -- accepted, and measured at 75 of the AD KG's 549. The subject
+        # is described active too (`active_term_ids`), so `act(p(X))` and `p(X)`
+        # collapse into *the same* species rather than two.
         members = term.members()
         if len(members) != 1:
             raise RuntimeError(
@@ -568,7 +616,7 @@ def _describe_term_uncached(term, cache, in_progress):
                 f"BEL activity {term.node_id} ({term.bel!r}) carries a modifier "
                 "sub-term, which describe_term does not know how to place."
             )
-        subject = _describe_term(members[0], cache, in_progress)
+        subject = _describe_term(members[0], cache, in_progress, active_term_ids)
         return dataclasses.replace(subject, active=True)
 
     species_class, template_class = _resolve_cd_classes(term)
@@ -636,7 +684,9 @@ def _describe_term_uncached(term, cache, in_progress):
         if members:
             identifier = ":".join(
                 sorted(
-                    _describe_term(member, cache, in_progress).species_name
+                    _describe_term(
+                        member, cache, in_progress, active_term_ids
+                    ).species_name
                     for member in members
                 )
             )
@@ -650,7 +700,7 @@ def _describe_term_uncached(term, cache, in_progress):
         template_class=template_class,
         template_name=identifier if template_class is not None else None,
         species_name=species_name,
-        active=False,
+        active=id(term) in active_term_ids,
         compartment_name=compartment_name,
         # Sorted through `_residue_sort_key`: a residue name may be `None` (a
         # `pmod(Ph)` naming no site), and `None` does not compare with a string.
@@ -719,7 +769,7 @@ def _collect_terms(terms):
     return list(collected.values())
 
 
-def make_build_context(terms, existing_templates=()):
+def make_build_context(terms, active_term_ids=frozenset()):
     """The :class:`BuildContext` for the given root terms. Three passes, in order.
 
     A species is frozen, so its template cannot be patched once built: every
@@ -730,22 +780,25 @@ def make_build_context(terms, existing_templates=()):
        recursive members;
     2. accumulate `{(template class, name): {residue name}}` over those
        descriptions, build one residue object per `(name, order)` and one
-       template per `(class, name)`, and intern the template by value against
-       `existing_templates`;
-    3. **re-derive** the residue lookup from the *interned* template, which may
-       be the stored object rather than the candidate just built -- invariant (b).
+       template per `(class, name)`, and intern the template by value;
+    3. **re-derive** the residue lookup from the *interned* template -- invariant
+       (b).
 
-    `existing_templates` must be the source map's templates *as
-    `make_submap_from_model_elements` re-derives them*, i.e.
-    `source_map.model.species_templates | collect_templates_from_species(...)`.
-    Since BEL proteins are now named by bare HGNC symbol they collide with the
-    stored CellDesigner templates constantly, so this interning is mandatory,
-    not defensive.
+    The interning by `(class, name)` is what keeps **one template object per
+    protein within the export**, which invariant (b) depends on.
+
+    Identity with the *stored* collections' templates is not this function's job:
+    the export is standalone, and hash integration with a seeded
+    `object_key_to_node` makes two value-equal elements one database node across
+    save calls (see `2_10`).
+
+    `active_term_ids` is threaded into every description; see
+    :func:`collect_activity_subject_term_ids`.
     """
     all_terms = _collect_terms(terms)
     descriptions = {}
     for term in all_terms:
-        _describe_term(term, descriptions, set())
+        _describe_term(term, descriptions, set(), active_term_ids)
 
     residue_names = {}
     for term in all_terms:
@@ -757,8 +810,6 @@ def make_build_context(terms, existing_templates=()):
         if description.template_class in TEMPLATE_RESIDUE_FIELDS:
             names.update(residue_name for residue_name, _ in description.modifications)
 
-    by_value = {template: template for template in existing_templates}
-    n_interned = 0
     templates = {}
     residues = {}
     for key in sorted(residue_names, key=lambda key: (key[0].__name__, key[1])):
@@ -775,14 +826,13 @@ def make_build_context(terms, existing_templates=()):
                 sorted(residue_names[key], key=_residue_sort_key)
             )
         )
-        candidate = template_class(
+        # One object per key, and the key is `(class, name)`: that is invariant
+        # (a) within the export.
+        template = template_class(
             name=template_name, **{field_name: template_residues}
         )
-        template = by_value.setdefault(candidate, candidate)
-        if template is not candidate:
-            n_interned += 1
         templates[key] = template
-        # Invariant (b): from the *interned* object, never from the candidate.
+        # Invariant (b): from the object the species will actually carry.
         residues[key] = {
             residue.name: residue for residue in getattr(template, field_name)
         }
@@ -810,7 +860,6 @@ def make_build_context(terms, existing_templates=()):
     stats = {
         "n_terms_described": len(all_terms),
         "n_templates": len(templates),
-        "n_templates_interned_from_source_map": n_interned,
         "n_compartments": len(compartments),
         "n_compartment_roots": len(compartment_roots),
     }
@@ -829,7 +878,7 @@ def make_build_context(terms, existing_templates=()):
 # ---------------------------------------------------------------------------
 
 
-def make_species(term, context, is_subunit=False):
+def make_species(term, context, is_subunit=False, record=None):
     """One frozen momapy species for one BEL term. Always a **fresh object tree**.
 
     Invariant (c): the writer indexes complex subunits by `id()` and skips any
@@ -837,11 +886,17 @@ def make_species(term, context, is_subunit=False):
     node id -- the obvious way to get value-collapse -- would make the own glyph
     of every protein that is also a complex member disappear, and reroute every
     modulation targeting it to the enclosing complex. Interning happens only at
-    the top level, on the finished object, in `commute_dm.bel_submaps`.
+    the top level, on the finished object, in `commute_dm.bel_export`.
 
     A subunit keeps no compartment: CellDesigner puts an included species inside
     its complex, not inside a compartment box, and only top-level species
     contribute to `model.compartments`.
+
+    When `record` is a list, `(term.node_id, species)` is appended for **every**
+    species built, subunits included. That is what lets a subunit be annotated:
+    a subunit is a per-occurrence object which `species_by_node_id` cannot
+    recover, and 16 of the interface's UniProt identifiers are carried only by
+    complex members.
     """
     description = context.descriptions[id(term)]
     fields = {
@@ -875,28 +930,30 @@ def make_species(term, context, is_subunit=False):
         )
     if issubclass(description.species_class, COMPLEX_SPECIES_CLASSES):
         fields["subunits"] = frozenset(
-            make_species(member, context, is_subunit=True)
+            make_species(member, context, is_subunit=True, record=record)
             for member in description.members
         )
-    return description.species_class(**fields)
+    species = description.species_class(**fields)
+    if record is not None:
+        record.append((term.node_id, species))
+    return species
 
 
 # ---------------------------------------------------------------------------
 # the glyphs
 # ---------------------------------------------------------------------------
 
-# Wrapping keeps a glyph from becoming absurdly wide. Bare HGNC symbols are
-# short, but a CHEBI abundance name is not -- the longest in the AD KG runs to
-# 130 characters -- and a complex is named after its members. 260pt holds a
-# whole `beta-D-GalNAc-(1->4)-` chunk on one line.
-_LABEL_MAX_WIDTH = 260.0
-# Breathing room between the text and the glyph outline, on both axes.
-_LABEL_PADDING = 12.0
-# Long labels break after a `,`, which separates a complex's members, so a break
-# there leaves whole names on a line. The trailing alternative keeps the final
-# chunk.
-_LABEL_CHUNK_PATTERN = re.compile(r"[^,]*,|[^,]+")
-_MEASURING_POSITION = momapy.geometry.Point(0.0, 0.0)
+# Label measuring and wrapping live in `commute_dm.submaps`: `commute_dm.core`
+# needs `make_fitted_synthetic_layout` for every sub-map's synthetic central
+# node, in both pairings, and this module is export-only. They are imported back
+# under their old names; `submaps` imports nothing of this module, so the
+# dependency is acyclic.
+_LABEL_MAX_WIDTH = commute_dm.submaps._LABEL_MAX_WIDTH
+_LABEL_PADDING = commute_dm.submaps._LABEL_PADDING
+_MEASURING_POSITION = commute_dm.submaps._MEASURING_POSITION
+_measure = commute_dm.submaps._measure
+_wrap_label_text = commute_dm.submaps._wrap_label_text
+make_fitted_synthetic_layout = commute_dm.submaps.make_fitted_synthetic_layout
 
 # Subunit stacking inside a complex, and the band its own label sits in.
 _SUBUNIT_XSEP = 12.0
@@ -928,79 +985,6 @@ _LAYOUT_CLASS_TO_ACTIVE_LAYOUT_CLASS = {
     momapy.celldesigner.UnknownLayout: momapy.celldesigner.UnknownActiveLayout,
     momapy.celldesigner.PhenotypeLayout: momapy.celldesigner.PhenotypeActiveLayout,
 }
-
-
-def _measure(text):
-    """`(width, height)` of `text` as a default `TextLayout` would draw it."""
-    bounding_box = momapy.core.layout.TextLayout(
-        text=text, position=_MEASURING_POSITION
-    ).bbox()
-    return bounding_box.width, bounding_box.height
-
-
-def _wrap_label_text(text, max_width=_LABEL_MAX_WIDTH):
-    """`(wrapped_text, width, height)` for a label wrapped to `max_width`.
-
-    `TextLayout` does **not** wrap on its own -- setting its `width` leaves the
-    bounding box unchanged -- but it does honour newlines, so the wrapping is
-    done here. The width budget is derived from one real measurement of the
-    whole string rather than from a guessed per-character width, and the
-    assembled result is measured again, so the returned size is the true one
-    even where a break landed badly.
-    """
-    width, height = _measure(text)
-    if width <= max_width:
-        return text, width, height
-    # `text` is never empty here: it measured wider than `max_width`.
-    character_budget = max(int(len(text) * max_width / width), 8)
-    chunks = []
-    for chunk in _LABEL_CHUNK_PATTERN.findall(text):
-        # A single chunk with no break opportunity (a long chemical name) still
-        # has to be split, or the glyph would be as wide as the unwrapped label.
-        while len(chunk) > character_budget:
-            chunks.append(chunk[:character_budget])
-            chunk = chunk[character_budget:]
-        if chunk:
-            chunks.append(chunk)
-    lines = []
-    current_line = ""
-    for chunk in chunks:
-        if current_line and len(current_line) + len(chunk) > character_budget:
-            lines.append(current_line)
-            current_line = chunk
-        else:
-            current_line += chunk
-    if current_line:
-        lines.append(current_line)
-    wrapped_text = "\n".join(lines)
-    width, height = _measure(wrapped_text)
-    return wrapped_text, width, height
-
-
-def make_fitted_synthetic_layout(species, index):
-    """A synthetic glyph for `species`, sized to hold its (wrapped) label.
-
-    `pd2af`'s `make_synthetic_layout` gives the right layout class, a throwaway
-    position and a label, but leaves the class's default width and height.
-    `make_auto_layout` *preserves* the size it is given -- its `_build_dot_graph`
-    sets each dot node's size from the layout element, and only compartments are
-    resized afterwards -- so sizing here is what reaches the output.
-
-    Used for `commute_dm.core`'s synthetic central node, whose `Unknown` default
-    of 60x30 is too small for some display names. BEL species go through
-    :func:`make_species_layout`, which does the same fitting and then makes room
-    for subunits and badges.
-    """
-    layout_element = pd2af.celldesigner.building_layout.make_synthetic_layout(
-        species, index
-    )
-    wrapped_text, width, height = _wrap_label_text(layout_element.label.text)
-    return dataclasses.replace(
-        layout_element,
-        label=dataclasses.replace(layout_element.label, text=wrapped_text),
-        width=max(layout_element.width, width + _LABEL_PADDING),
-        height=max(layout_element.height, height + _LABEL_PADDING),
-    )
 
 
 @dataclasses.dataclass(frozen=True)

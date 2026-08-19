@@ -34,6 +34,7 @@ recomputes every position and segment, and fits the root layout.
 
 import collections
 import dataclasses
+import re
 
 import momapy.builder
 import momapy.celldesigner
@@ -581,6 +582,102 @@ def check_identity_invariants(cd_map):
     check_modification_residue_identity(cd_map)
     check_subunit_layouts(cd_map)
     check_compartment_identity(cd_map)
+
+
+# ---------------------------------------------------------------------------
+# label measuring and fitted synthetic glyphs
+# ---------------------------------------------------------------------------
+
+# These live here rather than in `commute_dm.bel_terms` because `commute_dm.core`
+# needs `make_fitted_synthetic_layout` for every sub-map's synthetic central
+# node, in both pairings, while `bel_terms` is export-only. `bel_terms` imports
+# them back; this module imports nothing of it, so the dependency is acyclic.
+
+# Wrapping keeps a glyph from becoming absurdly wide. Bare HGNC symbols are
+# short, but a CHEBI abundance name is not -- the longest in the AD KG runs to
+# 130 characters -- and a complex is named after its members. 260pt holds a
+# whole `beta-D-GalNAc-(1->4)-` chunk on one line.
+_LABEL_MAX_WIDTH = 260.0
+# Breathing room between the text and the glyph outline, on both axes.
+_LABEL_PADDING = 12.0
+# Long labels break after a `,`, which separates a complex's members, so a break
+# there leaves whole names on a line. The trailing alternative keeps the final
+# chunk.
+_LABEL_CHUNK_PATTERN = re.compile(r"[^,]*,|[^,]+")
+_MEASURING_POSITION = momapy.geometry.Point(0.0, 0.0)
+
+
+def _measure(text):
+    """`(width, height)` of `text` as a default `TextLayout` would draw it."""
+    bounding_box = momapy.core.layout.TextLayout(
+        text=text, position=_MEASURING_POSITION
+    ).bbox()
+    return bounding_box.width, bounding_box.height
+
+
+def _wrap_label_text(text, max_width=_LABEL_MAX_WIDTH):
+    """`(wrapped_text, width, height)` for a label wrapped to `max_width`.
+
+    `TextLayout` does **not** wrap on its own -- setting its `width` leaves the
+    bounding box unchanged -- but it does honour newlines, so the wrapping is
+    done here. The width budget is derived from one real measurement of the
+    whole string rather than from a guessed per-character width, and the
+    assembled result is measured again, so the returned size is the true one
+    even where a break landed badly.
+    """
+    width, height = _measure(text)
+    if width <= max_width:
+        return text, width, height
+    # `text` is never empty here: it measured wider than `max_width`.
+    character_budget = max(int(len(text) * max_width / width), 8)
+    chunks = []
+    for chunk in _LABEL_CHUNK_PATTERN.findall(text):
+        # A single chunk with no break opportunity (a long chemical name) still
+        # has to be split, or the glyph would be as wide as the unwrapped label.
+        while len(chunk) > character_budget:
+            chunks.append(chunk[:character_budget])
+            chunk = chunk[character_budget:]
+        if chunk:
+            chunks.append(chunk)
+    lines = []
+    current_line = ""
+    for chunk in chunks:
+        if current_line and len(current_line) + len(chunk) > character_budget:
+            lines.append(current_line)
+            current_line = chunk
+        else:
+            current_line += chunk
+    if current_line:
+        lines.append(current_line)
+    wrapped_text = "\n".join(lines)
+    width, height = _measure(wrapped_text)
+    return wrapped_text, width, height
+
+
+def make_fitted_synthetic_layout(species, index):
+    """A synthetic glyph for `species`, sized to hold its (wrapped) label.
+
+    `pd2af`'s `make_synthetic_layout` gives the right layout class, a throwaway
+    position and a label, but leaves the class's default width and height.
+    `make_auto_layout` *preserves* the size it is given -- its `_build_dot_graph`
+    sets each dot node's size from the layout element, and only compartments are
+    resized afterwards -- so sizing here is what reaches the output.
+
+    Used for `commute_dm.core`'s synthetic central node, whose `Unknown` default
+    of 60x30 is too small for some display names. BEL species go through
+    `commute_dm.bel_terms.make_species_layouts`, which does the same fitting and
+    then makes room for subunits and badges.
+    """
+    layout_element = pd2af.celldesigner.building_layout.make_synthetic_layout(
+        species, index
+    )
+    wrapped_text, width, height = _wrap_label_text(layout_element.label.text)
+    return dataclasses.replace(
+        layout_element,
+        label=dataclasses.replace(layout_element.label, text=wrapped_text),
+        width=max(layout_element.width, width + _LABEL_PADDING),
+        height=max(layout_element.height, height + _LABEL_PADDING),
+    )
 
 
 # ---------------------------------------------------------------------------

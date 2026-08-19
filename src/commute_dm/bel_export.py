@@ -1,34 +1,31 @@
-"""The BEL side of a comorbidity sub-map, as an *in-memory* `CellDesignerMap`.
+"""The AD BEL KG as an *exportable* CellDesigner map.
 
-`commute_dm.submaps` assembles a sub-map out of the elements a `source_map` stores.
-A BEL knowledge graph has no CellDesigner representation at all, so this module
-builds one: it loads the KG's **influence-graph projection** (the one
-`2_05_get_collections_statistics` defines and documents) and turns it into a
-`CellDesignerMap` of real activity-flow content -- proteins with phosphorylation
-badges, complexes with nested subunit glyphs, `act(...)` as CellDesigner's active
-decoration, `loc(...)` as a drawn compartment -- with the signed causal relations
-as modulations.
+`2_10_make_ad_kg_cd_af_collection` is the only importer. It loads the knowledge
+graph's **influence-graph projection** (the one `2_05` defines and documents),
+turns it into a `CellDesignerMap` of real activity-flow content -- proteins with
+phosphorylation badges, complexes with nested subunit glyphs, `act(...)` as
+CellDesigner's active decoration, `loc(...)` as a drawn compartment, the signed
+causal relations as modulations -- writes it to one file and imports that file as
+an ordinary collection, `AD_KG_CD_AF`.
 
-That map is then merged into `source_map` with `commute_dm.submaps.merge_maps`, and
-**everything downstream keeps working unchanged**. The reason is worth stating,
-because it is what makes this module small: every assumption in `submaps` and
-`core` about a selected node id is "it resolves, through `node_id_to_object`, to a
-species of `source_map.model`". Keying the BEL species on their real Neo4j node
-ids and merging them into the source map satisfies that assumption, so
-`Influences`, `fills`, `extra_influences`, `close_over_gates`,
-`get_layout_element_for_model_element` and `_split_interface_seeds`' `keep()` need
-no BEL special case.
+After that the knowledge graph *is* a CellDesigner collection, so nothing else in
+the package knows it was ever BEL: `commute_dm.core` and `commute_dm.submaps` walk
+its stored species and modulations exactly as they walk COVID's and PD's. The
+in-memory merge this module used to do -- building the BEL side into an already
+hydrated `source_map` on every run -- is gone with it.
 
-Nothing here writes to the database, and no CellDesigner file is produced for the
-KG itself: the projection is rebuilt as objects in ~2 s, which is cheaper than
-writing and re-reading a 17 MB XML, and far cheaper than laying one out
-(`pd2af.utils.make_auto_layout` runs graphviz `dot`, which does not finish on a
-3979-node graph).
+Two things the export decides, both measured in `2_10`:
 
-**What a term becomes, and the four identity invariants that keep the result
-readable, live in `commute_dm.bel_terms`.** This module is only the assembly:
-which nodes are projected, how they are wired, and how the resulting map merges
-into the source map.
+* **`act(X)` and `X` are one species.** The projection has no edge between the
+  two, so keeping them apart severs 6889 upstream -> downstream two-hop paths that
+  three hops cannot recover. The price is that X carries an active border whenever
+  BEL asserts any activity of it.
+* **Species carrying no signed modulation are dropped** (1228 of 3979 projected
+  nodes). Nothing walks or draws them, so they would stand stranded.
+
+**What a term becomes, and the identity invariants that keep the result readable,
+live in `commute_dm.bel_terms`.** This module is only the assembly: which nodes
+are projected, how they are wired, and which annotations they carry over.
 """
 
 import collections
@@ -36,9 +33,11 @@ import collections
 import momapy.celldesigner
 import momapy.core.mapping
 import momapy.geometry
+import momapy.sbml.model
 import pd2af.celldesigner.building_model
 
 import commute_dm.bel_terms
+import commute_dm.queries
 import commute_dm.submaps
 
 
@@ -158,18 +157,6 @@ RETURN DISTINCT elementId(source) AS source_node_id,
        type(relationship) AS relation_type
 """
 
-# The activity forms of a protein: `act(p(X))`, `act(p(X),ma(kin))`. Used to widen
-# an interface protein's seeds -- see `load_activity_seed_expansion`.
-_ACTIVITY_FORMS_QUERY = """
-MATCH (:Collection)-[:HAS_ENTRY]->(:CollectionEntry)-[:HAS_OBJ]->(model:BELModel)
-    -[:HAS_NODE]->(activity:Activity)
-MATCH (activity)-[:HAS__PROTEIN]->(protein)
-WHERE elementId(protein) IN $protein_node_ids
-RETURN elementId(protein) AS protein_node_id,
-       collect(DISTINCT elementId(activity)) AS activity_node_ids
-"""
-
-
 def load_bel_projection(session, collection_names):
     """The influence-graph projection of the given BEL collections (~0.4 s).
 
@@ -213,8 +200,8 @@ def load_bel_projection(session, collection_names):
     return nodes, dict(edges)
 
 
-def make_bel_map(nodes, terms, edges, existing_templates=()):
-    """`(cd_map, {node_id: species}, stats)` for a projected BEL influence graph.
+def make_bel_map(nodes, terms, edges, drop_isolated_species=True):
+    """`(cd_map, {node_id: species}, [(node_id, species)], stats)` for a projection.
 
     The map holds exactly what `commute_dm.submaps.make_submap_from_model_elements`
     reads out of a `source_map`: the model elements, a layout element per model
@@ -234,25 +221,96 @@ def make_bel_map(nodes, terms, edges, existing_templates=()):
     * a projected node can *also* be drawn as a subunit of a selected complex, as
       a **different object** (`bel_terms` invariant (c)).
 
-    `existing_templates` is what the BEL templates are interned against, and must
-    be the source map's templates *as `make_submap_from_model_elements` re-derives
-    them* -- so the source map has to exist first (see
-    `commute_dm.core.load_submap_inputs`).
+    The third return value is the `(node_id, species)` pairs of **every** species
+    built, subunits included, which is what
+    :func:`make_element_to_annotations` needs: a subunit is a per-occurrence
+    object no `{node_id: species}` map can recover, and it carries interface
+    identifiers of its own.
+
+    `drop_isolated_species` removes the species that carry no signed modulation
+    (1228 of the AD KG's 3979 projected nodes). Nothing walks or draws them, so
+    they would stand stranded in the collection. The drop happens **after** the
+    species are interned and the modulations built, so a protein isolated in its
+    own right but wired through its activity form survives -- `act(p(X))` and
+    `p(X)` are the same species (`bel_terms.collect_activity_subject_term_ids`).
+    A dropped species that is a member of a kept complex still appears as that
+    complex's subunit; only its own top-level glyph goes.
 
     The glyph positions are throwaway, as everywhere here: the caller runs
     `pd2af.utils.make_auto_layout` on the finished sub-map, which recomputes every
     position and segment.
     """
     root_terms = [terms[node_id] for node_id in sorted(nodes)]
-    context = commute_dm.bel_terms.make_build_context(root_terms, existing_templates)
+    # Over **every loaded term**, not just the projected roots: a protein is
+    # drawn active whenever BEL asserts any activity of it, and the activity term
+    # itself need not be projected.
+    active_term_ids = commute_dm.bel_terms.collect_activity_subject_term_ids(
+        terms.values()
+    )
+    context = commute_dm.bel_terms.make_build_context(root_terms, active_term_ids)
     species_by_node_id = {}
     interned = {}
+    node_id_species_pairs = []
     for node_id in sorted(nodes):
-        species = commute_dm.bel_terms.make_species(terms[node_id], context)
+        species = commute_dm.bel_terms.make_species(
+            terms[node_id], context, record=node_id_species_pairs
+        )
         species_by_node_id[node_id] = interned.setdefault(species, species)
     # Sorted by node id through `species_by_node_id`, so a given knowledge graph
     # always yields the same glyph order and the same `renumber_ids` numbering.
     distinct_species = list(dict.fromkeys(species_by_node_id.values()))
+
+    # The modulations first, because whether a species is isolated is a property
+    # of them.
+    modulations = []
+    n_self_loops = 0
+    for (source_node_id, target_node_id), relation_types in edges.items():
+        source = species_by_node_id[source_node_id]
+        target = species_by_node_id[target_node_id]
+        # `load_bel_projection` already drops node-id self-loops; interning can
+        # create species-level ones the node-id guard cannot see. A self-loop is
+        # drawable but says nothing, and pd2af's arc geometry needs two distinct
+        # endpoints.
+        if source is target:
+            n_self_loops += 1
+            continue
+        for relation_type in relation_types:
+            modulation_class = BEL_RELATION_TO_MODULATION_CLASS.get(relation_type)
+            if modulation_class is None:  # unsigned, see the class map
+                continue
+            # One modulation per class, so a pair asserted to both increase and
+            # decrease keeps both: BEL sources disagree, and dropping one would
+            # pick a winner. `modulations` is a frozenset, so the two relation
+            # types that map to the same class collapse on their own.
+            modulations.append(modulation_class(source=source, target=target))
+
+    n_isolated_dropped = 0
+    if drop_isolated_species:
+        wired = set()
+        for modulation in modulations:
+            wired.add(id(modulation.source))
+            wired.add(id(modulation.target))
+        kept = [species for species in distinct_species if id(species) in wired]
+        n_isolated_dropped = len(distinct_species) - len(kept)
+        distinct_species = kept
+        kept_ids = {id(species) for species in distinct_species}
+        species_by_node_id = {
+            node_id: species
+            for node_id, species in species_by_node_id.items()
+            if id(species) in kept_ids
+        }
+    # Only the species the map actually holds may contribute annotations, and
+    # membership is by **value**: a top-level species and a value-equal subunit
+    # share one `element_to_annotations` entry, which is exactly what the writer
+    # looks up.
+    drawn_values = set(
+        commute_dm.submaps.iter_species_and_subunits(distinct_species)
+    )
+    node_id_species_pairs = [
+        (node_id, species)
+        for node_id, species in node_id_species_pairs
+        if species in drawn_values
+    ]
 
     mapping = momapy.core.mapping.LayoutModelMappingBuilder()
     layout_elements = list(
@@ -284,28 +342,6 @@ def make_bel_map(nodes, terms, edges, existing_templates=()):
         layout_elements.append(compartment_layout)
         mapping.add_mapping(compartment_layout, compartment)
 
-    modulations = []
-    n_self_loops = 0
-    for (source_node_id, target_node_id), relation_types in edges.items():
-        source = species_by_node_id[source_node_id]
-        target = species_by_node_id[target_node_id]
-        # `load_bel_projection` already drops node-id self-loops; interning can
-        # create species-level ones the node-id guard cannot see. A self-loop is
-        # drawable but says nothing, and pd2af's arc geometry needs two distinct
-        # endpoints.
-        if source is target:
-            n_self_loops += 1
-            continue
-        for relation_type in relation_types:
-            modulation_class = BEL_RELATION_TO_MODULATION_CLASS.get(relation_type)
-            if modulation_class is None:  # unsigned, see the class map
-                continue
-            # One modulation per class, so a pair asserted to both increase and
-            # decrease keeps both: BEL sources disagree, and dropping one would
-            # pick a winner. `modulations` is a frozenset, so the two relation
-            # types that map to the same class collapse on their own.
-            modulations.append(modulation_class(source=source, target=target))
-
     species = frozenset(distinct_species)
     cd_map = momapy.celldesigner.CellDesignerMap(
         model=momapy.celldesigner.CellDesignerModel(
@@ -332,7 +368,12 @@ def make_bel_map(nodes, terms, edges, existing_templates=()):
         {
             "n_projected_node_ids": len(nodes),
             "n_species": len(distinct_species),
-            "n_species_collapsed": len(nodes) - len(distinct_species),
+            "n_species_collapsed": (
+                len(species_by_node_id) - len(distinct_species)
+            ),
+            "n_isolated_species_dropped": n_isolated_dropped,
+            "n_node_ids_kept": len(species_by_node_id),
+            "n_node_id_species_pairs": len(node_id_species_pairs),
             "n_subunits": sum(
                 len(list(commute_dm.submaps.iter_subunits(one_species))) for one_species in distinct_species
             ),
@@ -358,7 +399,7 @@ def make_bel_map(nodes, terms, edges, existing_templates=()):
             "n_mapping_entries": len(cd_map.layout_model_mapping),
         }
     )
-    return cd_map, species_by_node_id, stats
+    return cd_map, species_by_node_id, node_id_species_pairs, stats
 
 
 def _complex_depth(species):
@@ -366,149 +407,73 @@ def _complex_depth(species):
     return 1 + max((_complex_depth(subunit) for subunit in subunits), default=0)
 
 
-def make_bel_influences(nodes, edges):
-    """The projection as a `commute_dm.submaps.Influences`, on the same node ids.
+# The annotation payloads of a set of nodes, in the encoding `2_00` wrote them
+# in: a per-entry `Mapping` of `Item` -> `Bag` of single-resource
+# `RDFAnnotation`s, each qualified by a shared `BQBiol` node. Read back here so
+# the exported file carries the same cross-references the BEL nodes carry, which
+# is what puts its proteins in the interface.
+_ANNOTATION_PAYLOADS_QUERY = """
+UNWIND $element_ids AS element_id
+MATCH (node) WHERE elementId(node) = element_id
+MATCH (node)<-[:HAS_KEY]-(:Item)-[:HAS_VALUE]->(:Bag)-[:HAS_ITEM]->(a:RDFAnnotation)
+MATCH (a)-[:HAS_QUALIFIER]->(q)
+RETURN elementId(node) AS node_id,
+       q.name AS qualifier_name,
+       a.resources AS resources
+"""
 
-    The class is reused as it is. A BEL influence graph has no boolean logic gate,
-    so `gate_input_node_ids` is empty -- which makes `close_over_gates` a no-op --
-    and every projected node is a "species", which makes `species_only` the
-    identity. Both are the right behaviour for a gate-less graph, so neither the
-    class nor its callers need a BEL case.
 
-    Only the signed relations are walked, matching what :func:`make_bel_map` draws.
+def make_element_to_annotations(session, node_id_species_pairs):
+    """`{species: frozenset[RDFAnnotation]}` for the exported BEL species.
+
+    Two queries. `commute_dm.queries.get_annotated_nodes` says which nodes'
+    annotations stand for a given node -- an activity's subject is followed, a
+    complex's members are **not** (`with_subunits=False`), because each member is
+    drawn as its own subunit species and annotated in its own right. Then one
+    query for the payloads, rebuilt as `momapy.sbml.model.RDFAnnotation`s: a
+    faithful copy of what `2_00` wrote.
+
+    Accumulated **by value**. A top-level species and a value-equal subunit are
+    two objects but one key, which is what the CellDesigner writer's
+    `element_to_annotations.get(species)` looks up -- both for a `<species>` and
+    for an included species, whose RDF goes inside `<celldesigner:notes>`.
     """
-    influencing_node_ids = collections.defaultdict(set)
-    influenced_node_ids = collections.defaultdict(set)
-    for (source_node_id, target_node_id), relation_types in edges.items():
-        if not any(
-            relation_type in BEL_RELATION_TO_MODULATION_CLASS
-            for relation_type in relation_types
-        ):
-            continue
-        influencing_node_ids[target_node_id].add(source_node_id)
-        influenced_node_ids[source_node_id].add(target_node_id)
-    return commute_dm.submaps.Influences(
-        influencing_node_ids=dict(influencing_node_ids),
-        influenced_node_ids=dict(influenced_node_ids),
-        gate_input_node_ids={},
-        species_node_ids=frozenset(nodes),
-    )
-
-
-def merge_influences(*influences):
-    """One `Influences` out of several whose node ids are disjoint.
-
-    Disjoint is the point: a CellDesigner collection's node ids and a BEL
-    collection's share nothing, so one `Influences` still covers both walk
-    directions and `commute_dm.core._select_around_seeds` needs no second object.
-    Should a future pair of sources share a node, that stops being true and this is
-    where it would have to change.
-    """
-
-    def merge(attribute):
-        merged = {}
-        for one_influences in influences:
-            for node_id, neighbour_node_ids in getattr(
-                one_influences, attribute
-            ).items():
-                merged.setdefault(node_id, set()).update(neighbour_node_ids)
-        return merged
-
-    return commute_dm.submaps.Influences(
-        influencing_node_ids=merge("influencing_node_ids"),
-        influenced_node_ids=merge("influenced_node_ids"),
-        gate_input_node_ids=merge("gate_input_node_ids"),
-        species_node_ids=frozenset().union(
-            *(one_influences.species_node_ids for one_influences in influences)
-        ),
-    )
-
-
-def merge_with_source_map(source_map, bel_map):
-    """`submaps.merge_maps`, plus the checks that say what may and may not fuse.
-
-    momapy elements are equal by value, so anything a BEL element happens to
-    equal in the stored maps becomes **one** object on merging. Three different
-    answers, and this is where each is asserted:
-
-    * **Species and compartments must not fuse.** A fused species would silently
-      join the two influence graphs. Nothing prevents it by construction any
-      more -- the names are bare HGNC symbols now -- so the guarantee is
-      structural instead: a BEL species either has `compartment=None`, and every
-      one of the 6342 stored AF species has a compartment, or it hangs off the
-      BEL root, and every stored non-`default` compartment hangs off `default`.
-      A fusion means one of those two broke.
-    * **Mapping entries must not fuse.** `merge_maps` updates an equality-keyed
-      dict, and the BEL map now contributes a key per subunit and per badge, so
-      the collision surface is an order of magnitude larger than it was; a
-      collision silently destroys a glyph -> model element entry.
-    * **Templates *may* fuse** -- interning them against the source map is
-      deliberate (`bel_terms` invariant (a)) and is exactly what keeps a BEL
-      `MAPT` from emitting a `<proteinReference>` to an id that was never
-      written. What must hold is the invariant itself: no two value-equal
-      template objects are distinct objects. That is checked directly.
-
-    The checks are complete: a collision inside any sub-map's selection would
-    also exist in the union.
-    """
-    merged = commute_dm.submaps.merge_maps([source_map, bel_map])
-    for attribute in ("species", "compartments"):
-        n_merged = len(getattr(merged.model, attribute))
-        n_parts = len(getattr(source_map.model, attribute)) + len(
-            getattr(bel_map.model, attribute)
-        )
-        if n_merged != n_parts:
-            raise RuntimeError(
-                f"{n_parts - n_merged} {attribute} fused on merging the BEL map into "
-                f"the source map ({n_merged} merged, {n_parts} apart). A BEL element "
-                "is value-equal to a stored CellDesigner one, which would join the "
-                "two influence graphs. A BEL species has no compartment or hangs off "
-                "the BEL root compartment, so one of those guarantees broke."
-            )
-    n_merged_entries, n_part_entries = commute_dm.submaps.count_mapping_entries(
-        [source_map, bel_map]
-    )
-    if n_merged_entries != n_part_entries:
-        raise RuntimeError(
-            f"{n_part_entries - n_merged_entries} layout-model mapping entries fused "
-            f"on merging the BEL map into the source map ({n_merged_entries} merged, "
-            f"{n_part_entries} apart). A BEL glyph, subunit glyph or badge is "
-            "value-equal to a stored one, and one glyph -> model element entry is "
-            "lost."
-        )
-    commute_dm.submaps.check_species_template_identity(merged)
-    commute_dm.submaps.check_compartment_identity(merged)
-    return merged
-
-
-def load_activity_seed_expansion(session, protein_node_ids, projected_node_ids=None):
-    """`{protein_node_id: {activity_node_id, ...}}` for the given BEL proteins.
-
-    The UniProt annotations that define the interface sit on the KG's `:Protein`
-    nodes, but BEL keeps a protein's causal wiring on its *activity* form, so
-    seeding a walk at the annotated nodes alone reaches little: of the 169 proteins
-    the COVID activity-flow maps share with the AD KG, only 86 have an annotated
-    node with an outgoing causal edge, against 103 once the activity forms are
-    added.
-
-    Complexes and composites containing the protein are deliberately **not**
-    included: `act(p(X))` is X in another form, whereas a complex X is a member of
-    is a different entity.
-
-    `projected_node_ids` restricts the result to nodes the projection kept, so an
-    expansion cannot introduce a seed that has no species.
-    """
-    protein_node_ids = list(protein_node_ids)
-    if not protein_node_ids:
+    node_ids = sorted({node_id for node_id, _ in node_id_species_pairs})
+    if not node_ids:
         return {}
-    projected = None if projected_node_ids is None else frozenset(projected_node_ids)
-    expansion = {}
+    nodes = commute_dm.queries.get_nodes(session, node_ids)
+    annotated_node_ids_by_node_id = {
+        node.element_id: [part.element_id for part in parts]
+        for node, parts in commute_dm.queries.get_annotated_nodes(
+            session, nodes, with_subunits=False
+        )
+    }
+    payload_element_ids = sorted(
+        {
+            annotated_node_id
+            for annotated_node_ids in annotated_node_ids_by_node_id.values()
+            for annotated_node_id in annotated_node_ids
+        }
+    )
+    annotations_by_element_id = collections.defaultdict(set)
     for row in session.execute_query(
-        _ACTIVITY_FORMS_QUERY, {"protein_node_ids": protein_node_ids}
+        _ANNOTATION_PAYLOADS_QUERY, params={"element_ids": payload_element_ids}
     ):
-        activity_node_ids = set(row["activity_node_ids"])
-        if projected is not None:
-            activity_node_ids &= projected
-        if activity_node_ids:
-            expansion[row["protein_node_id"]] = activity_node_ids
-    return expansion
+        annotations_by_element_id[row["node_id"]].add(
+            momapy.sbml.model.RDFAnnotation(
+                qualifier=momapy.sbml.model.BQBiol[row["qualifier_name"]],
+                resources=frozenset(row["resources"]),
+            )
+        )
+
+    element_to_annotations = collections.defaultdict(set)
+    for node_id, species in node_id_species_pairs:
+        for annotated_node_id in annotated_node_ids_by_node_id.get(node_id, ()):
+            element_to_annotations[species] |= annotations_by_element_id.get(
+                annotated_node_id, set()
+            )
+    return {
+        species: frozenset(annotations)
+        for species, annotations in element_to_annotations.items()
+        if annotations
+    }
