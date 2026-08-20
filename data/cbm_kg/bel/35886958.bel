@@ -1,0 +1,155 @@
+SET DOCUMENT Name = "35886958.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+#DEFINE NAMESPACE FIXME AS LIST {".."}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION Condition AS LIST {"Heat-inactivated"}
+DEFINE ANNOTATION Age AS LIST {"12 months"}
+DEFINE ANNOTATION Mouse_Strain AS LIST {"C57BL/6"}
+DEFINE ANNOTATION CellLine_type AS LIST {"Sdc4-/-"}
+
+SET Citation = {"PubMed", "Int J Mol Sci. 2022 Jul 9;23(14):7609. doi: 10.3390/ijms23147609.", "35886958"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "Compared with K562, L929 and RAW cells exhibited slightly increased SDC1 yet significantly decreased SDC3 expression (Figure 3A–C)"
+SET Species = "10090"
+SET CellLine = {"L929 cell", "RAW 264.7 cell"}
+SET BioAssay = "flow cytometry"
+SET Condition = "Heat-inactivated"
+a(TAX: "Severe acute respiratory syndrome coronavirus 2") -> p(MGI: Sdc1)
+a(TAX: "Severe acute respiratory syndrome coronavirus 2") -| p(MGI: Sdc3)
+UNSET CellLine
+
+SET Support = "Compared with K562, L929 cells showed higher SDC2 expression, although the increase was not statistically significant (p > 0.05)."
+SET CellLine = "L929 cell"
+a(TAX: "Severe acute respiratory syndrome coronavirus 2") -> p(MGI: Sdc2)
+UNSET CellLine
+
+SET Support = "SDC4 expression of RAW and L929 was significantly higher than that of K562, but the increase (~4.5-fold) was more definite in L929 cells."
+SET CellLine = {"L929 cell", "RAW 264.7 cell"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> p(MGI: Sdc4)
+UNSET CellLine
+
+SET Support = "Cellular internalization of inactivated SARS-CoV-2 in RAW cells was slightly lower than in K562, yet L929 fibroblasts—whose SDC4 expression was highest among the three lines—exhibited significantly increased SARS-CoV-2 uptake (Figure 4D–F)."
+SET CellLine = "L929 cell"
+p(MGI: Sdc4) -> tloc(a(TAX: "Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET CellLine
+UNSET Species 
+
+SET Support = "Compared with stable SDC4 transfectants (created in K562 cells) with ~20-fold SDC4 expression (Supplementary Figure S2), the cellular uptake of SARS-CoV-2 in L929 cells was significantly lower (Figure 4D–F)."
+SET Species = "10090"
+SET CellLine = "L929 cell"
+p(MGI: Sdc4)-> tloc(a(TAX: "Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular")) 
+
+
+SET Support = "Cellular internalization of the spike protein (incubated at a concentration of 50 nM for 3 h at 37 °C) exhibited a pattern similar to the heat-inactivated SARS-CoV-2 particles (Figure 4E,G)."
+p(MGI: Sdc4)-> tloc(p(UNIPROT:P0DTC9), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET CellLine
+UNSET BioAssay 
+
+SET Support = "Reducing the SDC4 expression of L929 and RAW cells with knockdown (KD) reduced the cellular uptake of the virus (Figure 4A–D). That is, a ~70% decrease in SDC4 expression resulted in a ~50% reduction in SARS-CoV-2 uptake in the applied murine cell lines (Figure 5B–D)."
+SET CellLine = {"L929 cell", "RAW 264.7 cell"}
+SET BioAssay = {"western blot", "flow cytometry"}
+SET CellLine_type = "Sdc4-/-" 
+p(MGI: Sdc4) -> tloc(a(TAX: "Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET CellLine_type
+UNSET CellLine
+UNSET BioAssay 
+
+SET Support = "According to the Human Protein Atlas, SDC4 expression is highest in the liver, the lung, and the brain, while the heart muscle shows medium and the spleen exhibits modest SDC4 expression (Supplementary Table S1)."
+SET Mouse_Strain = "C57BL/6"
+SET Age = "12 months"
+SET MeSHAnatomy = {"Liver","Lung", "Brain","Heart"}
+SET BioAssay = "rna-seq method"
+a(TAX: "Severe acute respiratory syndrome coronavirus 2") -> r(MGI: Sdc4)
+UNSET BioAssay
+SET BioAssay = "ELISA"
+a(TAX: "Severe acute respiratory syndrome coronavirus 2") -> p(MGI: Sdc4)
+UNSET MeSHAnatomy
+
+SET Support = "As revealed by TNF-α-specific ELISA analyses, internalized SARS-CoV-2 particles significantly raised tissue TNF-α concentrations in all organs (brain, heart, liver, lung, and spleen)."
+SET MeSHAnatomy = {"Liver", "Lung", "Brain","Heart", "Spleen"}
+a(TAX: "Severe acute respiratory syndrome coronavirus 2") -> p(MGI: Tnf)
+
+SET Support = "As shown in Figure 9, inactivated virus particles triggered the highest TNF-α concentrations in the heart, followed by the lung, spleen, liver, and brain."
+a(TAX: "Severe acute respiratory syndrome coronavirus 2") -> p(MGI: Tnf)
+UNSET MeSHAnatomy
+UNSET BioAssay
+UNSET Age
+UNSET Mouse_Strain
+UNSET Condition
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

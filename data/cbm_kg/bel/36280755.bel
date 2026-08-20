@@ -1,0 +1,205 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "36280755.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"lipid damage", "protein damage", "Pfizer/BioNTech",  "Oxford-AstraZeneca COVID-19 vaccine", "Neurotoxicity", "peak body temperature"}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION TimeLine AS LIST {"3-4 months post infection"}
+DEFINE ANNOTATION Disease_Type AS LIST {"Long COVID"}
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+
+##################################################################################
+# Statements #
+##################################################################################
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Mol Psychiatry. 2023 Feb;28(2):564-578. doi: 10.1038/s41380-022-01836-9. Epub 2022 Oct 24.", "36280755"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+SET Disease = "COVID-19"
+SET Disease_Type = "Long COVID"
+SET TimeLine = "3-4 months post infection"
+SET Support = "The LC group was differentiated from controls by increased body temperature and CRP and lowered SpO2, Gpx and ANTIOX values."
+path(DO:"COVID-19") increases bp(MESH:"Body Temperature")
+path(DO:"COVID-19") increases p(HGNC:CRP)
+path(DO:"COVID-19") decreases a(CMO:"oxygen saturation")
+SET BioAssay = "ELISA"
+path(DO:"COVID-19") decreases p(PFAM:GSHPx)
+path(DO:"COVID-19") decreases bp(GO:"antioxidant activity")
+UNSET BioAssay
+
+SET Support = "Moreover, the ANTIOX index was significantly lower in both patient groups as compared with controls and also in the total Long COVID group as compared with controls (F=17.46, df=1/154, p<0.001)."
+path(DO:"COVID-19") decreases bp(GO:"antioxidant activity")
+
+SET Support = "We found that the total FF, HAMD and HAMA, somatic FF, HAMD and HAMA scores, depression HAMD and anxiety HAMA, as well as the autonomic and GIS symptoms, were significantly different between the three classes and increased from controls→LC→LC+O&NS."
+path(DO:"COVID-19") increases path(HP:Fatigue)
+path(DO:"COVID-19") increases path(DO:"mental depression")
+path(DO:"COVID-19") increases path(DO:"anxiety disorder")
+path(DO:"COVID-19") increases path(HP:"Abnormal autonomic nervous system physiology")
+path(DO:"COVID-19") increases path(HP:"Abnormality of the gastrointestinal tract")
+
+SET Support = "Sleep disorders, chronic fatigue and cognitive disorders were significantly higher in Long COVID than in controls."
+path(DO:"COVID-19") increases path(DO:"sleep disorder")
+path(DO:"COVID-19") increases path(HP:"Chronic fatigue")
+path(DO:"COVID-19") increases path(DO:"cognitive disorder")
+
+SET Support = "We found that 23.0% of the variance in the somatic HAMD score (regression #2) was explained by the cumulative effects of lowered Gpx and zinc, increased NO and CRP and vaccination with AstraZeneca or Pfizer."
+path(DO:"mental depression") neg a(CHEBI:"zinc ion")
+path(DO:"mental depression") neg p(PFAM:GSHPx)
+path(DO:"mental depression") pos a(CHEBI:"nitric oxide")
+path(DO:"mental depression") pos p(HGNC:CRP)
+
+SET Support = "OSTOX was associated with depression HAMD, NO with somatic HAMD HAMA and FF, MDA predicted somatic FF and OSTOX/ANTIOX predicted the neuropsychiatric symptoms."
+bp(MESH:"Oxidative Stress") association path(DO:"mental depression")
+a(CHEBI:"nitric oxide") association path(DO:"mental depression")
+a(CHEBI:"nitric oxide") association path(DO:"anxiety disorder")
+a(CHEBI:"nitric oxide") association path(HP:Fatigue)
+a(CHEBI:malonaldehyde) association path(HP:Fatigue)
+bp(MESH:"Oxidative Stress") association path(ADO:"Neuropsychiatric_symptoms")
+bp(GO:"antioxidant activity") association path(ADO:"Neuropsychiatric_symptoms")
+
+SET Support = "Figure 3 shows the partial regression of serum CRP on PBT during the acute phase of COVID-19 (performed in Long COVID and control participants combined)."
+SET MeSHAnatomy = "Serum"
+p(HGNC:CRP) pos bp(MESH:"Body Temperature")
+UNSET MeSHAnatomy
+UNSET Section
+
+SET Section = "Discussions"
+SET Support = "The current study’s first major finding is that (a) Long COVID is associated with decreased ANTIOX, including Gpx, and a mild inflammatory process; and (b) 31.7% of Long COVID patients belong to a cluster characterized by decreased SpO2, antioxidant levels, zinc, and Gpx, and increased body temperature, CRP, and OSTOX (increased MPO, NOx, MDA, and (PCs))."
+path(DO:"COVID-19")  decreases bp(GO:"antioxidant activity")
+path(DO:"COVID-19") decreases p(PFAM:GSHPx)
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+path(DO:"COVID-19") increases bp(MESH:"Body Temperature")
+path(DO:"COVID-19") increases p(HGNC:CRP)
+path(DO:"COVID-19") increases bp(MESH:"Oxidative Stress")
+path(DO:"COVID-19") increases a(CHEBI:"nitric oxide")
+path(DO:"COVID-19") increases a(CHEBI:malonaldehyde)
+path(DO:"COVID-19") increases p(HGNC:MPO)
+path(DO:"COVID-19") increases bp(MESH:"Protein Carbonylation")
+path(DO:"COVID-19") decreases a(CMO:"oxygen saturation")
+path(DO:"COVID-19") decreases a(CHEBI:"zinc ion")
+path(DO:"COVID-19") decreases a(CHEBI:antioxidant)
+
+SET Support = "Nevertheless, in the present study, we detected that the patient group with Long COVID showed increased CRP levels compared with control levels, indicating a mild inflammatory response."
+path(DO:"COVID-19") increases p(HGNC:CRP)
+p(HGNC:CRP) increases bp(GO:"inflammatory response")
+
+SET Support = "Nonetheless, our study demonstrates that a persistent imbalance between oxidative stress toxicity and reduced ANTIOX is a key component of Long COVID and that increased aldehyde, neutrophil-associated MPO, protein carbonyl, and NO production are the major neurotoxic pathways, which, when combined with decreased ANTIOX, may have a variety of detrimental effects as reviewed before."
+path(DO:"COVID-19") neg bp(GO:"antioxidant activity")
+path(DO:"COVID-19") neg bp(MESH:"Oxidative Stress")
+p(HGNC:MPO) increases path(FIXME:Neurotoxicity)
+bp(MESH:"Protein Carbonylation") increases path(FIXME:Neurotoxicity)
+a(CHEBI:"nitric oxide") increases path(FIXME:Neurotoxicity)
+a(CHEBI:malonaldehyde) increases path(FIXME:Neurotoxicity)
+
+SET Support = "Given that the Long COVID group as a whole showed Gpx deficiency, while only a subset of patients demonstrated oxidative damage, we may infer that Gpx deficiency is the main cause of the consequent lipid and protein damage."
+path(DO:"COVID-19") decreases p(PFAM:GSHPx)
+p(PFAM:GSHPx) decreases bp(FIXME:"lipid damage")
+p(PFAM:GSHPx) decreases bp(FIXME:"protein damage")
+
+SET Support = "The second major finding of this study is that decreased SpO2 levels during the acute phase of COVID-19 significantly predict OSTOX, increased NO production, and decreased Gpx and ANTIOX, whereas increased PBT levels during the acute phase predict increased CRP and decreased zinc and antioxidant levels in Long COVID. As a result, both decreased SpO2 and higher body temperature contribute to Long COVID’s increased OSTOX/ANTIOX ratio."
+a(NCIT:"Low Blood Oxygen Saturation") pos bp(MESH:"Oxidative Stress")
+a(NCIT:"Low Blood Oxygen Saturation") pos a(CHEBI:"nitric oxide")
+a(NCIT:"Low Blood Oxygen Saturation") neg p(PFAM:GSHPx)
+a(NCIT:"Low Blood Oxygen Saturation") neg bp(GO:"antioxidant activity")
+bp(MESH:"Body Temperature") pos p(HGNC:CRP)
+bp(MESH:"Body Temperature") neg a(CHEBI:"zinc ion")
+bp(MESH:"Body Temperature") neg a(CHEBI:antioxidant)
+
+SET Support = "In addition, ~60% of the variance in the severity of the neuropsychiatric symptoms is explained by the cumulative effects of decreased SpO2 and increased PBT (thus, the severity of the acute infectious phase) coupled with increased CRP and OSTOX/ANTIOX ratio. Most notably was the impact of MDA and NO and decreased Gpx and zinc, although PCs and MPO, as well as decreased TAC, all contribute to neuropsychiatric symptoms."
+
+a(CHEBI:malonaldehyde) increases path(ADO:"Neuropsychiatric_symptoms")
+a(CHEBI:"nitric oxide") increases path(ADO:"Neuropsychiatric_symptoms")
+p(PFAM:GSHPx) decreases path(ADO:"Neuropsychiatric_symptoms")
+a(CHEBI:"zinc ion") decreases path(ADO:"Neuropsychiatric_symptoms")
+bp(GO:"antioxidant activity") decreases path(ADO:"Neuropsychiatric_symptoms")
+a(NCIT:"Low Blood Oxygen Saturation") increases path(ADO:"Neuropsychiatric_symptoms")
+ bp(FIXME:"peak body temperature") increases path(ADO:"Neuropsychiatric_symptoms")
+ p(HGNC:CRP) increases path(ADO:"Neuropsychiatric_symptoms")
+ bp(MESH:"Oxidative Stress") increases path(ADO:"Neuropsychiatric_symptoms")
+
+SET Support = "Most importantly, the results of our study show that chronic fatigue, depression and anxiety symptoms in Long COVID are all manifestations of the same core, which is strongly associated with OSTOX/ANTIOX and inflammatory signs."
+path(HP:"Chronic fatigue") association bp(MESH:"Oxidative Stress")
+path(DO:"mental depression") association bp(MESH:"Oxidative Stress")
+path(DO:"anxiety disorder") association bp(MESH:"Oxidative Stress")
+path(HP:"Chronic fatigue") association bp(GO:"inflammatory response")
+path(DO:"mental depression") association bp(GO:"inflammatory response")
+path(DO:"anxiety disorder") association bp(GO:"inflammatory response")
+
+SET Support = "Finally, it is also important to note that vaccinations with AstraZeneca (viral vector, genetically modified virus vaccine) and Pfizer (mRNA vaccine), but not Sinopharm (inactivated virus vaccine), may aggravate the neuropsychiatric symptoms and, in particular, the somatic symptoms of HAMA and HAMD."
+a(FIXME:"Pfizer/BioNTech") increases path(ADO:"Neuropsychiatric_symptoms")
+a(FIXME:"Pfizer/BioNTech") increases path(DO:"mental depression")
+a(FIXME:"Pfizer/BioNTech") increases path(DO:"anxiety disorder")
+a(FIXME:"Oxford-AstraZeneca COVID-19 vaccine") increases path(ADO:"Neuropsychiatric_symptoms")
+a(FIXME:"Oxford-AstraZeneca COVID-19 vaccine") increases path(DO:"mental depression")
+a(FIXME:"Oxford-AstraZeneca COVID-19 vaccine") increases path(DO:"anxiety disorder")
+
+UNSET Section
+UNSET Citation
+
+
+

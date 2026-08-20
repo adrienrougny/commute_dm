@@ -1,0 +1,210 @@
+SET DOCUMENT Name = "30718543.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+#DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+#DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION TimeLine AS LIST {"6 hours", "18 hours","1 hour"}
+
+SET Citation = {"PubMed", "Sci Rep. 2019 Feb 4;9(1):1393. doi:10.1038/s41598-018-37476-9.", "30718543"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "As Fig. 1. shows, internalization of Aβ1–42 was highest in SDC3 transfectants at every time points."
+SET Species = "9606"
+SET CellLine = "K 562 cell"
+SET BioAssay = "flow cytometry"
+p(HGNC:SDC3) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+
+SET Support = "SDC4 transfectants surpassed WT K562 cells in uptake of Aβ1–42 after 6h of incubation, while SDC2 bested K562 cells in uptake and attachment of Aβ1–42 only at 18h."
+SET TimeLine = "6 hours"
+p(HGNC:SDC4) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET TimeLine
+SET TimeLine = "18 hours"
+p(HGNC:SDC2) -| tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+p(HGNC:SDC2) -| complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+
+SET Support = "Compared to K562 cells, cellular uptake of Aβ1–42 into SDC1 transfectants were lower until 18h of incubation."
+p(HGNC:SDC1) -|  tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET TimeLine
+UNSET BioAssay
+
+SET Support = "On the other hand, uptake of Trf, the marker of clathrin-mediated endocytosis, was higher in K562 cells than in SDC1, 2 and 3 transfectants, while SDC4 exhibited slightly higher Trf uptake levels than WT K562 cells."
+p(HGNC:SDC4) -> tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+
+SET Support = "Attachment of Aβ1–42 was highest in SDC3 transfectants and peaked at 6h of incubation."
+SET TimeLine = "6 hours"
+p(HGNC:SDC3) -> complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+UNSET TimeLine
+
+SET Support = "Extracellular attachment of Aβ1–42 in SDC4 transfectants was also higher compared to WT K562 cells, while both SDC1 and SDC2 exhibited similar extracellularly attached Aβ1–42 levels as WT K562 cells."
+p(HGNC:SDC4) -> complex(p(HGNC:APP, frag("1_42")), p(GO:"external side of plasma membrane"))
+
+SET Support = "In case of Trf, attachment of all cells were quite similar, except for SDC1 that seemed to bind less Trf."
+p(HGNC:SDC1) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+
+SET Support = "ThT fluorescence studies quantitatively showed that SDCs, especially SDC3 and SDC4 significantly (p<0.05) facilitate the fibrillation of Aβ1–42 (Fig. 2a)."
+SET BioAssay = "fluorescent labeling method"
+bp(GO:"amyloid fibril formation") -- p(HGNC:APP, frag("1_42"))
+p(HGNC:SDC3) -> bp(GO:"amyloid fibril formation")
+p(HGNC:SDC4) -> bp(GO:"amyloid fibril formation")
+
+SET Support = "Compared to WT K562 cells with relatively low surface HS expression, SDC3 and SDC4 induce the fibrillation of Aβ1–42 even after 1h of incubation, as shown by increased ThT fluorescence of Aβ1–42-treated SDC3 and 4 transfectants."
+SET TimeLine = "1 hour"
+bp(GO:"amyloid fibril formation") -- p(HGNC:APP, frag("1_42"))
+p(HGNC:SDC3) -> bp(GO:"amyloid fibril formation")
+p(HGNC:SDC4) -> bp(GO:"amyloid fibril formation")
+UNSET TimeLine
+UNSET BioAssay
+
+SET Support = "Simultaneous scanning electron microscopy studies also confirmed the fibrillation triggering effect of SDCs - especially SDC3 and SDC4 - on surface attached Aβ1–42 (Fig. 2b)."
+SET BioAssay = "scanning electron microscopy"
+SET TimeLine = {"1 hour" , "6 hours", "18 hours"}
+bp(GO:"amyloid fibril formation") -- p(HGNC:APP, frag("1_42"))
+p(HGNC:SDC3) -> bp(GO:"amyloid fibril formation")
+p(HGNC:SDC4) -> bp(GO:"amyloid fibril formation")
+UNSET BioAssay
+UNSET TimeLine
+
+SET Support = "Thus scanning electron microscopy also showed increased number of fibrillar Aβ1–42 assemblies on SDC3 and SDC4 overexpressing cells, even after 1h incubation."
+SET TimeLine = "1 hour"
+SET BioAssay = {"scanning electron microscopy", "fluorescent labeling method"}
+bp(GO:"amyloid fibril formation") -- p(HGNC:APP, frag("1_42"))
+p(HGNC:SDC3) -> bp(GO:"amyloid fibril formation")
+p(HGNC:SDC4) -> bp(GO:"amyloid fibril formation")
+UNSET BioAssay
+UNSET TimeLine
+
+SET Support = "Confocal microscopy studies then revealed ThT labeled fibrillar structures inside of Aβ1–42 treated cells, especially in SDC3 and SDC4 transfectants, suggesting while triggering Aβ1–42 fibrillation, SDCs also mediate the intracellular translocation of Aβ1–42 oligomers (Fig. 2c)."
+SET BioAssay = {"confocal microscopy","fluorescent labeling method"}
+p(HGNC:SDC3) -> bp(GO:"amyloid fibril formation")
+p(HGNC:SDC4) -> bp(GO:"amyloid fibril formation")
+p(HGNC:SDC3) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+p(HGNC:SDC4) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET BioAssay
+
+SET Support = "Compared to WT K562 cells, all SDC transfectants exhibited higher uptake of Aβ1–42 at 18h (p<0.01)."
+SET TimeLine = "18 hours"
+p(HGNC:SDC1) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+p(HGNC:SDC2) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+p(HGNC:SDC3) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+p(HGNC:SDC4) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET TimeLine
+
+SET Support = "Among SDC transfectants, the neuron specific SDC3 internalized Aβ1–42 the most and Trf the least (Fig. 3a–d)."
+SET BioAssay = {"fluorescent labeling method", "flow cytometry"}
+p(HGNC:SDC3) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+p(HGNC:SDC3) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET BioAssay
+
+SET Support = "Compared to WT K562 cells, extracellular attachment of Aβ1–42 was also increased on SDC3 and 4 transfectants (p<0.05 and p<0.01, respectively), while in case of Trf, extracellular attachment to SDC3 transfectants was significantly (p<0.01) reduced (Fig. 3c,d)."
+SET BioAssay = "fluorescent labeling method"
+p(HGNC:SDC3) -> complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+p(HGNC:SDC4) -> complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+p(HGNC:SDC3) -| complex(p(HGNC:TF), a(GO:"plasma membrane"))
+UNSET BioAssay
+
+SET Support = "Promoting undersulfation of SDCs with NaClO3 exerted an evident and significant (p<0.05) inhibition of Aβ1–42 attachment in all cells lines, however the inhibitory effect on uptake was only significant (p<0.05) in case of SDC3 and 4 transfectants (especially SDC3 and 4) than in WT K562 cells (Fig. 6c)."
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC1, pmod(GO:"protein sulfation"))
+p(HGNC:SDC1, pmod(GO:"protein sulfation")) -> complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC2, pmod(GO:"protein sulfation"))
+p(HGNC:SDC2, pmod(GO:"protein sulfation")) -> complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC3, pmod(GO:"protein sulfation"))
+p(HGNC:SDC3, pmod(GO:"protein sulfation")) -> complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC4, pmod(GO:"protein sulfation"))
+p(HGNC:SDC4, pmod(GO:"protein sulfation")) -> complex(p(HGNC:APP, frag("1_42")), a(GO:"plasma membrane"))
+
+SET Support = "Scanning electron microscopy studies also confirmed the inhibitory effect of undersulfation as fibrillary assemblies of Aβ1–42 were reduced due to NaClO3 treatment (Fig. 6d)."
+SET BioAssay = {"scanning electron microscopy"}
+bp(GO:"amyloid fibril formation") -- p(HGNC:APP, frag("1_42"))
+complex(a(CHEBI:"sodium chlorate"),p(HGNC:SDC3)) -| bp(GO:"amyloid fibril formation")
+UNSET BioAssay
+
+SET Support = "Compared to K562 cells, WT SDC4 transfectants exhibited the most significant (p<0.01) increase in Aβ1–42 uptake (Fig. 7b,c)."
+SET BioAssay = "flow cytometry"
+complex(a(CHEBI:"sodium chlorate"),p(HGNC:SDC4)) -| tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+UNSET BioAssay
+UNSET CellLine
+
+SET Support = "In SH-SY5Y cells, SDC3 overexpression resulted in increased HS expression, along with increased cellular uptake and fibrillation of Aβ1–42 (Fig. 8a–e)."
+SET CellLine = "SH-SY5Y cell"
+SET BioAssay = {"flow cytometry", "scanning electron microscopy"}
+p(HGNC:SDC3)-> a(CHEBI:"heparan sulfate")
+p(HGNC:SDC3)-> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:"intracellular"))
+bp(GO:"amyloid fibril formation") -- p(HGNC:APP, frag("1_42"))
+p(HGNC:SDC3)-> bp(GO:"amyloid fibril formation")
+UNSET BioAssay
+UNSET CellLine
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

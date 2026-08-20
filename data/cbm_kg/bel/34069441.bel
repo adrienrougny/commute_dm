@@ -1,0 +1,184 @@
+SET DOCUMENT Name = "34069441.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+DEFINE NAMESPACE UNIPROT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/uniprot/uniprot-20200601.belns"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+#DEFINE NAMESPACE FIXME AS LIST {".."}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION Condition AS LIST {"Heat-inactivated"}
+DEFINE ANNOTATION CellLine_Type AS LIST {"ACE2-/-","SDC4-/-"}
+
+SET Citation = {"PubMed", "Int J Mol Sci. 2021 May 19;22(10):5336. doi:10.3390/ijms22105336.","34069441"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "Imaging flow cytometry analyses revealed increased uptake of SARS-CoV-2 into SDC transfectants (Figure 1A–C)."
+SET Species = "9606"
+SET CellLine = "K 562 cell"
+SET BioAssay = {"flow cytometry", "confocal microscopy", "transfection method"}
+SET Condition = "Heat-inactivated"
+p(HGNC:SDC4) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "Among SDCs, SDC4 increased SARS-CoV-2 uptake the most (p < 0.01) (incubating the cells with the AF 488-labeled secondary antibodies did not result in any statistically significant difference in cellular fluorescence of applied WT K562 cells and SDC transfectants, showing that no unspecific binding influenced the detected difference in fluorescence intensities of SARS-CoV-2-treated cells (Supplementary Figure S4)."
+p(HGNC:SDC4) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET Condition
+
+SET Support = "Treating WT K562 cells and SDC transfectants with the SARS-CoV-2 pseudovirus (SARS-CoV-2 PSV), a recombinant pseudotyped lentiviral particle carrying the SARS-CoV-2 spike protein and encoding the red fluorescent protein (RFP) as a reporter gene [29,66,67,68], delivered similar results as uptake studies with the heat-inactivated SARS-CoV-2."
+SET BioAssay = {"flow cytometry", "confocal microscopy", "transfection method", "reporter gene assay"}
+p(HGNC:SDC4) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "Namely, SDC transfectants all increased SARS-CoV-2 PSV-mediated RFP transduction (Figure 1D–F)."
+p(HGNC:SDC4) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "Compared to PSV-treated WT K562 cells, the increase in RFP transduction was significant (p < 0.05) only in the case of SDC4 transfectants (Figure 1F)."
+p(HGNC:SDC4) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "PSV studies thus showed that besides facilitating SARS-CoV-2 uptake, SDC4-mediated cellular entry also maintains the biological activity (i.e., the gene transduction ability) of the virus."
+p(HGNC:SDC4) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> bp(GO:transduction)
+UNSET BioAssay
+SET Support = "Imaging flow cytometry revealed that both the HSA and CBD of SDC4 has a significant role in interacting with SARS-CoV-2 (Figure 3B–D)."
+SET BioAssay = {"flow cytometry", "fluorescence method"}
+SET Condition = "Heat-inactivated"
+p(HGNC:SDC4, var("HSA.pSi4")) association complex(a(TAX:"Severe acute respiratory syndrome coronavirus 2"),p(HGNC:SDC4))
+
+SET Support = "Namely, deleting both the CBD and the HSA with HS chains reduced cellular uptake of SARS-CoV-2, as shown by the markedly reduced intracellular fluorescence detected in Si4 mutants (Figure 3B–D)."
+complex(p(HGNC:SDC4, var("p.HSA_del")),p(HGNC:SDC4, var("p.CBD_del"))) -| tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4, var("?")) -| tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "However, the insignificant reduction in the cellular fluorescence of SARS-CoV-2-treated CBD mutants showed that the CBD plays an important role in interacting with the virus."
+p(HGNC:SDC4, var("CBD.pSi4")) association complex(a(TAX:"Severe acute respiratory syndrome coronavirus 2"),p(HGNC:SDC4))
+
+SET Support = "Overall, our studies with SDC4 deletion mutants revealed that besides the polyanionic HS chains, SARS-CoV-2 also interacts with the CBD of SDC4, highlighting the importance of the HS-independent parts of the SDC4 core protein (incubating the cells with the AF 633-labeled secondary antibodies did not induce any difference in fluorescence among the applied SDC4 transfectants and SDC4 mutants, showing that no unspecific binding influenced the difference in the detected fluorescence intensities in SARS-CoV-2-treated cells (Supplementary Figure S8))."
+p(HGNC:SDC4, var("p.HSA_del")) association complex(a(TAX:"Severe acute respiratory syndrome coronavirus 2"),p(HGNC:SDC4))
+UNSET BioAssay
+UNSET Condition
+UNSET CellLine
+
+SET Support = "The next steps showed that ACE2 and SDCs colocalize during SARS-CoV-2 uptake, suggesting that ACE2 and SDCs collaborate in mediating SARS-CoV-2 internalization (Figure 5C,D)."
+SET CellLine = "A549 cell"
+SET BioAssay = {"flow cytometry", "confocal microscopy", "transfection method"}
+composite(p(HGNC:ACE2),p(HGNC:SDC1)) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+UNSET CellLine
+
+SET Support = "Imaging flow cytometry analyses revealed increased uptake of spikeS1 into SDC lines (Figure 6A–C)."
+SET CellLine = "K 562 cell"
+SET BioAssay = {"flow cytometry","transfection method","fluorescence method"}
+p(HGNC:SDC4)-> tloc(p(UNIPROT:P0DTC2, frag("14_685")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "Among SDCs, SDC4 significantly increased the uptake of spikeS1 (p < 0.01) (incubating the cells with the fluorescently labeled anti-His tag antibodies without spikeS1 pretreatment did not induce any difference in fluorescence among the applied K562 cells and SDC transfectants, showing that no unspecific binding influenced the detected fluorescence intensities in spikeS1-treated cells (Supplementary Figure S11))."
+p(HGNC:SDC4)-> tloc(p(UNIPROT:P0DTC2, frag("14_685")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+SET Support = "Namely, deleting both the CBD and the HSA (with HS chains) significantly reduced cellular uptake of spikeS1, as shown by the markedly reduced intracellular fluorescence detected on Si4 mutants (Figure 7A–D)."
+SET BioAssay = {"flow cytometry", "confocal microscopy", "transfection method","fluorescence method"}
+p(HGNC:SDC4, var("p.HSA_del"),var("p.CBD_del")) -| tloc(p(UNIPROT:P0DTC2, frag("14_685")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+SET Support = "Increased SDC4 expression, with unaffected ACE2 levels, resulted in increased cellular uptake of spikeS1 (Figure 8C–G). Namely, overexpression of SDC4 increased spikeS1 entry from a low level of WT A549 cells by almost twofold (Figure 8C–E)."
+SET CellLine = "A549 cell"
+SET BioAssay = {"flow cytometry","transfection method"}
+p(HGNC:SDC4)-> tloc(p(UNIPROT:P0DTC2, frag("14_685")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+SET Support = "Colocalization studies revealed that spikeS1 colocalizes with SDC4 during increased spikeS1 entry (as shown by the high BDS, MOC and PCC scores obtained with imaging flow cytometry and confocal microscopy (see details in Figure 8F,G), while co-immunoprecipitation showed increased binding of spikeS1 to SDC4 due to SDC4 overexpression (Figure 8H) (incubating the cells with the fluorescently labeled anti-His tag antibodies without spikeS1 pretreatment did not induce any difference in fluorescence among the applied A549 cell line and SDC4 transfectants, showing that no unspecific binding influenced the detected fluorescence intensities in spikeS1-treated cells (Supplementary Figure S15))."
+SET BioAssay = {"flow cytometry", "confocal microscopy", "transfection method","fluorescence method","western blot","immunoprecipitation"}
+p(HGNC:SDC4) -> complex(p(HGNC:SDC4),p(UNIPROT:P0DTC2, frag("14_685")))
+UNSET BioAssay
+
+SET Support = "As shown in Figure 9A–C, uptake studies demonstrated that while all of the applied inhibitors efficiently reduced SARS-CoV-2 uptake, SPRRAR, a peptide derived from the spikeS1 of SARS-CoV-2 emerged as the most potent one, demonstrating that molecularly detailed understanding of the SARS-CoV-2 internalization could indeed lead to the rational development of potent SARS-CoV-2 therapeutic leads (preincubating the cells with the inhibitors did not influence cell viability, demonstrating that the reduced SARS-CoV-2 uptake due to inhibitor treatment did not arise from disturbed cellular viability (Supplementary Figure S16))."
+SET BioAssay = {"flow cytometry", "transfection method","fluorescence method"}
+p(UNIPROT:P0DTC2, frag("680_685")) -| tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+SET Support = "Compared to WT A549 cells, SARS-CoV-2 treatment of ACE2 and SDC4 KO cells resulted in significantly reduced virus uptake (Figure 10C,D,F)."
+SET BioAssay = {"flow cytometry", "transfection method","fluorescence method"}
+SET CellLine_Type = "ACE2-/-"
+p(HGNC:ACE2) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET CellLine_Type
+SET CellLine_Type = "SDC4-/-"
+p(HGNC:SDC4) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET CellLine_Type
+
+SET Support = "Compared to ACE2 knockdown, the effect of SDC4 KO exerted a significantly (p < 0.01) more pronounced inhibitory effect on SARS-CoV-2 internalization (Figure 10D,F), suggesting a substantial role is played by SDC4 in SARS-CoV-2 uptake."
+SET CellLine_Type = "ACE2-/-"
+p(HGNC:ACE2) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET CellLine_Type
+SET CellLine_Type = "SDC4-/-"
+p(HGNC:SDC4) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET CellLine_Type
+UNSET BioAssay
+UNSET CellLine
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

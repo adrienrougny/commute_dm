@@ -1,0 +1,405 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "34675436.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"string vessel", "string vessel length", "IgG filled vesicles"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Mouse_Type AS LIST {"mouse expressing human angiotensin-converting enzyme 2 under the control of the keratin 18 promoter", "inducible Ikbkg (Nemo) deletion", "inducible Ikbkg (Nemo) deletion with microglia ablation", "inducible Ikbkg (Nemo) deletion with inactivated FADD", "inducible Ikbkg (Nemo) deletion with inactivated Ripk3", "Mouse with inactivated Ripk3"}
+DEFINE ANNOTATION Custom_CellLine AS LIST {"hCMEC/D3 cell", "HEK293T cell"}
+DEFINE ANNOTATION TimeLine AS LIST {"Day 7 post infection", "24 hours post infection"}
+DEFINE ANNOTATION Concentration AS LIST {"0 µM", "5 µM", "10 µM", "25 µM", "0.25 µg/ml", "100 ng/ml"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Nat Neurosci. 2021 Nov;24(11):1522-1533. doi: 10.1038/s41593-021-00926-1.", "34675436"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+
+SET Support = "We noted an increase in thin collagen IV-positive strings lacking CD34 staining (Fig. 1a,b)."
+SET MeSHAnatomy = {"Brain", "Frontal Lobe"}
+path(DO:"COVID-19") -> a(MESH:"Collagen Type IV")
+
+
+SET Support = "Counting revealed a significant increase in string vessels in patients with SARS-CoV-2 (Fig. 1c)."
+path(DO:"COVID-19") -> a(FIXME:"string vessel")
+UNSET MeSHAnatomy
+
+
+SET Support = "Because of pneumonia, more SARS-CoV-2-infected patients were ventilated than controls (Supplementary Table 2). "
+SET Disease = "COVID-19"
+path(DO:"COVID-19") -> path(DO:pneumonia)
+a(NCIT:"Mechanical Ventilation") -| path(DO:pneumonia)
+UNSET Disease
+
+
+SET Support = "In line with the notion that string vessels are formed when endothelial cells die, we observed cells that stained for the apoptosis marker active caspase-3 in brain microvessels. These cells were rare in brain sections of the frontal cortex but significantly more frequent in SARS-CoV-2-infected patients than in controls (Fig. 1d)."
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Brain", "Microvessels"}
+path(DO:"COVID-19") -> act(p(HGNC:CASP3))
+act(p(HGNC:CASP3)) biomarkerFor bp(GO:"apoptotic process")
+UNSET MeSHAnatomy
+UNSET BioAssay
+UNSET Species
+
+
+SET Support = "A similar finding was observed in K18-hACE2 mice, which express the human angiotensin-converting enzyme 2 (hACE2) receptor, under the control of the keratin 18 promoter. In this model, SARS-CoV-2 infection induced the formation of string vessels in a time-dependent manner (Fig. 1g,h and Supplementary Fig. 1b). "
+SET Species = "10090"
+SET Mouse_Type = "mouse expressing human angiotensin-converting enzyme 2 under the control of the keratin 18 promoter"
+SET TimeLine = "Day 7 post infection"
+path(DO:"COVID-19") -> a(FIXME:"string vessel length")
+path(DO:"COVID-19") -> a(MESH:"Collagen Type IV")
+UNSET TimeLine
+UNSET Mouse_Type
+
+SET Support = "In contrast, we observed high levels of Nrp1 and Bsg expression in mouse endothelial cells by scRNA-seq and immunostaining (Fig. 2a,b) but no Cd209a, Cd209b, Cd209c, Cd209d or Tmprss2 (Extended Data Fig. 3c–e)."
+SET MeSHAnatomy = "Brain"
+SET Cell = "endothelial cell"
+SET BioAssay = "rna-seq method"
+path(DO:"COVID-19") -> r(MGI:Nrp1)
+path(DO:"COVID-19") -> r(MGI:Bsg)
+UNSET BioAssay
+SET BioAssay = "immunohistochemistry"
+path(DO:"COVID-19") -> surf(p(MGI:Nrp1))
+path(DO:"COVID-19") -> surf(p(MGI:Bsg))
+UNSET BioAssay
+UNSET Cell
+UNSET MeSHAnatomy
+UNSET Species
+
+
+SET Support = "In line with the mouse data, BSG and NRP1 were highly expressed in endothelial cells (Fig. 2c). "
+SET Species = "9606"
+SET MeSHAnatomy = "Brain"
+SET Cell = "endothelial cell"
+path(DO:"COVID-19") -> r(HGNC:NRP1)
+path(DO:"COVID-19") -> r(HGNC:BSG)
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "Immunofluorescence staining confirmed the presence of BSG and NRP1 in brain endothelial cells, while only a few cells were positive for ACE2 (Fig. 2d). "
+SET MeSHAnatomy = "Brain"
+SET Cell = "endothelial cell"
+SET BioAssay = "immunohistochemistry"
+path(DO:"COVID-19") -> surf(p(HGNC:NRP1))
+path(DO:"COVID-19") -> surf(p(HGNC:BSG))
+UNSET Cell
+UNSET MeSHAnatomy
+
+
+SET Support = "In ACE2-positive cells, but not ACE2-negative cells, the spike protein was found in a perinuclear localization as reported for pulmonary endothelial cells (Fig. 2e)32. "
+SET Custom_CellLine = "hCMEC/D3 cell"
+SET MeSHAnatomy = "Lung"
+SET Cell = "endothelial cell"
+SET TimeLine = "24 hours post infection"
+act(p(HGNC:ACE2)) -> p(UNIPROT:P0DTC2, loc(GO:"perinuclear region of cytoplasm"))
+UNSET TimeLine
+UNSET Cell
+UNSET MeSHAnatomy
+UNSET Custom_CellLine
+
+
+SET Support = "Indeed, NEMO was degraded in infected Vero E6 and hCMEC/D3 cells before the cells died (Extended Data Fig. 5a,b)."
+SET CellLine = "VERO 76 cell"
+SET Custom_CellLine = "hCMEC/D3 cell"
+SET BioAssay = "western blot"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> deg(p(HGNC:IKBKG))
+UNSET Custom_CellLine
+UNSET CellLine
+
+SET Support = "Moreover, immunoblots of NEMO in brain lysates of SARS-CoV-2-infected and control patients indicated that NEMO was cleaved in some of the infected patients (Extended Data Fig. 5c)."
+SET MeSHAnatomy = {"Brain", "Medulla Oblongata"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> p(HGNC:IKBKG, frag("?"))
+UNSET MeSHAnatomy
+
+
+SET Support = "Purified Mpro cleaved recombinant human NEMO as well as human and mouse NEMO in extracts of brain endothelial or HEK293T cells in a dose-dependent and time-dependent manner (Fig. 3a,b and Extended Data Figs. 6 and 7a,b)."
+SET BioAssay = "western blot"
+SET MeSHAnatomy = "Brain"
+SET Cell = "endothelial cell"
+SET Concentration = {"0 µM", "5 µM", "10 µM", "25 µM"}
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("?"))
+UNSET Cell
+UNSET MeSHAnatomy
+SET Custom_CellLine = "HEK293T cell"
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("?"))
+UNSET Custom_CellLine
+UNSET Concentration
+
+
+SET Support = "Importantly, Mpro cleaved NEMO also in intact brain endothelial cells (Fig 3c and Extended Data Fig. 7c)"
+SET Custom_CellLine = "hCMEC/D3 cell"
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("?"))
+UNSET Custom_CellLine
+
+SET Support = "When coexpressed with NEMO-2A-GFP that self-processes to NEMO-2A and green fluorescent protein (GFP), HA-tagged Mpro completely neutralized NEMO-2A in human hCMEC/D3 cells."
+SET Custom_CellLine = "hCMEC/D3 cell"
+p(UNIPROT:P0DTC1) -| act(p(HGNC:IKBKG))
+UNSET Custom_CellLine
+
+SET Support = "In vitro, Mpro produced several NEMO fragments (Fig. 3a and Extended Data Fig. 6). "
+SET Concentration = {"0 µM", "5 µM", "10 µM", "25 µM"}
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("?"))
+UNSET Concentration
+UNSET BioAssay
+
+
+SET Support = "Tryptic digestion of Mpro-treated NEMO followed by mass spectrometry of the generated peptides showed that cleavage occurred at Q83, Q205, Q231, Q304 and Q313 (Fig. 3d,e and Supplementary Fig. 2a–j)."
+SET BioAssay = "mass spectrometry"
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("1_83"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("84_419"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("1_205"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("206_419"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("1_231"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("232_419"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("1_304"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("305_419"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("1_313"))
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("314_419"))
+
+
+SET Support = "We verified the cleavage at Q231 by using synthetic peptides as substrates corresponding to both the human and mouse NEMO sequence (Fig. 3f and Supplementary Fig. 3a–c)."
+p(UNIPROT:P0DTC1) -> p(HGNC:IKBKG, frag("1_231"))
+
+SET Support = "In keeping with the central role of Q in the recognition sequence, the mutation p.Gln231Ala in the human NEMO sequence prevented cleavage by Mpro at this site (Fig. 3f)."
+composite(p(UNIPROT:P0DTC1), p(HGNC:IKBKG, var("p.Gln231Ala"))) -| p(HGNC:IKBKG, frag("1_231"))
+composite(p(UNIPROT:P0DTC1), p(HGNC:IKBKG, var("p.Gln231Ala"))) -| p(HGNC:IKBKG, frag("232_419"))
+UNSET BioAssay
+
+
+SET Support = "When expressed in human brain endothelial hCMEC/D3 cells, Mpro prevented the nuclear translocation of the NF-κB subunit p65, reflecting its activation in response to IL-1β (Fig. 4a). Mpro also abolished the stimulation of NF-κB-mediated gene transcription by IL-1β, which we investigated in hCMEC/D3 cells and mouse brain endothelial bEnd.3 cells using luciferase reporter gene assays (Fig. 4b, c)."
+SET Custom_CellLine = "hCMEC/D3 cell"
+SET Concentration = "0.25 µg/ml"
+composite(p(UNIPROT:P0DTC1), p(HGNC:IL1B)) -| tloc(p(HGNC:RELA), fromLoc(GO:cytoplasm), toLoc(GO:nucleus))
+p(HGNC:IL1B) -> act(p(HGNC:RELA))
+composite(p(UNIPROT:P0DTC1), p(HGNC:IL1B)) -| act(p(HGNC:RELA))
+UNSET Custom_CellLine
+SET CellLine = "bEnd.3 cell"
+composite(p(UNIPROT:P0DTC1), p(MGI:Il1b)) -| tloc(p(MGI:Rela), fromLoc(GO:cytoplasm), toLoc(GO:nucleus))
+p(MGI:Il1b) -> act(p(MGI:Rela))
+composite(p(UNIPROT:P0DTC1), p(MGI:Il1b)) -| act(p(MGI:Rela))
+UNSET CellLine
+UNSET Concentration
+
+
+SET Support = "Mpro-expressing cells were more often positive for the cell death marker TUNEL, especially when exposed to TNF (Fig. 4d,e), demonstrating that Mpro promotes endothelial cell death. "
+SET Custom_CellLine = "hCMEC/D3 cell"
+SET Concentration = "100 ng/ml"
+composite(p(UNIPROT:P0DTC1), p(HGNC:TNF)) -> bp(GO:"cell death")
+UNSET Concentration
+UNSET Custom_CellLine
+
+
+SET Support = "In these experiments, levels of the HA-tagged p.Cys145Ala-Mpro were higher than those of Mpro, probably reflecting a better cell viability with the mutated protease. In support of this concept, the number of GFP-positive hCMEC/D3 cells dropped when Mpro-HA but not p.Cys145Ala-Mpro-HA were co-transfected (Fig. 4g)."
+SET Custom_CellLine = "hCMEC/D3 cell"
+SET BioAssay = "western blot"
+p(UNIPROT:P0DTC1, var("p.Cys145Ala")) -> path(MESH:"Cell Survival")
+UNSET Custom_CellLine
+
+
+SET Support = "When mice received AAV-BR1-Mpro 2 weeks before, we observed an increased number of string vessels and a decreased vascular density in their brains (Fig. 4j–l)."
+SET Species = "10090"
+p(UNIPROT:P0DTC1) -> a(FIXME:"string vessel")
+p(UNIPROT:P0DTC1) -| a(FIXME:"string vessel length")
+p(UNIPROT:P0DTC1) -| a(NCIT:"Blood Vessel Density") 
+
+
+SET Support = "The inactive p.Cys145Ala-Mpro had no effect on string vessels or vascular density. In line with a detrimental effect of Mpro on endothelial cell survival, there were less HA-positive vessels after expression of Mpro-HA in comparison to p.Cys145Ala-Mpro-HA (Supplementary Fig. 4c)."
+SET MeSHAnatomy = "Brain"
+SET Cell = "endothelial cell"
+p(UNIPROT:P0DTC1, var("p.Cys145Ala")) causesNoChange a(FIXME:"string vessel")
+p(UNIPROT:P0DTC1, var("p.Cys145Ala")) causesNoChange a(FIXME:"string vessel length")
+p(UNIPROT:P0DTC1, var("p.Cys145Ala")) causesNoChange a(NCIT:"Blood Vessel Density")
+p(UNIPROT:P0DTC1) -| bp(MESH:"Cell Survival")
+
+
+SET Support = "Similar to the Mpro-mediated cleavage of NEMO, its genetic ablation led to numerous string vessels in the brain (Fig. 5a,b)."
+SET Mouse_Type = "inducible Ikbkg (Nemo) deletion"
+SET BioAssay = "confocal microscopy"
+act(p(MGI:Ikbkg)) -| a(FIXME:"string vessel")
+
+ 
+SET Support = "NEMO deletion induced endothelial cell death as detected by the TUNEL reaction or by staining for active caspase-3 (Fig. 5c–e). Most of them were observed in higher-order capillaries (Fig. 5f and Extended Data Fig. 8), suggesting that capillaries are particularly susceptible to NEMO deficiency"
+act(p(MGI:Casp3)) -> bp(GO:"cell death")
+act(p(MGI:Ikbkg)) -| act(p(MGI:Casp3))
+
+
+SET Support = "Consequently, small-diameter vessels were predominantly lost and mice developed patchy hypoxia in the brain (Fig. 5g,h) but not in peripheral organs (Supplementary Fig. 5a,b)."
+act(p(MGI:Ikbkg)) -> a(FIXME:"string vessel")
+act(p(MGI:Ikbkg)) -| path(MESH:Hypoxia)
+
+
+SET Support = "Finally, Nemo deletion led to a significant vessel rarefaction in the brain (Fig. 6a) and to a BBB disruption (Fig. 6c,f and Supplementary Fig. 5c)"
+act(p(MGI:Ikbkg)) -> a(NCIT:"Blood Vessel Density")
+act(p(MGI:Ikbkg)) -> bp(GO:"maintenance of permeability of blood-brain barrier")
+
+
+SET Support = "While the overall coverage of vessels by pericytes was slightly lowered (Fig. 5i), the number of microglia increased and they exhibited an activated morphology (Fig. 5j). The astrogliosis marker glial fibrillary acidic protein (GFAP) was strongly upregulated, indicating an inflammatory response (Fig. 5k)."
+act(p(MGI:Ikbkg)) -> a(MESH:Pericytes)
+act(p(MGI:Ikbkg)) -| a(MESH:Microglia)
+act(p(MGI:Ikbkg)) -| bp(GO:"microglial cell activation")
+act(p(MGI:Ikbkg)) -| path(HP:Astrocytosis)
+p(MGI:Gfap) biomarkerFor path(HP:Astrocytosis)
+bp(GO:"microglial cell activation") -> bp(GO:"inflammatory response")
+path(HP:Astrocytosis) -> bp(GO:"inflammatory response")
+UNSET Mouse_Type
+
+
+SET Support = "However, ablating microglia by administering the CSF-1R antagonist PLX5622 did neither prevent the formation of string vessels nor prevent the activation of astrocytes (Supplementary Fig. 6)."
+SET Mouse_Type = "inducible Ikbkg (Nemo) deletion with microglia ablation"
+a(PUBCHEM:52936034) causesNoChange a(FIXME:"string vessel")
+a(PUBCHEM:52936034) causesNoChange bp(GO:"astrocyte activation")
+UNSET Mouse_Type
+
+
+SET Support = "FADD deficiency did not ameliorate the consequences of Nemo deletion but enhanced the damage (Extended Data Fig. 9b–f)."
+SET Mouse_Type = "inducible Ikbkg (Nemo) deletion with inactivated FADD"
+composite(p(MGI:Ikbkg), p(MGI:Fadd)) -| a(FIXME:"string vessel")
+composite(p(MGI:Ikbkg), p(MGI:Fadd)) -> a(FIXME:"string vessel length")
+UNSET BioAssay
+SET BioAssay = "western blot"
+composite(p(MGI:Ikbkg), p(MGI:Fadd)) -| tloc(complex(GO:"IgG immunoglobulin complex"), fromLoc(MESH:"Blood Vessels"), toLoc(MESH:Brain))
+composite(p(MGI:Ikbkg), p(MGI:Fadd)) -| tloc(p(MGI:Alb), fromLoc(MESH:"Blood Vessels"), toLoc(MESH:Brain))
+UNSET BioAssay
+composite(p(MGI:Ikbkg), p(MGI:Fadd)) -> bp(GO:"maintenance of permeability of blood-brain barrier")
+composite(p(MGI:Ikbkg), p(MGI:Fadd)) -| a(CMO:"brain weight")
+composite(p(MGI:Ikbkg), p(MGI:Fadd), a(MESH:Tamoxifen)) ->  a(MESH:Survival)
+UNSET Mouse_Type
+SET Mouse_Type = "inducible Ikbkg (Nemo) deletion with inactivated Ripk3"
+composite(p(MGI:Ikbkg), p(MGI:Ripk3), a(MESH:Tamoxifen)) -|  a(MESH:Survival)
+
+
+SET Support = "In contrast, RIPK3 deficiency, which by itself did not affect the cerebral microvasculature, prevented the formation of string vessels and the rarefaction of cerebral vessels due to Nemo deletion (Fig. 6a)."
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> a(FIXME:"string vessel")
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> a(NCIT:"Blood Vessel Density")
+
+
+SET Support = "Notably, Ripk3 deletion abrogated endothelial proliferation (Fig. 6a). Ripk3 deletion also normalized survival, brain weight and body weight of mice with a NEMO deficiency in brain endothelial cells and reduced the extravasation of IgG and albumin into the parenchyma, showing that disruption of the BBB was mitigated (Fig. 6b,c and Extended Data Fig. 9c–f). Consequentially, Nemo deletion did not activate microglia or astrocytes in the absence of RIPK3 (Fig. 6d)."
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> bp(GO:"endothelial cell proliferation")
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> tloc(complex(GO:"IgG immunoglobulin complex"), fromLoc(MESH:"Blood Vessels"), toLoc(MESH:"Parenchymal Tissue"))
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> tloc(p(MGI:Alb), fromLoc(MESH:"Blood Vessels"), toLoc(MESH:"Parenchymal Tissue"))
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -| bp(GO:"maintenance of permeability of blood-brain barrier")
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> bp(GO:"microglial cell activation")
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> bp(GO:"astrocyte activation")
+
+
+SET Support = "NEMO deficiency led to interruptions and the disintegration of occludin-positive tight junctions, which was prevented by RIPK3 deficiency (Fig. 6e)."
+SET BioAssay = "immunohistochemistry"
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -| p(MGI:Ocln)
+p(MGI:Ikbkg) -| deg(p(MGI:Ocln))
+UNSET BioAssay
+UNSET Mouse_Type
+
+
+SET Support = "The increased IgG extravasation in NemobeKO mice was associated with a lower number of IgG-filled vesicles in brain endothelial cells"
+SET Mouse_Type = "inducible Ikbkg (Nemo) deletion"
+SET MeSHAnatomy = "Brain"
+SET Cell = "endothelial cell"
+tloc(complex(GO:"IgG immunoglobulin complex"), fromLoc(MESH:"Blood Vessels"), toLoc(MESH:Brain)) -| a(FIXME:"IgG filled vesicles")
+UNSET Mouse_Type
+
+
+SET Support = "RIPK3 deficiency did not counteract the effect of NEMO ablation on IgG transcytosis (Fig. 6f). Therefore, we conclude that RIPK3 deficiency improves the BBB tightness of NemobeKO mice mainly by preventing endothelial cell death and rescuing tight junctions."
+SET Mouse_Type = "inducible Ikbkg (Nemo) deletion with inactivated Ripk3"
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> tloc(complex(GO:"IgG immunoglobulin complex"), fromLoc(MESH:"Blood Vessels"), toLoc(MESH:"Parenchymal Tissue"))
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> a(FIXME:"IgG filled vesicles")
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -| bp(GO:"maintenance of permeability of blood-brain barrier")
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -> bp(GO:"endothelial cell apoptotic process")
+composite(p(MGI:Ikbkg), p(MGI:Ripk3)) -| p(MGI:Ocln)
+UNSET Mouse_Type
+
+
+SET Support = "Importantly, the Mpro-induced string vessel formation also depended on the presence of RIPK3 (Fig. 7a,b), suggesting that inhibitors of RIPK signaling may protect against the microvascular pathology induced by Mpro"
+SET Mouse_Type = "Mouse with inactivated Ripk3"
+composite(p(UNIPROT:P0DTC1), p(MGI:Ripk3)) -> a(FIXME:"string vessel")
+
+
+SET Support = "The RIPK1 inhibitor abrogated Mpro-induced string vessel formation (Fig. 7c,d) and normalized body weight gain that was impaired by Mpro expression in brain endothelial cells (Extended Data Fig. 10). "
+composite(p(UNIPROT:P0DTC1), a(PUBCHEM:134521814)) -| a(FIXME:"string vessel")
+UNSET Mouse_Type
+UNSET Cell
+UNSET MeSHAnatomy
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Species
+UNSET Citation

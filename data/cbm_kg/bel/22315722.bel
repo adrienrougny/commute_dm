@@ -1,0 +1,670 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "22315722.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"response to brain injury", "Neurotoxicity", "increased permeability of blood-brain barrier", "protein nitration", "disease duration", "all-trans retinoic acid", "effector T cell response","CD3-positive T-lymphocytes", "suppressor activity of regulatory T cell", "alpha-synuclein aggregation", "lymphocyte infiltration", "protein misfolding", "B cell extravasation"}
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+DEFINE ANNOTATION Mouse_Type AS LIST {"HIV-1 encephalitic mice"}
+DEFINE ANNOTATION Chemical_Treatment AS LIST {"1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine"}
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+DEFINE ANNOTATION Specimen AS LIST {"post mortem specimen"}
+DEFINE ANNOTATION Technique AS LIST {"Adoptive Transfer"}
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Cold Spring Harb Perspect Med. 2012 Jan;2(1):a009381. doi: 10.1101/cshperspect.a009381.", "22315722"}
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+SET Species = "9606"
+SET MeSHDisease = "Parkinson Disease"
+
+SET Support = "However, when an adaptive immune response continues unchecked in the brain, the proinflammatory innate microglial response leads to the accumulation of neurotoxins and eventual neurodegeneration. What drives such responses are misfolded and nitrated proteins."
+bp(GO:"cellular response to misfolded protein") increases bp(GO:"negative regulation of adaptive immune response")
+bp(GO:"negative regulation of adaptive immune response") increases bp(GO:"microglial cell mediated cytotoxicity")
+bp(GO:"microglial cell mediated cytotoxicity") increases path(HP:Neurodegeneration)
+
+
+SET Support = "Ingress of lymphocytes and chronic activation of glial cells directly affect neurodegeneration."
+bp(GO:"lymphocyte chemotaxis") increases path(HP:Neurodegeneration)
+bp(GO:"glial cell activation") increases path(HP:Neurodegeneration)
+
+SET Support = "Aberrant proteins (e.g., modified α-synuclein) activate microglia and engage the adaptive immune system, causing neuroinflammation and neurodegeneration in PD."
+bp(GO:"microglial cell activation") increases path(HP:Neurodegeneration)
+bp(GO:"microglial cell activation") increases path(ADO:neuroinflammation)
+bp(GO:"negative regulation of adaptive immune response") increases path(HP:Neurodegeneration)
+bp(GO:"negative regulation of adaptive immune response") increases path(ADO:neuroinflammation)
+
+SET Support = "Pathologically, the disease is characterized by the cytoplasmic accumulation of proteinaceous aggregates called Lewy bodies (LBs), which are mainly comprised of α-synuclein (α-syn) and ubiquitin."
+a(MESH:"Lewy Bodies", loc(GO:cytoplasm)) increases path(DO:"Parkinson's disease")
+a(MESH:"Lewy Bodies") hasComponents list(p(HGNC:SNCA), p(PFAM:ubiquitin))
+
+SET Support = "Progressive degeneration of dopaminergic neurons in the substantia nigra (SN) pars compacta and their projections into the caudate nucleus leads to substantial decreases in dopamine levels, which manifest as resting tremor, bradykinesia, rigidity, and gait dysfunction."
+SET Anatomy = "substantia nigra pars compacta"
+path(HP:Neurodegeneration) decreases a(CHEBI:dopamine)
+UNSET Anatomy
+a(MESH:"Dopaminergic Neurons", loc(MESH:"Caudate Nucleus")) decreases a(CHEBI:dopamine)
+a(CHEBI:dopamine) decreases path(HP:"Resting tremor")
+a(CHEBI:dopamine) decreases path(HP:Bradykinesia)
+a(CHEBI:dopamine) decreases path(HP:Rigidity)
+a(CHEBI:dopamine) decreases path(MESH:"Gait Disorders, Neurologic")
+UNSET MeSHDisease
+
+SET Support = "Peripheral immune responses can trigger inflammation and exacerbation of CNS degeneration in several neurodegenerative diseases such as Alzheimer's disease (AD), multiple sclerosis (MS), amyotrophic lateral sclerosis (ALS), stroke, and prion-mediated diseases and particularly PD."
+SET MeSHAnatomy = "Peripheral Nervous System"
+SET MeSHDisease = {"Alzheimer Disease", "Multiple Sclerosis", "Amyotrophic Lateral Sclerosis", "Stroke", "Parkinson Disease","Prion Diseases"}
+bp(GO:"immune response") increases path(MESH:Inflammation)
+bp(GO:"immune response") increases path(HP:Neurodegeneration)
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+
+SET Support = "Although fewer activated T cells infiltrate the normal CNS than other tissues (Yeager et al. 2000), this may be owing to the low level of adhesion molecules expressed on endothelial cells under normal conditions (Hickey 2001), whereas increased expression of adhesion molecules leads to increased lymphocyte infiltration."
+SET MeSHAnatomy = "Central Nervous System"
+a(MESH:"Neural Cell Adhesion Molecules") increases a(NCIT:"Lymphocytic Infiltrate")
+UNSET MeSHAnatomy
+
+SET Support = "When cytokines such as interleukin (IL)-1 and tumor necrosis factor (TNF)-α are secreted by activated glia in the brain, or are present in circulating blood, permeability of the BBB is increased and the expression of cellular adhesion molecules (such as selectins) on microvascular endothelial cells are up-regulated (Wong et al. 1999). Activated T cells and B cells are then able to extravasate and migrate to the site of neuronal injury in increased numbers."
+SET MeSHAnatomy = "Brain"
+bp(GO:"glial cell activation") increases sec(p(HGNC:IL1A))
+bp(GO:"glial cell activation") increases sec(p(HGNC:TNF))
+p(HGNC:IL1A) decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+p(HGNC:TNF) decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+SET Cell = "endothelial cell"
+p(HGNC:IL1A) increases surf(p(GFAM:Selectins))
+p(HGNC:IL1A) increases surf(p(GFAM:Selectins))
+UNSET Cell
+surf(p(GFAM:Selectins)) increases bp(GO:"T cell extravasation")
+surf(p(GFAM:Selectins)) increases bp(FIXME:"B cell extravasation")
+surf(p(GFAM:Selectins)) increases bp(GO:"lymphocyte migration")
+bp(GO:"maintenance of permeability of blood-brain barrier") decreases bp(GO:"T cell extravasation")
+bp(GO:"maintenance of permeability of blood-brain barrier") decreases bp(FIXME:"B cell extravasation")
+bp(GO:"maintenance of permeability of blood-brain barrier") decreases bp(GO:"lymphocyte migration")
+ 
+SET Support = "Indeed, abnormalities in the BBB have been shown where T-cell infiltration occurs in neuroAIDS (Petito and Cash 1992; Petito et al. 2003), AD (Rogers et al. 1988; Togo et al. 2002; Desai et al. 2007), and PD (Farkas et al. 2000)."
+SET MeSHDisease = {"Alzheimer Disease","Parkinson Disease"}
+bp(GO:"T cell extravasation") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET MeSHAnatomy 
+UNSET MeSHDisease
+
+SET Support = "Whereas acute neuroinflammation is beneficial to regaining homeostasis and normal function of the CNS after injury or infection, chronic neuroinflammation is damaging to the CNS and may initiate or amplify neurodegeneration associated with HIV-1 encephalitis, AD, or PD."
+SET MeSHDisease = {"Alzheimer Disease","Parkinson Disease"}
+SET Disease = "viral encephalitis"
+SET MeSHAnatomy = "Central Nervous System"
+path(HP:"acute inflammation") increases bp(MESH:Homeostasis)
+path(HP:"chronic inflammation") increases path(HP:Neurodegeneration)
+UNSET MeSHAnatomy
+UNSET Disease
+UNSET MeSHDisease
+
+SET Support = "Innate immunity consists of the immune mechanisms that are encoded in the germline and are possessed at birth, and work in a 'nonspecific' manner, for immediate defense against microbial infection, notably sepsis."
+bp(GO:"innate immune response") decreases path(MESH:Sepsis)
+
+SET Support = "Cell debris and foreign matter within the CNS engage toll-like receptors (TLRs), which are expressed by microglia, astrocytes, oligodendrocytes, as well as by neurons (Lv et al. 2011; Zurolo et al. 2011). Engagement of TLRs activates signaling cascades that result in proinflammatory cytokine and chemokine production and in effects on the brain directly or indirectly through glial or BBB function."
+SET MeSHAnatomy = {"Microglia", "Astrocytes", "Neurons"}
+SET Cell = "oligodendrocyte"
+a(NCIT:"Cellular Debris") increases act(p(GFAM:"Toll like receptors"))
+act(p(GFAM:"Toll like receptors")) increases bp(GO:"cytokine production involved in inflammatory response")
+act(p(GFAM:"Toll like receptors")) increases bp(GO:"chemokine production")
+UNSET MeSHAnatomy
+UNSET Cell
+
+SET Support = "Central to the innate immune network are microglia (Perry 2011). They secrete both anti- and proinflammatory cytokines and chemokines together with other factors that regulate not only adaptive immunity, but also neural function and neural homeostasis."
+bp(GO:"microglial cell activation involved in immune response") increases sec(a(MESH:Cytokines))
+bp(GO:"microglial cell activation involved in immune response") increases sec(a(MESH:Chemokines))
+a(MESH:Chemokines) regulates bp(GO:"adaptive immune response")
+a(MESH:Cytokines) regulates bp(GO:"adaptive immune response")
+a(MESH:Chemokines) regulates bp(GO:"neuron cellular homeostasis")
+a(MESH:Cytokines) regulates  bp(GO:"neuron cellular homeostasis")
+
+SET Support = "Moreover, COX-2 is present as increased levels of TRAF family member-associated NFκB activator (TANK) and NFKB1 in the SN, and IL-15, RANTES, and IL-10 levels are significantly elevated in brains and peripheral circulation in PD patients ."
+SET MeSHAnatomy = "Substantia Nigra"
+path(DO:"Parkinson's disease") pos p(HGNC:PTGS2)
+path(DO:"Parkinson's disease") pos p(HGNC:TANK)
+path(DO:"Parkinson's disease") pos p(HGNC:NFKB1)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Brain"
+path(DO:"Parkinson's disease") pos p(HGNC:IL15)
+path(DO:"Parkinson's disease") pos p(HGNC:CCL5)
+path(DO:"Parkinson's disease") pos p(HGNC:IL10)
+path(DO:"Parkinson's disease") pos p(HGNC:PTGS2)
+UNSET MeSHAnatomy
+
+SET Support = "Furthermore, innate immunity regulates lymphocyte infiltration into the CNS. Cytokines, such as IL-1β and TNF-α, secreted by activated glia or endothelial cells increase BBB permeability (Desai et al. 2007), and the expression of cellular adhesion molecules (such as E-selectin) on microvascular endothelial cells are up-regulated (Wong et al. 1999), together increase permeability of the BBB and increase homing, extravasation, and activation of lymphocytes."
+SET MeSHAnatomy = "Central Nervous System"
+bp(GO:"innate immune response") regulates bp(GO:"cellular extravasation")
+bp(GO:"glial cell activation") increases sec(p(HGNC:IL1B))
+bp(GO:"glial cell activation") increases sec(p(HGNC:TNF))
+bp(GO:"endothelial cell activation") increases sec(p(HGNC:IL1B))
+bp(GO:"endothelial cell activation") increases sec(p(HGNC:TNF))
+p(HGNC:IL1B) decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+p(HGNC:TNF) decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+SET Cell = "brain microvascular endothelial cell"
+p(HGNC:IL1B) increases surf(p(HGNC:SELE))
+p(HGNC:TNF) increases surf(p(HGNC:SELE))
+UNSET Cell
+a(MESH:"Cell Adhesion Molecules")increases bp(GO:"lymphocyte migration into lymphoid organs")
+a(MESH:"Cell Adhesion Molecules")increases bp(GO:"cellular extravasation")
+a(MESH:"Cell Adhesion Molecules")increases bp(GO:"lymphocyte activation")
+UNSET MeSHAnatomy
+
+SET Support = "Of the antiinflammatory cytokines produced by T cells, macrophages, and microglia, TGF-β modulates injurious responses to the brain (Finch et al. 1993) and suppresses proinflammatory microglia and T-cell responses, and as such may represent a neuroprotective host response."
+a(MESH:"T-Lymphocytes") increases bp(GO:"cytokine production involved in inflammatory response")
+a(MESH:Macrophages) increases bp(GO:"cytokine production involved in inflammatory response")
+a(MESH:Microglia) increases bp(GO:"cytokine production involved in inflammatory response")
+bp(GO:"cytokine production involved in inflammatory response") increases p(HGNC:TGFB1)
+p(HGNC:TGFB1) regulates bp(FIXME:"response to brain injury")
+p(HGNC:TGFB1) decreases bp(GO:"microglial cell activation")
+p(HGNC:TGFB1) decreases bp(GO:"T cell activation")
+p(HGNC:TGFB1) increases bp(MESH:Neuroprotection)
+
+SET Support = "However, TGF-β released from the damaged brain microvasculature contributes to inflammation by increasing expression of endothelial IL-1β and TNF-α."
+SET MeSHAnatomy = "Brain"
+p(HGNC:TGFB1) increases p(HGNC:IL1B)
+p(HGNC:TGFB1) increases p(HGNC:TNF)
+UNSET MeSHAnatomy
+
+SET Support = "The engagement of TLRs leads to translocation of nuclear factor-κ light-chain enhancer of activated B cells (NF-κB) and AP-1 to the nucleus where they induce transcription of a broad range of innate immune proteins."
+p(GFAM:"Toll like receptors") increases tloc(complex(GO:"NF-kappaB complex"), fromLoc(GO:cytoplasm), toLoc(GO:nucleus))
+complex(GO:"NF-kappaB complex") regulates bp(GO:"innate immune response")
+
+SET Support = "Once activated, microglia secrete both neurotrophic and neurotoxic factors (Zhang and Fedoroff 1996; Glezer et al. 2007); proinflammatory cytokines including IL-1α, IL-1β, and TNF-α (Giulian et al. 1986; Sawada et al. 1989); and neurotrophins including nerve growth factor (NGF) and neurotrophin 3 (NT-3)."
+bp(GO:"microglial cell activation") increases  p(HGNC:IL1A)
+bp(GO:"microglial cell activation") increases  p(HGNC:IL1B)
+bp(GO:"microglial cell activation") increases  p(HGNC:TNF)
+bp(GO:"microglial cell activation") increases p(HGNC:NGF)
+bp(GO:"microglial cell activation") increases p(HGNC:NT3)
+bp(GO:"microglial cell activation") increases sec(p(GFAM:Neurotrophins))
+p(HGNC:NGF) isA p(GFAM:Neurotrophins)
+p(HGNC:NT3) isA p(GFAM:Neurotrophins)
+
+SET Support = "However, during chronic inflammation, the neurotoxic effects of microglia are proposed to eventually out-compete the neurotrophic effects, thus increasing neurodegeneration."
+path(HP:"chronic inflammation") increases bp(GO:"microglial cell activation")
+bp(GO:"microglial cell activation") increases path(FIXME:Neurotoxicity)
+path(FIXME:Neurotoxicity) increases path(HP:Neurodegeneration)
+
+SET Support = "Evidence abounds for the involvement of misfolded proteins in the pathology of neurodegenerative diseases, as well as in the activation of microglia and antigen-presenting cells (APCs) that function to induce the adaptive immune arm."
+bp(GO:"response to misfolded protein") increases path(HP:Neurodegeneration)
+bp(GO:"response to misfolded protein") increases bp(GO:"microglial cell activation")
+bp(GO:"response to misfolded protein") increases bp(GO:"antigen processing and presentation")
+bp(GO:"microglial cell activation") increases bp(GO:"adaptive immune response")
+bp(GO:"antigen processing and presentation") increases bp(GO:"adaptive immune response")
+
+SET Support = "In PD, LBs are associated with activated microglia and dopaminergic neuronal death. LBs are comprised mostly of α-syn, ubiquitin, and neurofilament (Goldman et al. 1983; Spillantini et al. 1997, 1998; Jellinger 2007) and posttranslationally modified forms of α-syn have an increased propensity to aggregate."
+SET MeSHDisease = "Parkinson Disease"
+a(MESH:"Lewy Bodies") association bp(GO:"microglial cell activation")
+a(MESH:"Lewy Bodies") decreases a(MESH:"Dopaminergic Neurons")
+
+SET Support = "These α-syn species are created by ubiquitination (Shimura et al. 2001), phosphorylation (Fujiwara et al. 2002), or oxidation and nitration (Giasson et al. 2000), and are found in LB inclusions, extraneuronally in PD brains (Lee 2008), and in the periphery of PD patients."
+SET MeSHAnatomy = "Brain"
+p(HGNC:SNCA, pmod(Ub)) increases bp(GO:"Lewy body formation")
+p(HGNC:SNCA, pmod(Ph)) increases bp(GO:"Lewy body formation")
+p(HGNC:SNCA, pmod(GO:"protein oxidation")) increases bp(GO:"Lewy body formation")
+p(HGNC:SNCA, pmod(FIXME:"protein nitration")) increases bp(GO:"Lewy body formation")
+UNSET MeSHAnatomy
+
+SET Support = "Abnormal species of α-syn found in PD patients are also present in LBs of other synucleinopathy-affected brains, including AD and multiple-system atrophy (MSA)."
+path(DO:synucleinopathy) pos path(DO:"Alzheimer's disease")
+path(DO:synucleinopathy) pos path(DO:"Parkinson's disease")
+path(DO:synucleinopathy) pos path(DO:"multiple system atrophy")
+
+SET Support = "Although most cases of PD have no family history of disease, point mutations in the gene encoding α-syn (SNCA; OMIM 163890) are linked to autosomal-dominant parkinsonism (PARK1, OMIM 168601) (Polymeropoulos et al. 1996, 1997; Kruger et al. 1998; Zarranz et al. 2004), as are duplications and triplications of the SNCA gene (PARK4, OMIM 605543) (Singleton et al. 2003; Chartier-Harlin et al. 2004), all of which present increased aggregation of α-syn."
+SET Disease = "Parkinson's disease 1"
+p(HGNC:SNCA, var("?")) increases path(DO:"Parkinson's disease")
+p(HGNC:SNCA, var("?")) increases bp(FIXME:"alpha-synuclein aggregation")
+UNSET Species
+
+SET Support = "Furthermore, reactive oxygen species produced by activated microglia increases nitration of α-syn and neuronal cell death (Shavali et al. 2006); and in turn, immune T cells that recognize nitrated α-syn (N-α-syn) enhance the neurotoxic activities of microglia in the acute 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine (MPTP) mouse model of nigrostriatal degeneration . Activated T cells and B cells are then able to enter the CNS more readily and migrate to the site of neuronal injury."
+bp(GO:"microglial cell activation") increases a(CHEBI:"reactive oxygen species")
+a(CHEBI:"reactive oxygen species") increases p(HGNC:SNCA, pmod(FIXME:"protein nitration"))
+a(CHEBI:"reactive oxygen species") increases bp(GO:"neuron death")
+SET Chemical_Treatment = "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine"
+SET Species = "10090"
+complex(a(MESH:"T-Lymphocytes"), p(MGI:Snca, pmod(FIXME:"protein nitration"))) increases bp(GO:"microglial cell activation")
+bp(GO:"microglial cell activation") increases path(FIXME:Neurotoxicity)
+UNSET Chemical_Treatment
+UNSET Species
+SET Species ="9606"
+SET MeSHAnatomy = "Central Nervous System"
+path(FIXME:Neurotoxicity) increases bp(GO:"B cell chemotaxis")
+path(FIXME:Neurotoxicity) increases bp(GO:"T cell chemotaxis")
+UNSET MeSHAnatomy
+UNSET Disease
+
+SET Support = "Indeed, increased BBB permeability is found in both AD and PD, allowing for increased lymphocytic ingress."
+SET MeSHDisease = {"Alzheimer Disease", "Parkinson Disease"}
+bp(GO:"maintenance of permeability of blood-brain barrier") neg bp(FIXME:"lymphocyte infiltration")
+UNSET MeSHDisease
+
+SET Support = "Indeed, aberrant species of disease-specific proteins, including phosphorylated α-syn, are present in tissues outside the CNS in PD patients."
+SET MeSHDisease = "Parkinson Disease"
+path(DO:"Parkinson's disease") pos p(HGNC:SNCA, pmod(Ph)) 
+
+SET Support = "The occurrence of these aberrant forms of α-syn in the periphery, such as the gastrointestinal tract and draining cervical lymph nodes, presents a possible means for exposure to the protein and subsequent activation of the adaptive immune system."
+SET MeSHAnatomy = "Gastrointestinal Tract"
+SET Anatomy = "cervical lymph node"
+p(HGNC:SNCA, pmod(FIXME:"protein misfolding")) increases bp(GO:"adaptive immune response")
+UNSET MeSHAnatomy
+UNSET Anatomy
+
+SET Support = "Since 1988, when McGeer and colleagues found HLA-DR-positive (activated) microglia phagocytosing-free neuromelanin in post mortem PD SN (McGeer et al. 1988a), activated microglial consistently have been observed in PD patients, whereas others have shown higher expression levels of polymorphic major histocompatibility complex (MHC) class II (MHC II) molecules, HLA-DR and HLA-DQ, expressed by monocytes in the CSF and peripheral blood of PD patients compared with controls."
+bp(GO:"microglial cell activation") increases deg(a(MESH:neuromelanin))
+path(DO:"Parkinson's disease") pos bp(GO:"microglial cell activation") 
+SET MeSHAnatomy = {"Cerebrospinal Fluid", "Blood"}
+SET Cell = "T cell"
+complex(GO:"MHC class II protein complex") pos path(DO:"Parkinson's disease")
+a(MESH:"HLA-DR Antigens") pos path(DO:"Parkinson's disease")
+a(MESH:"HLA-DQ Antigens") pos path(DO:"Parkinson's disease")
+UNSET MeSHAnatomy
+UNSET Cell
+
+SET Support = "More recently, genome-wide association studies (GWASs) of PD patients (Hamza et al. 2010; Saiki et al. 2010; Nalls et al. 2011; Puschmann et al. 2011; Simon-Sanchez et al. 2011), including a meta-analysis of the GWASs (Nalls et al. 2011), verified an increased relative risk for PD and expression of HLA-DR or HLA-DQ MHC II molecules, leading to the designation of HLA-DRA as PARK18."
+a(MESH:"HLA-DR Antigens") pos path(DO:"Parkinson's disease")
+a(MESH:"HLA-DQ Antigens") pos path(DO:"Parkinson's disease")
+
+SET Support = "Increased susceptibility to PD owing to MHC II molecules could reflect increased neuroinflammation associated with up-regulation of those molecules or alternatively, could represent immune responses to self- or weak nonself-antigens."
+complex(GO:"MHC class II protein complex") increases path(ADO:neuroinflammation)
+path(ADO:neuroinflammation) increases bp(GO:"immune response")
+complex(GO:"MHC class II protein complex") pos path(DO:"Parkinson's disease")
+
+SET Support = "Activated microglia and monocytes in PD brains and CFS secrete proinflammatory and neurotoxic cytokines and chemokines that disrupt the BBB and attract lymphocytes to the site of neuronal injury."
+SET MeSHAnatomy = {"Cerebrospinal Fluid", "Brain"}
+bp(GO:"microglial cell activation") increases sec(a(MESH:Cytokines))
+bp(GO:"monocyte activation") increases sec(a(MESH:Chemokines))
+sec(a(MESH:Cytokines)) decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+sec(a(MESH:Chemokines)) decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+bp(GO:"maintenance of permeability of blood-brain barrier") neg bp(GO:"lymphocyte chemotaxis")
+UNSET MeSHAnatomy
+
+SET Support = "Indeed, levels of IL-1β, IL-6, and TNF-α are elevated in the CFS of PD patients (Blum-Degen et al. 1995; Gonzalez-Scarano and Baltuch 1999), and intercellular adhesion molecule-1 (ICAM-1)-positive glia are also increased in the SN of PD brains."
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"Parkinson's disease") pos p(HGNC:IL1B)
+path(DO:"Parkinson's disease") pos p(HGNC:IL6)
+path(DO:"Parkinson's disease") pos p(HGNC:TNF)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Substantia Nigra"
+SET Cell = "glial cell"
+path(DO:"Parkinson's disease") pos bp(GO:"inflammatory response")
+UNSET MeSHAnatomy
+UNSET Cell
+
+SET Support = "Aberrant posttranslational modifications of α-syn, such as nitration (N-α-syn), can be found in LB inclusions of PD brains (Giasson et al. 2000) and cause the protein to aggregate more readily."
+p(HGNC:SNCA, pmod(FIXME:"protein nitration")) increases bp(GO:"Lewy body formation")
+p(HGNC:SNCA, pmod(FIXME:"protein nitration")) increases p(HGNC:SNCA, pmod(FIXME:"protein misfolding"))
+UNSET Species
+
+SET Support = "Aggregated α-syn activates microglia (Zhang et al. 2005), which have been shown to produce nitric oxide and superoxide in mice and inducible nitric oxide synthase (iNOS) in humans, which increases nitration of α-syn and perpetuates the proinflammatory innate immune response in PD."
+SET Species = "10090"
+bp(FIXME:"alpha-synuclein aggregation") increases bp(GO:"microglial cell activation")
+bp(GO:"microglial cell activation") increases a(CHEBI:"nitric oxide")
+bp(GO:"microglial cell activation") increases a(CHEBI:superoxide)
+UNSET Species
+SET Species = "9606"
+bp(GO:"microglial cell activation") increases p(HGNC:NOS2)
+p(HGNC:NOS2) increases p(HGNC:SNCA, pmod(FIXME:"protein nitration"))
+p(HGNC:SNCA, pmod(FIXME:"protein nitration")) increases bp(GO:"innate immune response")
+
+UNSET Species
+SET Support = "Nitrated α-syn in turn amplifies activation of microglia and antigen-presenting cells that correspondingly up-regulate both humoral and cell-mediated responses to nitrated α-syn in the MPTP model."
+SET Species = "10090"
+SET Chemical_Treatment = "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine"
+p(HGNC:SNCA, pmod(FIXME:"protein nitration")) increases bp(GO:"microglial cell activation")
+p(HGNC:SNCA, pmod(FIXME:"protein nitration")) increases act(a(MESH:"Antigen-Presenting Cells"))
+bp(GO:"microglial cell activation") increases bp(GO:"humoral immune response")
+act(a(MESH:"Antigen-Presenting Cells")) increases bp(GO:"leukocyte mediated immunity")
+UNSET Chemical_Treatment
+UNSET Species
+
+SET Support = "In addition to a variety of antibodies directed against globally expressed tissue antigens such as heat shock protein (HSP)-65 and HSP-70 (Fiszer et al. 1996), PD patients also show brain-associated autoantibodies including those directed against, GM1, S100B, glial fibrillar acidic protein (GFAP), NGF, neurofilament, myelin basic protein, tau, Aβ, and neuronal calcium channels, as well as α-syn and its modified and fibriliary forms."
+path(DO:"Parkinson's disease") pos p(HGNC:S100B)
+path(DO:"Parkinson's disease") pos p(HGNC:GFAP)
+path(DO:"Parkinson's disease") pos p(HGNC:NGF)
+path(DO:"Parkinson's disease") pos a(GO:neurofilament)
+path(DO:"Parkinson's disease") pos p(HGNC:MAPT)
+path(DO:"Parkinson's disease") pos a(MESH:"Myelin Basic Protein")
+path(DO:"Parkinson's disease") pos a(CHEBI:"amyloid-beta")
+path(DO:"Parkinson's disease") pos p(HGNC:SNCA)
+
+SET Support = "Immunohistochemical staining of tissues from idiopathic and familial PD patients show dopaminergic neurons within the SN bind IgG, but not IgM, whereas tissues from age-matched controls and nonnigral control tissues show no detectable bound immunoglobulins ."
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = "Substantia Nigra"
+path(DO:"Parkinson's disease") increases complex(a(MESH:"Dopaminergic Neurons"), complex(GO:"IgG immunoglobulin complex"))
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "In one study, IgG reacted with 30% of the dopaminergic neurons within the nigra, and yielded positive correlations with numbers of MHC II+ and CD64+ (FcγRI) reactive microglia, yet yielded a negative correlation with disease duration."
+SET MeSHAnatomy = "Substantia Nigra"
+complex(a(MESH:"Dopaminergic Neurons"), complex(GO:"IgG immunoglobulin complex")) pos a(CELL:"mature microglial cell")
+complex(a(MESH:"Dopaminergic Neurons"), complex(GO:"IgG immunoglobulin complex")) neg path(DO:"Parkinson's disease")
+UNSET MeSHAnatomy
+
+SET Support = "In PD patients, approximately 4% of the pigmented neurons contained Lewy bodies and all pigmented, Lewy body-containing neurons showed detectable IgG and α-syn within inclusions."
+SET MeSHAnatomy = "Neurons"
+path(DO:"Parkinson's disease") pos a(MESH:"Lewy Bodies")
+path(DO:"Parkinson's disease") pos complex(GO:"IgG immunoglobulin complex")
+path(DO:"Parkinson's disease") pos p(HGNC:SNCA)
+UNSET MeSHAnatomy
+
+SET Support = "This pattern of antibody reactivity was consistent with activated microglia and destruction of dopaminergic neurons in PD."
+bp(MESH:"Antigen-Antibody Reactions") pos a(CELL:"mature microglial cell")
+bp(MESH:"Antigen-Antibody Reactions") pos deg(a(MESH:"Dopaminergic Neurons"))
+
+SET Support = "Of interest, deletion of the FcγR by genetic ablation inhibits microglial activation and dopaminergic cell death in animal models of PD."
+SET MeSHAnatomy = "Dopaminergic Neurons"
+p(HGNC:FCGR1A) increases bp(GO:"microglial cell activation")
+p(HGNC:FCGR1A) increases bp(GO:"cell death")
+UNSET MeSHAnatomy
+
+SET Support = "Moreover, levels of antibodies to α-syn and catecholamine-derived melanin (neuromelanin) are increased in PD patients with antineuromelanin immunoglobulin binding shown to be more active in early disease."
+path(DO:"Parkinson's disease") pos p(HGNC:SNCA)
+path(DO:"Parkinson's disease") pos a(MESH:neuromelanin)
+
+SET Support = "Opsonization of cells or damaged neurons with antibody, targets the cells for phagocytosis and degradation by phagocytic macrophages, and also can activate the complement system, a major mediator of immune/inflammatory reactions."
+SET MeSHAnatomy = "Neurons"
+bp(GO:opsonization) increases bp(GO:phagocytosis)
+bp(GO:opsonization) increases bp(GO:"complement activation")
+bp(GO:"complement activation") increases bp(GO:"immune response")
+bp(GO:"complement activation") increases bp(GO:"inflammatory response")
+UNSET MeSHAnatomy
+
+SET Support = "Microglia are the only cells within the SN that express the initial recognition component of complement, C1q."
+complex(a(MESH:Microglia), p(GFAM:"C1q domain containing"))
+
+SET Support = "Moreover, compared with controls, PD patients show increased areas of C1q-opsonized extracellular depositions of neuromelanin within the parenchyma, and C1q-expressing phagocytic microglia surround those areas, as well as cells around the luminal surfaces of the vasculature that express neuromelanin and C1q, suggesting a role for antiself antibodies and C1q-mediated clearing pathways in PD."
+path(DO:"Parkinson's disease") pos complex(a(MESH:neuromelanin), p(GFAM:"C1q domain containing"))
+SET Cell= "mature microglial cell"
+path(DO:"Parkinson's disease") pos surf(p(GFAM:"C1q domain containing"))
+UNSET Cell
+
+SET Support = "Early autopsy evidence within the SN of PD patients showed increased numbers of CD8+ T cells in close proximity to activated microglia and degenerating neurons."
+SET Specimen = "post mortem specimen"
+SET MeSHAnatomy = "Substantia Nigra"
+path(DO:"Parkinson's disease") increases a(MESH:"CD8-Positive T-Lymphocytes")
+UNSET Specimen
+UNSET MeSHAnatomy
+
+SET Support = "More recently, both CD4+ and CD8+ T cells have been discovered within the SN of PD patients."
+SET Species = "9606"
+SET MeSHAnatomy = "Substantia Nigra"
+path(DO:"Parkinson's disease") increases a(MESH:"CD4-Positive T-Lymphocytes")
+path(DO:"Parkinson's disease") increases a(MESH:"CD8-Positive T-Lymphocytes")
+UNSET MeSHAnatomy
+
+SET Support = "Peripheral immune aberrations, particularly in lymphocyte subsets, are abundant in PD patients. Total numbers of lymphocytes have been shown to be diminished by 17%, whereas CD19+ B cells are diminished as much as 35% and CD3+ T cells are diminished by 22%. Among CD3+ T cells, numbers of CD4+ T cells have been shown to be diminished by 31%, whereas numbers of CD8+ T cells are not significantly changed."
+path(DO:"Parkinson's disease") decreases bp(MESH:"Lymphocyte Count")
+path(DO:"Parkinson's disease") decreases a(CELL:"B cell, CD19-positive")
+path(DO:"Parkinson's disease") increases path(HP:"Decreased proportion of CD3-positive T cells")
+path(DO:"Parkinson's disease") decreases a(MESH:"CD4-Positive T-Lymphocytes")
+
+SET Support = "A greater loss of naive helper CD4+ T cells (CD45RA+) and either unchanged or increased levels of effector/memory helper T-cell subset (CD29+ or CD45R0+) have also been observed."
+path(DO:"Parkinson's disease") neg a(NCIT:"CD4 Positive Naive T-Lymphocyte")
+path(DO:"Parkinson's disease") increases a(CELL:"memory T cell")
+path(DO:"Parkinson's disease") cnc a(CELL:"memory T cell")
+UNSET MeSHDisease
+
+SET Support = "Selective loss of CD4+CD45RA+ cells are also detected in other neuoropathological-associated disorders such as MS and Down's syndrome, suggesting a common immunological abnormality in neurological disorders."
+SET MeSHDisease = {"Multiple Sclerosis", "Down Syndrome"}
+path(DO:"multiple sclerosis") decreases a(NCIT:"CD4 Positive Naive T-Lymphocyte")
+path(DO:"Down syndrome") decreases a(NCIT:"CD4 Positive Naive T-Lymphocyte")
+UNSET MeSHDisease
+
+SET Support = "Increased frequencies of activated CD4+ T cells expressing Fas (Hisanaga et al. 2001) and increased IFN-γ-producing Th1 cells, decreased IL-4-producing Th2 cells, and a decrease in CD4+CD25+ T cells have been found in the peripheral blood of PD patients (Baba et al. 2005), whereas circulating IL-15, RANTES, and IL-10 are significantly elevated in PD patients compared with controls."
+SET MeSHDisease = "Parkinson Disease"
+SET MeSHAnatomy = "Blood"
+path(DO:"Parkinson's disease") increases a(MESH:"CD4-Positive T-Lymphocytes")
+p(HGNC:FAS) association a(MESH:"CD4-Positive T-Lymphocytes")
+path(DO:"Parkinson's disease") increases a(MESH:"Th1 Cells")
+a(MESH:"Th1 Cells") association sec(p(HGNC:IFNG))
+path(DO:"Parkinson's disease") increases a(MESH:"Th2 Cells")
+a(MESH:"Th2 Cells") association sec(p(HGNC:IL4))
+path(DO:"Parkinson's disease") decreases a(CELL:"CD4-positive, CD25-positive, alpha-beta regulatory T cell")
+path(DO:"Parkinson's disease") pos p(HGNC:IL15)
+path(DO:"Parkinson's disease") pos p(HGNC:CCL5)
+path(DO:"Parkinson's disease") pos p(HGNC:IL10)
+UNSET MeSHAnatomy
+
+SET Support = "Evidence of increased mutual coexpression of CD4 and CD8 by CD45R0+ T cells, increased expression of CD25 (α chain of the high-affinity IL-2 receptor) and TNF-α receptors, and diminished expression of IFN-γ receptors suggest that these T-cell subsets from PD patients are indeed activated."
+bp(GO:"T cell activation") increases p(HGNC:IL2RA)
+bp(GO:"T cell activation") increases p(HGNC:TNFRSF1A)
+bp(GO:"T cell activation") decreases p(HGNC:IFNG)
+
+SET Support = "In addition to T cells that express α and β chains of the T-cell receptor (TCRαβ+ T cells), elevated frequencies of T-cell populations expressing γ and δ chains of the T-cell receptor (TCRγδ+T cells) also have been found in the CSF of PD patients (Fiszer et al. 1994b) and are thought to play a regulatory role in CNS inflammation."
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"Parkinson's disease") pos a(CELL:"gamma-delta T cell")
+path(DO:"Parkinson's disease") pos a(CELL:"alpha-beta T cell")
+
+SET Support = "Moreover, a large proportion of the TCRγδ+ T cells also express CD25, suggesting these CSF-obtained T cells are preferentially activated in PD patients."
+a(CELL:"gamma-delta T cell") association surf(p(HGNC:IL2RA))
+bp(GO:"T cell activation") increases complex(GO:"alpha-beta T cell receptor complex")
+UNSET  MeSHAnatomy
+UNSET Species
+
+SET Support = "Indeed, in MPTP-intoxicated mice, α-syn drains to cervical lymph nodes where it activates antigen-presenting cells and T cells."
+SET Species = "10090"
+SET Anatomy = "cervical lymph node"
+SET Chemical_Treatment = "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine"
+p(MGI:Snca) increases bp(GO:"T cell activation")
+p(MGI:Snca) increases bp(GO:"antigen processing and presentation")
+UNSET Species
+UNSET Anatomy
+UNSET Chemical_Treatment
+
+SET Support = "An influx of α-syn-specific Th1 or Th17 effector T cells into the brain during PD could increase the inflammatory phenotype and neurotoxic response of microglia near dopaminergic neurons by increasing the concentration of proinflammatory molecules in the SN."
+SET Species = "9606"
+SET MeSHAnatomy = "Substantia Nigra"
+bp(GO:"T-helper 1 cell extravasation") increases bp(GO:"inflammatory response")
+bp(GO:"T-helper 17 cell extravasation") increases bp(GO:"inflammatory response")
+bp(GO:"T-helper 1 cell extravasation") increases path(FIXME:Neurotoxicity)
+bp(GO:"T-helper 17 cell extravasation") increases path(FIXME:Neurotoxicity)
+UNSET MeSHAnatomy
+
+SET Support = "Thus, Treg have the capacity to keep the disorder in check during the asymptomatic phase, whereas Teff can accelerate disease progression."
+a(MESH:"T-Lymphocytes, Regulatory") decreases path(DO:"Parkinson's disease")
+a(CELL:"effector T cell") increases path(DO:"Parkinson's disease")
+UNSET Species
+
+SET Support = "Treg are an important subset of CD4+ T cells that are known to maintain self-tolerance, prevent autoimmunity, and regulate immune homeostasis by attenuating excessive inflammation caused by pathogens or injury. They are identified by the expression of CD4 and CD25 cell-surface markers and by the transcription factor forkhead box P3 (FoxP3) in mice (Hall et al. 1990; Fontenot et al. 2003; Hori et al. 2003), and the expression of FOXP3, CD4, CD25, CD39, CD49d, and a lack of CD127 in human."
+a(MESH:"T-Lymphocytes, Regulatory") decreases bp(MESH:Autoimmunity)
+a(MESH:"T-Lymphocytes, Regulatory") regulates bp(GO:"leukocyte homeostasis")
+a(MESH:"T-Lymphocytes, Regulatory") decreases bp(GO:"inflammatory response")
+SET Species = "10090"
+a(MESH:"T-Lymphocytes, Regulatory") association surf(p(MGI:Cd4))
+a(MESH:"T-Lymphocytes, Regulatory") association surf(p(MGI:Il2ra))
+a(MESH:"T-Lymphocytes, Regulatory") association p(MGI:Foxp3)
+UNSET Species
+SET Species = "9606"
+a(MESH:"T-Lymphocytes, Regulatory") association p(HGNC:FOXP3)
+a(MESH:"T-Lymphocytes, Regulatory") association surf(p(HGNC:CD4))
+a(MESH:"T-Lymphocytes, Regulatory") association surf(p(HGNC:IL2RA))
+a(MESH:"T-Lymphocytes, Regulatory") association surf(p(HGNC:ENTPD1))
+a(MESH:"T-Lymphocytes, Regulatory") association surf(p(HGNC:ITGA4))
+
+SET Support = "For example, TGF-β, IL-2, IL-10, and all-trans retinoic acid are known to polarize T cells to iTreg (Zheng et al. 2007, 2008; Khattar et al. 2009; Lee et al. 2009b), whereas histone deacetylase inhibitors are known to increase proliferation and suppressor activity of Treg."
+p(GFAM:"Transforming growth factor beta family") increases a(EFO:"induced T-regulatory cell")
+p(HGNC:IL2) increases a(EFO:"induced T-regulatory cell")
+p(HGNC:IL10) increases a(EFO:"induced T-regulatory cell")
+a(CHEBI:"all-trans-retinoic acid") increases a(EFO:"induced T-regulatory cell")
+a(MESH:"Histone Deacetylase Inhibitors") increases a(MESH:"T-Lymphocytes, Regulatory")
+a(MESH:"Histone Deacetylase Inhibitors") increases bp(FIXME:"suppressor activity of regulatory T cell")
+
+SET Support = "In vitro studies have shown that Treg can suppress Teff responses via cell-to-cell contact (Cederbom et al. 2000) and soluble factors."
+a(MESH:"T-Lymphocytes, Regulatory") decreases bp(FIXME: "effector T cell response")
+
+SET Support = "Treg can also inhibit the adaptive immune system indirectly by suppressing antigen presentation by APCs."
+a(MESH:"T-Lymphocytes, Regulatory") decreases bp(GO:"T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell")
+bp(GO:"T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell") increases bp(GO:"adaptive immune response")
+
+SET Support = " In the brain, Treg promote neurotrophic support by inducing astrocytes to increase expression of brain-derived neurotrophic factor (BDNF) and glial cell-derived neurotrophic factor (GDNF) (Benner et al. 2004; Reynolds et al. 2007), and may promote glutamate clearance."
+SET MeSHAnatomy = {"Brain", "Astrocytes"}
+a(MESH:"T-Lymphocytes, Regulatory") increases bp(GO:"astrocyte activation")
+a(MESH:"T-Lymphocytes, Regulatory") increases p(HGNC:BDNF)
+a(MESH:"T-Lymphocytes, Regulatory") increases p(HGNC:GDNF)
+UNSET MeSHDisease
+
+SET Support = "Dysfunctional and reduced frequencies of Treg are associated with several autoimmune diseases (Costantino et al. 2008), including multiple MS (Venken et al. 2008; Fletcher et al. 2009; Royal et al. 2009; Koen 2010), type 1 diabetes (Glisic et al. 2009), inflammatory skin disorders (Fujimura et al. 2008), autoimmune myasthenia gravis (Mu et al. 2009), and rheumatoid arthritis (Cao et al. 2003) as well as chronic inflammatory diseases such as systemic lupus erythematosus (Horwitz 2008; Venigalla et al. 2008; Barreto et al. 2009), asthma (Xue et al. 2007), inflammatory bowel disease (Bourreau et al. 2009), and immune dysregulation polyendocrinopathy enteropathy X-linked (IPEX) syndrome, which is caused by a genetic mutation in the transcription factor FOXP3."
+
+path(DO:"multiple sclerosis") decreases a(MESH:"T-Lymphocytes, Regulatory")
+path(DO:"type 1 diabetes mellitus") decreases a(MESH:"T-Lymphocytes, Regulatory")
+path(HP:"Inflammatory abnormality of the skin") decreases a(MESH:"T-Lymphocytes, Regulatory")
+path(DO:"myasthenia gravis") decreases a(MESH:"T-Lymphocytes, Regulatory")
+path(DO:"rheumatoid arthritis") decreases a(MESH:"T-Lymphocytes, Regulatory")
+path(DO:"systemic lupus erythematosus") decreases a(MESH:"T-Lymphocytes, Regulatory")
+path(DO:"inflammatory bowel disease") decreases a(MESH:"T-Lymphocytes, Regulatory")
+path(DO:"immune dysregulation-polyendocrinopathy-enteropathy-X-linked syndrome") decreases a(MESH:"T-Lymphocytes, Regulatory")
+g(HGNC:FOXP3, var("?")) increases path(DO:"immune dysregulation-polyendocrinopathy-enteropathy-X-linked syndrome")
+UNSET Species
+
+SET Support = "Adoptive transfer of activated CD4+CD25+ Treg to HIV-1 encephalitic mice is neuroprotective."
+SET Species = "10090"
+SET Mouse_Type = "HIV-1 encephalitic mice"
+SET Technique = "Adoptive Transfer"
+a(CELL:"CD4-positive, CD25-positive, alpha-beta regulatory T cell") increases bp(MESH:Neuroprotection)
+
+SET Support = "This study showed that adoptively transferred Treg attenuated microgliosis and astrogliosis, increased expression of BDNF and GDNF expression, and down-regulated proinflammatory cytokines, oxidative stress, and viral replication, whereas effector CD4+ T cells were not therapeutic."
+a(NCIT:"CD4+ CD25+ Regulatory T Cells") decreases path(MESH:Gliosis)
+a(NCIT:"CD4+ CD25+ Regulatory T Cells") decreases a(NCIT:Microgliosis)
+a(NCIT:"CD4+ CD25+ Regulatory T Cells") increases p(MGI:Bdnf)
+a(NCIT:"CD4+ CD25+ Regulatory T Cells") increases p(MGI:Gdnf)
+a(NCIT:"CD4+ CD25+ Regulatory T Cells") decreases bp(GO:"cytokine production involved in inflammatory response")
+a(NCIT:"CD4+ CD25+ Regulatory T Cells") decreases bp(MESH:"Oxidative Stress")
+a(NCIT:"CD4+ CD25+ Regulatory T Cells") decreases bp(GO:"viral genome replication")
+UNSET Mouse_Type
+UNSET Species
+UNSET Technique
+
+SET Support = "Treg inhibit release of viral particles from HIV-1-infected human mononuclear phagocytes (MP), kill infected cells, and induce phenotypic changes in MP."
+SET MeSHDisease = "HIV Infections"
+SET Cell = "mononuclear phagocyte"
+a(MESH:"T-Lymphocytes, Regulatory") decreases bp(GO:"viral release from host cell")
+a(MESH:"T-Lymphocytes, Regulatory") increases bp(GO:"cell death")
+
+SET Support = "Up-regulation of the antiviral ubiquitin-like protein, interferon-stimulated gene 15 (ISG15) was concordant with the decrease in viral release from MP , and implicating caspase-3 and granzyme/perforin pathways in MP killing. Finally, it was shown that Treg induce the phenotypic switch of MP from the neurotoxic MI phenotype to the more neurotrophic M2 phenotype with the down-regulation of iNOS and up-regulation of arginase 1."
+
+p(HGNC:ISG15) neg bp(GO:"viral release from host cell")
+act(p(HGNC:CASP3)) increases bp(GO:"cell death")
+bp(GO:"granzyme-mediated apoptotic signaling pathway") increases bp(GO:"cell death")
+a(MESH:"T-Lymphocytes, Regulatory") decreases path(FIXME:Neurotoxicity)
+a(MESH:"T-Lymphocytes, Regulatory") decreases p(HGNC:NOS2)
+a(MESH:"T-Lymphocytes, Regulatory") decreases p(HGNC:ARG1)
+UNSET MeSHDisease
+UNSET Cell
+
+SET Support = "In the MPTP mouse model, Treg control microglia function by suppressing reactive oxygen species production and NFκB activation via mechanisms that modulate redox enzymes, cell migration, and phagocytosis ."
+SET Species = "10090"
+SET Chemical_Treatment = "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine"
+a(MESH:"T-Lymphocytes, Regulatory") regulates bp(GO:"microglial cell activation")
+a(MESH:"T-Lymphocytes, Regulatory") decreases a(CHEBI:"reactive oxygen species")
+a(MESH:"T-Lymphocytes, Regulatory") decreases act(complex(GO:"NF-kappaB complex"))
+a(MESH:"T-Lymphocytes, Regulatory") regulates bp(GO:"cell redox homeostasis")
+a(MESH:"T-Lymphocytes, Regulatory") regulates bp(GO:"cell migration")
+a(MESH:"T-Lymphocytes, Regulatory") regulates bp(GO:phagocytosis)
+UNSET Species
+UNSET Chemical_Treatment
+
+SET Support = "Furthermore, the adoptive transfer of Treg leads to >90% protection of dopaminergic neurons within the nigrostriatal system, whereas adoptive transfer of Th1 or Th17 Teff exacerbate neuronal degeneration and cotransfer of Treg with Th1 or Th17 increases the protective effect."
+SET Technique = "Adoptive Transfer"
+SET MeSHAnatomy = "Substantia Nigra"
+a(MESH:"T-Lymphocytes, Regulatory") increases bp(MESH:Neuroprotection)
+a(MESH:"Th17 Cells") increases path(HP:Neurodegeneration)
+a(MESH:"Th1 Cells") increases path(HP:Neurodegeneration)
+a(CELL:"effector T cell") increases path(HP:Neurodegeneration)
+composite(a(MESH:"T-Lymphocytes, Regulatory"),a(MESH:"Th17 Cells"))increases bp(MESH:Neuroprotection)
+composite(a(MESH:"T-Lymphocytes, Regulatory"),a(MESH:"Th1 Cells")) increases bp(MESH:Neuroprotection)
+UNSET Technique
+UNSET MeSHAnatomy
+
+SET Support = "During disease, dopaminergic neurons accumulate α-synuclein together with other misfolded proteins seen as intracellular Lewy body inclusions."
+SET MeSHDisease = "Parkinson Disease"
+SET MeSHAnatomy = "Dopaminergic Neurons"
+path(DO:"Parkinson's disease") pos bp(FIXME:"alpha-synuclein aggregation")
+path(DO:"Parkinson's disease") pos a(MESH:"Lewy Bodies")
+
+SET Support = "In an attempt to clear and digest cellular debris, microglia and blood-borne macrophages infiltrate sites of neuronal injury and death and convert to a proinflammatory activated state."
+bp(GO:"neuron death") increases bp(GO:"macrophage chemotaxis")
+bp(GO:"neuron death") increases bp(GO:"microglial cell migration")
+bp(GO:"macrophage chemotaxis") decreases bp(GO:"inflammatory response")
+bp(GO:"microglial cell migration") decreases bp(GO:"inflammatory response")
+
+SET Support = "Misfolded and modified α-synuclein species draining from these sites also have the capability to activate antigen-presenting cells in peripheral lymphoid tissues inducing effector neurotoxic T-cell responses. This normally serves to facilitate debris clearance and repair functions."
+SET MeSHAnatomy = "Lymphoid Tissue"
+p(HGNC:SNCA, pmod(FIXME:"protein misfolding")) increases bp(GO: "antigen processing and presentation")
+bp(GO: "antigen processing and presentation") increases bp(GO:"adaptive immune effector response")
+bp(GO:"adaptive immune effector response") decreases a(NCIT:"Cellular Debris")
+UNSET MeSHAnatomy
+
+SET Support = "Nonetheless, as disease becomes more robust, activated microglia are seen in abundant numbers removed from proximate areas of neuronal death."
+path(DO:"Parkinson's disease") pos bp(GO:"microglial cell activation")
+
+SET Support = "Once modified protein species enters the peripheral lymphoid tissues, activate antigen-presenting cells, and are presented as neoepitopes, adaptive immune responses are induced."
+p(HGNC:SNCA, pmod(FIXME:"protein misfolding")) increases bp(MESH:"Antigen Presentation")
+bp(MESH:"Antigen Presentation") increases bp(GO:"adaptive immune response")
+
+SET Support = "As disease evolves, these responses emerge from a well-regulated neuroprotective state to loss of regulatory function and disease."
+path(DO:"Parkinson's disease") decreases bp(MESH:Neuroprotection)
+
+UNSET MeSHDisease
+UNSET Citation
+

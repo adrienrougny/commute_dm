@@ -1,0 +1,185 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "37283933.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"microhemorrhagic foci", "CD163 positive macrophage", "siderophage"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20190128.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Technique AS LIST {"magnetic resonance imaging", "hematoxylin staining", "autopsy", "hematoxylin-eosin staining", "biopsy"}
+DEFINE ANNOTATION Custom_anatomy AS LIST {"first temporal gyrus", "second temporal gyrus"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Free Neuropathol. 2023 Feb 10:4:4-1. doi: 10.17879/freeneuropathology-2023-4584.", "37283933"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+
+SET Species = "9606"
+
+SET Support = "As mentioned previously, radiological findings shared common features in the cases for whom MRI was available (Fig. 1, a-p). The same was true for neuropathology."
+SET MeSHAnatomy = "Brain"
+SET Technique = "magnetic resonance imaging"
+path(DO:"COVID-19") -> path(MESH:"Cerebral Small Vessel Diseases")
+path(DO:"COVID-19") -> path(FIXME:"microhemorrhagic foci")
+UNSET Technique
+UNSET MeSHAnatomy
+       
+SET Support = "In the biopsy samples, multiple well-delineated foci of CD163 positive macrophages were observed in the white matter (Fig. 1. q, t, u, v)."
+SET MeSHAnatomy = {"Brain", "White Matter"}
+SET Technique = {"magnetic resonance imaging", "biopsy"}
+path(DO:"COVID-19") -> a(FIXME:"CD163 positive macrophage", loc(MESH:"White Matter"))
+UNSET Technique
+UNSET MeSHAnatomy
+
+
+
+SET Support = "In the foci, numerous and large axonal swellings were seen and white matter was vacuolized (Fig. 1. x). "
+SET MeSHAnatomy = {"Brain", "Axons"}
+SET Technique = "magnetic resonance imaging"
+path(DO:"COVID-19") -> path(DO:"neuroaxonal dystrophy")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "White Matter"
+path(DO:"COVID-19") -> a(NCIT:Spongiosis)
+UNSET MeSHAnatomy
+
+
+SET Support = "At the periphery of the lesions, apoptotic nuclei and occasional glial nuclear alterations, reminiscent of Creutzfeldt-Peters cells, were seen (Fig. 1. y)."
+path(DO:"COVID-19") -> bp(GO:"nuclear fragmentation involved in apoptotic nuclear change")
+path(DO:"COVID-19") -> bp(GO:"glial cell apoptotic process")
+UNSET Technique
+
+SET Support = "Some recent blood extravasation (Fig. 1. r) and a few siderophages were observed."
+SET MeSHAnatomy = "Brain"
+SET Technique = "hematoxylin staining"
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+path(DO:"COVID-19") -> a(FIXME:siderophage)
+UNSET Technique
+UNSET MeSHAnatomy
+
+SET Support = "Macroscopic examination of the three autopsied brains was characterized by multiple hemorrhages scattered in the deep and subcortical white matter. In case # 4 these were predominant in the supramarginal gyrus, first and second temporal gyri, where they were particularly numerous, and also in the pons and cerebellum. There was a 4 mm hemorrhage in the left occipital pole."
+SET MeSHAnatomy = {"Brain", "White Matter", "Pons", "Cerebellum"}
+SET Anatomy = "supramarginal gyrus" 
+SET Custom_anatomy = {"first temporal gyrus", "second temporal gyrus"}
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+UNSET Anatomy
+UNSET MeSHAnatomy
+UNSET Custom_anatomy
+
+SET Support = "In cases # 5 and # 6 the hemorrhages were predominant in the frontal lobe with additional bleeds in the striatum (case # 5) and in the pons (case # 6)."
+SET MeSHAnatomy = {"Frontal Lobe", "Pons"}
+SET Anatomy = "striatum"
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+UNSET MeSHAnatomy
+UNSET Anatomy
+
+SET Support = "The most conspicuous lesions were small foci rich in CD163 positive macrophages centered by a small caliber arteriole (Fig. 2. a, b, c) associated with swollen axons and vacuolization of the surrounding white matter (Fig. 2. d, e)."
+SET Technique = "hematoxylin-eosin staining"
+SET MeSHAnatomy = "Axons"
+path(DO:"COVID-19") -> a(FIXME:"CD163 positive macrophage")
+path(DO:"COVID-19") -> path(DO:"neuroaxonal dystrophy")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = {"Brain", "White Matter"}
+path(DO:"COVID-19") -> a(NCIT:Spongiosis)
+UNSET MeSHAnatomy
+
+SET Support = "Compared to biopsy cases, perivascular bleeding was more frequent and of different age (Fig. 2. f, g)."
+SET Anatomy = "perivascular space"
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+
+SET Support = "Fibrinogen and IgG IHC were positive in the lesions, evidencing blood-brain barrier leakage (Fig. 2. h)."
+path(DO:"COVID-19") -| bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET Anatomy
+UNSET Technique
+
+
+
+SET Support = "Aβ IHC was negative indicating absence of amyloid angiopathy. In summary, the lesions of the white matter can be described as CCM."
+SET MeSHAnatomy = "White Matter"
+SET BioAssay = "immunohistochemistry"
+path(DO:"COVID-19") -> path(MESH:"Cerebral Small Vessel Diseases")
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "However at a short distance from the hemorrhagic foci, both antibodies labelled numerous inclusions in endothelial cells of apparently spared vessels (Fig. 3. a, b). "
+path(DO:"COVID-19") -> p(UNIPROT:P0DTC2, loc(MESH:"Endothelial Cells"))
+path(DO:"COVID-19") -> p(UNIPROT:P0DTC9, loc(MESH:"Endothelial Cells"))
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Citation

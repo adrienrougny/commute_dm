@@ -163,3 +163,7 @@ cython_debug/
 credentials.py
 plans/
 poubelle/
+
+# ARCHS4 expression matrix: a 58 GB download cache, never versioned
+data/archs4/
+*.h5

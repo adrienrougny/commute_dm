@@ -1,0 +1,447 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "32622375.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"acute vestibular syndrome", "oscillopsia","Muscle injury", "Cerebral venous sinus thrombosis", "Bickerstaff brainstem encephalitis","hemorrhagic stroke"}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION Specimen AS LIST {"cerebrospinal fluid specimen", "post-mortem specimen"}
+DEFINE ANNOTATION TimeLine AS LIST {"3 week", "9 days"}
+DEFINE ANNOTATION Age_Group AS LIST {"24–78 years","children"}
+DEFINE ANNOTATION Age AS LIST {"40 years"}
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+
+##################################################################################
+# Statements #
+##################################################################################
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Lancet Neurol. 2020 Sep;19(9):767-783. doi: 10.1016/S1474-4422(20)30221-0. Epub 2020 Jul 2.", "32622375"}
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+SET Support = "Encephalopathy has been reported for 93 patients in total, including 16 (7%) of 214 hospitalised patients with COVID-19 in Wuhan, China, and 40 (69%) of 58 patients in intensive care with COVID-19 in France."
+SET Disease = "COVID-19"
+SET Species = "9606"
+path(DO:"COVID-19") increases path(HP:Encephalopathy)
+
+SET Support = "Encephalitis has been described in eight patients to date, and Guillain-Barré syndrome in 19 patients."
+path(DO:"COVID-19") increases path(DO:encephalitis)
+path(DO:"COVID-19") increases path(DO:"Guillain-Barre syndrome")
+
+SET Support = "Unexpectedly, acute cerebrovascular disease is also emerging as an important complication, with cohort studies reporting stroke in 2–6% of patients hospitalised with COVID-19. So far, 96 patients with stroke have been described, who frequently had vascular events in the context of a pro-inflammatory hypercoagulable state with elevated C-reactive protein, D-dimer, and ferritin."
+path(DO:"COVID-19") increases path(DO:"cerebrovascular disease")
+path(DO:"COVID-19") increases p(HGNC:CRP)
+path(DO:"COVID-19") increases a(MESH:"fibrin fragment D")
+path(DO:"COVID-19") increases a(CHEBI:Ferritin)
+
+SET Support = "As of May 19, 2020, the COVID-19 pandemic, caused by the novel coronavirus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), has resulted in more than 4·8 million confirmed cases worldwide and more than 300000 deaths."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(DO:"COVID-19")
+path(DO:"COVID-19") increases path(MESH:Death)
+
+SET Support = "Although the most common and important presentation is with respiratory disease, reports of neurological features are increasing."
+path(DO:"COVID-19") increases path(DO:"respiratory system disease")
+path(DO:"COVID-19") increases path(HP:"Abnormality of the nervous system")
+
+SET Support = "Both CNS and PNS disease were reported following SARS (appendix pp 2–3). SARS-CoV was detected in CSF by RT-PCR in two of three cases of encephalopathy with seizures,6, 7 and was cultured from brain tissue at autopsy in the third."
+path(DO:"severe acute respiratory syndrome") increases path(DO:"central nervous system disease")
+path(DO:"severe acute respiratory syndrome") increases path(DO:"peripheral nervous system disease")
+a(TAX:"Severe acute respiratory syndrome coronavirus") increases path(HP:Encephalopathy)
+a(TAX:"Severe acute respiratory syndrome coronavirus") increases path(MESH:Seizures)
+
+SET Support = "Four patients with severe SARS developed neuromuscular disease, predominantly motor neuropathy, myopathy, or both,9 which might have been SARS-specific or secondary to critical illness."
+path(DO:"severe acute respiratory syndrome") increases path(DO:"neuromuscular disease")
+path(DO:"severe acute respiratory syndrome") increases path(DO:"motor peripheral neuropathy")
+path(DO:"severe acute respiratory syndrome") increases path(DO:myopathy)
+
+SET Support = "CNS involvement was described for five adults with MERS; two had acute disseminated encephalomyelitis, two had cerebrovascular disease, and one had Bickerstaff's brainstem encephalitis. Neuropathy was described in three patients."
+path(DO:"Middle East respiratory syndrome") increases path(DO:"central nervous system disease")
+path(DO:"Middle East respiratory syndrome") increases path(DO:"acute disseminated encephalomyelitis")
+path(DO:"Middle East respiratory syndrome") increases path(DO:"cerebrovascular disease")
+path(DO:"Middle East respiratory syndrome") increases path(FIXME:"Bickerstaff brainstem encephalitis")
+path(DO:"Middle East respiratory syndrome") increases path(DO:neuropathy)
+UNSET Disease
+SET Support = "Human coronavirus OC43, a seasonal coronavirus, has caused encephalitis in an infant with severe combined immunodeficiency,14 and acute disseminated encephalomyelitis in an older immunocompetent child."
+SET Disease = "severe combined immunodeficiency"
+a(TAX:"Human coronavirus OC43") increases path(DO:encephalitis)
+UNSET Disease
+a(TAX:"Human coronavirus OC43") increases path(DO:"acute disseminated encephalomyelitis")
+
+SET Support = "Headache, neck stiffness, and seizures were described among 22 children (median age 36 months; range 0·8–72 months) with suspected CNS infection and coronavirus IgM antibodies in their serum, CSF, or both."
+a(TAX:"Human coronavirus OC43") increases path(HP:Headache)
+a(TAX:"Human coronavirus OC43") increases path(HP:"Stiff neck")
+a(TAX:"Human coronavirus OC43") increases path(MESH:Seizures)
+SET MeSHAnatomy = {"Serum", "Cerebrospinal Fluid"}
+a(TAX:"Human coronavirus OC43") increases complex(GO:"IgM immunoglobulin complex")
+UNSET MeSHAnatomy
+
+SET Support = "Ten of these children had pleiocytosis and eight had brain imaging abnormalities. All 22 made a full recovery."
+a(TAX:"Human coronavirus OC43") increases path(HP:"CSF lymphocytic pleiocytosis")
+a(TAX:"Human coronavirus OC43")increases path(HP:"Abnormality of brain morphology")
+
+SET Support = "Neurological complications have also been described for other respiratory viruses, particularly seasonal and pandemic influenza.3 These complications include acute necrotising encephalopathy (associated with mutations in the RANBP2 gene), acute infantile encephalopathy, and acute haemorrhagic leukoencephalopathy and myelopathy in adults."
+path(DO:influenza) increases path(HP:Encephalopathy)
+p(HGNC:RANBP2,var("?")) association path(HP:Encephalopathy)
+path(DO:influenza) increases path(HP:"Infantile encephalopathy")
+path(DO:influenza) increases path(HP:Leukoencephalopathy)
+path(DO:influenza) increases path(HP:Myelopathy)
+
+SET Support = "In one national registry of 125 patients with COVID-19 and neurological or psychiatric disease reported over a 3-week period,25 39 (31%) patients had altered mental status, which included 16 (13%) with encephalopathy (of whom seven [6%] had encephalitis), and 23 (18%) with a neuropsychiatric diagnosis, including ten (8%) with psychosis, six (5%) with neurocognitive (dementia-like) syndrome, and four (3%) with an affective disorder."
+SET Disease = "COVID-19"
+SET TimeLine = "3 week"
+path(DO:"COVID-19") increases path(MESH:"Mental Disorders")
+path(DO:"COVID-19")increases path(HP:Encephalopathy)
+path(DO:"COVID-19") increases path(DO:encephalitis)
+path(DO:"COVID-19") increases path(HP:Psychosis)
+path(DO:"COVID-19") increases path(MESH:"Neurocognitive Disorders")
+path(DO:"COVID-19") increases path(MESH:"Affective Disorders, Psychotic")
+UNSET TimeLine
+
+SET Support = "Notably, 77 (62%) patients had a cerebrovascular event: 57 (46%) ischaemic strokes, nine (7%) intracerebral haemorrhages, one (<1%) CNS vasculitis, and ten (8%) other cerebrovascular events."
+path(DO:"COVID-19") increases path(MESH:"Cerebrovascular Disorders")
+path(DO:"COVID-19") increases path(HP:"Ischemic stroke")
+path(DO:"COVID-19") increases path(EFO:"intracerebral hemorrhage")
+path(DO:"COVID-19") increases path(DO:"central nervous system vasculitis")
+
+SET Support = "Encephalitis is the inflammation of the brain parenchyma, usually caused by an infection or the body's immune defences."
+SET MeSHAnatomy = {"Brain", "Parenchymal Tissue"}
+path(DO:"Coronavirus infection") increases bp(GO:"immune response")
+bp(GO:"immune response") increases bp(GO:"inflammatory response")
+bp(GO:"inflammatory response") increases path(DO:encephalitis)
+
+SET Support = "As of May 19, 2020, eight adults aged 24–78 years (median 62 [IQR 40–70]), including four women, have been described with encephalitis associated with COVID-19,mostly diagnosed through a nasal or nasopharyngeal swab."
+SET Age_Group = "24–78 years"
+path(DO:"COVID-19") increases path(DO:encephalitis)
+UNSET Age_Group
+
+SET Support = "Two patients had fever only, with no respiratory features.The neurological manifestations were typical for encephalitis, with irritability, confusion, and reduced consciousness, sometimes associated with seizures; three patients also had neck stiffness31, 58, 59 and another had psychotic symptoms."
+path(DO:"COVID-19") increases path(MESH:Fever)
+path(DO:"COVID-19") increases path(DO:encephalitis)
+path(DO:"COVID-19") increases path(HP:Irritability)
+path(DO:"COVID-19") increases path(MESH:Confusion)
+path(DO:"COVID-19") increases path(HP:"Reduced consciousness/confusion")
+path(DO:"COVID-19") increases path(MESH:Seizures)
+path(DO:"COVID-19") increases path(HP:"Stiff neck")
+path(DO:"COVID-19") increases path(HP:Psychosis)
+
+SET Support = "A man aged 40 years developed ataxia, oscillopsia, hiccups, and bilateral facial weakness."
+SET Age = "40 years"
+path(DO:"COVID-19") increases path(MESH:Ataxia)
+path(DO:"COVID-19") increases path(HP:"Abnormality of vision")
+path(DO:"COVID-19") increases path(MESH:Hiccup)
+path(DO:"COVID-19") increases path(HP:"Weakness of facial musculature")
+UNSET Age
+
+SET Support = "CSF analysis was reported for six patients; it showed a pleiocytosis in five, mostly lymphocytic, and was normal in one patient."
+SET Specimen = "cerebrospinal fluid specimen"
+path(DO:"COVID-19") increases path(HP:"CSF lymphocytic pleiocytosis")
+UNSET Specimen
+
+SET Support = "Brain imaging was normal or had no acute changes for six patients, and showed high signal intensity in two, including temporal lobe changes in one (figure 2A, B );31 the patient with ataxia had a cerebellar lesion that extended into the spinal cord."
+SET BioAssay = "imaging method"
+SET MeSHAnatomy = "Temporal Lobe"
+path(DO:"COVID-19") increases path(HP:"Abnormality of brain morphology")
+UNSET MeSHAnatomy
+SET MeSHDisease = "Ataxia"
+SET MeSHAnatomy = "Spinal Cord"
+path(DO:"COVID-19") increases path(HP:"Abnormal morphology of the cerebellar cortex")
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+UNSET BioAssay
+
+SET Support = "The largest study to date,36 from Wuhan, China, retrospectively described 214 patients with COVID-19, of whom 53 (25%) had CNS symptoms, including dizziness (36 [17%] patients), headache (28 [13%]), and impaired consciousness (16 [7%])."
+path(DO:"COVID-19") increases path(MESH:Dizziness)
+path(DO:"COVID-19") increases path(HP:Headache)
+path(DO:"COVID-19") increases path(HP:"Reduced consciousness/confusion")
+UNSET Disease
+
+SET Support = "27 (51%) of the patients with CNS symptoms had severe respiratory disease, but there was little further detail."
+SET Disease = {"central nervous system disease", "COVID-19"}
+path(DO:"COVID-19") increases path(DO:"respiratory system disease")
+UNSET Disease
+
+SET Support = "In a French series of 58 intensive care patients with COVID-19,35 49 (84%) had neurological complications, including 40 (69%) with encephalopathy and 39 (67%) with corticospinal tract signs."
+SET Disease = "COVID-19"
+path(DO:"COVID-19") increases path(HP:Encephalopathy)
+path(DO:"COVID-19") increases path(HP:"Abnormality of the corticospinal tract")
+
+SET Support = "MRI in 13 patients showed leptomeningeal enhancement for eight and acute ischaemic change for two; CSF examination for seven patients showed no pleiocytosis."
+SET BioAssay = "imaging method"
+path(DO:"COVID-19") increases path(HP:"Leptomeningeal enhancement")
+path(DO:"COVID-19") increases path(DO:ischemia)
+UNSET BioAssay
+
+SET Support = "Additionally, some case reports have appeared, including a woman with encephalopathy with imaging changes consistent with acute necrotising encephalopathy (figure 2C, D)37 and a fatal case in which viral particles were found in endothelial cells and neural tissue, although there was no indication of whether this was associated with inflammation."
+path(DO:"COVID-19") increases path(HP:Encephalopathy)
+path(DO:"COVID-19") increases a(TAX:"Severe acute respiratory syndrome coronavirus 2", loc(MESH:"Endothelial Cells")) 
+
+SET Support = "Several reports have described seizures in children with SARS-CoV-2 infection."
+SET Age_Group = "children"
+path(DO:"COVID-19") increases path(MESH:Seizures)
+UNSET Age_Group
+
+SET Support = "Acute disseminated encephalomyelitis is a syndrome of multifocal demyelination, typically occurring weeks after an infection, which generally presents with focal neurological symptoms, often with encephalopathy."
+path(DO:"COVID-19") increases path(DO:"acute disseminated encephalomyelitis")
+path(DO:"acute disseminated encephalomyelitis") pos a(NCIT:Demyelination)
+path(DO:"acute disseminated encephalomyelitis") increases a(NCIT:"Neurological Signs and Symptoms")
+path(DO:"acute disseminated encephalomyelitis") increases path(HP:Encephalopathy)
+
+SET Support = "Two case reports, describe middle-aged women with acute disseminated encephalomyelitis and SARS-CoV-2 detected on respiratory swabs. One developed dysphagia, dysarthria, and encephalopathy 9 days after the onset of headache and myalgia (figure 1).41 The other presented with seizures and reduced consciousness, and required intubation for respiratory failure."
+SET Gender = "Female"
+path(DO:"COVID-19") increases path(DO:"acute disseminated encephalomyelitis")
+SET TimeLine = "9 days"
+path(DO:"COVID-19") increases path(HP:Dysphagia)
+path(DO:"COVID-19") increases path(HP:Dysarthria)
+path(DO:"COVID-19") increases path(HP:Encephalopathy)
+UNSET TimeLine 
+path(DO:"COVID-19") increases path(HP:Headache)
+path(DO:"COVID-19") increases path(MESH:Myalgia)
+path(DO:"COVID-19") increases path(HP:"Reduced consciousness/confusion")
+path(DO:"COVID-19") increases path(MESH:Seizures)
+path(DO:"COVID-19") increases path(DO:"respiratory failure")
+UNSET Gender
+
+SET Support = "Both patients had normal CSF and high signal intensities on MRI, typical of acute disseminated encephalomyelitis."
+SET BioAssay = "imaging method"
+path(DO:"acute disseminated encephalomyelitis") increases path(HP:"Abnormality of brain morphology")
+UNSET BioAssay 
+
+SET Support = "To date, a single report exists of myelitis (inflammation of the spinal cord; appendix p 8) associated with COVID-19. A man aged 66 years in Wuhan, China, developed fever, fatigue, and then acute flaccid paraparesis with incontinence."
+path(DO:"COVID-19") increases path(DO:myelitis)
+path(DO:"COVID-19") increases path(MESH:Fever)
+path(DO:"COVID-19") increases path(MESH:Fatigue)
+path(DO:"COVID-19") increases path(MESH:Paraparesis)
+
+SET Support = "Examination showed hyporeflexia and a sensory level at T10. He was treated with dexamethasone and intravenous immunoglobulin, and was discharged for rehabilitation."
+path(DO:"COVID-19") increases path(HP:Hyporeflexia)
+a(CHEBI:dexamethasone) decreases path(DO:"COVID-19")
+a(NCIT:"Intravenous Immunoglobulin Therapy") decreases path(DO:"COVID-19")
+
+SET Support = "Acute disseminated encephalomyelitis and myelitis, usually considered post-infectious diseases, are treated typically with corticosteroids or other immunotherapies."
+path(DO:"COVID-19") increases path(DO:"acute disseminated encephalomyelitis")
+path(DO:"COVID-19") increases path(DO:myelitis)
+a(CHEBI:corticosteroid) decreases path(DO:"acute disseminated encephalomyelitis")
+a(MESH:Immunotherapy) decreases path(DO:myelitis)
+a(CHEBI:corticosteroid) decreases path(DO:"acute disseminated encephalomyelitis")
+a(MESH:Immunotherapy) decreases path(DO:myelitis)
+
+SET Support = "Guillain-Barré syndrome is an acute polyradiculopathy characterised by rapidly progressive, symmetrical limb weakness, areflexia on examination, sensory symptoms, and, in some patients, facial weakness, although several variants exist (appendix p 9)."
+path(DO:"Guillain-Barre syndrome") increases path(HP:"Limb muscle weakness")
+path(DO:"Guillain-Barre syndrome") increases path(HP:Areflexia)
+path(DO:"Guillain-Barre syndrome") increases path(HP:"Abnormality of central sensory function")
+path(DO:"Guillain-Barre syndrome") increases path(HP:"Weakness of facial musculature")
+
+SET Support = "Neurological symptoms started at a median of 7 days (range −7 to 24) after respiratory or systemic features (figure 1), although two patients developed febrile illness 7 days after the onset of Guillain-Barré syndrome;45, 68 on hospital admission, one had a positive swab for SARS-CoV-2 and the other had lymphocytopenia and thrombocytopenia, which are characteristic for SARS-CoV-2 infection."
+path(DO:"COVID-19") increases a(NCIT:"Neurological Signs and Symptoms")
+path(DO:"Guillain-Barre syndrome") increases path(MESH:Fever)
+path(DO:"COVID-19") increases path(DO:lymphopenia)
+path(DO:"COVID-19") increases path(DO:thrombocytopenia)
+
+SET Support = "Three patients had diarrhoea before the onset of neurological disease."
+path(DO:"COVID-19") increases path(DO:diarrhea)
+path(DO:"COVID-19") increases a(NCIT:"Neurological Signs and Symptoms")
+
+SET Support = "11 patients had Guillain-Barré syndrome with weakness of all four limbs with or without sensory loss,43, 44, 45, 69, 70, 71, 72, 73, 74 three had a paraparetic variant with leg weakness only,44, 68, 75 and one had lower limb paraesthesia."
+path(DO:"COVID-19") increases path(DO:"Guillain-Barre syndrome")
+path(DO:"Guillain-Barre syndrome") increases path(HP:"Limb muscle weakness")
+path(DO:"Guillain-Barre syndrome") increases path(HP:"Abnormality of central sensory function")
+
+SET Support = "Four of these patients had facial nerve involvement, five had dysphagia, and eight developed respiratory failure. Three had autonomic complications, one with hypertension and two with sphincter dysfunction. Electrophysiological studies were done in 12 patients and were consistent with demyelinating disease in eight and axonal disease in four patients."
+path(DO:"COVID-19") increases a(NCIT:"Facial Nerve Disorder")
+path(DO:"COVID-19") increases path(HP:Dysphagia)
+path(DO:"COVID-19") increases path(DO:"respiratory failure")
+path(DO:"COVID-19") increases path(DO:"autonomic nervous system disease")
+path(DO:"COVID-19") increases path(DO:hypertension)
+path(DO:"COVID-19") increases path(MESH:"Sphincter of Oddi Dysfunction")
+path(DO:"COVID-19") increases a(NCIT:Demyelination)
+path(DO:"COVID-19") increases path(DO:"axonal neuropathy")
+
+SET Support = "Two patients had the Miller Fisher variant of Guillain-Barré syndrome, with ophthalmoplegia, ataxia, and areflexia;46, 47 one also had loss of smell and taste, and was positive for anti-GD1b-IgG. One patient had bilateral and one patient unilateral abducens palsy,46, 47 and another had an acute vestibular syndrome with horizontal nystagmus and oscillopsia."
+path(DO:"COVID-19") increases path(DO:"Guillain-Barre syndrome") 
+path(DO:"COVID-19") increases path(DO:ophthalmoplegia)
+path(DO:"COVID-19") increases path(MESH:Ataxia)
+path(DO:"COVID-19") increases path(HP:Areflexia)
+path(DO:"COVID-19") pos a(MESH:"ganglioside, GD1b")
+path(DO:"COVID-19") increases path(HP:Anosmia)
+path(DO:"COVID-19") increases path(MESH:Ageusia)
+path(DO:"COVID-19") increases path(MESH:"Abducens Palsy")
+path(DO:"COVID-19") increases path(FIXME:"acute vestibular syndrome")
+path(DO:"COVID-19") increases path(MESH:"Nystagmus, Pathologic")
+path(DO:"COVID-19") increases path(FIXME:oscillopsia)
+
+SET Support = "Muscle injury associated with raised creatine kinase affected 23 (11%) of 214 patients in the Wuhan series. Rhabdomyolysis due to COVID-19 has also been reported."
+path(DO:"COVID-19") increases act(complex(GO:"creatine kinase complex"))
+act(complex(GO:"creatine kinase complex")) increases path(FIXME:"Muscle injury")
+path(DO:"COVID-19") increases path(MESH:Rhabdomyolysis)
+
+SET Support = "Loss of smell (anosmia) and taste (ageusia) have emerged as common symptoms of COVID-19, either with other features or in isolation, suggesting that they might be useful diagnostic markers."
+path(DO:"COVID-19") increases path(HP:Anosmia)
+path(DO:"COVID-19") increases path(MESH:Ageusia)
+
+SET Support = "In a European study,50 olfactory dysfunction was reported for 357 (86%) of 417 COVID-19 patients; 342 (82%) reported gustatory disorders."
+path(DO:"COVID-19") increases path(DO:"olfactory nerve disease")
+path(DO:"COVID-19") increases path(MESH:"Taste Disorders")
+
+SET Support = "Cerebrovascular manifestations were reported for 13 (6%) of 221 COVID-19 patients in an early retrospective case series from Wuhan:53 11 (5%) patients developed ischaemic stroke, one (<1%) had intracerebral haemorrhage, and one (<1%) had cerebral venous sinus thrombosis."
+path(DO:"COVID-19") increases path(HP:"Ischemic stroke")
+path(DO:"COVID-19") increases path(MESH:"Cerebral Hemorrhage")
+path(DO:"COVID-19") increases path(FIXME:"Cerebral venous sinus thrombosis")
+
+SET Support = "In total, 88 patients with ischaemic stroke and eight with haemorrhagic stroke53, 54, 56, 77, 93 have been reported, 18 (19%) of whom died."
+path(DO:"COVID-19") increases path(HP:"Ischemic stroke")
+path(DO:"COVID-19") increases path(FIXME:"hemorrhagic stroke")
+
+SET Support = "In two patients, ischaemic stroke has been associated with thrombus in the aorta,95, 96 and indeed multiple infarcts have been reported in these and other patients."
+path(DO:"COVID-19") increases path(HP:"Ischemic stroke")
+SET MeSHAnatomy = "Aorta"
+path(HP:"Ischemic stroke") increases path(HP:"blood clot")
+UNSET MeSHAnatomy
+path(DO:"COVID-19") increases path(MESH:Infarction)
+
+SET Support = "Concurrent deep vein thrombosis and pulmonary embolism have been found in other stroke patients."
+path(MESH:Stroke) increases a(NCIT:"Deep Vein Thrombosis")
+path(MESH:Stroke) increases path(DO:"pulmonary embolism")
+
+SET Support = "Blood D-dimer concentration was raised in many patients with COVID-19, consistent with a pro-inflammatory, coagulopathic state in the setting of critical illness.51, 52, 53, 54, 55, 77, 92, 95, 96 Positive lupus anticoagulant, anticardiolipin, and anti-β2-glycoprotein-1 antibodies have also been reported in COVID-19-associated stroke,52, 77 although these can be raised in other critical illnesses, including infections."
+path(DO:"COVID-19") increases a(MESH:"fibrin fragment D") 
+a(MESH:"fibrin fragment D") pos bp(GO:"inflammatory response")
+bp(GO:"blood coagulation") pos a(MESH:"fibrin fragment D")
+path(DO:"COVID-19") pos bp(GO:"blood coagulation") 
+
+SET Support = "Immediate anticoagulation with low-molecular-weight heparin has been recommended for patients with COVID-19, to reduce the risk of thrombotic disease."
+a(NCIT:"Low Molecular Weight Heparin") decreases path(DO:"blood coagulation disease")
+
+SET Support = "Viral entry to the brain through the olfactory bulb—the only part of the CNS not protected by dura—is one plausible route for SARS-CoV-2, especially given the anosmia in COVID-19."
+SET MeSHAnatomy = "Brain"
+a(MESH:"Olfactory Bulb") increases bp(GO:"viral entry into host cell")
+path(DO:"COVID-19") increases path(HP:Anosmia)
+UNSET MeSHAnatomy
+
+SET Support = "The angiotensin converting enzyme 2 receptor, to which SARS-CoV-2 binds for entry into cells,100 is found in brain vascular endothelium and smooth muscle."
+complex(p(HGNC:ACE2), a(TAX:"Severe acute respiratory syndrome coronavirus 2"))  increases bp(GO:"viral entry into host cell")
+
+SET Support = "Autopsy material from a patient who developed encephalopathy weeks after presenting with SARS showed oedema, neuronal necrosis, and broad gliocyte hyperplasia."
+SET Specimen = "post-mortem specimen"
+path(DO:"COVID-19") increases path(HP:Encephalopathy)
+path(HP:Encephalopathy) increases path(MESH:Edema)
+SET MeSHAnatomy = "Neurons"
+path(HP:Encephalopathy) increases path(MESH:Necrosis)
+UNSET MeSHAnatomy
+SET Cell = "glial cell"
+path(HP:Encephalopathy) increases path(MESH:Hyperplasia)
+UNSET Cell
+
+SET Support = "Immunohistochemical staining showed that SARS-CoV in the brain was associated with elevated expression of the cytokine, monokine induced by gamma interferon (known as MIG or CXCL9), and with infiltration of monocytes and macrophages plus T cells. These findings are consistent with viral CNS entry triggering the infiltration of immune cells and the release of cytokines and chemokines, which contribute to tissue damage."
+SET MeSHAnatomy = "Brain"
+SET BioAssay = "immunohistochemistry"
+a(TAX:"Severe acute respiratory syndrome coronavirus") increases bp(GO:"cytokine production")
+a(TAX:"Severe acute respiratory syndrome coronavirus") increases a(MESH:Monokines)
+p(HGNC:IFNG) increases p(HGNC:CXCL9)
+p(HGNC:CXCL9) isA a(MESH:Monokines)
+a(TAX:"Severe acute respiratory syndrome coronavirus") increases bp(GO:"lymphocyte chemotaxis")
+bp(GO:"lymphocyte chemotaxis") increases sec(a(MESH:Cytokines))
+bp(GO:"lymphocyte chemotaxis") increases sec(a(MESH:Chemokines))
+sec(a(MESH:Cytokines)) increases path(HP:Neurodegeneration)
+sec(a(MESH:Chemokines)) increases path(HP:Neurodegeneration)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "By comparison with other viruses, it would not be surprising to see immune-mediated disease, such as Guillain-Barré syndrome, and direct anterior horn cell viral damage, which causes acute flaccid myelitis, might also be expected."
+path(DO:"Guillain-Barre syndrome") increases a(NCIT:"Acute Flaccid Myelitis")
+path(HP:"Degeneration of anterior horn cells") increases a(NCIT:"Acute Flaccid Myelitis")
+
+SET Support = "SARS-CoV-2 can cause damage to endothelial cells, activating inflammatory and thrombotic pathways."
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+path(DO:"COVID-19") increases bp(GO:"blood coagulation")
+
+SET Support = "Thrombocytopenia with elevated D-dimer and C-reactive protein in severe COVID-19 and stroke are consistent with a virus-associated microangiopathic process."
+path(MESH:Stroke) increases a(MESH:"fibrin fragment D")
+path(MESH:Stroke) increases p(HGNC:CRP)
+path(MESH:Stroke) increases path(DO:thrombocytopenia)
+path(DO:"COVID-19") increases a(MESH:"fibrin fragment D")
+path(DO:"COVID-19") increases p(HGNC:CRP)
+path(DO:"COVID-19") increases path(DO:thrombocytopenia)
+
+SET Support = "Endothelial dysfunction can potentially lead to microvascular and macrovascular complications in the brain, as described systemically."
+path(EFO:"endothelial dysfunction") increases path(DO:"vascular disease")
+
+SET Support ="A vasculitis process similar to that for varicella zoster virus, in which viral replication in the cerebral arterial wall triggers local inflammation,is also plausible; endothelial infection by SARS-CoV-2 with inflammation and apoptosis of endothelial cells has been shown in kidney, heart, bowel, and lung at autopsy,but cerebral vessels have not yet been investigated."
+SET Anatomy = "cerebral artery"
+a(TAX:"Human alphaherpesvirus 3") increases bp(GO:"inflammatory response")
+UNSET Anatomy
+SET MeSHAnatomy = {"Kidney", "Heart", "Gastrointestinal Tract", "Lung"}
+SET Cell = "endothelial cell"
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+path(DO:"COVID-19") increases bp(GO:"apoptotic process")
+UNSET MeSHAnatomy
+UNSET Cell
+UNSET Disease
+UNSET Species
+UNSET Citation
+
+

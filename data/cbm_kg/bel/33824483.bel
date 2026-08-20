@@ -1,0 +1,411 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "33824483.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causlitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"CD68-positive macrophage", "hyaline thrombus","cellular damage"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Disease_Severity AS LIST {"Severe", "patients admitted to the ICU", "non-critically ill patients", "Advanced"}
+DEFINE ANNOTATION Disease_Type AS LIST {"type L", "transfusion-associated", "pneumonia-related", "patients requiring invasive mechanical ventilation", "patients hospitalized"}
+DEFINE ANNOTATION Protein_Type AS LIST {"Soluble"}
+DEFINE ANNOTATION Technique AS LIST {"computed tomography scan"}
+DEFINE ANNOTATION Cell_Type AS LIST {"Circulating"}
+DEFINE ANNOTATION Specimen AS LIST {"Bronchoalveolar Lavage Fluid"}
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Nat Rev Immunol. 2021 May;21(5):319-329. doi: 10.1038/s41577-021-00536-9.", "33824483"}
+
+
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+SET Species = "9606"
+
+SET Support = "It is now apparent that SARS-CoV-2 infection induces a prothrombotic state manifesting especially with microthrombosis3,4, as observed in patients with COVID-19 and in post-mortem samples from individuals who died after SARS-CoV-2 infection5–9."
+path(DO:"COVID-19") -> path(DO:thrombosis)     
+
+SET Support = "After approximately 7–10days of symptoms(including fever, cough, fatigue, anorexia and myalgias), a subgroup of patients progresses to severe disease and develops hypoxaemia (low oxygen levels in the blood) and dyspnoea (shortness of breath), potentially evolving towards ARDS."
+path(DO:"COVID-19") -> path(MESH:Fever)          
+path(DO:"COVID-19") -> path(MESH:Cough)
+path(DO:"COVID-19") -> path(MESH:Fatigue)
+path(DO:"COVID-19") -> path(MESH:Anorexia)
+path(DO:"COVID-19") -> path(MESH:Myalgia)
+path(DO:"COVID-19") -> path(MESH:Hypoxia)
+path(DO:"COVID-19") -> path(MESH:Dyspnea)
+
+
+SET Support = "This stage of the disease is characterized by high levels of pro-inflammatory cytokines, such as interleukin-6 (IL-6), IL-1β, IL-18 and  granulocyte–macrophage colony-stimulating factor (GM–CSF)"
+SET MeSHDisease = "Respiratory Distress Syndrome, Adult"
+path(DO:"COVID-19") pos p(HGNC:IL6)
+path(DO:"COVID-19") pos p(HGNC:IL1B)
+path(DO:"COVID-19") pos p(HGNC:IL18)
+path(DO:"COVID-19") pos p(HGNC:CSF2)
+UNSET MeSHDisease
+
+
+SET Support = "This event has been referred to as a cytokine storm18,19, although recent evidence suggests that cytokine levels in patients with COVID-19 are lower than those reported in patients with non-COVID-19 ARDS, sepsis, influenza virus infection and chimeric antigen receptor (CAR) T cell-induced cytokine release syndrome20,21. "
+path(DO:"adult respiratory distress syndrome") -> bp(GO:"cytokine production")    
+
+
+SET Support = "SARS-CoV-2 has been shown to trigger the IL-1/IL-6 pathway to a larger extent than other coronaviruses"
+path(DO:"COVID-19") -> bp(GO:"interleukin-1-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"interleukin-6-mediated signaling pathway")
+
+
+SET Support = "Through the analysis of lungs of patients who died from COVID-19-related ARDS, SARS-CoV-2 was found to activate the NLRP3 inflammasome"
+SET MeSHDisease = "Respiratory Distress Syndrome, Adult"
+SET MeSHAnatomy = "Lung"
+path(DO:"COVID-19") -> act(complex(GO:"NLRP3 inflammasome complex"))
+UNSET MeSHDisease
+UNSET MeSHAnatomy
+
+
+SET Support = "In vitro studies also showed NLRP3 inflammasome activation by SARS-CoV-2 infection of primary human monocytes."
+SET MeSHAnatomy = "Monocytes"
+path(DO:"COVID-19") -> act(complex(GO:"NLRP3 inflammasome complex"))
+UNSET MeSHAnatomy
+
+
+SET Support = "In addition, NLRP3 inflammasome products, such as IL-1β and IL-18, are increased in patients with severe COVID-19 and positively correlated with adverse clinical outcomes"
+SET Disease_Severity = "Severe"
+path(DO:"COVID-19") pos p(HGNC:IL1B)
+path(DO:"COVID-19") pos p(HGNC:IL18)
+UNSET Disease_Severity
+
+
+SET Support = "Increased levels of ferritin have also been observed among patients with COVID-19, similar to what is observed in macrophage activation syndrome"
+path(DO:"COVID-19") -> a(CHEBI:Ferritin)
+path(MESH:"Macrophage Activation Syndrome") -> a(CHEBI:Ferritin)
+
+
+SET Support = "With regard to inflammatory cells, large numbers of CD68+ macrophages were observed in the alveoli of patients who died from COVID-19-associated pneumonia, and SARS-CoV-2 proteins were detected in CD68+ alveolar macrophages"
+SET MeSHAnatomy = "Pulmonary Alveoli"     
+SET MeSHDisease = "Pneumonia"
+path(DO:"COVID-19") -> a(FIXME:"CD68-positive macrophage")
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+
+
+SET Support = "Analysis of the bronchoalveolar fluid of patients with severe or critical COVID-19 showed a higher percentage of macrophages and neutrophils and a lower proportion of myeloid dendritic cells, plasmacytoid dendritic cells and T cells than that of patients with moderate disease"
+SET Specimen = "Bronchoalveolar Lavage Fluid"
+SET Disease_Severity = "Severe"
+path(DO:"COVID-19") -> a(MESH:Macrophages)
+path(DO:"COVID-19") -> a(MESH:Neutrophils)
+path(DO:"COVID-19") -| a(CELL:"myeloid dendritic cell")
+path(DO:"COVID-19") -| a(CELL:"plasmacytoid dendritic cell")
+path(DO:"COVID-19") -| a(MESH:"T-Lymphocytes")
+
+
+SET Support = "They also had higher levels of pro-inflammatory cytokines (such as IL-6, IL-8 and IL-1β) and chemokines (such as CCL2, CCL3, CCL4 and CCL7) in the bronchoalveolar fluid"
+path(DO:"COVID-19") pos p(HGNC:IL6)     
+path(DO:"COVID-19") pos p(HGNC:CXCL8) 
+path(DO:"COVID-19") pos p(HGNC:IL1B) 
+path(DO:"COVID-19") pos p(HGNC:CCL2)     
+path(DO:"COVID-19") pos p(HGNC:CCL3) 
+path(DO:"COVID-19") pos p(HGNC:CCL7) 
+UNSET Disease_Severity
+UNSET Specimen
+
+
+SET Support = "The occurrence of a COVID-19-specific coagulopathy is suggested by elevated levels of fibrinogen, von Willebrand factor (VWF) and the fibrin degradation product D-dimer in the blood, whereas patients generally show minor or no changes in prothrombin time (a measure of time to clot), activated partial thromboplastin time (coagulation time), antithrombin levels, activated protein C levels and platelet count"
+path(DO:"COVID-19") -> complex(GO:"fibrinogen complex")
+path(DO:"COVID-19") -> p(HGNC:VWF)
+path(DO:"COVID-19") -> a(MESH:"fibrin fragment D")
+
+
+SET Support = "Indeed, DIC has been reported in a few patients, usually in the advanced stages of the disease"
+SET Disease_Severity = "Advanced"
+path(DO:"COVID-19") -> path(HP:"Disseminated intravascular coagulation")
+UNSET Disease_Severity
+
+SET Support = "Apart from a state of hypercoagulability in the lungs of patients with ARDS, a hypofibrinolytic state in the alveolar space was observed in COVID-19-related ARDS due to increased levels of fibrinolytic inhibitors"
+SET MeSHDisease = "Respiratory Distress Syndrome, Adult"
+SET MeSHAnatomy = "Pulmonary Alveoli" 
+path(DO:"COVID-19") -| bp(GO:"fibrinolysis")            
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+
+
+SET Support = "Accordingly, high levels of plasminogen activator inhibitor 1 (PAI1) were described in patients with SARS-CoV"
+path(DO:"COVID-19") pos p(HGNC:SERPINE1)
+
+SET Support = "However, the striking finding in COVID-19 compared with SARS-CoV is the more extensive viral infection within the lungs, which results in more diffuse inflammation involving the pulmonary vessels"
+SET MeSHAnatomy = {"Lung", "Blood Vessels"}
+path(DO:"COVID-19") -> bp(GO:"inflammatory response")
+
+
+SET Support = "SARS-CoV-2 directly infects vascular endothelial cells and leads to cellular damage and apoptosis, thus decreasing the antithrombotic activity of the normal endothelium7,55."
+SET MeSHAnatomy = "Endothelial Cells"
+path(DO:"COVID-19") -> path(FIXME:"cellular damage")
+path(DO:"COVID-19") -> bp(GO:"apoptotic process")
+path(DO:"COVID-19") -> path(DO:thrombosis)
+UNSET MeSHAnatomy
+
+SET Support = "Alveolar damage, vessel wall oedema, hyaline thrombi, microhaemorrhage and diffuse thrombosis of peripheral small vessels have emerged as key features of COVID-19 contributing to respiratory failure6,8,46 (Fig. 2)."
+SET MeSHAnatomy = "Pulmonary Alveoli"
+path(DO:"COVID-19") -> a(NCIT:"Tissue Damage") 
+UNSET MeSHAnatomy
+SET MeSHAnatomy = {"Pulmonary Alveoli", "Blood Vessels"}                      
+path(DO:"COVID-19") -> path(DO:"pulmonary edema")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Pulmonary Alveoli"
+path(DO:"COVID-19") -> a(FIXME:"hyaline thrombus")
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+path(DO:"COVID-19") -> path(DO:thrombosis)
+path(DO:"COVID-19") -> path(DO:"respiratory failure")
+UNSET MeSHAnatomy
+
+
+SET Support = "Endothelial cells of lung blood vessels can be activated by the high levels of pro-inflammatory cytokines (IL-1, IL-6 and TNF) and ferritin in severe COVID-19 (ref.60)."         
+SET Disease_Severity = "Severe"
+SET MeSHAnatomy = {"Lung", "Endothelial Cells", "Blood Vessels"}
+path(DO:"COVID-19") pos p(HGNC:IL1A)
+path(DO:"COVID-19") pos p(HGNC:IL6)
+path(DO:"COVID-19") pos p(HGNC:TNF)
+path(DO:"COVID-19") pos a(CHEBI:Ferritin)
+UNSET Disease_Severity
+
+
+SET Support = "Moreover, increased levels of the endothelial adhesion protein VWF were reported both in patients admitted to the ICU and in non-critically ill patients34,35,61,62, and this increase seems to be associated with a mild reduction in the activity of a disintegrin and metalloproteinase with a thrombospondin type 1 motif, member 13 (ADAMTS13), a metalloproteinase that regulates the size of VWF multimers63. "
+SET Disease_Severity = {"patients admitted to the ICU", "non-critically ill patients"}
+path(DO:"COVID-19") -> p(HGNC:VWF)
+UNSET Disease_Severity
+
+
+SET Support = "Indeed, a relative deficiency in ADAMTS13 activity was previously described in inflammatory conditions with high levels of IL-6, as found in patients with SARS-CoV-2 infection64. "
+p(HGNC:IL6) -| act(p(HGNC:ADAMTS13))
+path(DO:"COVID-19") -| act(p(HGNC:ADAMTS13))
+
+
+SET Support = "Higher levels of soluble P-selectin (a marker of endothelial and platelet activation) were observed in patients admitted to the ICU than in patients not in the ICU, whereas increased levels of thrombomodulin (a specific marker of endothelial activation generally released during endothelial cell injury) were associated with increased mortality risk35"
+SET Disease_Severity = "patients admitted to the ICU"
+path(DO:"COVID-19") pos p(HGNC:SELP)
+path(DO:"COVID-19") pos p(HGNC:THBD) 
+p(HGNC:THBD) -> a(NCIT:Mortality)
+UNSET Disease_Severity
+
+
+SET Support = "Higher numbers of circulating endothelial cells were described in patients with COVID-19, especially among those admitted to the ICU, and the presence of circulating endothelial cells positively correlated with platelet and lymphocyte counts and with the classical endothelial marker soluble vascular cell adhesion molecule 1 (sVCAM1)65."
+SET Disease_Severity = "patients admitted to the ICU" 
+SET Cell_Type = "Circulating"
+path(DO:"COVID-19") -> a(MESH:"Endothelial Cells")
+path(DO:"COVID-19") -> a(MESH:"Blood Platelets")
+path(DO:"COVID-19") -> a(MESH:Lymphocytes)
+SET Protein_Type = "Soluble"
+path(DO:"COVID-19") pos p(HGNC:VCAM1)
+UNSET Disease_Severity
+UNSET MeSHAnatomy
+
+SET Support = "This was recently confirmed by another report from Italy,showing that patients with COVID-19 had increased circulating endothelial cells and higher plasma levels of soluble intercellular adhesion molecule 1 (sICAM1) and sVCAM1, further supporting the concept of endothelial dysfunction in COVID-19 (ref.66)."
+path(DO:"COVID-19") -> a(MESH:"Endothelial Cells") 
+SET MeSHAnatomy = "Plasma"
+path(DO:"COVID-19") pos p(HGNC:ICAM1)
+path(DO:"COVID-19") pos p(HGNC:VCAM1)
+UNSET MeSHAnatomy
+UNSET Protein_Type
+UNSET Cell_Type
+
+SET Support = "Considering the important role of the endothelium in regulating haemostasis, fibrinolysis and vessel wall permeability, endothelial dysfunction in pulmonary microvessels acts as a trigger for immunothrombosis, resulting in the coagulopathy observed in patients with COVID-19 (refs27,47,67,68)."
+path(DO:"COVID-19") -> path(MESH:"Blood Coagulation Disorders")
+
+SET Support = "In addition, endothelial dysfunction is recognized as a risk factor of microvascular dysfunction through a shift towards vasoconstriction, by promoting ischaemia, inflammation and a procoagulant state69"
+path(EFO:"endothelial dysfunction") -> bp(GO:vasoconstriction) 
+path(EFO:"endothelial dysfunction") -> path(DO:ischemia)
+path(EFO:"endothelial dysfunction") -> bp(GO:"inflammatory response")
+path(EFO:"endothelial dysfunction") -> bp(GO:coagulation)
+
+
+SET Support = "Lastly, platelet activation within the microvasculature is increased in patients with severe COVID-19 and is associated with poor outcomes70,71."
+SET MeSHAnatomy = {"Lung", "Microvessels"}
+SET Disease_Severity = "Severe"
+path(DO:"COVID-19") -> bp(GO:"platelet activation")
+UNSET Disease_Severity
+UNSET MeSHAnatomy
+
+
+SET Support = "All of these elements support the hypothesis that endothelial dysfunction, or endotheliopathy35,75, and platelet activation are key features of COVID-19-associated coagulopathy and may mediate the damage leading to severe disease."
+SET Disease = "COVID-19"
+path(MESH:"Blood Coagulation Disorders") -> path(EFO:"endothelial dysfunction")
+path(MESH:"Blood Coagulation Disorders") -> bp(GO:"platelet activation")
+UNSET Disease
+
+
+SET Support = "From a clinical standpoint, two phenotypes are described67,78. Patients with 'type L' have high lung compliance, lower lung weight as estimated by computed tomography scan and poor response to positive end-expiratory pressure."
+SET Disease_Type = "type L"
+SET MeSHAnatomy = "Lung"
+SET Technique = "computed tomography scan"
+path(DO:"COVID-19") -> a(NCIT:"Organ Weight")
+path(DO:"COVID-19") -> a(NCIT:"Pulmonary Compliance")
+UNSET Disease_Type
+UNSET MeSHAnatomy
+UNSET Technique
+
+
+SET Support = "Indeed, ARDS can be considered as a NETopathy81; higher levels of NETs were described in the plasma and bronchoalveolar fluid of patients with transfusion-associated and pneumonia-related ARDS compared with those without ARDS82–84."
+SET MeSHAnatomy = "Plasma"
+SET Specimen = "Bronchoalveolar Lavage Fluid"
+SET Disease_Type = {"transfusion-associated", "pneumonia-related"}
+path(DO:"adult respiratory distress syndrome") -> a(MESH:"Extracellular Traps")
+UNSET Disease_Type
+UNSET MeSHAnatomy
+UNSET Specimen
+
+
+SET Support = "NETs are markers of disease severity in patients with SARS-CoV-2 infection80,85. Compared with controls, patients with COVID-19 have higher levels of serum85 or plasma80myeloperoxidase (MPO)–DNA complexes, which are biomarkers of circulating NET fragments, and further increases were found in those patients requiring invasive mechanical ventilation"
+SET MeSHAnatomy = {"Serum", "Plasma"}
+SET Disease_Type = "patients requiring invasive mechanical ventilation"
+path(DO:"COVID-19") -> a(MESH:"Extracellular Traps")
+path(DO:"COVID-19") -> complex(p(HGNC:MPO), a(CHEBI:"deoxyribonucleic acid"))
+UNSET Disease_Type
+UNSET MeSHAnatomy
+
+
+SET Support = "MPO–DNA complexes and thrombin–antithrombin complexes were positively correlated in patients with COVID-19, and the anticoagulant dabigatran or complement targeting inhibited NETosis86, further suggesting a central role for NETs in the immunothrombotic milieu."
+path(DO:"COVID-19") pos complex(p(HGNC:MPO), a(CHEBI:"deoxyribonucleic acid")) 
+path(DO:"COVID-19") pos complex(p(HGNC:F2),a(MESH:Antithrombins))
+a(CHEBI:dabigatran) neg a(MESH:"Extracellular Traps")
+
+
+SET Support = "In addition, neutrophils isolated from patients with COVID-19 showed elevated NET release at baseline similar to phorbol myristate acetate (PMA)-stimulated neutrophils from healthy donors, indicating that the COVID-19 plasma environment promotes NET formation80"
+SET MeSHAnatomy = "Neutrophils"
+path(DO:"COVID-19") -> a(MESH:"Extracellular Traps")
+a(CHEBI:"phorbol 13-acetate 12-myristate") -> a(MESH:"Extracellular Traps")
+
+
+SET Support = "The virus itself is also reported to directly activate neutrophils towards NETosis, promoting epithelial cell death89."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> a(MESH:"Extracellular Traps")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> bp(GO:"epithelial cell apoptotic process")
+UNSET MeSHAnatomy
+
+SET Support = "Indeed, NETs participate in acute lung injury by inducing macrophage release of IL-1β, which in turn can increase NET formation95,96."
+a(MESH:"Extracellular Traps") -- path(MESH:"Acute Lung Injury") 
+a(MESH:"Extracellular Traps") -> sec(p(HGNC:IL1B))
+
+
+SET Support = "In support of this, there is increasing evidence that COVID-19 is a disease of the endothelium35 that results in elevated levels of PAI1 and VWF, increased platelet activation and a state of hypercoagulability, with consequent venous, arterial and microvascular thrombosis."
+path(DO:"COVID-19") -> p(HGNC:SERPINE1)
+path(DO:"COVID-19") -> p(HGNC:VWF)
+path(DO:"COVID-19") -> bp(GO:"platelet activation")
+path(DO:"COVID-19") -> path(HP:Hypercoagulability)
+
+SET Support = "Indeed, a study reported that 40% of patients hospitalized with COVID-19 are at high risk of VTE104 and data from a large retrospective cohort of patients in the United States suggested that anticoagulation may reduce mortality, especially among those with severe disease requiring invasive mechanical ventilation105."
+SET Disease_Type = "patients hospitalized"
+path(DO:"COVID-19") -> path(MESH:"Venous Thromboembolism")
+UNSET Disease_Type
+
+SET Support = "Studies of heparin treatment of COVID-19 have shown positive results103,106(Supplementary Table 1), and this is now one of a growing number of agents available to manage COVID-19 either as a prophylactic or therapeutic regimen108 (Table 1)."
+a(CHEBI:heparin) -| path(DO:"COVID-19")
+
+SET Support = "Indeed, tissue-type plasminogen activator infusion showed benefit in three patients with severe COVID-19 (ref.119), and a phase IIa trial in patients with COVID-19-related ARDS is currently ongoing (NCT04357730)."
+SET Disease_Severity = "Severe"
+p(HGNC:PLAT) -| path(DO:"COVID-19")
+UNSET Disease_Severity
+
+SET Support = "Liu et al. demonstrated that dipyridamole can suppress SARS-CoV-2 replication in vitro and improve lung pathology in an animal model of viral pneumonia through a type I interferon response125. This drug was tested in 14 patients and led to an improvement in clinical status compared with controls125."
+a(CHEBI:dipyridamole) -| bp(GO:"viral RNA genome replication")
+bp(GO:"viral RNA genome replication") -- a(TAX:"Severe acute respiratory syndrome coronavirus 2")
+
+SET Support = "Currently, two FDA-approved complement inhibitors are available, eculizumab and ravulizumab, both of which bind to C5 and sterically block the cleavage of C5 to C5a, and thus membrane attack complex formation. "
+complex(a(MESH:eculizumab), p(HGNC:C5)) -| p(HGNC:C5, frag("678_751"))
+complex(a(NCIT:Ravulizumab), p(HGNC:C5)) -| p(HGNC:C5, frag("678_751"))
+
+SET Support = "Four patients with COVID-19 receiving eculizumab intravenously showed a prompt reduction in C-reactive protein levels and an improvement of the lesions observed through chest computed tomography scan147."
+SET Technique = "computed tomography scan"
+a(MESH:eculizumab) -| p(HGNC:CRP)
+a(MESH:eculizumab) -| a(NCIT:Lesion)
+UNSET Technique
+
+SET Support = "Among 35 patients admitted to the ICU with COVID-19, eculizumab treatment improved 15-day survival and hypoxia compared with patients treated with standard care alone148. "
+SET Disease_Severity = "patients admitted to the ICU"
+a(MESH:eculizumab) -> bp(MESH:Survival)
+a(MESH:eculizumab) -| path(MESH:Hypoxia)
+UNSET Disease_Severity
+
+SET Support = "In a report from Italy, a patient with severe COVID-19-related ARDS was safely and successfully treated with the compstatin-based complement C3 inhibitor AMY-101 (ref.149). "
+SET Disease_Severity = "Severe"
+SET MeSHDisease = "Respiratory Distress Syndrome, Adult"
+a(PUBCHEM:131634231) -| act(p(HGNC:C3))
+a(PUBCHEM:131634231) -| path(DO:"COVID-19")
+UNSET Disease_Severity
+UNSET MeSHDisease
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Citation

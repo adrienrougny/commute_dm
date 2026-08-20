@@ -1,0 +1,421 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "38388736.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"cerebral white matter volume", "cerebellar white matter volume", "cerebrospinal fluid volume", "brainstem volume", "amygdala volume", "frontal pole thickness", "right white matter volume", "left white matter volume", "right frontal cortex volume", "right frontal pole volume", "frontal pole thickness", "superior frontal gyrus thickness", "middle temporal gyrus thickness", "superior temporal gyrus thickness", "long COVID"}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION Disease_Type AS LIST {"long COVID"}
+DEFINE ANNOTATION Disease_Severity AS LIST {"Mild", "Moderate", "Severe"}
+DEFINE ANNOTATION Disease_Stage AS LIST {"recovered"}
+DEFINE ANNOTATION TimeLine AS LIST {"72 hours"}
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+DEFINE ANNOTATION Custom_Anatomy AS LIST {"right frontal cortex", "left frontal cortex"}
+
+##################################################################################
+# Statements #
+##################################################################################
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Nat Neurosci. 2024 Mar;27(3):421-432. doi: 10.1038/s41593-024-01576-9. Epub 2024 Feb 22. Erratum in: Nat Neurosci. 2024 Apr 16;:", "38388736"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "The most frequent presenting symptoms included dyspnea (47), loss of smell and taste (46), cough (45), fatigue (40) and fever (36)."
+SET Disease = "COVID-19"
+SET Species = "9606"
+path(DO:"COVID-19") increases path(MESH:Dyspnea)
+path(DO:"COVID-19") increases path(HP:Anosmia)
+path(DO:"COVID-19") increases path(MESH:Ageusia)
+path(DO:"COVID-19") increases path(MESH:Cough)
+path(DO:"COVID-19") increases path(MESH:Fatigue)
+path(DO:"COVID-19") increases path(MESH:Fever)
+
+SET Support = "Of the 50 markers investigated, 4, 11 and 25 serum and plasma analytes were significantly different from controls in mild, moderate and severe groups, respectively after false discovery rate (FDR) correction and included several well-defined pro-inflammatory cytokines, including interferon-γ (IFNγ), interleukin-6 (IL-6), interleukin-1β (IL-1β), interleukin-1RA (IL-1RA), interleukin-8 (IL-8) and 10 kDa interferon gamma-induced protein (IP-10); growth factors, including granulocyte colony-stimulating factor (G-CSF) and granulocyte-macrophage colony-stimulating factor (GM-CSF); and markers of thrombosis and endothelial cell activation including plasminogen activator inhibitor-1 (PAI-1), protein C, protein S, Von Willebrand factor (vWF), factor IX, intercellular adhesion molecule 1 (ICAM-1) and vascular cell adhesion protein 1 (VCAM-1)."
+SET MeSHAnatomy = {"Serum", "Plasma"}
+SET BioAssay = "multiplexed readout"
+SET Disease_Severity = {"Mild", "Moderate", "Severe"}
+path(DO:"COVID-19") pos p(HGNC:VWF)
+path(DO:"COVID-19") pos p(HGNC:IL1RN)
+path(DO:"COVID-19") pos p(HGNC:IL1B)
+path(DO:"COVID-19") pos p(PFAM:IL8)
+path(DO:"COVID-19") pos p(HGNC:CXCL10)
+path(DO:"COVID-19") pos p(HGNC:CSF3)
+UNSET Disease_Severity
+SET Disease_Severity = "Mild"
+path(DO:"COVID-19") pos p(HGNC:PROC)
+UNSET Disease_Severity
+SET Disease_Severity = {"Moderate", "Severe"}
+path(DO:"COVID-19") pos p(HGNC:IL6)
+path(DO:"COVID-19") pos p(HGNC:CSF2)
+UNSET Disease_Severity
+SET Disease_Severity = "Severe"
+path(DO:"COVID-19") pos p(HGNC:IFNG)
+path(DO:"COVID-19") pos p(HGNC:SERPINE1)
+path(DO:"COVID-19") pos p(HGNC:ICAM1)
+path(DO:"COVID-19") pos p(HGNC:VCAM1)
+UNSET Disease_Severity
+SET Disease_Severity = {"Mild", "Severe"}
+path(DO:"COVID-19") pos p(HGNC:PROS1)
+path(DO:"COVID-19") pos p(HGNC:F9)
+UNSET Disease_Severity
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "Patients with brain fog had a higher mean age (53.7 versus 42.7) and were more likely to be hospitalized and require oxygen therapy; therefore, age, sex, comorbidities and severity of infection were included in the statistical model to identify differences between groups (Supplementary Table 1)."
+bp(GO:aging) pos path(MESH:"Mental Fatigue")
+a(NCIT:"Oxygen Therapy") decreases path(MESH:"Mental Fatigue")
+
+SET Support = "Stratification of patients according to the presence or absence of brain fog revealed a general increase in most markers in the brain fog cohort (Fig. ​(Fig.1f),1f), with significantly increased serum levels of protein S100β (Fig. ​(Fig.1g),1g), a marker indirectly associated with BBB dysfunction."
+SET BioAssay = "multiplexed readout"
+SET MeSHAnatomy = "Serum"
+path(MESH:"Mental Fatigue") pos p(HGNC:S100B)
+p(HGNC:S100B) neg bp(GO:"maintenance of permeability of blood-brain barrier")
+
+SET Support = "There were also increased levels of basic fibroblast growth factor (bFGF), interleukin-13 (IL-13) and monocyte chemoattractant protein-1 (MCP-1) in patients with brain fog (Fig. 1h–j)."
+path(MESH:"Mental Fatigue") pos p(HGNC:FGF2)
+path(MESH:"Mental Fatigue") pos p(HGNC:IL13)
+path(MESH:"Mental Fatigue") pos p(HGNC:CCL2)
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "Therefore, partial correlations were performed with age, sex and all comorbidities as covariates, which revealed positive associations between serum concentrations of tumor necrosis factor (TNF), interleukin-6 (IL-6), IL-1β and IP-10 with COVID severity and an inverse association with plasma protein S."
+SET MeSHAnatomy = "Serum"
+path(DO:"COVID-19") pos p(HGNC:TNF)
+path(DO:"COVID-19") pos p(HGNC:IL6)
+path(DO:"COVID-19") pos p(HGNC:IL1B)
+path(DO:"COVID-19") pos p(HGNC:CXCL10)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Plasma"
+path(DO:"COVID-19") neg p(HGNC:PROS1)
+UNSET MeSHAnatomy
+
+SET Support = "We also found a significant association between serum S100β and age."
+p(HGNC:S100B) pos bp(GO:aging)
+
+SET Support = "There was a significant decrease in serum concentrations of coagulation factors including PAI-1 and the cell adhesion molecules VCAM-1 and ICAM-1, while there was an increase in IL-13 and IL-8 between T1 and T2."
+SET MeSHAnatomy = "Serum"
+SET BioAssay = "multiplexed readout"
+path(DO:"COVID-19") neg p(HGNC:SERPINE1)
+path(DO:"COVID-19") neg p(HGNC:ICAM1)
+path(DO:"COVID-19") neg p(HGNC:VCAM1)
+path(DO:"COVID-19") pos p(HGNC:IL13)
+path(DO:"COVID-19") pos p(PFAM:IL8)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "Given the significantly increased serum concentrations of S100β, our data indicated that active and acute SARS-CoV-2 infection is associated with potential BBB dysfunction in individuals with neurological impairment."
+SET MeSHAnatomy = "Serum"
+path(DO:"COVID-19") pos p(HGNC:S100B)
+UNSET MeSHAnatomy
+path(DO:"COVID-19") neg bp(GO:"maintenance of permeability of blood-brain barrier")
+
+SET Support = "Sixteen (50%) participants reported anosmia, which was confirmed using Q-SIT testing (average score 1 out of 3; 159±88 days duration) at the time of scanning."
+path(DO:"COVID-19") increases path(HP:Anosmia)
+
+SET Support = "Six participants with brain fog showed mild-to-moderate cognitive impairment on the Montreal Cognitive Assessment (MOCA) test (score 18–25) along with deficits in recall, executive functioning and word finding."
+path(MESH:"Mental Fatigue") decreases bp(GO:cognition)
+path(MESH:"Mental Fatigue") decreases path(MESH:"Mental Recall")
+path(MESH:"Mental Fatigue") decreases path(MESH:"Executive Function")
+path(MESH:"Mental Fatigue") increases path(HP:Aphasia)
+
+SET Support = "While standard diagnostic MRI scans showed no clinically relevant pathological findings in any participant, DCE-MRI imaging revealed significantly increased whole-brain leakage in patients with long COVID with brain fog (Fig. 2d–f), with an increased percentage of brain volume with leaky blood vessels in the cohort with brain fog compared to the cohort without brain fog."
+SET BioAssay = "imaging method"
+SET Disease_Type = "long COVID"
+SET MeSHAnatomy = "Brain"
+path(MESH:"Mental Fatigue") increases path(MESH:"Cerebrospinal Fluid Leak")
+path(MESH:"Mental Fatigue") increases a(NIFT:"Whole brain volume")
+path(MESH:"Mental Fatigue") increases path(MESH:Hemorrhage)
+
+SET Support = "Stratifying the cohort into recovered, long COVID without brain fog and long COVID with brain fog revealed significantly increased BBB permeability in the cohort with brain fog compared to recovered patients and patients with long COVID without brain fog."
+path(MESH:"Mental Fatigue") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET MeSHAnatomy
+
+SET Support = "Region of interest analysis identified significantly increased leakage in the right and left temporal lobes (TLs) and right and left frontal cortex."
+SET Anatomy = {"right temporal lobe", "left temporal lobe"}
+SET Custom_Anatomy = {"right frontal cortex", "left frontal cortex"}
+path(DO:"COVID-19") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+
+SET Support = "Stratifying the groups according to recovered, long COVID or brain fog revealed significantly increased BBB permeability in the group with brain fog only in the right and left TL and right and left frontal cortex."
+path(MESH:"Mental Fatigue") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET Anatomy
+UNSET Custom_Anatomy
+
+SET Support = "There was no association between BBB permeability and anosmia status, duration of anosmia, Q-SIT or MOCA scores (Extended Data Fig. 5a–c and Supplementary Table 3); however, regional BBB permeability in the right and left TLs was correlated with the duration of anosmia (Extended Data Fig. 5a,b)."
+SET Anatomy = {"right temporal lobe", "left temporal lobe"}
+path(HP:Anosmia) neg bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET BioAssay 
+UNSET Disease_Type
+UNSET Anatomy
+
+SET Support = "Comparing all individuals with previous COVID infection to unaffected controls revealed volumetric deficits predominantly in the FLs and TLs and increases in the lateral ventricles and occipital lobes (OLs), while group-wise comparisons of macrostructures revealed decreased GBV in patients with brain fog along with significantly reduced cerebral WM volume in both hemispheres in the recovered and brain fog cohorts along with reduced cerebellar WM volume in the recovered, long COVID and brain fog cohorts."
+SET Disease_Stage = "recovered"
+SET MeSHAnatomy = {"Frontal Lobe", "Temporal Lobe"}
+path(DO:"COVID-19") decreases bp(MESH:"Organ Size")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = {"Lateral Ventricles", "Occipital Lobe"}
+path(DO:"COVID-19") increases bp(MESH:"Organ Size")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Brain"
+path(MESH:"Mental Fatigue") decreases a(NIFT:"Whole brain volume")
+SET MeSHAnatomy = "Cerebrum"
+path(DO:"COVID-19") decreases a(NIFT:"White matter volume")
+path(MESH:"Mental Fatigue") decreases a(NIFT:"White matter volume")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Cerebellum"
+path(DO:"COVID-19") decreases a(NIFT:"White matter volume")
+path(MESH:"Mental Fatigue") decreases a(NIFT:"White matter volume")
+UNSET MeSHAnatomy
+UNSET Disease_Stage
+SET Disease_Type = "long COVID"
+SET MeSHAnatomy = "Cerebellum"
+path(DO:"COVID-19") decreases a(NIFT:"White matter volume")
+UNSET MeSHAnatomy
+
+SET Support = "There was a significantly increased CSF volume in the cohort with brain fog only."
+SET Disease_Stage = "recovered"
+path(MESH:"Mental Fatigue") increases bp(FIXME:"cerebrospinal fluid volume")
+UNSET Disease_Stage
+
+SET Support = "Cortical thinning was also evident predominantly in the TLs and frontal lobes (FLs) when analyzing all patients with previous SARS-CoV-2 infection compared to unaffected controls."
+SET Disease_Stage = "recovered"
+SET MeSHAnatomy = {"Temporal Lobe", "Frontal Lobe"}
+path(MESH:"Mental Fatigue") increases path(HP:"Cerebral cortical hemiatrophy")
+path(DO:"COVID-19") increases path(HP:"Cerebral cortical hemiatrophy")
+UNSET Disease_Stage
+
+SET Support = "When comparing groups, there was reduced thickness in the frontal pole in the recovered, long COVID and brain fog cohorts; the superior frontal gyrus in the cohorts with long COVID and brain fog; the middle temporal gyrus in the cohort with brain fog only; and the superior temporal gyrus in the cohort with brain fog only."
+SET Disease_Type = "long COVID"
+path(DO:"COVID-19") decreases bp(FIXME:"frontal pole thickness")
+UNSET Disease_Type
+SET Disease_Stage = "recovered"
+path(MESH:"Mental Fatigue") decreases bp(FIXME:"frontal pole thickness")
+UNSET Disease_Stage
+SET Disease_Type = "long COVID"
+path(DO:"COVID-19") decreases bp(FIXME:"superior frontal gyrus thickness")
+UNSET Disease_Type
+SET Disease_Stage = "recovered"
+path(MESH:"Mental Fatigue") decreases bp(FIXME:"superior frontal gyrus thickness")
+path(MESH:"Mental Fatigue") decreases bp(FIXME:"middle temporal gyrus thickness")
+path(MESH:"Mental Fatigue") decreases bp(FIXME:"superior temporal gyrus thickness")
+UNSET Disease_Stage
+
+SET Support = "Next, we analyzed blood-based biomarkers of neuroinflammation and BBB dysfunction in the recovered and long COVID cohort using multiplex Luminex panels as done for the acute cohort (Extended Data Fig. ​Fig.6a).6a). We examined 50 markers of BBB integrity and inflammation. Several markers were increased across all groups compared to controls including IL-1RA, IL-1β, bFGF and IL-13, while IL-9 was the only cytokine decreased in all groups (Fig. 5a–c and Extended Data Fig. ​Fig.6).6)."
+SET Disease_Stage = "recovered"
+SET Disease_Type = "long COVID"
+SET BioAssay = "multiplexed readout"
+path(DO:"COVID-19") pos p(HGNC:IL1RN)
+path(DO:"COVID-19") pos p(HGNC:IL1B)
+path(DO:"COVID-19") pos p(HGNC:FGF2)
+path(DO:"COVID-19") pos p(HGNC:IL13)
+path(DO:"COVID-19") neg p(HGNC:IL9)
+UNSET Disease_Stage
+UNSET Disease_Type
+
+SET Support = "Glial fibrillary acidic protein (GFAP) was increased in the cohort with brain fog compared to recovered individuals while only transforming growth factor-β (TGFβ) was selectively increased in the cohort with brain fog compared to the cohort with long COVID without brain fog."
+path(MESH:"Mental Fatigue") pos p(HGNC:GFAP)
+path(MESH:"Mental Fatigue") pos p(HGNC:TGFB1)
+path(DO:"COVID-19") pos p(HGNC:GFAP)
+path(DO:"COVID-19") pos p(HGNC:TGFB1)
+
+SET Support = "There were also changes in plasma levels of coagulation markers with significantly increased levels of proteins C and S in the recovered cohort and the cohort with brain fog (Extended Data Fig. ​Fig.6g).6g)."
+SET Disease_Stage = "recovered"
+path(DO:"COVID-19") pos p(HGNC:PROS1)
+path(DO:"COVID-19") pos p(HGNC:PROC)
+UNSET Disease_Stage
+path(MESH:"Mental Fatigue") pos p(HGNC:PROS1)
+path(MESH:"Mental Fatigue") pos p(HGNC:PROS1)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "Levels of TGFβ and D-dimer were significantly associated with the percentage of voxels with abnormal leakage but only TGFβ was significant after correcting for multiple comparisons (Fig. ​(Fig.5e).5e). The levels of TGFβ were significantly associated with GBV, CSF volume, brainstem volume and amygdala volume."
+p(HGNC:TGFB1) pos bp(FIXME:"cerebrospinal fluid volume")
+p(HGNC:TGFB1) neg bp(FIXME:"brainstem volume")
+p(HGNC:TGFB1) neg bp(FIXME:"amygdala volume")
+p(HGNC:TGFB1) association a(NIFT:"Whole brain volume")
+
+SET Support = "Next, we performed gene ontology (GO) analysis. In the recovered cohort and the cohort without brain fog, upregulated terms included those related to the coagulation system, such as blood coagulation (for example, F13A1, PROS1), platelet activation (for example, F2R, PF4, PF4V1), platelet degranulation (for example, SELP, VCL, CLU) as well as megakaryocyte development, immunoglobulin production and complement activation (Extended Data Fig. 7d,e and Supplementary Tables 4 and 5–12)."
+SET Cell = "peripheral blood mononuclear cell"
+SET BioAssay = "bioinformatics method"
+SET Disease_Stage = "recovered"
+SET Disease = "COVID-19"
+p(HGNC:F13A1) association bp(GO:"blood coagulation")
+p(HGNC:PROS1) association bp(GO:"blood coagulation")
+p(HGNC:F2R) association bp(GO:"platelet activation")
+p(HGNC:PF4) association bp(GO:"platelet activation")
+p(HGNC:PF4V1) association bp(GO:"platelet activation")
+p(HGNC:SELP) association bp(GO:"platelet degranulation")
+p(HGNC:VCL) association bp(GO:"platelet degranulation")
+p(HGNC:CLU) association bp(GO:"platelet degranulation")
+UNSET Disease
+path(DO:"COVID-19") pos bp(GO:"immunoglobulin production")
+path(DO:"COVID-19") pos bp(GO:"complement activation")
+path(DO:"COVID-19") pos bp(GO:"megakaryocyte development")
+UNSET Disease_Stage
+
+
+SET Support = "Compared to the recovered cases, there was a strong enrichment in upregulated terms for pathways related to T cell differentiation and activation (for example, PRDM1, TNF), TGFβ signaling (for example, SMAD3, SNAI1, SMURF1) and regulation of angiogenesis (for example, HES1, DLL1, HIF1A), while there was downregulation in genes involved in platelet activation, signaling and aggregation (for example, PF4V1, PF4, TREML1) and hemostasis (for example, F13A1, GP1BA, GP1BB) (Fig. ​(Fig.6e6e and Supplementary Tables 4 and 5–12)."
+SET Disease_Type = "long COVID"
+SET MeSHDisease = "Mental Fatigue"
+bp(GO:"T cell differentiation") pos r(HGNC:PRDM1)
+bp(GO:"T cell activation") pos r(HGNC:PRDM1)
+bp(GO:"T cell differentiation") pos r(HGNC:TNF)
+bp(GO:"T cell activation") pos r(HGNC:TNF)
+bp(GO:"transforming growth factor beta receptor signaling pathway") pos r(HGNC:SMAD3)
+bp(GO:"transforming growth factor beta receptor signaling pathway") pos r(HGNC:SNAI1)
+bp(GO:"transforming growth factor beta receptor signaling pathway") pos r(HGNC:SMURF1)
+bp(GO:"regulation of angiogenesis") pos r(HGNC:HES1)
+bp(GO:"regulation of angiogenesis") pos r(HGNC:DLL1)
+bp(GO:"regulation of angiogenesis") pos r(HGNC:HIF1A)
+bp(PW:"platelet-derived growth factor signaling pathway") neg r(HGNC:PF4V1)
+bp(PW:"platelet-derived growth factor signaling pathway") neg r(HGNC:PF4)
+bp(PW:"platelet-derived growth factor signaling pathway") neg r(HGNC:TREML1)
+bp(GO:hemostasis) neg r(HGNC:F13A1)
+bp(GO:hemostasis) neg r(HGNC:GP1BA)
+bp(GO:hemostasis) neg r(HGNC:GP1BB)
+UNSET Disease_Type
+UNSET MeSHDisease
+
+SET Support = "We also compared the transcriptome profile of individuals with and without brain fog in our cohort with long COVID. Upregulated genes were enriched in pathways related to T cell differentiation and activation (for example, RUNX3, IFNG, TNFSF9), negative regulation of the immune response (for example, WASL, ID2, TNFAIP3) and circadian regulation of gene expression (for example, RORA, PER1, NRIP1)."
+path(FIXME:"long COVID") -> path(MESH:"Mental Fatigue")
+SET Disease_Type = "long COVID"
+SET MeSHDisease = "Mental Fatigue"
+bp(GO:"T cell differentiation") pos r(HGNC:RUNX3)
+bp(GO:"T cell activation") pos r(HGNC:RUNX3)
+bp(GO:"T cell differentiation") pos r(HGNC:IFNG)
+bp(GO:"T cell activation") pos r(HGNC:IFNG)
+bp(GO:"T cell differentiation") pos r(HGNC:TNFSF9)
+bp(GO:"T cell activation") pos r(HGNC:TNFSF9)
+bp(GO:"negative regulation of immune response") pos r(HGNC:WASL)
+bp(GO:"negative regulation of immune response") pos r(HGNC:ID2)
+bp(GO:"negative regulation of immune response") pos r(HGNC:TNFAIP3)
+bp(GO:"circadian regulation of gene expression") pos r(HGNC:RORA)
+bp(GO:"circadian regulation of gene expression") pos r(HGNC:PER1)
+bp(GO:"circadian regulation of gene expression") pos r(HGNC:NRIP1)
+UNSET Disease_Type
+
+SET Support = "Pathways related to immunoglobulin, production, defense responses and B cell activation were among those downregulated, including immunoglobulin production (IGKV1–12, IGKV1–17), adaptive immune response (for example, CX3CR1, FCGR1BP) and B cell activation (HDAC9, CD180, MNDA) (Extended Data Fig. ​Fig.77 and Supplementary Tables 4 and 5–12)."
+path(MESH:"Mental Fatigue") neg bp(GO:"immunoglobulin production")
+path(MESH:"Mental Fatigue") neg bp(GO:"adaptive immune response")
+path(MESH:"Mental Fatigue") neg bp(GO:"B cell activation")
+path(MESH:"Mental Fatigue") neg r(HGNC:"IGKV1-12")
+path(MESH:"Mental Fatigue") neg r(HGNC:"IGKV1-17")
+path(MESH:"Mental Fatigue") neg r(HGNC:CX3CR1)
+path(MESH:"Mental Fatigue") neg r(HGNC:FCGR1B)
+path(MESH:"Mental Fatigue") neg r(HGNC:HDAC9)
+path(MESH:"Mental Fatigue") neg r(HGNC:CD180)
+path(MESH:"Mental Fatigue") neg r(HGNC:MNDA)
+r(HGNC:"IGKV1-12") association bp(GO:"immunoglobulin production")
+r(HGNC:"IGKV1-17") association bp(GO:"immunoglobulin production")
+r(HGNC:CX3CR1) association bp(GO:"adaptive immune response")
+r(HGNC:FCGR1B) association bp(GO:"adaptive immune response")
+r(HGNC:HDAC9) association bp(GO:"B cell activation")
+r(HGNC:CD180) association bp(GO:"B cell activation")
+r(HGNC:MNDA)  association bp(GO:"B cell activation")
+
+SET Support = "In agreement with previous studies, several factors involved in the coagulation pathway were downregulated specifically in the cohort with brain fog, including PF4, PF4V1 and SELP."
+SET MeSHDisease = "Mental Fatigue"
+bp(GO:"blood coagulation") neg r(HGNC:PF4V1)
+bp(GO:"blood coagulation") neg r(HGNC:PF4)
+bp(GO:"blood coagulation") neg r(HGNC:SELP)
+UNSET MeSHDisease
+
+SET Support = "We next examined immunovascular interactions in PBMCs isolated from patients with COVID-19 and found increased adhesion of PBMCs to human brain endothelial cells in the cohort with long COVID compared to unaffected individuals, which was heightened in the presence of TNF and only modestly affected by blocking antibodies against ICAM-1 and VCAM-1."
+SET Disease_Type = "long COVID"
+SET Cell = {"endothelial cell", "peripheral blood mononuclear cell"}
+SET MeSHAnatomy = {"Blood Vessels", "Brain"}
+path(DO:"COVID-19") pos p(HGNC:TNF)
+p(HGNC:TNF) increases act(p(HGNC:ICAM1))
+p(HGNC:TNF) increases act(p(HGNC:VCAM1))
+act(p(HGNC:ICAM1)) increases bp(GO:"heterotypic cell-cell adhesion")
+act(p(HGNC:VCAM1)) increases bp(GO:"heterotypic cell-cell adhesion")
+UNSET Disease_Type
+
+SET Support = "Furthermore, exposure of human brain endothelial cells to 10% serum from recovered individuals and individuals with long COVID resulted in the upregulation of ICAM1, VCAM1 and TNF transcripts compared to sera from unaffected individuals."
+SET Cell = "endothelial cell"
+SET Disease_Stage = "recovered"
+path(DO:"COVID-19") pos r(HGNC:ICAM1)
+path(DO:"COVID-19") pos r(HGNC:VCAM1)
+path(DO:"COVID-19") pos r(HGNC:TNF)
+UNSET Disease_Stage
+SET Disease_Type = "long COVID"
+path(DO:"COVID-19") pos r(HGNC:ICAM1)
+path(DO:"COVID-19") pos r(HGNC:VCAM1)
+path(DO:"COVID-19") pos r(HGNC:TNF)
+UNSET Disease_Type
+UNSET Cell
+
+SET Support = "Exposure of human brain endothelial cells to S1 protein led to a dose-dependent increase in TNF, TGFβ, ICAM1 and VCAM1 mRNA (Extended Data Fig. ​Fig.8e)8e) after 72-h treatment with 0–400 nM S1 spike protein."
+SET TimeLine = "72 hours"
+p(UNIPROT:P0DTC2, frag("14_685")) pos r(HGNC:TNF)
+p(UNIPROT:P0DTC2, frag("14_685")) pos r(HGNC:ICAM1)
+p(UNIPROT:P0DTC2, frag("14_685")) pos r(HGNC:VCAM1)
+p(UNIPROT:P0DTC2, frag("14_685")) pos r(HGNC:TGFB1)
+UNSET TimeLine
+UNSET BioAssay
+UNSET Species
+UNSET Disease
+UNSET Citation

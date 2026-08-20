@@ -1,0 +1,144 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "36517603.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"steatohepatitis", "diffuse alveolar damage", "myocardial infiltrates"}
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION Technique AS LIST {"β-Gal Staining", "single cell RNA-Seq analysis", "MitoTracker staining", "LysoTracker staining", "ROS staining","In situ hybridization"}
+DEFINE ANNOTATION Specimen AS LIST {"post-mortem specimen"}
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Nature. 2022 Dec;612(7941):758-763. doi: 10.1038/s41586-022-05542-y. Epub 2022 Dec 14.", "36517603"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Species = "9606"
+SET Disease = "COVID-19"
+SET Specimen = "post-mortem specimen"
+
+SET Support = "SARS-CoV-2 RNA was detected in 84 distinct anatomical locations and body fluids (Supplementary Data 1b–d), with a significantly (P<0.0001 for all) higher burden detected in respiratory compared with non-respiratory tissues among early (2.04±0.10 log10[N gene copies] per nanogram of RNA), mid (1.36±0.12 log10[N gene copies] per nanogram of RNA) and late (0.67±0.11 log10[N gene copies] per nanogram of RNA."
+SET MeSHAnatomy = "Respiratory System"
+SET BioAssay = "quantitative PCR"
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+
+SET Support = "We detected SARS-CoV-2 RNA in perimortem plasma of 11 early and 1 mid case (Supplementary Data 1b,d)."
+SET MeSHAnatomy = "Plasma"
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+
+SET Support = "SARS-CoV-2 RNA was detected in central nervous system (CNS) tissue in 10/11 cases (90.9%), including across most brain regions evaluated in 5/6 late cases, including P42 who died at D230 (Fig.1)."
+SET MeSHAnatomy = "Central Nervous System"
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "We detected SARS-CoV-2 subgenomic RNA across all tissue groups and multiple fluid types, including plasma, pleural fluid and vitreous humour (Supplementary Data 1a–c)."
+SET Anatomy = "pleural fluid"
+SET MeSHAnatomy = {"Plasma", "Vitreous Body"}
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+UNSET Anatomy
+UNSET MeSHAnatomy
+
+SET Support = "We validated our ddPCR results by ISH for SARS-CoV-2 spike RNA in respiratory and non-respiratory tissues in selected early, mid and late cases across >35 cell types and hyaline membranes (Figs.2 and 3, Extended Data Table  Table33 and Supplementary Data 3)."
+SET Technique ="In situ hybridization" 
+path(DO:"COVID-19") increases p(UNIPROT:P0DTC2)
+UNSET Technique
+
+SET Support = "We observed SARS-CoV-2 RNA and protein in hypothalamus and cerebellum of an early case (P38) and cervical spinal cord and basal ganglia of late cases (P42 and P40, respectively), with a pattern consistent with neuronal staining (Fig.3)."
+SET MeSHAnatomy = {"Hypothalamus", "Cerebellum", "Basal Ganglia"}
+SET Anatomy = "cervical spinal cord"
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+UNSET Anatomy
+
+SET Support = "Of 44 cases, 38 were determined to have died from COVID-19, and of these, 35 (92.1%) had either acute pneumonia or diffuse alveolar damage at the time of death (Supplementary Data 2)."
+path(DO:"COVID-19") increases a(NCIT:"Acute Pneumonia")
+path(DO:"COVID-19") increases path(FIXME:"diffuse alveolar damage")
+
+SET Support = "Pulmonary thromboembolic complications were noted in 10 (23%) cases and myocardial infiltrates were observed in four cases, including one case of substantial myocarditis17 (P3). In the lymph nodes and spleen, we observed both lymphodepletion and follicular and paracortical hyperplasia."
+path(DO:"COVID-19") increases path(DO:"pulmonary embolism")
+path(DO:"COVID-19") increases path(FIXME:"myocardial infiltrates")
+path(DO:"COVID-19") increases path(DO:myocarditis)
+SET MeSHAnatomy = {"Lymph Nodes", "Spleen"}
+path(DO:"COVID-19") decreases a(MESH:Lymphocytes)
+path(DO:"COVID-19") increases path(MESH:Hyperplasia)
+UNSET MeSHAnatomy
+
+SET Support = "Diabetic nephropathy and steatohepatitis were observed in ten cases (23%) and five cases (12%), respectively."
+path(DO:"COVID-19") pos a(NCIT:"Diabetic Nephropathy") 
+path(DO:"COVID-19") pos path(FIXME:steatohepatitis)
+
+UNSET Disease
+UNSET Specimen
+UNSET Species
+UNSET Citation
+
+

@@ -1,0 +1,186 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "35063125.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE CL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {".."}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION Custom_Cell AS LIST {"human induced pluripotent stem cell derived brain capillary endothelial-like cell"}
+DEFINE ANNOTATION Specimen AS LIST {"post-mortem specimen"}
+# Document Annotations 
+DEFINE ANNOTATION Custom_Cell AS LIST {"human induced pluripotent stem cell derived brain capillary endothelial-like cell"}
+DEFINE ANNOTATION Specimen AS LIST {"post-mortem specimen"}
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Stem Cell Reports. 2022 Feb 8;17(2):307-320. doi: 10.1016/j.stemcr.2021.12.011. Epub 2022 Jan 20.", "35063125"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "Of note, IFITM1 and IFITM2, which are necessary for SARS-CoV-2 infection in human lung cells (Shi et al., 2021), were significantly upregulated (p = 0.03 for IFITM1, p = 0.01 for IFITM2) in COVID-19 patients."
+SET BioAssay = "RNA-seq gene expression profiling assay"
+SET Species = "9606"
+SET Disease = "COVID-19"
+SET MeSHAnatomy = "Brain"
+SET Specimen = "post-mortem specimen"
+path(DO:"COVID-19") pos r(HGNC:IFITM1)
+path(DO:"COVID-19") pos r(HGNC:IFITM2)
+UNSET BioAssay
+
+SET Support = "Subsequent gene set enrichment analysis (GSEA) revealed an upregulation of mRNAs related to antigen processing and major histocompatibility complex (MHC) class I-dependent antigen presentation supporting the notion that SARS-CoV-2 directly affects brain endothelial cells."
+SET BioAssay = "gene list enrichment analysis"
+path(DO:"COVID-19") pos r(HGNC:"HLA-A")
+path(DO:"COVID-19") pos r(HGNC:"HLA-B")
+path(DO:"COVID-19") pos r(HGNC:"HLA-C")
+path(DO:"COVID-19") pos r(HGNC:"HLA-E")
+path(DO:"COVID-19") pos r(HGNC:"HLA-F")
+path(DO:"COVID-19") pos r(HGNC:"HLA-G")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"antigen processing and presentation of peptide antigen via MHC class I")
+
+
+SET Support = "In addition, we found that interferon-γ signaling was enhanced in COVID-19 (Figure 1F)."
+path(DO:"COVID-19") pos bp(PW:"type II interferon signaling pathway")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HLA-DPA1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:STAT1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:B2M)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HLA-DRB3)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IFNGR1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HLA-DQB1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CD44)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:PARP9)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-C")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-G")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-E")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-A")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-B")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-F")
+UNSET BioAssay
+
+SET Support = "To validate our findings, we performed immunohistochemical staining of IFITM2 in COVID-19 and control brains. Here, we could show that IFITM2 expression is restricted to the neurovascular unit and upregulated in COVID-19 patients."
+SET BioAssay = "immunolabeling method"
+path(DO:"COVID-19") pos p(HGNC:IFITM2)
+UNSET BioAssay
+
+SET Support = "In contrast to these highly specific transcriptional changes, the brain endothelial marker CD31 revealed no significant differences between COVID-19 and control brains (Figures S1A and S1B). Assessment of the abundance of the SARS-CoV-2 entry factors ACE2 and NRP1 in human cortex brain vessels revealed that NRP1 was more abundant than ACE2."
+path(DO:"COVID-19") pos p(HGNC:NRP1)
+
+SET Support = "The SARS-CoV-2 entry receptor ACE2 and co-factor/alternative receptor TMPRSS2 and NRP1 are all expressed in hiPS-BCECs as detected by qRT-PCR, with NRP1 being the most abundant (Figure 2F), similar to the situation in human brain tissue."
+SET Custom_Cell = "human induced pluripotent stem cell derived brain capillary endothelial-like cell"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TMPRSS2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:NRP1)
+
+SET Support = "Importantly, the increase of IFITM1 and IFITM2 expression observed in tissue infected with SARS-CoV-2 could be recapitulated in our model by both mRNA sequencing (p = 0.031 for IFITM1, p = 0.403 for IFITM2) and qRT-PCR."
+SET BioAssay = {"RNA-seq gene expression profiling assay", "quantitative PCR"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IFITM1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IFITM2)
+UNSET BioAssay
+
+SET Support = "Furthermore, adhesion points anchored within the actin filament network were detected, indicating the integrity of cell-cell contacts (Figure 2K). As reference, TEM images of uninfected hiPS-BCECs are shown in Figure S2D. The overall integrity of the hiPS-BCECs was further demonstrated by intact localization and unaltered expression of TJP1/ZO-1, a TJ marker, after infection."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") cnc bp(GO:"cell adhesion")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") cnc p(HGNC:TJP1)
+
+SET Support = "In line with our findings from spatial transcriptomics of brain vessels and their microenvironment in fatal COVID-19 (Figure 1), we detected that genes responsible for the innate immune response and type I interferon response were significantly upregulated. Moreover, genes that regulate phosphorus-dependent metabolic and ATP-generating pathways were significantly downregulated (Figures 3B–3D), which is in accord with studies in SARS-CoV-2-infected lung organoids."
+SET BioAssay = "RNA-seq gene expression profiling assay"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"innate immune response")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"type I interferon signaling pathway")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:ALDOC)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:LDHAP7)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:LDHA)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:SEMA5B)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:TMEM145)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:PPFIA4)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:CD300A)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:STC1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:NDRG1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ADRA1D)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:OAS1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:BFSP2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IFI6)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CMPK2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:NKD1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:SLC15A2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:FOXE3)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:OAS2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"phosphate-containing compound metabolic process")
+
+SET Support = "Intriguingly, SARS-CoV-2 infection of endothelial cells consistently resulted in downregulation of metabolic pathways and upregulation of a cellular interferon response."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"cellular metabolic process")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cellular response to interferon-gamma")
+UNSET BioAssay
+
+SET Support = "We thus show that brain endothelial cells show intrinsic inflammatory profiles upon contact with SARS-CoV-2, independent of immune cells."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"inflammatory response")
+
+SET Support = "Of note, all antibodies and nafamostat could significantly (p < 0.0001) diminish virus uptake by hiPS-BCECs."
+a(CHEBI:nafamostat) decreases bp(GO:"viral entry into host cell")
+UNSET Custom_Cell
+UNSET Disease
+UNSET Species
+UNSET Citation
+

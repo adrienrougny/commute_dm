@@ -1,0 +1,352 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "34209175.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"amyloid-beta 1-42 aggregation"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Custom_CellLine AS LIST {"K-562 cell overexpressing SDC", "SH-SY5Y cell overexpressing SDC3"}
+DEFINE ANNOTATION TimeLine AS LIST {"3 hours", "18 hours"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Int J Mol Sci. 2021 Jun 30;22(13):7070. doi: 10.3390/ijms22137070.", "34209175"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Support = "Flow cytometry studies of ApoE-treated SDC transfectants showed that SDC overexpression increased the cellular uptake of ApoEs in an isoform-dependent manner: among SDCs, neuronal SDC3 increased ApoE internalization the best (Figure 1A,B)."
+SET BioAssay = "flow cytometry"
+SET Custom_CellLine = "K-562 cell overexpressing SDC"
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+SET MeSHAnatomy = "Neurons"
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET MeSHAnatomy
+
+
+SET Support = "Among ApoEs, SDCs increased ApoE2 and ApoE3 uptake most effectively, while SDCs' effect on increasing ApoE4 uptake was lower (Figure 1A,B)."
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+SET Support = "Compared to ApoE-treated WT K562 cells, the overall cellular fluorescence of FITC-ApoE-treated SDC transfectants also increased, indicating that SDC overexpression increased both the cellular binding and the uptake of ApoEs (Figure 1C)."
+p(HGNC:SDC1) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), a(GO:"plasma membrane"))
+p(HGNC:SDC1) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC1) -> complex(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC2) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), a(GO:"plasma membrane"))
+p(HGNC:SDC2) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC2) -> complex(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC2) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), a(GO:"plasma membrane"))
+p(HGNC:SDC2) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC2) -> complex(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC4) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), a(GO:"plasma membrane"))
+p(HGNC:SDC4) -> complex(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC4) -> complex(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), a(GO:"plasma membrane"))
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+
+SET Support = "In line with the flow cytometry measurement, confocal microscopy studies also revealed the more intense intracellular fluorescence of FITC-ApoE2- and ApoE3-treated SDC transfectants, while, compared to the other ApoE isoforms, the uptake of ApoE4 remained relatively modest (Figure 1D)."
+SET BioAssay = "confocal microscopy"
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+
+SET Support = "When immunoprecipitated with SDC3 from extracts of ApoE-treated SDC3 transfectants, ApoE2 exhibited the strongest band, followed by ApoE3 and 4 (Figure 2D and Supplementary Figure S4A), thus confirming the previously detected differences in the internalization efficacy of the ApoE isoforms (ApoE2 ≥ ApoE3 > ApoE4, as shown in Figure 1)."
+SET BioAssay = "immunoprecipitation"
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+UNSET Custom_CellLine
+
+
+
+SET Support = "Following immunoprecipitation with SDC3 from extracts of ApoE-treated differentiated SH-SY5Y cells, ApoE2 exhibited the strongest band, followed by ApoE3 and 4 (Figure 3C and Supplementary Figure S4B), further confirming the previously revealed differences in the internalization efficacy of the ApoE isoforms."
+SET CellLine = "SH-SY5Y cell"
+SET BioAssay = "immunoprecipitation"
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+UNSET CellLine
+
+
+SET Support = "Overexpressing SDC3 in differentiated SH-SY5Y cells increased uptake for all ApoE isoforms (Figure 4A–C). Among ApoEs, ApoE2 exhibited the highest internalization efficacy, while ApoE4 the lowest (Figure 4C)."
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET Custom_CellLine
+
+
+SET Support = "Cellular viability was also measured during the uptake studies: the ApoE treatment of both WT and SDC3-overexpressing SH-SY5Y cells left cellular viability unaffected (Supplementary Figure S6)."
+SET CellLine = "SH-SY5Y cell"
+p(HGNC:APOE) causesNoChange bp(MESH:"Cell Survival")
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:APOE), p(HGNC:SDC3)) causesNoChange bp(MESH:"Cell Survival")
+UNSET Custom_CellLine
+
+
+SET Support = "Thioflavin T (ThT) fluorescence studies revealed the slight fibrillation of Aβ1–42 at 3 h and a more intense one at 18 h, based on Figure 5A,B."
+SET BioAssay = "electron microscopy"
+SET TimeLine = "18 hours"
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+composite(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+UNSET Custom_CellLine
+
+
+
+SET Support = "SDC3 overexpression increased the fibrillation of Aβ1–42 at 18 h, while its effect at 3 h of incubation was insignificant (Figure 5A)."
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(GO:"amyloid fibril formation")
+UNSET Custom_CellLine
+UNSET TimeLine
+UNSET BioAssay
+
+SET Support = "ApoEs exerted differential effects on Aβ1–42 aggregation: ApoE2 decreased Aβ1–42 aggregation, even in SDC3-overexpressing transfectants at 18 h, while ApoE4 markedly increased it, both in the case of the WT SH-SY5Y cells and the SDC3 transfectants."
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -| bp(FIXME:"amyloid-beta 1-42 aggregation")
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(FIXME:"amyloid-beta 1-42 aggregation")
+UNSET Custom_CellLine
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -| bp(FIXME:"amyloid-beta 1-42 aggregation")
+composite(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(FIXME:"amyloid-beta 1-42 aggregation")
+UNSET CellLine
+
+
+SET Support = "Scanning electron microscopy further confirmed the effect of ApoEs on Aβ1–42 aggregation: the representative images of Figure 5B clearly show that ApoE2 reduced, and ApoE4 increased, Aβ1–42 aggregation."
+SET BioAssay = "scanning electron microscopy"
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -| bp(FIXME:"amyloid-beta 1-42 aggregation")
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(FIXME:"amyloid-beta 1-42 aggregation")
+UNSET Custom_CellLine
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -| bp(FIXME:"amyloid-beta 1-42 aggregation")
+composite(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(FIXME:"amyloid-beta 1-42 aggregation")
+UNSET CellLine
+
+
+SET Support = "These effects of ApoE2 and 4 were rather striking on SDC3-overexpressing SH-SY5Y cells, where ApoE2 reduced the number of aggregates, while ApoE4 further increased them."
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -| bp(FIXME:"amyloid-beta 1-42 aggregation")
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> bp(FIXME:"amyloid-beta 1-42 aggregation")
+UNSET Custom_CellLine
+
+
+SET Support = "ThT fluorescence studies on ApoE-treated SH-SY5Y cells and SDC3 transfectants revealed the fibrillation of ApoE4 at both 3 and 18 h of incubation (along with the fibrillation of ApoE3 at 3 h, Figure 5C)."
+SET TimeLine = {"3 hours", "18 hours"}
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg"))) -> bp(GO:"amyloid fibril formation")
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg"))) -> bp(GO:"amyloid fibril formation")
+UNSET Custom_CellLine
+UNSET TimeLine
+UNSET BioAssay
+
+
+SET Support = "Electron microscopic studies also show the formation of fibrillar-like aggregates on the surfaces of ApoE4-treated cells, especially at 18 h of incubation. The presence of such small fibrils on ApoE3-treated cells was less evident, while electron microscopy did not reveal ApoE2 fibrils on ApoE2-treated SH-SY5Y cells and SDC3 transfectants (Figure 5D)."
+SET BioAssay = "scanning electron microscopy"
+SET TimeLine = "18 hours"
+SET CellLine = "SH-SY5Y cell"
+p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")) -> bp(GO:"amyloid fibril formation")
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg"))) -> bp(GO:"amyloid fibril formation")
+UNSET Custom_CellLine
+UNSET TimeLine
+UNSET BioAssay
+
+
+SET Support = "In line with our previous findings [16], SDC3 overexpression increased the cellular uptake of Aβ1–42 at both 3 and 18 h of incubation (Figure 6A–D)." 
+SET BioAssay = "flow cytometry"
+SET TimeLine = "3 hours"
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -| tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET Custom_CellLine
+UNSET TimeLine
+SET TimeLine = "18 hours"
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET Custom_CellLine
+UNSET TimeLine
+
+
+SET Support = "ApoEs exerted various effects on Aβ1–42 uptake: at 3 h ApoE2 increased Aβ1–42 internalization, while ApoE4 reduced it (Figure 6A,C)."
+SET TimeLine = "3 hours"
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -| tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET Custom_CellLine
+UNSET TimeLine
+
+
+SET Support = "This effect of ApoEs on Aβ1–42 uptake was reversed at 18 h of incubation: ApoE4 increased Aβ1–42 uptake, while ApoE2 and 3 reduced it (Figure 6B,D)."
+SET TimeLine = "18 hours"
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET CellLine
+
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -| tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET TimeLine
+UNSET Custom_CellLine
+UNSET BioAssay
+
+
+SET Support = "Confocal microscopy also showed an increased presence of ThT-labeled aggregates at 18 h in WT and SDC3-overexpressing differentiated SH-SY5Y cells, which was reduced in the case of samples pretreated with ApoE2. ApoE4, on the other hand, increased the number of ThT-labeled aggregates, indicating the increased presence of Aβ1–42 aggregates (Figure 6E,F)."
+SET BioAssay = "confocal microscopy"
+SET TimeLine = "18 hours"
+SET CellLine = "SH-SY5Y cell"
+composite(p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -| tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+composite(p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET CellLine
+SET Custom_CellLine = "SH-SY5Y cell overexpressing SDC3"
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Cys"), var("p.His158Cys")), p(HGNC:APP, frag("1_42"))) -| tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+composite(p(HGNC:SDC3), p(HGNC:APOE, var("p.Ser112Arg"), var("p.His158Arg")), p(HGNC:APP, frag("1_42"))) -> tloc(p(HGNC:APP, frag("1_42")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) 
+UNSET Custom_CellLine
+UNSET TimeLine
+UNSET BioAssay
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Citation

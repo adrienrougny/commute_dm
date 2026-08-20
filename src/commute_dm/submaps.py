@@ -383,7 +383,7 @@ def count_mapping_entries(cd_maps):
 # They are cheap (a walk of the sub-map, which holds tens of elements) and they
 # hold for stored-only data too -- hash integration makes one database node
 # exactly one Python object -- so they are not BEL-specific; the BEL side is
-# simply the one that has to *establish* them (see `commute_dm.bel_terms`).
+# simply the one that has to *establish* them (see `commute_dm.bel2cd`).
 
 
 def iter_subunits(species):
@@ -588,9 +588,9 @@ def check_identity_invariants(cd_map):
 # label measuring and fitted synthetic glyphs
 # ---------------------------------------------------------------------------
 
-# These live here rather than in `commute_dm.bel_terms` because `commute_dm.core`
+# These live here rather than in `commute_dm.bel2cd` because `commute_dm.core`
 # needs `make_fitted_synthetic_layout` for every sub-map's synthetic central
-# node, in both pairings, while `bel_terms` is export-only. `bel_terms` imports
+# node, in both pairings, while `bel2cd` is export-only. `bel2cd` imports
 # them back; this module imports nothing of it, so the dependency is acyclic.
 
 # Wrapping keeps a glyph from becoming absurdly wide. Bare HGNC symbols are
@@ -665,7 +665,7 @@ def make_fitted_synthetic_layout(species, index):
 
     Used for `commute_dm.core`'s synthetic central node, whose `Unknown` default
     of 60x30 is too small for some display names. BEL species go through
-    `commute_dm.bel_terms.make_species_layouts`, which does the same fitting and
+    `commute_dm.bel2cd.make_species_layouts`, which does the same fitting and
     then makes room for subunits and badges.
     """
     layout_element = pd2af.celldesigner.building_layout.make_synthetic_layout(

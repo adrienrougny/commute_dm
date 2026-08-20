@@ -1,0 +1,195 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "37762442.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"SARS-CoV-2 Delta", "SARS-CoV-2 Omicron"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20190128.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Concentration AS LIST {"1 MOI"}
+DEFINE ANNOTATION SARS_CoV2_Variant AS LIST {"wild type", "Delta", "Omicron"}
+DEFINE ANNOTATION Custom_CellLine AS LIST {"293T cell", "ACE2-293T cell"}
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Int J Mol Sci. 2023 Sep 15;24(18):14140. doi: 10.3390/ijms241814140.", "37762442"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "A ~6-fold increase in the ACE2 expression with a ~30% reduced HS expression in the ACE2-293T cells (Figure 1B,E) resulted in a modestly (yet significantly, i.e., p < 0.01) increased WT SCV2 cellular uptake, an unchanged Delta cellular uptake, and a significantly reduced Omicron cellular uptake, highlightingthe increased importance of HS in the variants, especially for Omicron's cellular entry(Figure 2A–E)."
+SET Custom_CellLine = "ACE2-293T cell"
+SET SARS_CoV2_Variant = "wild type"
+p(HGNC:ACE2) -| p(HGNC:HSPG2)
+p(HGNC:ACE2) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Delta"
+p(HGNC:ACE2) causesNoChange tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Omicron"
+p(HGNC:ACE2) -| tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+UNSET Custom_CellLine
+
+SET Support = "Also, as noted in our previous report, SDC overexpression did not alter WT K562's ACE2 expression (Supplementary Figure S5) [28,37]."
+SET CellLine = "K 562 cell"
+p(HGNC:SDC1) causesNoChange p(HGNC:ACE2) 
+p(HGNC:SDC2) causesNoChange p(HGNC:ACE2) 
+p(HGNC:SDC3) causesNoChange p(HGNC:ACE2) 
+p(HGNC:SDC4) causesNoChange p(HGNC:ACE2)                   
+
+SET Support = "Imaging flow cytometry revealed that while SDC overexpression generally amplified the cellular entry of all viral particles, specific variations between the virus strains were observed (Figure 3A–E)."
+SET SARS_CoV2_Variant = "wild type"
+p(HGNC:SDC1) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Delta"
+p(HGNC:SDC1) -> tloc(p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Omicron"
+p(HGNC:SDC1) -> tloc(p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+
+SET Support = "The Delta variant showed the most pronounced increase in cellular entry in the cells overexpressing SDC1, 2, and 4, while the Omicron entered the SDC4 transfectants the most. This suggests that while the Delta variant exhibited evenly enhanced cellular uptake in all SDC transfectants, the Omicron variant predominantly favored SDC4 overexpression."
+SET SARS_CoV2_Variant = "Delta"
+p(HGNC:SDC1) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Omicron"
+p(HGNC:SDC4) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+UNSET CellLine
+
+SET Support = "Our findings reveal that SDC4 KD markedly diminished the cellular entry of all viruses (Figure 4A–G)."
+SET CellLine = "Calu-3 cell"
+SET SARS_CoV2_Variant = {"wild type", "Delta", "Omicron"}
+act(p(HGNC:SDC4)) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular)) -- bp(GO:"viral entry into host cell")
+UNSET SARS_CoV2_Variant
+
+SET Support = "Notably, the uptake of the Omicron variant was significantly lower compared to WT SCV2 in the SDC4 KD cells (Figure 4D–F)."
+SET SARS_CoV2_Variant = "Omicron"
+act(p(HGNC:SDC4)) -> tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+
+SET Support = "Compared with the WT Calu-3 cells, heparin inhibited the cellular entry of all the examined viruses, with the strongest effect observed for Omicron (Figure 4D,E,G)."
+SET SARS_CoV2_Variant = {"wild type", "Delta", "Omicron"}
+a(CHEBI:heparin) -| tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+UNSET BioAssay
+
+SET Support = "The cell viability studies showed that neither of the virus strains affected the cell viability at 1 MOI (Supplementary Figure S10)."
+SET BioAssay = "cell proliferation assay"
+SET Concentration = {"1 MOI"}
+SET SARS_CoV2_Variant = {"wild type", "Delta", "Omicron"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") causesNoChange bp(MESH:"Cell Survival")
+UNSET BioAssay
+UNSET Concentration
+UNSET SARS_CoV2_Variant
+
+
+SET Support = "The gene delivery studies with red fluorescent proteins (RFPs) encoding PSVs bearing the spike proteins of the respective strains (WT SCV2, Delta, or Omicron) showed that SDC4 KD decreased the cellular entry and gene delivery of all PSVs (Figure 6)."
+SET BioAssay = "flow cytometry"
+act(p(HGNC:SDC4)) -> bp(GO:"viral entry into host cell")
+SET SARS_CoV2_Variant = "wild type"
+act(p(HGNC:SDC4)) -> tloc(p(UNIPROT:P0DTC2), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Delta"
+act(p(HGNC:SDC4)) -> tloc(p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Omicron"
+act(p(HGNC:SDC4)) -> tloc(p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+
+SET Support = "Compared to the WT SCV2 spike-bearing PSVs, the Omicron spike-bearing PSVs exhibited significantly decreased gene delivery (p < 0.05; Figure 6C)."
+SET SARS_CoV2_Variant = "Omicron"
+act(p(HGNC:SDC4)) -> tloc(p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET SARS_CoV2_Variant
+UNSET CellLine
+UNSET BioAssay
+UNSET Section
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Citation

@@ -1,0 +1,267 @@
+SET DOCUMENT Name = "31719623.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+#DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"alpha-synuclein fibrillation", "tau fibrillation"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION TimeLine AS LIST {"18 hours","1 hour","3 hours","10 minutes"}
+DEFINE ANNOTATION Protein_Type  AS LIST {"fibril"}
+
+SET Citation = {"PubMed", "Sci Rep. 2019 Nov 12;9(1):16543. doi:10.1038/s41598-019-53038-z.", "31719623"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "Thus scanning electron microscopy revealed that the high number of fibrils on the cell surface of fibril-treated cells at the start (i.e. 10 min) of the incubation period was reduced at 3h, suggesting the onset of intense internalization."
+SET Species = "9606"
+SET CellLine = "K 562 cell"
+SET BioAssay = "scanning electron microscopy"
+SET TimeLine = "10 minutes"
+SET Protein_Type = "fibril"
+p(HGNC:SDC1) -> p(HGNC:SNCA)
+p(HGNC:SDC2) -> p(HGNC:SNCA)
+p(HGNC:SDC3) -> p(HGNC:SNCA)
+p(HGNC:SDC4) -> p(HGNC:SNCA)
+UNSET TimeLine
+SET TimeLine = "3 hours"
+p(HGNC:SDC1) -| p(HGNC:MAPT)
+p(HGNC:SDC2) -| p(HGNC:MAPT)
+p(HGNC:SDC3) -| p(HGNC:MAPT)
+p(HGNC:SDC4) -| p(HGNC:MAPT)
+UNSET TimeLine
+UNSET BioAssay
+
+SET Support = "As Fig. 1b,c show, SDCs - especially the neuron predominant SDC3 - increased the cellular uptake of fibrils, while internalization of Trf, the marker of clathrin-mediated endocytosis was reduced by SDC1-3 (and left unaffected by SDC4) suggesting that SDC mediated uptake of the fibrils occur through clathrin-independent routes."
+SET BioAssay = {"flow cytometry", "fluorescent labeling method"}
+act(p(HGNC:SDC3)) -> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC3)) -> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC3)) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC1)) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC2)) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+UNSET CellLine
+UNSET Protein_Type
+
+SET Support = "Microscopic studies revealed similar pattern as flow cytometry:namely that compared to WT K562 cells, fibril-treated SDC transfectants exhibited higher intracellular fluorescent signals (Fig. 1d)."
+SET BioAssay = "laser scanning confocal microscope"
+act(p(HGNC:SDC1)) -> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC1)) -> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC1)) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC2)) -> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC2)) -> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC2)) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC3)) -> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC3)) -> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+act(p(HGNC:SDC3)) -| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+SET Support = "Inducing undersulfation of SDCs’ HS chains with sodium chlorate (NaClO3), an inhibitor of protein sulfation, significantly (p<0.01) reduced on α-syn and tau fibril uptake in all cells lines, highlighting the importance of polyanionic HS chains in interaction with the proteins (Fig. 3a–d)."
+SET BioAssay = "flow cytometry"
+SET Protein_Type = "fibril"
+SET CellLine = {"SH-SY5Y cell", "K 562 cell"}
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC1, pmod(GO:"protein sulfation"))
+p(HGNC:SDC1, pmod(GO:"protein sulfation")) -> complex(p(HGNC:SNCA), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC2, pmod(GO:"protein sulfation"))
+p(HGNC:SDC2, pmod(GO:"protein sulfation")) -> complex(p(HGNC:SNCA), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC3, pmod(GO:"protein sulfation"))
+p(HGNC:SDC3, pmod(GO:"protein sulfation")) -> complex(p(HGNC:SNCA), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC4, pmod(GO:"protein sulfation"))
+p(HGNC:SDC4, pmod(GO:"protein sulfation")) -> complex(p(HGNC:SNCA), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC1, pmod(GO:"protein sulfation"))
+p(HGNC:SDC1, pmod(GO:"protein sulfation")) -> complex(p(HGNC:MAPT), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC2, pmod(GO:"protein sulfation"))
+p(HGNC:SDC2, pmod(GO:"protein sulfation")) -> complex(p(HGNC:MAPT), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC3, pmod(GO:"protein sulfation"))
+p(HGNC:SDC3, pmod(GO:"protein sulfation")) -> complex(p(HGNC:MAPT), a(GO:"plasma membrane"))
+a(CHEBI:"sodium chlorate") -| p(HGNC:SDC4, pmod(GO:"protein sulfation"))
+p(HGNC:SDC4, pmod(GO:"protein sulfation")) -> complex(p(HGNC:MAPT), a(GO:"plasma membrane"))
+UNSET BioAssay
+UNSET CellLine
+
+SET Support = "Compared to WT K562 cells, WT SDC4 transfectants exhibited the most significant (p<0.05) increase in α-syn and tau fibril uptake (Fig. 3f,g). "
+SET CellLine = "K 562 cell"
+p(HGNC:SDC4) -> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4) -> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET CellLine
+
+SET Support = "On the other hand, mutants with a truncated ectodomain containing only the HSA with the HS chains increased fibril internalization at an extent similar to SDC4 transfectants, thus confirming the significance of polyanionic HS chains in the interactions with α-syn or tau fibrils."
+SET CellLine = "SH-SY5Y cell"
+p(HGNC:SDC4,var("HSA.pSi4")) -> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4,var("HSA.pSi4")) -> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "SDC3 overexpression – either in differentiated or undifferentiated SH-SY5Y cells - induced increased HS expression, along with increased internalization of both fibrils (Fig. 4a,b)."
+SET BioAssay = "flow cytometry"
+p(HGNC:SDC3) -> a(CHEBI:"heparan sulfate")
+p(HGNC:SDC3) -> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+UNSET CellLine
+
+SET Support = "Thus SDC3 and to a lesser extent, SDC4 and triggered fibrillation of α-syn and tau over time (Fig. 5a,b)."
+SET BioAssay = "fluorescent labeling method"
+p(HGNC:SDC3) -> bp(FIXME:"alpha-synuclein fibrillation")
+p(HGNC:SDC3) -> bp(FIXME:"tau fibrillation")
+p(HGNC:SDC4) -> bp(FIXME:"alpha-synuclein fibrillation")
+p(HGNC:SDC4) -> bp(FIXME:"tau fibrillation")
+UNSET BioAssay
+
+SET Support = "The extent of fibril formation due to SDC overexpression, especially in the case of SDC2-4 is very spectacular:18h after addition of α-syn and tau monomers to SDC transfectants, scanning electron microscopy revealed widespread appearance of mature fibrils (i.e. larger than 2µm) expanding transcellularly. "
+SET CellLine = "K 562 cell"
+SET BioAssay = "scanning electron microscopy"
+SET TimeLine = "18 hours"
+p(HGNC:SDC2) -> p(HGNC:SNCA)
+p(HGNC:SDC3) -> p(HGNC:SNCA)
+p(HGNC:SDC4) -> p(HGNC:SNCA)
+p(HGNC:SDC2) -> p(HGNC:MAPT)
+p(HGNC:SDC3) -> p(HGNC:MAPT)
+p(HGNC:SDC4) -> p(HGNC:MAPT)
+UNSET TimeLine
+UNSET BioAssay
+UNSET Protein_Type
+
+SET Support = "Uptake studies showed that while at 1h of incubation the cellular uptake of monomeric α-syn and tau were lower in the SDC overexpressing lines, at 18h, when fibril are already formed due to SDCs, SDC overexpression also triggered higher amount of α-syn or tau uptake (Fig. 6a–f)."
+SET BioAssay = {"flow cytometry", "laser scanning confocal microscope"}
+SET TimeLine = "1 hour"
+p(HGNC:SDC1)-| tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2)-| tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-| tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4)-| tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1)-| tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2)-| tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-| tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4)-| tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET TimeLine
+SET Protein_Type ="fibril"
+SET TimeLine = "18 hours"
+p(HGNC:SDC2)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET TimeLine
+UNSET Protein_Type
+
+SET Support = "On the other hand, SDC transfectants – except for SDC4 – internalized less Trf at both time points, referring to affected clathrin-mediated endocytosis. "
+SET TimeLine = "1 hour"
+p(HGNC:SDC1)-| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2)-| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET TimeLine
+SET TimeLine = "18 hours"
+p(HGNC:SDC1)-| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-| tloc(p(HGNC:TF), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET TimeLine
+UNSET BioAssay
+
+SET Support = "Confocal microscopy also showed ThT-labeled aggregates intracellularly 18h after treatment with monomeric α-syn or tau, especially in SDC transfectants, suggesting once SDCs trigger the formation of α-syn or tau fibrils, they also mediate the intracellular translocation of the fibrils (Fig. 6h)."
+SET BioAssay = "confocal microscopy"
+SET Protein_Type ="fibril"
+p(HGNC:SDC1)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC1)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC2)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC4)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+UNSET Protein_Type
+
+SET Support = "Overexpressing SDC3 in SH-SY5Y cells, either differentiated or undifferentiated, induced lower uptake of α-syn or tau monomers at 1h (Fig. 8a,c), but significantly (p<0.05) higher at 18h of incubation, when fibrils are already formed, as revealed by both ThT fluorescence and electron microscopic studies (Fig. 8a–f)."
+SET CellLine = "SH-SY5Y cell"
+SET BioAssay = {"flow cytometry", "laser scanning confocal microscope"}
+SET TimeLine = "1 hour"
+p(HGNC:SDC3) -| tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3) -| tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET TimeLine
+SET TimeLine = "18 hours"
+p(HGNC:SDC3)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+
+SET Support = "Thus 18h after addition of α-syn or tau monomers, overexpressed SDC3 - either in undifferentiated or differentiated SH-SY5Y cells - triggered the fibrillation of both proteins"
+p(HGNC:SDC3) -> bp(FIXME:"alpha-synuclein fibrillation")
+p(HGNC:SDC3) -> bp(FIXME:"tau fibrillation")
+UNSET TimeLine
+UNSET BioAssay
+
+SET Support = "Electron microscopy also revealed widespread presence of mature fibrils on SDC3 overexpressing SH-SY5Y cells at 18h (Fig. 8c–e), while confocal microscopic studies showed higher number of ThT-labeled aggregates in SDC3 transfectants at the same time point (Fig. 8f), suggesting that while inducing fibrillation, SDC3 also facilitate the uptake of fibrillar α-syn or tau."
+SET BioAssay = {"electron microscopy", "laser scanning confocal microscope"}
+SET Protein_Type ="fibril"
+p(HGNC:SDC3) -> bp(FIXME:"alpha-synuclein fibrillation")
+p(HGNC:SDC3) -> bp(FIXME:"tau fibrillation")
+p(HGNC:SDC3)-> tloc(p(HGNC:SNCA), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+p(HGNC:SDC3)-> tloc(p(HGNC:MAPT), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET Protein_Type
+UNSET BioAssay
+UNSET CellLine
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

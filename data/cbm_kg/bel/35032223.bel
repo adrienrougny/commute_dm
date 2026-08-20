@@ -1,0 +1,185 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "35032223.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"refractory shock","diffuse alveolar damage","visceral congestion"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Technique AS LIST {"computed tomography scan"}
+DEFINE ANNOTATION Custom_anatomy AS LIST {"septal vessel"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Insights Imaging. 2022 Jan 15;13(1):7. doi: 10.1186/s13244-021-01144-w.", "35032223"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+
+SET Support = "All patients were very critically ill, with acute respiratory distress syndrome and mechanical ventilation, associated with acute kidney failure and refractory shock"
+path(DO:"COVID-19") pos path(DO:"adult respiratory distress syndrome")
+a(NCIT:"Mechanical Ventilation") -| path(DO:"COVID-19")
+path(DO:"acute kidney failure") -- path(DO:"COVID-19")
+path(FIXME:"refractory shock") -- path(DO:"COVID-19")
+
+SET Support = "One patient had cortical–subcortical probably chronic infarcts with petechial hemorrhages (two large infarcts—right frontal and left parietal, and two smaller infarct—left cerebellar and right frontal) (Fig. 2)."
+SET MeSHAnatomy = {"Brain", "Cerebellum"}
+SET Cell = {"right frontal lobe", "left parietal lobe"}
+path(DO:"COVID-19") -> path(DO:"brain infarction")
+path(DO:"COVID-19") -> path(HP:Petechiae)
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "One patient had bilateral frontal and parietal subarachnoid hemorrhage, and signal abnormalities in both corticospinal tracts, bilateral basal ganglia, hippocampi and cortical/subcortical parietal bilaterally, and in the right frontal lobe (Fig. 3). "
+SET Anatomy = {"frontal sulcus", "sulcus of parietal lobe"}                          
+SET Technique = "computed tomography scan"
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+UNSET Anatomy
+path(DO:"COVID-19") -> path(MESH:"Subarachnoid Hemorrhage")
+SET Anatomy = {"corticospinal tract", "collection of basal ganglia", "hippocampal field", "right frontal lobe"}
+path(DO:"COVID-19") -> path(HP:"Abnormal synaptic transmission")
+UNSET Anatomy
+
+
+SET Support = "Increased T2 and FLAIR signal associated with punctate hemorrhagic foci was identifed in the splenium of corpus callosum in patient 4 (Fig. 4c, d)."
+SET Anatomy = "splenium of the corpus callosum"
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+UNSET Anatomy
+
+SET Support = "Patient 5 had some nonspecific multifocal white matter abnormalities with increased T2 and FLAIR signal, and some punctate hemorrhagic foci in the right frontal white matter (Fig.  5a, b)."
+SET MeSHAnatomy = "White Matter"
+SET Cell = "white matter of frontal lobe"
+path(DO:"COVID-19") -> path(HP:"Abnormality of the cerebral white matter")
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "Periventricular punctate hemorrhagic foci were noted in patient 7 (Fig. 5c, d)."
+SET MeSHAnatomy = "Brain" 
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+UNSET MeSHAnatomy
+
+SET Support = "One subject had difuse edema and patchy white matter focal abnormalities. This patient did not undergo cerebral sampling (family did not consent) (Fig. 4a, b)."
+SET MeSHAnatomy = "White Matter"
+path(DO:"COVID-19") -> path(DO:"brain edema")
+path(DO:"COVID-19") -> path(HP:"Abnormality of the cerebral white matter")
+UNSET MeSHAnatomy
+UNSET Technique
+
+SET Support = "Histological brain analysis showed reactive gliosis, congestion and cortical neuron eosinophilic degeneration, and axonal disruption in all six cases (Fig. 6)"
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Brain", "Cerebral Cortex"}
+path(DO:"COVID-19") -> path(MESH:Gliosis)
+path(DO:"COVID-19") -> a(NCIT:"Tissue Congestion")
+path(DO:"COVID-19") -| deg(a(MESH:Eosinophils))
+path(DO:"COVID-19") -> path(HP:"Axonal degeneration")
+UNSET MeSHAnatomy
+
+SET Support = "Other findings included edema (5 cases), discrete perivascular hemorrhages (5), cerebral small vessel disease (3), perivascular hemosiderin deposits (3), Alzheimer type II glia (3), abundant corpora amylacea (3), foci of ischemic area (1), foci of periventricular encephalitis (1), fibrin thrombi (1) and periventricular vascular ectasia (1) (Fig. 6)."
+SET MeSHAnatomy = "Brain"
+path(DO:"COVID-19") -> path(DO:"brain edema")
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+path(DO:"COVID-19") -> path(MESH:"Cerebral Small Vessel Diseases")
+path(DO:"COVID-19") -> a(NCIT:"Hemosiderin Deposition")
+path(DO:"COVID-19") -> a(NCIT:"Alzheimer Type II Astrocyte")
+path(DO:"COVID-19") -> a(NCIT:"Corpora Amylacea")
+path(DO:"COVID-19") -> path(DO:ischemia) 
+path(DO:"COVID-19") -> path(DO:encephalitis)
+path(DO:"COVID-19") -> bp(GO:"blood coagulation, fibrin clot formation")
+path(DO:"COVID-19") -> a(NCIT:"Vascular Ectasia")
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+
+SET Support = "Other autopsy findings included typical COVID-19 pneumonia (diffuse alveolar damage, pneumocyte cytopathic changes, fibrin thrombi and increased megakaryocytes in septal vessels), acute tubular necrosis and visceral congestion."
+path(DO:"COVID-19") -> path(DO:pneumonia)
+path(DO:"COVID-19") -> path(FIXME:"diffuse alveolar damage")
+SET Cell = "pneumocyte"
+path(DO:"COVID-19") -> bp(MESH:"Cytopathogenic Effect, Viral")
+UNSET Cell
+path(DO:"COVID-19") -> bp(GO:"blood coagulation, fibrin clot formation") 
+SET Custom_anatomy = "septal vessel"
+path(DO:"COVID-19") -| a(MESH:Megakaryocytes)      
+UNSET Custom_anatomy                                          
+path(DO:"COVID-19") -> path(HP:"Acute tubular necrosis")
+path(DO:"COVID-19") -> path(FIXME:"visceral congestion")
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Section
+UNSET Species
+UNSET Citation

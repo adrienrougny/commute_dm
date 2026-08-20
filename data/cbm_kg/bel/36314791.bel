@@ -1,0 +1,358 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "36314791.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causlitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190128.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20190128.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Concentration AS LIST {"20 mM", "4 mM", "0.8 mM", "0.16 mM", "0.032 mM", "0.0064 mM"}
+DEFINE ANNOTATION SARS_CoV2_Variant AS LIST {"Delta", "Omicron"}
+DEFINE ANNOTATION Custom_CellLine AS LIST {"VERO-E6 cell"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "mBio. 2022 Dec 20;13(6):e0230822. doi: 10.1128/mbio.02308-22. ", "36314791"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+
+SET Support = "Together, these data suggest that high levels of SARS-CoV-2 infection remain in astrocytes, although lower levels of infection in neurons and neural progenitor cells also occur."
+SET MeSHAnatomy = {"Brain", "Organoids","Astrocytes"}
+path(DO:"COVID-19") -> path(DO:"COVID-19")
+UNSET MeSHAnatomy
+
+
+SET Support = "These results support the conclusion that astrocytes can support SARS-CoV-2 replication." 
+a(MESH:Astrocytes) -> bp(GO:"viral genome replication")
+bp(GO:"viral genome replication") -- a(TAX:"Severe acute respiratory syndrome coronavirus 2")
+
+
+SET Support = "As expected, the ACE2 protein was highly expressed in Vero-E6 cells but only weakly detected in astrocytes, suggesting the potential involvement of an alternative receptor in astrocytes. "
+SET Custom_CellLine = "VERO-E6 cell"  
+SET BioAssay = "real-time PCR "
+path(DO:"COVID-19") -> r(UNIPROT:Q1LZX8)
+UNSET Custom_CellLine
+
+SET Support = "In contrast, NRP1, a recently identified receptor for SARS-CoV-2(34, 35), was highly expressed in astrocytes and neurons but only minimally expressed in Vero-E6 cells."
+SET MeSHAnatomy = {"Brain", "Organoids","Astrocytes", "Neurons"}
+path(DO:"COVID-19") -> r(HGNC:NRP1)
+UNSET MeSHAnatomy
+
+SET Support = "AXL, a second potential receptor for SARS-CoV-2, was highly expressed in Vero-E6 cells and astrocytes but not neurons (36)."
+SET CellLine = "VERO 76 cell"
+path(DO:"COVID-19") -> r(UNIPROT:Q14UF1)
+UNSET CellLine
+
+SET MeSHAnatomy = {"Brain", "Organoids","Astrocytes"}
+path(DO:"COVID-19") -> r(HGNC:AXL)
+UNSET MeSHAnatomy
+
+
+SET Support = "At the RNA level, the levels of NRP1 and AXL mRNAs were 140,000-fold and 200,000-fold higher, respectively, than the levels of ACE2 mRNA in astrocytes (Fig. S1A)."
+SET MeSHAnatomy = {"Brain", "Organoids","Astrocytes"}
+path(DO:"COVID-19") pos r(HGNC:NRP1)
+path(DO:"COVID-19") pos r(HGNC:AXL)
+UNSET MeSHAnatomy
+
+
+SET Support = "The levels of NRP1 and AXL mRNAs were 3,000-fold and 150-fold higher, respectively, than the levels of ACE2 mRNA in neurons(Fig. S1B)."
+SET MeSHAnatomy = {"Brain", "Organoids","Neurons"}
+path(DO:"COVID-19") -> r(HGNC:NRP1)
+path(DO:"COVID-19") -> r(HGNC:AXL)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "The siRNAs specific for NRP1, but not AXL, strongly inhibited the infection of astrocytes by SARS-CoV-2, as assessed by the reduced expression of viral nucleocapsid (N) mRNA (Fig. 2D)."
+SET MeSHAnatomy = {"Brain", "Organoids","Astrocytes"}
+act(p(HGNC:NRP1)) -> path(DO:"COVID-19")
+act(p(HGNC:NRP1)) -> r(UNIPROT:P0DTC9)
+UNSET BioAssay
+
+SET Support = "The effective knockdown of TPCN2, TMPRSS2, DPP4, and CD147 was similarly achieved (Fig. 2C), but only TPCN2 knockdown inhibited SARS-CoV-2 infection in astrocytes (Fig. 2D)."
+p(HGNC:TPCN2) -> r(UNIPROT:P0DTC9)
+
+
+SET Support = "Further supporting a requirement for endocytosis, the knockdown of cathepsin L (CTSL) also inhibited infection (Fig. 2D)."
+p(HGNC:CTSL) -> path(DO:"COVID-19")
+
+
+SET Support = "However. treatment of primary astrocytes with a neutralizing anti-ACE2 antibody did not significantly impair SARS-CoV-2 infection, while treatment with anti-NRP1 antibody strongly and significantly blocked infection (Fig. 2E and Fig. S1C)."
+act(p(HGNC:NRP1)) -> path(DO:"COVID-19")
+UNSET MeSHAnatomy
+
+SET Support = "In contrast, the anti-ACE2 antibodies significantly blocked SARS-CoV-2 infection of Vero-E6 cells, while anti-NRP1 antibodies did not (Fig. 2F)."
+SET CellLine = "VERO 76 cell"
+act(p(UNIPROT:Q14UF1)) -> path(DO:"COVID-19")  
+UNSET CellLine
+
+SET Support = "Both inhibitors produced dose-related inhibition of SARS-CoV-2 infection of astrocytes, with EG01377 displaying slightly higher potency than EG00229 (Fig. S1D)"
+SET MeSHAnatomy = {"Brain", "Organoids","Astrocytes"}
+a(PUBCHEM:133081972) -| path(DO:"COVID-19")
+a(PUBCHEM:45142253) -| path(DO:"COVID-19")
+
+SET Support = "At the highest dose tested, 20 mM, EG00229 produced moderate cell toxicity, which was not observed with EG10377 (Fig. S1E)."
+SET Concentration = "20 mM"
+a(PUBCHEM:45142253) -> a(NCIT:Cytotoxicity)
+UNSET Concentration
+
+SET Support = "Tetrandrine, a calcium channel blocker and inhibitor of the TPCN2 gene product, also produced dose-dependent inhibition of SARS-CoV-2 infection (Fig. S1D). Fifty percent cell death was observed at the highest drug concentration (20 mM), but at lower, nontoxic doses, viral infection was inhibited in a dose-related manner (Fig. S1E)."
+SET Concentration = {"4 mM", "0.8 mM", "0.16 mM", "0.032 mM", "0.0064 mM"}
+a(CHEBI:"(+)-Tetrandrine") -| path(DO:"COVID-19")
+UNSET Concentration
+SET Concentration = "20 mM"
+a(CHEBI:"(+)-Tetrandrine") -> bp(GO:"cell death")
+UNSET Concentration
+
+
+
+SET Support = "Hierarchical clustering revealed that SARS-CoV-2 induced increased transcription of inflammatory chemokines, including CCL3 and CXCL3 (Fig. S2A and B), indicating the activation of an intrinsic inflammatory response."
+path(DO:"COVID-19") pos r(HGNC:CCL3)
+path(DO:"COVID-19") pos r(HGNC:CXCL3)
+path(DO:"COVID-19") -> bp(GO:"inflammatory response")
+
+
+SET Support = "Type I interferon (IFN-I)-related genes, including IFIT1, IFIT3, STAT1, EGR1, ISG15, MX1, IFI6, IFI27, IFITM1, and BST2, were also strongly induced following SARS-CoV-2 infection (Fig. 4C)."
+path(DO:"COVID-19") pos r(HGNC:IFIT1)
+path(DO:"COVID-19") pos r(HGNC:IFIT3)
+path(DO:"COVID-19") pos r(HGNC:STAT1)
+path(DO:"COVID-19") pos r(HGNC:EGR1)
+path(DO:"COVID-19") pos r(HGNC:ISG15)
+path(DO:"COVID-19") pos r(HGNC:MX1)
+path(DO:"COVID-19") pos r(HGNC:IFI6)
+path(DO:"COVID-19") pos r(HGNC:IFI27)
+path(DO:"COVID-19") pos r(HGNC:IFITM1)
+path(DO:"COVID-19") pos r(HGNC:BST2)
+
+SET Support = "Pathway analysis revealed the activation of genes involved in chromatin modification (CHD1, H2BC5, H2AC12, and INO80) as well as genes mediating cell activation and apoptosis (Fig. 4E)."
+path(DO:"COVID-19") pos r(HGNC:CHD1)
+path(DO:"COVID-19") pos r(HGNC:HIST1H2BD)
+path(DO:"COVID-19") pos r(HGNC:HIST1H2AH)
+path(DO:"COVID-19") pos r(HGNC:INO80)
+path(DO:"COVID-19") -> bp(GO:"cell activation")
+path(DO:"COVID-19") -> bp(GO:"cell death")
+
+SET Support = "NOD2, a member of the Nod-like receptor (NLR) family of intracellular sensors of pathogen/microbe-associated molecular patterns,was upregulated, promoting NF-kB and mitogen-activated protein kinase (MAPK) activation, which in turn stimulated the production of proinflammatory cytokines and chemokines(Fig. 4D). "
+path(DO:"COVID-19") -> act(complex(GO:"NF-kappaB complex"))
+path(DO:"COVID-19") -> act(p(GFAM:"Mitogen-activated protein kinases"))
+bp(GO:"activation of MAPK activity") -> bp(GO:"cytokine production")
+bp(GO:"activation of MAPK activity") -> bp(GO:"chemokine production")
+
+SET Support = "Several different classes of genes were downregulated after SARS-CoV-2 infection, including those involved in cell-cell communication, cell junction organization, ion and fatty acid homeostasis, and solute carrier (SLC)-mediated transmembrane transport(Fig. 4E)."
+path(DO:"COVID-19") -| bp(GO:"cell-cell signaling")
+path(DO:"COVID-19") -| bp(GO:"cell junction organization")
+path(DO:"COVID-19") -| bp(GO:"cellular ion homeostasis")
+path(DO:"COVID-19") -| bp(GO:"fatty acid homeostasis")
+path(DO:"COVID-19") -| bp(GO:"transmembrane transport")
+
+SET Support = "SLC-mediated transporters for thyroid hormone, ions, amino acids, choline, and energetic substrates (47) (e.g., SLC16A2, SLC41A3, SLC16A10, SLC44A1, and SLC35C2) were downregulated following viral infection (Fig. S2C)."
+path(DO:"COVID-19") neg r(HGNC:SLC16A2)
+path(DO:"COVID-19") neg r(HGNC:SLC41A3)
+path(DO:"COVID-19") neg r(HGNC:SLC16A10)
+path(DO:"COVID-19") neg r(HGNC:SLC44A1)
+path(DO:"COVID-19") neg r(HGNC:SLC35C2)
+
+SET Support = "Lower expression levels of genes associated with synapse function, including CAMK2D, ERBB2, C1QL, and SYPL1, were also observed (Fig. S2C), suggesting that SARS-CoV-2 infection can negatively impact neuronal function."
+path(DO:"COVID-19") neg r(HGNC:CAMK2D)
+path(DO:"COVID-19") neg r(HGNC:ERBB2)
+path(DO:"COVID-19") neg r(HGNC:C1QL1)
+path(DO:"COVID-19") neg r(HGNC:SYPL1)
+
+SET Support = "In this regard, DNA methylation profiling of SARS-CoV-2-infected brain organoids also revealed the hypermethylation of numerous genes involved in neurogenesis, axonogenesis, and synaptic transmission (Fig. 4F and Fig. S3 and S4)"
+path(DO:"COVID-19") -> bp(GO:"DNA hypermethylation")
+bp(GO:"DNA hypermethylation") -- bp(GO:neurogenesis)
+bp(GO:"DNA hypermethylation") -- bp(GO:axonogenesis)
+bp(GO:"DNA hypermethylation") -- bp(GO:"chemical synaptic transmission")
+
+SET Support = "RT-qPCR was used to validate the activation of several genes in the type I interferon pathway, including MX1, IFI6, and ISG15 (Fig. S2D)."
+SET BioAssay = "real-time PCR "
+path(DO:"COVID-19") pos r(HGNC:MX1)
+path(DO:"COVID-19") pos r(HGNC:IFI6)
+path(DO:"COVID-19") pos r(HGNC:ISG15)
+
+SET Support = "The proinflammatory chemokines CCL3, CXCL3, and CXCL10 were also upregulated following infection, while synapse-related genes, including C1QL1 and SYPL1, were downregulated (Fig. S2D)."
+path(DO:"COVID-19") pos r(HGNC:CCL3)
+path(DO:"COVID-19") pos r(HGNC:CXCL3)
+path(DO:"COVID-19") pos r(HGNC:CXCL10)
+path(DO:"COVID-19") neg r(HGNC:C1QL1)
+path(DO:"COVID-19") neg r(HGNC:SYPL1)
+
+
+SET Support = "Of note, the expression of the major water channel in astrocytes, aquaporin-4 (AQP4), was strikingly inhibited following viral infection."
+path(DO:"COVID-19") neg r(HGNC:AQP4)
+
+
+SET Support = "Of note, the Delta and Omicron variants, although less infectious in the brain organoids, also induced similar levels of interferon activation, inflammation, and downregulation of AQP4 (Fig. S2E), arguing for retention of neurotoxic potential."
+SET SARS_CoV2_Variant = "Delta"
+p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")) pos r(HGNC:ISG15)
+p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")) pos r(HGNC:CXCL10)
+p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")) neg r(HGNC:AQP4)                                
+p(UNIPROT:P0DTC2, var("p.del156EF157"), var("p.T19R"), var("p.R158G"), var("p.L452R"), var("p.T478K"), var("p.D614G"), var("p.P681R"), var("p.D950N")) neg r(HGNC:SYPL1)
+UNSET SARS_CoV2_Variant
+SET SARS_CoV2_Variant = "Omicron"
+p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")) pos r(HGNC:ISG15)
+p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")) pos r(HGNC:CXCL10)
+p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")) neg r(HGNC:AQP4) 
+p(UNIPROT:P0DTC2, var("p.del25PPA27"), var("p.del69HV70"), var("p.T19I"), var("p.L24S"), var("p.G142D"), var("p.V213G"), var("p.G339D"), var("p.S371F"), var("p.S373P"), var("p.S375F"), var("p.T376A"), var("p.D405N"), var("p.R408S"), var("p.K417N"), var("p.N440K"), var("p.L452R"), var("p.S477N"), var("p.T478K"), var("p.E484A"), var("p.F486V"), var("p.Q498R"), var("p.N501Y"), var("p.Y505H"), var("p.D614G"), var("p.H655Y"), var("p.N679K"), var("p.P681H"), var("p.N764K"), var("p.D796Y"), var("p.Q954H"), var("p.N969K")) neg r(HGNC:SYPL1)
+UNSET SARS_CoV2_Variant
+
+SET Support = "A marked upregulation of type I IFN-stimulated genes (ISGs), including IFI144, IFI27, IFI35, IFI6, IFI30, IFI44L, LY6E, MX1, MX2, IFIT1, IFIT2, IFIT3, IFIT5, ISG20, and ISG15, was observed in infected cells (Fig. 5A and B)."
+path(DO:"COVID-19") pos r(HGNC:IFI44)
+path(DO:"COVID-19") pos r(HGNC:IFI27)
+path(DO:"COVID-19") pos r(HGNC:IFI35)
+path(DO:"COVID-19") pos r(HGNC:IFI6)
+path(DO:"COVID-19") pos r(HGNC:IFI30)
+path(DO:"COVID-19") pos r(HGNC:IFI44L)
+path(DO:"COVID-19") pos r(HGNC:LY6E)
+path(DO:"COVID-19") pos r(HGNC:MX1)
+path(DO:"COVID-19") pos r(HGNC:MX2)
+path(DO:"COVID-19") pos r(HGNC:IFIT1)
+path(DO:"COVID-19") pos r(HGNC:IFIT2)
+path(DO:"COVID-19") pos r(HGNC:IFIT3)
+path(DO:"COVID-19") pos r(HGNC:IFIT5)
+path(DO:"COVID-19") pos r(HGNC:ISG20)
+path(DO:"COVID-19") pos r(HGNC:ISG15)
+
+SET Support = "The upregulation of various IFN-induced oligoadenylate synthetase (OAS) antiviral genes, including OAS1, OAS2, OAS3, and OASL, was also detected in the infected astrocytes (Fig. S5E), further confirming the activation of type I IFN signaling in astrocytes"
+SET MeSHAnatomy = "Astrocytes"
+path(DO:"COVID-19") pos r(HGNC:OAS1)
+path(DO:"COVID-19") pos r(HGNC:OAS2)
+path(DO:"COVID-19") pos r(HGNC:OAS3)
+path(DO:"COVID-19") pos r(HGNC:OASL)
+path(DO:"COVID-19") pos r(HGNC:ISG15)
+path(DO:"COVID-19") pos bp(GO:"type I interferon signaling pathway")
+UNSET MeSHAnatomy
+
+SET Support = "SARS-CoV-2-infected astrocytes also exhibited increased transcription levels of many inflammatory chemokines/cytokines, including CXCL10, CXCL16, CXCL1, CXCL2, interleukin-15 (IL-15), and IL-7 (Fig. 5B)."
+path(DO:"COVID-19") pos r(HGNC:CXCL10)
+path(DO:"COVID-19") pos r(HGNC:CXCL16)
+path(DO:"COVID-19") pos r(HGNC:CXCL1)
+path(DO:"COVID-19") pos r(HGNC:CXCL2)
+path(DO:"COVID-19") pos r(HGNC:IL15)
+path(DO:"COVID-19") pos r(HGNC:IL7)
+
+SET Support = "Gene ontology (GO) and WikiPathways analyses of the upregulated genes in infected cells revealed the enrichment of genes induced by type I, II, and III interferons and genes involved in Toll-like receptor (TLR), MDA5, and RIG-I sensing of double-stranded RNA."
+path(DO:"COVID-19") pos bp(GO:"type I interferon signaling pathway")
+path(DO:"COVID-19") pos bp(PW:"type II interferon signaling pathway")
+path(DO:"COVID-19") pos bp(GO:"type III interferon signaling pathway")
+path(DO:"COVID-19") pos bp(GO:"toll-like receptor signaling pathway")
+path(DO:"COVID-19") pos act(p(HGNC:IFIH1))
+path(DO:"COVID-19") pos act(p(HGNC:DDX58))
+
+
+SET Support = "Additionally, the levels of genes involved in DNA demethylation, proinflammatory responses, apoptosis, p38 MAPK signaling, and neurodegenerative signaling like that found in Parkinson's disease and amyotrophic lateral sclerosis were also increased (Fig. 5C and Fig. S5F)."
+path(DO:"COVID-19") pos bp(GO:"DNA demethylation")
+path(DO:"COVID-19") pos bp(GO:"inflammatory response")
+path(DO:"COVID-19") pos bp(GO:"apoptotic process")
+path(DO:"COVID-19") pos bp(PW:"p38 MAPK signaling pathway")
+path(DO:"COVID-19") pos path(MESH:"Nerve Degeneration")
+
+SET Support = "SARS-CoV-2 infection of astrocytes upregulates the expression of APOBEC3B, APOBEC3C, APOBEC3D, APOBEC3G, and APOBEC3F."
+path(DO:"COVID-19") pos r(HGNC:APOBEC3B)
+path(DO:"COVID-19") pos r(HGNC:APOBEC3C)
+path(DO:"COVID-19") pos r(HGNC:APOBEC3D)
+path(DO:"COVID-19") pos r(HGNC:APOBEC3G)
+path(DO:"COVID-19") pos r(HGNC:APOBEC3F)
+
+
+SET Support = "Of note, the MX1 gene displayed the highest log fold change in expression (.6-fold), which was accompanied by a 25% decline in promoter methylation. ISG20 and ZCCHC3 also became hypomethylated at their promoters during SARS-CoV-2 infection."
+path(DO:"COVID-19") -> bp(GO:"DNA hypomethylation")
+bp(GO:"DNA hypomethylation") -- g(HGNC:MX1)
+path(DO:"COVID-19") -> bp(GO:"DNA hypermethylation")
+bp(GO:"DNA hypermethylation") -- g(HGNC:ISG20)
+bp(GO:"DNA hypermethylation") -- g(HGNC:ZCCHC3)
+
+SET Support = "GO analyses of downregulated genes in infected astrocytes again revealed the enrichment of genes involved in water transport, synaptic transmission, ion and lipid transport, the formation of cell junctions, and calcium binding (Fig. 5D). These included AQP4, the predominant water channel found within the foot processes of astrocytes, and a number of SLC-mediated transporters, including SLC1A2, SLC7A10, SLC18A3, SLC6A1, SLC4A10, and SLCO1C1. "
+path(DO:"COVID-19") neg r(HGNC:AQP4)
+path(DO:"COVID-19") neg r(HGNC:SLC1A2)
+path(DO:"COVID-19") neg r(HGNC:SLC7A10)
+path(DO:"COVID-19") neg r(HGNC:SLC18A3)
+path(DO:"COVID-19") neg r(HGNC:SLC6A1)
+path(DO:"COVID-19") neg r(HGNC:SLC4A10)
+path(DO:"COVID-19") neg r(HGNC:SLCO1C1)
+
+
+SET Support = "Additionally, the marked decrease in the expression of genes involved in synapse maintenance, including SYNPR, SYT, C1QL1, and TUBB4A (Fig. S5G), within astrocytes further highlights an indirect mechanism through which SARS-CoV-2 can adversely affect synaptic transmission and overall neuronal function."
+path(DO:"COVID-19") neg r(HGNC:SYNPR)
+path(DO:"COVID-19") neg r(HGNC:SYT1)
+path(DO:"COVID-19") neg r(HGNC:C1QL1)
+path(DO:"COVID-19") neg r(HGNC:TUBB4A)
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Section
+UNSET Citation

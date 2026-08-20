@@ -1,0 +1,298 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "PMID_32164424"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "COVID-19: An Update on the Epidemiological, Clinical, Preventive and \
+Therapeutic Evidence and Guidelines of Integrative Chinese–Western \
+Medicine for the Management of 2019 Novel Coronavirus Disease"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20200529.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+# DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+# DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+# DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20190128.belanno"
+# DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"PubMed", "32164424"}
+
+SET Support = "SARS-CoV-2 binds to angiotensin-converting enzyme 2 (ACE2) receptor with 10–20 folds higher affinity than SARS-CoV with similarities (40%) in the amino acid identity ofSpike’s receptor binding domain (RBD)"
+SET Species = "9606"
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -- p(HGNC:"ACE2")
+
+SET Support = " Common symptoms included fever (88–98%), fatigue, dry cough, upper airway congestion, sputum production,shortness of breath, myalgia/arthralgia, and gastrointestinal symptoms with lymphopenia, prolonged prothrombin time, elevated C-reactive protein, and elevated lactate dehydrogenase (LDH)"
+path(DO:"COVID-19") -> path(MESHD:"Fever")
+path(DO:"COVID-19") -> path(MESHD:"Fatigue")
+path(DO:"COVID-19") -> path(MESHD:"Cough")
+path(DO:"COVID-19") -> a(NCIT:"Sputum")
+path(DO:"COVID-19") -> path(MESHD:"Dyspnea")
+path(DO:"COVID-19") -> path(MESHD:"Myalgia")
+path(DO:"COVID-19") -> path(MESHD:"Arthralgia")
+path(DO:"COVID-19") -> path(DO:"gastrointestinal system disease")
+path(DO:"COVID-19") -> path(DO:"lymphopenia")
+path(DO:"COVID-19") -> p(HGNC:"CRP")
+path(DO:"COVID-19") -> p(ECCODE:1.1.1.27)
+
+SET Support = "Chest computed tomographic showed bilateral patchy shadows or ground glass opacity."
+path(DO:"COVID-19") -> a(NCIT:"Ground Glass Opacity")
+
+SET Support = "The estimated time from the first symptom to pneumonia (confirmed by radiology), hospital admission, acute respiratory distress syndrome (ARDS)and intensive care unit (ICU) admission were 5.0, 7.0, 8.0–9.0, and 9.5–10.5 days "
+path(DO:"COVID-19") -> path(DO:"pneumonia")
+path(DO:"COVID-19") -> path(DO:"adult respiratory distress syndrome")
+
+SET Support = "From the 138 hospitalized cases from Wuhan, the non-survivors when compared to the survivors began with reduced lymphocyte count 3 days after onset of disease, followed by increasing leukocyte count, neutrophil count and D-dimer after 5 days before an abrupt rise in creatinine and blood urea after 9 days of disease onset."
+path(DO:"COVID-19") -| a(MESHA:"Lymphocytes")
+path(DO:"COVID-19") -> a(MESHA:"Leukocytes")
+path(DO:"COVID-19") -> a(MESHA:"Neutrophils")
+path(DO:"COVID-19") -> a(MESH:"fibrin fragment D")
+path(DO:"COVID-19") -> a(PUBCHEM:588)
+# PUBCHEM:588 corresponds to creatinine
+SET Anatomy = "blood"
+path(DO:"COVID-19") -> a(PUBCHEM:1176)
+# PUBCHEM:1176 corresponds to urea
+UNSET Anatomy
+
+SET Support = "Major complications during hospitalization were ARDS, arrhythmia and shock."
+path(DO:"COVID-19") -> path(MESHD:"Arrhythmias, Cardiac")
+path(DO:"COVID-19") -> path(MESHD:"Shock")
+
+SET Support = "Factors associated with severe presentation included older, underlying comorbidities(hypertension, diabetes, coronary heart disease, chronic obstructive pulmonary disease) and presented with dyspnoea, anorexia, and rash"
+path(DO:"COVID-19") pos path(DO:"hypertension")
+path(DO:"COVID-19") pos path(DO:"diabetes mellitus")
+path(DO:"COVID-19") pos path(DO:"coronary artery disease")
+path(DO:"COVID-19") pos path(DO:"chronic obstructive pulmonary disease")
+path(DO:"COVID-19") -> path(MESHD:"Anorexia")
+path(DO:"COVID-19") -> path(NCIT:"Skin Rash")
+
+SET Support = "Plasma concentration of IL2, IL7, IL10, GCSF, IP10, MCP1, MIP1A, and TNFα were higher among ICU admitted patients."
+path(DO:"COVID-19") -> p(HGNC:"IL2")
+path(DO:"COVID-19") -> p(HGNC:"IL7")
+path(DO:"COVID-19") -> p(HGNC:"IL10")
+path(DO:"COVID-19") -> p(HGNC:"CSF3")
+# HGNC:CSF3 corresponds to Granulocyte-colony stimulating factor GCSF
+path(DO:"COVID-19") -> p(HGNC:"CXCL10")
+# HGNC:CXCL10 corresponds to Interferon gamma-induced protein 10 IP10
+path(DO:"COVID-19") -> p(HGNC:"CCL2")
+# HGNC:CCL2 corresponds to  monocyte chemotactic protein 1 MCP1
+path(DO:"COVID-19") -> p(HGNC:"CCL3")
+# HGNC:CCL3 corresponds to Macrophage inflammatory protein 1-alpha MIP1A
+path(DO:"COVID-19") -> p(HGNC:"TNF")
+
+SET Support = "Higher lung injury Murray Score was associated with lymphopenia and higher levels of C-reactive protein, neutrophil percentage and LDH."
+path(MESHD:"Lung Injury") -> path(DO:"lymphopenia")
+path(MESHD:"Lung Injury") -> p(HGNC:"CRP")
+path(MESHD:"Lung Injury") -> a(MESHA:"Neutrophils")
+path(MESHD:"Lung Injury") -> p(ECCODE:1.1.1.27)
+
+SET Support = "Autopsy Histology Bilateral diffuse alveolar damage with cellular fibromyxoid exudates; pneumocyte desquamation and formation of hyaline membrane; interstitial lymphocyte-dominated mononuclear inflammatory infiltrates; multi-nucleated syncytial cells with atypically enlarged pneumocytes (large nuclei, amphophilic granular cytoplasm, prominent nucleoli) in intra-alveolar spaces"
+path(DO:"COVID-19") -> path(DO:"desquamative interstitial pneumonia")
+path(DO:"COVID-19") -> a(MESHA:"Giant Cells")
+
+SET Support = "Lopinavir/ritonavir, protease inhibitors for human immuno deficiency viruses (HIV) management, were reported to reduce mortality, intubation rate, and use of methylpred-nisolone when introduced as a treatment among SARS patients of early stage."
+a(PUBCHEM:92727) isA a(CHEBI:"protease inhibitor")
+a(PUBCHEM:392622) isA a(CHEBI:"protease inhibitor")
+a(PUBCHEM:92727) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:392622) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:92727) -| path(DO:"COVID-19")
+a(PUBCHEM:392622) -| path(DO:"COVID-19")
+# PUBCHEM:92727 corresponds to Lopinavir
+# PUBCHEM:392622 corresponds to ritonavir
+
+SET Support = "Ribavirin was also widely used in SARS based on the broad spectrum antiviral activity."
+a(PUBCHEM:37542) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:37542) -| path(DO:"COVID-19")
+# PUBCHEM:37542 corresponds to Ribavirin
+
+SET Support = " Early SARS case series treated with combined ribavirin and corticosteroids showed clinical improvement."
+composite(a(PUBCHEM:37542), a(PUBCHEM:135301325)) -| path(DO:"severe acute respiratory syndrome")
+composite(a(PUBCHEM:37542), a(PUBCHEM:135301325)) -| path(DO:"COVID-19")
+# PUBCHEM:37542 corresponds to ribavirin
+# PUBCHEM:135301325 corresponds to corticosteroids
+
+SET Support = "Commonly documented adverse effects of ribavirin included anaemia and increased alanine transaminase (ALT)"
+a(PUBCHEM:37542) -> path(DO:"anemia")
+a(PUBCHEM:37542) -> p(HGNC:"GPT")
+# PUBCHEM:37542 corresponds to ribavirin
+
+SET Support = "Combination of lopinavir/ritonavir and ribavirin showed stronger suppression on viral load and reduced use of steroid"
+composite(a(PUBCHEM:92727), a(PUBCHEM:37542)) -| path(DO:"severe acute respiratory syndrome")
+composite(a(PUBCHEM:92727), a(PUBCHEM:37542)) -| path(DO:"COVID-19")
+composite(a(PUBCHEM:392622), a(PUBCHEM:37542)) -| path(DO:"severe acute respiratory syndrome")
+composite(a(PUBCHEM:392622), a(PUBCHEM:37542)) -| path(DO:"COVID-19")
+# PUBCHEM:92727 corresponds to Lopinavir
+# PUBCHEM:392622 corresponds to ritonavir
+# PUBCHEM:37542 corresponds to ribavirin
+
+SET Support = " Interferons have also been shown to suppress the viral replication of SARS in vitro and been considered for the current outbreak "
+SET Species = "694009"
+SET BioAssay = "in vitro"
+a(PUBCHEM:49985129) -| bp(MESHPP:"Virus Replication")
+# PUBCHEM:49985129 corresponds to Interferons
+UNSET BioAssay
+UNSET Species
+a(PUBCHEM:49985129) -| path(DO:"COVID-19")
+
+SET Support = " Corticosteroids use on the current outbreak was widely reported. However, the current evidence indicates that the benefit of general use is inconclusive and is likely outweighed by adverse effect (delayed viral clearance, avascular necrosis, osteoporosis, diabetes, psychosis)"
+#for COVID-19
+a(PUBCHEM:135301325) causesNoChange path(DO:"COVID-19")
+a(PUBCHEM:135301325) -> path(DO:"osteonecrosis")
+a(PUBCHEM:135301325) -> path(DO:"osteoporosis")
+a(PUBCHEM:135301325) -> path(DO:"diabetes mellitus")
+a(PUBCHEM:135301325) -> path(DO:"psychotic disorder")
+# PUBCHEM:135301325 corresponds to corticosteroids
+
+SET Support = "Remdesivir, an antiviral agent, has been shown effectively inhibiting the COVID-19 in vitro and in vivo, , is under clinical trials, and compassionate use was reported on a deteriorating case with good recovery."
+a(PUBCHEM:121304016) isA a(CHEBI:"antiviral agent")
+SET BioAssay = {"in vitro", "in vivo"}
+a(PUBCHEM:121304016) -| path(DO:"COVID-19")
+# PUBCHEM:121304016 corresponds to Remdesivir
+UNSET BioAssay
+
+SET Support = "Presentation fever, fatigue, myalgia, cough, expectoration, chest distress, poor appetite, anorexia, vomiting, sticky and greasy stool with unsmooth defecation, pale, swollen and indented tongue or pale red tongue,white greasy tongue fur or thick curdy greasy tongue fur, soft or slippery pulse."
+path(DO:"COVID-19") -> path(MESHD:"Vomiting")
+path(DO:"COVID-19") -> path(MESHD:"Pallor")
+
+SET Support = "Presentation Low/no fever, mild chilly, fatigue, malaise, myalgia, dry cough, sore throat, dry mouth but not thirsty, tongue pale-red, white thick greasy tongue fur or yellowish tongue fur, slippery and rapid pulse or soft pulse; may accompany with chest distress, abdominal distension,little/no sweating, anorexia, poor appetite, loose stool or sticky andgreasy stool with uncomfortable defecation"
+path(DO:"COVID-19") -> path(MESHD:"Chills")
+path(DO:"COVID-19") -> path(DO:"pharyngitis")
+path(DO:"COVID-19") -> path(MESHD:"Xerostomia")
+
+SET Support = "Presentation fever, dry cough, little/yellowish sputum, chest distress, shortness of breath, abdominal distention, constipation, tongue dull red, tongue swollen, greasy and yellowish tongue fur or dry and yellowish tongue fur, slippery and rapid pulse or slippery and string pulse"
+path(DO:"COVID-19") -> path(DO:"constipation")
+
+SET Support = "Presentation fever,flushing, cough, little yellowish and sticky sputum or hemoptysis, dyspnea, fatigue, dry mouth with bitter taste, anorexia, poor appetite, unsmooth defecation, dark yellowish urine, red tongue,yellowish and greasy tongue fur, slippery and rapid pulse"
+path(DO:"COVID-19") -> path(MESHD:"Flushing")
+path(DO:"COVID-19") -> path(MESHD:"Hemoptysis")
+
+SET Support = "Presentation High fever, thirsty, dyspnea, confusion, agitation, crimson tongue, little/no tongue fur, deep, thin and rapid pulse or floating, large and rapid pulse; may accompany with purpura/rash/hematemesis/nasal bleeding/limb spasm"
+path(DO:"COVID-19") -> path(MESHD:"Confusion")
+path(DO:"COVID-19") -> path(DO:"purpura")
+path(DO:"COVID-19") -> path(MESHD:"Hematemesis")
+path(DO:"COVID-19") -> path(MESHD:"Epistaxis")
+path(DO:"COVID-19") -> path(MESHD:"Muscle Spasticity")
+
+SET Support = "A recent network pharmacology and molecular docking analysis of da-yuan decoction, the key CM formulation recommended by the China national guideline demonstrated that the kaempferol and baicalin in da-yuan decoction could bind with ACE2 receptor and regulate T cell receptor signaling pathway through targeting PTGS2, HSP90AA1, ESR1, PIK3CG,and AKT1 gene"
+a(PUBCHEM:5280863) -- p(HGNC:"ACE2")
+a(PUBCHEM:64982) -- p(HGNC:"ACE2")
+a(PUBCHEM:5280863)  reg bp(GOBP:"T cell receptor signaling pathway")
+a(PUBCHEM:64982)  reg bp(GOBP:"T cell receptor signaling pathway")
+a(PUBCHEM:5280863) -- g(HGNC:"PTGS2")
+a(PUBCHEM:64982) -- g(HGNC:"PTGS2")
+a(PUBCHEM:5280863) -- g(HGNC:"HSP90AA1")
+a(PUBCHEM:64982) -- g(HGNC:"HSP90AA1")
+a(PUBCHEM:5280863) -- g(HGNC:"ESR1")
+a(PUBCHEM:64982) -- g(HGNC:"ESR1")
+a(PUBCHEM:5280863) -- g(HGNC:"PIK3CG")
+a(PUBCHEM:64982) -- g(HGNC:"PIK3CG")
+a(PUBCHEM:5280863) -- g(HGNC:"AKT1")
+a(PUBCHEM:64982) -- g(HGNC:"AKT1")
+# PUBCHEM:121304016 corresponds to kaempferol
+# PUBCHEM:64982 corresponds to baicalin
+
+SET Support = "The treatment  under  evaluation  included  (1)  public  health  intervention:  community-based prevention programme, (2) pharmacological therapy: corticosteroid (glucocorticoid,methylprednisolone), antivirals  (darunavir,  cobicista,  lopinavir/ritonavir,  azvudine,arbidol, remdesivir, favipiravir, triazavirin, interferon), antimalarials (chloroquine/hydroxychloroquine), antibiotics (carrimycin), immunomodulators (tocilizumab,fingolimod,leflunomide), anti-allergic drug (Tranilast), sodium aescinate and CMs, (3) biologics:mesenchymal stem cell, immunoglobulin/convalescent plasma, microbiota transplantation,PD-1 blocking antibody, recombinant cytokine gene-deprived protein and bevacizumab,(4) supplements: alpha lipoic acid, vitamin C and probiotics, and (5) other therapies: M1 macrophage suppression therapy, hydrogen–oxygen nebulizer, ultra-short wave electro-therapy, and nutrition support."
+a(PUBCHEM:11502129) -| path(DO:"COVID-19")
+# PUBCHEM:11502129 corresponds to glucocorticoid
+a(PUBCHEM:6741) -| path(DO:"COVID-19")
+# PUBCHEM:6741 corresponds to methylprednisolone
+a(PUBCHEM:213039) -| path(DO:"COVID-19")
+# PUBCHEM:213039 corresponds to darunavir
+a(PUBCHEM:25151504) -| path(DO:"COVID-19")
+# PUBCHEM:25151504 corresponds to cobicistat. In the evidence, it is written as cobicista, apparently a typo.
+a(PUBCHEM:24769759) -| path(DO:"COVID-19")
+# PUBCHEM:24769759 corresponds to azvudine
+a(PUBCHEM:131411) -| path(DO:"COVID-19")
+# PUBCHEM:131411 corresponds to arbidol
+a(PUBCHEM:492405) -| path(DO:"COVID-19")
+# PUBCHEM:492405 corresponds to favipiravir
+a(PUBCHEM:3113817) -| path(DO:"COVID-19")
+# PUBCHEM:3113817 corresponds to triazavirin
+a(PUBCHEM:2719) -| path(DO:"COVID-19")
+# PUBCHEM:2719 corresponds to chloroquine
+a(PUBCHEM:3652) -| path(DO:"COVID-19")
+# PUBCHEM:3652 corresponds to hydroxychloroquine
+a(PUBCHEM:135345962) -| path(DO:"COVID-19")
+# PUBCHEM:135345962 corresponds to tocilizumab
+a(PUBCHEM:107970) -| path(DO:"COVID-19")
+# PUBCHEM:107970 corresponds to fingolimod
+a(PUBCHEM:3899) -| path(DO:"COVID-19")
+# PUBCHEM:3899 corresponds to leflunomide
+a(PUBCHEM:5282230) -| path(DO:"COVID-19")
+# PUBCHEM:5282230 corresponds to Tranilast
+a(PUBCHEM:3084345) -| path(DO:"COVID-19")
+# PUBCHEM:3084345 corresponds to sodium aescinate
+a(MESHA:"Mesenchymal Stromal Cells") -| path(DO:"COVID-19")
+a(MESH:"Fecal Microbiota Transplantation") -| path(DO:"COVID-19")
+a(PUBCHEM:864) -| path(DO:"COVID-19")
+# PUBCHEM:864 corresponds to alpha lipoic acid
+a(PUBCHEM:54670067) -| path(DO:"COVID-19")
+# PUBCHEM:54670067 corresponds to vitamin C
+a(MESHPP:"Probiotics") -| path(DO:"COVID-19")
+
+SET Support = "Recent press release from the State Council of China indicated that preliminary datashowed that chloroquine was effective in preventing the deterioration of COVID-19 related pneumonia (0 case out of 130 trial cases, including 5 severe cases)."
+a(PUBCHEM:2719) -| path(DO:"pneumonia")
+# PUBCHEM:2719 corresponds to chloroquine

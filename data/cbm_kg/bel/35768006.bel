@@ -1,0 +1,443 @@
+SET DOCUMENT Name = "35768006.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT ContactInfo = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+#DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"diffuse alveolar damage"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION TimeLine AS LIST {"7 days post-infection","7 weeks post-infection","11 days post-CCL11 injection","4 weeks post treatment", "6 months post treatment"}
+DEFINE ANNOTATION Mouse_Strain AS LIST {"CD-1","BALB/c"}
+DEFINE ANNOTATION Age_Group AS LIST {"6 to 12 week old","8 week old","24-73"}
+DEFINE ANNOTATION Disease_Type AS LIST {"mild COVID","Long COVID","Long COVID with autoimmune disease history"}
+DEFINE ANNOTATION Technique AS LIST {"H&E staining","Single-cell RNA sequencing"}
+
+#####################
+
+SET Citation = {"PubMed", "Cell. 2022 Jul 7;185(14):2452-2468.e16. doi: 10.1016/j.cell.2022.06.008. Epub 2022 Jun 13.","35768006"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "As expected, SARS-CoV-2 was present in the lungs of infected mice, and lung histopathology demonstrated minimal interstitial infiltrates without evidence of alveolar damage (Figures S1B and S1C)."
+SET Species = "10090"
+SET Gender = "Female"
+SET Mouse_Strain = "CD-1"
+SET Age_Group = "6 to 12 week old"
+SET Disease = "COVID-19"
+SET Disease_Type = "mild COVID"
+SET MeSHAnatomy = "Lung"
+SET BioAssay = "confocal microscopy"
+SET Technique = "H&E staining"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") -> path(HP:"Pulmonary infiltrates")
+UNSET Technique
+UNSET TimeLine
+UNSET MeSHAnatomy
+
+SET Support = "Despite the lack of evident symptoms/signs of illness in this respiratory infection model, we found prominently elevated cytokine profiles in serum and in cerebrospinal fluid (CSF) at 7-day and 7-week time points following respiratory infection (Figures 1D–1G)."
+SET MeSHAnatomy = "Serum"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") pos p(MGI:Ccl5)
+path(DO:"COVID-19") pos p(MGI:Il4)
+path(DO:"COVID-19") pos p(MGI:Cxcl10)
+path(DO:"COVID-19") pos p(MGI:Ifng)
+path(DO:"COVID-19") pos p(MGI:Ccl2)
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+UNSET TimeLine
+SET TimeLine = "7 weeks post-infection"
+path(DO:"COVID-19") pos p(MGI:Ccl5)
+path(DO:"COVID-19") pos p(MGI:Ccl2)
+path(DO:"COVID-19") pos p(MGI:Cxcl5)
+UNSET TimeLine
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") pos p(MGI:Cxcl10)
+path(DO:"COVID-19") pos p(MGI:Il6)
+path(DO:"COVID-19") pos p(MGI:Ifng)
+path(DO:"COVID-19") pos p(MGI:Ccl7)
+path(DO:"COVID-19") pos p(MGI:Ccl2)
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+path(DO:"COVID-19") pos p(MGI:Tnfsf13b)
+path(DO:"COVID-19") pos p(MGI:Cxcl2)
+path(DO:"COVID-19") pos p(MGI:Cxcl5)
+UNSET TimeLine
+SET TimeLine = "7 weeks post-infection"
+path(DO:"COVID-19") pos p(MGI:Cxcl10)
+path(DO:"COVID-19") pos p(MGI:Ccl7)
+path(DO:"COVID-19") pos p(MGI:Ccl2)
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+path(DO:"COVID-19") pos p(MGI:Cxcl2)
+UNSET TimeLine
+UNSET MeSHAnatomy
+
+SET Support = "At 7 days post-infection, elevated CSF cytokines and chemokines include IFN-γ, IL6, TNF-α, CXCL10, CCL7, CCL2, CCL11, GMCSF, and BAFF, among others (Figures 1F and 1H; Table S1)."
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") pos p(MGI:Ifng)
+path(DO:"COVID-19") pos p(MGI:Il6)
+path(DO:"COVID-19") pos p(MGI:Tnf)
+path(DO:"COVID-19") pos p(MGI:Cxcl10)
+path(DO:"COVID-19") pos p(MGI:Ccl7)
+path(DO:"COVID-19") pos p(MGI:Ccl2)
+path(DO:"COVID-19") pos p(MGI:Csf2)
+path(DO:"COVID-19") pos p(MGI:Tnfsf13b)
+UNSET Age_Group 
+UNSET Gender
+SET Gender = {"Male","Female"}
+SET Age_Group = "8 week old"
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+UNSET Age_Group 
+UNSET Gender
+UNSET TimeLine
+
+SET Support = "Of these, CXCL10, CCL7, CCL2, CCL11, and GMCSF remain elevated, and IL10 and CCL5 become elevated in CSF by 7 weeks post-infection (Figures 1G and 1I; Table S1). "
+SET TimeLine = "7 weeks post-infection"
+path(DO:"COVID-19") pos p(MGI:Cxcl10)
+path(DO:"COVID-19") pos p(MGI:Ccl7)
+path(DO:"COVID-19") pos p(MGI:Ccl2)
+path(DO:"COVID-19") pos p(MGI:Csf2)
+path(DO:"COVID-19") pos p(MGI:Il10)
+path(DO:"COVID-19") pos p(MGI:Ccl5)
+SET Gender = {"Male","Female"}
+SET Age_Group = "8 week old"
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+
+SET Support = "Notably, CSF levels of CCL11, a chemokine associated with cognitive impairment in aging (Villeda et al., 2011), were further increased at 7 weeks compared with 7 days post-infection (Figures 1J and 1K; Table S1)."
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+p(MGI:Ccl11) --  path(HP:"Cognitive impairment")
+UNSET MeSHAnatomy
+UNSET TimeLine 
+
+SET Support = "In the same mice, serum CCL11 levels were elevated at 7 days post-infection and—in contrast to persistent elevation in CSF—normalized in serum by 7 weeks post-infection (Figures 1D, 1E, ​1E,S6C,S6C, and S6D; Table S1). "
+SET MeSHAnatomy = "Serum"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+UNSET TimeLine
+SET TimeLine = "7 weeks post-infection"
+path(DO:"COVID-19") cnc p(MGI:Ccl11)
+UNSET TimeLine
+UNSET Age_Group 
+UNSET Gender
+UNSET MeSHAnatomy
+UNSET Mouse_Strain
+
+SET Support = "As hypothesized, we found increased microglial/macrophage reactivity in subcortical white matter, as assessed by IBA1 and CD68 co-positivity (Figure 2 )"
+SET Mouse_Strain = {"CD-1", "BALB/c"}
+SET Gender = "Female"
+SET Age_Group = "6 to 12 week old"
+SET MeSHAnatomy = "White Matter"
+SET TimeLine = {"7 days post-infection", "7 weeks post-infection"}
+path(DO:"COVID-19") -> bp(GO:"microglial cell activation")
+path(DO:"COVID-19") -> bp(GO:"macrophage activation")
+
+SET Support = "While microglial/macrophage reactivity was evident in white matter by increased expression of the marker CD68, overall numbers of microglia were largely unchanged (Figure S2 )."
+path(DO:"COVID-19") -> bp(GO:"microglial cell activation")
+path(DO:"COVID-19") -> bp(GO:"macrophage activation")
+surf(p(MGI:Cd68)) -> bp(GO:"microglial cell activation")
+surf(p(MGI:Cd68)) -> bp(GO:"macrophage activation")
+path(DO:"COVID-19") cnc a(MESH:Microglia)
+UNSET TimeLine
+UNSET MeSHAnatomy
+UNSET Mouse_Strain
+UNSET Gender
+UNSET Age_Group
+UNSET Disease_Type
+UNSET Species
+
+SET Support = "Lung examination of these cases revealed infection-associated lung injury that ranged from none to moderate (diffuse alveolar damage), without evidence of the necrotizing pneumonia that characterizes severe pulmonary COVID (Figures S3B–S3E; Table S2)."
+SET Species = "9606"
+SET Age_Group = "24-73"
+SET MeSHAnatomy = "Lung"
+SET Technique = "H&E staining"
+path(DO:"COVID-19") -> path(FIXME:"diffuse alveolar damage")
+UNSET MeSHAnatomy
+
+SET Support = " Similar to the mouse model, humans with COVID exhibit robustly elevated CD68+ microglial/macrophage reactivity in subcortical white matter compared with cortical gray matter and compared with individuals without SARS-CoV-2 infection (Figures 2M, 2N, and S3A)."
+SET MeSHAnatomy = "White Matter"
+path(DO:"COVID-19") -> bp(GO:"microglial cell activation")
+path(DO:"COVID-19") -> bp(GO:"macrophage activation")
+UNSET MeSHAnatomy
+UNSET Species 
+
+SET Support = "While each of these microglial states was detectable in both control mice and mice following mild respiratory SARS-CoV-2 infection, post-COVID mice exhibited an increased abundance of the chemokine-enriched microglia (Figure 3B), a small but striking subpopulation of cells characterized by expression of several chemokines and cytokines like Tnf, Il1a, and Il1b (Figures 3C and S4B; Table 3), consistent with an inflammatory reactive response."
+SET Species = "10090"
+SET Gender = "Female"
+SET Mouse_Strain = "CD-1"
+SET Age_Group = "6 to 12 week old"
+SET Disease_Type = "mild COVID"
+SET MeSHAnatomy = {"White Matter", "Microglia"}
+SET Technique = "Single-cell RNA sequencing"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") pos r(MGI:Ccl2)
+path(DO:"COVID-19") pos r(MGI:Ccl4)
+path(DO:"COVID-19") pos r(MGI:Ccl3)
+path(DO:"COVID-19") pos r(MGI:Cxcl10)
+
+SET Support = "We also found transcriptional changes within the homeostatic microglia cluster in post-COVID mice compared with controls, with increased expression of genes commonly upregulated in inflammation and involved in antigen processing and presentation, like B2m, H2-D1, H2-K1, as well as the cell surface glycoprotein Cd300lf (Figures 3D, 3E, and S4C)."
+path(DO:"COVID-19") pos r(MGI:B2m)
+path(DO:"COVID-19") pos r(MGI:"H2-D1")
+path(DO:"COVID-19") pos r(MGI:"H2-K1")
+path(DO:"COVID-19") pos r(MGI:Cd300lf)
+
+SET Support = "The homeostatic microglia cluster in post-COVID mice exhibit downregulation of characteristic microglial genes such as Trem2 and Sall3, as well as Adrb1, a gene known to be downregulated in lipid-droplet-accumulating microglia (LDAM) in aging white matter (Marschallinger et al., 2020; Figure 3E)."
+path(DO:"COVID-19") pos r(MGI:Trem2)
+path(DO:"COVID-19") pos r(MGI:Sall3)
+path(DO:"COVID-19") pos r(MGI:Adrb1)
+UNSET TimeLine
+UNSET Technique
+UNSET MeSHAnatomy
+
+SET Support = "The CSF cytokine profiles following mild respiratory SARS-CoV-2 infection described above highlight elevated IL6 in CSF at 7 days and persistently elevated CCL11 in CSF at 7 weeks (Figures 1F and 1G)."
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") pos p(MGI:Il6)
+UNSET TimeLine
+UNSET Age_Group 
+UNSET Gender
+SET Gender = {"Male","Female"}
+SET Age_Group = "8 week old"
+SET TimeLine = "7 weeks post-infection"
+path(DO:"COVID-19") pos p(MGI:Ccl11)
+UNSET TimeLine
+UNSET MeSHAnatomy
+
+SET Support = "Examining the mouse hippocampus following mild respiratory COVID, we found robustly increased microglial/macrophage reactivity in hippocampal white matter at 7 days post-infection (Figures 4A and 4B) that persists until at least 7 weeks post-infection (Figures 4C and 4D)."
+SET MeSHAnatomy = {"White Matter", "Dentate Gyrus"}
+SET TimeLine = {"7 days post-infection", "7 weeks post-infection"}
+path(DO:"COVID-19") -> bp(GO:"microglial cell activation")
+path(DO:"COVID-19") -> bp(GO:"macrophage activation")
+
+SET Support = "Consistent with previous observations that reactive microglia/macrophages can inhibit hippocampal neurogenesis (Monje et al., 2003), a stark decrease in new neuron generation was evident, as assessed by Doublecortin-positive cell quantification, at 7 days post-infection (Figures 4E and 4F) and persisted until at least 7 weeks post-infection (Figures 4G and 4H)."
+path(DO:"COVID-19") -> bp(GO:neurogenesis)
+UNSET TimeLine
+
+SET Support = "Considering the number of newly generated hippocampal neurons as a function of the reactive microglial load, we found an inverse correlation between neurogenesis and reactive microglia/macrophages in the hippocampus (Figure S6A)."
+SET TimeLine = "7 days post-infection"
+bp(GO:neurogenesis) neg bp(GO:"microglial cell activation")
+bp(GO:neurogenesis) neg bp(GO:"macrophage activation")
+UNSET TimeLine
+UNSET MeSHAnatomy 
+UNSET Mouse_Strain
+UNSET Gender
+UNSET Age_Group
+UNSET Disease_Type
+UNSET Species
+
+SET Support = "We found elevated CCL11 levels in the plasma of people with long COVID exhibiting cognitive deficits, or 'brain fog' (n = 48 subjects, 16 male/32 female, mean age 46.1 ± 14.6 years) compared with those with long COVID lacking cognitive symptoms (n = 15 subjects, 4 male/11 female, mean age 46.7 ± 14.1 years; Figure 5 A)."
+SET Species = "9606"
+SET MeSHAnatomy = "Plasma"
+SET Disease_Type = "Long COVID"
+path(MESH:"Mental Fatigue") pos p(HGNC:CCL11)
+UNSET Disease_Type
+
+SET Support = "Subsequent comparisons revealed that those with a history of autoimmune disease had higher CCL11 levels than those patients who did not (Figure 5B) and that—despite a higher incidence of cognitive symptoms and long COVID reported in female patients overall (Seeßle et al., 2022; Sudre et al., 2021; Tabacof et al., 2022)—male patients had significantly higher levels of CCL11 than female patients in this cohort (Figure S6B). "
+SET Gender  = "Male"
+SET Disease_Type = "Long COVID with autoimmune disease history"
+path(MESH:"Mental Fatigue") pos p(HGNC:CCL11)
+UNSET Gender
+UNSET Disease_Type
+UNSET MeSHAnatomy
+UNSET Species
+
+SET Support = "Systemic CCL11 induced microglial/macrophage reactivity specifically in hippocampal white matter (Figures 5F and 5G), and not in the cortex or subcortical white matter (Figures 5D and 5E)."
+SET MeSHAnatomy = {"White Matter", "Hippocampus"}
+SET TimeLine = "11 days post-CCL11 injection"
+p(HGNC:CCL11) -> bp(GO:"microglial cell activation")
+p(HGNC:CCL11)-> bp(GO:"macrophage activation")
+UNSET MeSHAnatomy
+
+SET Support = "As expected (Villeda et al., 2011), we also found decreased hippocampal neurogenesis following systemic CCL11 administration (Figures 5H and 5I)."
+SET MeSHAnatomy = {"White Matter", "Dentate Gyrus"}
+SET BioAssay = "confocal microscopy"
+p(HGNC:CCL11) -> bp(GO:neurogenesis)
+UNSET MeSHAnatomy 
+
+SET Support = "However, by 7 weeks following infection, a mild decrease (10%) in the number of oligodendrocyte precursor cells was evident (Figures 6B and 6C)."
+SET Species = "10090"
+SET Gender = "Female"
+SET Mouse_Strain = "CD-1"
+SET Age_Group = "6 to 12 week old"
+SET Disease_Type = "mild COVID"
+SET MeSHAnatomy = {"White Matter","Corpus Callosum"}
+SET TimeLine = {"7 days post-infection", "7 weeks post-infection"}
+path(DO:"COVID-19") -| a(CELL:"oligodendrocyte precursor cell")
+
+SET Support = "Mature oligodendrocytes, assessed by ASPA and CC1 immunoreactivity, exhibited a greater magnitude of depletion (Figures 6D–6F, S7A, and S7B), with loss of approximately one third of oligodendrocytes occurring by 7 days post-infection (Figure 6D). This depletion in mature oligodendrocytes persisted until at least 7 weeks post-infection (Figure 6E)."
+path(DO:"COVID-19") -| a(MESH:Oligodendroglia)
+UNSET BioAssay
+
+SET Support = "We found a decrease in myelinated axon density in subcortical white matter (cingulum of the corpus callosum) evident by 7 days post-infection (Figures 6G–6I). "
+SET BioAssay = "transmission electron microscopy"
+path(DO:"COVID-19") -| a(MESH:"Nerve Fibers, Myelinated")
+
+SET Support = "This loss of myelin persisted until at least 7 weeks following mild respiratory SARS-CoV-2 infection and was similar in magnitude to the loss of myelinated axons seen 4 weeks (Figures 6J, ​J,S7J,S7J, and S7K) and 6 months (Figures 6K, ​K,S7J,S7J, and S7K) after methotrexate chemotherapy exposure."
+path(DO:"COVID-19") -| a(MESH:"Nerve Fibers, Myelinated")
+UNSET TimeLine
+SET TimeLine = {"4 weeks post treatment", "6 months post treatment"}
+a(CHEBI:methotrexate) -| a(MESH:"Nerve Fibers, Myelinated")
+UNSET TimeLine 
+UNSET BioAssay
+UNSET MeSHAnatomy
+UNSET Disease_Type
+UNSET Disease
+
+SET Support = "We examined a mouse model of respiratory H1N1 influenza, which causes only minimal sickness behavior with mild (<10%) weight loss (Figures 7A and 7B) and elevation in serum cytokines/chemokines (Figures 7C and 7D; Table S4)."
+SET Disease = "swine influenza"
+path(DO:"swine influenza") -> path(MESH:"Weight Loss")
+path(DO:"swine influenza") -> path(MESH:"Illness Behavior")
+SET MeSHAnatomy = "Serum"
+SET TimeLine = "7 days post-infection"
+path(DO:"COVID-19") pos p(MGI:Cxcl5)
+path(DO:"COVID-19") pos p(MGI:Il6)
+path(DO:"COVID-19") pos p(MGI:Ifng)
+path(DO:"COVID-19") pos p(MGI:Ccl7)
+path(DO:"COVID-19") pos p(MGI:Ccl2)
+path(DO:"COVID-19") pos p(MGI:Cxcl5)
+UNSET TimeLine
+SET TimeLine = "7 weeks post-infection"
+path(DO:"COVID-19") pos p(MGI:Il10)
+path(DO:"COVID-19") pos p(MGI:Il5)
+path(DO:"COVID-19") pos p(MGI:Il18)
+UNSET TimeLine
+UNSET MeSHAnatomy
+
+SET Support = "Examination of CSF cytokines at 7 days revealed elevation in several cytokines/chemokines similar to mice with mild respiratory COVID, including IFN-γ, CCL11, CCL2, and GMCSF, as well as distinct elevations in IL4 and CCL5 (Figure 7G)."
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+SET TimeLine =  "7 days post-infection"
+path(DO:"swine influenza") pos p(MGI:Ifng)
+path(DO:"swine influenza") pos p(MGI:Ccl11)
+path(DO:"swine influenza") pos p(MGI:Ccl2)
+path(DO:"swine influenza") pos p(MGI:Csf2)
+path(DO:"swine influenza") pos p(MGI:Il4)
+path(DO:"swine influenza") pos p(MGI:Ccl5)
+UNSET TimeLine
+UNSET MeSHAnatomy 
+
+SET Support = "By 7 weeks after influenza infection, the only chemokine that remained elevated—and in fact increased from the 7 day time point—is CCL11 (Figures 7E–7G). "
+SET TimeLine = {"7 days post-infection","7 weeks post-infection"}
+path(DO:"swine influenza") pos p(MGI:Ccl11)
+UNSET TimeLine
+
+SET Support = " However, a number of additional cytokines/chemokines were elevated at 7 weeks after influenza that were not elevated at 7 days, including TNF-α, IL6, IL2, CXCL5, and IL18, among others (Figures 7E–7G; Table S4)."
+SET TimeLine = "7 weeks post-infection"
+path(DO:"swine influenza") pos p(MGI:Tnf)
+path(DO:"swine influenza") pos p(MGI:Il6)
+path(DO:"swine influenza") pos p(MGI:Il2)
+path(DO:"swine influenza") pos p(MGI:Cxcl5)
+path(DO:"swine influenza") pos p(MGI:Il18)
+UNSET TimeLine
+
+SET Support = "We found the same pattern of white matter-selective microglial/macrophage reactivity in the subcortical and hippocampal white matter (Figures 7H and 7I) at 7 days post-infection."
+SET TimeLine = "7 days post-infection"
+SET MeSHAnatomy = {"White Matter", "Dentate Gyrus"}
+path(DO:"swine influenza") -> bp(GO:"microglial cell activation")
+path(DO:"swine influenza") -> bp(GO:"macrophage activation")
+UNSET MeSHAnatomy
+UNSET TimeLine
+
+SET Support = "By 7 weeks, microglial reactivity had normalized in the subcortical white matter (Figure 7J)."
+SET TimeLine = "7 weeks post-infection"
+SET MeSHAnatomy = "White Matter"
+path(DO:"swine influenza") cnc bp(GO:"microglial cell activation")
+path(DO:"swine influenza") cnc bp(GO:"macrophage activation")
+UNSET MeSHAnatomy
+
+SET Support = "In contrast, microglial/macrophage reactivity persisted at 7 weeks in hippocampal white matter (Figure 7K), a finding that is consistent with the persistently elevated CSF CCL11 levels (Figure 7F), which we demonstrate above specifically increases reactivity of hippocampal microglia/macrophages (Figures 5F and 5G)."
+SET MeSHAnatomy = {"White Matter", "Dentate Gyrus"}
+path(DO:"swine influenza") -> bp(GO:"microglial cell activation")
+path(DO:"swine influenza") -> bp(GO:"macrophage activation")
+path(DO:"swine influenza") pos p(MGI:Ccl11)
+UNSET MeSHAnatomy
+UNSET TimeLine
+
+SET Support = "Concordant with this pattern of microglial/macrophage reactivity, oligodendrocytes were decreased in the subcortical white matter at 7 days (Figure 7L) but recovered as microglial reactivity resolved by 7 weeks (Figure 7M)."
+SET MeSHAnatomy = {"White Matter", "Corpus Callosum"}
+SET TimeLine = "7 days post-infection"
+path(DO:"swine influenza") -| a(MESH:Oligodendroglia)
+UNSET TimeLine
+SET TimeLine = "7 weeks post-infection"
+path(DO:"swine influenza") cnc a(MESH:Oligodendroglia)
+UNSET TimeLine
+UNSET MeSHAnatomy
+
+SET Support = "Hippocampal neurogenesis was deficient at both 7-day and 7-week time points, consistent with the persistent hippocampal microglial/macrophage reactivity (Figures 7N and 7O)."
+SET MeSHAnatomy = {"White Matter", "Dentate Gyrus"}
+SET TimeLine = {"7 days post-infection","7 weeks post-infection"}
+path(DO:"swine influenza") -| bp(GO:neurogenesis)
+bp(GO:"microglial cell activation") neg bp(GO:neurogenesis)
+bp(GO:"macrophage activation") neg bp(GO:neurogenesis)
+UNSET TimeLine
+UNSET MeSHAnatomy
+UNSET Disease
+UNSET Age_Group
+UNSET Mouse_Strain
+UNSET Gender
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

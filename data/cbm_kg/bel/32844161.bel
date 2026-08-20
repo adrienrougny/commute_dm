@@ -1,0 +1,255 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "32844161.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"Diffuse alveolar damage","Lymphocyte cuffing","CD4-positive T cells","T-cell infiltration"}
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION Technique AS LIST {"histological analysis"}
+DEFINE ANNOTATION Specimen AS LIST {"post mortem specimen"}
+DEFINE ANNOTATION Disease_Severity AS LIST {"Severe"}
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Lancet Microbe. 2020 Oct;1(6):e245-e253. doi: 10.1016/S2666-5247(20)30115-4. ", "32844161"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Species = "9606"
+SET Disease = "COVID-19" 
+SET Disease_Severity = "Severe"
+
+SET Support = "Hypertension (four [40%] patients) and chronic obstructive pulmonary disease (three [30%]) were the most common contributing factors to death according to MCCD"
+path(DO:hypertension) increases path(MESH:Death)
+path(DO:"chronic obstructive pulmonary disease") increases path(MESH:Death)
+
+SET Support = "All ten patients developed fever and had at least two respiratory symptoms or signs (cough, shortness of breath, reduced oxygen saturations, or pleuritic chest pain) during their early presentation."
+path(DO:"COVID-19") increases path(MESH:Fever)
+path(DO:"COVID-19") increases path(MESH:Cough)
+path(DO:"COVID-19") increases path(MESH:Dyspnea)
+path(DO:"COVID-19") increases a(NCIT:"Low Blood Oxygen Saturation")
+path(DO:"COVID-19") increases path(MESH:"Chest Pain")
+
+SET Support = "Of eight patients assessed for inflammatory markers, all (100%) had elevated inflammatory markers."
+SET Specimen = "post mortem specimen" 
+path(DO:"COVID-19") increases path(MESH:Inflammation)
+
+SET Support = "Most patients died within 3 weeks of symptom onset (seven [70%] patients) and were not intubated or ventilated (six [60%] patients)."
+path(DO:"COVID-19") increases path(MESH:Death)
+
+SET Support = "All patients had DAD: six showed purely exudative phase DAD and four showed a mixture of exudative and organising DAD (appendix p 22, figure 1 ). Three of four patients with organising-phase DAD had spent a substantial period on a ventilator (6 days, 12 days, and >20 days)."
+path(DO:"COVID-19") increases path(FIXME:"Diffuse alveolar damage")
+
+SET Support = "Florid acute bronchopneumonia and ventilator-associated pneumonia were not noted in this series, although mild interstitial neutrophilic inflammation (three [30%] of ten patients) and patchy acute bronchopneumonia (three [30%] patients) were observed. Interstitial macrophages were prominent."
+SET MeSHAnatomy = "Lung"
+path(DO:"COVID-19") increases path(MESH:Inflammation)
+path(DO:"COVID-19") increases path(DO:bronchopneumonia)
+path(DO:"COVID-19") increases a(MESH:Macrophages)
+UNSET MeSHAnatomy
+
+SET Support = "Mild or moderate lymphocyte inflammation was present in all ten patients, although focal lymphocyte cuffing of small vessels was noted in six patients (60%)."
+SET MeSHAnatomy = "Lymphocytes"
+path(DO:"COVID-19") increases path(MESH:Inflammation)
+path(DO:"COVID-19") increases bp(FIXME:"Lymphocyte cuffing")
+UNSET MeSHAnatomy
+
+SET Support = "We noted that lymphocytes in the lung were predominantly CD4-positive T cells."
+SET MeSHAnatomy = "Lung"
+path(DO:"COVID-19") increases a(MESH:"CD4-Positive T-Lymphocytes")
+UNSET MeSHAnatomy
+
+SET Support = "Chronic bronchiolitis was seen in most patients (nine [90%] of ten). No granulomas or viral inclusion were seen. Invasive mucormycosis was noted in one patient (PM5, figure 1) and confirmed with Mucorales-specific PCR. The mucormycosis was vasculocentric and disseminated, involving the hilar lymph nodes, heart, brain, and kidney in the same patient."
+path(DO:"COVID-19") increases path(DO:bronchiolitis)
+SET BioAssay = "polymerase chain reaction"
+SET MeSHAnatomy = {"Lymph Nodes", "Heart", "Brain", "Kidney"}
+path(DO:"COVID-19") increases path(DO:mucormycosis)
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "Macroscopic (two [23%] of nine patients) and microscopic (eight [89%] of nine) pulmonary thromboemboli were frequent observations"
+SET MeSHAnatomy = "Lung"
+path(DO:"COVID-19") increases path(DO:"pulmonary embolism")
+UNSET MeSHAnatomy
+
+SET Support = "Very focal lymphocytic vasculitis was identified in one patient."
+path(DO:"COVID-19") increases path(DO:vasculitis)
+
+SET Support = "Thrombotic features were universal in this cohort and all nine patients who underwent a full autopsy had at least one micro-thrombosis or macro-thrombosis in a major organ."
+path(DO:"COVID-19") increases path(DO:thrombosis)
+
+SET Support = " One (11%) of nine patients had a macroscopic acute coronary thrombosis in the right coronary artery, whereas five patients (56%) had thrombi in the microcirculation of the heart on histological analysis. "
+SET Technique = "histological analysis"
+SET Anatomy = "right coronary artery"
+path(DO:"COVID-19") increases path(DO:"coronary thrombosis")
+UNSET Anatomy
+SET MeSHAnatomy = "Heart"
+path(DO:"COVID-19") increases path(DO:thrombosis)
+UNSET MeSHAnatomy
+
+SET Support = "PM1 and PM2 were the two patients with the highest active viral load detected in the heart."
+SET MeSHAnatomy = "Heart"
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+
+SET Support = " A single patient (11%) had a right atrial thrombus. Pericarditis was identified in two patients (22%); one patient showed florid fibrinous pericarditis containing fungal hyphae (PM5), while the other showed only microscopic acute pericarditis (appendix p 22, figure 3 )."
+path(DO:"COVID-19") increases a(NCIT: "Right Atrial Thrombus")
+path(DO:"COVID-19") increases path(DO:pericarditis)
+
+SET Support = "The median heart weight was high (450 g) and four (44%) of nine patients had left ventricular hypertrophy."
+path(DO:"COVID-19") increases path(HP:"Left ventricular hypertrophy")
+
+SET Support = "Non-bacterial thrombotic (marantic) endocarditis was noted in one patient (PM5) with no known history or autopsy findings consistent with malignancy or chronic disorder associated with non-bacterial thrombotic (marantic) endocarditis (appendix p 22, figure 2)."
+path(DO:"COVID-19") increases path(DO:"marantic endocarditis")
+
+SET Support = "PM5 had disseminated mucormycosis and numerous other thrombotic features (appendix p 3). Cardiac amyloidosis and right atrial thrombosis were identified in one (10%) of ten patients (PM8; appendix p 28)."
+path(DO:"COVID-19") increases path(DO:mucormycosis)
+SET MeSHAnatomy = "Heart"
+path(DO:"COVID-19") increases path(DO:amyloidosis)
+UNSET MeSHAnatomy
+SET Anatomy = "cavity of right atrium"
+path(DO:"COVID-19") increases path(DO:thrombosis)
+UNSET Anatomy
+
+SET Support = "Lymphocyte depletion involving specific compartments and increased phagocytosis were prominent findings (appendix p 24, figure 4 )."
+path(DO:"COVID-19") decreases a(MESH:Lymphocytes)
+path(DO:"COVID-19") increases bp(GO:phagocytosis)
+
+SET Support = "Increased phagocytosis of other cells was identified in the sinusoidal macrophages of the red pulp of the spleen (in four [57%] of seven patients), sinus histiocytes of hilar lymph nodes (in three [50%] of six), and bone marrow (four [50%] of eight). Phagocytosis was identified in at least one of these organs in six (67%) of nine patients."
+SET MeSHAnatomy = {"Spleen", "Lymph Nodes", "Bone Marrow"}
+path(DO:"COVID-19") increases bp(GO:phagocytosis)
+UNSET MeSHAnatomy
+
+SET Support = "Bone marrow haemophagocytosis was prominent in two patients (PM4 and PM8) and focal in two patients (PM7 and PM9)."
+SET MeSHAnatomy = "Bone Marrow"
+path(DO:"COVID-19") increases path(HP:Hemophagocytosis)
+UNSET MeSHAnatomy
+
+SET Support = "Plasma cells were variably prominent, and sinusoidal histiocytes showed phagocytosis of red blood cells and other cells to varying extents."
+path(DO:"COVID-19") increases a(NCIT:Erythrophagocytosis)
+
+SET Support = "Medullary areas showed prominence of plasma cells, and histiocytes were prominent in the sinuses."
+SET MeSHAnatomy = "Kidney Medulla"
+path(DO:"COVID-19") increases a(MESH:"Plasma Cells")
+UNSET MeSHAnatomy
+path(DO:"COVID-19") increases a(MESH:Histiocytes)
+
+SET Support = "Bone marrow samples showed reactive changes with trilineage hyperplasia, and prominence of plasma cells and histiocytes were a common finding."
+SET MeSHAnatomy = "Bone Marrow"
+path(DO:"COVID-19") increases a(MESH:"Plasma Cells")
+path(DO:"COVID-19") increases a(MESH:Histiocytes)
+path(DO:"COVID-19") increases path(MESH:Hyperplasia)
+UNSET MeSHAnatomy
+
+SET Support = "A necrotising granuloma was noted in a single hilar lymph node in one patient, and acid-fast bacilli were noted on Ziehl Neelson staining."
+SET MeSHAnatomy = "Lymph Nodes"
+path(DO:"COVID-19") increases bp(GO:"granuloma formation")
+UNSET MeSHAnatomy
+
+SET Support = "Pancreatitis was noted in two (25%) of eight patients. PM5 was a 22-year-old man with frank necrotic-haemorrhagic pancreatitis and secondary mucormycosis (figure 3)."
+path(DO:"COVID-19") increases path(DO:pancreatitis)
+path(DO:"COVID-19") increases path(DO:mucormycosis)
+
+SET Support= "A third of patients (three [33%] of nine) showed patchy areas of infarct-type adrenocortical necrosis, with one patient showing organising microthrombi in adrenal vessels (figure 3)."
+SET MeSHAnatomy = "Adrenal Cortex"
+path(DO:"COVID-19") increases path(MESH:Necrosis)
+UNSET MeSHAnatomy
+path(DO:"COVID-19") increases path(HP:"blood clot")
+
+SET Support = "Salient renal pathology findings were acute tubular injury in all nine patients, underlying moderate cortical scarring of uncertain cause in one patient (11%), glomerular microaneurysm and thrombi in one patient (11%; figure 2), and rare thrombi in interlobular arteries in four patients (44%)."
+SET MeSHAnatomy = "Kidney"
+path(DO:"COVID-19") increases path(DO:"acute kidney tubular necrosis")
+path(DO:"COVID-19") increases path(HP:"blood clot")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Kidney Glomerulus"
+path(DO:"COVID-19") increases path(MESH:Microaneurysm)
+UNSET MeSHAnatomy
+
+SET Support = "PM6 (24-year-old man) had a higher degree of arterial intimal thickening than expected for that age."
+path(DO:"COVID-19") increases path(DO:arteriosclerosis)
+
+SET Support = "Large droplet fatty change was seen in most patients (seven [88%] of eight). Cirrhosis or bridging hepatic fibrosis were noted in three patients (38%)."
+path(DO:"COVID-19") increases path(HP:"Hepatic steatosis")
+path(DO:"COVID-19") increases path(DO:"liver cirrhosis")
+path(DO:"COVID-19") increases path(HP:"Hepatic fibrosis")
+
+SET Support = "No liver thrombosis was identified histologically, but one patient showed macroscopic liver infarction (figure 2)."
+path(DO:"COVID-19") increases path(DO:"hepatic infarction")
+
+SET Support = "The median liver weight was 1432 g (IQR 1012–2466) and three (33%) of nine patients showed hepatomegaly (liver weighing >2000 g). "
+path(DO:"COVID-19") increases path(MESH:Hepatomegaly)
+
+SET Support = "Mild T-cell infiltration was noted around blood vessels and capillaries in all five patients, but B cells were absent."
+path(DO:"COVID-19") increases bp(FIXME: "T-cell infiltration")
+
+SET Support = "However, no necrosis of brain tissue or extensive infiltration of inflammatory cells in brain parenchyma or meninges was observed on histological examination, although one (11%) of nine patients showed macroscopic haemorrhagic transformation in a large recent cerebral infarction in the distribution of the middle cerebral artery."
+path(DO:"COVID-19") increases path(MESH:"Cerebral Hemorrhage")
+
+SET Support = "Viral RNA was present in respiratory tract samples, including lung, of all five cases analysed. In addition, two of three patients had detectable viral RNA in the nasal epithelium and four of five patients in the trachea."
+SET MeSHAnatomy = {"Nose", "Trachea"}
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+UNSET Specimen
+UNSET Citation

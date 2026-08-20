@@ -1,0 +1,280 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "https://doi.org/10.1016/j.jare.2020.03.005"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "COVID-19 infection: Origin, transmission, and characteristics of human \
+coronaviruses"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+# DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+# DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+# DEFINE NAMESPACE NCBICOVID19 AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+# DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+# DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"Elsevier", "10.1016/j.jare.2020.03.005"}
+
+SET Support = "The coronavirus disease 19 (COVID-19) is a highly transmittable and pathogenic viral infection caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), which emerged in Wuhan, China and spread around the world"
+path(DO:"COVID-19") isA path(DO:"Coronavirus infection")
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(DO:"COVID-19")
+
+SET Support = "Coronaviruses belong to the Coronaviridae family in the Nidovirales order."
+a(NCBITAXON:"Coronaviridae") isA a(NCBITAXON:"Nidovirales")
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") isA a(NCBITAXON:"Coronaviridae")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Coronaviridae")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Coronaviridae")
+
+SET Support = "Coronaviruses are minute in size (65–125 nm in diameter) and contain a single-stranded RNA as a nucleic material, size ranging from 26 to 32kbs in length."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") isA a(MESH:"RNA Viruses")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") isA a(MESH:"RNA Viruses")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(MESH:"RNA Viruses")
+
+SET Support = "The subgroups of coronaviruses family are alpha (a), beta (b), gamma (c) and delta (d) coronavirus."
+a(NCBITAXON:"Orthocoronavirinae") hasMembers list(a(NCBITAXON:"Alphacoronavirus"), a(NCBITAXON:"Betacoronavirus"),a(NCBITAXON:"Gammacoronavirus"),a(NCBITAXON:"Deltacoronavirus"))
+
+SET Support = "The severe acute respiratory syndrome coronavirus (SARS-CoV), H5N1 influenza A, H1N1 2009 and Middle East respiratory syndrome coronavirus (MERS-CoV) cause acute lung injury (ALI) and acute respiratory distress syndrome (ARDS) which leads to pulmonary failure and result in fatality."
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Acute Lung Injury")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(MESHD:"Acute Lung Injury")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"adult respiratory distress syndrome")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"adult respiratory distress syndrome")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Death")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(MESHD:"Death")
+
+SET Support = "In 2003, the Chinese population was infected with a virus causing Severe Acute Respiratory Syndrome (SARS) in Guangdong province. The virus was confirmed as a member of the Betacoronavirus subgroup and was named SARS-CoV."
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"severe acute respiratory syndrome")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+
+SET Support = "The infected patients exhibited pneumonia symptoms with a diffused alveolar injury which lead to acute respiratory distress syndrome (ARDS)."
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"pneumonia")
+
+SET Support = "MERS-CoV is a member beta-coronavirus subgroup and phylogenetically diverse from other human-CoV."
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+
+SET Support = "The infection of MERSCoV initiates from a mild upper respiratory injury while progression leads to severe respiratory disease."
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"respiratory system disease")
+
+SET Support = "Similar to SARScoronavirus, patients infected with MERS-coronavirus suffer pneumonia, followed by ARDS and renal failure."
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"pneumonia")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"kidney failure")
+
+SET Support = "MERS-coronavirus also pertains to beta-coronavirus and having camels as a zoonotic source or primary host."
+SET Species = "1335626"
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Camelus") isA a(EFO:"host")
+
+SET Support = "In a recent study, MERS-coronavirus was also detected in Pipistrellus and Perimyotis bats, proffering that bats are the key host and transmitting medium of the virus."
+a(NCBITAXON:"Chiroptera") isA a(EFO:"host")
+UNSET Species
+
+SET Support = "SARS-CoV Key hosts Bat, palm civets and Raccon dogs."
+SET Species = "694009"
+a(NCBITAXON:"Chiroptera") isA a(EFO:"host")
+a(NCBITAXON:"Nyctereutes procyonoides") isA a(EFO:"host")
+UNSET Species
+
+SET Support = "SARS-CoV Sign and symptoms fever, malaise, myalgia, headache, diarrhoea, shivering, cough and shortness of breath."
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Fever")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(EFO:"malaise")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Myalgia")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Headache")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Diarrhea")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> bp(MESHPP:"Shivering")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Cough")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Dyspnea")
+
+SET Support = "SARS-CoV Entry receptor in humans ACE2 receptor"
+SET Disease = "Severe acute respiratory syndrome-related coronavirus"
+act(p(HGNC:"ACE2"), ma(GO:"virus receptor activity"))
+UNSET Disease
+
+SET Support = "SARS-CoV-2 Key hosts Bat"
+SET Species = "2697049"
+a(NCBITAXON:"Chiroptera") isA a(EFO:"host")
+UNSET Species
+
+SET Support = "SARS-CoV-2 Sign and symptoms Cough, fever and shortness of breath"
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(MESHD:"Fever")
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(MESHD:"Cough")
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(MESHD:"Dyspnea")
+
+SET Support = "SARS-CoV-2 Disease caused SARS, COVID-19"
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(DO:"adult respiratory distress syndrome")
+
+SET Support = "SARS-CoV-2 Entry receptor in humans ACE2 receptor"
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+act(p(HGNC:"ACE2"), ma(GO:"virus receptor activity"))
+UNSET Disease
+
+SET Support = "The glycoprotein spikes on the outer surface of coronaviruses are responsible for the attachment and entry of the virus to host cells."
+p(UNIPROT:"P0DTC2") -> bp(GO:"entry receptor-mediated virion attachment to host cell")
+p(UNIPROT:"P59594") -> bp(GO:"entry receptor-mediated virion attachment to host cell")
+
+SET Support = "The entry mechanism of a coronavirus depends upon cellular proteases which include, human airway trypsin-like protease (HAT), cathepsins and transmembrane protease serine 2 (TMPRSS2) that split the spike protein and establish further penetration changes."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+p(HGNC:"TMPRSS11D") -> bp(MESHPP:"Virus Internalization")
+p(HGNC:"TMPRSS2") -> bp(MESHPP:"Virus Internalization")
+p(HGNC:"TMPRSS11D") -> deg(p(UNIPROT:"P59594"))
+p(HGNC:"TMPRSS2") -> deg(p(UNIPROT:"P59594"))
+UNSET Disease
+
+SET Support = "MERS-coronavirus employs dipeptidyl peptidase 4 (DPP4), while HCoV-NL63 and SARS-coronavirus require angiotensin-converting enzyme 2 (ACE2) as a key receptor."
+SET Disease = "Middle East respiratory syndrome"
+p(HGNC:"DPP4") -> bp(MESHPP:"Virus Internalization")
+UNSET Disease
+
+SET Support = "SARS-CoV-2 possesses the typical coronavirus structure with spike protein and also expressed other polyproteins, 
+nucleoproteins, and membrane proteins, such as RNA polymerase, 3-chymotrypsin-like protease, papain-like protease, helicase, 
+glycoprotein, and accessory proteins."
+SET Species = "2697049"
+
+p(UNIPROT:"P0DTD1", frag("4393_5324"))
+p(UNIPROT:"P0DTD1", frag("3264_3569"))
+p(UNIPROT:"P0DTD1", frag("819_2763"))
+p(UNIPROT:"P0DTD1", frag("5325_5925"))
+
+
+# UNIPROT:"P0DTD1", frag("4393_5324") corresponds to RNA-directed RNA polymerase.
+# UNIPROT:"P0DTD1", frag("819_2763") corresponds to  papain-like protease
+# UNIPROT:"P0DTD1", frag("5325_5925") corresponds to helicase
+UNSET Species
+
+SET Support = "Viral proteins and genome RNA are subsequently assembled into virions in the ER and Golgi and then transported via vesicles and released out of the cell."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+SET CellStructure= {"Endoplasmic Reticulum", "Golgi Apparatus"}
+bp(MESHPP:"Virus Assembly")
+UNSET Cell
+tloc(a(GOCC:"virion"), fromLoc(GOCC:"cytoplasm"), toLoc(GOCC:"extracellular region"))
+UNSET Disease
+
+SET Support = "The single N501T mutation in SARS-CoV-2's Spike protein may have significantly enhanced its binding affinity for ACE2."
+p(UNIPROT:"P0DTC2",var("p.ASN501THR")) -> act(p(UNIPROT:"P59594"), ma(GO:"binding"))
+
+SET Support = "SARS-CoV has been reported to replicate and cause severe disease in Rats (F344), where the sequence analysis revealed a mutation at spike glycoprotein."
+SET Species = "10116"
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") ->  path(MESHD:"Disease")
+UNSET Species
+
+SET Support = "Remdesivir only and in combination with chloroquine or interferon beta significantly blocked the SARSCoV-2 replication and patients were declared as clinically recovered."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+a(PUBCHEM:121304016) -| bp(MESHPP:"Virus Replication")
+composite(a(PUBCHEM:121304016), a(PUBCHEM:2719)) -| bp(MESHPP:"Virus Replication")
+composite(a(PUBCHEM:121304016), p(UNIPROT:"P01574")) -| bp(MESHPP:"Virus Replication")
+a(PUBCHEM:121304016) -| path(DO:"COVID-19")
+composite(a(PUBCHEM:121304016), a(PUBCHEM:2719)) -| path(DO:"COVID-19")
+composite(a(PUBCHEM:121304016), p(UNIPROT:"P01574")) -| path(DO:"COVID-19")
+# PUBCHEM:121304016 corresponds to Remdesivir
+# PUBCHEM:2719 corresponds to chloroquine
+# UNIPROT:"P01574" corresponds to interferon beta
+UNSET Disease
+
+SET Support = "Nafamostat, Nitazoxanide, Ribavirin, Penciclovir, Favipiravir, Ritonavir, AAK1, Baricitinib, and Arbidol exhibited moderate results when tested against infection in patients and in-vitro clinical isolates."
+SET BioAssay = {"in vitro", "in vivo"}
+a(PUBCHEM:4413) -| path(DO:"COVID-19")
+a(PUBCHEM:41684) -| path(DO:"COVID-19")
+a(PUBCHEM:37542) -| path(DO:"COVID-19")
+a(PUBCHEM:135398748) -| path(DO:"COVID-19")
+a(PUBCHEM:492405) -| path(DO:"COVID-19")
+a(PUBCHEM:392622) -| path(DO:"COVID-19")
+p(HGNC:"AAK1") -| path(DO:"COVID-19")
+a(PUBCHEM:44205240) -| path(DO:"COVID-19")
+a(PUBCHEM:131411) -| path(DO:"COVID-19")
+# PUBCHEM:4413 corresponds to Nafamostat
+# PUBCHEM:41684 corresponds to Nitazoxanide
+# PUBCHEM:37542 corresponds to Ribavirin
+# PUBCHEM:135398748 corresponds to Penciclovir
+# PUBCHEM:492405 corresponds to Favipiravir
+# PUBCHEM:392622 corresponds to Ritonavir
+# PUBCHEM:44205240 corresponds to Baricitinib
+# PUBCHEM:131411 corresponds to Arbidol
+UNSET BioAssay
+
+SET Support = "Recently in Shanghai, doctors isolated the blood plasma from clinically recovered patients of COVID-19 and injected it in the infected patients"
+bp(MESH:"Immunization, Passive") -| path(DO:"COVID-19")
+
+SET Support = "The DNA fragment, inactivated whole virus or live-vectored strain of SARS-CoV (AY278741), significantly reduced the viral infection in various animal models."
+a(MESHC:"Vaccines, DNA")  -| path(DO:"COVID-19")
+a(MESHC:"Vaccines, Inactivated") -| path(DO:"COVID-19")
+
+SET Support = " For instance, there is a possibility that vaccines for other diseases such as rubella or measles can create cross-resistance for SARS-CoV-2."
+a(MESHC:"Rubella Vaccine") -| path(DO:"COVID-19")
+a(MESHC:"Measles Vaccine") -| path(DO:"COVID-19")
+
+SET Support = "DNA recombination was found to be involved at spike glycoprotein which assorted SARS-CoV (CoVZXC21 or CoVZC45) with the RBD of another Beta CoV, thus could be the reason for cross-species transmission and rapid infection."
+SET Species = "2697049"
+bp(GOBP:"DNA recombination") -> bp(MESH:"Disease Transmission, Infectious")
+UNSET Species
+
+SET Support = " Remdesivir, Lopinavir, Ritonavir, and Oseltamivir significantly blocked the COVID-19 infection in infected patients."
+a(PUBCHEM:92727) -| path(DO:"COVID-19")
+a(PUBCHEM:392622) -| path(DO:"COVID-19")
+a(PUBCHEM:65028) -| path(DO:"COVID-19")
+# PUBCHEM:92727 corresponds to Lopinavir
+# PUBCHEM:392622 corresponds to Ritonavir
+# PUBCHEM:65028 corresponds to Oseltamivir

@@ -1,0 +1,279 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "36198765.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"Actin-cytoskeletal remodeling pathway", "anti-viral interferon stimulated gene", "extracellular matrix regulatory enzymes", "microglia-mediated phagocytosis"}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+DEFINE ANNOTATION Technique AS LIST {"single cell RNA sequencing"}
+DEFINE ANNOTATION Custom_Cell AS LIST {"perivascular cell", "PDGFRB+ pericytes", "GFAP+ cells"}
+DEFINE ANNOTATION HoursPostInfection AS LIST {"24 hours", "72 hours"}
+DEFINE ANNOTATION Custom_CellLine AS LIST {"induced human microglia-like cells"}
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Mol Psychiatry. 2022 Oct;27(10):3939-3950. doi: 10.1038/s41380-022-01786-2. Epub 2022 Oct 5.", "36198765"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+SET Disease = "COVID-19"
+
+SET Support = "At 24hpi, a strong signal for the viral nucleocapsid protein (NP) was observed mainly in the periphery of the infected organoids, whereas at 72hpi, we observed NP staining in cellular cytoplasm or processes of infected cells."
+SET MeSHAnatomy = {"Organoids", "Brain"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(UNIPROT:P0DTC9)
+
+SET Support = "Cleaved caspase3 (CASP3) staining indicated a pronounced increase in early cell death-related events in infected organoids as compared to mock-treated organoids."
+SET BioAssay = "immunohistochemistry"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:CASP3, frag("?"))
+p(HGNC:CASP3, frag("?")) biomarkerFor bp(GO:"cell death")
+UNSET BioAssay
+
+SET Support = "Infected organoids then displayed a significant decrease in postsynaptic density (PSD-95) as compared to the mock-treated organoids."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:DLG4)
+p(HGNC:DLG4) pos a(GO:"postsynaptic density")
+
+SET Support = "Consistent with our previous microglial characterization (IHC), qRT-PCR on cell lysates suggested the capture of more immature microglia (Supplementary Fig. 2e) and included viral N gene copies."
+SET BioAssay = "quantitative PCR"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(UNIPROT:P0DTC9)
+UNSET BioAssay
+
+SET Support = "To exclude those microglia that only stained positive for viral RNA (dsRNA, N gene), and/or CASP3, due to engulfment of infected cells within the organoid, we derived induced human microglia-like cells (iMGs) in 2D-culture [20] from one donor and exposed these cells to live SARS-CoV-2 virus (using a lower MOI of 0.01 given monoculture). The proportion of IBA1+ cells positive for dsRNA and CASP3 then increased with time."
+SET Custom_CellLine = "induced human microglia-like cells"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"microglial cell activation")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cell death")
+p(HGNC:CASP3) biomarkerFor bp(GO:"cell death")
+UNSET Custom_CellLine
+
+SET Support = "In line with our previous findings in 2D models [20], this revealed a baseline uptake of postsynaptic structures (indicated by PSD-95) in microglia residing in brain organoids"
+SET MeSHAnatomy = {"Organoids", "Brain", "Microglia"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"postsynaptic density")
+p(HGNC:DLG4) pos a(GO:"postsynaptic density")
+UNSET MeSHAnatomy
+
+SET Support = "In infected organoids (MOI 0.3, 72hpi), the total numbers of Iba1+ cells were slightly increased but did not reach significance (Supplementary Fig. 3a) while we observed a clear increase in CD68+ cells (Supplementary Fig. 3b) and a threefold increase in uptake of synaptic structures in microglia (Fig. 4d, e)."
+SET MeSHAnatomy = {"Organoids", "Brain"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"inflammatory response")
+p(HGNC:CD68) biomarkerFor bp(GO:"inflammatory response")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"postsynaptic density")
+
+SET Support = "While module B was largely comprised of genes encoding for cytosolic ribosomal proteins (Supplementary Fig. 7a, b), we detected several interferon-stimulated genes (ISGs) in module A (Fig. 6b, Supplementary Table 3). Accordingly, IHC validation of ISG15 protein showed a general increase in interferon response in organoids at 72hpi as well as a specific upregulation in IBA1+ cells, compared to control mock organoids."
+SET HoursPostInfection = "72 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ISG15) 
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"microglial cell activation")
+UNSET HoursPostInfection
+
+SET Support = "Nonetheless, we detected no clear upregulation of pro-inflammatory cytokines in microglia or microglial subclusters (Supplementary Fig. 7d, e), at either 24hpi or at 72hpi, although several pathogen sensors and upstream effectors of interferon signaling were upregulated including nuclear factor kappa B (NFKB1)."
+SET HoursPostInfection = "72 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:NFKB1)
+UNSET HoursPostInfection
+
+SET Support = "At 24hpi, we detected upregulation of pathways (Supplementary Table 4) that can serve as activating stimuli for primed inflammasome components, and are required for the production and maturation of pro-inflammatory cytokines."
+SET HoursPostInfection = "24 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cytokine production involved in inflammatory response")
+
+SET Support = "Taken together, this suggests that SARS-CoV-2 activates interferon signaling in microglia although the expression of pro-inflammatory cytokines are at normal levels already at 24hpi."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(PW:"interferon mediated signaling pathway")
+UNSET HoursPostInfection
+
+SET Support = "Notably, both these disorders are characterized by a microglia-mediated early synapse loss [34], and epidemiological register studies have indicated an increased risk of dementia and parkinsonism after COVID-19 infection."
+bp(GO:"microglial cell activation") decreases a(GO:synapse)
+bp(GO:"microglial cell activation") pos path(DO:"COVID-19")
+path(DO:"COVID-19") increases path(DO:dementia)
+path(DO:"COVID-19") increases path(HP:Parkinsonism)
+UNSET MeSHAnatomy
+
+SET Support = "Actin-cytoskeletal remodeling pathways, essential for promoting migration and phagocytosis [39], were also upregulated in microglia exposed to SARS-CoV-2."
+SET MeSHAnatomy = {"Organoids", "Brain", "Microglia"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"actin cytoskeleton organization")
+UNSET MeSHAnatomy
+
+SET Support = "Consistent with this upregulation in microglia, and the extensive initiation of neuronal apoptosis and decreased postsynaptic density in infected organoids, neurons at 72hpi downregulated the expression of ‘don’t-eat-me’ signals such as CD46 and CD200."
+SET MeSHAnatomy = {"Organoids", "Brain", "Neurons"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"neuron apoptotic process")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases a(GO:"postsynaptic density")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases surf(p(HGNC:CD46))
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases surf(p(HGNC:CD200))
+UNSET MeSHAnatomy
+
+SET Support = "Consequently, we observed increased microglial expression of genes associated with microglia-mediated phagocytosis [41–44], such as CD68 (in line with the observed increase of CD68+ cells), TREM2, ITGB5, CD47, MSR1, CALR, as well as genes previously identified to be directly involved in synapse elimination in the aftermath of viral encephalitis, such as C3, C3AR1 and FCGR3A."
+SET MeSHAnatomy = {"Organoids", "Brain", "Microglia"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CD68)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TREM2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ITGB5)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CD47)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:MSR1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CALR)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:C3)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:C3AR1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:FCGR3A)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(FIXME:"microglia-mediated phagocytosis")
+UNSET Disease 
+UNSET MeSHAnatomy 
+SET Disease = "viral encephalitis"
+p(HGNC:C3) decreases a(GO:synapse)
+p(HGNC:C3AR1) decreases a(GO:synapse)
+p(HGNC:FCGR3A) decreases a(GO:synapse)
+UNSET Disease
+
+SET Support = "AS-0 cells expressed relatively higher levels of anti-viral ISGs, while AS-3 and AS-4 cells had a proliferative profile and exhibited lower expression levels of GFAP."
+SET Disease = "COVID-19"
+SET MeSHAnatomy = "Astrocytes"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ISG15)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:GFAP)
+
+SET Support = "Subcluster AS-2, comprising of cells sampled at 72hpi, showed elevated levels of GFAP and STAT3, indicative of reactive astrogliosis [45], along with phagocytosis related genes such as MEGF8 and ABCA1 (Fig. 7c, Supplementary Fig. 8d)."
+SET HoursPostInfection = "72 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:GFAP)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:STAT3)
+p(HGNC:GFAP) increases path(HP:Gliosis)
+p(HGNC:STAT3) increases path(HP:Gliosis)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:MEGF8)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ABCA1)
+p(HGNC:MEGF8) regulates bp(GO:phagocytosis)
+p(HGNC:ABCA1) regulates bp(GO:phagocytosis)
+
+
+SET Support = "We also observed upregulation of metal ion (zinc, copper, iron) homeostasis pathways involving metallothioneins in AS-2 astrocytes at 72hpi (Fig. 7c)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"iron ion homeostasis")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"copper ion homeostasis")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"zinc ion homeostasis")
+
+SET Support = "Notably, proliferative reactive astrocytes (AS-3 and AS-4) appeared mainly at 24hpi but were largely replaced with non-proliferative reactive astrocytes at 72hpi, then in line with the microglial signature suggesting an early switch to a more chronic reactivity state."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(HP:Astrocytosis)
+UNSET HoursPostInfection
+UNSET MeSHAnatomy
+
+SET Support = "At 24hpi, we observed an enrichment of metallothioneins, similar to what we observed in astrocytes at 72hpi, whereas genes involved in viral defense response, regulation of reactive oxygen species, and ECM organization, were enriched at 72hpi."
+SET HoursPostInfection = "24 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(GFAM:Metallothioneins)
+UNSET HoursPostInfection
+SET HoursPostInfection = "72 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"defense response to virus")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"regulation of reactive oxygen species metabolic process")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"extracellular matrix organization")
+UNSET HoursPostInfection
+
+SET Support = "In addition to choroid plexus, a differential expression analysis showed significant increase in expression of matrix metalloproteases and ECM-regulatory enzymes at 72hpi in microglia, astrocytes and perivascular cells, whereas endothelial cells reduced expression levels of solute carrier SLC2A1 (Fig. 7g), all in agreement with signaling that promotes compromised CNS barriers."
+SET MeSHAnatomy ={"Choroid Plexus", "Microglia", "Astrocytes"}
+SET Custom_Cell = "perivascular cell"
+SET HoursPostInfection = "72 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(GFAM:"M10 matrix metallopeptidases")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(FIXME:"extracellular matrix regulatory enzymes")
+UNSET MeSHAnatomy
+UNSET Custom_Cell
+SET Cell = "endothelial cell"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:SLC2A1)
+UNSET Cell
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+
+SET Support = "Accordingly, by IHC we validated increased MMP14 protein expression by PDGFRB+ (pericytes) as well as GFAP+ cells within 72hpi organoids (Fig. 7h, i)."
+SET BioAssay = "immunohistochemistry"
+SET Custom_Cell = {"PDGFRB+ pericytes", "GFAP+ cells"}
+SET MeSHAnatomy ={"Organoids", "Brain"}
+SET HoursPostInfection = "72 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:MMP14)
+UNSET BioAssay 
+UNSET Custom_Cell
+UNSET MeSHAnatomy
+UNSET HoursPostInfection
+
+SET Support = "Further, astrocytes, pericytes and choroid plexus-related cells were observed to downregulate VEGF signaling, a potent inducer of BBB permeability, at 24hpi but then at 72hpi instead display an upregulation, coinciding with increased signaling for leukocyte chemotaxis and activation in astrocytes, as well as antigen processing and presentation in choroid plexus."
+SET MeSHAnatomy = {"Astrocytes", "Pericytes", "Choroid Plexus"}
+SET HoursPostInfection = "24 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"vascular endothelial growth factor signaling pathway")
+bp(GO:"vascular endothelial growth factor signaling pathway") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET HoursPostInfection
+UNSET MeSHAnatomy
+SET HoursPostInfection = "72 hours"
+SET MeSHAnatomy = "Choroid Plexus"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"leukocyte chemotaxis")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"astrocyte activation")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"antigen processing and presentation")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"vascular endothelial growth factor signaling pathway")
+UNSET HoursPostInfection
+UNSET MeSHAnatomy
+
+SET Support = "In exposed organoids, we detected an upregulation of pathways related to UPRs, ER stress, proteasomal degradation, and autophagy, among cell types such as microglia, astrocytes, choroid plexus, and perivascular cells."
+SET MeSHAnatomy = {"Astrocytes", "Choroid Plexus", "Microglia"}
+SET Custom_Cell = "perivascular cell"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"endoplasmic reticulum unfolded protein response")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Endoplasmic Reticulum Stress")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases deg(complex(GO:"proteasome complex"))
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:autophagy)
+UNSET  MeSHAnatomy
+UNSET Custom_Cell
+
+SET Support = "Further, a partial translational inhibition could be observed in microglia (module B), as well as most of the other cell types. We also observed downregulation of the ROS metabolism across cell types, which can lead to dysregulation of the antioxidant cellular systems and result in oxidative stress."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:translation)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"reactive oxygen species metabolic process")
+bp(GO:"reactive oxygen species metabolic process") decreases bp(MESH:"Oxidative Stress")
+UNSET Citation
+
+
+
+

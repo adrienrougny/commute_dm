@@ -1,0 +1,226 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "https://doi.org/10.1101/2020.03.15.20033472"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "Blood single cell immune profiling reveals the interferon-MAPK pathway \
+mediated adaptive immune response for COVID-19"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.1"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+# DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+# DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://raw.githubusercontent.com/pharmacome/terminology/c328ad964c08967a0417a887510b97b965a62fa5/external/go-names.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+# DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+# DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+# DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+# DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+# DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+# DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"medRxiv", "10.1101/2020.03.15.20033472"}
+
+SET Support = "On December 31, 2019, a novel coronavirus (SARS-CoV-2), belonging to the Orthocoronavirinae subfamily and distinct from middle east respiratory syndrome (MERS)-CoV and SARS-CoV, emerged in Wuhan, China."
+pop(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") isA pop(NCBITAXON:"Orthocoronavirinae")
+
+SET Support = "Symptoms of COVID-19 included fever, myalgia, and fatigue, as well as dry cough, shortness of breath, sputum production, headache, hemoptysis, sore throat, and diarrhea."
+path(DO:"COVID-19") -> path(MESHD:"Fever")
+path(DO:"COVID-19") -> path(MESHD:"Myalgia")
+path(DO:"COVID-19") -> path(MESHD:"Headache")
+path(DO:"COVID-19") -> path(MESHD:"Hemoptysis")
+path(DO:"COVID-19") -> path(MESHD:"Pharyngitis")
+path(DO:"COVID-19") -> path(MESHD:"Diarrhea")
+
+SET Support = "Lymphopenia, prolonged prothrombin time, and elevated lactate dehydrogenase levels have also been observed in the patients with COVID-19."
+path(DO:"COVID-19") ->  path(DO:"lymphopenia")
+path(DO:"COVID-19") -> bp(MESHPP:"Prothrombin Time")
+path(DO:"COVID-19") -> p(ECCODE:"1.1.1.27")
+
+SET Support = "A computed tomography (CT) can identify bilateral patchy shadows or ground glass opacity in the lungs."
+SET BioAssay = "Ct"
+SET Anatomy = "lung"
+path(DO:"COVID-19") -> bp(NCIT:"Ground Glass Opacity")
+UNSET Anatomy
+UNSET BioAssay
+
+SET Support = "A T cell receptor (TCR) mediates recognition of pathogen-associated epitopes through interactions with peptide and major histocompatibility complexes (pMHCs)."
+complex(GOCC:"T cell receptor complex") reg bp(GOBP:"phagocytosis, recognition")
+
+SET Support = "We observed that the proportion of the CD1C+_B dendritic cells (clusters 7, 13, and 30), CD8 cytotoxic T cells (cluster 9), and plasmacytoid dendritic cells (cluster 36) increased in patients with COVID-19, while the B cells (cluster 16) and CD4+ T helper cells (cluster 51）decreased in the COVID-19 patients compared to the normal controls, indicating that the number of specific clusters of immune cells adjusts to fight SARS-CoV-2 aggression."
+path(DO:"COVID-19") pos pop(HP:"CD8-positive, alpha-beta cytotoxic T cell")
+path(DO:"COVID-19") pos pop(HP:"plasmacytoid dendritic cell")
+path(DO:"COVID-19") neg pop(HP:"B cell")
+path(DO:"COVID-19") neg pop(HP:"CD4-positive helper T cell")
+
+SET Support = "For the critical condition (patient 1), the proportion of 40 out of the 56 cell subtypes decreased; some subtypes, including CD8+ T cell (cluster 52), CD4+ T cell (cluster 55,56) and plasmacytoid dendritic cell (cluster 53), disappeared."
+path(DO:"COVID-19") neg pop(HP:"CD8-positive, alpha-beta T cell")
+path(DO:"COVID-19") neg pop(HP:"CD4-positive, alpha-beta T cell")
+path(DO:"COVID-19") neg pop(HP:"plasmacytoid dendritic cell")
+
+SET Support = "This is consistent with the lower number of lymphocytes in the patient (0.75 × 109/L) compared to the normal range (1.1-3.2 × 109/L, Table S1)."
+path(DO:"COVID-19") neg pop(HP:"lymphocyte")
+
+SET Support = "However, some other cell subtypes, including CD8 cytotoxic T cells (cluster 9), CD1C+_B dendritic cells (cluter 7, 13, 19, 30, 39), effector CD8+ memory T (Tem) cells (cluster 14), and CD141+CLEC9A+ dendritic cells (cluster 45), increased, suggesting the limited immune response existed."
+path(DO:"COVID-19") pos pop(HP:"CD8-positive, alpha-beta cytotoxic T cell")
+path(DO:"COVID-19") pos pop(HP:"effector memory CD8-positive, alpha-beta T cell")
+
+SET Support = "In the severe condition (patient 2), the proportion of 45 of the 56 cell types increased, which may suggest over-activation of immune cells, including CD8+ T cells (cluster 1, 4, 18, 28 etc.), CD8 cytotoxic T cells (cluster 1 and cluster 25), CD4+ cytotoxic T cells (cluster 8 and cluster 21), Naive CD8+ T cell (cluster 2), plasmacytoid dendritic cell (cluster 53), and others."
+path(DO:"COVID-19") pos pop(HP:"activated CD8-positive, alpha-beta T cell")
+path(DO:"COVID-19") pos pop(HP:"naive thymus-derived CD8-positive, alpha-beta T cell")
+path(DO:"COVID-19") pos pop(HP:"plasmacytoid dendritic cell")
+
+SET Support = "In the cured patients, effector CD8+ memory T (Tem) cells (cluster 14), megakaryocyte progenitor cells (cluster 23), CD1C+_B dendritic cells (cluster 39), and CD141+CLEC9A+ dendritic cells (cluster 45) decreased significantly."
+path(DO:"COVID-19") pos pop(HP:"effector memory CD8-positive, alpha-beta T cell")
+path(DO:"COVID-19") pos pop(HP:"megakaryocyte progenitor cell")
+
+SET Support = "Among these pathways, the most important was over-activation of the interferon related signaling pathways, including 2’-5’-oligoadenylate synthase and type I interferon signaling pathway（naive CD8+ T cells, CD4+ T cells, and other cells) and interferon alpha/beta/gamma signaling (naive CD8+ T cells, CD4+ T cells, and other cells)."
+SET Cell = {"naive thymus-derived CD8-positive, alpha-beta T cell", "CD4-positive, alpha-beta T cell"}
+path(DO:"COVID-19") pos bp(GOBP:"type I interferon signaling pathway")
+path(DO:"COVID-19") pos bp(NCIT:"IFN Gamma Signaling Pathway")
+UNSET Cell
+
+SET Support = "Among these pathways, the interferon-MAPK signaling pathway was the major blood immune response for COVID-19 infection."
+path(DO:"COVID-19") -> bp(GOBP:"MAPK cascade")
+
+SET Support = "Among them, interferon α-inducible protein 27 (IFI27), originally known to involve in innate immunity and to intervene in cell proliferation, was increasingly expressed in many cell types, including CD1C+_B dendritic cells, CD1C-CD141- dendritic cells, CD141+CLEC9A+ dendritic cells, CD8 cytotoxic T cells, and plasmacytoid dendritic cells."
+p(HGNC:"IFI27") -> bp(GOBP:"innate immune response")
+p(HGNC:"IFI27") -> bp(GO:"cell population proliferation")
+SET Cell = {"CD8-positive, alpha-beta cytotoxic T cell" ,"plasmacytoid dendritic cell"}
+path(DO:"COVID-19") pos p(HGNC:"IFI27")
+
+SET Support = "Second, the expressions of IFITM1, IFITM3, and IFI6, which were shown to be related to interferon-related pathway and associated with Influenza and West Nile Virus, were strikingly up-regulated in all of these cells."
+p(HGNC:"IFITM1") -- path(DO:"influenza")
+p(HGNC:"IFITM3") -- path(DO:"influenza")
+p(HGNC:"IFI6") -- path(DO:"influenza")
+p(HGNC:"IFITM1") -- path(DO:"West Nile fever")
+p(HGNC:"IFITM3") -- path(DO:"West Nile fever")
+p(HGNC:"IFI6") -- path(DO:"West Nile fever")
+path(DO:"COVID-19") pos p(HGNC:"IFITM1")
+path(DO:"COVID-19") pos p(HGNC:"IFITM3")
+path(DO:"COVID-19") pos p(HGNC:"IFI6")
+UNSET Cell
+
+SET Support = "The results indicate that interferon signals, especially interferon alfa/beta/gamma and interferon type I, are activated in the blood of patients with COVID-19."
+SET Anatomy = "blood"
+path(DO:"COVID-19") pos bp(NCIT:"IFN Gamma Signaling Pathway")
+path(DO:"COVID-19") pos bp(GOBP:"type I interferon signaling pathway")
+UNSET Anatomy
+
+SET Support = "Then, in the downstream of the interferon signaling, we found that MAPK signaling pathway transcription factors were activated in hospitalized patients with COVID-19, including high expressions of FOS, JUN, JUNB, and DUSP1."
+path(DO:"COVID-19") pos p(HGNC:"FOS")
+path(DO:"COVID-19") pos p(HGNC:"JUN")
+path(DO:"COVID-19") pos p(HGNC:"JUNB")
+path(DO:"COVID-19") pos p(HGNC:"DUSP1")
+
+SET Support = "These genes were previously shown to regulate cell invasion, migration, proliferation and innate immunity by inhibiting pro-inflammatory cytokine production."
+p(HGNC:"FOS") -| bp(GOBP:"cytokine production involved in inflammatory response")
+p(HGNC:"JUN") -| bp(GOBP:"cytokine production involved in inflammatory response")
+p(HGNC:"JUNB") -| bp(GOBP:"cytokine production involved in inflammatory response")
+p(HGNC:"DUSP1") -| bp(GOBP:"cytokine production involved in inflammatory response")
+bp(GOBP:"cytokine production involved in inflammatory response") reg bp(GOBP:"cell migration")
+bp(GOBP:"cytokine production involved in inflammatory response") reg bp(GO:"cell population proliferation")
+bp(GOBP:"cytokine production involved in inflammatory response") reg bp(GOBP:"innate immune response")
+
+SET Support = "In three groups of inpatients with different conditions, the up-regulated expression of these genes was observed in CD1C+_B dendritic cell, CD1C-CD141- dendritic cell, CD141+CLEC9A+ dendritic cell, CD8 cytotoxic T cells, and plasmacytoid dendritic cells."
+SET Cell = {"CD8-positive, alpha-beta cytotoxic T cell" ,"plasmacytoid dendritic cell"}
+path(DO:"COVID-19") pos p(HGNC:"FOS")
+path(DO:"COVID-19") pos p(HGNC:"JUN")
+path(DO:"COVID-19") pos p(HGNC:"JUNB")
+path(DO:"COVID-19") pos p(HGNC:"DUSP1")
+UNSET Cell
+
+SET Support = "In addition, autoantigens were detected in the severe condition (patient 2) and the moderate condition (patients 4, 8, and 9)."
+a(MESHC:"Autoantigens") pos path(DO:"COVID-19")
+
+SET Support = "IFI27, an immune biomarker which was reported to be related to cell proliferation and invasion and could discriminate between influenza and bacteria in patients with suspected respiratory infection, showed the most strongest up-regulation in COVID-2019 patients’ PBMCs in the interferon signaling pathway in the single cell transcriptome data."
+p(HGNC:"IFI27") biomarkerFor bp(GOBP:"cell migration")
+p(HGNC:"IFI27") biomarkerFor bp(GO:"cell population proliferation")
+SET Cell = "peripheral blood mononuclear cell"
+path(DO:"COVID-19") pos p(HGNC:"IFITM1")
+UNSET Cell
+
+SET Support = "These results suggest that IRF27 is a candidate marker gene for SARS-CoV-2 infection."
+p(HGNC:"IFI27") biomarkerFor path(DO:"COVID-19")
+
+SET Support = "BST2, which was previously shown to play a role in pre-B-cell growth, also showed upexpression in COVID-19 patients."
+p(HGNC:"BST2") reg bp(GOBP:"pre-B cell differentiation")
+path(DO:"COVID-19") pos p(HGNC:"BST2")
+
+SET Support = "Consistent with our single cell transcription data, the expression profile of FOS, which is a transcription factor mediating MAPK pathway signaling, showed up-regulation in COVID-19 patients but down-regulation in cured patients."
+p(HGNC:"FOS") reg bp(GOBP:"MAPK cascade")
+
+SET Support = "This result suggests that FOS is a candidate marker gene for cured COVID-19 patients."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+p(HGNC:"FOS") biomarkerFor path(DO:"COVID-19")
+UNSET Disease
+
+SET Support = "Immunofluorescence staining showed that IFI27 was highly expressed in the whole lymphocyte of patients with COVID-19, but only partially expressed on the lymphocyte of the controls."
+SET Cell = "lymphocyte"
+path(DO:"COVID-19") pos p(HGNC:"IFI27")
+UNSET Cell
+
+SET Support = "In summary, we demonstrated that SARS-CoV-2 can enter the blood through the circulatory system and cause a blood immune response after infection through the respiratory system."
+SET Anatomy = "blood"
+path(DO:"COVID-19") -> bp(GOBP:"immune response")
+UNSET Anatomy

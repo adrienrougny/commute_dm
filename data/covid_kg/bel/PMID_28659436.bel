@@ -1,0 +1,184 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "PMID_28659436"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "Broad-spectrum antiviral GS-5734 inhibits both epidemic and zoonotic \
+coronaviruses."
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+# DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+# DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+# DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+# DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://raw.githubusercontent.com/pharmacome/conso/f02c6ad4a4791a8ed45448513b9de8c8f1b00c87/external/mesh-names.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+# DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"PubMed", "28659436"}
+
+SET Support = "The genetically diverse coronavirus (CoV) family, currently composed of four genogroups [1 (alpha), 2 (beta), 3 (gamma), and 4 (delta)], infects birds and a variety of mammals."
+a(NCBITAXON:"Coronavirinae") hasMembers list(a(NCBITAXON:"Alphacoronavirus"), a(NCBITAXON:"Betacoronavirus"),a(NCBITAXON:"Gammacoronavirus"),a(NCBITAXON:"Deltacoronavirus"))
+
+SET Support = "Thus far, only CoV groups 1 and 2 are known to infect humans."
+a(NCBITAXON:"Alphacoronavirus") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Betacoronavirus") -> path(DO:"Coronavirus infection")
+
+SET Support = "Although CoV replication machinery exhibits substantial proofreading activity, replication of viral genomic RNA is inherently error-prone, driving the existence of genetically related yet diverse quasi-species."
+bp(GO:"viral RNA genome replication") -> a(MESH:"Quasispecies")
+
+SET Support = "GS-5734 prevents SARS-CoV and MERS-CoV replication in human airway epithelial cells."
+SET Disease = {"Severe acute respiratory syndrome-related coronavirus", "Middle East respiratory syndrome"}
+SET BioAssay = "in vitro"
+SET Cell = "respiratory epithelial cell"
+a(PUBCHEM:121304016) -| bp(MESHPP:"Virus Replication")
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Cell
+UNSET BioAssay
+UNSET Disease
+
+SET Support = "GS-5734 is a prodrug that requires metabolism by the host cell to the pharmacologically active triphosphate (TP) to inhibit virus replication."
+a(PUBCHEM:121304016) isA a(CHEBI:"prodrug")
+# PUBCHEM:121304016 corresponds to GS-5734
+
+SET Support = "Together, we demonstrate antiviral efficacy in HAE against both SARS-CoV and MERS-CoV at concentrations that are at least 100-fold lower than those with observable cytotoxicity."
+SET BioAssay = "in vitro"
+SET Cell = "respiratory epithelial cell"
+a(PUBCHEM:121304016) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:121304016) -| path(DO:"Middle East respiratory syndrome")
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Cell
+UNSET BioAssay
+
+SET Support = "CoV host specificity and entry into host cells are guided by the viral spike glycoprotein whose extensive genetic variation is a reflection of host species diversity and variation in virus receptor usage."
+p(UNIPROT:"P0DTC2") reg bp(MESHPP:"Host Specificity")
+p(UNIPROT:"P0DTC2") reg bp(GOBP:"viral entry into host cell")
+
+SET Support = "Treatment of HAE cultures with GS-5734 infected with human CoV NL63, a circulating group 1 human CoV that typically causes bronchitis, resulted in a pronounced 3 log10 reduction in virus production at 0.1 mM and undetectable virus at higher concentrations."
+a(NCBITAXON:"Human coronavirus NL63") isA a(NCBITAXON:"Alphacoronavirus")
+a(NCBITAXON:"Human coronavirus NL63") -> path(DO:"bronchitis")
+SET BioAssay = "in vitro"
+SET Cell = "respiratory epithelial cell"
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Human coronavirus NL63")
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Cell
+UNSET BioAssay
+
+SET Support = "Mouse models of SARS-CoV disease faithfully recapitulate many aspects of SARS-CoV pathogenesis in humans including anorexia, high titers of virus replication in the lung, and the development of acute respiratory distress syndrome (ARDS) as well as an age-related exacerbation of disease."
+SET Species = "10090"
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(MESHD:"Anorexia")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"adult respiratory distress syndrome")
+
+SET Support = "As shown in Fig. 5A, prophylactic administration at 50 mg/kg QD or 25 mg/kg BID ameliorated SARS-CoV–induced weight loss seen with vehicle treatment."
+SET Disease = "Severe acute respiratory syndrome-related coronavirus"
+a(PUBCHEM:121304016) -| path(MESHD:"Weight Loss")
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Disease
+
+SET Support = "Treatment with GS-5734 also reduced SARS-CoV–induced lung pathology, including denuding bronchiolitis, perivascular accumulation of inflammatory infiltrates (that is, “cuffing”), and intra-alveolar edema associated with diffuse alveolar damage as compared to vehicle-treated animals."
+a(PUBCHEM:121304016) -| path(MESHD:"Bronchiolitis")
+a(PUBCHEM:121304016) -| path(NCIT:"Perivascular Lymphocytic Infiltrate")
+a(PUBCHEM:121304016) -| path(DO:"pulmonary edema")
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Species
+
+SET Support = "Metrics of labored breathing, such as increased exhalation time and extended pause in between the end of one breath and the beginning of the next, were increased in vehicle-treated animals as compared to those administered with GS-5734 (Fig. 5F)."
+a(PUBCHEM:121304016) -| bp(MESHPP:"Breath Holding")
+# PUBCHEM:121304016 corresponds to GS-5734
+
+SET Support = "Therapeutic GS-5734 substantially reduced the SARS-CoV–induced weight loss in infected animals and significantly suppressed virus lung titers (P = 0.0059), thus demonstrating that therapeutic administration of GS-5734 can reduce disease and suppress replication during an ongoing infection."
+SET Disease = "Severe acute respiratory syndrome-related coronavirus"
+a(PUBCHEM:121304016) -| bp(MESHPP:"Viral Load")
+a(PUBCHEM:121304016) -| path(DO:"severe acute respiratory syndrome")
+# PUBCHEM:121304016 corresponds to GS-5734
+
+SET Support = "Disease severity and survival did not differ with treatment, but we observed a significant reduction (P < 0.05) in SARS-CoV lung titers of GS-5734–treated animals at 6 dpi."
+a(PUBCHEM:121304016) causesNoChange bp(MESH:"Survival")
+# PUBCHEM:121304016 corresponds to GS-5734
+
+SET Support = "Therapeutic treatment beginning at 2 dpi reduced lung viral loads yet did not improve disease outcomes, suggesting that antivirals initiated after virus replication and immunopathology have reached their tipping point were not clinically beneficial."
+bp(GOBP:"viral genome replication") -| act(a(PUBCHEM:121304016), ma(CHEBI:"antiviral agent"))
+bp(NCIT:"Immunopathology") -| act(a(PUBCHEM:121304016), ma(CHEBI:"antiviral agent"))
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Disease
+
+SET Support = "This result is not surprising given the precedent set by the influenza antiviral oseltamivir, where treatment efficacy diminishes with time after the onset of symptoms."
+SET Disease = "influenza"
+bp(NCIT:"Symptom Onset") -| act(a(PUBCHEM:65028), ma(CHEBI:"antiviral agent"))
+# PUBCHEM:65028 corresponds to oseltamivir
+UNSET Disease
+
+SET Support = "Nevertheless, our studies provide data that strongly support the testing of GS-5734 in nonhuman primates and suggest that therapeutic treatment of MERS-CoV–infected humans with GS-5734 will help diminish virus replication and disease if administered early enough during the course of infection."
+SET Disease = "Middle East respiratory syndrome"
+bp(GOBP:"viral genome replication") -| act(a(PUBCHEM:121304016), ma(CHEBI:"antiviral agent"))
+a(PUBCHEM:121304016) -| path(DO:"Middle East respiratory syndrome")
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Disease
+
+SET Support = "Overall, our work provides evidence that GS-5734 may protect CoV-infected patients from progression to severe disease and could prophylactically protect health care workers in areas with existing endemic MERS-CoV and that its broad-spectrum activity may prove valuable when a novel CoV emerges in the future."
+SET Disease = {"Severe acute respiratory syndrome-related coronavirus", "Middle East respiratory syndrome", "Severe acute respiratory syndrome coronavirus 2"}
+a(PUBCHEM:121304016) -| path(MESHD:"Disease Progression")
+# PUBCHEM:121304016 corresponds to GS-5734
+UNSET Disease

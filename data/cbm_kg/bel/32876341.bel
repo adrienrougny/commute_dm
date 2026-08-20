@@ -1,0 +1,147 @@
+##################################################################################
+SET DOCUMENT Name = "32876341.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE CL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"nuclear condensation"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+DEFINE ANNOTATION Custom_anatomy AS LIST {"induced pluripotent stem cells derived brain organoids", "induced pluripotent stem cells derived neurons"}
+DEFINE ANNOTATION Technique AS LIST {"Terminal deoxynucleotidyl transferase dUTP nick end labeling"}
+DEFINE ANNOTATION DaysPostInfection AS LIST {"2 days"}
+DEFINE ANNOTATION Custom_CellLine AS LIST {"Vero CCL-81"}
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "EMBO J. 2020 Oct 15;39(20):e106230. doi: 10.15252/embj.2020106230. Epub 2020 Sep 23.", "32876341"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "We confirmed the infection of new Vero cells by the emergence of virus-induced cytopathic effects (CPEs) and an increase in SARS-CoV-2 RNA over 4-dpi."
+SET Disease = "COVID-19"
+SET Custom_CellLine = "Vero CCL-81"
+SET BioAssay = "quantitative PCR"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Cytopathogenic Effect, Viral")
+UNSET Custom_CellLine
+UNSET BioAssay
+
+SET Support = "These findings indicate that SARS-CoV-2 has a preferred tropism to neurons, as reported recently."
+SET MeSHAnatomy = "Neurons"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Viral Tropism")
+UNSET MeSHAnatomy
+
+SET Support = "Testing the ACE-2 expression at the mRNA level via a qRT–PCR revealed that both iPSCs-derived brain organoids and neurons exhibited ~12.5- and 50-fold lesser than human respiratory epithelial cells (hREC), which served as a positive control."
+SET Custom_anatomy = {"induced pluripotent stem cells derived brain organoids", "induced pluripotent stem cells derived neurons"}
+SET BioAssay = "quantitative PCR"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+UNSET Custom_anatomy
+UNSET BioAssay
+
+SET Support = "Our Western blots using anti-ACE2 antibodies recognized ACE2 in organoid extracts only at higher exposure conditions."
+SET Custom_anatomy = {"induced pluripotent stem cells derived brain organoids"}
+SET BioAssay = "western blot"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+UNSET BioAssay 
+UNSET Custom_anatomy
+
+SET Support = "These cultures exhibit neuronal outgrowths as long-range axonal fibers expressing mature neuronal markers of MAP2, Tau, synapsin-1, and PSD95."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"neuron projection development")
+p(HGNC:MAP2) association bp(GO:"neuron projection development")
+p(HGNC:MAPT) association bp(GO:"neuron projection development")
+p(HGNC:DLG4) association bp(GO:"neuron projection development")
+p(HGNC:SYN1) association bp(GO:"neuron projection development")
+
+SET Support = "Compared to control organoids where Tau normally localizes in axons, SARS-CoV-2-positive neurons exhibited an altered Tau localization pattern, although it was challenging to visualize mislocalization of Tau in 3D tissues. Nevertheless, using selected confocal sections, we could image an altered Tau localization in SARS-CoV-2-positive neurons. In particular, we identified an enhanced level of Tau into the somas of the SARS-CoV-2-positive neurons."
+SET BioAssay = {"immunofluorescent labeling", "confocal microscopy"}
+SET Custom_anatomy = {"induced pluripotent stem cells derived neurons"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases tloc(p(HGNC:MAPT), fromLoc(GO:axon), toLoc(GO:"cell body"))
+
+SET Support = "More precisely, we found that compared to control organoids, early Tau phosphorylation marker AT180 recognizes pT231Tau localized at the soma of the SARS-CoV-2-positive neurons (Fig 2D–F)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases tloc(p(HGNC:MAPT, pmod(Ph, Tyr, 231)), fromLoc(GO:axon), toLoc(GO:"cell body"))
+UNSET Custom_anatomy
+UNSET BioAssay
+
+SET Support = "Analyzing the nuclei of SARS-CoV-2-positive cells (Fig 3A), we realized that they are highly condensed or fragmented exhibiting a strong reaction to 4′,6-diamidino-2-phenylindole (DAPI) that labels nuclei, a feature quite frequently observed in dead cells."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(FIXME:"nuclear condensation")
+bp(FIXME:"nuclear condensation") association bp(GO:"cell death")
+
+SET Support = "To test neuronal cell death as a consequence of SARS-CoV-2 infection, we stained the SARS-CoV-2-exposed samples with terminal deoxynucleotidyl transferase dUTP nick end labeling (TUNEL) that detects fragmented DNA in dead cells (Darzynkiewicz et al, 2008). Compared to un-exposed control organoids, we identified an overall increase in TUNEL-positive cells in SARS-CoV-2-exposed organoids suggesting that virus exposure has caused cell death within 2-dpi."
+SET DaysPostInfection = "2 days"
+SET Technique = "Terminal deoxynucleotidyl transferase dUTP nick end labeling"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"neuron death")
+UNSET DaysPostInfection
+
+SET Support = "Staining for SARS-CoV-2-positive cells revealed that most of the virus-positive cells were TUNEL-positive. Besides, we also noticed that some SARS-CoV-2-positive cells were also positive for caspase-3, a protease that specifies programmed cell death."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"programmed cell death")
+p(HGNC:CASP3) association bp(GO:"programmed cell death")
+
+SET Support = "Furthermore, TUNEL-positive cells in un-exposed control organoids (which could be after programmed cell death) did not contain pT231Tau suggesting that this different Tau phosphorylation pattern is associated with SARS-CoV-2 entry (Fig 3Ciii). Thus, it appears that Tau is aberrantly phosphorylated in response to the viral-induced stress, which may elicit further cell death programs that remains to be elucidated."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:MAPT, pmod(Ph))
+p(HGNC:MAPT, pmod(Ph)) increases bp(GO:"cell death")
+UNSET Technique
+UNSET Species
+UNSET Disease
+UNSET Citation

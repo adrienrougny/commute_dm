@@ -1,0 +1,216 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "33031735.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causlitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"IBA1-positive macrophage", "CD68-positive macrophage", "TMEM119-negative macrophage"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Technique AS LIST {"magnetic resonance imaging", "hematoxylin staining", "autopsy", "hematoxylin-eosin staining"}
+DEFINE ANNOTATION Disease_Severity AS LIST {"mild to moderate", "mild", "moderate", "severe"}
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Lancet Neurol. 2020 Nov;19(11):919-929. doi: 10.1016/S1474-4422(20)30308-2. Epub 2020 Oct 5.", "33031735"}
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+
+
+SET Support = "Cause of death was mainly attributed to the respiratory system, with  viral pneumonia as the underlying condition in most cases(table)."
+
+SET Disease = "COVID-19"
+path(DO:"viral pneumonia") -> path(MESH:Death)
+UNSET Disease
+
+SET Support = "The mean weight of the unfixed brains was 1302 g(SD 171; median 1270 g  [1195–1438]; range 950–1665; table) with 23 patients (53%) showing  signs of mild to moderate brain oedema, commonly seen as unspecific  agonal changes."
+
+SET Disease_Severity = "mild to moderate"
+path(DO:"COVID-19") -> path(DO:"brain edema")
+UNSET Disease_Severity
+
+SET Support = "Arteriosclerosis of the basal vessels was mild in 12 (28%) patients,  moderate in 22 (51%), and severe in nine (21%; table)."
+
+SET Disease_Severity = {"mild", "moderate", "severe"}
+path(DO:"COVID-19") -> path(DO:arteriosclerosis)
+UNSET Disease_Severity
+
+SET Support = "13 brains (30%) showed gross macroscopic abnormalities (fresh  territorial ischaemic lesions in six patients, older territorial  ischaemic lesions in five patients, grey matter heterotopia in one  patient with trisomy 21, and cerebellar metastasis of a non-small cell  lung carcinoma in one patient; table)."
+
+SET MeSHAnatomy = "Brain"
+path(DO:"COVID-19") -> path(DO:ischemia)
+path(DO:ischemia) -> a(NCIT:Lesion)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = {"Brain","Gray Matter"}
+SET MeSHDisease = "Down Syndrome"
+path(DO:"COVID-19") -> path(HP:Heterotopia)
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+SET MeSHDisease = "Carcinoma, Non-Small-Cell Lung"
+SET MeSHAnatomy = {"Brain", "Cerebellum"}
+path(DO:"COVID-19") -> path(MESH:"Neoplasm Metastasis")
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+
+
+SET Support = "Six (14%) patients had fresh ischaemic infarctions: three in the  territory of the posterior cerebral artery, two in the territory of  the anterior cerebral artery, and one in the territory of the middle  cerebral artery, which were most likely due to thromboembolic events."
+
+SET MeSHAnatomy = "Brain"
+path(DO:"COVID-19") -> path(DO:"posterior cerebral artery infarction")
+path(DO:"COVID-19") -> path(DO:"anterior cerebral artery infarction")
+path(DO:"COVID-19") -> path(DO:"middle cerebral artery infarction")
+UNSET MeSHAnatomy
+
+
+SET Support = "A highly variable degree of astrogliosis was seen in all patients,  with 37 patients (86%) showing astrogliosis in all assessed regions."
+
+path(DO:"COVID-19") -> path(HP:Astrocytosis)
+
+SET Support = "Diffuse activation of microglia, with occasional microglial  nodules,was pronounced in the brainstem and cerebellum. Additionally,  we found distinct positive staining for HLA-DR in subpial and  subependymal regions, a pattern not commonly observed in classic  encephalitis."
+
+SET MeSHAnatomy = {"Cerebellum", "Brain Stem"}
+path(DO:"COVID-19") -> bp(GO:"microglial cell activation")
+UNSET MeSHAnatomy
+
+SET Support = "Parenchymal and perivascular microglia expressed the lysosomal marker  CD68 while retaining the microglia core marker TMEM119 on their  surfaces (figures 1, 2; appendix p 5)."
+
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = "Parenchymal Tissue"
+SET Anatomy = "perivascular space"
+path(DO:"COVID-19") -> surf(p(HGNC:CD68))
+path(DO:"COVID-19") -> surf(p(HGNC:TMEM119))
+UNSET Anatomy
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+
+SET Support = "Expression of ACE2 was highest in oligodendrocytes, while TMPRSS2 and  TMPRSS4 were highest in neurons, CTSL was highest in microglia, and  TPCN2 was highest in astrocytes (figure 3)."
+
+SET MeSHAnatomy = "Oligodendroglia"
+path(DO:"COVID-19") pos r(HGNC:ACE2)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Neurons"
+path(DO:"COVID-19") pos r(HGNC:TMPRSS2)
+path(DO:"COVID-19") pos r(HGNC:TMPRSS4)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Microglia"
+path(DO:"COVID-19") pos r(HGNC:CTSL)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Astrocytes"
+path(DO:"COVID-19") pos r(HGNC:TPCN2)
+UNSET MeSHAnatomy
+
+SET Support = "Cytotoxic T lymphocytes could be seen in small amounts(up to 49 cells  per HPF) in the frontal cortex and basal ganglia, but their presence  was more pronounced in the brainstem, where they were mostly  concentrated in perivascular regions but were also observed in the  parenchyma as clusters in close vicinity to IBA-1-positive microglia  (figures 1, 4)."
+
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Parenchymal Tissue", "Brain Stem"}
+path(DO:"COVID-19") -> a(MESH:"T-Lymphocytes, Cytotoxic")
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "Infiltration of the meningeal compartments by cytotoxic T lymphocytes  was seen in 34 (79%) patients (moderate in six patients and mild in 28  patients; table, figure 4), with an enrichment of IBA-1-postive,  CD68-positive, and TMEM119-negative perivascular and meningeal  macrophages (figure 2)."
+
+SET BioAssay = "immunohistochemistry"
+path(DO:"COVID-19") -> a(MESH:"T-Lymphocytes, Cytotoxic", loc(MESH:Meninges))
+SET MeSHAnatomy = "Meninges"
+path(DO:"COVID-19") -> a(FIXME:"IBA1-positive macrophage")
+path(DO:"COVID-19") -> a(FIXME:"CD68-positive macrophage")
+path(DO:"COVID-19") -> a(FIXME:"TMEM119-negative macrophage")
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "The olfactory bulb showed a high degree of astrogliosis and  microgliosis, but only minor infiltration by cytotoxic T  lymphocytes(figures 1, 4)."
+
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = "Olfactory Bulb"
+path(DO:"COVID-19") -> path(HP:Astrocytosis)
+path(DO:"COVID-19") -> a(NCIT:Microgliosis)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "Cases 2, 16, 21, and 41 showed more brainstem inflammation(in terms of  infiltration by cytotoxic CD8-positive T cells or activation of  microglia) than all others (figure 4)."
+
+SET MeSHAnatomy = "Brain Stem"
+path(DO:"COVID-19") -> path(MESH:Inflammation)
+path(DO:"COVID-19") -> a(MESH:"T-Lymphocytes, Cytotoxic", loc(MESH:Meninges))
+path(DO:"COVID-19") -> bp(GO:"microglial cell activation")
+UNSET MeSHAnatomy
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Citation

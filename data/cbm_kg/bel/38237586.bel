@@ -1,0 +1,330 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "38237586.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"lysosomal accumulation"}
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION Technique AS LIST {"β-Gal Staining", "single cell RNA-Seq analysis", "MitoTracker staining", "LysoTracker staining", "ROS staining"}
+DEFINE ANNOTATION Specimen AS LIST {"post mortem specimen"}
+
+# Document Annotations #
+
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION PublicationType AS LIST {"Research","Review"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Cell Stem Cell. 2024 Feb 1;31(2):196-211.e6. doi: 10.1016/j.stem.2023.12.012. Epub 2024 Jan 17.", "38237586"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "Finally, quantitative RNA in situ hybridization further confirmed the decrease of A9 marker LMO3, but not A10 marker CALB1 expression following SARS-CoV-2 infection, indicating the loss of cell identity of A9-type DA neurons upon SARS-CoV-2 infection (Figure 2I)."
+SET Species = "9606"
+SET Disease = "COVID-19" 
+SET BioAssay = "nucleic acid hybridization-based method"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:LMO3)
+UNSET BioAssay
+
+SET Support = "Ingenuity pathway analysis of genes differentially expressed between mock and SARS-CoV-2 infected hPSC-derived DA neurons highlighted the cell cycle, DNA replication, and senescence pathways as the top upregulated pathways in SARS-CoV-2 infected DA neurons."
+SET CellLine = "human induced pluripotent stem cell line cell"
+SET BioAssay = "pathway analysis"
+SET MeSHAnatomy = "Dopaminergic Neurons"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") pos bp(GO:"cell cycle")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") pos bp(GO:"DNA replication")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") pos bp(GO:"cellular senescence")
+
+SET Support = "Gene set enrichment analysis (GSEA) further confirmed the enrichment of senescence pathway in SARS-CoV-2 versus mock-infected purified hPSC-derived DA neurons (Figure 3B)."
+SET CellLine = "human induced pluripotent stem cell line cell"
+SET BioAssay = "gene list enrichment analysis"
+SET MeSHAnatomy = "Dopaminergic Neurons"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") pos bp(GO:"cellular senescence")
+UNSET BioAssay
+
+SET Support = "Further analysis of RNA-seq data of purified hPSC-derived DA neurons using NURR1-GFP in mock-infected or SARS-CoV-2-infected conditions identified robust induction of chemokine/cytokine transcripts and inflammation-related genes (Figures S3I and S3J)."
+SET BioAssay = "RNA-seq gene expression profiling assay"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(GFAM:"Chemokine ligands")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL5)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL19)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL20)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CXCL3)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IL7)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IL11)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IL33)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(MESH:Cytokines)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ATM)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CNR1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CTSC)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HMGB2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ICAM1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:NOTCH1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:SYT11)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"inflammatory response")
+
+SET Support = "Senescence-associated genes are also significantly upregulated in SARS-CoV-2 infected DA neurons (Figure S3K)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") pos bp(GO:"cellular senescence")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ANAPC16)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ANAPC5)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ANAPC7)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCNE1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CDC26)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CDK2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CDK4)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CDKN2B)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:EED)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:H2AFZ)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HIST1H3H)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HIST1H4E)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IGFBP7)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:UBB)
+
+SET Support = "There was an upregulation of SASP associated genes, including CCL2, CCL20, CSF1, CXCL11, GDF15, IGF2R, IL1B, IL6ST, IQGAP1, and TNFRSF11B upon SARS-CoV-2 infection in DA neurons (Figure 3C)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL20)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CSF1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CXCL11)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:GDF15)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IGF2R)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IL1B)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IL6ST)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IQGAP1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TNFRSF11B)
+UNSET BioAssay
+
+SET Support = "Acidic lysosomal senescence-associated β-galactosidase (SA-β-gal) activity, a biomarker of cellular senescence,8 was also upregulated in SARS-CoV-2 infected hPSC-derived DA neurons (Figure 3D)."
+SET Technique = "β-Gal Staining"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases act(p(HGNC:GLB1))
+p(HGNC:GLB1) biomarkerFor bp(GO:"cellular senescence")
+UNSET Technique
+
+SET Support = "Transmission EM detected lipofuscin in SARS-CoV-2 infected DA neurons, another senescence-associated marker of DA neurons1."
+SET BioAssay = "transmission electron microscopy"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(MESH:Lipofuscin)
+a(MESH:Lipofuscin) biomarkerFor bp(GO:"cellular senescence")
+
+SET Support = "In addition, SARS-CoV-2 infected DA neurons also showed increased nuclear size (Figure 3F)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Cell Nucleus Size")
+UNSET BioAssay
+
+SET Support = "Real-time quantitative PCR analysis showed the upregulation of IGFBP7 and downregulation of LMNB1, genes reported to be associated with senescence in DA neurons8,19 (Figure 3G)."
+SET BioAssay = "quantitative PCR"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IGFBP7)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:LMNB1)
+UNSET BioAssay
+
+SET Support = "scRNA-seq analysis confirmed the upregulation of IGFBP7 and CDKN1A (encoding protein P21) and downregulation of LMNB1 (Figures 3H and 3I)."
+SET Technique = "single cell RNA-Seq analysis"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IGFBP7)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CDKN1A)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases r(HGNC:LMNB1)
+UNSET Technique
+
+SET Support = "Western blotting further validated the upregulation of P21 and downregulation of LMNB1 at the protein level ."
+SET BioAssay = "western blot"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:CDKN1A)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:LMNB1)
+UNSET BioAssay
+
+SET Support = "Moreover, SARS-CoV-2 infected DA neurons showed additional senescence-associated phenotypes, including increased accumulation of lysosomes as indicated by LysoTracker staining  (Figure 3K), mitochondrial dysfunction as indicated by EM and MitoTracker staining (Figures 3L and 3M), and increased protein oxidation as indicated by ROS staining (Figure 3N)."
+SET Technique = "LysoTracker staining"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(FIXME:"lysosomal accumulation")
+UNSET Technique
+SET BioAssay= "electron microscopy"
+SET Technique= "MitoTracker staining"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(HP:"Abnormality of mitochondrial metabolism")
+UNSET BioAssay
+UNSET Technique
+SET Technique = "ROS staining"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"protein oxidation")
+UNSET Technique
+
+SET Support = "Consistent with the data of H9 hESC-derived DA neurons, MEL-1 hESC-derived DA neurons also showed increased β-gal staining and lysosomal accumulation upon SARS-CoV-2 infection (Figures S3M and S3N)."
+SET Technique = "β-Gal Staining"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases act(p(HGNC:GLB1))
+UNSET Technique
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(FIXME:"lysosomal accumulation")
+
+SET Support = "SARS-CoV-2 infection increased both the percentage of β-gal+ cells (Figure S4D) and lysosomal accumulation (Figure S4E) in all iPSC-derived DA neurons."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases act(p(HGNC:GLB1))
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(FIXME:"lysosomal accumulation")
+
+SET Support = "However, the percentage of β-gal+ cells (Figure S4D) and lysosomal accumulation (Figure S4E) increased progressively along with the copy number of SNCA both in mock condition and upon SARS-CoV-2 infection."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases act(p(HGNC:GLB1))
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(FIXME:"lysosomal accumulation")
+
+SET Support = "Western blotting confirmed that SARS-CoV-2 infection increases total α-Syn expression and SARS-CoV-2 infected SNCA 4 copy iPSC-derived DA neurons showed the highest α-Syn expression (Figure S4F)."
+SET BioAssay = "western blot"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:SNCA)
+UNSET BioAssay
+
+SET Support = "Three drugs, riluzole (Figures 4B and 4E), metformin (Figures 4C and 4F), and imatinib (EC50 = 3.25 μM, CC50 = 17.14 μM, Figures 4D and 4G), reduced β-gal activity in a dose-dependent manner without inducing cytotoxicity."
+a(CHEBI:Riluzole) decreases act(p(HGNC:GLB1))
+a(CHEBI:metformin) decreases act(p(HGNC:GLB1))
+a(CHEBI:imatinib) decreases act(p(HGNC:GLB1))
+
+SET Support = "Real-time quantitative PCR analysis showed a decrease in the senescence-pathway associated gene IGFBP7 and an upregulation of LMNB1 for each of the three drugs (Figure 4J)."
+SET BioAssay = "quantitative PCR"
+a(CHEBI:Riluzole) decreases r(HGNC:IGFBP7)
+a(CHEBI:metformin) decreases r(HGNC:IGFBP7)
+a(CHEBI:imatinib) decreases r(HGNC:IGFBP7)
+a(CHEBI:Riluzole) increases r(HGNC:LMNB1)
+a(CHEBI:metformin) increases r(HGNC:LMNB1)
+a(CHEBI:imatinib) increases r(HGNC:LMNB1)
+p(HGNC:IGFBP7) regulates bp(GO:"cellular senescence")
+UNSET BioAssay
+
+SET Support = "Moreover, these three drugs also decreased lysosomal accumulation compared with DMSO-treated cells (Figures 4K and 4L)."
+a(CHEBI:Riluzole) decreases a(FIXME:"lysosomal accumulation")
+a(CHEBI:metformin) decreases a(FIXME:"lysosomal accumulation")
+a(CHEBI:imatinib) decreases a(FIXME:"lysosomal accumulation")
+
+SET Support = "Importantly, the genes involved in SASP phenotype (Figure 4N) and senescence pathway (Figures S5F–S5H) were downregulated in riluzole, metformin, or imatinib treated DA neurons in the presence of SARS-CoV-2 infection."
+a(CHEBI:Riluzole) decreases bp(REACTOME:"Senescence-Associated Secretory Phenotype (SASP)")
+a(CHEBI:metformin) decreases bp(REACTOME:"Senescence-Associated Secretory Phenotype (SASP)")
+a(CHEBI:imatinib) decreases bp(REACTOME:"Senescence-Associated Secretory Phenotype (SASP)")
+a(CHEBI:Riluzole) decreases bp(GO:"cellular senescence")
+a(CHEBI:metformin) decreases bp(GO:"cellular senescence")
+a(CHEBI:imatinib) decreases bp(GO:"cellular senescence")
+
+SET Support = "At 48 hpi, real-time quantitative PCR analysis demonstrated that riluzole, metformin, and imatinib all decreased viral RNA (Figure 5A), a finding further validated by immunostaining using an antibody against the SARS-CoV-2 nucleocapsid protein (Figures 5B and 5C)."
+SET BioAssay = {"quantitative PCR", "immunolabeling method"}
+a(CHEBI:Riluzole) decreases bp(MESH:"Viral Load")
+a(CHEBI:metformin) decreases bp(MESH:"Viral Load")
+a(CHEBI:imatinib) decreases bp(MESH:"Viral Load")
+UNSET BioAssay
+
+SET Support = "Consistent with pre-treatment, the candidate drugs significantly decreased both replicating viral RNA (Figure 5D) and the percentage of SARS-N+ cells (Figures 5E and 5F) when applied at the post-infection time point."
+a(CHEBI:Riluzole) decreases p(UNIPROT:P0DTC9)
+a(CHEBI:metformin) decreases p(UNIPROT:P0DTC9)
+a(CHEBI:imatinib) decreases p(UNIPROT:P0DTC9)
+a(CHEBI:Riluzole) decreases bp(MESH:"Viral Load")
+a(CHEBI:metformin) decreases bp(MESH:"Viral Load")
+a(CHEBI:imatinib) decreases bp(MESH:"Viral Load")
+
+SET Support = "Moreover, these three drug candidates also blocked virus infection in MEL-1-derived DA neurons (Figures S6A–S6C)."
+a(CHEBI:Riluzole) decreases path(DO:"COVID-19")
+a(CHEBI:metformin) decreases path(DO:"COVID-19") 
+a(CHEBI:imatinib) decreases path(DO:"COVID-19")
+
+SET Support = "Together, this suggests that riluzole, metformin, and imatinib prevent SARS-CoV-2 infection induced DA neuron senescence by blocking SARS-CoV-2 infection."
+a(CHEBI:Riluzole) decreases path(DO:"COVID-19") 
+a(CHEBI:metformin) decreases path(DO:"COVID-19")
+a(CHEBI:imatinib) decreases path(DO:"COVID-19") 
+
+SET Support = "Luciferase activity assay following infection of SARS-CoV-2-entry virus to DA neurons showed decreased luciferase activity in imatinib treated condition compared to mock, indicating that imatinib can block SARS-CoV-2 viral entry in DA neurons (Figure 6A)."
+SET BioAssay = "luciferase enzyme activity assay"
+a(CHEBI:imatinib) decreases tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(GO:"extracellular region"), toLoc(GO:intracellular))
+UNSET BioAssay
+
+SET Support = "GSEA identified the downregulation of fatty acid biosynthesis pathway in riluzole-treated condition (Figures 6B and 6C)."
+SET BioAssay = "gene list enrichment analysis"
+a(CHEBI:Riluzole) decreases bp(GO:"fatty acid biosynthetic process")
+
+SET Support = "GSEA also identified the upregulation of the adenosine monophosphate-activated protein kinase (AMPK) pathway upon metformin treatment (Figures 6D and 6E)."
+a(CHEBI:metformin) increases bp(PW:"adenosine monophosphate-activated protein kinase (AMPK) signaling pathway")
+
+SET Support = "Remarkably, the same transcriptional signatures identified in SARS-CoV-2 infected DA neurons in vitro (Figures S3I, S3J, S3K, and 3C) were observed in COVID-19 autopsy samples, including the induction of chemokine/cytokine (cohort 1, Figure 7A), inflammation (cohort 1, Figure 7B), senescence-associated (cohort 1, Figure 7C) genes, and SASP associated genes (cohort 1, Figure 7D)."
+SET Specimen = "post mortem specimen"
+SET MeSHAnatomy = "Brain"
+path(DO:"COVID-19") increases a(MESH:Chemokines)
+path(DO:"COVID-19") increases a(MESH:Cytokines)
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+path(DO:"COVID-19") increases bp(GO:"cellular senescence")
+path(DO:"COVID-19") increases bp(REACTOME:"Senescence-Associated Secretory Phenotype (SASP)")
+UNSET MeSHAnatomy
+
+SET Support = "Immunostaining showed accumulation of p-a-Syn (cohort 1, Figure 7F) in COVID-19 samples compared with the expression in non-COVID-19 samples, which indicates a potential link of PD phenotypes within the substantia nigra of COVID-19 patients despite the lack of acute clinical symptoms specific to midbrain dysfunction.34"
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = "Substantia Nigra"
+path(DO:"COVID-19") increases p(HGNC:SNCA, pmod(Ph))
+path(DO:"COVID-19") association path(DO:"Parkinson's disease")
+p(HGNC:SNCA, pmod(Ph)) pos path(DO:"Parkinson's disease")
+UNSET MeSHAnatomy
+
+SET Support = "The density of NM-containing and TH-immunoreactive neurons was decreased in COVID-19 and PD(D) brain donors compared with age-matched controls (NM+: −58%, p = 0.008% and −71%, p < 0.001, respectively; TH+: −44%, p = 0.035; −64%, p < 0.002). The percentage area of TH-immunoreactivity threads was also decreased in COVID-19 and PD(D) donors (TH+ −55%, p = 0.006; 60%, p = 0.006, respectively) (cohort 2, Figures 7G and 7H)."
+SET MeSHAnatomy = "Brain"
+path(DO:"COVID-19") decreases a(MESH:neuromelanin)
+path(DO:"COVID-19") decreases act(p(HGNC:TH))
+path(DO:"Parkinson's disease") decreases a(MESH:neuromelanin)
+path(DO:"Parkinson's disease") decreases act(p(HGNC:TH))
+UNSET MeSHAnatomy
+UNSET BioAssay
+UNSET Specimen
+UNSET Species
+UNSET Disease
+UNSET Citation
+
+
+
+
+
+
+
+
+
+
+
+

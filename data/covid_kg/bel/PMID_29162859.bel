@@ -1,0 +1,256 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "PMID_29162859"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "Ferroquine, the next generation antimalarial drug, has antitumor \
+activity"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+# DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20190128.belns"
+# DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+# DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+# DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+# DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+# DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20190128.belanno"
+# DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+# DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"PubMed", "29162859"}
+
+SET Support = "Out of different classes of compounds targeting autophagic-lysosomal function in cancer, two antimalarial drugs chloroquine (CQ) and hydroxychloroquine (HCQ) are currently being investigated in clinical trials for cancer therapy."
+a(PUBCHEM:2719) isA a(CHEBI:"antimalarial")
+a(PUBCHEM:3652) isA a(CHEBI:"antimalarial")
+# PUBCHEM:2719 corresponds to chloroquine
+# PUBCHEM:3652 corresponds to hydroxychloroquine
+
+SET Support = "Interestingly, unlike all the other CQ analogues currently used for malaria treatment, FQ represents an organometallic compound in which ferrocene molecule (an iron atom sandwiched between two aromatic rings) is covalently bound to a 4-aminoquinoline and a basic alkylamine."
+a(PUBCHEM:56841801) isA a(CHEBI:"organometallic compound")
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "FQ has strong antimalarial activity that greatly surpasses that of CQ, and it is active against CQ-resistant and multiresistant parasite strains."
+a(PUBCHEM:56841801) isA a(CHEBI:"antimalarial")
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET CellLine = "LNCAP cell"
+SET Support = "Analysis by light microscopy revealed significant morphological alterations as well as pronounced death of the lymph node carcinoma of the prostate (LNCaP) cells following treatment with FQ."
+a(PUBCHEM:56841801) -> bp(GOBP:"cell death")
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "Further, analysis of cell viability by MTS assay demonstrated that FQ reduced viability of LNCaP cells in a dose- and time-dependent manner. This effect of FQ was much more pronounced compared to its parent compound chloroquine (CQ).Moreover, the reduction in cell viability induced by FQ was associated with significant cytolysis, as revealed by the release of the stable cytoplasmic enzyme, lactate dehydrogenase (LDH) into the cell-culture supernatant "
+a(PUBCHEM:56841801) -- bp(GOBP:"cytolysis")
+# PUBCHEM:56841801 corresponds to ferroquine
+UNSET CellLine
+
+SET Support = "In addition to LNCaP cells, FQ effectively reduced the viability of all other cancer cell lines tested (prostate cancer cell lines PC3M, C4-2, PC3, DU-145; pancreatic cancer cell lines MiaPaCa2, Panc1; breast cancer cell line MCF7) with IC50 values in a low micromolar range."
+a(PUBCHEM:56841801) -| bp(MESHPP:"Cell Survival")
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "FQ also reduced the viability of immortalized human normal prostate epithelial cells (PNT1A), although these cells tended to be more resistant to FQ treatments compared to most prostate cancer cell lines."
+SET CellLine = "PNT1A cell"
+a(PUBCHEM:56841801) -| bp(MESHPP:"Cell Survival")
+# PUBCHEM:56841801 corresponds to ferroquine
+UNSET CellLine
+
+SET Support = "Flow cytometry analysis revealed that FQ (7 μM, 72 h) reduced the proportion of LNCaP cells in S and G2/M phases of cell cycle, thus inducing proliferative blockade via cell cycle arrest in G0/G1-phase."
+SET CellLine = "LNCAP cell"
+a(PUBCHEM:56841801) -| bp(GOBP:"S phase")
+a(PUBCHEM:56841801) -| bp(GOBP:"G2 phase")
+a(PUBCHEM:56841801) -| bp(GOBP:"M phase")
+# PUBCHEM:56841801 corresponds to ferroquine
+UNSET CellLine
+
+SET Support = "Of note,ferrocene (or aminoferrocene) alone or in combination with CQ (equimolar concentrations) did not induce PC3M prostate cancer cell death."
+a(PUBCHEM:7611) causesNoChange bp(GOBP:"cell death")
+a(PUBCHEM:91659113) causesNoChange bp(GOBP:"cell death")
+composite(a(PUBCHEM:7611), a(PUBCHEM:2719)) causesNoChange bp(GOBP:"cell death")
+composite(a(PUBCHEM:91659113), a(PUBCHEM:2719)) causesNoChange bp(GOBP:"cell death")
+# PUBCHEM:7611 corresponds to ferrocene
+# PUBCHEM:91659113 corresponds to aminoferrocene
+# PUBCHEM:2719 corresponds to chloroquine
+
+SET Support = "We also tested the effect of ferrocene and ferrocene + CQ on the viability of PNT1A, C42, LNCaP and PC3 cells, and in all the cases treatments were without significant effect on cell viability."
+SET CellLine = {"PNT1A cell", "LNCAP cell"}
+a(PUBCHEM:7611) causesNoChange bp(MESHPP:"Cell Survival")
+composite(a(PUBCHEM:7611), a(PUBCHEM:2719)) causesNoChange bp(MESHPP:"Cell Survival")
+# PUBCHEM:7611 corresponds to ferrocene
+# PUBCHEM:2719 corresponds to chloroquine
+UNSET CellLine
+
+SET Support = "Overall, our results confirmed, that FQ as a monotherapy effectively provokes proliferative arrest and cancer cell death in vitro."
+SET BioAssay = "in vitro"
+a(PUBCHEM:56841801) -> bp(GOBP:"cell cycle arrest")
+a(PUBCHEM:56841801) -> bp(GOBP:"cell death")
+# PUBCHEM:56841801 corresponds to ferroquine
+UNSET BioAssay
+
+SET CellLine = "LNCAP cell"
+SET Support = "'Moreover, cotreatment with deferoxamine significantly potentiated cell death induced by FQ."
+a(PUBCHEM:2973) -> (a(PUBCHEM:56841801) -> bp(GOBP:"cell death"))
+# PUBCHEM:56841801 corresponds to ferroquine# PUBCHEM:2973 corresponds to deferoxamine
+
+SET Support = "Further, analysis of cell viability by MTS assay demonstrated that FQ-induced cell death was not significantly affected by inhibitors of caspases (z-VAD-FMK, 20 μM), RIPK1 (necrostatin-1, 30 μM), cathepsins (Pepstatin A and E64d, 10 μM), and autophagy (wortmannin, 100 nM), suggesting that FQ-induced cell death type is distinct from ferroptosis, caspase-dependent apoptosis, necroptosis, or autophagy."
+a(PUBCHEM:5497174) causesNoChange (a(PUBCHEM:56841801) -> bp(GOBP:"cell death"))
+a(PUBCHEM:2828334) causesNoChange (a(PUBCHEM:56841801) -> bp(GOBP:"cell death"))
+a(PUBCHEM:5478883) causesNoChange (a(PUBCHEM:56841801) -> bp(GOBP:"cell death"))
+a(PUBCHEM:65663) causesNoChange (a(PUBCHEM:56841801) -> bp(GOBP:"cell death"))
+a(PUBCHEM:312145) causesNoChange (a(PUBCHEM:56841801) -> bp(GOBP:"cell death"))
+
+SET Support = "In contrast, bafilomycin A1 (50 nM), an inhibitor of vacuolar-type H+-ATPase (V-ATPase), reduced cell death induced by FQ, suggesting the possible role for lysosomes in FQ-induced cell death."
+a(PUBCHEM:6436223) -| act(p(GFAM:"V-type ATPases"))
+a(PUBCHEM:6436223) -| (a(PUBCHEM:56841801) -> bp(GOBP:"cell death"))
+# PUBCHEM:6436223 corresponds to bafilomycin A1
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "Finally, treatment of LNCaP cells with FQ (25 μM) for 24 h resulted in appearance of a cleaved poly (ADP-ribose) polymerase-1 (PARP-1) 89-kD fragment characteristic of apoptosis."
+a(PUBCHEM:56841801) -> deg(p(HGNC:"PARP1"))
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "To determine whether FQ also has a potential to be used as an adjuvant to anticancer chemotherapy, we treated LNCaP cells for 48 h with different chemotherapeutic drugs (cisplatin 5 μM, docetaxel 2.5 nM, doxorubicin 25 nM, paclitaxel 5 nM and phenethyl isothiocyanate (PEITC) 10 μM) alone or in combination with FQ (10 μM). For combination treatments LNCaP cells were first incubated with chemotherapeutic drugs for 12 h and then FQ was added to the medium for the last 36 h. Analysis of cell viability by MTS assay revealed modest but statistically significant reduction in cell viability in the case of combined treatments with FQ and chemotherapy drugs compared to chemotherapy or FQ treatments alone."
+a(PUBCHEM:441203) -| bp(MESHPP:"Cell Survival")
+a(PUBCHEM:148124) -| bp(MESHPP:"Cell Survival")
+a(PUBCHEM:31703) -| bp(MESHPP:"Cell Survival")
+a(PUBCHEM:36314) -| bp(MESHPP:"Cell Survival")
+a(PUBCHEM:16741) -| bp(MESHPP:"Cell Survival")
+
+composite(a(PUBCHEM:441203), a(PUBCHEM:56841801)) -| bp(MESHPP:"Cell Survival")
+composite(a(PUBCHEM:148124), a(PUBCHEM:56841801)) -| bp(MESHPP:"Cell Survival")
+composite(a(PUBCHEM:31703), a(PUBCHEM:56841801)) -| bp(MESHPP:"Cell Survival")
+composite(a(PUBCHEM:36314), a(PUBCHEM:56841801)) -| bp(MESHPP:"Cell Survival")
+composite(a(PUBCHEM:16741), a(PUBCHEM:56841801)) -| bp(MESHPP:"Cell Survival")
+# PUBCHEM:441203 corresponds to cisplatin
+# PUBCHEM:148124 corresponds to docetaxel
+# PUBCHEM:31703 corresponds to doxorubicin
+# PUBCHEM:36314 corresponds to paclitaxel
+# PUBCHEM:16741 corresponds to phenethyl isothiocyanate
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "Treatment of LNCaP cells with FQ (30 μM) for 2 h reduced HIF-1α expression, suggesting that FQ has HIF-1α inhibitory activity in serum-starved conditions."
+a(PUBCHEM:56841801) -| p(HGNC:"HIF1A")
+# PUBCHEM:56841801 corresponds to ferroquine
+UNSET CellLine
+
+SET Support = "This analysis revealed that FQ induced a moderate yet significant decrease in ΔΨ"
+SET CellLine = {"LNCAP cell"}
+SET CellStructure = "Mitochondria"
+a(PUBCHEM:56841801) -| bp(NCIT:"Membrane Potential")
+UNSET CellStructure
+UNSET CellLine
+
+SET Support = "To test whether FQ induces accumulation of autophagic markers in LNCaP cells we analyzed the levels of endogenous LC3-II protein by western blot (LC3 is the most widely used marker of autophagy)."
+p(HGNC:"MAP1LC3B") biomarkerFor bp(GOBP:"autophagy")
+# HGNC:"MAP1LC3B" corresponds to LC3-II
+
+SET Support = "LC3 immunoblotting analysis demonstrated that FQ induced accumulation of LC3-II protein in LNCaP cells in a dose-dependent manner."
+SET CellLine = "LNCAP cell"
+a(PUBCHEM:56841801) -> p(HGNC:"MAP1LC3B")
+# HGNC:"MAP1LC3B" corresponds to LC3-II
+
+SET Support = " Immunoblot analysis of another autophagic marker, p62 (which is autophagy substrate protein degraded by autophagy), showed its accumulation in a dose-dependent manner following CQ or FQ treatments indicating that autophagy is inhibited by FQ and autophagy substrates are not degraded "
+p(HGNC:"SQSTM1") biomarkerFor bp(GOBP:"autophagy")
+bp(GOBP:"autophagy") -> deg(p(HGNC:"SQSTM1"))
+a(PUBCHEM:2719) -> p(HGNC:"SQSTM1")
+a(PUBCHEM:56841801) -> p(HGNC:"SQSTM1")
+# HGNC:"SQSTM1" corresponds to p62
+# PUBCHEM:2719 corresponds to chloroquine
+# PUBCHEM:56841801 corresponds to ferroquine
+UNSET CellLine
+
+SET Support = "Of note, FQ also caused an increase in LC3-II levels in prostate cancer PC3 and PC3M cells but not in DU-145 cells lacking full-length autophagy-related gene 5 (ATG5) (which is essential for LC3 lipidation), suggesting the necessity of the functional autophagic lipidation machinery."
+a(PUBCHEM:56841801) -> p(HGNC:"MAP1LC3B")
+# HGNC:"MAP1LC3B" corresponds to LC3-II
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "It should be noted, that ferrocene induced subtle changes in autophagy in LNCaP cells. However, in combination with CQ ferrocene induced accumulation of LC3-II levels comparable to that induced by FQ."
+SET CellLine = "LNCAP cell"
+composite(a(PUBCHEM:7611), a(PUBCHEM:2719)) -> p(HGNC:"MAP1LC3B")
+# PUBCHEM:7611 corresponds to ferrocene
+# PUBCHEM:2719 corresponds to chloroquine
+# HGNC:"MAP1LC3B" corresponds to LC3-II
+
+SET Support = "Bafilomycin A1 (100 nM, 1 h) alone effectively induced accumulation of LC3-II in LNCaP cells."
+a(PUBCHEM:6436223) -> p(HGNC:"MAP1LC3B")
+# PUBCHEM:6436223 corresponds to bafilomycin A1
+# HGNC:"MAP1LC3B" corresponds to LC3-II
+
+SET Support = "Nevertheless, this result shows that FQ has a clear tendency to inhibit autophagy in vivo."
+SET BioAssay = "in vivo"
+a(PUBCHEM:56841801) -| bp(GOBP:"autophagy")
+# PUBCHEM:56841801 corresponds to ferroquine
+
+SET Support = "Overall, these results suggest that FQ has antitumorigenic potential in vivo, however the final effect of FQ on tumor growth in vivo could apparently depend on tumor type and stage."
+a(PUBCHEM:56841801) -| path(MESHD:"Neoplasms")
+# PUBCHEM:56841801 corresponds to ferroquine
+UNSET BioAssay
+
+SET Support = "Noteworthy, organometallic compounds (e.g. cisplatin, carboplatin, oxaliplatin) are well known for their anticancer activity and are now in clinical use."
+a(CHEBI:"organometallic compound") -| path(DO:"cancer")
+a(PUBCHEM:441203) -| path(DO:"cancer")
+a(PUBCHEM:426756) -| path(DO:"cancer")
+a(PUBCHEM:43805) -| path(DO:"cancer")
+# PUBCHEM:441203 corresponds to cisplatin
+# PUBCHEM:426756 corresponds to carboplatin
+# PUBCHEM:43805 corresponds to oxaliplatins

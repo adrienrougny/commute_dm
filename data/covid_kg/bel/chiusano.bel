@@ -1,0 +1,348 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "https://doi.org/10.26434/arXiv:2003.11614v1"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "The modelling of COVID19 pathways sheds light on mechanisms, \
+opportunities and on controversial interpretations of medical \
+treatments. v2"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+# DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+# DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+# DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+# DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"arXiv", "arXiv:2003.11614v1"}
+
+SET Support = "Specifically, four main structural proteins have been recognized which are: spike (S), envelope (E), nucleocapsid (N) and membrane (M) proteins."
+p(UNIPROT:"P0DTC2") isA p(MESHC:"Viral Structural Proteins")
+
+SET Support = "S proteins of coronaviruses are large membrane linked glycoproteins that are responsible both for binding to receptors on host cells and for membrane fusion."
+act(p(UNIPROT:"P0DTC2"), ma(GO:"host cell surface binding"))
+p(UNIPROT:"P0DTC2") -> bp(GOBP:"membrane fusion")
+
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+SET Support = "SARS-CoV-2, instead, it requires the angiotensin-converting enzyme 2 (ACE2) to enter cells."
+p(HGNC:"ACE2") -> bp(GOBP:"viral entry into host cell")
+UNSET Disease
+
+SET Support = "It was demonstrated that also SARS-CoV2, as well as SARS-CoV, use endosomal cysteine proteases cathepsin B and L (CatB/L) and the transmembrane serine protease TMPRSS2 for S protein priming in cell lines, a step required for viral entry into the cell."
+SET Disease = {"Severe acute respiratory syndrome coronavirus 2", "Severe acute respiratory syndrome-related coronavirus"}
+p(HGNC:"CTSB") => deg(p(UNIPROT:"P0DTC2"))
+p(HGNC:"CTSL") => deg(p(UNIPROT:"P0DTC2"))
+p(HGNC:"TMPRSS2") => deg(p(UNIPROT:"P0DTC2"))
+deg(p(UNIPROT:"P0DTC2")) -> bp(GOBP:"viral entry into host cell")
+p(HGNC:"CTSB") isA p(ECCODE:"3.4.22.-")
+p(HGNC:"CTSL") isA p(ECCODE:"3.4.22.-")
+p(HGNC:"TMPRSS2") isA p(ECCODE:"3.4.21.-")
+# EC 3.4.22 corresponds to cysteine proteases
+# EC 3.4.21 corresponds to serine proteaseses
+
+SET Support = "TMPRSS2 had previously been revealed as a host cell factor that is critical for entry in the cells and not for viral replication, affecting the S protein at the cell surface and inducing virus-plasma membrane fusion."
+p(HGNC:"TMPRSS2") -> bp(GOBP:"membrane fusion")
+
+SET Support = "Indeed, the entry full inhibition also needed TMPRSS2 inhibitors (like camostat mesylate)."
+a(PUBCHEM:5284360) -| bp(GOBP:"viral entry into host cell")
+UNSET Disease
+
+SET Support = "ACE2 appeared to have a restricted distribution in human tissues, being initially reported to be expressed mainly in the heart, kidney, and testis."
+p(HGNC:"ACE2",loc(MESHA:"Heart"))
+p(HGNC:"ACE2",loc(MESHA:"Kidney"))
+p(HGNC:"ACE2",loc(MESHA:"Testis"))
+
+SET Support = "Interestingly, remarkable findings since 2004 revealed the surface expression of ACE2 on lung alveolar epithelial cells and enterocytes of the small intestine, as well as in arterial and venous endothelial cells and arterial smooth muscle cells in all organs studied, explaining the relationship with SARS coronavirus infection."
+p(HGNC:"ACE2",loc(MESHA:"Alveolar Epithelial Cells"))
+SET MeSHAnatomy = "Intestine, Small"
+p(HGNC:"ACE2",loc(MESHA:"Enterocytes"))
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Arteries"
+p(HGNC:"ACE2",loc(MESHA:"Endothelial Cells"))
+p(HGNC:"ACE2",loc(MESHA:"Myocytes, Smooth Muscle"))
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Veins"
+p(HGNC:"ACE2",loc(MESHA:"Endothelial Cells"))
+UNSET MeSHAnatomy
+
+SET Support = "Recently, single-cell transcriptomes showed the presence of ACE2 RNA (here indicated as ace2) in type II alveolar cells of lung, esophagus upper and stratified epithelial cells, absorptive enterocytes from ileum and colon, cholangiocytes, myocardial cells, kidney proximal tubule cells, and bladder urothelial cells, suggesting that those organs could be considered as potential high risk for 2019-nCoV infection."
+r(HGNC:"ACE2",loc(NCIT:"Alveolar Cell Type II"))
+SET MeSHAnatomy = "Esophagus"
+r(HGNC:"ACE2",loc(MESHA:"Epithelial Cells"))
+UNSET MeSHAnatomy
+SET MeSHAnatomy = {"Ileum", "Colon"}
+r(HGNC:"ACE2",loc(MESHA:"Enterocytes"))
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Bile Ducts"
+r(HGNC:"ACE2",loc(MESHA:"Epithelial Cells"))
+UNSET MeSHAnatomy
+r(HGNC:"ACE2",loc(MESHA:"Myocytes, Cardiac"))
+SET MeSHAnatomy = "Kidney Tubules, Proximal"
+r(HGNC:"ACE2",loc(MESHA:"Cells"))
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Urinary Bladder"
+r(HGNC:"ACE2",loc(CELL:"urothelial cell"))
+UNSET MeSHAnatomy
+
+SET Support = "In particular, presence of ACE2 was revealed also in the mucosa of the oral cavity, being highly enriched in epithelial cells."
+SET MeSHAnatomy = "Mouth"
+p(HGNC:"ACE2",loc(MESHA:"Mucous Membrane"))
+UNSET MeSHAnatomy
+
+SET Support = "Moreover, the research highlighted that among different oral sites, ACE2 expression was higher in tongue than buccal and gingival tissues."
+p(HGNC:"ACE2",loc(MESHA:"Tongue"))
+
+SET Support = "The protein is almost present also in paratyroids and salivary glands, while the mRNA expression is detected in lung, salivary gland and in the tongue."
+p(HGNC:"ACE2",loc(MESHA:"Parathyroid Glands"))
+p(HGNC:"ACE2",loc(MESHA:"Salivary Glands"))
+r(HGNC:"ACE2",loc(MESHA:"Lung"))
+r(HGNC:"ACE2",loc(MESHA:"Salivary Glands"))
+r(HGNC:"ACE2",loc(MESHA:"Tongue"))
+
+SET Support = "Interleukin 6 (IL-6) leads a relevant increase in cathepsin L, whereas TGF-beta1 decreases the amount of cathepsin L, at both mRNA and protein levels, proving that the cytokines IL-6 and TGF-beta 1 modulate cathepsin gene expression."
+p(GFAM:"Interleukin 6 type cytokine family") -> p(HGNC:"CTSL")
+p(UNIPROT:"P01137") -| p(HGNC:"CTSL")
+p(UNIPROT:"P01137") -| r(HGNC:"CTSL")
+
+SET Support = "Remarkably, IL6 and not TGF-beta1 appear to by overproduced in COVID-19 patients"
+path(DO:"COVID-19") -> p(GFAM:"Interleukin 6 type cytokine family")
+
+SET Support = "Public data from documented computed tomography (CT) and radiography imaging from COVID19 infected patients [https://www.sirm.org/category/senza-categoria/covid-19/] highlight that a cytokine storm-syndrome rather than the virus itself could be the cause of severe lung injuries and death."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+path(NCIT:"Cytokine Release Syndrome") => path(MESHD:"Lung Injury")
+path(NCIT:"Cytokine Release Syndrome") -> path(MESHD:"Death")
+UNSET Disease
+
+SET Support = "Moreover, it is widely known (information also available from Wikipedia) that the principal symptoms of a cytokine storm are high fever, fatigue and nausea, which correspond to the principal ones from COVID19 infected patients"
+path(NCIT:"Cytokine Release Syndrome") -> path(NCIT:"Fever")
+path(NCIT:"Cytokine Release Syndrome") -> path(NCIT:"Fatigue")
+path(NCIT:"Cytokine Release Syndrome") -> path(NCIT:"Vomiting")
+
+SET Support = "As an example, recently, a number of specific anti-cytokine approaches have proven effective in treating a variety of cytokine storm syndromes, including those triggered by coronaviruses."
+a(NCIT:"Anti-Cytokine Therapy") -| path(NCIT:"Cytokine Release Syndrome")
+a(NCIT:"Anti-Cytokine Therapy") -| path(DO:"COVID-19")
+
+SET Support = "Although its relevance for the SARS-CoVs infection, ACE2 was first discovered for its role as a transmembrane exopeptidase that catalyses the conversion of angiotensin II (ANG-II) to angiotensin (1-7) , a vasodilator."
+act(p(HGNC:"ACE2"), ma(cat)) => rxn(reactants(a(PUBCHEM:172198)) , products(a(PUBCHEM:123805)))
+# PUBCHEM:172198 corresponds to angiotensin II
+# PUBCHEM:123805 corresponds to angiotensin (1-7)
+
+SET Support = "Angiotensin II (ANGII) is a peptide hormone that can bind the type 1 angiotensin II receptor (AT1), giving place to a number of effects that result in vasoconstriction and, therefore, in increased blood pressure."
+a(PUBCHEM:172198) isA a(MESHC:"Peptide Hormones")
+complex(a(PUBCHEM:172198),p(HGNC:"AGTR1")) -> bp(GOBP:"vasoconstriction")
+bp(GOBP:"vasoconstriction") => bp(MESHPP:"Blood Pressure")
+# PUBCHEM:172198 corresponds to angiotensin II
+
+SET Support = "ANGII also stimulates the release of aldosterone from the adrenal cortex in the kidney to promote sodium retention."
+SET MeSHAnatomy = "Adrenal Cortex"
+a(PUBCHEM:172198) -> sec(a(PUBCHEM:5839))
+a(PUBCHEM:5839) -> bp(GOBP:"renal water retention")
+# PUBCHEM:172198 corresponds to angiotensin II
+# PUBCHEM:5839 corresponds to aldosterone
+
+SET Support = "ANGII is produced from the Angiotensin I by the transmembrane protein angiotensin-converting enzyme, or ACE (ACE1), that was discovered in 1956."
+p(HGNC:"ACE") -> rxn(reactants(a(PUBCHEM:3081372)), products(a(PUBCHEM:172198)))
+# PUBCHEM:3081372 corresponds to angiotensin I
+# PUBCHEM:172198 corresponds to angiotensin II
+
+SET Support = "ACE2 may also convert angiotensin I to angiotensin (1–9), which has a prothrombotic activity."
+p(HGNC:"ACE2") -> rxn(reactants(a(PUBCHEM:3081372)), products(a(PUBCHEM:71745056)))
+a(PUBCHEM:71745056) -> path(DO:"thrombosis")
+# PUBCHEM:3081372 corresponds to angiotensin I.
+# PUBCHEM:71745056 corresponds to angiotensin (1–9)
+
+SET Support = "ACE2 is also essential for the expression of neutral amino acid transporters, influencing the composition of the gut microbiota."
+p(HGNC:"ACE2") reg a(MESHPP:"Gastrointestinal Microbiome")
+
+SET Support = "ACE2 is shown to increase in a number of pathologies, including myocardial infarction , atherosclerosis, renal diseases and diabetes, liver cirrhosis. inflammatory lung injuries and, in these studies, the general protective role of the enzyme when inhibiting the ANGI-ACE-ANGII axis of RAS is discussed."
+p(HGNC:"ACE2") -> path(DO:"myocardial infarction")
+p(HGNC:"ACE2") -> path(DO:"atherosclerosis")
+p(HGNC:"ACE2") -> path(MESHD:"Kidney Diseases")
+p(HGNC:"ACE2") -> path(DO:"diabetes mellitus")
+p(HGNC:"ACE2") -> path(DO:"liver cirrhosis")
+p(HGNC:"ACE2") -> path(MESHD:"Lung Injury")
+
+
+SET Support = "The overwhelming scientific production in the field also reports on the spread role of ACE2 increase as anti-inflammatory and anti-oxidant agent, in several tissues, lungs, liver, in neuroprotection, and also in atherosclerosis, cerebral ischemia, obesity, chronic kidney disease, and asthma."
+SET MeSHAnatomy = {"Lung", "Liver"}
+p(HGNC:"ACE2") isA a(CHEBI:"anti-inflammatory agent")
+p(HGNC:"ACE2") isA a(CHEBI:"antioxidant")
+UNSET MeSHAnatomy
+p(HGNC:"ACE2") -> bp(MESHPP:"Neuroprotection")
+p(HGNC:"ACE2") -> path(DO:"brain ischemia")
+p(HGNC:"ACE2") -> path(DO:"obesity")
+p(HGNC:"ACE2") -> path(DO:"chronic kidney disease")
+p(HGNC:"ACE2") -> path(DO:"asthma")
+
+SET Support = "Indeed, it induces cytokins depletion, antiproliferative effects, anti-fibrosis and antihypertrophy effects, addressing its key action and its role as target for therapies in inflammatory diseases."
+p(HGNC:"ACE2") -| bp(CELL:"cell population proliferation")
+p(HGNC:"ACE2") -| path(MESHD:"Fibrosis")
+p(HGNC:"ACE2") -| path(MESHD:"Hypertrophy")
+
+SET Support = "ACE2 has been considered as protecting from predisposition to acute respiratory distress syndrome (ARDS), as also demonstrated in SARS-CoV infection, where its decrease, due to the interaction with the virus, favours the syndrome."
+p(HGNC:"ACE2") -| path(DO:"adult respiratory distress syndrome")
+
+SET Support = "As an example among the many, the loss of ACE2 function in mouse shows the release of pro-inflammatory chemokines, such as C-X-C motif chemokine 5 (CXCL5), macrophage inflammatory protein-2 (MIP2), C-X-C motif chemokine 1 (KC), and TNF-α from airway epithelia, increased neutrophil infiltration, and exaggerated lung inflammation and injury."
+SET Species = "10090"
+SET MeSHAnatomy = "Respiratory System"
+p(HGNC:"ACE2") -| p(MGI:"Cxcl5", loc(MESHA:"Epithelial Cells"))
+p(HGNC:"ACE2") -| p(MGI:"Ccl4", loc(MESHA:"Epithelial Cells"))
+p(HGNC:"ACE2") -| p(MGI:"Cxcl1", loc(MESHA:"Epithelial Cells"))
+p(HGNC:"ACE2") -| p(MGI:"Tnf", loc(MESHA:"Epithelial Cells"))
+UNSET MeSHAnatomy
+p(HGNC:"ACE2") -| bp(MESHPP:"Neutrophil Infiltration")
+p(HGNC:"ACE2") -| path(DO:"pneumonia")
+UNSET Species
+
+SET Support = "Interesting, smog and nicotins also favour lung inflammation increasing ACE activity and, therefore, affecting ACE2 functionality."
+a(MESHC:"Smog") -> p(HGNC:"ACE")
+a(PUBCHEM:89594) -> p(HGNC:"ACE")
+
+SET Support = "ACE inhibitors, AT1R blockers and mineralocorticoid receptor blockers (MRB), pioglitazone and ibuprofen included, are reported to have direct effects on suppression of the ACE-Ang II-AT1R axis, often increasing ACE2 and Ang (1–7) significantly, in contrast with the inhibitory effects on the ACE2-ANG(1-7) axis by glucocorticoids"
+a(MESHC:"Angiotensin-Converting Enzyme Inhibitors") -> p(HGNC:"ACE2")
+a(CHEBI:"angiotensin receptor antagonist") -> p(HGNC:"ACE2")
+a(CHEBI:"antimineralocorticoid") -> p(HGNC:"ACE2")
+a(PUBCHEM:4829) -> p(HGNC:"ACE2")
+a(PUBCHEM:3672) -> p(HGNC:"ACE2")
+a(MESHC:"Angiotensin-Converting Enzyme Inhibitors") -> a(PUBCHEM:123805)
+a(CHEBI:"angiotensin receptor antagonist") -> a(PUBCHEM:123805)
+a(CHEBI:"antimineralocorticoid") -> a(PUBCHEM:123805)
+a(PUBCHEM:4829) -> a(PUBCHEM:123805)
+a(PUBCHEM:3672) -> a(PUBCHEM:123805)
+a(PUBCHEM:11502129) -| p(HGNC:"ACE2")
+a(PUBCHEM:11502129) -| a(PUBCHEM:123805)
+# PUBCHEM:4829 corresponds to pioglitazone
+# PUBCHEM:3672 corresponds to ibuprofen
+# PUBCHEM:123805 corresponds to angiotensin (1-7)
+# PUBCHEM:123805 corresponds to glucocorticoid
+
+SET Support = "losartan/omesartan: ace2 UP"
+composite(a(PUBCHEM:3961), a(PUBCHEM:81065529)) -> r(HGNC:"ACE2")
+
+SET Support = "losartan/omesartan: ANGII UP"
+composite(a(PUBCHEM:3961), a(PUBCHEM:81065529)) -> a(PUBCHEM:172198)
+
+SET Support = "lisinopril: ace2 UP"
+a(PUBCHEM:5362119) -> r(HGNC:"ACE2")
+
+SET Support = "lisinopril: ANGII DOWN"
+a(PUBCHEM:5362119) -| a(PUBCHEM:172198)
+
+SET Support = "losartan: ACE2 UP"
+a(PUBCHEM:3961) -> p(HGNC:"ACE2")
+
+SET Support = "losartan: ace2 UP"
+a(PUBCHEM:3961) -> r(HGNC:"ACE2")
+
+SET Support = "losartan: ACE DOWN"
+a(PUBCHEM:3961) -| p(HGNC:"ACE")
+
+SET Support = "losartan: ace DOWN"
+a(PUBCHEM:3961) -| r(HGNC:"ACE")
+
+SET Support = "losartan: ANGII UP"
+a(PUBCHEM:3961) -> a(PUBCHEM:172198)
+
+SET Support = "lisinopril losartan Combined: ACE2 UP"
+composite(a(PUBCHEM: 5362119),a(PUBCHEM:3961)) -> p(HGNC:"ACE2")
+
+SET Support = "lisinopril losartan Combined: ANGII DOWN"
+composite(a(PUBCHEM: 5362119),a(PUBCHEM:3961)) -| a(PUBCHEM:172198)
+
+SET Support = "ANGII: ACE2 DOWN"
+a(PUBCHEM:172198) -| p(HGNC:"ACE2")
+
+SET Support = "ANGII: ace2 DOWN"
+a(PUBCHEM:172198) -| r(HGNC:"ACE2")
+
+SET Support = "ANGII: ACE UP"
+a(PUBCHEM:172198) -> p(HGNC:"ACE")
+
+SET Support = "ANGII: ace UP"
+a(PUBCHEM:172198) -> r(HGNC:"ACE")
+
+SET Support = "Interestingly, the results here reported highlight that the treatments with sartans alone, or in combination with ACE inhibitors determine high activity of ACE2, while treatments with ACE inhibitors determine no changes in ACE2 activity."
+a(CHEBI:"angiotensin receptor antagonist") -> act(p(HGNC:"ACE2"))
+composite(a(MESHC:"Angiotensin-Converting Enzyme Inhibitors"), a(CHEBI:"angiotensin receptor antagonist")) -> act(p(HGNC:"ACE2"))
+
+SET Support = "The long term, overdosage, ACE-inhibitor treatment limited the SARS-CoV2 virulence in the single case patient here reported for two main reasons, which are clearly depicted by the model."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+a(MESHC:"Angiotensin-Converting Enzyme Inhibitors") -| bp(MESHPP:"Virulence")
+
+SET Support = "In the case of ARBs (Sartans) and ACE inhibitor treatments, the model reveals that ARBs alone, or in combined treatments, that confer an increased ACE2 activity on the cell membranes, results in higher risk for viral infection."
+a(CHEBI:"angiotensin receptor antagonist") -> path(NCIT:"Infection")
+composite(a(CHEBI:"angiotensin receptor antagonist"),a(MESHC:"Angiotensin-Converting Enzyme Inhibitors")) -> path(NCIT:"Infection")
+UNSET Disease
+
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+SET Support = "All concurrent events to be added to the severe cytokine storm that is damaging the lung tissues causing hypoxia."
+path(NCIT:"Cytokine Release Syndrome") -> path(MESHD:"Hypoxia")
+
+SET Support = "Hypoxia is the main aspect today faced during the emergency in the hospitals."
+path(DO:"COVID-19") -> path(MESHD:"Hypoxia")
+UNSET Disease

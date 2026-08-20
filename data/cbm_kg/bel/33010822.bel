@@ -1,0 +1,193 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "33010822.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+
+##################################################################################
+# Statements #
+##################################################################################
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Cell Stem Cell. 2020 Dec 3;27(6):937-950.e9. doi: 10.1016/j.stem.2020.09.016. Epub 2020 Sep 21.", "33010822"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+SET Disease = "COVID-19"
+
+SET Support = "RNA-seq analysis showed expression of ACE2 and TMPRSS2 in CPOs at levels similar to the adult human choroid plexus tissue, which were much higher than in hippocampal organoids."
+SET BioAssay = "RNA-seq gene expression profiling assay"
+SET MeSHAnatomy = {"Organoids", "Choroid Plexus"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TMPRSS2)
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "Immunohistology confirmed expression of ACE2 at a much higher level in CPOs than in hippocampal organoids."
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Organoids", "Choroid Plexus"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+UNSET BioAssay
+
+SET Support = "qPCR analysis also showed higher levels of ACE2 and TMPRSS2 expression in CPOs at 50 DIV and 100 DIV than in hippocampal organoids."
+SET BioAssay = "quantitative PCR"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TMPRSS2)
+UNSET BioAssay
+
+SET Support = "Infected cells identified by SARS-CoV-2 nucleoprotein immunostaining also showed high levels of ACE2 expression, consistent with ACE2 being a critical cell entry receptor for SARS-CoV-2 (Figure S3C)."
+SET BioAssay = "immunohistochemistry"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+UNSET BioAssay
+
+SET Support = "We observed the presence of syncytia in SARS-CoV-2-infected cells, which significantly increased from an average of 4.6% at 24 hpi to 10.5% by 72 hpi (Figures 3D and 3E)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"induction by virus of host cell-cell fusion") 
+
+SET Support = "Interestingly, in addition to syncytia, we observed a significant increase in cell death in both infected and uninfected TTR+ choroid plexus cells in CPOs exposed to SARS-CoV-2 as measured by TUNEL immunolabeling."
+SET BioAssay = "immunolabeling method"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cell death")
+UNSET BioAssay
+
+SET Support = "Together, using CPOs as a 3D human cellular model, our findings reveal SARS-CoV-2 tropism for choroid plexus epithelial cells that results in productive infection, increased cell syncytia that may promote viral spread through cell-cell fusion, and increased cell death among both infected and uninfected adjacent cells."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"induction by virus of host cell-cell fusion") 
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cell death")
+
+SET Support = "We also confirmed the expression of SARS-CoV-2 receptors ACE2, TMPRSS2, and NRP1 in CPOs at all time points (Figure 4B)."
+SET BioAssay = "RNA-seq gene expression profiling assay"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TMPRSS2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:NRP1)
+UNSET BioAssay
+
+SET Support = "More detailed gene ontology (GO) analysis of upregulated genes at 72 hpi showed enrichment for genes related to viral responses, RNA processing, response to cytokine, cytoskeletal rearrangement, and cell death (Figure 4C; Table S3)."
+SET BioAssay = "bioinformatics method"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cellular response to virus")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cellular response to cytokine stimulus")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"RNA processing")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cell death")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cytoskeleton organization")
+UNSET BioAssay
+
+SET Support = "Closer examination of upregulated genes revealed an increase in inflammatory cytokines CCL7, interleukin-32 (IL-32), CCL2 (MCP1), IL-18, and IL-8 (Figure 4D)."
+SET BioAssay = "RNA-seq gene expression profiling assay"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL7)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IL32)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CCL2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IL18)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CXCL8)
+UNSET BioAssay
+
+SET Support = "We validated the upregulation of p38 signaling by immunostaining of the phosphorylated form of p38 in infected cells (Figures S4C and S4D). Interestingly, quantification showed elevated levels of phospho-p38 in nearby uninfected cells, although to a lesser degree than in infected cells, suggesting a substantial non-cell-autonomous effect ."
+SET BioAssay = "immunohistochemistry"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:MAPK14, pmod(Ph))
+p(HGNC:MAPK14, pmod(Ph)) increases bp(GO:"p38MAPK cascade")
+UNSET BioAssay
+
+SET Support ="Upregulation of many vascular remodeling genes (Figure 4D), such as NPPB and VCAN, suggests that infected choroid plexus cells could signal the vasculature to promote leukocyte invasion (Shechter et al., 2013)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:NPPB)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:VCAN)
+p(HGNC:NPPB) regulates bp(GO:"blood vessel remodeling")
+p(HGNC:VCAN) regulates bp(GO:"blood vessel remodeling")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"leukocyte chemotaxis")
+
+SET Support = "GO analysis of downregulated genes at 72 hpi, on the other hand, showed enrichment for genes related to ion transport, transmembrane transport, cilium, and cell junction (Figure 4C; Table S3)."
+SET BioAssay = "bioinformatics method"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"ion transport")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"transmembrane transport")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cilium assembly")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cell junction assembly")
+UNSET BioAssay
+
+SET Support = "Closer examination of downregulated genes revealed a decrease in the expression of many transporters and ion channels, such as AQP1, AQP4, and SLC22A8, which are important for normal CSF secretory function (Figure 4D; Brown et al., 2004; Hladky and Barrand, 2016), suggesting functional deficits of choroid plexus cells."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:AQP1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:AQP4)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:SLC22A8)
+p(HGNC:AQP1) increases bp(GO:"cerebrospinal fluid secretion")
+p(HGNC:AQP4) increases bp(GO:"cerebrospinal fluid secretion")
+p(HGNC:SLC22A8) increases bp(GO:"cerebrospinal fluid secretion")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(HP:"Abnormality of the choroid plexus")
+
+SET Support = "We validated downregulation of TTR levels in infected cells by immunostaining (Figures S4C and S4D). We also observed downregulation of TTR levels in uninfected cells at 72 hpi, although to a lesser degree than in infected cells, again suggesting a non-cell-autonomous effect (Figure S4D)."
+SET BioAssay = "immunohistochemistry"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases p(HGNC:TTR)
+UNSET BioAssay
+
+SET Support = "Together, these transcriptome analyses suggest that SARS-CoV-2 infection of choroid plexus cells leads to viral RNA production and inflammatory cellular responses with a concomitant compromise of normal barrier and secretory functions as well as increased cell death."
+SET MeSHAnatomy = "Choroid Plexus"
+SET BioAssay = "RNA-seq gene expression profiling assay"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Viral Load")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"inflammatory response")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cell death")
+
+
+UNSET MeSHAnatomy
+UNSET BioAssay
+UNSET Citation
+

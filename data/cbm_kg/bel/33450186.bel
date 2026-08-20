@@ -1,0 +1,164 @@
+SET DOCUMENT Name = "33450186.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20200408.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+#DEFINE NAMESPACE FIXME AS LIST {".."}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION Treatment AS LIST {"Matrigel-treated"}
+
+SET Citation = {"PubMed", "Cell Stem Cell. 2021 Feb 4;28(2):331-342.e5. doi:10.1016/j.stem.2020.12.018. Epub 2021 Jan 4.", "33450186"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Support = "In addition, we observed syncytia formation, a typical cytopathic effect in cultured cells infected with SARS-CoV-2, in both ApoE3 and ApoE4 neurons (Figures S3B and S3C), with a higher percentage of syncytia nucleus in E4 neurons than that in E3 neurons (Figure S3C), suggesting that SARS-CoV-2 may also spread in neurons through syncytia formation."
+SET Species = "9606"
+SET CellLine = {"AG06869 cell", "AG14048 cell"}
+SET BioAssay = "co-culture"
+SET Cell = {"neuron", "astrocyte"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> bp(GO:"induction by virus of host cell-cell fusion")
+UNSET Cell
+UNSET BioAssay
+
+SET Support = "However, by 72 hpi, the neurite length of the spike+ neurons decreased significantly in both ApoE3 and ApoE4 neurons (Figures 2D and 2E), compared to mock-treated neurons and spike– neurons.The decrease of neurite length in the ApoE4 spike+ neurons compared to the ApoE4 spike– neurons is more dramatic (p < 0.001) than the decrease in the ApoE3 spike+ neurons compared to the ApoE3 spike– neurons (p < 0.05)."
+p(UNIPROT:P0DTC2) -| bp(GO:"neuron projection development")
+p(UNIPROT:P0DTC2) -- a(TAX:"Severe acute respiratory syndrome coronavirus 2")
+UNSET CellLine
+
+SET Support = "Again, a more dramatic decrease in neurite number was observed in spike+ ApoE4 neurons compared to mock-treated or spike– ApoE4 neurons (p < 0.001) than the decrease in spike+ ApoE3 neurons compared to mock-treated or spike– ApoE3 neurons (p < 0.01), although adirect comparison of the neurite length and number between the ApoE3 and ApoE4 neurons (mock, spike–, and spike+) did not reach a statistically significant difference."
+SET CellLine = "AG14048 cell"
+SET Cell = "neuron"
+p(UNIPROT:P0DTC2) -| a(GO:"neuron projection")
+UNSET CellLine
+
+SET Support = "These results demonstrate that SARS-CoV-2 infection could result in neurite degeneration in both ApoE3 and ApoE4 neurons, with a moredramatic deteriorative effect on ApoE4 neurons than ApoE3 neurons."
+SET CellLine = {"AG06869 cell", "AG14048 cell"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> deg(a(GO:"neuron projection"))
+
+SET Support = "By 72 hpi, the spike+ neurons showed significantly decreased Syn1-positive puncta density in both ApoE3 and ApoE4 neurons (Figures 2G–2J)."
+p(UNIPROT:P0DTC2) -> a(GO:synapse)
+UNSET CellLine
+UNSET Cell
+
+SET Support = "We found that the spike+ ApoE4 astrocytes exhibited increased cell size (soma size and process length) compared to the spike+ ApoE3 astrocytes (Figures 3A, 3C, S4A, and S4C), suggesting that ApoE4 astrocytes react differently from ApoE3 astrocytes upon SARS-CoV-2 viral infection."
+SET CellLine = "AG14048 cell"
+SET Cell = "astrocyte"
+p(UNIPROT:P0DTC2) -> bp(MESH:"Cell Size")
+
+SET Support = "In addition, we found that ApoE4 astrocytes showed more fragmented nuclei after viral infection compared to ApoE3 astrocytes (Figures 3D and S4D), indicating that SARS-CoV-2 infection may cause a more severe cytopathogenic effect in ApoE4 astrocytes than in ApoE3 astrocytes."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> bp(GO:"nuclear fragmentation involved in apoptotic nuclear change")
+UNSET CellLine
+
+SET Support = "Similar with our observation in neurons, we observed syncytia formation in astrocytes, suggesting that one way SARS-CoV-2 spreads in astrocytes may be through syncytia formation (Figure 3A)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> bp(GO:"induction by virus of host cell-cell fusion")
+
+SET Support = "Among the host genes examined, ACTR2 (endosomal entry), ATP6AP2 (spike protein cleavage, endosomal acidification and processing), ERMP1 (ER), and CHST14 (Golgi) showed higher expression levels in ApoE4 astrocytes than that in ApoE3 astrocytes (Figures 3E and 3F)."
+SET CellLine = "AG14048 cell"
+SET BioAssay= {"gene expression assay","real-time PCR"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> r(HGNC:ACTR2)
+r(HGNC:ACTR2) -- bp(GO:"viral entry via permeabilization of endosomal membrane")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> r(HGNC:ATP6AP2)
+p(HGNC:ATP6AP2) -- p(UNIPROT:P0DTC2, frag("?"))
+p(HGNC:ATP6AP2) -- bp(GO:"endosomal lumen acidification")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> r(HGNC:ERMP1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> r(HGNC:CHST14)
+UNSET BioAssay
+UNSET CellLine
+UNSET Cell
+
+SET Support = "Remdesivir treatment reduced detectable spike+ neurons (Figure 4 A) and astrocytes (Figures 4E, 4G, and S4E) substantially."
+SET Cell = {"neuron", "astrocyte"}
+a(CHEBI:remdesivir) -| p(UNIPROT:P0DTC2)
+UNSET Cell
+
+SET Support = "Significantly increased neurite length was detected in remdesivir-treated neurons compared to SARS-CoV-2-infected neurons without remdesivir treatment (Figure 4C)."
+SET Cell = "neuron"
+SET Disease = "COVID-19"
+a(CHEBI:remdesivir) -> bp(GO:"neuron projection development")
+UNSET Cell
+
+SET Support = "Treatment with remdesivir reduced fragmented nuclei in ApoE4 astrocytes significantly (Figures 4H and S4F)."
+SET CellLine = "AG14048 cell"
+SET Cell = "astrocyte"
+a(CHEBI:remdesivir) -| bp(GO:"nuclear fragmentation involved in apoptotic nuclear change")
+UNSET Cell
+
+SET Support = "These results together indicate that remdesivir could effectively inhibit SARS-CoV-2 infection and rescue disease phenotypes in neurons and astrocytes and therefore can be used to manage neurological infection by SARS-CoV-2."
+SET Cell = {"neuron", "astrocyte"}
+a(CHEBI:remdesivir) -| act(p(UNIPROT:P0DTC2))
+a(CHEBI:remdesivir) -| path(DO:"COVID-19")
+UNSET Cell
+UNSET Disease
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

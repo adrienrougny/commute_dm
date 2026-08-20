@@ -1,0 +1,191 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "32498691.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Alzheimers Res Ther. 2020 Jun 4;12(1):69. 10.1186/s13195-020-00640-3.", "32498691"}
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+SET Species = "9606"
+SET Disease = "COVID-19" 
+#severe COVID-19
+
+SET Support = "The main symptoms include but are not restricted to dizziness, headache, impaired consciousness, and seizure [1]."
+path(DO:"COVID-19") increases path(MESH:Dizziness)
+path(DO:"COVID-19") increases path(MESH:Headache)
+path(DO:"COVID-19") increases path(MESH:"Consciousness Disorders")
+path(DO:"COVID-19") increases path(MESH:Seizures)
+
+SET Support = "While on intensive care units, patients showed agitation, confusion, and corticospinal tract signs such as enhanced tendon reflexes and clonus."
+path(DO:"COVID-19") increases path(HP:Agitation)
+path(DO:"COVID-19") increases path(MESH:Confusion)
+path(DO:"COVID-19") increases a(NCIT:"Deep Tendon Reflex")
+path(DO:"COVID-19") increases path(HP:Clonus)
+
+SET Support = "In mild to moderate disease cases, patients reported olfactory (85.6%) and gustatory (88.0%) dysfunctions."
+path(DO:"COVID-19") increases path(DO:"olfactory nerve disease")
+path(DO:"COVID-19") increases path(MESH:Dysgeusia)
+
+SET Support = "Importantly, in about 11% of patients, anosmia occurred prior to any other clinical symptoms."
+path(DO:"COVID-19") increases path(HP:Anosmia)
+
+SET Support = "COVID-19 can further lead to changes of coagulation and, in particular, to inflammation-induced disseminated intravascular coagulation (DIC)."
+path(DO:"COVID-19") increases path(DO:"disseminated intravascular coagulation")
+
+SET Support = "Together with endothelial dysfunction, DIC can cause cerebrovascular ischemia even in young patients, many of whom suffer from large vessel ischemic stroke [4, 5]."
+path(DO:"disseminated intravascular coagulation") increases path(EFO:"endothelial dysfunction")
+path(DO:"disseminated intravascular coagulation") increases path(HP:"Cerebral ischemia")
+
+SET Support = "Additionally, as sub-acute signs that occurred 3–10 days after the development of Covid-19 symptoms, Guillain-Barré syndrome [8] and Miller-Fisher syndrome [9] cases have been reported. Also, clinically striking are cases of Kawaski-like multisystem inflammatory syndromes now being recognized in children and teenagers."
+path(DO:"COVID-19") increases path(DO:"Guillain-Barre syndrome")
+path(DO:"COVID-19") increases path(DO:"Miller Fisher syndrome")
+path(DO:"COVID-19") increases path(DO:"Kawasaki disease")
+
+SET Support = "This concern is supported by findings that show that one third of patients at the time of discharge have evidence of cognitive impairment and motor deficits [2]."
+path(DO:"COVID-19") increases path(MESH:"Cognitive Dysfunction")
+path(DO:"COVID-19") increases path(HP:"Functional motor deficit")
+
+SET Support = "COVID-19 is associated with a severe innate immune response and sustained rise of systemic cytokine levels."
+path(DO:"COVID-19") increases bp(GO:"active induction of innate immune response in host by virus")
+path(DO:"COVID-19") increases bp(GO:"cytokine production involved in immune response")
+
+SET Support = "Cytokines and related inflammatory mediators found to be elevated include interleukin-1β, interleukin-2, interleukin-2 receptor, interleukin-4, interleukin-10, interleukin-18, interferon-γ, C-reactive protein, granulocyte colony-stimulating factor, interferon-γ, CXCL10, monocyte chemoattractant protein 1, macrophage inflammatory protein 1-α, and tumor necrosis factor-α [10, 12]. "
+path(DO:"COVID-19") pos p(HGNC:IL1B)
+path(DO:"COVID-19") pos p(HGNC:IL2)
+path(DO:"COVID-19") pos p(HGNC:IL2RA)
+path(DO:"COVID-19") pos p(HGNC:IL2RB)
+path(DO:"COVID-19") pos p(HGNC:IL2RG)
+path(DO:"COVID-19") pos p(HGNC:IL4)
+path(DO:"COVID-19") pos p(HGNC:IL10)
+path(DO:"COVID-19") pos p(HGNC:IL18)
+path(DO:"COVID-19") pos p(HGNC:IFNG)
+path(DO:"COVID-19") pos p(HGNC:CRP)
+path(DO:"COVID-19") pos p(HGNC:CSF3)
+path(DO:"COVID-19") pos p(HGNC:CXCL10)
+path(DO:"COVID-19") pos p(HGNC:CCL2)
+path(DO:"COVID-19") pos p(HGNC:CCL3)
+path(DO:"COVID-19") pos p(HGNC:TNF)
+
+SET Support = "Concomitantly, most patients show signs of T cell exhaustion with lower lymphocyte counts."
+path(DO:"COVID-19") decreases a(MESH:"T-Lymphocytes")
+path(DO:"COVID-19") decreases a(MESH:Lymphocytes)
+
+SET Support = "In keeping with this, the most frequent clinical presentation of COVID-19 is the development of acute respiratory distress syndrome (ARDS) [16], the latter being, along with chronic ventilation, highly associated with subsequent cognitive decline, executive dysfunction, and reduced quality of life, often persisting months and years after hospital discharge [17] reviewed in [18]. "
+path(DO:"COVID-19") increases path(DO:"adult respiratory distress syndrome")
+path(DO:"adult respiratory distress syndrome") association path(HP:"Cognitive impairment")
+path(DO:"adult respiratory distress syndrome") neg path(MESH:"Executive Function")
+path(DO:"adult respiratory distress syndrome") decreases a(MESH:"Quality of Life")
+
+SET Support = " In keeping with this, the coronavirus ORF3a protein has been shown to induce NLRP3 inflammasome activity."
+p(UNIPROT:P0DTC3) increases act(complex(GO:"NLRP3 inflammasome complex"))
+
+SET Support = "Moreover, ventilation-induced hypercapnia has been experimentally shown to lead to cognitive impairment in a NLRP3 inflammasome-interleukin-1β-dependent manner [23]."
+
+path(MESH:Hypercapnia) decreases bp(GO:cognition)
+composite(complex(GO:"NLRP3 inflammasome complex"), p(HGNC:IL1B)) association path(HP:"Cognitive impairment")
+
+SET Support = "Given the above cytokine findings in COVID-19 patients and in particular the rise of interleukin-1β and interleukin-18, it seems highly likely that COVID-19 patients suffer from NLRP3 inflammasome activation. This activation and the subsequent increased activity of proinflammatory immune pathways are likely to exert a negative impact on cerebral homeostasis and function."
+path(DO:"COVID-19") pos p(HGNC:IL1B) 
+path(DO:"COVID-19") pos p(HGNC:IL18)
+path(DO:"COVID-19") increases act(complex(GO:"NLRP3 inflammasome complex"))
+act(complex(GO:"NLRP3 inflammasome complex")) increases bp(PW:"pro-inflammatory cytokine mediated pathway")
+SET MeSHAnatomy = "Cerebrum"
+bp(PW:"pro-inflammatory cytokine mediated pathway") decreases bp(MESH:Homeostasis)
+UNSET MeSHAnatomy
+
+SET Support = "This conclusion is based on not only epidemiological evidence but also on experiments that showed that systemic, NLRP3 inflammasome-mediated inflammation adversely affects beneficial immune functions in the brain and thereby causes the pathological accumulation of neurodegeneration-associated peptides such as fibrillar amyloid-β."
+act(complex(GO:"NLRP3 inflammasome complex")) increases bp(GO:"inflammatory response")
+SET MeSHAnatomy = "Brain"
+bp(GO:"inflammatory response") decreases bp(GO:"immune response")
+act(complex(GO:"NLRP3 inflammasome complex")) increases path(DO:amyloidosis)
+bp(GO:"amyloid fibril formation") association path(HP:Neurodegeneration)
+UNSET MeSHAnatomy
+
+SET Support = "Thus, both peripheral and central induction of the NLRP3 inflammasome can directly induce or aggravate neurodegenerative processes that lead to functional impairment in AD [25] or strongly contribute to the spreading of pathology and thus the progression of the disease."
+act(complex(GO:"NLRP3 inflammasome complex")) increases path(HP:Neurodegeneration)
+path(HP:Neurodegeneration) increases path(DO:"Alzheimer's disease")
+path(HP:Neurodegeneration) decreases path(MESH:"Executive Function")
+UNSET Species
+UNSET Disease
+
+SET Support = "The recent finding showing that NLRP3-driven and interleukin-1β-mediated modulation of phosphokinases and phosphatases largely accounts for the pathological formation of neurofibrillary tangles in murine models of tauopathy raises the concern that COVID-19 patients are likely to experience an induction or strong aggravation of neurodegenerative processes."
+SET Species = "10090"
+SET MeSHDisease = "Tauopathies"
+complex(GO:"NLRP3 inflammasome complex") increases a(GO:"neurofibrillary tangle")
+p(HGNC:IL1B) increases a(GO:"neurofibrillary tangle")
+UNSET Species
+UNSET MeSHDisease
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET TextLocation
+UNSET Citation

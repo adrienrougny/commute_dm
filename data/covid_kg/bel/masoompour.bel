@@ -1,0 +1,266 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "https://doi.org/10.20944/preprints202003.0206.v2"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "Therapeutic Approaches for COVID-19 Based on the Dynamics of \
+Interferon-mediated Immune Responses"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+# DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+ DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+# DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://raw.githubusercontent.com/pharmacome/conso/f02c6ad4a4791a8ed45448513b9de8c8f1b00c87/external/mesh-names.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+# DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+# DEFINE NAMESPACE NCBICOVID19 AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"preprints", "10.20944/preprints202003.0206.v2"}
+
+SET Support = "CoV can impede the interferon induction in humans."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -| p(GFAM:"Interferons")
+
+SET Support = "Moreover, STAT1, a key protein in the interferon-mediated immune response, is antagonized by the virus."
+p(HGNC:"STAT1") -- bp(GOBP:"immune response")
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -| act(p(HGNC:"STAT1"))
+UNSET Disease
+
+SET Support = "Administration of interferon-inducing agents, such as poly (ICLC), could reduce the mortality of SARS at the very early stages of the disease."
+a(PUBCHEM:136033680) isA a(CHEBI:"interferon inducer")
+SET Disease = {"Severe acute respiratory syndrome coronavirus 2", "Severe acute respiratory syndrome-related coronavirus"}
+a(CHEBI:"interferon inducer") -| path(MESHD:"Death")
+a(PUBCHEM:136033680) -| path(MESHD:"Death")
+UNSET Disease
+# PUBCHEM:136033680 corresponds to poly (ICLC)
+
+SET Support = "Interferon-γ combination with an interferon-I might induce synergistic effects and maximize the benefits."
+composite(p(HGNC:"IFNG"), p(HGNC:"IFNA1")) -| path(DO:"COVID-19")
+composite(p(HGNC:"IFNG"), p(HGNC:"IFNB1")) -| path(DO:"COVID-19")
+composite(p(HGNC:"IFNG"), p(HGNC:"IFNA1"))  -| path(DO:"COVID-19")
+composite(p(HGNC:"IFNG"), p(HGNC:"IFNB1")) -| path(DO:"severe acute respiratory syndrome")
+
+SET Support = "With the advancement of the disease and the virus overload, the responses would shift toward immnopathogenic over-reactions and probably cytokine storm."
+SET Disease = {"Severe acute respiratory syndrome coronavirus 2", "Severe acute respiratory syndrome-related coronavirus"}
+bp(GOBP:"immune response") -> path(NCIT:"Cytokine Release Syndrome")
+UNSET Disease
+
+SET Support = "They mainly cause respiratory disease and common cold, but can also cause central nervous system (CNS) infection."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(MESHD:"Central Nervous System Infections")
+
+SET Support = "COVID-19 is caused by a novel coronavirus species, named SARS-CoV-2."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(DO:"COVID-19")
+
+SET Support = "It has been shown that the potential first lines of defense against SARS are mediated through mannose-binding lectin as a pattern recognition molecule (PRM) of innate immunity."
+SET Disease = {"Severe acute respiratory syndrome coronavirus 2", "Severe acute respiratory syndrome-related coronavirus"}
+act(p(HGNC:"MBL2"), ma(GO:"pattern recognition receptor activity"))
+UNSET Disease
+
+SET Support = "Additionally, interleukin (IL)-12 seems to play a vital role in SARS."
+p(HGNC:"IL12A") -- path(DO:"COVID-19")
+p(HGNC:"IL12A") -- path(DO:"severe acute respiratory syndrome")
+
+SET Support = "IL-12 activation would lead to the induction of interferons (IFNs)."
+p(HGNC:"IL12A") -> p(GFAM:"Interferons")
+
+SET Support = "IFNs are a group of cytokines, which communicate between cells against pathogens and have a critical role in the immune system, such as activating natural killer (NK) cells and macrophages, in addition to the flu-like symptoms of various diseases."
+p(GFAM:"Interferons") -- bp(GOBP:"immune response")
+p(GFAM:"Interferons") -> bp(GOBP:"natural killer cell activation")
+p(GFAM:"Interferons") -> bp(GOBP:"macrophage activation")
+
+SET Support = "Both CoVs use variant strategies to decrease type I IFN production."
+path(DO:"severe acute respiratory syndrome") -| bp(GOBP:"type I interferon production")
+path(DO:"Middle East respiratory syndrome") -|  bp(GOBP:"type I interferon production")
+
+SET Support = "In a mouse model of SARS-CoV infection, imbalanced type I IFN and inflammatory cells were shown as the main causes of fatal pneumonia."
+SET Species = "10090"
+SET Disease = "Severe acute respiratory syndrome-related coronavirus"
+p(MESHC:"Interferon Type I") -- path(MESHD:"Death")
+p(MESHC:"Interferon Type I") -- path(MESHD:"Pneumonia")
+UNSET Species
+UNSET Disease
+
+SET Support = "Daczkowski et al. demonstrated that CoV could interact with IFN stimulated gene 15 (ISG15) and antagonize the IFN-mediated antiviral response."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -| bp(GO:"innate immune response")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -| bp(GO:"innate immune response")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -| bp(GO:"innate immune response")
+
+SET Support = "This result is consistent with the recent study, which represented that the number of T cells in patients with COVID-19 were reduced and functionally exhausted, especially among elderly patients (≥60) and in patients requiring Intensive Care Unit (ICU)."
+path(DO:"COVID-19") -| a(MESHA:"T-Lymphocytes")
+
+SET Support = "Type I IFN response is shown crucial in T cell survival."
+SET Disease = {"Severe acute respiratory syndrome coronavirus 2", "Severe acute respiratory syndrome-related coronavirus","Middle East respiratory syndrome"}
+SET MeSHAnatomy = "T-Lymphocytes"
+bp(GOBP:"response to type I interferon") -- bp(MESHPP:"Cell Survival")
+UNSET MeSHAnatomy
+
+SET Support = " Moreover, the phosphorylation of STAT1 and STAT5 was increased in the activated naïve CD4+ T cells taken from young adults leading to their lower response threshold to type I IFN stimulation."
+SET Cell = "naive T cell"
+bp(GOBP:"T cell activation") pos p(HGNC:"STAT1", pmod("Ph"))
+bp(GOBP:"T cell activation") pos p(HGNC:"STAT5A", pmod("Ph"))
+UNSET Disease
+
+SET Support = "Likewise, the impaired innate IFN secretion in the elderly is well documented in several studies."
+path(DO:"COVID-19") neg bp(GOBP:"type I interferon secretion")
+path(DO:"severe acute respiratory syndrome") neg bp(GOBP:"type I interferon secretion")
+path(DO:"Middle East respiratory syndrome") neg bp(GOBP:"type I interferon secretion")
+
+SET Support = "Therefore, STAT1 inactivation by ORF6 protein might be the cause of reduced and functionally-exhausted T cells in patients with COVID-19, especially in the elderly patients."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+act(p(HGNC:"STAT1")) pos bp(GOBP:"T cell activation")
+UNSET Disease
+
+SET Support = "Channappanavar et al. also demonstrated that suboptimal T cell responses occurred in SARS-CoV-infected BALB/c mice."
+SET Species = "10090"
+path(MESHD:"Severe Acute Respiratory Syndrome") neg bp(GOBP:"T cell activation")
+UNSET Species
+
+SET Support = "Considering the fact that T cells reduce cytokine storm by modulating the innate immune response, it seems that the higher response threshold in the elderly, which is aggravated by the antagonizing effects of ORF6 on STAT1, leads to their poor clinical outcome."
+a(MESHA:"T-Lymphocytes") -| path(NCIT:"Cytokine Release Syndrome")
+a(MESHA:"T-Lymphocytes") reg bp(GOBP:"innate immune response")
+
+SET Support = "Numerous studies have presented the success in defeating CoVs by the direct administration of IFNs."
+p(GFAM:"Interferons") -| path(DO:"COVID-19")
+p(GFAM:"Interferons") -| path(DO:"severe acute respiratory syndrome")
+p(GFAM:"Interferons") -| path(DO:"Middle East respiratory syndrome")
+
+SET Support = "A combination of type I IFN and either IFN-γ or IFN-λ, was shown to synergistically inhibit the virus replication in vitro."
+SET BioAssay = "in vitro"
+SET Species = {"2697049","694009","1335626"}
+composite(p(HGNC:"IFNG"), p(HGNC:"IFNA1")) -| bp(MESHPP:"Virus Replication")
+composite(p(HGNC:"IFNG"), p(HGNC:"IFNB1")) -| bp(MESHPP:"Virus Replication")
+UNSET Species
+UNSET BioAssay
+
+SET Support = "While IV injections of TNF-α was not beneficial, intraperitoneal IFN-γ injection showed a protective effect."
+SET Species = "10090"
+SET Disease = "Severe acute respiratory syndrome-related coronavirus"
+p(HGNC:"IFNG") isA a(MESHC:"Protective Agents")
+UNSET Species
+UNSET Disease
+
+SET Support = "Another study, demonstrated that IFN-α and -γ co-administration caused hyper-activated IRF-1 and STAT1, which finally led to a more robust antiviral symphony against virus replication."
+composite(p(HGNC:"IFNG"),p(HGNC:"IFNA1")) -> act(p(HGNC:"IRF1"))
+composite(p(HGNC:"IFNG"),p(HGNC:"IFNA1")) -> act(p(HGNC:"STAT1"))
+composite(p(HGNC:"IFNG"),p(HGNC:"IFNA1")) -| bp(MESHPP:"Virus Replication")
+
+
+SET Support = "In an in vivo study, mice were protected against the virus when IFN-I was given before the maximum rise of the virus, during one day after the infection, though the expression of the ISGs and inflammatory cytokine genes was reduced."
+SET Species = "10090"
+SET Disease = "Severe acute respiratory syndrome-related coronavirus"
+p(INTERPRO:"Interferon alpha/beta/delta") isA a(MESHC:"Protective Agents")
+UNSET Species
+
+SET Support = "On the other hand, treatment failure was seen in case of later injection of IFN-β, because the virus titer went up, and monocytes, macrophages, and neutrophils were accumulated and activated in the lungs, and proinflammatory cytokines were induced, which finally led to severe lethal pneumonia."
+SET MeSHAnatomy = "Lung"
+p(HGNC:"IFNB1") pos a(MESHA:"Monocytes")
+p(HGNC:"IFNB1") pos a(MESHA:"Macrophages")
+p(HGNC:"IFNB1") pos a(MESHA:"Neutrophils")
+p(HGNC:"IFNB1") pos bp(GOBP:"monocyte activation")
+p(HGNC:"IFNB1") pos bp(GOBP:"macrophage activation")
+p(HGNC:"IFNB1") pos bp(GOBP:"neutrophil activation")
+UNSET MeSHAnatomy
+
+SET Support = "Noteworthy, toll like receptor (TLR)3 activation, could induce these IFNs."
+bp(GOBP:"toll-like receptor 3 signaling pathway") -> p(GFAM:"Interferons")
+UNSET Disease
+
+SET Support = "The used TLR3 agonists, poly ICLC and poly (I:C) (polyinosinic:polycytidylic acid) could augment the production of IFN-α, -β, and -γ, which consequently inhibited CoV replication and compensated for the inhibitory effects of CoV on IFN signaling pathways."
+a(PUBCHEM:135478809) -> p(HGNC:"IFNA1")
+a(PUBCHEM:135478809) -> p(HGNC:"IFNB1")
+a(PUBCHEM:135478809) -> p(HGNC:"IFNG")
+a(PUBCHEM:135478809) -| path(DO:"COVID-19")
+# PUBCHEM:135478809 corresponds to Poly (I:C)
+
+SET Support = "Poly (I:C) is a synthetic double-stranded RNA immunostimulant, which is used as adjuvant in vaccine production."
+a(PUBCHEM:135478809) isA a(CHEBI:"immunological adjuvant")
+# PUBCHEM:135478809 corresponds to Poly (I:C)
+
+SET Support = "Interestingly, chloroquine, a recently proposed medication for COVID-19, interacts with poly (I:C) as an endosomal acidification inhibitor, which inhibits poly (I:C)-mediated IFN-β expression."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+a(PUBCHEM:2719) -| act(a(PUBCHEM:135478809))
+a(PUBCHEM:2719) -| r(HGNC:"IFNB1")
+UNSET Disease
+# PUBCHEM:135478809 corresponds to Poly (I:C)
+# PUBCHEM:2719 corresponds to chloroquine
+
+
+SET Support = "In addition to TLR-3 agonists (poly ICLC, poly (I:C), and rintatolimod) and phytohaemagglutinin (PHA) can induce IFN production in the human body as well."
+a(PUBCHEM:135537060) -> p(GFAM:"Interferons")
+a(PUBCHEM:136033680) -> p(GFAM:"Interferons")
+p(PUBCHEM:50010559) -> p(GFAM:"Interferons")
+# PUBCHEM:136033680 corresponds to poly ICLC
+# PUBCHEM:135537060 corresponds to rintatolimod
+# PUBCHEM:50010559 corresponds to phytohaemagglutinin
+
+SET Support = "The oral consumption of uncooked red kidney bean has been announced to induce gastrointestinal toxicity and mitogenicity because of high levels of PHA."
+p(PUBCHEM:50010559) isA a(MESHC:"Mitogens")
+# PUBCHEM:50010559 corresponds to phytohaemagglutinin
+
+SET Support = "Although IFNs are available as medicinal products, some adverse effects such as flu-like syndrome and bone marrow suppression should be considered for their direct indication."
+p(GFAM:"Interferons") -> path(EFO:"myelosuppression")

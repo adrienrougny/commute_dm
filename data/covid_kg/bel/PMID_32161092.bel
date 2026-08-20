@@ -1,0 +1,329 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "PMID_32161092"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "The emergence of a novel coronavirus(SARS-CoV-2), their biology and \
+therapeutic options"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO  AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+# DEFINE NAMESPACE ECCODE AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+# DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+# DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY AS PATTERN "^\d+$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+# DEFINE NAMESPACE UNIPROT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/uniprot/uniprot-20200601.belns"
+
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"PubMed", "32161092"}
+
+SET Support = "The new decade of the 21st century (2020) started with the emergence of novel coronavirus known as SARS-CoV-2 that caused an epidemic of coronavirus disease(COVID-19) in Wuhan, China."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2")  -> path(DO:"COVID-19")
+
+SET Support = "Coronaviruses have widely been known to cause respiratory and intestinal infections in humans after the outbreak of “severe acute respiratory syndrome (SARS)”in Guangdong, China"
+SET Species = "9606"
+a(NCBITAXON:"Orthocoronavirinae") -> path(DO:"respiratory system disease")
+a(NCBITAXON:"Orthocoronavirinae") -> path(DO:"intestinal disease")
+a(NCBITAXON:"Orthocoronavirinae") -> path(DO:"Coronavirus infection")
+
+SET Support = "SARS was caused by SARS-CoV during 2002 and 2003, emerged in amarket where civets were sold out"
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"severe acute respiratory syndrome")
+
+SET Support = "Only a decade later, the world witnessed another outbreak of “Middle East respiratory syndrome (MERS)” caused by MERS-CoV in the Middle East"
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"Middle East respiratory syndrome")
+
+SET Support = "The SARS-CoV infects ciliated bronchial epithelial cells and type-II pneumocytes through angiotensin-converting enzyme2 (ACE2) as receptor"
+SET Disease = "severe acute respiratory syndrome"
+SET MeSHAnatomy = "Bronchi"
+SET Cell = "ciliated epithelial cell"
+act(p(HGNC:"ACE2"), ma(GO:"virus receptor activity"))
+UNSET Cell
+UNSET MeSHAnatomy
+SET Cell = "type II pneumocyte"
+act(p(HGNC:"ACE2"), ma(GO:"virus receptor activity"))
+UNSET Cell
+UNSET Disease
+
+SET Support = "MERS infects unciliated bronchial epithelial cells and type-II pneumocytes by using dipeptidyl peptidase 4 (DPP4) also known as CD26,as a receptor"
+SET Disease = "Middle East respiratory syndrome"
+SET MeSHAnatomy = "Bronchi"
+SET Cell = "epithelial cell"
+act(p(HGNC:"DPP4"), ma(GO:"virus receptor activity")) 
+UNSET Cell
+UNSET MeSHAnatomy
+SET Cell = "type II pneumocyte"
+act(p(HGNC:"DPP4"), ma(GO:"virus receptor activity"))
+UNSET Cell
+UNSET Disease
+
+SET Support = "The mechanisms associated with the infectiousness of SARS-CoV-2 is not clear, however, structural analysis suggests it is likely entering human cells through the ACE2 receptor"
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+act(p(HGNC:"ACE2"), ma(GO:"virus receptor activity"))
+UNSET Disease
+UNSET Species
+
+SET Support = "Coronaviruses are members of the subfamily “Coronavirinae” (family; Coronaviridae, order; Nidovirales) that contains four genera alpha-coronavirus, beta-coronavirus, gamma-coronavirus and delta-coronavirus"
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2")  isA a(NCBITAXON:"Orthocoronavirinae")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus")isA a(NCBITAXON:"Orthocoronavirinae")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Orthocoronavirinae")
+a(NCBITAXON:"Orthocoronavirinae") isA a(NCBITAXON:"Coronaviridae")
+a(NCBITAXON:"Coronaviridae") isA a(NCBITAXON:"Nidovirales")
+a(NCBITAXON:"Orthocoronavirinae") hasMembers list(a(NCBITAXON:"Alphacoronavirus"),a(NCBITAXON:"Betacoronavirus"), a(NCBITAXON:"Gammacoronavirus"), a(NCBITAXON:"Deltacoronavirus"))
+# According to NCBITAXON, Coronaviruses are members of Orthocoronavirinae not Coronavirinae.
+
+SET Support = "The SARS-CoV (beta coronavirus), 229E (alpha 65coronavirus), HKU1 (beta coronavirus), NL63 (alpha coronavirus), OC43 (beta coronavirus) and MERS-CoV (beta coronavirus) can cause infectiousness in humans"
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Human coronavirus 229E") isA a(NCBITAXON:"Alphacoronavirus")
+a(NCBITAXON:"Human coronavirus HKU1") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Human coronavirus NL63") isA a(NCBITAXON:"Alphacoronavirus")
+a(NCBITAXON:"Human coronavirus OC43") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+SET Species = "9606"
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus 229E") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus HKU1") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus NL63") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus OC43") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"Coronavirus infection")
+
+SET Support = "Later on, during June 2012 a patient infected by MERS-CoV developed severe pneumonia and died in Jeddah, Saudi Arabia"
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"pneumonia")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(MESHD:"Death")
+
+SET Support = "According to situation report 35, published on the WHO website, SARS-CoV-2 caused 79331 confirmed cases and 2618 deaths around the globe"
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(MESHD:"Death")
+
+SET Support = "Both MERS and SARS patients in later stages develop respiratory distress and renal failure"
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"kidney failure")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"kidney failure")
+
+SET Support = "Remdesivir and chloroquine were found highly effective in vitro for the control of 2019-nCoV infection "
+SET BioAssay = "in vitro"
+a(PUBCHEM:121304016) -| path(DO:"COVID-19")
+# PUBCHEM:121304016 corresponds to Remdesivir
+a(PUBCHEM:2719) -| path(DO:"COVID-19")
+# PUBCHEM:2719 corresponds to chloroquine
+UNSET BioAssay
+
+SET Support = "Treatment with remdesivir alone or in combination with chloroquine or interferon beta was found effective against COVID-19 infection."
+composite(a(PUBCHEM:121304016), a(PUBCHEM:2719)) -| path(DO:"COVID-19")
+composite(a(PUBCHEM:121304016), p(UNIPROT:"P01574")) -| path(DO:"COVID-19")
+# PUBCHEM:121304016 corresponds to Remdesivir
+# PUBCHEM:2719 corresponds to chloroquine
+
+SET Support = "The surface spike glycoprotein (S) is an important potential target for anti-viral agents, due to its vital role in the interaction between the virus and the cell receptor"
+p(UNIPROT:"P59594") -> bp(GO:"entry receptor-mediated virion attachment to host cell")
+p(UNIPROT:"P0DTC2") -> bp(GO:"entry receptor-mediated virion attachment to host cell")
+# UNIPROT:"P59594" corresponds to The surface spike glycoprotein (S) in SARS
+# UNIPROT:"P0DTC2" corresponds to The surface spike glycoprotein (S) in SARS-COV-2
+
+SET Support = "In addition, Activation of membrane fusion and virus entry requires the cleavage at the junction of S1–S2"
+deg(p(UNIPROT:"P59594")) -> bp(MESHPP:"Virus Internalization")
+# UNIPROT:"P59594" corresponds to The surface spike glycoprotein (S) in SARS
+
+SET Support = "FURIN (a serine endoprotease) cleaves off S1/S2, thus,could be a suitable antiviral agent."
+p(HGNC:"FURIN") isA p(GFAM:"Serine proteases")
+p(HGNC:"FURIN") -> deg(p(UNIPROT:"P59594"))
+p(HGNC:"FURIN") -> deg(p(UNIPROT:"P0DTC2"))
+p(HGNC:"FURIN") -| path(DO:"COVID-19")
+# UNIPROT:"P59594" corresponds to The surface spike glycoprotein (S) in SARS
+# UNIPROT:"P0DTC2" corresponds to The surface spike glycoprotein (S) in SARS-COV-2
+
+SET Support = "The host receptors are also associated with the viral entry into host cells, thus agents targeting these receptors also inhibit coronaviruses"
+a(CHEBI:"agiotensin-converting enzyme inhibitor") -- path(DO:"COVID-19")
+
+SET Support = "Inhibitors of endosomal cysteine protease and transmembrane protease serine 2 can partially block viral entry into the cell"
+a(CHEBI:"cysteine protease inhibitor") -| path(DO:"COVID-19")
+a(CHEBI:"cysteine protease inhibitor") -| bp(MESHPP:"Virus Internalization")
+a(CHEBI:"serine protease inhibitor") -| path(DO:"COVID-19")
+a(CHEBI:"serine protease inhibitor") -| bp(MESHPP:"Virus Internalization")
+
+SET Support = "On the other hand thiopurine compounds, naphthalene inhibitors, protease inhibitors, zinc,and mercury conjugates target 3CLpro (3C-like protease) and PLpro (papain-like protease) enzymes in coronaviruses and can block the pathogenicity of coronaviruses. Therefore,combinational therapy of these antiviral agents with DRACO may enhance the overall impact on the recovery of patients"
+a(CHEBI:"thiopurine") =| act(p(UNIPROT:"P0DTD1", frag("3264_3569")))
+a(CHEBI:"thiopurine") -| path(DO:"COVID-19")
+a(CHEBI:"naphthalenes") =| act(p(UNIPROT:"P0DTD1", frag("3264_3569")))
+a(CHEBI:"naphthalenes") -| path(DO:"COVID-19")
+a(CHEBI:"protease inhibitor") =| act(p(UNIPROT:"P0DTD1", frag("3264_3569")))
+a(CHEBI:"protease inhibitor") -| path(DO:"COVID-19")
+a(CHEBI:"thiopurine") =| act(p(UNIPROT:"P0DTD1", frag("819_2763")))
+a(CHEBI:"thiopurine") -| path(DO:"COVID-19")
+a(CHEBI:"naphthalenes") =| act(p(UNIPROT:"P0DTD1", frag("819_2763")))
+a(CHEBI:"naphthalenes") -| path(DO:"COVID-19")
+a(CHEBI:"protease inhibitor") =| act(p(UNIPROT:"P0DTD1", frag("819_2763")))
+a(CHEBI:"protease inhibitor") -| path(DO:"COVID-19")
+
+SET Support = "This response can be augmented by the utilization of interferon inducers or recombinant interferons "
+a(CHEBI:"interferon inducer") -| path(DO:"COVID-19")
+
+SET Support = "The previously tested recombinant interferon against SARS-CoV,such as interferon alfa and beta can be utilized either alone or in combination with other potential antiviral drugs including remdesivir. "
+p(UNIPROT:"P01562") -| path(DO:"severe acute respiratory syndrome")
+p(UNIPROT:"P01562") -| path(DO:"COVID-19")
+p(UNIPROT:"P01574") -| path(DO:"severe acute respiratory syndrome")
+p(UNIPROT:"P01574") -| path(DO:"COVID-19")
+composite(a(PUBCHEM:121304016), p(UNIPROT:"P01562")) -| path(DO:"COVID-19")
+composite(a(PUBCHEM:121304016), p(UNIPROT:"P01574")) -| path(DO:"COVID-19")
+# UNIPROT:"P01562" corresponds to interferon alpha
+# PUBCHEM:121304016 corresponds to remdesivir
+
+SET Support = "Both interferon-alpha and beta inhibit viral replication"
+p(UNIPROT:"P01562") -| bp(MESHPP:"Virus Replication")
+p(UNIPROT:"P01574") -| bp(MESHPP:"Virus Replication")
+# UNIPROT:"P01562" corresponds to interferon alpha
+# UNIPROT:"P01574" corresponds to interferon beta
+
+SET Support = "The use of interferon inducers in combination effective antiviral agents may be evaluated for their synergistic effects against SARS-CoV-2."
+composite(a(CHEBI:"interferon inducer"), a(CHEBI:"antiviral agent")) -| path(DO:"COVID-19")
+
+SET Support = "In addition, calcineurin inhibitors such as cyclosporine could also be evaluated for SARS-CoV-2 in combination with antibiotics and traditional Chinese medicines."
+composite(a(PUBCHEM:5284373), a(MESHC:"Anti-Bacterial Agents")) -| path(DO:"COVID-19")
+# PUBCHEM:5284373 corresponds to cyclosporine
+
+SET Support = "Live-attenuated vaccines, designed for SARS, maybe evaluated for SARS-CoV-2 infected patients."
+a(MESHC:"Vaccines, Attenuated") -| path(DO:"severe acute respiratory syndrome")
+a(MESHC:"Vaccines, Attenuated") -| path(DO:"COVID-19")
+
+SET Support = "Combining two or more monoclonal antibodies may be suitable for the quicker recovery of patients."
+composite(a(MESHC:"Antibodies, Monoclonal"), a(MESHC:"Antibodies, Monoclonal")) -| path(DO:"COVID-19")
+
+SET Support = "Mycophenolic Acid It targets Nucleosides and/or nucleotides to inhibit synthesis of guanine monophosphate. Effective against wide range of viruses, however combinatorial therapy with interferon beta-1b may be useful for SARS-CoV-2."
+complex(a(PUBCHEM:446541), a(MESHC:"Nucleosides")) -| a(PUBCHEM:135398631)
+complex(a(PUBCHEM:446541), a(CHEBI:"nucleotide")) -| a(PUBCHEM:135398631)
+composite(a(PUBCHEM:446541), p(UNIPROT:"P01574")) -| path(DO:"COVID-19")
+# PUBCHEM:446541 corresponds to Mycophenolic Acid
+# PUBCHEM:135398631 guanine corresponds to guanine monophosphate
+# UNIPROT:"P01574" corresponds to interferon beta-1b
+
+SET Support = "Lopinavir It targets 3CLpro enzyme to inhibit its activity. Effective against wide range of viruses including SARS-CoV and MERS-CoV, thus could be suitable choice for treatment of SARS-CoV-2 infection."
+a(PUBCHEM:92727) =| act(p(UNIPROT:"P0DTD1", frag("3264_3569")))
+a(PUBCHEM:92727) -| path(DO:"COVID-19")
+a(PUBCHEM:92727) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:92727) -| path(DO:"Middle East respiratory syndrome")
+# PUBCHEM:92727 corresponds to Lopinavir
+
+SET Support = "Remdesivir It terminates transcription of the viral RNA transcription at premature level. Effective against wide range of viruses including SARS-CoV and MERS-CoV, thus could be suitable choice for treatment of SARS-CoV-2infection."
+a(PUBCHEM:121304016) -| bp(MESHPP:"Transcription, Genetic")
+a(PUBCHEM:121304016) -| path(DO:"COVID-19")
+a(PUBCHEM:121304016) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:121304016) -| path(DO:"Middle East respiratory syndrome")
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "Ribavirin It targets RdRp (RNA‑dependent RNA polymerase) enzyme to inhibit synthesis of viral RNA synthesis and capping of mRNA. Effective against wide range of viruses including MERS-CoV and SARS-CoV but high doses are required which may have severe side effects. It may be reevaluated for SARS-CoV-2and recommended if low doses are found effective."
+a(PUBCHEM:37542) =| bp(GOBP:"RNA biosynthetic process")
+a(PUBCHEM:37542) -| bp(GOBP:"RNA capping")
+a(PUBCHEM:37542) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:37542) -| path(DO:"Middle East respiratory syndrome")
+a(PUBCHEM:37542) -| path(DO:"COVID-19")
+# PUBCHEM:37542 corresponds to Ribavirin
+
+SET Support = "Bcx4430 It targets RdRp (RNA‑dependent RNA polymerase) enzyme to inhibit synthesis of viral RNA synthesis and capping of mRNA. It isbroad-spectrum and effective against SARS-CoV and MERS-CoV, thus may be effective against SARS-CoV-2 however, evaluation using animals’ models is required."
+a(PUBCHEM:69211190) =| bp(GOBP:"RNA biosynthetic process")
+a(PUBCHEM:69211190) -| bp(GOBP:"RNA capping")
+a(PUBCHEM:69211190) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:69211190) -| path(DO:"Middle East respiratory syndrome")
+a(PUBCHEM:69211190) -| path(DO:"COVID-19")
+# PUBCHEM:69211190 corresponds to Bcx4430
+
+SET Support = "Griffithsin It targets Oligosaccharides on S to block viral binding with host cell. It has been found effective against SARS/MERS-CoV and other high pathogenic viruses, thus can be used against SARS-CoV-2"
+a(PUBCHEM:135349848) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:135349848) -| path(DO:"Middle East respiratory syndrome")
+a(PUBCHEM:135349848) -| path(DO:"COVID-19")
+# PUBCHEM:135349848 corresponds to Griffithsin
+
+SET Support = "Hexamethylene Amiloride It targets viral envelope to inhibit ion channel activity. It is effective against different coronaviruses thus a one of the most suitable treatment options for SARS-CoV-2."
+a(PUBCHEM:1794) -| path(DO:"COVID-19")
+# PUBCHEM:1794 corresponds to Hexamethylene Amiloride
+
+SET Support = "Nitazoxanide These induce the innate interferon responses against viral pathogens. Inducing immuneresponses through recombinant interferons has been found effective against a wide range of viruses and may be promising to use against SARS-CoV-2."
+a(PUBCHEM:41684) -| path(DO:"COVID-19")
+# PUBCHEM:41684 corresponds to Nitazoxanide
+
+SET Support = "Cyclosporine, Alisporivir It inhibits cyclophilin to affect calcineurin–NFAT pathway. These agents can inhibit broad-spectrum viruses specifically coronaviruses and thus could be suitable option to treat people infected with SARS-CoV-2."
+a(PUBCHEM:11513676) -| path(DO:"COVID-19")
+# PUBCHEM:11513676 corresponds to Alisporivir
+
+SET Support = "Rapamycin It inhibits kinase signaling associated pathways to block viral entry. It is effective against SARS/MERS-CoV and possibly be effective against SARS-CoV-2."
+a(PUBCHEM:5284616) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5284616) -| path(DO:"Middle East respiratory syndrome")
+a(PUBCHEM:5284616) -| path(DO:"COVID-19")
+# PUBCHEM:5284616 corresponds to Rapamycin
+
+SET Support = "Imatinib It inhibits kinase signaling associated pathways to block viral entry. It is effective against SARS/MERS-CoV and possibly be effective against SARS-CoV-2."
+SET Species = "9606"
+a(PUBCHEM:5291) -| bp(MESHPP:"Virus Internalization")
+a(PUBCHEM:5291) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5291) -| path(DO:"Middle East respiratory syndrome")
+a(PUBCHEM:5291) -| path(DO:"COVID-19")
+# PUBCHEM:5291 corresponds to Imatinib
+
+SET Support = "Dasatinib It inhibits kinase signaling associated pathways to block viral entry. It is effective against SARS/MERS-CoV and possibly be effective against SARS-CoV-2."
+a(PUBCHEM:3062316) -| bp(MESHPP:"Virus Internalization")
+a(PUBCHEM:3062316) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3062316) -| path(DO:"Middle East respiratory syndrome")
+a(PUBCHEM:3062316) -| path(DO:"COVID-19")
+# PUBCHEM:3062316 corresponds to Dasatinib
+UNSET Species 

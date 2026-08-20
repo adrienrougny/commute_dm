@@ -1,0 +1,387 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "37985656.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causlitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"CD8-positive natural killer T cells", "CCR4-positive CD8 T cells", "RUNX1-regulated transcription related to myeloid differentiation"}
+
+
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research", "Case Report"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+
+DEFINE ANNOTATION Technique AS LIST {"differentially-expressed gene analysis", "Cytometry by Time of Flight (CyTOF)"}
+DEFINE ANNOTATION Specimen AS LIST {"Blood"}
+DEFINE ANNOTATION Cluster AS LIST {"C0", "C1", "C2"}
+DEFINE ANNOTATION Cohort AS LIST {"Discovery Cohort", "Validation Cohort"}
+DEFINE ANNOTATION Disease_Type AS LIST {"idiopathy"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Nat Commun. 2023 Nov 20;14(1):7461.doi: 10.1038/s41467-023-43053-0.", "37985656"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+SET MeSHDisease = "Parkinson Disease"
+SET Disease_Type = "idiopathy"    
+SET Cohort = "Discovery Cohort"
+
+SET Support = "Total classical αβ T cells were modestly reduced in PD (Supplementary Fig. 2A), reflected by a decrease of total CD4 T cells(Supplementary Fig. 2B), whereas the γδ T cells were unchanged among total living CD45+ cells (Supplementary Fig. 2C)."
+path(DO:"Parkinson's disease") -| a(CELL:"alpha-beta T cell")
+path(DO:"Parkinson's disease") -| a(MESH:"CD4-Positive T-Lymphocytes")
+
+
+SET Support = "Furthermore, the expression levels(median signal intensity, MSI) of CD57, a marker for terminal differentiation, among CD8 TEMRA showed a trend to be increased(p = 0.0663) in PD (Fig. 1g)."
+SET Cell = {"effector memory CD8-positive, alpha-beta T cell, terminally differentiated"}  
+SET Technique = "Cytometry by Time of Flight (CyTOF)"    
+path(DO:"Parkinson's disease") pos r(HGNC:B3GAT1)
+UNSET Cell
+
+SET Support = "Moreover, another cytotoxic cell type, natural killer T cells (NKT) also exhibited a late-differentiated state, as reflected by an increased frequency of CD8+ NKT (Fig. 1h), among total NKT26, especially in women."
+SET Gender = "Female"
+path(DO:"Parkinson's disease") pos a(FIXME:"CD8-positive natural killer T cells")
+UNSET Gender
+
+
+
+SET Support = "CD8+ NKT also expressed higher levels of CD57 (Fig. 1k)."
+SET Cell = "mature natural killer cell"
+path(DO:"Parkinson's disease") pos r(HGNC:B3GAT1)
+UNSET Cell
+UNSET Technique
+
+
+SET Support = "The activation marker ICOS was significantly decreased in CD8 T cells (Supplementary Fig. 3M)."
+SET Cell = "CD8-positive, alpha-beta cytotoxic T cell"
+path(DO:"Parkinson's disease") neg surf(r(HGNC:ICOS)) 
+
+
+SET Support = "We also observed a decreased expression of the amino acid transporter CD98 (Supplementary Fig. 3O), nevertheless being independent of CD45RO expression levels (Supplementary Fig. 3P)."
+path(DO:"Parkinson's disease") neg r(HGNC:SLC3A2)
+
+
+SET Support = "In the blood of iPD, we observed a lower frequency of CXCR3+ and CCR4+ cells and their corresponding expression levels (geometric mean, MFI) among total CD8 T cells, whereas CCR6 showed no difference (Supplementary Fig. 4A, B)."
+SET Specimen = "Blood"  
+path(DO:"Parkinson's disease") neg a(CELL:"CD8-positive, CXCR3-positive, alpha-beta regulatory T cell")
+path(DO:"Parkinson's disease") neg a(FIXME:"CCR4-positive CD8 T cells")
+path(DO:"Parkinson's disease") neg surf(r(HGNC:CXCR3))
+path(DO:"Parkinson's disease") neg surf(r(HGNC:CCR4))
+UNSET Specimen
+UNSET Cell
+
+
+SET Support = "Highly encouragingly, circulating GZMA was significantly elevated in iPD, especially in females (Fig. 2j), while the levels of both GZMB and perforin were comparable between iPD and HC (Fig. 2k, l)."
+SET Cell = {"CD8-positive, alpha-beta cytotoxic T cell", "mature natural killer cell"}
+SET Gender = "Female"
+path(DO:"Parkinson's disease") pos r(HGNC:GZMA)
+UNSET Gender
+UNSET Cell
+
+
+SET Support = "In line with our observation of reduced CD8 Treg, the expression of other markers relevant to CD8 Treg, such as CD25 (IL2RA) and CD122 (IL2RB)50, was also reduced in CD8 T cells of iPD vs HC (Fig. 3b)."
+SET Cell = "CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") neg r(HGNC:IL2RA)
+path(DO:"Parkinson's disease") neg r(HGNC:IL2RB)
+UNSET Cell
+
+
+SET Support = "The levels of both CD45RO and pS6 were decreased among CD4 Treg in iPD (Fig. 3e)."  
+SET MeSHAnatomy = "T-Lymphocytes, Regulatory"
+path(DO:"Parkinson's disease") -| p(HGNC:PTPRC)
+path(DO:"Parkinson's disease") -| p(HGNC:RPS6, pmod(Ph))
+UNSET MeSHAnatomy
+UNSET Cohort
+
+
+
+
+SET Support = "The frequency of GZMB-expressing cells was selectively enhanced only in TEM and TEMRA of iPD vs HC."
+SET Cohort = "Validation Cohort"
+SET Cell = {"effector memory CD8-positive, alpha-beta T cell", "effector memory CD8-positive, alpha-beta T cell, terminally differentiated"}
+path(DO:"Parkinson's disease") pos r(HGNC:GZMB)
+
+SET Support = "In contrast, the frequency of GZMK expressing cells was reduced in TEM and TEMRA (Fig. 5h)."
+path(DO:"Parkinson's disease") pos r(HGNC:GZMK)
+UNSET Cell
+
+SET Support = "Although the frequency of PRF1- expressing cells was not significantly changed in CD8 subsets, the MFI of PRF1 still showed a trend to be augmented in iPD vs HC among total CD8 T cells, TEM and TEMRA (Fig. 5l)."
+SET Cell = {"CD8-positive, alpha-beta T cell", "central memory CD8-positive, alpha-beta T cell", "effector memory CD8-positive, alpha-beta T cell", "effector memory CD8-positive, alpha-beta T cell, terminally differentiated"}
+path(DO:"Parkinson's disease") pos r(HGNC:PRF1)
+UNSET Cell
+
+SET Support = "As expected, a higher expression of CCR7, CD27, CD28, IL7R and SELL/CD62L was observed in CD8 Tn and TCM compared with the later-differentiated ones (i.e., CD8 TEM and TEMRA) (Fig. 6c)."
+SET Cell = {"CD8-positive, alpha-beta T cell", "central memory CD8-positive, alpha-beta T cell"}
+path(DO:"Parkinson's disease") pos r(HGNC:CCR7)
+path(DO:"Parkinson's disease") pos r(HGNC:CD27)
+path(DO:"Parkinson's disease") pos r(HGNC:CD28)
+path(DO:"Parkinson's disease") pos r(HGNC:IL7R)
+path(DO:"Parkinson's disease") pos r(HGNC:SELL)
+UNSET Cell
+
+
+SET Support = "THEMIS was among the most upregulated genes in CD8 TEMRA of iPD (Fig. 6j)."
+SET Cell = {"effector memory CD8-positive, alpha-beta T cell, terminally differentiated"}
+path(DO:"Parkinson's disease") pos r(HGNC:THEMIS)
+
+
+SET Support = "Concurrently, several genes, critically involving in the mRNA deadenylation-dependent degradation (enrichment P = 7.63E-8 among downregulated genes, Fisher’s exact test, GO process), such as CNOT6L, ZFP36 and ZFP36L2, were substantially downregulated in CD8 TEMRA of iPD vs HC (Fig. 6J, Supplementary Fig. 6E). "
+path(DO:"Parkinson's disease") neg r(HGNC:CNOT6L)
+path(DO:"Parkinson's disease") neg r(HGNC:ZFP36)
+path(DO:"Parkinson's disease") neg r(HGNC:ZFP36L2)
+UNSET Cell
+
+
+SET Support = "The analysis of differentially-expressed genes (DEG) in iPD vs HC further demonstrated that the genes involved in NK-mediated cytotoxicity, such as GZMB, PRF1 and FCGR3A, were among the most upregulated ones in C1(Fig. 6p)."
+SET Cluster = "C1"                  
+path(DO:"Parkinson's disease") pos r(HGNC:GZMB)
+path(DO:"Parkinson's disease") pos r(HGNC:PRF1)
+path(DO:"Parkinson's disease") pos r(HGNC:FCGR3A)
+UNSET Cluster
+
+
+SET Support = "Several MHC type II molecules (e.g., HLA-DRB1, HLA-DQA1 and HLA-DQB1), known CD8 T-cell activation markers as well as another NK cytotoxic effector molecule (KLRD1) and leukocyte transendothelial migration and adhesion molecules (ITGB2 and ITGAL) were upregulated in C0 and, to a lesser extent in C1, of CD8 TEMRA (Fig. 6p). Together, these scRNA-seq data support that the cytotoxic pathways are enhanced in CD8 TEMRA from early-to-mid stage iPD vs HC. Similar pathways enriched for the upregulated genes in iPD vs HC were observed in CD8 TEM (Supplementary Fig. 6G–I)."
+SET Cluster = "C0"
+SET Cell = {"effector memory CD8-positive, alpha-beta T cell, terminally differentiated"}
+path(DO:"Parkinson's disease") pos r(HGNC:"HLA-DRB1")
+path(DO:"Parkinson's disease") pos r(HGNC:"HLA-DQA1")
+path(DO:"Parkinson's disease") pos r(HGNC:"HLA-DQB1")
+path(DO:"Parkinson's disease") pos a(CELL:"activated CD8-positive, alpha-beta T cell")
+path(DO:"Parkinson's disease") pos r(HGNC:KLRD1)
+path(DO:"Parkinson's disease") pos r(HGNC:ITGB2)
+path(DO:"Parkinson's disease") pos r(HGNC:ITGAL)
+UNSET Cluster
+UNSET Cell
+
+SET Cell = "effector memory CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") pos r(HGNC:"HLA-DRB1")
+path(DO:"Parkinson's disease") pos r(HGNC:"HLA-DQA1")
+path(DO:"Parkinson's disease") pos r(HGNC:"HLA-DQB1")
+path(DO:"Parkinson's disease") pos r(HGNC:KLRD1)
+path(DO:"Parkinson's disease") pos r(HGNC:ITGB2)
+path(DO:"Parkinson's disease") pos r(HGNC:ITGAL)
+UNSET Cell
+
+
+SET Support = "Our volcano plot (Supplementary Fig. 6G) showed that, AOAH (acyloxyacyl hydrolase), a lysosomal enzyme known to detoxify LPS64 and several established cytotoxic molecules (GZMH, NKG7 and KLRG1), were substantially upregulated in CD8 TEM of iPD vs HC."
+path(DO:"Parkinson's disease") pos r(HGNC:AOAH)
+path(DO:"Parkinson's disease") pos r(HGNC:GZMH)
+path(DO:"Parkinson's disease") pos r(HGNC:NKG7)
+path(DO:"Parkinson's disease") pos r(HGNC:KLRG1)
+
+SET Support = "C0 expressed high levels of both cytotoxic molecules (GZMB, GZMH and GNLY) and the terminal-differentiation-related transcription factor ZEB2, indicative of a more terminally-differentiated status (Supplementary Fig. 6K)."
+SET Cluster = "C0"
+path(DO:"Parkinson's disease") pos r(HGNC:GZMB)
+path(DO:"Parkinson's disease") pos r(HGNC:GZMH)
+path(DO:"Parkinson's disease") pos r(HGNC:GNLY)
+path(DO:"Parkinson's disease") pos r(HGNC:ZEB2)
+UNSET Cluster
+
+
+SET Support = "C2 showed an expression profile reminiscent of NK-like cells (including KLRC2, KLRC3, TYROBP/DAP12, LYN and IKZF2/HELIOS)."
+SET Cluster = "C2"
+path(DO:"Parkinson's disease") pos r(HGNC:KLRC2)
+path(DO:"Parkinson's disease") pos r(HGNC:KLRC3)
+path(DO:"Parkinson's disease") pos r(HGNC:TYROBP)
+path(DO:"Parkinson's disease") pos r(HGNC:LYN)
+path(DO:"Parkinson's disease") pos r(HGNC:IKZF2)
+UNSET Cluster
+
+
+SET Support = "TGFB1 and its downstream signaling molecules, such as SMAD7, SKI and SKIL, which inhibit the expression of CD8 key effector molecules68, were all substantially downregulated in all the clusters of CD8 TEM (Supplementary Fig. 6M)."
+SET Cell = "effector memory CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") neg r(HGNC:SMAD7)
+path(DO:"Parkinson's disease") neg r(HGNC:SKI)
+path(DO:"Parkinson's disease") neg r(HGNC:SKIL)
+
+
+SET Support = "Concomitantly, prosurvival or anti-apoptotic genes such as LMNA, GADD45B and BCL2 were downregulated, indicative of more short-lived CD8 TEM in iPD(Supplementary Fig. 6M). "
+path(DO:"Parkinson's disease") neg r(HGNC:LMNA)
+path(DO:"Parkinson's disease") neg r(HGNC:GADD45B)
+path(DO:"Parkinson's disease") neg r(HGNC:BCL2)
+UNSET Cell
+
+
+SET Support = "The more-active cluster C0 was characterized by high levels of cytotoxic or proinflammatory effector molecules (e.g., GZMA and CCL5), while the resting cluster C1 was devoid of the expression of those effector molecules."
+SET Cluster = "C0"
+path(DO:"Parkinson's disease") pos r(HGNC:GZMA)
+path(DO:"Parkinson's disease") pos r(HGNC:CCL5)
+
+
+SET Support = "The integrin ITGA4,known to have a higher expression in CD8 TEM compared to TCM, was highly expressed in C0 (Fig. 7f)."
+path(DO:"Parkinson's disease") pos r(HGNC:ITGA4)
+UNSET Cluster
+
+
+SET Support = "The less-active C1 also expressed the TCR inhibitory docking adapter (GAB2) and the transcription factor KLF7 that is highly expressed in CD8 Tn (Fig. 7f)."
+SET Cluster = "C1"
+SET Cell = "CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") pos r(HGNC:GAB2)
+path(DO:"Parkinson's disease") pos r(HGNC:KLF7)
+UNSET Cell
+
+
+SET Support = "Moreover, C1 overexpressed the antigen-specific memory T-cell marker CD40LG in iPD vs HC (Fig. 7f), again indicative of C1 as a quiescent TCM subset."
+path(DO:"Parkinson's disease") pos r(HGNC:CD40LG)     
+
+
+SET Support = "Meanwhile, MAP3K1/MEKK1, the negative regulator of virus-specific CD8T cells, was mainly expressed in C1, especially for iPD (Fig. 7f)."
+path(DO:"Parkinson's disease") pos r(HGNC:MAP3K1) 
+UNSET Cluster
+
+
+SET Support = "Meanwhile, THEMIS was upregulated in both clusters of CD8 TCM of iPD (Supplementary Fig. 7A)."
+SET Cluster = {"C0", "C1"}
+SET Cell = "central memory CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") pos r(HGNC:THEMIS)
+UNSET Cell
+UNSET Cluster
+
+
+SET Support = "Several critical transcription factors (ID3, LEF1 and ETS1) that favor more the memory T-cell development were also upregulated (Fig. 7f, g, Supplementary Fig. 7A)."
+path(DO:"Parkinson's disease") pos r(HGNC:ID3)
+path(DO:"Parkinson's disease") pos r(HGNC:LEF1)
+path(DO:"Parkinson's disease") pos r(HGNC:ETS1)
+
+
+SET Support = "Furthermore, our DEG analysis showed that three out of five somatic linker histone H1 family genes (HIST1H1C/H1.2, HIST1H1D/H1.3 and HIST1H1E/H1.4) 75 and several other histone genes showed a substantial upregulation in CD8 TCM of iPD (Fig. 7g)."
+path(DO:"Parkinson's disease") pos r(HGNC:HIST1H1C)
+path(DO:"Parkinson's disease") pos r(HGNC:HIST1H1D)
+path(DO:"Parkinson's disease") pos r(HGNC:HIST1H1E)
+
+
+SET Support = "The volcano plot shows that the early-differentiation transcription factor LEF174 was among the most highly-upregulated genes in total CD8 Tn of iPD vs HC (Supplementary Fig. 7C)."
+SET Cell = "CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") pos r(HGNC:LEF1)
+UNSET Cell
+
+
+SET Support = "The pathway enrichment analysis revealed that RUNX1-regulated transcription related to myeloid differentiation was ranked top (odd ratio of 84.68, P-value = 4.71E-4) (Supplementary Fig. 7D)."
+SET Cell = "CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") pos bp(FIXME:"RUNX1-regulated transcription related to myeloid differentiation")
+
+
+SET Support = "More precisely, RUNX1 and RUNX2, reported to favor CD8 terminal differentiation78, were upregulated in CD8 Tn of iPD vs HC (Supplementary Fig. 7E, "
+path(DO:"Parkinson's disease") pos r(HGNC:RUNX1)
+path(DO:"Parkinson's disease") pos r(HGNC:RUNX2)
+
+
+SET Support = "Concurrently, RUNX3, known to suppress the expression of both RUNX1 and RUNX2 genes and terminal differentiation79, was slightly reduced in CD8 Tn (Supplementary Fig. 7F)."
+path(DO:"Parkinson's disease") neg r(HGNC:RUNX3)
+p(HGNC:RUNX3) -| p(HGNC:RUNX1)
+p(HGNC:RUNX3) -| p(HGNC:RUNX2)
+
+
+SET Support = "TCR signaling was also among the top-ranked pathways enriched for upregulated genes in CD8 Tn of iPD vs HC (Supplementary Fig. 7D)."
+path(DO:"Parkinson's disease") pos bp(GO:"T cell receptor signaling pathway")
+UNSET Cell
+
+SET Support = "Our clustering analysis identified two clusters in CD8 Tn (Supplementary Fig. 7G). C0, the main cluster (>95% of CD8 Tn), expressed RUNX2, while C1 expressed the effector molecule CCL5 and more abundantly the other two markers (e.g., FYN and ITGB1/CD29) that are highly expressed in memory CD8 T cells relative to CD8 Tn"
+SET Cell = "CD8-positive, alpha-beta T cell"
+SET Cluster = "C0"
+path(DO:"Parkinson's disease") pos r(HGNC:RUNX2)
+UNSET Cluster
+UNSET Cell
+SET Cluster = "C1"
+SET Cell = "central memory CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") pos r(HGNC:CCL5) 
+path(DO:"Parkinson's disease") pos r(HGNC:ITGB1)
+path(DO:"Parkinson's disease") pos r(HGNC:FYN)
+UNSET Cluster
+UNSET Cell
+
+SET Support = "The DEG analysis within different clusters also showed that LEF1 and THEMIS were upregulated in CD8 Tn of iPD vs HC."
+SET Cell = "CD8-positive, alpha-beta T cell"
+SET Technique = "differentially-expressed gene analysis"
+path(DO:"Parkinson's disease") pos r(HGNC:LEF1)
+path(DO:"Parkinson's disease") pos r(HGNC:THEMIS)
+UNSET Technique
+UNSET Cell
+
+SET Support = "Moreover, similar to the scenario in other CD8 subsets, several members of the linker histone H1 family genes showed a substantial increase in both clusters of CD8 Tn, while CNOT6L was still among the most downregulated genes (Supplementary Fig. 7H)."
+SET Cluster = {"C0", "C1"}
+SET Cell = "CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") pos r(HGNC:HIST1H1C)
+path(DO:"Parkinson's disease") pos r(HGNC:HIST1H1D)
+path(DO:"Parkinson's disease") pos r(HGNC:HIST1H1E)
+path(DO:"Parkinson's disease") neg r(HGNC:CNOT6L)
+UNSET Cell
+UNSET Cluster
+UNSET Cohort
+UNSET Species
+UNSET MeSHDisease
+UNSET Section
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Citation

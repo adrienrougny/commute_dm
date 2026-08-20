@@ -1,0 +1,157 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "33257876.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causlitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE TAX AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {".."}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL  "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Nat Neurosci. 2021 Feb;24(2):168-175. doi: 10.1038/s41593-020-00758-5. ", "33257876"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+
+SET Species = "9606"
+
+SET Support = "Clinically documented COVID-19-associated neurological alterations included impaired consciousness (n=5), intraventricular hemorrhage (n=2), headache (n=2) and behavioral changes (n=2); acute cerebral ischemia was reported for 2 individuals, while neuropathological postmortem workup revealed acute infarcts in 6 individuals (Supplementary Table 2)."
+
+path(DO:"COVID-19") pos path(HP:"Reduced consciousness/confusion")
+path(DO:"COVID-19") pos path(HP:"Intraventricular hemorrhage")
+path(DO:"COVID-19") pos path(MESH:Headache)
+path(DO:"COVID-19") pos path(HP:"Behavioral abnormality")
+path(DO:"COVID-19") pos path(HP:"Cerebral ischemia")
+path(DO:"COVID-19") pos path(MESH:Infarction)
+
+SET Support = "Coexisting conditions included diabetes mellitus (n=4), hypertension (n=21), cardiovascular disease (n=9), hyperlipidemia (n=2), chronic kidney diseasechronic kidney disease (n=2), prior stroke (n=6) and dementia (n=5) (Supplementary Table 1)."
+
+path(DO:"COVID-19") -- path(DO:"diabetes mellitus")
+path(DO:"COVID-19") -- path(DO:hypertension)
+path(DO:"COVID-19") -- path(MESH:"Cardiovascular Diseases")
+path(DO:"COVID-19") -- path(MESH:Hyperlipidemias)
+path(DO:"COVID-19") -- path(DO:"chronic kidney disease")
+path(DO:"COVID-19") -- path(MESH:Stroke)
+path(DO:"COVID-19") -- path(DO:dementia)
+
+SET Support = "Correspondingly, ACE2 was detectable in olfactory mucosa by means of immunohistochemistry, while we found no reliable ACE2 immunoreactivity in the parenchyma of the CNS, namely, in the olfactory bulb and medulla oblongata (Supplementary Fig. 1)."
+
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = "Olfactory Mucosa"
+path(DO:"COVID-19") -> p(HGNC:ACE2)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+
+
+SET Support = "In the CNS, we found strong upregulation of human leukocyte antigen (HLA)-DR on microglia/macrophages, which were often arranged in so- called microglial nodules, in 13 of 25 individuals analyzed (Supplementary Table 2 and Supplementary Fig. 4b–f)."
+
+SET MeSHAnatomy = {"Central Nervous System", "Microglia"}
+path(DO:"COVID-19") -> surf(complex(GO:"MHC class II protein complex"))
+UNSET MeSHAnatomy
+
+SET Support = "A correlate of this HLA-DR-positive, presumably myeloid-driven inflammatory response was found in the CSF, where levels of inflammatory mediators such as interleukin (IL)-6, IL-18, CC-chemokine ligand 2 (CCL2) and soluble intercellular adhesion molecule-1 (sICAM-1) were found to be increased (Supplementary Fig. 4a)30."
+
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"COVID-19") -> complex(GO:"MHC class II protein complex")
+path(DO:"COVID-19") -> bp(GO:"inflammatory response")
+path(DO:"COVID-19") pos p(HGNC:IL6)
+path(DO:"COVID-19") pos p(HGNC:IL18)
+path(DO:"COVID-19") pos p(HGNC:CCL2)
+path(DO:"COVID-19") pos p(HGNC:ICAM1)
+UNSET MeSHAnatomy
+
+SET Support = "In line with recent clinical data demonstrating thromboembolic CNS events in a few individuals with COVID-19 (ref. 31), we found in 18% of the 33 individuals investigated (n=6 of 33) a histopathological correlate of microthrombosis and subsequent acute territorial brain infarcts (Fig. 6a–c and Supplementary Table 2)."
+
+SET Disease = "COVID-19"
+SET BioAssay = "immunofluorescent labeling"
+path(DO:"COVID-19") -> path(MESH:Thromboembolism)
+path(DO:"COVID-19") -> path(DO:"brain infarction")
+UNSET BioAssay
+UNSET Disease
+
+SET Support = "As shown for the CNS, microthromboembolic events were also detectable in the olfactory mucosa in one individual."
+
+SET MeSHAnatomy = "Olfactory Mucosa"
+path(DO:"COVID-19") -> path(MESH:Thromboembolism)
+UNSET MeSHAnatomy
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Species
+UNSET Section
+UNSET Citation

@@ -11,11 +11,11 @@ the **interface** of proteins shared across the collections, then runs **gene-se
 (GOAT)** and intersection analyses against bulk RNA-seq DE results, and renders new
 CellDesigner maps of the interface subgraphs.
 
-**The AD knowledge graph is an ordinary CellDesigner collection.** `2_10` exports its
+**The AD knowledge graph is an ordinary CellDesigner collection.** `2_01` exports its
 influence-graph projection to one CellDesigner file and imports that file as `AD_KG_CD_AF`, so
 every analysis sees three activity-flow CellDesigner collections — `COVID_DM_CD_AF`,
-`PD_DM_CD_AF`, `AD_KG_CD_AF` — and no BEL. Only `2_10` (through `bel_export.py` and
-`bel_terms.py`) knows the AD side was ever BEL.
+`PD_DM_CD_AF`, `AD_KG_CD_AF` — and no BEL. Only `2_01` (through `bel_export.py` and
+`bel2cd.py`) knows the AD side was ever BEL.
 
 The Python package (`src/commute_dm`) is the library; `scripts/main_analysis/*.ipynb` are the
 numbered, ordered driver notebooks. Outputs land under `data/`.
@@ -23,11 +23,13 @@ numbered, ordered driver notebooks. Outputs land under `data/`.
 ## Environment & tooling
 
 - Managed with **`uv`** (`uv.lock`, `pyproject.toml`); Python ≥3.10.
-- Four core deps are **local editable installs** at `/home/rougny/code/{momapy,
-  momapy_kb,fieldz_kb,pylpg}` (see `[tool.uv.sources]`). These are the heart of the system —
-  `momapy` (disease-map data model + CellDesigner read/write + SKIA rendering), `momapy_kb`
-  (Neo4j-backed LPG sessions over momapy objects), `fieldz_kb`/`pylpg` (the LPG node-class
-  machinery). These paths have gone missing in past checkouts (the full
+- Five core deps are **local editable installs** at `/home/rougny/code/{momapy,
+  momapy_kb,fieldz_kb,pylpg,momapy_bel}` (see `[tool.uv.sources]`). These are the heart of the
+  system — `momapy` (disease-map data model + CellDesigner read/write + SKIA rendering),
+  `momapy_kb` (Neo4j-backed LPG sessions over momapy objects), `fieldz_kb`/`pylpg` (the LPG
+  node-class machinery), `momapy_bel` (the BEL data model the KG is loaded into, and its
+  `BELWriter`). `momapy_bel` is a **runtime** dependency now, not a dev one, and it must be the
+  version whose abundances take a tuple of `variants` (two AD proteins carry two `var()`s). These paths have gone missing in past checkouts (the full
   `momapy_kb.lpg.backends.neo4j` import would then fail) — if that recurs, query Neo4j directly
   with the `neo4j` driver as a fallback (DB is `bolt://localhost:7687`).
 - **Interpreters: Claude uses `.venv-sandbox`, the user uses `.venv`.** When *you* (Claude) run
@@ -88,19 +90,26 @@ store; afterwards any notebook can be opened standalone.
   CellDesigner maps leaves a *second* `BQBiol IS` node, so on a re-run against an already-loaded
   DB the MERGE yields two rows and every `CREATE` under it silently runs twice. A clean run never
   hits it (BEL is annotated before the maps are loaded); a re-run always would.
-- `2_10_make_ad_kg_cd_af_collection` — **exports the AD BEL KG as an ordinary CellDesigner
-  collection**, `AD_KG_CD_AF`, and is the only importer of `bel_export.py`. It builds the map
-  (~2 s), reads the annotations off the BEL nodes, renumbers, writes one ~16 MB file, reads it
-  back and checks the four identity invariants, then imports it.
-  Three things it decides, all measured in the notebook: **`act(X)` and `X` are one species**
-  (the projection has no edge between them, so keeping them apart severs 6889 upstream→downstream
-  2-hop paths that 3 hops cannot recover; the price is that X carries an active border whenever
-  BEL asserts any activity of it); **species carrying no signed modulation are dropped** (1228 of
-  3979 projected nodes — nothing walks or draws them); and **some BEL terms merge**, because
-  CellDesigner does not distinguish `bp` from `path`, `m` from `r`, two `ma()` codes of one
-  activity, or whitespace variants of one `var()` (107 groups; none is an interface protein).
+- `2_01_make_ad_kg_cd_af_collection` — **exports the AD BEL KG as an ordinary CellDesigner
+  collection**, `AD_KG_CD_AF`, and is the only importer of `bel_export.py`. Ten cells, doing
+  nothing but the work: build the map (~2 s), read the annotations off the BEL nodes, renumber,
+  write one ~16 MB file, seed the integration cache, import. **No counts, no prints, no guard, no
+  read-back check, no post-import assertions** — those were verified once and are recorded here
+  instead. It runs *before* `2_05`, which is why it is `2_01`.
+  Three things it decides: **`act(X)` and `X` are one species** (the projection has no edge
+  between them, so keeping them apart severs 6889 upstream→downstream 2-hop paths that 3 hops
+  cannot recover; the price is that X carries an active border whenever BEL asserts any activity
+  of it); **species carrying no signed modulation are dropped** (1228 of 3979 projected nodes —
+  nothing walks or draws them); and **some BEL terms merge**, because CellDesigner does not
+  distinguish `bp` from `path`, `m` from `r`, two `ma()` codes of one activity, or whitespace
+  variants of one `var()` (107 groups; none is an interface protein).
   Result: 2418 species, 1206 templates, 4631 modulations, 5 compartments, 779 subunits, 778
-  UniProt ids on 954 annotated species.
+  UniProt ids on 954 annotated species. The written file round-trips: read back, it has the same
+  counts and the same 778 UniProt ids.
+  **The notebook no longer runs `check_identity_invariants` or the round-trip read-back.** Both
+  still exist (`submaps.check_identity_invariants`) and are the first thing to reach for if the
+  file ever fails to read back with a `KeyError` — that is the failure mode they were written
+  for, and the invariants themselves are documented under `bel2cd.py` below.
   **The save spans calls, and that is the one thing to understand here.**
   `integration_mode="hash"` only ever deduplicated *within* one save call — `save_from_objects`
   built its `object_to_node` map fresh and never read the DB — so a second call would have
@@ -116,10 +125,23 @@ store; afterwards any notebook can be opened standalone.
   is a stored top-level species** (a stored one carries a compartment, a BEL one does not), so
   each is top-level in AD and a subunit in a COVID/PD complex — the case
   `submaps.make_submap_from_model_elements`' subunit promotion already covers.
-  It runs *after* `2_05` in numeric order, so re-run `2_05` afterwards to pick the collection up.
+  **The save is a plain `CREATE`, and nothing guards it any more**: running the last cell twice
+  gives two copies of the collection. Drop it first if re-importing —
+  `MATCH (c:Collection {name: 'AD_KG_CD_AF'})-[:HAS_ENTRY]->(e)-[:HAS_OBJ]->(m) DETACH DELETE c, e, m`
+  (that leaves the model elements behind, which the next import re-integrates).
+- `2_05_get_collections_statistics` — descriptive statistics of every collection. It builds its
+  BEL influence graphs by calling `bel_export.get_bel_influence_graph_projection` per collection
+  and wrapping the returned `BELModel` in a `networkx.MultiDiGraph` — **one node per momapy_bel
+  element, one edge per relation statement** — labelled with `bel_export.get_bel_string(element)`
+  and `type(element).__name__` (which is what the phenotype test compares against), and carrying
+  `element.id_`, the id of the database node the element was loaded from, which is all the
+  isolated-reason cell needs to go back to the DB. Node/edge counts: 3979/4910, **1832**/1760,
+  2255/1690, 2074/2145. Only the PD node count moved, from 1835: momapy_bel elements are
+  value-equal and its three `gmod(TestNS:"TestName")` genes merge with their plain genes, `gmod`
+  having no place in a `GeneAbundance`. They are a test artefact and AD has none.
 - `3_00_get_interfaces` — query proteins present across collections (joined on **UniProt RDF
   annotations**), write `data/.../interface/*.json`. The COVID×AD interface is **159** two-way and
-  **111** three-way, smaller than the 189/127 of the old BEL pairing because `2_10` drops the
+  **111** three-way, smaller than the 189/127 of the old BEL pairing because `2_01` drops the
   isolated nodes on purpose: those identifiers could never seed a walk, so after the drop the
   interface *is* the seedable set.
 - `4_00_make_goat_gene_lists` — turn raw RNA-seq DE CSVs (`data/rnaseq/`) into GOAT gene-list
@@ -204,7 +226,7 @@ the walk is a small edge-list query plus a BFS, the drawing material is loaded o
   subunit with no mapped nested glyph gets no alias; a duplicated compartment leaves a species
   pointing at a compartment id never written. They are not BEL-specific — they hold for
   stored-only data for free (hash integration made them true); the BEL side is the one that has to
-  *establish* them, in `bel_terms.py`. Verified against the untouched COVID→PD pipeline first,
+  *establish* them, in `bel2cd.py`. Verified against the untouched COVID→PD pipeline first,
   before being trusted on BEL data.
 - **A selected species that a selected complex also holds as a subunit is promoted to its own
   object**, at the top of `make_submap_from_model_elements` — and this is a fix to a
@@ -225,8 +247,8 @@ the walk is a small edge-list query plus a BFS, the drawing material is loaded o
   a modulation endpoint" qualifier does not cover this: such a node enters a selection as a gate
   input or as an interface seed.)
 - `make_fitted_synthetic_layout` / `_measure` / `_wrap_label_text` live here, not in
-  `bel_terms`: `core` needs the first for every sub-map's synthetic central node, in both
-  pairings, and `bel_terms` is export-only. `bel_terms` imports them back; acyclic.
+  `bel2cd`: `core` needs the first for every sub-map's synthetic central node, in both
+  pairings, and `bel2cd` is export-only. `bel2cd` imports them back; acyclic.
 - `iter_subunits` / `iter_species_and_subunits` — `model.species` is top-level only, and a BEL
   sub-map keeps half its modifications and templates on complex members.
 - `LayoutModelMapping`'s forward dict is **equality-keyed** (so `count_mapping_entries` is a real
@@ -240,49 +262,64 @@ the walk is a small edge-list query plus a BFS, the drawing material is loaded o
   is not reusable across a merge; it recomputes every position and segment and fits the root
   layout, which is why the assembly does not call `set_fit` itself.
 
-### `bel_terms.py` — a BEL term as real activity-flow CellDesigner content
-`bel_export` imports `bel_terms`, never the reverse. **The BEL term graph is fully relational in
-Neo4j** — every sub-term (`pmod`, `var`, `frag`, `loc`, each complex member, each activity
-subject) is its own node reached by a typed `HAS__*` edge, and entity nodes carry `name` /
-`namespace` — so **nothing here parses a BEL string**. Four steps:
-- `load_bel_terms(session, names)` → `{node_id: BelTerm}` (two queries, <1 s, 5024 AD nodes,
-  3178 sub-term edges). `BelTerm` is `eq=False`: the graph is recursive and identity is what the
-  memo and the build context are keyed on. `BEL_TERM_NODE_CLASSES` resolves the concrete class
-  (pylpg labels a node with its class *and* every ancestor, so `labels(node)[0]` is
-  order-dependent); **exactly one** must match or it raises. The **double** underscore in
-  `HAS__*` excludes the sparse single-underscore statement route (`HAS_MEMBERS`,
-  `HAS_COMPONENTS`) and the `HAS_NODE` / `HAS_OBJ` plumbing. Edge types split into
-  `MEMBER_EDGE_TYPES` (complex/composite members **and** the activity subject),
-  `MODIFIER_EDGE_TYPES` and `OTHER_STRUCTURAL_EDGE_TYPES` (BEL *process* terms — translocations,
-  reactions — which are never projected, enumerated only so loading raises on an unseen type).
-- `describe_term(term, cache)` → `TermDescription` — pure, DB-free, unit-testable, memoised on
-  `id(term)`; raises on a cycle, an unmapped class and an unroutable modifier. `p(HGNC:"GDE1")` →
-  `GenericProtein("GDE1")`; `pmod(Ph,Y,18)` and `var("P, T, 212")` → `Modification` badges
-  (whitespace normalised, so `"P, S, 9" == "P,S,9"`); `var("K,670,N")` → `StructuralState("K670N")`;
-  ontology `pmod(GO:…)` → `StructuralState`; `frag(...)` → `TruncatedProtein` +
-  `TruncatedProteinTemplate` + a `StructuralState`; `act(...)` → the **subject's own class** with
-  `active=True` and the `ma()` code dropped; `composite(...)` → `Complex` +
-  `StructuralState("composite")`; an unnamed complex is named by joining its members' names.
-  Modifiers are routed by the target class's *capabilities*; a class with no container for one
-  (a `Gene`, an `Unknown`) folds it into the **species** name as `NAME [x|y]` — never into the
-  **template** name, or one protein would declare N `<protein>` entries.
-- **Nothing is ever invented for a sub-term that says nothing.** `_describe_modifier` returns a
-  `None` payload and the caller records no state: a `frag("?")` (range unknown, no descriptor)
-  still switches the class to `TruncatedProtein`, which is what says "a fragment of", but adds no
-  `StructuralState("?")` on top — the placeholder was noise, and it turned up as
+### `bel2cd.py` — a momapy_bel element as real activity-flow CellDesigner content
+`bel_export` imports `bel2cd`, never the reverse. It knows nothing about Neo4j and nothing about
+BEL strings: everything is read off the elements' fields — `modifications`, `variants`,
+`fragment`, `location`, `members`, `abundance`. Three steps:
+- `make_species_fields(elements)` → `{element: fields}`, where `fields` is a **plain dict** —
+  `species_class`, `template_class`, `template_name`, `species_name`, `active`,
+  `compartment_name`, `residue_states`, `structural_states`. It exists for one reason: a species is
+  frozen and its template must already declare every residue *any* proteoform of that protein
+  carries (invariant (b)), so nothing can be built until every element has been read. Hence the
+  fields carry residue **names**, not residue objects, and a template **name**, not a template.
+  Pure, DB-free, memoised on the element itself, and it covers the given elements **and** every
+  element reached through their members. The **active set is derived here**, from the activities
+  among the elements: an `Activity` takes its subject's fields whole, `ma()` code dropped, so
+  `act(X)` and `X` give one species. Measured on all four KGs, every activity subject is reachable
+  from a projected activity, so there is nothing to thread in from outside.
+  The translation itself: `ProteinAbundance("GDE1")` → `GenericProtein("GDE1")`; `pmod(Ph,Y,18)`
+  and `var("P, T, 212")` → badges (whitespace normalised, so `"P, S, 9" == "P,S,9"`);
+  `var("K,670,N")` → `StructuralState("K670N")`; a `ProteinModification` **with a namespace** is an
+  ontology pmod (`pmod(GO:…)`) → `StructuralState`, one without is a code → badge, so the split is
+  a field, not a regex; `fragment` → `TruncatedProtein` + `TruncatedProteinTemplate` + a
+  `StructuralState`; `CompositeAbundance` → `Complex` + `StructuralState("composite")`; an unnamed
+  complex is named by joining its members' names. Modifiers are routed by the target class's
+  *capabilities*; a class with no container for one (a `Gene`, an `Unknown`) folds it into the
+  **species** name as `NAME [x|y]` — never into the **template** name, or one protein would declare
+  N `<protein>` entries.
+- **A `var()` can be a modification, and it is told apart from a substitution by which field holds
+  the number.** BEL1-era curation writes a `pmod` inside a `var()`, so `var(P,S,396)` is
+  phosphorylation of S396 — `(code, amino acid, position)` — while `var(K,670,N)` is a substitution
+  — `(amino acid, position, amino acid)`. The letters cannot decide it (`P` is both proline and
+  phosphorylation; `A` alanine and acetylation), only the position of the numeric field can, and
+  `_VARIANT_MODIFICATION` is tried before `_VARIANT_SUBSTITUTION`.
+  `VARIANT_CODE_TO_MODIFICATION_STATE` holds the spec's `bel1_migration.protein_modifications`
+  codes that have a CellDesigner state (`P`/`Ph`, `A`/`Ac`, `M`/`Me`, `U`/`Ub`, `G`/`Glyco`,
+  `H`/`Hy`); `F`, `R` and `S` are deliberately absent, which also keeps `S` free to be serine. A
+  code outside the table is not read as a modification at all, so it falls through to the
+  substitution and verbatim paths exactly as before.
+  The evidence that this reading is right, measured over the four KGs: the first field of the 90
+  modification-shaped variants is only ever `P`/`Ph`/`A`/`M`/`U`; the residue of a `P`/`Ph` one is
+  only ever S, T or Y; `Ph` is not an amino acid at all; and **the same site is written both ways**
+  — MAPT S202/S235/S262/S356/S422/T212, SNCA S129, GSK3B S9, GSK3A S21, IRS1 S312 each carry a
+  `pmod(Ph,…)` node *and* a `var(P,…)` node. Before the table, the six non-`P` ones (HINFP K5/K12
+  and H3F3A K14 acetylation, H3F3A K4 methylation, BACE1 L501/W280 ubiquitination) were drawn as
+  the literal text `A,K,12`. Adding them changes no count — 2418/1206/4631/5, 954 annotated, 778
+  UniProt, 779 subunits are unchanged — only 6 structural states become 6 modification badges.
+- **Nothing is ever invented for a sub-term that says nothing.** A `frag("?")` (range unknown, no
+  descriptor) still switches the class to `TruncatedProtein`, which is what says "a fragment of",
+  but adds no `StructuralState("?")` on top — the placeholder was noise, and it turned up as
   `<structuralState structuralState="?">` in the output. `var("?")` and `var("p.?")` are the
   opposite case and are **kept verbatim**: there `"?"` is the value BEL states, and it is the only
   thing telling that proteoform apart from the plain protein. Same principle as the nameless
-  modification residue above.
-- `make_build_context(terms, active_term_ids)` — three passes, in this order, because a species
-  is frozen and its template cannot be patched afterwards: describe every term (roots **and**
-  recursive members) → accumulate `{(template class, name): {residue names}}` and build one
-  template per key → **re-derive** the residue lookup from that object. Nothing is interned
-  against a source map any more: the export is standalone, and identity with the stored
-  collections' elements is the *save's* job (hash integration with a seeded `object_key_to_node`).
-  `active_term_ids` comes from `collect_activity_subject_term_ids` and is what makes `act(X)` and
-  `X` describe identically — pass **every loaded term**, not just the projected roots, since a
-  protein is drawn active whenever BEL asserts any activity of it.
+  modification residue below.
+- `make_templates(species_fields)` → `{(template class, name): template}` and
+  `make_compartments(species_fields, root_name)` → `({location name: compartment}, root)` — the
+  shared objects, interned by value, carrying invariants (a) and (d). Nothing is interned against a
+  source map: the export is standalone, and identity with the stored collections' elements is the
+  *save's* job (hash integration with a seeded `object_key_to_node`). The residue objects are *not*
+  tabulated: `make_species` reads them off the template it is about to hand the species, which is
+  invariant (b) by construction.
 - `make_species` (always a **fresh object tree**) and `make_species_layouts` (measure, then build).
 
 **The four identity invariants** replace the old BEL-string naming invariant. Getting one wrong
@@ -299,9 +336,9 @@ baseline for a naive symbol-naming attempt was 12 of 20 maps.
   `name=None`, not a `"?"` — the writer omits the attribute and the reader reads `None` back, so
   the nameless residue survives the round trip. What must never be `None` is the **residue
   itself**: the writer would emit `residue=""` and the reader looks that up unguarded. Sort
-  residue names through `bel_terms._residue_sort_key`, since `None` does not compare with `str`.
+  residue names through `bel2cd._residue_sort_key`, since `None` does not compare with `str`.
 - **(c) a subunit object is never the same object as a top-level species** — `p(HGNC:"APP")` is
-  both a projected node and a member of several complexes, so memoising species by node id (the
+  both a projected element and a member of several complexes, so memoising species by element (the
   obvious way to get value-collapse) would make APP's own glyph disappear. Interning happens only
   at the top level, on the finished object, in `bel_export`.
   **This one is an in-memory property of the export and does not survive the save**: a top-level
@@ -311,13 +348,14 @@ baseline for a naive symbol-naming attempt was 12 of 20 maps.
   `make_submap_from_model_elements` promotes such a species to its own object per sub-map, before
   the checks run. **Never run `check_identity_invariants` on a source map**; it is a pre-write
   check for sub-maps.
-- **(d) one compartment object per `(collection, location)`, hanging off an undrawn per-collection
-  root.** The root is **not decorative**: `pd2af.utils._build_dot_graph` (`utils.py:339-346`) only
+- **(d) one compartment object per location, hanging off an undrawn root** (named after the
+  collections the projection was loaded from). The root is **not decorative**: `pd2af.utils._build_dot_graph` (`utils.py:339-346`) only
   attaches a compartment's dot cluster to the graph when `compartment.outside is not None` — there
   is no `else` — so a drawn compartment with `outside=None` gets an orphan cluster, its species
   never reach graphviz, and they keep their throwaway positions. (A real pd2af bug, worth
   reporting upstream; worked around here, so no pd2af change is needed.) The root also keeps a BEL
-  `nucleus` (`outside=AD_KG_BEL`) value-distinct from a stored one (`outside=default`), and
+  `nucleus` (`outside=AD_KG_BEL`, the root's name) value-distinct from a stored one
+  (`outside=default`), and
   therefore the species inside them too. 18 of the 84 BEL `loc()` names already exist as stored
   compartment names, so one sub-map can show two same-labelled boxes from different sources —
   that is the price of keeping them distinct.
@@ -328,7 +366,7 @@ Layout notes:
   template with a modification on that residue, so a species-local index would move every other
   proteoform's badge on read-back. The angle is `2π · residue.order / len(template residues)`, and
   the reader's exact forward transform is reproduced so `_writing.compute_cd_angle` inverts it
-  (verified to ~1e-6 rad over all 217 AD badges).
+  (verified to ~1e-6 rad over the AD badges, of which the map now has 212).
 - A subunit alias is emitted **only** when `mapping.get_child_layout_elements(subunit, complex)`
   returns a layout that is *also* in `complex_layout.layout_elements` — so each subunit needs both
   its own nested layout element and a mapping entry. (This refutes the old claim that "a subunit's
@@ -357,44 +395,81 @@ Layout notes:
   the 14 `HAS__GMOD` edges are a PD-only test artefact.)
 
 ### `bel_export.py` — the AD BEL KG as an exportable CellDesigner map
-**Only `2_10` imports it.** It loads the KG's influence-graph projection (the one `2_05` defines
-and documents — this module holds the executable copy of the queries) and
-`make_bel_map(nodes, terms, edges, drop_isolated_species=True)` →
-`(cd_map, species_by_node_id, node_id_species_pairs, stats)` turns it into a map of real
-activity-flow content via `bel_terms`. `2_10` writes that map to a file and imports the file, after
-which the KG *is* a CellDesigner collection and nothing else in the package knows it was ever BEL.
-- **`species_by_node_id` is many-to-one**, because top-level species are interned by value: two
-  `ma()` codes of one activity describe identically, as do whitespace-variant proteoforms — and so
-  do `act(p(X))` and `p(X)`, which is the point (§ `2_10` above). Measured on AD: 3979 projected
-  node ids → 3593 species before the isolated drop, 2418 after, over 2803 surviving node ids.
-- **`node_id_species_pairs` is every species built, subunits included**, which is what
-  `make_element_to_annotations` needs: a subunit is a per-occurrence object no `{node_id: species}`
-  map can recover, and **16 of the interface's UniProt identifiers are carried only by complex
-  members** (without them the two-way interface is 173 rather than 189).
-- `make_element_to_annotations(session, node_id_species_pairs)` →
-  `{species: frozenset[RDFAnnotation]}`. `queries.get_annotated_nodes(..., with_subunits=False)`
-  says whose annotations stand for a node — an activity's subject is followed, a complex's members
-  are not, since each is drawn as its own subunit species and annotated there — then one query
-  rebuilds the payloads exactly as `2_00` wrote them. Accumulated **by value**, so a top-level
-  species and a value-equal subunit share one entry, which is what the writer looks up.
+**Only `2_01` and `2_05` import it**, and it has **three public functions**:
+
+    projection = get_bel_influence_graph_projection(session, collection_names)  # -> BELModel
+    cd_map, element_to_annotations = make_cd_map_from_bel_influence_graph_projection(
+        session, collection_names, projection
+    )
+    label = get_bel_string(element)
+
+The projection is a `momapy_bel.core.BELModel`: **the relations are its statements**
+(`Increases`, `DirectlyIncreases`, `TranslatedTo`, `Decreases`, `DirectlyDecreases`,
+`Regulates`), and every projected element carrying none of them rides along as a bare
+abundance, because `2_05` counts isolated nodes. There is no node-id table and no separate term
+graph — the sub-terms are *nested in the elements* — but each element keeps the id of the node it
+was loaded from in `id_`, which is excluded from equality and is what lets `2_05` ask the DB about
+an element. `get_bel_string` is the `BELWriter` round trip, used as a label and as the sort key
+that keeps the glyph order (and so `renumber_ids`' numbering) stable: a complex's members are
+sorted by the writer, so the string is canonical.
+- **Elements are value-equal, so equal nodes become one element.** Measured over the four KGs,
+  the only merge is PD's three `gmod(TestNS:"TestName")` genes (§ `2_05` above). BEL equality is
+  *stricter* than the CellDesigner equality the export goes on to apply (which additionally merges
+  `act(X)` with `X`, `bp` with `path`, and whitespace variants of one `var()`), so nothing that
+  merges here could have stayed apart in the map.
+- **The loading raises rather than skips** — on a node whose labels match no known entity class,
+  on an unclassified `HAS__*` edge type, on an activity without exactly one subject. Silently
+  skipping is how the old influence-graph code rotted into a smaller graph than it claimed.
+- **`gmod()` is dropped**: `momapy_bel`'s `GeneAbundance` has no place for it, and the only ones
+  in the data are PD's three test artefacts. `var()` is *not* — `momapy_bel` takes a tuple of
+  `variants`, which two AD proteins need (`p(MGI:"App",var("D,23,N"),var("E,22,Q"))`).
+- Species are **interned by value** in the CD conversion: two `ma()` codes of one activity describe
+  identically, as do whitespace-variant proteoforms — and so do `act(p(X))` and `p(X)`, which is
+  the point (§ `2_01` above). AD: 3979 projected elements → 2418 species after the isolated drop.
+- **Every species built is recorded, subunits included**, which is what the annotations need: a
+  subunit is a per-occurrence object, and **16 of the interface's UniProt identifiers are carried
+  only by complex members** (without them the two-way interface is 173 rather than 189).
+- `_make_element_to_annotations` → `{species: frozenset[RDFAnnotation]}`, called at the end of
+  `make_cd_map_from_bel_influence_graph_projection`. **One query**, keyed on
+  `(element class, namespace, identifier)` — what a momapy_bel element knows about itself, and
+  what `2_00` keyed the annotations on; the class is part of the key because a `g(HGNC:"APP")` must
+  not pick up the protein's cross-references. An activity's subject is followed, a complex's
+  members are not, since each is drawn as its own subunit species and annotated there. Accumulated
+  **by value**, so a top-level species and a value-equal subunit share one entry, which is what the
+  writer looks up. Result: 954 annotated species, 778 UniProt ids.
 - `drop_isolated_species` runs **after** interning and after the modulations are built, so a
   protein isolated in its own right but wired through its activity form survives. A dropped species
   that belongs to a kept complex still appears as that complex's subunit.
-- `REGULATES` is dropped from both the map and the walk: it is unsigned, and
-  `submaps.SIGNED_MODULATION_CLASSES` excludes `Modulation`, so mapping it would give an edge
-  that is *walked but never drawn*. 2.6% of the AD KG's causal edges.
-- `Abundance` is split on the **`namespace` property** (not a regex on the BEL string) —
-  `a(CHEBI:…)` → `SimpleMolecule` (350 in AD), anything else → `Unknown` (77): MESH/CONSO/GO
-  abundances are proteins, aggregates and cellular components, not molecules. The rest of
-  `bel_terms.BEL_CLASS_TO_CD_CLASSES` selects the template class too, so an entry decides whether
-  a species declares a `<protein>` / `<gene>` / `<rna>`.
-- `PROJECTABLE_NODE_CLASSES` is what `load_bel_projection` validates against — a separate question
-  from what a node is *drawn* as (an `Activity` is projected but has no class of its own).
+- `REGULATES` **stays in the projection and is dropped from the map**: it is unsigned, and
+  `submaps.SIGNED_MODULATION_CLASSES` excludes `Modulation`, so mapping it would give an edge that
+  is *walked but never drawn* — but it is 2.6% of the AD KG's causal edges, which `2_05` counts,
+  so it is `BEL_RELATION_CLASS_TO_MODULATION_CLASS` (the map's table) that leaves it out, not
+  `BEL_RELATION_TYPE_TO_RELATION_CLASS` (the projection's).
+- `Abundance` is split on the **`namespace` field** — `a(CHEBI:…)` → `SimpleMolecule` (350 in AD),
+  anything else → `Unknown` (77): MESH/CONSO/GO abundances are proteins, aggregates and cellular
+  components, not molecules. The rest of `bel2cd.BEL_CLASS_TO_CD_CLASSES` selects the template
+  class too, so an entry decides whether a species declares a `<protein>` / `<gene>` / `<rna>`.
+- `PROJECTABLE_NODE_CLASSES`, `BEL_NODE_CLASS_TO_ELEMENT_CLASS` and the two relation tables are
+  the only vocabulary this module owns, being export decisions; the node classes and relation
+  types come from `bel_vocabulary.py`.
+- **Self-loops are kept in the projection** — it is what `2_05`'s statistics run on, and a filter
+  there would silently move a node's degree. The CD conversion drops them instead, where the reason
+  lives: pd2af's arc geometry needs two distinct endpoints, and interning creates species-level
+  self-loops (an `act(X) → X` relation) that no element-level filter could see anyway.
 - Accepted consequences: a fragmented gene yields two `<protein>` entries (GENERIC + TRUNCATED),
   which is idiomatic CellDesigner; a complex listing the same member twice loses the multiplicity
   to `frozenset[Species]` (`homomultimer` would be the fix, out of scope).
 - No global auto-layout: `make_auto_layout` (graphviz `dot`) does not finish on a graph this size.
   Glyphs get local, non-overlapping positions; the sub-maps of `4_10` lay out their own selections.
+
+### `bel_vocabulary.py` — the BEL vocabulary
+Constants only, importing nothing from the package: the node classes
+(`MOLECULAR_ENTITY_NODE_TYPES`, `PHENOTYPE_NODE_TYPES`, `REACTION_NODE_TYPES`, …), the relation
+types by family (`INFLUENCE_RELATIONSHIP_TYPES` and the four others, plus the two unions) and the
+`HAS__*` structural edge types (`MEMBER_EDGE_TYPES`, `MODIFIER_EDGE_TYPES`,
+`OTHER_STRUCTURAL_EDGE_TYPES`). **Every reader of a BEL graph takes its vocabulary from here** —
+`bel_export` and `2_05`, each binding the names it interpolates. `queries` is no longer one of
+them: no BEL node is queried by the analysis any more, so its BEL branch is gone.
 
 ### `queries.py` — Neo4j read helpers
 - `prewarm_session` **must be called** before hydrating CellDesigner objects from query results —
@@ -404,17 +479,11 @@ which the KG *is* a CellDesigner collection and nothing else in the package know
   which BEL nodes now carry too (`2_00`), so they answer for both kinds. `get_collections_for_nodes`
   is the exception: it traverses `(:CellDesignerMap)`, so it still returns `{}` for BEL nodes.
 - **`get_annotated_nodes(session, nodes, with_subunits)`** — "which nodes' annotations stand for
-  this node", and the one place the CellDesigner/BEL difference lives. A CellDesigner species is
-  always its own annotated node and reaches its subunits by `HAS_SUBUNIT` under `with_subunits`.
-  A BEL node's cross-references sit on the `:Protein` terms it merely *contains*, reached by
-  `bel_terms.MEMBER_EDGE_TYPES` (`HAS__PROTEIN`, `HAS__COMPLEX`, …), and the same distinction is
-  made: an **activity's subject is always followed** — `act(p(X))` is X in another form, as an
-  active CellDesigner species is still that species — while a **complex's or composite's members
-  are followed only under `with_subunits`**, exactly as `HAS_SUBUNIT` is. Verified on AD: every
-  `Activity` reaches its subject either way, `Complex`/`Composite` only under `with_subunits`, a
-  plain protein needs no traversal. The edge-type list is *repeated* here rather than imported so
-  `queries` depends on none of the BEL machinery — `bel_terms` is where the classification is
-  decided, and a new member edge type has to be added in both.
+  this node". CellDesigner-only: a species is always its own annotated node, which is what makes
+  the caller uniform, and reaches its subunits by `HAS_SUBUNIT` under `with_subunits`. The BEL
+  `HAS__*` branch it used to carry is gone with the BEL branch of the pipeline — the AD KG is a
+  CellDesigner collection by the time anything queries it, and the export reads its annotations by
+  `(class, namespace, identifier)` instead.
 - `get_nodes(session, element_ids)` — the bridge from the id-only traversal back to DB nodes, for
   the node-taking `gea` helpers.
 
@@ -457,7 +526,7 @@ Builds gene sets from node annotations, writes GMT, and runs the R `goat` packag
 writes from the HGNC dataset's `entrez_id`; the intersection analysis uses `hgnc.symbol`, because
 it matches the `symbol` column. `uniprot` is what the *interface* joins on and is used by neither.
 `make_gene_set_from_nodes` goes through `queries.get_annotated_nodes` rather than `get_subunits`,
-which is what makes a BEL node contribute the annotations of the entity terms it is built from.
+which is what lets a selection be widened to a species' subunits in one place.
 
 ### `utils.py` — IO/cypher helpers
 Directory (re)creation, CellDesigner XML annotation injection (`add_annotation_to_file`),
@@ -469,15 +538,15 @@ Directory (re)creation, CellDesigner XML annotation injection (`add_annotation_t
   style for consistency, but never interpolate untrusted input.
 - Collection names (`"COVID_DM_CD_AF"`, `"PD_DM_CD_AF"`, `"AD_KG_CD_AF"`, …) are referenced by
   string, but **only from the notebooks** — each defines the pairing it runs on in its parameter
-  cell and passes it in. The library holds no collection name at all: `2_10` names `AD_KG_BEL` and
+  cell and passes it in. The library holds no collection name at all: `2_01` names `AD_KG_BEL` and
   `AD_KG_CD_AF` in its parameter cell, `2_00` names the collections it imports.
 - `queries.get_annotations` / `get_subunits` / `get_ids_and_context` all `MATCH
   (node:ModelElement)`. BEL nodes used to carry `:BELModelElement` and **not** `:ModelElement`, so
   these returned nothing for them, silently — that is fixed at the source, in `2_00`, which now
   sets both labels. If a BEL query comes back empty for no reason, check the label is there before
   looking anywhere else. Note this only gets a node's *own* annotations: an `Activity` or `Complex`
-  has none, and `get_subunits` traverses `HAS_SUBUNIT`, which no BEL node has — use
-  `get_annotated_nodes` for the BEL `HAS__*` routes.
+  has none. Nothing in the analysis queries a BEL node any more: the AD KG is a CellDesigner
+  collection by then, and the export reads the BEL annotations itself.
 - The "201 shared species … none is a modulation endpoint" note in `submaps.py` / `core.py` needs
   the qualifier "**in either AF collection**": 3 of the 201 are endpoints of `PD_DM_CD`
   (process-description) modulations. The two AF collections also share 289 `SpeciesTemplate` nodes
@@ -488,7 +557,7 @@ Directory (re)creation, CellDesigner XML annotation injection (`add_annotation_t
   (`utils.py:339-346`, no `else`), so a drawn top-level compartment silently gets no box and its
   species keep their throwaway positions. Never exercised before, because the only stored root
   (`default`) is undrawn and gets no cluster at all. Worked around by the undrawn BEL root
-  compartment (`bel_terms` invariant (d)), so no `pd2af` change is needed — but it is a real bug
+  compartment (`bel2cd` invariant (d)), so no `pd2af` change is needed — but it is a real bug
   worth fixing upstream.
 - `5_00` and `6_00`/`6_10` were **not** updated for the changeover: `5_00` will hit a new
   `StopIteration` on the exported `Unknown` species and `6_00`'s intersection becomes 5-way. Both

@@ -1,0 +1,1051 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "https://doi.org/10.20944/preprints202003.0302.v1"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "Focusing on the Unfolded Protein Response and Autophagy Related \
+Pathways to Reposition Common Approved Drugs against COVID-19"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20200624.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://raw.githubusercontent.com/pharmacome/conso/f02c6ad4a4791a8ed45448513b9de8c8f1b00c87/external/mesh-names.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+# DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+# DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+# DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+# DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+# DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"preprints", "10.20944/preprints202003.0302.v1"}
+
+SET Support = "As of March 17th, 2020, the COVID-19 disease, caused by the SARS-CoV-2 virus (a.k.a 2019-nCoV), has become a pandemic with 179,111 confirmed cases and 7,426 deaths in more than 100 countries."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(DO:"COVID-19")
+
+SET Support = "Among those pathways, the Unfolded Protein Response (UPR) and Autophagy pathways are tightly interconnected and were shown to be essential for viral infection by multiple previous studies."
+bp(GOBP:"cellular response to unfolded protein") -- bp(PW:"cellular autophagy pathway")
+bp(GOBP:"cellular response to unfolded protein") -- path(DO:"viral infectious disease")
+bp(PW:"cellular autophagy pathway") -- path(DO:"viral infectious disease")
+
+SET Support = "Briefly, these two pathways are involved in the regulation of protein homeostasis, apoptosis, and play pivotal roles in the control of innate immunity, including the clearance of viral particles."
+bp(GOBP:"cellular response to unfolded protein") reg bp(MESH:"Proteostasis")
+bp(GOBP:"cellular response to unfolded protein") reg bp(MESHPP:"Apoptosis")
+bp(GOBP:"cellular response to unfolded protein") reg bp(GOBP:"innate immune response")
+bp(PW:"cellular autophagy pathway") reg bp(MESH:"Proteostasis")
+bp(PW:"cellular autophagy pathway") reg bp(MESHPP:"Apoptosis")
+bp(PW:"cellular autophagy pathway") reg bp(GOBP:"innate immune response")
+
+SET Support = "For example, recent work showed that the MERS-CoV virus induces reduced levels of the Beclin1 (BECN1) protein, which blocks the fusion of autophagosomes and lysosomes and the inhibition of the S-phase kinase-associated protein 2 (SKP2), an E3 ubiquitin ligase which promotes BECN1 degradation, enhances autophagy and reduces the replication of MERS-CoV up to 28,000-fold."
+SET Disease = "Middle East respiratory syndrome"
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -| p(HGNC:"BECN1")
+p(HGNC:"SKP2") -| bp(MESHPP:"Virus Replication")
+UNSET Disease
+p(HGNC:"BECN1") -> bp(GO:"autophagosome-lysosome fusion")
+p(HGNC:"BECN1") -| act(p(HGNC:"SKP2"))
+p(HGNC:"SKP2") isA p(ECCODE:"2.3.2.27")
+p(HGNC:"SKP2") -> deg(p(HGNC:"BECN1"))
+p(HGNC:"SKP2") -> bp(GOBP:"autophagy")
+
+SET Support = "In addition, viruses are also able to modify and use the UPR/Autophagy signaling networks to complete their life cycle (e.g., enter the host cell, produce large quantities of their viral proteins)."
+SET Disease = {"Middle East respiratory syndrome","Severe acute respiratory syndrome-related coronavirus", "COVID-19"}
+bp(GOBP:"cellular response to unfolded protein") -- bp(GOBP:"viral entry into host cell")
+bp(PW:"cellular autophagy pathway") -- bp(GOBP:"viral entry into host cell")
+UNSET Disease
+
+SET Support = "Based on these findings, we suggest that two additional pathways, which are linked to the UPR/Autophagy pathways, are important for the viral cycle of SARS-CoV-2: the NLRP3 inflammasome signaling pathway and the pro-apoptotic mitochondrial signaling pathway."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+bp(REACTOME:"The NLRP3 inflammasome") -- bp(GOBP:"viral life cycle")
+UNSET Disease
+
+SET Support = "Numerous genes on our list are directly implicated in the host cell immune response. Including, for instance, a large group of cytokines and their receptors (e.g., IL-3, IL-15, CXCL11, TNF, TNFRSF1A, CXCR3)."
+SET Disease = {"Severe acute respiratory syndrome-related coronavirus", "Severe acute respiratory syndrome coronavirus 2"}
+p(HGNC:"IL3") -- bp(GOBP:"immune response")
+p(HGNC:"IL15") -- bp(GOBP:"immune response")
+p(HGNC:"CXCL11") -- bp(GOBP:"immune response")
+p(HGNC:"TNF") -- bp(GOBP:"immune response")
+p(HGNC:"TNFRSF1A") -- bp(GOBP:"immune response")
+p(HGNC:"CXCR3") -- bp(GOBP:"immune response")
+
+SET Support = "Expectedly, we also found the ACE2 gene, which encodes a receptor, both used by the SARS-CoV and SARS-CoV-2 viruses to enter the host cell."
+p(HGNC:"ACE2") -- bp(GOBP:"viral entry into host cell")
+UNSET Disease
+
+SET Support = "Among the statistically enriched pathways (p < 0.05), our pathway enrichment analysis identified numerous signaling pathways involved in the immune response, in particular, the following pathways: “pattern recognition receptors signaling”, “interferon induction”, “inflammasome pathway”, which are directly implicated in the antiviral innate immune response."
+bp(GOBP:"pattern recognition receptor signaling pathway") -- bp(GOBP:"innate immune response")
+p(GFAM:"Interferons") -- bp(GOBP:"innate immune response")
+bp(REACTOME:"The NLRP3 inflammasome") -- bp(GOBP:"innate immune response")
+
+SET Support = "Also, among those statistically enriched pathways, we found the “endoplasmic reticulum stress pathway”, the “unfolded protein response signaling,” and the “phagosome maturation pathway”, thereby supporting the aforementioned link between the UPR pathway and coronaviruses infections."
+bp(GOBP:"cellular response to unfolded protein") -- bp(GOBP:"innate immune response")
+bp(GOBP:"phagosome maturation") -- bp(GOBP:"innate immune response")
+
+SET Support = "Then, our PPI analysis confirmed the putative role of “pattern recognition receptors signaling” and “inflammasome pathway” in coronavirus infections but also allowed us to connect these two immune pathways and UPR/autophagy signaling into a single molecular framework of the host cell viral infection."
+bp(GOBP:"pattern recognition receptor signaling pathway") -- path(MESHD:"Coronavirus Infections")
+bp(REACTOME:"The NLRP3 inflammasome") -- path(MESHD:"Coronavirus Infections")
+
+SET Support = "For instance, the NLRP3 inflammasome could be activated by the RIG-I-like and TLR4 receptors-mediated signaling but is also modulated by the autophagy flux."
+bp(GOBP:"RIG-I signaling pathway") -> act(complex(GOCC:"NLRP3 inflammasome complex"))
+bp(GOBP:"toll-like receptor 4 signaling pathway") -> act(complex(GOCC:"NLRP3 inflammasome complex"))
+bp(GOBP:"autophagy") reg act(complex(GOCC:"NLRP3 inflammasome complex"))
+
+SET Support = "In turn, the autophagy pathway can be activated either by the canonical ATF4 and DDIT3(CHOP) transcription factors cascade or by the RIG-I-like receptors establishing functional feedback-loops in this signaling network."
+complex(GOCC:"CHOP-ATF4 complex") -> bp(GOBP:"autophagy")
+
+SET Support = "Remarkably, recent publications linked the activation of NLRP3 inflammasome to cytokine storms, which were reported to be involved in severe forms of COVID-19."
+act(complex(GOCC:"NLRP3 inflammasome complex")) -- path(NCIT:"Cytokine Release Syndrome")
+path(NCIT:"Cytokine Release Syndrome") -- path(DO:"COVID-19")
+
+SET Support = "The ATF4 and DDIT3(a.k.a. CHOP) transcription factors are also involved in the regulation of intrinsic (mitochondria-mediated) apoptosis pathways through the downregulation of the BCL2 protein (which can also modulate the autophagy flux), a constitutive component of the mitochondrial permeability transition pore complex (MPTP), a core regulator of apoptosis and target for several approved drugs."
+complex(GOCC:"CHOP-ATF4 complex") reg bp(GOBP:"intrinsic apoptotic signaling pathway")
+complex(GOCC:"CHOP-ATF4 complex") -| p(HGNC:"BCL2")
+complex(GOCC:"mitochondrial permeability transition pore complex") hasComponent p(HGNC:"BCL2")
+p(HGNC:"BCL2") reg bp(MESHPP:"Apoptosis")
+
+SET Support = "Indeed, based on our findings and the proposed framework, it is reasonable to hypothesize that some inhibitors of autophagy (e.g., chloroquine, currently undergoing clinical trial, cf. Table 1) would prevent the virus from entering the host cell and could thereby be used to prevent SARS-CoV-2 infections while activators of autophagy (e.g., interferon-alpha 2a/2b, also undergoing clinical trial), which would help the host cell clear the viral particles, could be used to treat severe forms of COVID-19."
+SET Disease = "Severe acute respiratory syndrome coronavirus 2"
+a(CHEBI:"autophagy inhibitor") -| bp(GOBP:"viral entry into host cell")
+a(PUBCHEM:2719) isA a(CHEBI:"autophagy inhibitor")
+UNSET Disease
+# PUBCHEM:2719 corresponds to chloroquine
+
+SET Support = "For instance, statins, anti-diabetics, and antagonists of the angiotensin receptor 1, which are used to treat hyperlipidemia, type 2 diabetes, and hypertension, respectively, all of which are very common diseases. "
+a(CHEBI:"statin") -| path(DO:"familial hyperlipidemia")
+a(CHEBI:"statin") -| path(DO:"COVID-19")
+a(MESHC:"Hypoglycemic Agents") -| path(DO:"type 2 diabetes mellitus")
+a(MESHC:"Hypoglycemic Agents") -| path(DO:"COVID-19")
+a(CHEBI:"angiotensin receptor antagonist") -| path(DO:"hypertension")
+a(CHEBI:"angiotensin receptor antagonist") -| path(DO:"COVID-19")
+
+SET Support = "In addition, type 2 diabetes and hypertension are known to be linked to an aggravated COVID-19 prognosis."
+path(DO:"type 2 diabetes mellitus") -- path(DO:"COVID-19")
+path(DO:"hypertension") -- path(DO:"COVID-19")
+
+SET Support = "Interferon alfa-2a / 2b : UPR/autophagy modulator"
+p(CHEBI:"Interferon alfa-2a") -| path(DO:"COVID-19")
+p(CHEBI:"Interferon alfa-2a") reg bp(GOBP:"cellular response to unfolded protein")
+p(CHEBI:"Interferon alfa-2a") -> bp(GOBP:"regulation of autophagy")
+p(PUBCHEM:71306834) -| path(DO:"COVID-19")
+p(PUBCHEM:71306834) reg bp(GOBP:"cellular response to unfolded protein")
+p(PUBCHEM:71306834) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:71306834 corresponds to Interferon alfa-2B
+
+SET Support = "Chloroquine : UPR/autophagy modulator"
+a(PUBCHEM:2719) -| path(DO:"COVID-19")
+a(PUBCHEM:2719) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:2719) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:2719 corresponds to Chloroquine
+
+SET Support = "Corticosteroids : UPR/autophagy modulator"
+a(PUBCHEM:53790464) -| path(DO:"COVID-19")
+a(PUBCHEM:53790464) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:53790464) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:53790464 corresponds to Corticosteroids
+
+SET Support = "Darunavir"
+a(PUBCHEM:213039) -| path(DO:"COVID-19")
+# PUBCHEM:213039 corresponds to Darunavir
+
+SET Support = "Cobicistat"
+a(PUBCHEM:25151504) -| path(DO:"COVID-19")
+# PUBCHEM:25151504 corresponds to Cobicistat
+
+SET Support = "Emtricitabine : UPR/autophagy modulator"
+a(PUBCHEM:60877) -| path(DO:"COVID-19")
+a(PUBCHEM:60877) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:60877) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:60877 corresponds to Emtricitabine
+
+SET Support = "Tenofovir : UPR/autophagy modulator"
+a(PUBCHEM:464205) -| path(DO:"COVID-19")
+a(PUBCHEM:464205) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:464205) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:464205 corresponds to Tenofovir
+
+SET Support = "Ruxolitinib : UPR/autophagy modulator"
+a(PUBCHEM:25126798) -| path(DO:"COVID-19")
+a(PUBCHEM:25126798) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:25126798) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:25126798 corresponds to Ruxolitinib
+
+SET Support = "Rapamycin : UPR/autophagy modulator"
+a(PUBCHEM:5284616) -| path(DO:"COVID-19")
+a(PUBCHEM:5284616) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:5284616) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:5284616 corresponds to Rapamycin
+
+SET Support = "Mycophenolate mofetil : UPR/autophagy modulator"
+a(PUBCHEM:5281078) -| path(DO:"COVID-19")
+a(PUBCHEM:5281078) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:5281078) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:5281078 corresponds to Mycophenolate mofetil
+
+SET Support = "FN-β1a (IFNB1) : UPR/autophagy modulator"
+p(HGNC:"IFNB1") -| path(DO:"COVID-19")
+p(HGNC:"IFNB1") reg bp(GOBP:"cellular response to unfolded protein")
+p(HGNC:"IFNB1") -> bp(GOBP:"regulation of autophagy")
+
+SET Support = "IFN-gamma : UPR/autophagy modulator"
+p(UNIPROT:"P01579") -| path(DO:"COVID-19")
+p(UNIPROT:"P01579") reg bp(GOBP:"cellular response to unfolded protein")
+p(UNIPROT:"P01579") -> bp(GOBP:"regulation of autophagy")
+# UNIPROT:P01579 corresponds to IFN-gamma
+
+SET Support = "Ribavirin : UPR/autophagy modulator"
+a(PUBCHEM:37542) -| path(DO:"COVID-19")
+a(PUBCHEM:37542) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:37542) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:37542 corresponds to Ribavirin
+
+SET Support = "Lopinavir : UPR/autophagy modulator"
+a(PUBCHEM:92727) -| path(DO:"COVID-19")
+a(PUBCHEM:92727) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:92727) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:92727 corresponds to Lopinavir
+
+SET Support = "Ritonavir : UPR/autophagy modulator"
+a(PUBCHEM:392622) -| path(DO:"COVID-19")
+a(PUBCHEM:392622) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:392622) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:392622 corresponds to Ritonavir
+
+SET Support = "Baloxavir marboxil"
+a(PUBCHEM:124081896) -| path(DO:"COVID-19")
+# PUBCHEM:124081896 corresponds to Baloxavir marboxil
+
+SET Support = "Favipiravir"
+a(PUBCHEM:492405) -| path(DO:"COVID-19")
+# PUBCHEM:492405 corresponds to Favipiravir
+
+SET Support = "Enisamium iodide"
+a(PUBCHEM:10089466) -| path(DO:"COVID-19")
+# PUBCHEM:10089466 corresponds to Enisamium iodide
+
+SET Support = "Arbidol (Umifenovir)"
+a(PUBCHEM:131411) -| path(DO:"COVID-19")
+# PUBCHEM:131411 corresponds to Arbidol
+
+SET Support = "Remdesivir"
+a(PUBCHEM:121304016) -| path(DO:"COVID-19")
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "Thalidomide : UPR/autophagy modulator"
+a(PUBCHEM:5426) -| path(DO:"COVID-19")
+a(PUBCHEM:5426) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:5426) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:5426 corresponds to Thalidomide
+
+SET Support = "Camostat : UPR/autophagy modulator"
+a(PUBCHEM:2536) -| path(DO:"COVID-19")
+a(PUBCHEM:2536) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:2536) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:2536 corresponds to Camostat
+
+SET Support = "BCX4430"
+a(PUBCHEM:10445549) -| path(DO:"COVID-19")
+# PUBCHEM:10445549 corresponds to BCX4430
+
+SET Support = "Relacatib"
+a(PUBCHEM:6918602) -| path(DO:"COVID-19")
+# PUBCHEM:6918602 corresponds to Relacatib
+
+SET Support = "Lycorine : UPR/autophagy modulator"
+a(PUBCHEM:72378) -| path(DO:"COVID-19")
+a(PUBCHEM:72378) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:72378) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:72378 corresponds to Lycorine
+
+SET Support = "UDA/lectin"
+a(PUBCHEM:599812) -| path(DO:"COVID-19")
+# PUBCHEM:599812 corresponds to Urtica dioica agglutinin
+
+SET Support = "Hiltonol Poly-IC:LC (poly IC) : UPR/autophagy modulator"
+a(PUBCHEM:135618150) -| path(DO:"COVID-19")
+a(PUBCHEM:135618150) reg bp(GOBP:"cellular response to unfolded protein")
+a(PUBCHEM:135618150) -> bp(GOBP:"regulation of autophagy")
+# PUBCHEM:135618150 corresponds to poly IC
+
+SET Support = "RTD-1 peptide"
+a(PUBCHEM:"16130642") -| path(DO:"COVID-19")
+
+SET Support = "NHC (EIDD-1931) - β-D-N4 -hydroxycytidine"
+a(DRUGBANK:"DB15660") -| path(DO:"COVID-19")
+
+SET Support = "Rapamycin activator of autophagy immunosuppressant; anticancer agent"
+a(PUBCHEM:5284616) -| path(DO:"COVID-19")
+a(PUBCHEM:5284616) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5284616) -> bp(GOBP:"autophagy")
+a(PUBCHEM:5284616) isA a(CHEBI:"immunosuppressive agent")
+a(PUBCHEM:5284616) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:5284616 corresponds to Rapamycin
+
+SET Support = "Temsirolimus activator of autophagy anticancer agent"
+a(PUBCHEM:6918289) -| path(DO:"COVID-19")
+a(PUBCHEM:6918289) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:6918289) -> bp(GOBP:"autophagy")
+a(PUBCHEM:6918289) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:6918289 corresponds to Temsirolimus
+
+SET Support = "Tacrolimus activator of autophagy immunosuppressant"
+a(PUBCHEM:445643) -| path(DO:"COVID-19")
+a(PUBCHEM:445643) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:445643) -> bp(GOBP:"autophagy")
+a(PUBCHEM:445643) isA a(CHEBI:"immunosuppressive agent")
+# PUBCHEM: corresponds to Tacrolimus
+
+SET Support = "Everolimus activator of autophagy immunosuppressant; anticancer agent"
+a(PUBCHEM:6442177) -| path(DO:"COVID-19")
+a(PUBCHEM:6442177) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:6442177) -> bp(GOBP:"autophagy")
+a(PUBCHEM:6442177) isA a(CHEBI:"immunosuppressive agent")
+a(PUBCHEM:6442177) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:6442177 corresponds to Everolimus
+
+SET Support = "Metformin activator of autophagy antidiabetic drug"
+a(PUBCHEM:4091) -| path(DO:"COVID-19")
+a(PUBCHEM:4091) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4091) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4091) isA a(CHEBI:"hypoglycemic agent")
+# PUBCHEM:4091 corresponds to Metformin
+
+SET Support = "Trehalose activator of autophagy dietary supplement"
+a(PUBCHEM:7427) -| path(DO:"COVID-19")
+a(PUBCHEM:7427) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:7427) -> bp(GOBP:"autophagy")
+a(PUBCHEM:7427) isA a(MESHPP:"Dietary Supplements")
+# PUBCHEM:7427 corresponds to Trehalose
+
+SET Support = "Resveratrol activator of autophagy and mitophagy dietary supplement"
+a(PUBCHEM:445154) -| path(DO:"COVID-19")
+a(PUBCHEM:445154) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:445154) -> bp(GOBP:"autophagy")
+a(PUBCHEM:445154) -> bp(GOBP:"mitophagy")
+a(PUBCHEM:445154) isA a(MESHPP:"Dietary Supplements")
+# PUBCHEM:445154 corresponds to Resveratrol
+
+SET Support = "Lithium activator of autophagy antipsychotic agent; mood stabilizers"
+a(PUBCHEM:3028194) -| path(DO:"COVID-19")
+a(PUBCHEM:3028194) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3028194) -> bp(GOBP:"autophagy")
+a(PUBCHEM:3028194) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:3028194 corresponds to Lithium
+
+SET Support = "Carbamazepine activator of autophagy antiepileptic drug; analgesic agent"
+a(PUBCHEM:2554) -| path(DO:"COVID-19")
+a(PUBCHEM:2554) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2554) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2554) isA a(MESHC:"Anticonvulsants")
+a(PUBCHEM:2554) isA a(CHEBI:"analgesic")
+# PUBCHEM:2554 corresponds to Carbamazepine
+
+SET Support = "Sodium valproate activator of autophagy antiepileptic drug; mood stabilizers"
+a(PUBCHEM:16760703) -| path(DO:"COVID-19")
+a(PUBCHEM:16760703) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:16760703) -> bp(GOBP:"autophagy")
+a(PUBCHEM:16760703) isA a(MESHC:"Anticonvulsants")
+# PUBCHEM:16760703 corresponds to Sodium valproate
+
+SET Support = "Verapamil activator of autophagy antianginal drug; antiarrhythmic; antihypertensive"
+a(PUBCHEM:2520) -| path(DO:"COVID-19")
+a(PUBCHEM:2520) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2520) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2520) -| path(MESHD:"Angina Pectoris")
+a(PUBCHEM:2520) isA a(CHEBI:"anti-arrhythmia drug")
+a(PUBCHEM:2520) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:2520 corresponds to Verapamil
+
+SET Support = "Nimodipine activator of autophagy cardiovascular drug"
+a(PUBCHEM:4497) -| path(DO:"COVID-19")
+a(PUBCHEM:4497) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4497) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4497) isA a(CHEBI:"cardiovascular drug")
+# PUBCHEM:4497 corresponds to Nimodipine
+
+SET Support = "Nitrendipine activator of autophagy antihypertensive drug"
+a(PUBCHEM:4507) -| path(DO:"COVID-19")
+a(PUBCHEM:4507) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4507) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4507) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:4507 corresponds to Nitrendipine
+
+SET Support = "Fluspirilene activator of autophagy antipsychotic drug"
+a(PUBCHEM:3396) -| path(DO:"COVID-19")
+a(PUBCHEM:3396) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3396) -> bp(GOBP:"autophagy")
+a(PUBCHEM:3396) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:3396 corresponds to Fluspirilene
+
+SET Support = "Trifluoperazine activator of autophagy antipsychotic drug"
+a(PUBCHEM:5566) -| path(DO:"COVID-19")
+a(PUBCHEM:5566) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5566) -> bp(GOBP:"autophagy")
+a(PUBCHEM:5566) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:5566 corresponds to Trifluoperazine
+
+SET Support = "Nicardipine activator of autophagy antianginal drug; antihypertensive drug"
+a(PUBCHEM:4474) -| path(DO:"COVID-19")
+a(PUBCHEM:4474) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4474) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4474) -| path(MESHD:"Angina Pectoris")
+a(PUBCHEM:4474) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:4474 corresponds to Nicardipine
+
+SET Support = "Tamoxifen activator of autophagy hormonal antineoplastic drug"
+a(PUBCHEM:2733526) -| path(DO:"COVID-19")
+a(PUBCHEM:2733526) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2733526) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2733526) isA a(CHEBI:"hormone")
+a(PUBCHEM:2733526) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:2733526 corresponds to Tamoxifen
+
+SET Support = "Pimozide activator of autophagy antipsychotic drug"
+a(PUBCHEM:16362) -| path(DO:"COVID-19")
+a(PUBCHEM:16362) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:16362) -> bp(GOBP:"autophagy")
+a(PUBCHEM:16362) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:16362 corresponds to Pimozide
+
+SET Support = "Amiodarone activator of autophagy antianginal drug; antiarrhythmic drug"
+a(PUBCHEM:2157) -| path(DO:"COVID-19")
+a(PUBCHEM:2157) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2157) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2157) -| path(MESHD:"Angina Pectoris")
+a(PUBCHEM:2157) isA a(CHEBI:"anti-arrhythmia drug")
+# PUBCHEM:2157 corresponds to Amiodarone
+
+SET Support = "Loperamide activator of autophagy antidiarrheal drug"
+a(PUBCHEM:3955) -| path(DO:"COVID-19")
+a(PUBCHEM:3955) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3955) -> bp(GOBP:"autophagy")
+a(PUBCHEM:3955) isA a(CHEBI:"antidiarrhoeal drug")
+# PUBCHEM:3955 corresponds to Loperamide
+
+SET Support = "Rilmenidine activator of autophagy antihypertensive drug"
+a(PUBCHEM:68712) -| path(DO:"COVID-19")
+a(PUBCHEM:68712) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:68712) -> bp(GOBP:"autophagy")
+a(PUBCHEM:68712) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:68712 corresponds to Rilmenidine
+
+SET Support = "Clonidine activator of autophagy antihypertensive drug; non-narcotic analgesic"
+a(PUBCHEM:2803) -| path(DO:"COVID-19")
+a(PUBCHEM:2803) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2803) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2803) isA a(CHEBI:"antihypertensive agent")
+a(PUBCHEM:2803) isA a(CHEBI:"non-narcotic analgesic")
+# PUBCHEM:2803 corresponds to Clonidine
+
+SET Support = "Calcifediol activator of autophagy calcium regulator; vitamin source drug"
+a(PUBCHEM:5283731) -| path(DO:"COVID-19")
+a(PUBCHEM:5283731) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5283731) -> bp(GOBP:"autophagy")
+# PUBCHEM:5283731 corresponds to Calcifediol
+
+SET Support = "Nitazoxanide activator of autophagy anti-infective agent"
+a(PUBCHEM:41684) -| path(DO:"COVID-19")
+a(PUBCHEM:41684) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:41684) -> bp(GOBP:"autophagy")
+a(PUBCHEM:41684) isA a(CHEBI:"antiinfective agent")
+# PUBCHEM:41684 corresponds to Nitazoxanide
+
+SET Support = "Nortriptyline activator of autophagy tricyclic antidepressant"
+a(PUBCHEM:4543) -| path(DO:"COVID-19")
+a(PUBCHEM:4543) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4543) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4543) isA a(CHEBI:"tetracyclic antidepressant")
+# PUBCHEM:4543 corresponds to Nortriptyline
+
+SET Support = "Simvastatin activator of autophagy anticholesteremic agent"
+a(PUBCHEM:54454) -| path(DO:"COVID-19")
+a(PUBCHEM:54454) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:54454) -> bp(GOBP:"autophagy")
+a(PUBCHEM:54454) isA a(CHEBI:"anticholesteremic drug")
+# PUBCHEM:54454 corresponds to Simvastatin
+
+SET Support = "Minoxidil activator of autophagy antihypertensive drug; vasodilator; antialopecia drug"
+a(PUBCHEM:4201) -| path(DO:"COVID-19")
+a(PUBCHEM:4201) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4201) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4201) isA a(CHEBI:"antihypertensive agent")
+a(PUBCHEM:4201) isA a(CHEBI:"vasodilator agent")
+a(PUBCHEM:4201) -| path(MESHD:"Alopecia")
+# PUBCHEM:4201 corresponds to Minoxidil
+
+SET Support = "Bromperidol activator of autophagy antipsychotic drug"
+a(PUBCHEM:2448) -| path(DO:"COVID-19")
+a(PUBCHEM:2448) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2448) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2448) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:2448 corresponds to Bromperidol
+
+SET Support = "Metergoline activator of autophagy CNS drug; anti-hyperprolactinemic agent"
+a(PUBCHEM:28693) -| path(DO:"COVID-19")
+a(PUBCHEM:28693) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:28693) -> bp(GOBP:"autophagy")
+a(PUBCHEM:28693) isA a(MESHC:"Central Nervous System Agents")
+a(PUBCHEM:28693) -| path(DO:"hyperprolactinemia")
+# PUBCHEM:28693 corresponds to Metergoline
+
+SET Support = "Chlorpromazine activator of autophagy antiemetic drug; antipsychotic drug"
+a(PUBCHEM:2726) -| path(DO:"COVID-19")
+a(PUBCHEM:2726) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2726) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2726) isA a(CHEBI:"antiemetic")
+a(PUBCHEM:2726) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:2726 corresponds to Chlorpromazine
+
+SET Support = "Fludrocortisone activator of autophagy mineralocorticoid replacement agent"
+a(PUBCHEM:31378) -| path(DO:"COVID-19")
+a(PUBCHEM:31378) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:31378) -> bp(GOBP:"autophagy")
+# PUBCHEM:31378 corresponds to Fludrocortisone
+
+SET Support = "Noscapine activator of autophagy antitussive drug"
+a(PUBCHEM:275196) -| path(DO:"COVID-19")
+a(PUBCHEM:275196) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:275196) -> bp(GOBP:"autophagy")
+a(PUBCHEM:275196) isA a(CHEBI:"antitussive")
+# PUBCHEM:275196 corresponds to Noscapine
+
+SET Support = "Clemastine activator of autophagy anti-allergic agent; antipruritics"
+a(PUBCHEM:26987) -| path(DO:"COVID-19")
+a(PUBCHEM:26987) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:26987) -> bp(GOBP:"autophagy")
+a(PUBCHEM:26987) isA a(CHEBI:"anti-allergic agent")
+a(PUBCHEM:26987) isA a(CHEBI:"antipruritic drug")
+# PUBCHEM:26987 corresponds to Clemastine
+
+SET Support = "Deferiprone activator of autophagy chelating agent; metabolic disorder drug"
+a(PUBCHEM:2972) -| path(DO:"COVID-19")
+a(PUBCHEM:2972) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2972) -> bp(GOBP:"autophagy")
+a(PUBCHEM:2972) isA a(CHEBI:"chelator")
+a(PUBCHEM:2972) -| path(MESHD:"Metabolic Diseases")
+a(PUBCHEM:2972) -| path(MESHD:"Metabolic Diseases")
+# PUBCHEM:2972 corresponds to Deferiprone
+
+SET Support = "Temozolomide activator of autophagy alkylating antineoplastic drug"
+a(PUBCHEM:5394) -| path(DO:"COVID-19")
+a(PUBCHEM:5394) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5394) -> bp(GOBP:"autophagy")
+a(PUBCHEM:5394) isA a(CHEBI:"alkylating agent")
+a(PUBCHEM:5394) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:5394 corresponds to Temozolomide
+
+SET Support = "Gefitinib activator of autophagy anticancer drug"
+a(PUBCHEM:123631) -| path(DO:"COVID-19")
+a(PUBCHEM:123631) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:123631) -> bp(GOBP:"autophagy")
+a(PUBCHEM:123631) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:123631 corresponds to Gefitinib
+
+SET Support = "Sertindole activator of autophagy antipsychotic drug"
+a(PUBCHEM:60149) -| path(DO:"COVID-19")
+a(PUBCHEM:60149) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:60149) -> bp(GOBP:"autophagy")
+a(PUBCHEM:60149) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:60149 corresponds to Sertindole
+
+SET Support = "Olanzapine activator of autophagy antipsychotic drug"
+a(PUBCHEM:135398745) -| path(DO:"COVID-19")
+a(PUBCHEM:135398745) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:135398745) -> bp(GOBP:"autophagy")
+a(PUBCHEM:135398745) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:135398745 corresponds to Olanzapine
+
+SET Support = "Fluphenazine activator of autophagy antipsychotic drug"
+a(PUBCHEM:3372) -| path(DO:"COVID-19")
+a(PUBCHEM:3372) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3372) -> bp(GOBP:"autophagy")
+a(PUBCHEM:3372) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:3372 corresponds to Fluphenazine
+
+SET Support = "Methotrimeprazine activator of autophagy antipsychotic drug"
+a(PUBCHEM:72287) -| path(DO:"COVID-19")
+a(PUBCHEM:72287) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:72287) -> bp(GOBP:"autophagy")
+a(PUBCHEM:72287) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:72287 corresponds to Methotrimeprazine
+
+SET Support = "Niclosamide activator of autophagy antihelmintic drug"
+a(PUBCHEM:4477) -| path(DO:"COVID-19")
+a(PUBCHEM:4477) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4477) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4477) isA a(MESHC:"Anthelmintics")
+# PUBCHEM:4477 corresponds to Niclosamide
+
+SET Support = "Prochlorperazine activator of autophagy antiemetic drug; antipsychotic drug"
+a(PUBCHEM:4917) -| path(DO:"COVID-19")
+a(PUBCHEM:4917) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4917) -> bp(GOBP:"autophagy")
+a(PUBCHEM:4917) isA a(CHEBI:"antiemetic")
+a(PUBCHEM:4917) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:4917 corresponds to Prochlorperazine
+
+SET Support = "Clozapine modulator of autophagy antipsychotic drug"
+a(PUBCHEM:135398737) -| path(DO:"COVID-19")
+a(PUBCHEM:135398737) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:135398737) reg bp(GOBP:"autophagy")
+a(PUBCHEM:135398737) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:135398737 corresponds to Clozapine
+
+SET Support = "Baclofen modulator of autophagy skelatal muscle relaxant"
+a(PUBCHEM:2284) -| path(DO:"COVID-19")
+a(PUBCHEM:2284) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2284) reg bp(GOBP:"autophagy")
+a(PUBCHEM:2284) isA a(CHEBI:"muscle relaxant")
+# PUBCHEM:2284 corresponds to Baclofen
+
+SET Support = "Quinacrine inhibitor of autophagy antihelmintic drug; antiprotozoal drug"
+a(PUBCHEM:237) -| path(DO:"COVID-19")
+a(PUBCHEM:237) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:237) -| bp(GOBP:"autophagy")
+a(PUBCHEM:237) isA a(MESHC:"Anthelmintics")
+a(PUBCHEM:237) isA a(CHEBI:"antiprotozoal drug")
+# PUBCHEM:237 corresponds to Quinacrine
+
+SET Support = "Bortezomib inhibitor of autophagy anticancer agent"
+a(PUBCHEM:387447) -| path(DO:"COVID-19")
+a(PUBCHEM:387447) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:387447) -| bp(GOBP:"autophagy")
+a(PUBCHEM:387447) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:387447 corresponds to Bortezomib
+
+SET Support = "Pantoprazole inhibitor of autophagy gastrointestinal drug"
+a(PUBCHEM:4679) -| path(DO:"COVID-19")
+a(PUBCHEM:4679) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4679) -| bp(GOBP:"autophagy")
+a(PUBCHEM:4679) isA a(CHEBI:"gastrointestinal drug")
+# PUBCHEM:4679 corresponds to Pantoprazole
+
+SET Support = "Celecoxib inhibitor of autophagy non-narcotic analgesic; anticancer agent; NSAID"
+a(PUBCHEM:2662) -| path(DO:"COVID-19")
+a(PUBCHEM:2662) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2662) -| bp(GOBP:"autophagy")
+a(PUBCHEM:2662) isA a(CHEBI:"non-narcotic analgesic")
+a(PUBCHEM:2662) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:2662 corresponds to Celecoxib
+
+SET Support = "Azithromycin inhibitor of autophagy macrolide antibiotic"
+a(PUBCHEM:447043) -| path(DO:"COVID-19")
+a(PUBCHEM:447043) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:447043) -| bp(GOBP:"autophagy")
+a(PUBCHEM:447043) isA a(CHEBI:"macrolide antibiotic")
+# PUBCHEM:447043 corresponds to Azithromycin
+
+SET Support = "Verteporfin inhibitor of autophagy ocular drug"
+a(PUBCHEM:11980904) -| path(DO:"COVID-19")
+a(PUBCHEM:11980904) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:11980904) -| bp(GOBP:"autophagy")
+# PUBCHEM:11980904 corresponds to Verteporfin
+
+SET Support = "Clomipramine inhibitor of autophagy tricyclic antidepressant"
+a(PUBCHEM:2801) -| path(DO:"COVID-19")
+a(PUBCHEM:2801) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2801) -| bp(GOBP:"autophagy")
+a(PUBCHEM:2801) isA a(CHEBI:"tetracyclic antidepressant")
+# PUBCHEM:2801 corresponds to Clomipramine
+
+SET Support = "Chloroquine inhibitor of autophagy antiprotozoal drug"
+a(PUBCHEM:2719) -| path(DO:"COVID-19")
+a(PUBCHEM:2719) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2719) -| bp(GOBP:"autophagy")
+a(PUBCHEM:2719) isA a(CHEBI:"antiprotozoal drug")
+# PUBCHEM:2719 corresponds to Chloroquine
+
+SET Support = "Hydroxychloroquine inhibitor of autophagy antiprotozoal drug"
+a(PUBCHEM:3652) -| path(DO:"COVID-19")
+a(PUBCHEM:3652) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3652) -| bp(GOBP:"autophagy")
+a(PUBCHEM:3652) isA a(CHEBI:"antiprotozoal drug")
+# PUBCHEM:3652 corresponds to Hydroxychloroquine
+
+SET Support = "Phenylbutyrate suppressor of UPR stress urea cycle disorder agent"
+a(PUBCHEM:5258) -| path(DO:"COVID-19")
+a(PUBCHEM:5258) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5258) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:5258) -| path(DO:"urea cycle disorder")
+
+SET Support = "Pioglitazone suppressor of UPR stress antidiabetic drug"
+a(PUBCHEM:4829) -| path(DO:"COVID-19")
+a(PUBCHEM:4829) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4829) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:4829) isA a(CHEBI:"hypoglycemic agent")
+# PUBCHEM:4829 corresponds to Pioglitazone
+
+SET Support = "Isoproterenol suppressor of UPR stress bronchodilator; cardiotonic agent"
+a(PUBCHEM:3779) -| path(DO:"COVID-19")
+a(PUBCHEM:3779) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3779) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:3779) isA a(CHEBI:"bronchodilator agent")
+a(PUBCHEM:3779) isA a(CHEBI:"cardiotonic drug")
+# PUBCHEM:3779 corresponds to Isoproterenol
+
+SET Support = "Pravastatin suppressor of UPR stress hypolipidemic drug"
+a(PUBCHEM:54687) -| path(DO:"COVID-19")
+a(PUBCHEM:54687) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:54687) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:54687) isA a(CHEBI:"antilipemic drug")
+# PUBCHEM:54687 corresponds to Pravastatin
+
+SET Support = "Etanercept suppressor of UPR stress antiarthritic drug; immunomodulator"
+a(CHEBI:"etanercept") -| path(DO:"COVID-19")
+a(CHEBI:"etanercept") -| path(DO:"severe acute respiratory syndrome")
+a(CHEBI:"etanercept") -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(CHEBI:"etanercept") -| path(DO:"arthritis")
+a(CHEBI:"etanercept") isA a(CHEBI:"immunomodulator")
+# PUBCHEM: corresponds to Etanercept
+
+SET Support = "Sunitinib suppressor of UPR stress anticancer agent"
+a(PUBCHEM:5329102) -| path(DO:"COVID-19")
+a(PUBCHEM:5329102) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5329102) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:5329102) isA a(CHEBI:"antineoplastic agent")
+# PUBCHEM:5329102 corresponds to Sunitinib
+
+SET Support = "Curcumin suppressor of UPR stress dietary supplement"
+a(PUBCHEM:969516) -| path(DO:"COVID-19")
+a(PUBCHEM:969516) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:969516) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:969516) isA a(MESHPP:"Dietary Supplements")
+# PUBCHEM:969516 corresponds to Curcumin
+
+SET Support = "Exenatide suppressor of UPR stress antidiabetic drug"
+a(PUBCHEM:45588096) -| path(DO:"COVID-19")
+a(PUBCHEM:45588096) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:45588096) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:45588096) isA a(CHEBI:"hypoglycemic agent")
+# PUBCHEM:45588096 corresponds to Exenatide
+
+SET Support = "Vildagliptin suppressor of UPR stress antidiabetic drug"
+a(PUBCHEM:6918537) -| path(DO:"COVID-19")
+a(PUBCHEM:6918537) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:6918537) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:6918537) isA a(CHEBI:"hypoglycemic agent")
+# PUBCHEM:6918537 corresponds to Vildagliptin
+
+SET Support = "Fenofibrate suppressor of UPR stress hypolipidemic drug"
+a(PUBCHEM:3339) -| path(DO:"COVID-19")
+a(PUBCHEM:3339) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3339) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:3339) isA a(CHEBI:"antilipemic drug")
+# PUBCHEM:3339 corresponds to Fenofibrate
+
+SET Support = "Valsartan suppressor of UPR stress antihypertensive drug"
+a(PUBCHEM:60846) -| path(DO:"COVID-19")
+a(PUBCHEM:60846) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:60846) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:60846) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:60846 corresponds to Valsartan
+
+SET Support = "Losartan suppressor of UPR stress antihypertensive drug"
+a(PUBCHEM:3961) -| path(DO:"COVID-19")
+a(PUBCHEM:3961) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3961) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:3961) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:3961 corresponds to Losartan
+
+SET Support = "Olmesartan suppressor of UPR stress antihypertensive drug"
+a(PUBCHEM:158781) -| path(DO:"COVID-19")
+a(PUBCHEM:158781) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:158781) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:158781) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:158781 corresponds to Olmesartan
+
+SET Support = "Telmisartan suppressor of UPR stress antihypertensive drug; cardiovascular agent"
+a(PUBCHEM:65999) -| path(DO:"COVID-19")
+a(PUBCHEM:65999) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:65999) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:65999) isA a(CHEBI:"antihypertensive agent")
+a(PUBCHEM:65999) isA a(CHEBI:"cardiovascular drug")
+# PUBCHEM:65999 corresponds to Telmisartan
+
+SET Support = "Guanabenz suppressor of UPR stress antihypertensive drug"
+a(PUBCHEM:5702063) -| path(DO:"COVID-19")
+a(PUBCHEM:5702063) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5702063) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:5702063) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:5702063 corresponds to Guanabenz
+
+SET Support = "Trazodone suppressor of UPR stress antidepressant"
+a(PUBCHEM:5533) -| path(DO:"COVID-19")
+a(PUBCHEM:5533) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5533) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:5533) isA a(CHEBI:"antidepressant")
+# PUBCHEM:5533 corresponds to Trazodone
+
+SET Support = "Berberine suppressor of UPR stress antimicrobial agent; antidiabetic agent"
+a(PUBCHEM:2353) -| path(DO:"COVID-19")
+a(PUBCHEM:2353) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2353) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:2353) isA a(CHEBI:"antimicrobial agent")
+a(PUBCHEM:2353) isA a(CHEBI:"hypoglycemic agent")
+# PUBCHEM:2353 corresponds to Berberine
+
+SET Support = "Bisoprolol suppressor of UPR stress antihypertensive drug; cardiovascular agent"
+a(PUBCHEM:2405) -| path(DO:"COVID-19")
+a(PUBCHEM:2405) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2405) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:2405) isA a(CHEBI:"antihypertensive agent")
+a(PUBCHEM:2405) isA a(CHEBI:"cardiovascular drug")
+# PUBCHEM:2405 corresponds to Bisoprolol
+
+SET Support = "Propranolol suppressor of UPR stress antihypertensive drug; antianginal drug; antiarrhythmic drug"
+a(PUBCHEM:4946) -| path(DO:"COVID-19")
+a(PUBCHEM:4946) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4946) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:4946) isA a(CHEBI:"antihypertensive agent")
+a(PUBCHEM:4946) -| path(MESHD:"Angina Pectoris")
+# PUBCHEM:4946 corresponds to Propranolol
+
+SET Support = "Metoprolol suppressor of UPR stress antianginal drug; antihypertensive drug"
+a(PUBCHEM:4171) -| path(DO:"COVID-19")
+a(PUBCHEM:4171) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4171) -| bp(GOBP:"endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:4171) isA a(CHEBI:"antihypertensive agent")
+a(PUBCHEM:4171) -| path(MESHD:"Angina Pectoris")
+# PUBCHEM:4171 corresponds to Metoprolol
+
+SET Support = "Atorvastatin UPR stress modulator anticholesteremic agent"
+a(PUBCHEM:60823) -| path(DO:"COVID-19")
+a(PUBCHEM:60823) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:60823) -> bp(GOBP:"regulation of endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:60823) isA a(CHEBI:"anticholesteremic drug")
+# PUBCHEM:60823 corresponds to Atorvastatin
+
+SET Support = "Liraglutide UPR stress modulator antidiabetic drug; anti-obesity agent"
+a(PUBCHEM:16134956) -| path(DO:"COVID-19")
+a(PUBCHEM:16134956) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:16134956) -> bp(GOBP:"regulation of endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:16134956) isA a(CHEBI:"hypoglycemic agent")
+a(PUBCHEM:16134956) isA a(CHEBI:"anti-obesity agent")
+# PUBCHEM:16134956 corresponds to Liraglutide
+
+SET Support = "Alpha-lipoic acid UPR stress modulator nutritional supplement; antioxidants; antineuropathic agent"
+a(PUBCHEM:864) -| path(DO:"COVID-19")
+a(PUBCHEM:864) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:864) -> bp(GOBP:"regulation of endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:864) isA a(CHEBI:"nutraceutical")
+a(PUBCHEM:864) isA a(CHEBI:"antioxidant")
+a(PUBCHEM:864) -| path(DO:"neuropathy")
+# PUBCHEM:864 corresponds to Alpha-lipoic acid
+
+SET Support = "Melatonin UPR stress modulator CNS drug; anti-insomnia agent"
+a(PUBCHEM:896) -| path(DO:"COVID-19")
+a(PUBCHEM:896) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:896) -> bp(GOBP:"regulation of endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:896) -| path(MESHD:"Sleep Initiation and Maintenance Disorders")
+a(PUBCHEM:896) isA a(MESHC:"Central Nervous System Agents")
+# PUBCHEM:896 corresponds to Melatonin
+
+SET Support = "Quercetin UPR stress modulator dietary supplement"
+a(PUBCHEM:5280343) -| path(DO:"COVID-19")
+a(PUBCHEM:5280343) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5280343) -> bp(GOBP:"regulation of endoplasmic reticulum unfolded protein response")
+a(PUBCHEM:5280343) isA a(MESHPP:"Dietary Supplements")
+# PUBCHEM:5280343 corresponds to Quercetin
+
+SET Support = "Haloperidol MPTP modulator antipsychotic drug; antiemetic drug"
+a(PUBCHEM:3559) -| path(DO:"COVID-19")
+a(PUBCHEM:3559) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3559) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:3559) isA a(CHEBI:"antipsychotic agent")
+a(PUBCHEM:3559) isA a(CHEBI:"antiemetic")
+# PUBCHEM:3559 corresponds to Haloperidol
+
+SET Support = "Pentazocine MPTP modulator narcotic analgesic"
+a(PUBCHEM:441278) -| path(DO:"COVID-19")
+a(PUBCHEM:441278) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:441278) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:441278) isA a(CHEBI:"opioid analgesic")
+# PUBCHEM:441278 corresponds to Pentazocine
+
+SET Support = "Ifenprodil MPTP modulator vasodilator"
+a(PUBCHEM:3689) -| path(DO:"COVID-19")
+a(PUBCHEM:3689) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3689) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:3689) isA a(CHEBI:"vasodilator agent")
+# PUBCHEM:3689 corresponds to Ifenprodil
+
+SET Support = "Donepezil MPTP modulator anti-Alzheimer's drug; CNS drug"
+a(PUBCHEM:3152) -| path(DO:"COVID-19")
+a(PUBCHEM:3152) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3152) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:3152) -| path(DO:"Alzheimer's disease")
+a(PUBCHEM:3152) isA a(MESHC:"Central Nervous System Agents")
+# PUBCHEM:3152 corresponds to Donepezil
+
+SET Support = "Carbetapentane MPTP modulator antitussive"
+a(PUBCHEM:2562) -| path(DO:"COVID-19")
+a(PUBCHEM:2562) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2562) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:2562) isA a(CHEBI:"antitussive")
+# PUBCHEM:2562 corresponds to Carbetapentane
+
+SET Support = "Dextromethorphan MPTP modulator antitussive"
+a(PUBCHEM:5360696) -| path(DO:"COVID-19")
+a(PUBCHEM:5360696) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5360696) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:5360696) isA a(CHEBI:"antitussive")
+# PUBCHEM:5360696 corresponds to Dextromethorphan
+
+SET Support = "Edaravone MPTP modulator neuroprotective agent; anti-ALS drug"
+a(PUBCHEM:4021) -| path(DO:"COVID-19")
+a(PUBCHEM:4021) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4021) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:4021) isA a(CHEBI:"neuroprotective agent")
+a(PUBCHEM:4021) -| path(DO:"amyotrophic lateral sclerosis")
+# PUBCHEM:4021 corresponds to Edaravone
+
+SET Support = "Cyclosporin A MPTP modulator immunosuppressant"
+a(PUBCHEM:5284373) -| path(DO:"COVID-19")
+a(PUBCHEM:5284373) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5284373) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:5284373) isA a(CHEBI:"immunosuppressive agent")
+# PUBCHEM:5284373 corresponds to Cyclosporin
+
+SET Support = "Diazoxide MPTP modulator antihypertensive drug; vasodilator"
+a(PUBCHEM:3019) -| path(DO:"COVID-19")
+a(PUBCHEM:3019) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3019) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:3019) isA a(CHEBI:"antihypertensive agent")
+a(PUBCHEM:3019) isA a(CHEBI:"vasodilator agent")
+# PUBCHEM:3019 corresponds to Diazoxide
+
+SET Support = "Nicorandil MPTP modulator antianginal drug"
+a(PUBCHEM:47528) -| path(DO:"COVID-19")
+a(PUBCHEM:47528) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:47528) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:47528) -| path(MESHD:"Angina Pectoris")
+# PUBCHEM:47528 corresponds to Nicorandil
+
+SET Support = "Tadalafil MPTP modulator impotence drug; antihypertensive drug"
+a(PUBCHEM:110635) -| path(DO:"COVID-19")
+a(PUBCHEM:110635) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:110635) -- bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:110635) -| path(DO:"impotence")
+a(PUBCHEM:110635) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:110635 corresponds to Tadalafil
+
+SET Support = "Perhexiline MPTP modulator antianginal drug"
+a(PUBCHEM:4746) -| path(DO:"COVID-19")
+a(PUBCHEM:4746) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:4746) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:4746) -| path(MESHD:"Angina Pectoris")
+# PUBCHEM:4746 corresponds to Perhexiline
+
+SET Support = "Carvedilol MPTP modulator antihypertensive drug"
+a(PUBCHEM:2585) -| path(DO:"COVID-19")
+a(PUBCHEM:2585) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:2585) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:2585) isA a(CHEBI:"antihypertensive agent")
+# PUBCHEM:2585 corresponds to Carvedilol
+
+SET Support = "Etifoxine MPTP modulator antipsychotic drug"
+a(PUBCHEM:135413553) -| path(DO:"COVID-19")
+a(PUBCHEM:135413553) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:135413553) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:135413553) isA a(CHEBI:"antipsychotic agent")
+# PUBCHEM:135413553 corresponds to Etifoxine
+
+SET Support = "Pramipexole MPTP modulator antiparkinsonian drug"
+a(PUBCHEM:119570) -| path(DO:"COVID-19")
+a(PUBCHEM:119570) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:119570) -> bp(GOBP:"regulation of mitochondrial membrane permeability")
+a(PUBCHEM:119570) isA a(CHEBI:"antiparkinson drug")
+# PUBCHEM:119570 corresponds to Pramipexole
+
+SET Support = "Glyburide NLRP3 Inflammasome inhibitor antidiabetic drug"
+a(PUBCHEM:3488) -| path(DO:"COVID-19")
+a(PUBCHEM:3488) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:3488) -| act(complex(GOCC:"NLRP3 inflammasome complex"))
+a(PUBCHEM:3488) isA a(CHEBI:"hypoglycemic agent")
+# PUBCHEM:3488 corresponds to Glyburide
+
+SET Support = "Tranilast NLRP3 Inflammasome inhibitor anti-inflammatory agent"
+a(PUBCHEM:5282230) -| path(DO:"COVID-19")
+a(PUBCHEM:5282230) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5282230) -| act(complex(GOCC:"NLRP3 inflammasome complex"))
+a(PUBCHEM:5282230) isA a(CHEBI:"anti-inflammatory agent")
+# PUBCHEM:5282230 corresponds to Tranilast
+
+SET Support = "Anakinra NLRP3 Inflammasome inhibitor antiarthritic drug; antiinflammatory agent"
+a(PUBCHEM:139595263) -| path(DO:"COVID-19")
+a(PUBCHEM:139595263) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:139595263) -| act(complex(GOCC:"NLRP3 inflammasome complex"))
+a(PUBCHEM:139595263) -| path(DO:"arthritis")
+a(PUBCHEM:139595263) isA a(CHEBI:"anti-inflammatory agent")
+# PUBCHEM:139595263 corresponds to Anakinra
+
+SET Support = "Thalidomide NLRP3 Inflammasome inhibitor anticancer agent; antiemetic drug; immunomodulator"
+a(PUBCHEM:5426) -| path(DO:"COVID-19")
+a(PUBCHEM:5426) -| path(DO:"severe acute respiratory syndrome")
+a(PUBCHEM:5426) -| act(complex(GOCC:"NLRP3 inflammasome complex"))
+a(PUBCHEM:5426) isA a(CHEBI:"antineoplastic agent")
+a(PUBCHEM:5426) isA a(CHEBI:"antiemetic")
+a(PUBCHEM:5426) isA a(CHEBI:"immunomodulator")
+# PUBCHEM:5426 corresponds to Thalidomide

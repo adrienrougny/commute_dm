@@ -1,0 +1,280 @@
+SET DOCUMENT Name = "20234358.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+#DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"response to tissue injury","lesion size","misfolded protein","proinflammatory microglia","systemic inflammation","microglial priming"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION Disease_Condition AS LIST {"chronic"}
+DEFINE ANNOTATION Custom_Anatomy AS LIST {"Peripheral tissue"}
+
+
+SET Citation = {"PubMed", "Nat Rev Neurol. 2010 Apr;6(4):193-201. doi: 10.1038/nrneurol.2010.17. Epub 2010 Mar 16.","20234358"}
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+SET Support = "As a consequence of brain injury or disease, resident microglia change phenotype from their downregulated state to an ‘activated’ phenotype, which is characterized by shortened and extensively branched processes and hypertrophy of the cell body"
+SET Species = "9606"
+SET MeSHAnatomy = "Brain"
+path(MESH:"Brain Injuries") pos bp(GO:"microglial cell activation")
+UNSET Species
+
+SET Support = "Data from human studies support the idea that a reduction in CD200 expression is associated with microglial activation."
+SET Species = "10090"
+bp(GO:"microglial cell activation") -| p(MGI:Cd200)
+UNSET Species
+
+SET Support = "The demonstration that the peripheral benzodiazepine receptor is upregulated in activated microglia led to the development of a ligand, 11C-RPK11195, which binds to this receptor"
+SET Species = "9606"
+bp(GO:"microglial cell activation") -> p(HGNC:TSPO)
+
+SET Support = "In patients with Alzheimer disease (AD), initial studies suggest that the 11C-R-PK11195 signal correlates inversely with cognitive function."
+SET MeSHDisease = "Alzheimer Disease"
+bp(GO:"microglial cell activation") neg bp(GO:cognition)
+
+SET Support = "Furthermore, as cognitive
+function declines over time, the C-R-PK11195 signal increases without a change in the signal from the Pet ligand Pittsburgh compound B (C-PIB), which binds to amyloid."
+bp(GO:"microglial cell activation") neg bp(GO:cognition)
+UNSET MeSHDisease 
+
+SET Support = "A key role of tissue macrophages is the rapid response to tissue injury"
+a(MESH:Macrophages) -> bp(FIXME:"response to tissue injury")
+
+SET Support = "Acute injury to the brain, such as a traumatic brain injury or stroke, will lead to the rapid degeneration of neurons and neuronal processes, and subsequently will lead to the generation of DAMPs, which in turn could activate microglia."
+path(MESH:"Brain Injuries, Traumatic") pos path(MESH:"Nerve Degeneration")
+path(MESH:"Brain Injuries, Traumatic") pos deg(a(GO:"neuron projection"))
+path(MESH:"Brain Injuries, Traumatic") -> a(MESH:Alarmins)
+path(MESH:"Brain Injuries, Traumatic") pos bp(GO:"microglial cell activation")
+path(MESH:Stroke) pos path(MESH:"Nerve Degeneration")
+path(MESH:Stroke) pos deg(a(GO:"neuron projection"))
+path(MESH:Stroke) -> a(MESH:Alarmins)
+path(MESH:Stroke) pos bp(GO:"microglial cell activation")
+
+SET Support = "The synthesis of proinflammatory cytokines and other inflammatory mediators is rapidly induced following acute injury, and these molecules contribute to the demise of neurons in the penumbra"
+path(MESH:"Brain Injuries") -> bp(GO:"production of molecular mediator involved in inflammatory response")
+path(MESH:"Brain Injuries") -> bp(GO:"cytokine production involved in inflammatory response")
+
+SET Support = "Well-studied molecules that promote neuronal degeneration include interleukin 1β and tumor necrosis factor(TNF).These cytokines in turn induce the synthesis of chemokines, leading to the recruitment of neutrophils and monocytes from the blood "
+p(HGNC:IL1B) pos path(MESH:"Nerve Degeneration")
+p(HGNC:TNF) pos path(MESH:"Nerve Degeneration")
+p(HGNC:IL1B) -> bp(GO:"neutrophil chemotaxis")
+p(HGNC:TNF) -> bp(GO:"monocyte chemotaxis")
+
+SET Support = "Evidence from animal models of acute injury indicates that the innate inflammatory response exacerbates lesion size and is detrimental to neurological outcome"
+bp(GO:"inflammatory response") -| a(FIXME:"lesion size") 
+
+SET Support = "Wallerian degeneration in the CNS is accompanied by the activation of microglia along the degenerating fiber tracts and, over time, foam cells, which are responsible for the removal of degenerating axons and myelin, become evident."
+path(MESH:"Wallerian Degeneration") associationbp(GO:"microglial cell activation")
+path(MESH:"Wallerian Degeneration") associationdeg(a(MESH:"Nerve Fibers")) 
+
+SET Support = "Interest in activated microglia as contributors to the progression of chronic neurodegeneration, rather than simply being a consequence of the pathology, was first proposed in AD"
+SET MeSHDisease = "Alzheimer Disease"
+SET Disease_Condition = "chronic"
+bp(GO:"microglial cell activation") -> path(DO:"neurodegenerative disease")
+UNSET MeSHDisease
+
+SET Support = "Possible reasons for these negative findings have been discussed in detail elsewhere; however, the fact that inhibition of cyclooxygenase activity by NSAIDs only inhibits the release of a limited number of inflammatory mediators secreted by microglia could be one explanation"
+a(CHEBI:"non-steroidal anti-inflammatory drug") -| act(p(HGNC:PTGS1))
+a(CHEBI:"non-steroidal anti-inflammatory drug") -| act(p(HGNC:PTGS2))
+
+SET Support = "In AD, amyloid in both plaques and blood vessel walls in the brain is associated with SAP and, as in peripheral tissues, SAP might prevent the efficient phagocytosis of the amyloid deposits"
+SET MeSHDisease = "Plaque, Amyloid"
+SET MeSHAnatomy = "Blood Vessels"
+p(HGNC:APCS) association p(HGNC:APP)
+UNSET MeSHAnatomy 
+UNSET MeSHDisease
+SET Custom_Anatomy = "Peripheral tissue"
+p(HGNC:APCS) -| deg(p(HGNC:APP))
+UNSET Custom_Anatomy
+
+SET Support = "Studies on the degradation of amyloid-β (aβ) peptides—the main constituent of amyloid plaques in AD—have shown that SAP inhibits proteolysis of Aβ in vitro"
+SET MeSHDisease = "Alzheimer Disease"
+p(HGNC:APCS) -| deg(p(HGNC:APP))
+
+SET Support = "By contrast, complexes of Aβ, SAP and C1q complement protein stimulate increased cytokine synthesis"
+complex(p(HGNC:APP),p(HGNC:APCS),p(GFAM:"C1q domain containing")) -> bp(GO:"cytokine production")
+UNSET MeSHDisease
+
+SET Support = "In some neurodegenerative diseases, such as AD and prion disease, most misfolded protein accumulates extracellularly and activates the microglia in the local microenvironment"
+SET MeSHDisease = {"Alzheimer Disease", "Prion Diseases"}
+p(FIXME:"misfolded protein",loc(GO:"extracellular region")) -> bp(GO:"microglial cell activation")
+UNSET MeSHDisease
+
+SET Support = "By contrast, the misfolded proteins present in other disorders such as PD, ALS and Huntington disease (HD) accumulate intracellularly, but are nevertheless still associated with microglial activation"
+SET MeSHDisease = {"Parkinson Disease", "Amyotrophic Lateral Sclerosis","Huntington Disease"}
+p(FIXME:"misfolded protein",loc(GO:"intracellular")) -> bp(GO:"microglial cell activation")
+UNSET MeSHDisease
+
+SET Support = "Raised levels of proinflammatory cytokines and inducible nitric oxide synthase have also been detected
+in these brain regions, providing evidence of a local inflammatory reaction"
+SET MeSHDisease = "Parkinson Disease"
+path(DO:"Parkinson's disease") pos a(MESH:Cytokines)
+path(DO:"Parkinson's disease") pos a(MESH:"Nitric Oxide Synthase")
+a(MESH:Cytokines) reg bp(GO:"inflammatory response")
+a(MESH:"Nitric Oxide Synthase") reg bp(GO:"inflammatory response")
+UNSET MeSHDisease
+
+SET Support = "A study in which injection of endotoxin—a potent activator of microglia—into the substantia nigra led to microglial activation and death of dopaminergic cells, however, supports the hypothesis that activated microglia and inflammation might be contributory factors to PD pathogenesis"
+SET MeSHAnatomy = "Substantia Nigra"
+a(MESH:Endotoxins) -> bp(GO:"microglial cell activation")
+SET Cell = "dopaminergic neuron"
+a(MESH:Endotoxins) -> bp(GO:"cell death")
+UNSET Cell
+UNSET MeSHAnatomy
+UNSET Species
+
+SET Support = "Evidence that activated
+microglia contribute to disease progression in ALS comes from elegant studies in transgenic mice that express mutated superoxide dismutase 1 (SOD1) as a model of familial ALS"
+SET Species = "10090"
+SET MeSHDisease = "Amyotrophic Lateral Sclerosis"
+SET Cell = "microglial cell"
+p(MGI:Sod1, var("?")) -> bp(GO:"microglial cell activation")
+bp(GO:"microglial cell activation") pos path(DO:"amyotrophic lateral sclerosis")
+
+SET Support = "When the mouse lines are manipulated to reduce the expression of mutant SOD1 in microglia, including those adjacent to the diseased motor neurons, the rate of disease progression is slowed and lifespan extended"
+p(MGI:Sod1, var("?")) pos path(DO:"amyotrophic lateral sclerosis")
+
+SET Support = "Microglia expressing the mutated soD1 protein generate more
+superoxide and nitric oxide when challenged with endotoxin than do wild-type microglia"
+composite(a(MESH:Endotoxins),p(MGI:Sod1, var("?"))) -> a(CHEBI:superoxide)
+composite(a(MESH:Endotoxins),p(MGI:Sod1, var("?"))) -> a(CHEBI:"nitric oxide")
+UNSET MeSHDisease
+UNSET Cell
+UNSET Species
+
+SET Support = "In addition to widespread apoptosis, evidence is accumulating that synaptic loss is also prominent in neurodegenerative diseases such as AD"
+SET Species = "9606"
+SET MeSHDisease = "Alzheimer Disease"
+path(DO:"Alzheimer's disease") pos deg(a(GO:synapse))
+
+SET Support = "Synaptic loss correlates
+positively with dementia progression,and is probably an early component of the neuronal degeneration"
+deg(a(GO:synapse)) pos path(DO:dementia)
+UNSET MeSHDisease
+UNSET Species
+
+SET Support = "A notable feature of these mice, and of triple transgenic mice that carry tau genes bearing frontotemporal dementia-causing mutations, in addition to the hAPP and PS1 genes, is the lack of widespread and catastrophic neurodegeneration typical of AD"
+SET Species = "10090"
+SET MeSHDisease = "Frontotemporal Dementia"
+composite(p(HGNC:MAPT, var("?")),p(HGNC:APP),p(HGNC:PSEN1)) pos path(DO:"Alzheimer's disease")
+UNSET MeSHDisease
+
+SET Support = "Delivery of a large dose of a potent proinflammatory agent such as lipopolysaccharide directly into the brain, for example, will enhance phagocytosis of amyloid by microglia"
+SET MeSHAnatomy = {"Brain", "Microglia"}
+a(CHEBI:lipopolysaccharide) -> deg(p(MGI:App))
+UNSET MeSHAnatomy
+UNSET Species 
+
+SET Support = "Other manipulations of the innate immune system that lead to enhanced phagocytosis include whole-body irradiation followed by bone marrow transplantation (Bmt),in which the bone marrow-derived cells have been observed to phagocytose the amyloid, and systemic injection of macrophage colony stimulating factor 1 (CsF-1)"
+p(MGI:Csf1) -> bp(GO:phagocytosis)
+
+SET Support = "These approaches would, however, be of little clinical relevance in an elderly, frail population with AD, since BMT carries substantial risks, and CsF-1 is a proinflammatory factor that exacerbates inflammatory disease"
+p(MGI:Csf1) neg path(MESH:Inflammation)
+
+SET Support = "This switch in microglial phenotype was associated with exaggerated symptoms of sickness behavior such as fever and reduced mobility, increased neuronal loss, and an increase in disease progression"
+SET MeSHDisease = "Prion Diseases"
+a(FIXME:"proinflammatory microglia") -> path(MESH:Fever)
+a(FIXME:"proinflammatory microglia") -| bp(MESH:"Motor Activity")
+a(FIXME:"proinflammatory microglia") -| a(MESH:Neurons)
+a(FIXME:"proinflammatory microglia") -> path(MESH:"Disease Progression")
+UNSET MeSHDisease
+
+SET Support = "The loss of neurons and their ligands that bind itim receptors on microglia, as well as the presence of DamPs, leads to microglial ‘priming’ as neurodegeneration progresses."
+a(MESH:Alarmins) -> bp(FIXME:"microglial priming")
+
+SET Support = "In keeping with the studies in animal models, the immunization of patients who have AD has indeed led to clearance of amyloid plaques, which was associated with amyloid phagocytosis by macrophages and microglia (Figure 2)."
+SET Species  ="9606"
+SET MeSHDisease = "Alzheimer Disease"
+p(HGNC:APP) -| path(MESH:"Plaque, Amyloid")
+path(MESH:"Plaque, Amyloid") association bp(GO:phagocytosis)
+
+SET Support = "According to epidemiological evidence, a single bout of delirium can accelerate cognitive decline in patients with AD"
+path(MESH:Delirium) -| bp(GO:cognition)
+
+SET Support = "Furthermore, a study published in 2009 demonstrated that both acute and chronic systemic inflammation are associated with raised levels of serum tnF, which in turn is associated with accelerated, delirium-independent cognitive decline in patients with AD"
+p(HGNC:TNF) -> path(FIXME:"systemic inflammation")
+path(FIXME:"systemic inflammation") association path(MESH:"Cognitive Dysfunction") 
+
+SET Support = "Also of note is the fact that many of the risk factors for AD, such as obesity, smoking, diabetes,atherosclerosis and periodontitis,are associated with chronic systemic inflammation"
+path(DO:obesity) pos path(DO:"Alzheimer's disease")
+path(MESH:Smoking) pos path(DO:"Alzheimer's disease")
+path(DO:"diabetes mellitus") pos path(DO:"Alzheimer's disease")
+path(DO:"diabetes insipidus") pos path(DO:"Alzheimer's disease")
+path(DO:atherosclerosis) pos path(DO:"Alzheimer's disease")
+path(DO:periodontitis) pos path(DO:"Alzheimer's disease")
+path(DO:obesity) pos path(FIXME:"systemic inflammation")
+path(MESH:Smoking) pos path(FIXME:"systemic inflammation")
+path(DO:"diabetes mellitus") pos path(FIXME:"systemic inflammation")
+path(DO:"diabetes insipidus") pos path(FIXME:"systemic inflammation")
+path(DO:atherosclerosis) pos path(FIXME:"systemic inflammation")
+path(DO:periodontitis) pos path(FIXME:"systemic inflammation")
+UNSET MeSHDisease
+UNSET Species 
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

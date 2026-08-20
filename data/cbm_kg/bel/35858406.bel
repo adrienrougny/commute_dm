@@ -1,0 +1,295 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "35858406.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"dsRNA viral genome"}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION Cell_Culture AS LIST {"Primary organotypic cortical slice cultures", "human stem cell derived cortical organoid cultures"}
+DEFINE ANNOTATION LifeCycle_Stage AS LIST {"developing stage", "adult stage"}
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+
+##################################################################################
+# Statements #
+##################################################################################
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Proc Natl Acad Sci U S A. 2022 Jul 26;119(30):e2122236119. doi: 10.1073/pnas.2122236119. Epub 2022 Jul 12.", "35858406"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "Strikingly, we observed abundant infection in astrocytes, as indicated by the presence of viral N protein, S RNA, and dsRNA, with 90% of infected cells expressing glial fibrillary acidic protein (GFAP) or Aquaporin 4 (AQP4) throughout the outer subventricular zone (SVZ) of primary cortical tissue (Fig. 1B)."
+SET Species = "9606"
+SET Disease = "COVID-19"
+SET Cell ="astrocyte"
+SET Cell_Culture = "Primary organotypic cortical slice cultures"
+SET BioAssay = "immunohistochemistry"
+path(DO:"COVID-19") pos p(UNIPROT:P0DTC9, loc(MESH:Astrocytes))
+path(DO:"COVID-19") pos a(FIXME:"dsRNA viral genome")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") association a(FIXME:"dsRNA viral genome")
+path(DO:"COVID-19") pos p(HGNC:GFAP)
+path(DO:"COVID-19") pos p(HGNC:AQP4)
+
+SET Support = "Immature astrocytes expressing HOPX and PAX6, as well as maturing astrocytes expressing S100B and GLAST, demonstrated high infectivity."
+SET Cell = "immature astrocyte"
+path(DO:"COVID-19") pos p(HGNC:HOPX)
+path(DO:"COVID-19") pos p(HGNC:PAX6)
+UNSET Cell
+SET Cell = "mature astrocyte"
+path(DO:"COVID-19") pos p(HGNC:S100B)
+path(DO:"COVID-19") pos p(HGNC:SLC1A3)
+UNSET Cell
+
+SET Support = "Additionally, vascular units, many of which were surrounded by GFAP+ astrocytes forming the blood brain barrier, express a SARS-CoV-2 entry factor, ACE2."
+SET MeSHAnatomy = "Blood Vessels"
+path(DO:"COVID-19") pos p(HGNC:ACE2)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "Astrocytes adjacent to infected vasculature were also frequently infected (SI Appendix, Fig. 2D), suggesting a potential hematologic means of viral spread in the cortex."
+path(DO:"COVID-19") pos a(TAX:"Severe acute respiratory syndrome coronavirus 2", loc(MESH:Astrocytes))
+UNSET Cell_Culture
+
+SET Support = "However, by week 22 of differentiation—a stage when significant gliogenesis has occurred in our organoids—GFAP+AQP4+ astrocytes were robustly infected, consistent with our results in primary tissue samples."
+SET Cell ="astrocyte"
+SET Cell_Culture = "human stem cell derived cortical organoid cultures"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:gliogenesis)
+
+SET Support = "Together, experiments utilizing primary and organoid cortical cultures suggest SARS-CoV-2 can readily infect, replicate, and propagate in astrocytes in the developing human cortex."
+path(DO:"COVID-19") pos a(TAX:"Severe acute respiratory syndrome coronavirus 2", loc(MESH:Astrocytes))
+
+SET Support = "Differential gene expression analysis revealed an increase in expression for genes involved in inflammation, the innate immune response, and the defense response to viral infection (Fig. 3 B)."
+SET Cell_Culture = "Primary organotypic cortical slice cultures"
+SET BioAssay = "RNA-seq gene expression profiling assay"
+path(DO:"COVID-19") pos r(HGNC:SPP1)
+path(DO:"COVID-19") pos r(HGNC:COL8A2)
+path(DO:"COVID-19") pos r(HGNC:CHI3L1)
+path(DO:"COVID-19") pos r(HGNC:SLC11A1)
+path(DO:"COVID-19") pos r(HGNC:TREM2)
+path(DO:"COVID-19") pos r(HGNC:SASH3)
+path(DO:"COVID-19") neg r(HGNC:NPAS4)
+path(DO:"COVID-19") neg r(HGNC:EGR3)
+path(DO:"COVID-19") neg r(HGNC:EGR2)
+path(DO:"COVID-19") neg r(HGNC:ARC)
+path(DO:"COVID-19") neg r(HGNC:NR4A3)
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+path(DO:"COVID-19") increases bp(GO:"innate immune response")
+path(DO:"COVID-19") increases bp(GO:"defense response to virus")
+
+SET Support = "Relatively fewer genes were downregulated, but those that decreased were involved in fundamental cellular processes including cholesterol biosynthesis, calcium transport, cell size, and morphology."
+path(DO:"COVID-19") decreases bp(GO:"cholesterol biosynthetic process")
+path(DO:"COVID-19") decreases bp(GO:"calcium ion transport")
+path(DO:"COVID-19") decreases bp(GO:"regulation of cell size")
+
+SET Support = "Among the top upregulated genes were those implicated in inflammation, injury response, and microglial activation (DGE_VolcanoPlot) (Fig. 3B, Right). Microglia markers and activation genes—including TREM2, CD4, SPP1, ITGAX—were also increased in infected cortical tissue."
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+path(DO:"COVID-19") increases bp(GO:"microglial cell activation")
+path(DO:"COVID-19") pos p(HGNC:TREM2)
+path(DO:"COVID-19") pos p(HGNC:CD4)
+path(DO:"COVID-19") pos p(HGNC:SPP1)
+path(DO:"COVID-19") pos p(HGNC:ITGAX)
+p(HGNC:TREM2) increases bp(GO:"microglial cell activation")
+p(HGNC:CD4) increases bp(GO:"microglial cell activation")
+p(HGNC:SPP1) increases bp(GO:"microglial cell activation")
+p(HGNC:ITGAX) increases bp(GO:"microglial cell activation")
+
+SET Support = "Additionally, many indicators of inflammation, cytokine secretion, and immune activation had increased expression."
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+path(DO:"COVID-19") increases bp(GO:"cytokine secretion")
+path(DO:"COVID-19") increases bp(GO:"immune response")
+
+SET Support = "In addition to an increase in inflammatory and reactivity gene expression in microglia, there was an increased abundance of CD14, IFITM3, and TREM2 protein in infected astrocytes."
+SET Cell ="microglial cell"
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+UNSET Cell
+SET Cell ="astrocyte"
+path(DO:"COVID-19") pos p(HGNC:CD14)
+path(DO:"COVID-19") pos p(HGNC:IFITM3)
+path(DO:"COVID-19") pos p(HGNC:TREM2)
+UNSET Cell
+
+SET Support = "Focusing on infected samples only, we identified the top genes with high correlation (R > 0.8) and anti-correlation (R < −0.8) to SARS-CoV-2 E and N gene levels (Materials and Methods). The top genes were involved in viral response and entry, type I interferon (IFN) signaling, IFN-gamma signaling, Major Histocompatibility Complex (MHC) activation, and interleukin 4 signaling."
+path(DO:"COVID-19") increases bp(GO:"viral entry into host cell")
+path(DO:"COVID-19") increases bp(GO:"type I interferon signaling pathway")
+path(DO:"COVID-19") increases bp(PW:"type II interferon signaling pathway")
+path(DO:"COVID-19") increases bp(GO:"MHC protein binding")
+path(DO:"COVID-19") increases bp(GO:"interleukin-4-mediated signaling pathway")
+
+SET Support = "Although there was enrichment for microglial and astrocyte activation in the gene set upregulated in infection, genes associated with high SARS-CoV-2 E and N were overwhelmingly enriched in two reactive astrocyte states that appear to be downstream of Nuclear factor kappa B (NF-κB) signaling."
+path(DO:"COVID-19") pos bp(GO:"microglial cell activation")
+path(DO:"COVID-19") pos bp(GO:"astrocyte activation")
+path(DO:"COVID-19") pos p(UNIPROT:P0DTC4, loc(MESH:Astrocytes))
+path(DO:"COVID-19") pos p(UNIPROT:P0DTC9, loc(MESH:Astrocytes))
+p(UNIPROT:P0DTC4) increases bp(GO:"astrocyte activation")
+p(UNIPROT:P0DTC9) increases bp(GO:"astrocyte activation")
+
+SET Support = "However, there was an increase in the overall number of TUNEL+ apoptotic cells in cultures exposed to SARS-CoV-2 (Fig. 3D). Although we observed no change in astrocyte cell death, there was an overall decrease in the number of neurons ."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"apoptotic process")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases a(CELL:neuron)
+
+SET Support = "More than 50% of infected cells expressed the reactive marker Synemin (SYNM) (27, 28), and the number of SYNM+ cells increased by 20% postinfection compared to controls."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:SYNM)
+p(HGNC:SYNM) biomarkerFor bp(GO:"astrocyte activation")
+
+SET Support = " Another marker of reactivity, Vimentin (VIM) (29), trended toward increased intensity after SARS-CoV-2 exposure in infected astrocytes."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:VIM)
+p(HGNC:VIM) biomarkerFor bp(GO:"astrocyte activation")
+
+SET Support = "We observed that more than 75% of infected cells expressed EGFR, and total abundance of EGFR doubled after SARS-CoV-2 infection compared to control conditions."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:EGFR)
+UNSET Cell_Culture
+
+SET Support = "Organoid-derived astrocytes also exhibit some reactive characteristics in response to infection, with approx 70% of organoid-derived infected cells expressing SYNM and 33% expressing EGFR (Fig. 4D)."
+SET Cell_Culture = "Primary organotypic cortical slice cultures"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:SYNM)
+p(HGNC:SYNM) biomarkerFor bp(GO:"astrocyte activation")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:EGFR)
+UNSET Cell_Culture
+
+SET Support = "We investigated the impact of SARS-CoV-2 on cellular stress by evaluating the abundance of endoplasmic reticulum stress and the unfolded protein response gene ARCN1. ARCN1 is lowly expressed in developing human cortex tissue, but after infection by SARS-CoV-2, we found a 15% increase in expression, exclusively in infected cells coexpressing dsRNA."
+SET Cell_Culture ="Primary organotypic cortical slice cultures"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ARCN1)
+path(DO:"COVID-19") pos a(FIXME:"dsRNA viral genome") 
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") association a(FIXME:"dsRNA viral genome")
+
+SET Support = "To evaluate ACE2 RNA abundance in cortical tissue, we utilized fluorescent in situ hybridization of an ACE2 RNA probe, using lung tissue as a positive control (Fig. 5A). Although we observed robust expression of ACE2 throughout the lung, as well as modest expression in vascular cells (SI Appendix, Fig. 2D), it was absent in cortical astrocytes."
+SET BioAssay = "nucleic acid hybridization-based method"
+SET MeSHAnatomy = {"Lung", "Blood Vessels"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "NRP1 is a potential candidate entry factor for infection, as it has been demonstrated to be a SARS-CoV-2 host factor (34). We observed NRP1 RNA expression in primary tissue, specifically in cortical neurons—a population, however, where we observed minimal infection (SI Appendix, Fig. 8A). When we evaluated NRP1 protein abundance, we similarly observed membrane-bound staining in neurons in the cortical plate in primary tissue, but none in dsRNA+-infected cells."
+SET MeSHAnatomy = "Cerebral Cortex"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:NRP1)
+p(HGNC:NRP1) increases bp(GO:"viral entry into host cell")
+
+SET Support = " Additionally, SARS-CoV proteases TMPRSS2, FURIN, and CTSB express modest RNA levels across cortical tissue samples, but infected astrocytes have abundant protein of all three proteases."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TMPRSS2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:FURIN)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CTSB)
+UNSET MeSHAnatomy
+SET Cell ="astrocyte"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:TMPRSS2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:FURIN)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:CTSB)
+UNSET Cell
+
+SET Support = "SARS-CoV-2 restriction factors are also present. LY6E is expressed in a variety of cortical cell types across development, while IFITM1 RNA expression is most robust in adult cortex (SI Appendix, Fig. 8D)."
+SET MeSHAnatomy = "Cerebral Cortex"
+SET LifeCycle_Stage = "developing stage"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:LY6E)
+UNSET LifeCycle_Stage
+SET LifeCycle_Stage = "adult stage"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IFITM1)
+UNSET LifeCycle_Stage
+UNSET MeSHAnatomy
+
+SET Support = "Three days after SARS-CoV-2 exposure, astrocytes treated with the control scramble-red fluorescent protein (RFP) lentivirus displayed robust infection by SARS-CoV-2 (Fig. 5D). When slices were pretreated with a potent shRNA against CD147, there was a significant reduction in SARS-CoV-2 infection."
+SET Cell = "astrocyte"
+path(DO:"COVID-19") pos p(HGNC:BSG)
+
+SET Support = "To probe the functional role of DPP4 in infectivity, organotypic slice cultures were treated with the DPP4 inhibitor Vildagliptin for 24 h prior to and throughout the duration of infection. As before, there was robust infection in GFAP+ astrocytes in virally exposed samples after 72 h. However, in tissue samples treated with the DPP4 inhibitor, there was a 35% reduction in the number of SARS-CoV-2 N+ cells and a 60% reduction in dsRNA+ cells (SI Appendix, Fig. 12E). Additionally, there was a 70% reduction in the number of cells expressing ARCN1 after DPP4 inhibition, indicating decreased activation of cellular stress."
+a(CHEBI:vildagliptin) decreases p(UNIPROT:P0DTC9)
+a(CHEBI:vildagliptin) decreases a(FIXME:"dsRNA viral genome") 
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") association a(FIXME:"dsRNA viral genome")
+a(CHEBI:vildagliptin) decreases a(NCIT:"Cellular Stress")
+
+SET Support = "We exposed the CD147- or DPP4-expressing organoids to SARS-CoV-2 for 2 h. We observed a significant increase in SARS-CoV-2 N+ cells with DPP4 overexpression and an increase in dsRNA+ cells in both DPP4- and CD147-overexpressing conditions (SI Appendix, Fig. 13C). Taken together with the loss of function and inhibition studies, these findings indicate that DPP4 and CD147 are sufficient to mediate SARS-CoV-2 infection and suggest that DPP4 may promote viral entry, while CD147 may promote viral replication."
+path(DO:"COVID-19") pos p(HGNC:BSG)
+path(DO:"COVID-19") pos p(HGNC:DPP4)
+path(DO:"COVID-19") pos a(FIXME:"dsRNA viral genome")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") association a(FIXME:"dsRNA viral genome")
+p(HGNC:DPP4) increases bp(GO:"viral entry into host cell")
+p(HGNC:BSG) increases bp(GO:"viral genome replication")
+
+SET Support = "We found that GFAP+ adult cortical astrocytes, similar to developing astrocytes, express both CD147 and DPP4."
+SET Cell = "astrocyte"
+path(DO:"COVID-19") pos p(HGNC:BSG)
+path(DO:"COVID-19") pos p(HGNC:DPP4)
+
+SET Support = "While we observed higher expression of CD147 in GFAP+ astrocytes than NEUN+ neurons, DPP4 had similar levels of expression in both cell types (Fig. 6B and SI Appendix, Figs. 9B and 14). We observed ACE2 expression along blood vessels but found no expression in adult cortical cell types."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:BSG)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+
+SET Support = "Moreover, infected SARS-CoV-2 S+ VIM+ astrocytes expressed DPP4 and CD147 but not ACE2 (Fig. 6C). The high abundance of VIM in infected cells suggests both specific astrocyte tropism as well as reactivity in adult tissue. Together with our observations in infected organoids and developing tissue, these data suggest tropism of SARS-CoV-2 for astrocytes in both developing and adult human cortex. Furthermore, the capacity for viral propagation can occur independent of ACE2 and is mediated, in part, by CD147 and DPP4."
+SET MeSHAnatomy = "Cerebral Cortex"
+SET Cell = "astrocyte"
+path(DO:"COVID-19") pos p(HGNC:BSG)
+path(DO:"COVID-19") pos p(HGNC:DPP4)
+path(DO:"COVID-19") pos p(HGNC:VIM)
+p(HGNC:VIM) biomarkerFor bp(GO:"astrocyte activation")
+path(DO:"COVID-19") increases bp(MESH:"Viral Tropism")
+p(HGNC:BSG) increases bp(GO:"viral genome replication")
+p(HGNC:DPP4) increases bp(GO:"viral genome replication")
+UNSET Cell
+UNSET MeSHAnatomy
+UNSET Species
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET TextLocation
+UNSET Citation

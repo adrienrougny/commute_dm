@@ -1,0 +1,185 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "28636593.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"alpha-synuclein fibrillation"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Custom_cell AS LIST {"CD3-positive T-lymphocyte"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Nature. 2017 Jun 29;546(7660):656-661. doi: 10.1038/nature22815. Epub 2017 Jun 21.", "28636593"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Support = "While ~15% of HC carried DRB1*15:01/DRB5*01:01 alleles, ~1/3 of PD carried these alleles (difference between PD and HC, p=0.036 and 0.022 for DRB1*15:01/DRB5*01:01), indicating association of HLA DR allelic variants with PD in our cohort (Supplemental Table 3)."
+SET Species = "9606"
+composite(g(HGNC:"HLA-DRB1", var("?")), g(HGNC:"HLA-DRB5", var("?"))) pos path(DO:"Parkinson's disease")
+
+
+SET Support = "We identified two antigenic regions in α-syn, the first near the N terminus, composed of aa31GKTKEGVLYVGSKTK aa45 and aa32KTKEGVLYVGSKTKE aa46 (referred to as the Y39 region) (Fig 1a), which elicited an apparent Class II restricted IL-5 and IFNγ response (Fig 1b–d)."
+p(HGNC:SNCA, frag("31_45")) -> sec(p(HGNC:IL5))
+p(HGNC:SNCA, frag("31_45")) -> sec(p(HGNC:IFNG))
+p(HGNC:SNCA, frag("32_46")) -> sec(p(HGNC:IL5))
+p(HGNC:SNCA, frag("32_46")) -> sec(p(HGNC:IFNG))
+
+
+SET Support = "The second antigenic region was near the C terminus (aa116–140) (referred to as the S129 region) (Fig 1a), and required phosphorylation of amino acid residue S129. The three phosphorylated aaS129 epitopes (aa116MPVDPDNEAYEMPSEaa130, aa121DNEAYEMPSEEGYQDaa135, aa126EMPSEEGYQDYEPEAaa140) produced markedly higher IL-5 responses in PD than HC (p=0.02, Fisher's exact test, 300 SFC threshold) (Fig 1e–g)."
+SET MeSHDisease = "Parkinson Disease"
+p(HGNC:SNCA, frag("116_140"), pmod(Ph, Ser, 129)) -> p(HGNC:IL5)
+p(HGNC:SNCA, frag("121_135"), pmod(Ph, Ser, 129)) -> p(HGNC:IL5)
+p(HGNC:SNCA, frag("126_140"), pmod(Ph, Ser, 129)) -> p(HGNC:IL5)
+UNSET MeSHDisease
+
+SET Support = "The immune responses to aa39 and aa129 region epitopes, including a second cohort of 19  PD and 12 HC assayed for response to additional phosphorylated and nitrated modifications  (Extended Data Fig 1), were different between PD and HC for secretion of both IFNγ (two-tailed Mann-Whitney test, p<0.05) and IL-5 (two-tailed Mann-Whitney test, p<0.001), and combined responses (two-tailed Mann-Whitney test, p<0.001) (Fig. 2a–c). "
+p(HGNC:SNCA, frag("32_46"), pmod(Ph,Tyr,39)) -> sec(p(HGNC:IL5))
+p(HGNC:SNCA, frag("32_46")) -> sec(p(HGNC:IL5))
+p(HGNC:SNCA, frag("32_46"), pmod(Ph,Tyr,39)) -> sec(p(HGNC:IFNG))
+p(HGNC:SNCA, frag("32_46")) -> sec(p(HGNC:IFNG))
+p(HGNC:SNCA, frag("126_140"), pmod(Ph, Ser, 129)) -> sec(p(HGNC:IL5))
+p(HGNC:SNCA, frag("126_140")) -> sec(p(HGNC:IL5))
+p(HGNC:SNCA, frag("126_140"), pmod(Ph, Ser, 129)) -> sec(p(HGNC:IFNG))
+p(HGNC:SNCA, frag("126_140")) -> sec(p(HGNC:IFNG))
+
+
+SET Support = "While residue aa39 is highly phosphorylated in PD patients 24, Y39 phosphorylation was not required for antigenic response. The response was primarily polarized towards IL-5 in PD (71% IL-5 and 29% IFNγ; Fig. 2d). This polarization was PD specific, and the relatively rare HC responses were not similarly polarized (46% IL-5 and 54% IFNγ )."
+path(DO:"Parkinson's disease") -> p(HGNC:IL5)
+p(HGNC:SNCA, frag("32_46"), pmod(Ph,Tyr,39)) -> sec(p(HGNC:IL5))
+p(HGNC:SNCA, frag("32_46")) -> sec(p(HGNC:IFNG))
+
+
+SET Support = "Approximately 0.2% of CD3+ T cells responded to the α-syn peptides. Of the responsive T cells, ~50% produced IL-4 and 50% produced IFNγ, with no detectable IL-10 or IL-17 production."
+SET MeSHDisease = "Parkinson Disease"
+SET Custom_cell = "CD3-positive T-lymphocyte"
+p(HGNC:SNCA, frag("?")) -> sec(p(HGNC:IFNG))
+p(HGNC:SNCA, frag("?")) -> sec(p(HGNC:IL4))
+UNSET MeSHDisease
+UNSET Custom_cell
+
+
+SET Support = "Extended Data Fig. 3 shows that T cells lines specific for the α-syn epitopes were activated by antigen presenting cells pulsed with native or PFF protein in 7/12 and 11/12 cases. There was significantly higher response to native α-syn (p=0.004) and PFF α-syn (p=0.0005) than media alone. Thus, T cells can respond to α-syn epitopes arising from natural processing of extracellular native α-syn, which is present in blood, and the fibrilized α-syn associated with PD"
+SET MeSHDisease = "Parkinson Disease"
+SET MeSHAnatomy = "Leukocytes, Mononuclear"
+p(HGNC:SNCA) -> p(HGNC:IL4)
+p(HGNC:SNCA) -> p(HGNC:IL6)
+bp(FIXME:"alpha-synuclein fibrillation") -> p(HGNC:IL4)
+bp(FIXME:"alpha-synuclein fibrillation") -> p(HGNC:IL6)
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+
+
+#SET Support = "The HLA class II variants  DRB1*15:01 and DRB5*01:01 bound the epitope with high affinity (2.8 nM and 8.1 nM,  respectively), while DRB1*07:01, B1*09:01 and DQB1*03:01 bound in the 80–250 nM range. The aa32KTKEGVLYVGSKTKEaa46 epitope phosphorylated at Y39 also bound DRB1*15:01 and DRB5*01:01 with high affinity."
+p(HGNC:SNCA, frag("32_46"), pmod(Ph,Tyr,39)) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-DRB1", var("?")))
+p(HGNC:SNCA, frag("32_46"), pmod(Ph,Tyr,39)) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-DRB5", var("?")))
+
+
+#SET Support = "In contrast, the C terminus peptides spanning S129 and its post-translational forms bound HLA class II alleles weakly, with the exception of aa121DNEAYEMPSEEGYQDaa135, which in both native and phosphorylated S129 forms strongly bound DQB1*05:01."
+p(HGNC:SNCA, frag("121_135")) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-DQB1", var("?")))
+p(HGNC:SNCA, frag("121_135"), pmod(Ph,Tyr,39)) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-DQB1", var("?")))
+
+
+#SET Support = "We detected negative association between recognition of aa32KTKEGVLYVGSKTKEaa46 and the DRB3*02:02 allele, suggesting this allele might be protective."
+p(HGNC:SNCA, frag("32_46")) -| complex(p(HGNC:SNCA), g(HGNC:"HLA-DRB3", var("?")))
+g(HGNC:"HLA-DRB3", var("?")) neg path(DO:"Parkinson's disease")
+
+#SET Support = "The four alleles DRB1*15:01, DRB5*01:01, DQB1*03:04 and A*11:01 accounted for every single individual responding to the aa39 epitope (p=0.00007 for PD, Table 1). This association was far more significant in PD than HC (p=0.009)"
+SET MeSHDisease = "Parkinson Disease"
+p(HGNC:SNCA, frag("32_46")) -| complex(p(HGNC:SNCA), g(HGNC:"HLA-DRB1", var("?")))
+p(HGNC:SNCA, frag("32_46")) -| complex(p(HGNC:SNCA), g(HGNC:"HLA-DRB5", var("?")))
+p(HGNC:SNCA, frag("32_46")) -| complex(p(HGNC:SNCA), g(HGNC:"HLA-DQB1", var("?")))
+p(HGNC:SNCA, frag("32_46")) -| complex(p(HGNC:SNCA), g(HGNC:"HLA-A", var("?")))
+
+#SET Support = "The combined association for the four alleles for PD vs. HC was significant (p=0.008 two-tailed Fisher's exact test compared to individual DRB1*15:01, p=0.05, and DRB5*01:01, p=0.03), with ~ half of the PD (31 with alleles and 27 without) carrying one of the four alleles, whereas only ~20% of the HC (8 with alleles and 26 without) expressed one of the four (Table 1)"
+g(HGNC:"HLA-DRB1", var("?")) pos path(DO:"Parkinson's disease")
+g(HGNC:"HLA-DRB5", var("?")) pos path(DO:"Parkinson's disease")
+
+#SET Support = "We found that 5/19 PD responded to these short peptides while 0/12 HC responded (Fig. 3b,c) (two-tailed Chi square=3.765, 1df, p=0.0523). Reactivity occurred mostly on peptides contained within the Y39 region, involving three peptides (aa36GVLYVGSKTKaa45, aa37VLYVGSKTKaa45, aa37VLYVGSKTKKaa46) predicted as potential A*11:01 binders 15."
+p(HGNC:SNCA, frag("36_45")) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-A", var("?")))
+p(HGNC:SNCA, frag("37_45")) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-A", var("?")))
+p(HGNC:SNCA, frag("37_46")) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-A", var("?")))
+UNSET MeSHDisease
+
+#SET Support = "We tested each peptide for binding to purified HLA A*11:01 molecules in vitro, and found that the 9mer aa37VLYVGSKTKaa45, which is nested within the two 10mers, bound with good affinity (IC50 = 161 nM), while the other two bound poorly, indicating that the 9mer is responsible for T cell recognition. "
+p(HGNC:SNCA, frag("37_45")) -> complex(p(HGNC:SNCA), g(HGNC:"HLA-A", var("?")))
+UNSET Species
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Citation

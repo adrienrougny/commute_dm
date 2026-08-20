@@ -1,0 +1,197 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "37248302.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"Multiple system atrophy parkinsonian variant", "Multiple system atrophy cerebellar variant", "Parkinson’s disease with dementia", "delayed heart-to-mediastinum ratio", "fibrous inclusions", "pale inclusions","alpha-synuclein aggregation"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION Technique AS LIST {"immunoprecipitation-based real-time quaking-induced conversion", "cardiac scintigraphy", "Super resolution structured illumination microscopy"}
+DEFINE ANNOTATION Duration_after_injection AS LIST {"6 months", "12 months"}
+DEFINE ANNOTATION Custom_Disease AS LIST {"Parkinson’s disease with dementia"}
+DEFINE ANNOTATION Specimen AS LIST {"Serum"}
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Nat Med. 2023 Jun;29(6):1448-1455. doi: 10.1038/s41591-023-02358-9. ", "37248302"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+
+SET Support = "Positive results for serum IP/RT-QuIC for patients with PD in the first, second and external cohorts were 210/221 (95%), 34/34 (100%) and 15/20 (75%), respectively (Table 2 and Extended Data Table 4). "
+SET Technique = "immunoprecipitation-based real-time quaking-induced conversion"
+path(DO:"Parkinson's disease") -> p(HGNC:SNCA)
+
+
+SET Support = "Seventeen of 26 patients with MSA parkinsonian variant (MSA-P) and eight of 13 patients with MSA cerebellar variant (MSA-C) were positive (Supplementary Table 6)."
+path(FIXME:"Multiple system atrophy parkinsonian variant") -> p(HGNC:SNCA) 
+path(FIXME:"Multiple system atrophy cerebellar variant") -> p(HGNC:SNCA) 
+
+
+SET Support = "All PRKN-positive patients had negative IP/RT-QuIC results. "
+p(HGNC:PRKN, var("?")) -| p(HGNC:SNCA)
+UNSET Technique
+
+SET Support = "The forming rates of IP/RT-QuIC results were significantly higher in patients with synucleinopathy than in controls or non-synucleinopathy patients (P<0.001), but the comparison among patients with PD, DLB and MSA did not reveal significant results (Fig. 1a)."
+path(DO:synucleinopathy) -> bp(FIXME:"alpha-synuclein aggregation")
+
+
+SET Support = "In the external cohort, two non-synucleinopathy patients had negative results, whereas the patient with PDD had positive results (Extended Data Table 2)."
+path(FIXME:"Parkinson’s disease with dementia") -> p(HGNC:SNCA)
+
+
+SET Support = "The forming rates correlated with Unified Parkinson’s Disease Rating Scale Part III (UPDRS-III) (P=0.028) and disease duration (P=0.0051) in PD"
+SET MeSHDisease = "Parkinson Disease"
+bp(FIXME:"alpha-synuclein aggregation") pos path(HP:"Poor motor coordination")
+
+SET Support = "The results of Pearson’s chi-square tests showed a significant positive correlation between the results of the IP/RT-QuIC and delayed heart-to-mediastinum (H/M) ratio with 123I-metaiodobenzylguanidine (MIBG) cardiac scintigraphy in patients with PD (Supplementary Table 8a) but not in patients with MSA (Supplementary Table 8b)."
+SET Technique = "cardiac scintigraphy"
+bp(FIXME:"alpha-synuclein aggregation") pos a(FIXME:"delayed heart-to-mediastinum ratio")
+bp(FIXME:"alpha-synuclein aggregation") pos path(DO:"congestive heart failure")
+UNSET Technique
+UNSET MeSHDisease
+
+
+SET Support = "All amplified fibrils derived from patients with RBD with positive IP/RT-QuIC results had the LB diseases-type structure (Supplementary Fig. 2)."
+SET BioAssay = "transmission electron microscopy"
+SET MeSHDisease = "REM Sleep Behavior Disorder"
+p(HGNC:SNCA) -> a(MESH:"Lewy Bodies")
+UNSET MeSHDisease
+UNSET BioAssay
+
+
+SET Support = "Intriguingly, a super-resolution microscopy analysis revealed that intracellular inclusions created by the PD seeds, MSA seeds or DLB seeds tend to exhibit different morphological features, such as fibrous inclusions, dense-core inclusions in MSA and pale-core inclusions in DLB/PDD (Fig. 3a). PD seeds formed significantly more fibrous inclusions (P<0.0001), and DLB/PDD seeds formed significantly more pale inclusions (P<0.0001) (Fig. 3b,c)."
+SET CellLine = "HEK293"
+SET Technique = "Super resolution structured illumination microscopy"
+SET MeSHDisease = "Parkinson Disease"
+p(HGNC:SNCA, var("p.Ala53Thr")) -> a(FIXME:"fibrous inclusions")
+UNSET MeSHDisease
+SET Disease = "Lewy body dementia"
+SET Custom_Disease = "Parkinson’s disease with dementia"
+p(HGNC:SNCA, var("p.Ala53Thr")) -> a(FIXME:"pale inclusions")
+UNSET Custom_Disease
+UNSET Disease
+
+
+SET Support = "This analysis confirmed that the fluorescence density of PD inclusions was significantly lower than that of DLB and MSA inclusions (Fig. 3d)."
+SET Disease = "Lewy body dementia"
+SET MeSHDisease = "Multiple System Atrophy"
+p(HGNC:SNCA, var("p.Ala53Thr")) -> a(GO:"inclusion body")
+UNSET MeSHDisease
+UNSET Disease
+UNSET Technique
+UNSET Species
+
+
+
+SET Species = "10090"
+SET Support = "MSA seed injection resulted in a more rapid development of phosphorylated α-synuclein pathology by 6 months than PD seed injection."
+SET MeSHAnatomy = {"Brain", "Corpus Striatum"}
+SET MeSHDisease = "Multiple System Atrophy"
+SET Duration_after_injection = "6 months"
+path(DO:"multiple system atrophy") -> p(MGI:Snca, pmod(Ph))
+UNSET Duration_after_injection
+
+
+SET Support = "Intriguingly, a reduction in the density of phosphorylated α-synuclein deposits was observed 1 year after MSA seed injection."
+SET Duration_after_injection = "12 months"
+path(MESH:"Multiple System Atrophy") -| p(MGI:Snca, pmod(Ph))
+
+
+SET Support = "The significant loss of GST-pi-positive oligodendrocytes in mouse brains 1year after MSA seed injection (Extended Data Fig. 4) suggests that MSA seeds may induce oligodendrocyte degeneration."
+p(MGI:Snca) -| a(MESH:Oligodendroglia)
+UNSET MeSHDisease
+UNSET Duration_after_injection
+
+ 
+SET Support = "The results of IP/RT-QuIC of the brain samples were all positive (Supplementary Fig. 6a and Supplementary Table 12a), and the forming rate was over 1,000 relative fluorescence units (RFU) per hour."
+SET Specimen = "Serum"
+SET BioAssay = "transmission electron microscopy"
+SET Technique = "immunoprecipitation-based real-time quaking-induced conversion"
+SET Duration_after_injection = {"6 months", "12 months"}
+path(DO:"Parkinson's disease") -> p(MGI:Snca)
+path(MESH:"Multiple System Atrophy") -> p(MGI:Snca)
+UNSET Duration_after_injection
+UNSET Technique
+UNSET BioAssay
+UNSET Specimen
+UNSET MeSHAnatomy
+UNSET BioAssay
+UNSET Species
+UNSET Citation

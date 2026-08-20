@@ -1,0 +1,328 @@
+SET DOCUMENT Name = "10381209.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXME AS LIST {"microvasculature activation","dystrophic neurite","neurotoxicity"}
+
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION Disease_Type AS LIST {"transient"}
+DEFINE ANNOTATION Disease_Condition AS LIST {"acute"}
+DEFINE ANNOTATION Custom_CellLine AS LIST {"primary brain cell culture"}
+DEFINE ANNOTATION Age_Group AS LIST {"neonate"}
+
+SET Citation = {"PubMed", "Free Radic Biol Med. 1999 May;26(9-10):1346-55. doi: 10.1016/s0891-5849(98)00293-7.","10381209"} 
+SET PublicationType = "Review" 
+SET PublicationStatus = "Published" 
+SET Section = "Full Text"  
+
+SET Support = "Perhaps the risk factors that have the most obvious relationship to inflammatory processes include head trauma, transient ischemias, and microvascular defects"
+SET Species = "9606"
+path(MESH:"Craniocerebral Trauma") pos path(MESH:Inflammation) 
+SET Disease_Type = "transient"
+path(DO:ischemia) pos path(MESH:Inflammation) 
+UNSET Disease_Type
+path(DO:"coronary artery disease") pos path(MESH:Inflammation)
+
+SET Support = "Among earlier observations that stand out as pointing toward the need to consider inflammatory processes as important include: (1) Colton's demonstrations that cytokine-activated microglia produce ROS [3,4]; (2) that, in contrast to normal brain, proinflammatory cytokines are prevalent in Alzheimer's brains [5–7]; (3) the early indications that anti-inflammatory therapeutics may delay on-set of Alzheimer's disease [8]; and (4) the early demonstrations that complement and classic markers of immune-mediated damage are expressed in neurodegenerative brains [9,10]."  
+a(MESH:Cytokines) -> bp(GO:"microglial cell activation")
+bp(GO:"microglial cell activation") -> a(CHEBI:"reactive oxygen species")
+SET MeSHAnatomy = "Brain"
+path(DO:"Alzheimer's disease") pos a(MESH:Cytokines) 
+a(CHEBI:"anti-inflammatory drug") -| path(DO:"Alzheimer's disease")
+UNSET MeSHAnatomy
+
+SET Support = "Illustrating these points, McCann's group have shown that the activity of the proinflammatory cytokine IL-1b is inhibited by inhibitory cytokines, one of the most potent of which is IL-1ra, that increases rapidly in the circulatory system to 100-fold higher than the IL-1b levels [13]."
+SET MeSHAnatomy = "Cardiovascular System"
+p(HGNC:IL1R1) -| act(p(HGNC:IL1B))
+path(DO:"Alzheimer's disease") pos p(HGNC:IL1R1)
+UNSET MeSHAnatomy
+
+SET Support = "In contrast to the circulatory system they find very little increase in IL-1ra in the brain, and if then, only much later once IL-1b levels have risen significantly [13]."  
+SET MeSHAnatomy = "Brain"
+path(DO:"Alzheimer's disease") pos p(HGNC:IL6R) 
+path(DO:"Alzheimer's disease") pos p(HGNC:IL1B)
+
+SET Support = "The microglia in brain are analogous to resident macrophages capable of being activated to produce cell mediators, (i.e., such as the cytokines IL-1b, IL-6, TNF-a, etc.), which in turn activate other cell populations, e.g., glia and astrocytes, to subsequently produce other cell mediators that then additionally activate microglia and other cellular populations, therefore, perpetuating and amplifying the inflammatory cascade." 
+bp(GO:"microglial cell activation") -> p(HGNC:IL1B)
+bp(GO:"microglial cell activation") -> p(HGNC:IL6)
+bp(GO:"microglial cell activation") -> p(HGNC:TNF)
+p(HGNC:IL1B) -> bp(GO:"glial cell activation")
+p(HGNC:IL6) -> bp(GO:"glial cell activation")
+p(HGNC:TNF) -> bp(GO:"glial cell activation")
+p(HGNC:IL1B) -> bp(GO:"astrocyte activation")
+p(HGNC:IL6) -> bp(GO:"astrocyte activation")
+p(HGNC:TNF) -> bp(GO:"astrocyte activation")
+bp(GO:"microglial cell activation") -> bp(GO:"inflammatory response")
+
+SET Support = "This cytokine circuit cascade [15–17] is a condition observed in the brains of HIV-induced demented individuals [15,16] and is manifest to various degrees with specific uniqueness in several other neurodegenerative conditions." 
+SET MeSHDisease = "HIV Infections" 
+path(DO:dementia) -> bp(GO:"cytokine-mediated signaling pathway")
+UNSET MeSHDisease
+
+SET Support = "For example, it has been shown that b-amyloid peptide binds to the neuronal receptor for advanced glycation end products (AGE), which in turn then induces macrophage colony-stimulating factor by an oxidant sensitive nuclear factor-kB (NF-kB) dependent pathway that, therefore, sets in motion microglia supported inflammatory pathways [18], which have been shown to be present and operational in the Alzheimer's brain [18]." 
+complex(p(HGNC:APP),p(HGNC:AGER)) -> act(complex(GO:"NF-kappaB complex"))
+act(complex(GO:"NF-kappaB complex")) -> p(HGNC:CSF1)
+
+SET Support = "Another amplification system invoking cytokine-mediated processes shown to occur in Alzheimer's disease involves increased IL-1b production in neuritic plaques [19]." 
+SET MeSHDisease = "Plaque, Amyloid" 
+path(DO:"Alzheimer's disease") pos p(HGNC:IL1B) 
+UNSET MeSHDisease
+
+SET Support = "IL-1b activates astrocytes to form much higher levels of not only b-amyloid precursor protein but also S100b peptide mediator which then promotes neurite growth leading to dystrophic neurites [19]."  
+p(HGNC:IL1B) -> bp(GO:"astrocyte activation")
+bp(GO:"astrocyte activation") -> p(HGNC:APP)
+bp(GO:"astrocyte activation") -> p(HGNC:S100B)
+p(HGNC:IL1B) -> path(FIXME:"dystrophic neurite")
+p(HGNC:S100B) -> path(FIXME:"dystrophic neurite")
+
+SET Support = "That is, after a large inflammatory insult a severely weakened state requires recovery and a large rise in the proinflammatory cytokine IL-1b in the brain causes 'sickness behavior, leading to sleep' and 'diminished likelihood of confrontation with predators and facilitating recovery'[13]." 
+p(HGNC:IL1B) -> path(MESH:"Illness Behavior")
+
+SET Support = "They cite many studies that have shown that several markers of inflammation (major histocompatibility complex, acute phase reactants, complement proteins, cytokines, etc.) have been shown to be significantly increased in the Alzheimer's brain but importantly in most cases the complimentary anti-inflammatory component is also increasingly present [14]."  
+path(DO:"Alzheimer's disease") pos p(GFAM:"Histocompatibility complex")
+path(DO:"Alzheimer's disease") pos a(MESH:"Acute-Phase Proteins")
+path(DO:"Alzheimer's disease") pos a(MESH:"Complement System Proteins")
+path(DO:"Alzheimer's disease") pos a(MESH:Cytokines)
+
+SET Support = "Other anti-inflammatory mediators that have been shown to increase when the corresponding inflammatory agent is increased include: (1) IL-10, which is thought to counteract IL-6 [20]; (2) CD59, the membrane inhibitor of reactive lysis [21]; and (3) SP-40,40 which has clusterin activity [22]."  
+path(DO:"Alzheimer's disease") pos p(HGNC:IL10)
+p(HGNC:IL6) neg p(HGNC:IL10)
+path(DO:"Alzheimer's disease") pos p(HGNC:CD59)
+p(HGNC:CD59) -| bp(GO:"complement-dependent cytotoxicity")
+path(DO:"Alzheimer's disease") pos p(HGNC:CLU)
+
+SET Support = "In a prospective study, it has been observed that clinical dementia in neuropathologically diagnosed Alzheimer's disease was much more prevalent in individuals who had experienced brain infarction than those who had not [24]."  
+SET MeSHDisease = "Alzheimer Disease"
+path(DO:"brain infarction") pos path(DO:dementia)
+
+SET Support = "Therefore, in this very careful Nun study, Snowden et al. [24] clearly demonstrated that even though neuropathologically the senile plaques characteristic of Alzheimer's disease were present, there was a much more significant tendency toward clinical manifestations of dementia if the brain had experienced infarction."  
+path(DO:"brain infarction") pos path(DO:dementia)
+UNSET MeSHAnatomy
+
+SET Support = "This study also noted a strong association with atherosclerosis of the circle of Willis and brain infarcts [24], which, therefore, lends support to the inclusion of not only transient ischemias but also microvascular defects as risk factors in neurodegenerative processes." 
+SET MeSHAnatomy = "Circle of Willis"
+SET Disease_Type = "transient"
+path(DO:ischemia) pos path(MESH:"Nerve Degeneration")
+UNSET Disease_Type
+path(DO:"vascular disease") pos path(MESH:"Nerve Degeneration")
+UNSET MeSHAnatomy 
+UNSET MeSHDisease
+
+SET Support = "It should also be pointed out that experimentally it has been shown that brain ischemia causes enhanced formation of b-amyloid precursor protein [25]."  
+SET MeSHAnatomy = "Brain"
+path(DO:ischemia) -> p(HGNC:APP)
+UNSET MeSHAnatomy
+ 
+SET Support = "Other studies have also linked head injuries to the development of neurodegenerative conditions [26–28]." 
+path(MESH:"Craniocerebral Trauma")-> path(MESH:"Nerve Degeneration")
+ 
+SET Support = "Therefore, viewed from this perspective the observed increased oxidative damage found in several neurodegenerative conditions, i.e., see a review of Alzheimer's disease [29], would be an expected consequence."  
+path(MESH:"Nerve Degeneration") -> bp(MESH:"Oxidative Stress")
+  
+SET Support = "Isolated brain microvasculature can be activated by ischemia/reoxygenation insults to cause them to produce increased levels of ROS [31]." 
+SET MeSHAnatomy = "Microvessels"
+path(DO:ischemia) -> sec(a(CHEBI:"reactive oxygen species"))
+UNSET MeSHAnatomy
+UNSET Species
+
+SET Support = "Experimental stroke in a rat model has been shown to cause the upregulation of cycloxygenase II (COX II) genes in neurons [32], and the induction of inducible nitric oxide synthase (iNOS) in the microvasculature [33]."  
+SET Species = "10116"
+SET MeSHAnatomy = "Neurons"
+path(DO:"cerebrovascular disease") pos p(RGD:Ptgs2)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Microvessels"
+path(DO:"cerebrovascular disease") pos p(RGD:Nos2)
+UNSET Species
+
+SET Support = "Of direct pertinence are the demonstrations that brain microvessels isolated from Alzheimer's disease brains showed significantly elevated nitric oxide synthase activity [34], as well as enhanced levels of protein oxidation products [35]."
+SET Species = "9606"
+path(DO:"Alzheimer's disease") pos act(p(HGNC:NOS2))
+path(DO:"Alzheimer's disease") -> a(MESH:"Advanced Oxidation Protein Products")
+UNSET MeSHAnatomy
+
+SET Support = "The results of much research have demonstrated that oxidative damage to brain occurs as a result of stroke [36,38,56,57] or head trauma [58–61]." 
+SET MeSHAnatomy = "Brain"
+path(DO:"cerebrovascular disease") -> bp(MESH:"Oxidative Stress")
+path(MESH:"Craniocerebral Trauma") -> bp(MESH:"Oxidative Stress")
+
+SET Support = "Careful studies on Alzheimer's disease brains versus age-matched controls clearly demonstrate that protein oxidative damage products in brain increases with age but much more rapidly in those that have Alzheimer's disease [62]."  
+bp(GO:aging) pos a(MESH:"Advanced Oxidation Protein Products")
+UNSET MeSHAnatomy
+
+SET Support = "It is proposed here that inflammatory processes contribute significantly to the enhanced oxidative damage observed in the chronic phase of neurodegenerative disease processes. "  
+SET MeSHDisease = "Neurodegenerative Diseases"
+path(HP:"chronic inflammation") -> bp(MESH:"Oxidative Stress")
+UNSET MeSHDisease 
+ 
+SET Support = "Head trauma is also known to cause the induction of a large amount of cytokines [70]." 
+path(MESH:"Craniocerebral Trauma") pos a(MESH:Cytokines)
+
+SET Support = "Therefore, an acute injury will bring on much higher levels of ROS, cytokines, and toxic gene products than that normally noted in the chronic condition; but in the acute condition these levels will soon drop back to background levels.However, in the chronic condition, the levels are not as high but are continuously present and keep building slowly with time"  
+SET Disease_Condition = "acute"
+path(MESH:"Brain Injuries") pos a(CHEBI:"reactive oxygen species")
+path(MESH:"Brain Injuries") pos a(MESH:Cytokines)
+UNSET Disease_Condition
+path(MESH:"Brain Injury, Chronic") pos a(CHEBI:"reactive oxygen species")
+path(MESH:"Brain Injury, Chronic") pos a(MESH:Cytokines)
+
+SET Support = "The enhanced oxidative damage to brain noted with increasing age [62], and especially so in neurodegenerative diseases, is most likely due to several factors, including altered mitochondrial production of ROS [54,55, 65]; but it is likely that the increased oxidative damage is also due in part to the increased prevalence of inflammatory conditions where microglia and other brain cells are 'activated' to produce increased ROS. "   
+SET MeSHDisease = "Neurodegenerative Diseases"
+bp(GO:aging) pos bp(MESH:"Oxidative Stress")
+bp(GO:"microglial cell activation") -> a(CHEBI:"reactive oxygen species")
+UNSET MeSHDisease
+
+SET Support = "It is difficult to prove this notion, but it is known that proinflammatory cytokines do mediate increased formation of ROS."  
+a(MESH:Cytokines) -> a(CHEBI:"reactive oxygen species")
+
+SET Support = "For example, it has been shown using spin-trapping methods that IL-1b mediates formation of hydroxyl free radicals in fibroblasts [73], as well as in brain cell primary cultures [74]." 
+SET Cell = "fibroblast"
+p(HGNC:IL1B) -> a(CHEBI:hydroxyl)
+UNSET Cell
+
+SET Support = "The source of TNF-a induced production of ROS probably arises from mitochondria activated in some manner by this cytokine [77-79]."  
+SET MeSHAnatomy = "Mitochondria"
+p(HGNC:TNF) pos a(CHEBI:"reactive oxygen species")
+
+SET Support = "Mitochondria are induced to produce more ROS by TNF-a via a second messenger component(s), perhaps a membrane component, such as arachidonate [80] or ceramide [81]." 
+p(HGNC:TNF) pos a(CHEBI:"reactive oxygen species")
+a(CHEBI:arachidonate) pos a(CHEBI:"reactive oxygen species")
+a(CHEBI:ceramide) pos a(CHEBI:"reactive oxygen species")
+UNSET MeSHAnatomy
+
+SET Support = "Ceramide has been shown to mediate increased ROS formation in liver mitochondria."  
+SET MeSHAnatomy = {"Liver","Mitochondria"}
+a(CHEBI:ceramide) -> a(CHEBI:"reactive oxygen species")
+
+SET Support = "It should be noted that gene activation via NF-kB transcription factor is complex and can be accomplished perhaps by several routes including increased proteolytic degradation of hyperphosphorylated IkB-a [82], but signal transduction events that cause enhanced protein phosphorylation appear to also involve ROS intermediates."
+deg(p(HGNC:NFKBIA, pmod(Ph))) -> act(complex(GO:"NF-kappaB complex"))
+
+SET Support = "It has been demonstrated that proinflammatory cytokines activate cultured primary brain cells (mostly microglia and astrocytes) to induce genes [83–85] including inducible nitric oxide synthase (iNOS), which mediates the synthesis of high levels of nitric oxide (NO), shown to be toxic to neurons [83,86]." 
+SET Custom_CellLine = "primary brain cell culture"  
+a(MESH:Cytokines) -> bp(GO:"microglial cell activation")
+a(MESH:Cytokines) -> bp(GO:"astrocyte activation")
+bp(GO:"microglial cell activation") -> p(HGNC:NOS2)
+bp(GO:"astrocyte activation") -> p(HGNC:NOS2)
+p(HGNC:NOS2) -> a(CHEBI:"nitric oxide")
+UNSET Custom_CellLine
+
+SET Support = "Therefore, it is considered that proinflammatory cytokines activate glia and microglia, very much as is known to occur in the case of iNOS upregulation in macrophages [87,88]."   
+a(MESH:Cytokines) -> bp(GO:"microglial cell activation")
+a(MESH:Cytokines) -> bp(GO:"astrocyte activation")
+SET Cell = "macrophage"
+bp(GO:"microglial cell activation") -> p(HGNC:NOS2)
+bp(GO:"astrocyte activation") -> p(HGNC:NOS2)
+
+SET Support = "However, it now seems clear that iNOS is expressed in human macrophages and is induced by cytokines [89,90]."  
+a(MESH:Cytokines) -> p(HGNC:NOS2)
+UNSET Cell
+
+SET Support = "iNOS, because it does not require Ca21 for activity, produces much higher levels of NO for longer periods (hours) than does the endothelial or neuronal forms of nitric oxide synthase, which does require Ca21 for activity"   
+p(HGNC:NOS2) -> a(CHEBI:"nitric oxide")
+
+SET Support = "The mechanism of nitric oxide-mediated toxicity to neurons has not been completely established, but strong evidence [91] indicates that this involves the action of peroxynitrite, which is readily formed from the reaction of NO with superoxide [92,93]"   
+rxn(reactants(a(CHEBI:superoxide),a(CHEBI:"nitric oxide")),products(a(CHEBI:peroxynitrite))) -> path(FIXME:neurotoxicity)
+
+SET Support = "Therefore, if inflammatory processes occur in the living brain, and more so under neurodegenerative conditions, it should be possible to measure higher levels of nitrotyrosine in these brains" 
+SET MeSHAnatomy = "Brain"
+bp(GO:"inflammatory response") -> a(CHEBI:nitrotyrosine)
+
+SET Support = "Utilizing an antibody directed to nitrotyrosine it has been shown that there are significantly elevated levels of this reaction product in Alzheimer's disease brains [96] and in amyotrophic lateral sclerosis [97]."   
+path(DO:"Alzheimer's disease") -> a(CHEBI:nitrotyrosine)
+path(DO:"amyotrophic lateral sclerosis") -> a(CHEBI:nitrotyrosine)
+
+SET Support = "Nitric oxide (most likely peroxynitrite) has been implicated in mitochondrial dysfunction in neurodegenerative diseases [98]."  
+SET MeSHDisease = "Neurodegenerative Diseases"
+a(CHEBI:"nitric oxide") pos path(HP:"Abnormality of mitochondrial metabolism")
+UNSET MeSHDisease
+
+SET Support = "In addition to forming peroxynitrite, nitric oxide will also become oxidized to form nitrite; and even though it is less direct proof, significantly elevated levels of nitrite in cerebrospinal fluid has been found in patients having Parkinson's disease [99], although see Kupier et al. [100], as well as those having AIDS dementia [101]."  
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"Parkinson's disease") pos a(CHEBI:nitrite)
+SET MeSHDisease = "Acquired Immunodeficiency Syndrome"
+path(DO:dementia) pos a(CHEBI:nitrite)
+UNSET MeSHAnatomy
+
+SET Support = "Additionally, in an animal model of AIDs dementia, direct measurement of enhanced levels of NO was demonstrated in rat neonates treated with gp120 [103], the AIDs viral envelope protein known to upregulate iNOS in brain glia [104]."   
+SET Species = "10116"
+SET Age_Group = "neonate"
+SET Cell = "glial cell"
+p(UNIPROT:Q9IZE4) -> a(CHEBI:nitrite)
+p(UNIPROT:Q9IZE4) -> p(RGD:Nos2)
+UNSET Cell
+UNSET Age_Group
+UNSET MeSHDisease 
+UNSET Species
+
+SET Support = "Evoking the concept of neuroinflammatory processes can also explain the observed increased presence of proinflammatory cytokines in Alzheimer's brains [5–7,107,108]."   
+SET Species = "9606"
+path(DO:"Alzheimer's disease") pos bp(GO:"cytokine production involved in inflammatory response")
+bp(GO:"cytokine production involved in inflammatory response") -> path(ADO:neuroinflammation)
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation

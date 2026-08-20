@@ -1,0 +1,204 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "33941622.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE TAX AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"nasal irritation", "wriggling nose"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Sci Transl Med. 2021 Jun 2;13(596):eabf8396. doi: 10.1126/scitranslmed.abf8396.", "33941622"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Species = "9606"
+
+
+SET Support = "Their prominent symptom was recent loss of olfactory function (sudden for 6 patients but progressive for case #1) and was accompanied with taste changes (except case #3) and at least one symptom belonging to the clinical spectrum of COVID-19, such as diarrhea, cough, dyspnea, conjunctivitis, fever, fatigue, headache, muscle pain, laryngitis or a sore throat (Fig. S1A)."
+path(DO:"COVID-19") pos path(HP:Anosmia)
+path(DO:"COVID-19") pos path(MESH:Dysgeusia)
+path(DO:"COVID-19") pos path(MESH:Diarrhea)
+path(DO:"COVID-19") pos path(MESH:Cough)
+path(DO:"COVID-19") pos path(MESH:Dyspnea)
+path(DO:"COVID-19") pos path(MESH:Conjunctivitis)
+path(DO:"COVID-19") pos path(MESH:Fever)
+path(DO:"COVID-19") pos path(MESH:Fatigue)
+path(DO:"COVID-19") pos path(MESH:Headache)
+path(DO:"COVID-19") pos path(MESH:"Muscle Cramp")
+path(DO:"COVID-19") pos path(MESH:Laryngitis)
+
+SET Support = "Other otolaryngologic symptoms were rhinorrhea for 4 patients, not concomitant with smell loss, nasal irritation for 2 patients and hyperacusis for case #1."
+path(DO:"COVID-19") pos path(HP:Rhinorrhea)
+path(DO:"COVID-19") pos path(FIXME:"nasal irritation")
+path(DO:"COVID-19") pos path(MESH:Hyperacusis)
+
+SET Support = "Taste changes were characterized in the 6 patients by dysgeusia where they had a reduced acuity for sweet taste, had a bad taste in the mouth, reduced or increased acuity for bitter, reduced acuity for salt or sour were reported in 4 out of the 6 patients with dysgeusia."
+path(DO:"COVID-19") pos path(MESH:"Dysgeusia") 
+path(DO:"COVID-19") neg bp(GO:"sensory perception of sweet taste")
+path(DO:"COVID-19") reg bp(GO:"sensory perception of bitter taste")
+path(DO:"COVID-19") neg bp(GO:"sensory perception of salty taste")
+path(DO:"COVID-19") neg bp(GO:"sensory perception of sour taste")
+
+SET Support = "Three patients (#2, #4 and #15) were unable to discriminate between different food flavors such as meat and fish."
+path(DO:"COVID-19") neg bp(GO:"sensory perception of taste") 
+
+
+SET Support = "These data suggest that SARS-CoV-2 infection is associated with inflammation of the olfactory mucosa in patients with olfactory impairment, we thus measured the profile of local cytokine and inflammatory mediators."
+SET MeSHAnatomy = "Olfactory Mucosa"
+SET MeSHDisease = "Olfaction Disorders"
+path(DO:"COVID-19") association bp(GO:"inflammatory response")
+
+SET Support = "Expression of gene transcript of Cxcl10 was elevated in the olfactory mucosa in most patients with detectable SARS-CoV-2 antigens 
+as compared to control patients, and in contrast, an interindividual variability, both in SARS-CoV-2-infected and control individuals, was observed in Il-6, Ccl5, Isg20 and Mx1 gene transcript expression (Fig. 2D, Tables S1 and S2)." 
+SET BioAssay = "real-time PCR "
+path(DO:"COVID-19") pos r(HGNC:CXCL10)  
+UNSET BioAssay
+
+
+SET Support = "Together, this first set of data indicates that SARS-CoV-2 exhibits an unambiguous tropism for the olfactory neuroepithelium, and this infection is associated with increased local inflammation."
+path(DO:"COVID-19") pos bp(GO:"inflammatory response") 
+UNSET MeSHAnatomy
+
+SET Support = "A strong cleaved caspase-3 signal was detected both in infected and non-infected cells in patients with COVID-19, whereas no signal was detected in samples from control individuals (Fig. 1, E and F, Fig. 2C, Tables S1 and S2)."
+SET BioAssay = "immunofluorescent labeling"
+path(DO:"COVID-19") pos p(HGNC:CASP3, frag("?"))
+UNSET BioAssay
+
+SET Support = "Altogether these results show that a variety of cell types are infected in the olfactory neuroepithelium of patients with COVID-19, leading to increased cell death through apoptosis. Among them, the loss of mature OSN might be critically relevant in the context of the anosmia."
+SET MeSHAnatomy = "Olfactory Mucosa"
+path(DO:"COVID-19") -> bp(GO:"programmed cell death")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Olfactory Nerve"                  
+path(DO:"COVID-19") -> bp(GO:"neuron apoptotic process")
+UNSET MeSHAnatomy
+UNSET Species
+
+
+SET Species = "9606"
+SET Support = "The four patients with long-lasting/relapsing loss of smell had been diagnosed with COVID-19 between January and March 2020, based on their initial clinical assessment, including sudden anosmia at disease onset, accompanied with taste changes (except case #8) and at least one clinical sign related to COVID-19, such as fever, fatigue, diarrhea, cough, dyspnea, headache, muscle pain, laryngitis, sore throat, but also paresthesia and vertigo in some patients (Fig. 8A)."
+path(DO:"COVID-19") pos path(HP:Anosmia)
+path(DO:"COVID-19") pos path(MESH:Dysgeusia)
+path(DO:"COVID-19") pos path(MESH:Fever)
+path(DO:"COVID-19") pos path(MESH:Fatigue)
+path(DO:"COVID-19") pos path(MESH:Diarrhea)
+path(DO:"COVID-19") pos path(MESH:Cough)
+path(DO:"COVID-19") pos path(MESH:Dyspnea)
+path(DO:"COVID-19") pos path(MESH:Headache)
+path(DO:"COVID-19") pos path(MESH:"Muscle Cramp")
+path(DO:"COVID-19") pos path(MESH:Laryngitis)
+path(DO:"COVID-19") pos path(MESH:Paresthesia)
+path(DO:"COVID-19") pos path(MESH:Vertigo)
+
+SET Support = "Other otolaryngologic symptoms were rhinorrhea for two patients, not concomitant with smell loss and nasal irritation for three patients."
+path(DO:"COVID-19") pos path(HP:Rhinorrhea)
+path(DO:"COVID-19") pos path(FIXME:"nasal irritation")
+
+SET Support = "Nasal obstruction was reported in patient #10."
+path(DO:"COVID-19") pos path(MESH:"Nasal Obstruction")
+
+SET Support = "Neurological signs were stereotypical crises of wriggling nose, left intercostal and non-specific arm pain (case #8), paresthesia (case #9) and vertigo (case #10). "
+path(DO:"COVID-19") pos path(FIXME:"wriggling nose")
+SET MeSHAnatomy = "Intercostal Muscles"   
+path(DO:"COVID-19") pos path(MESH:Pain)
+UNSET MeSHAnatomy
+path(DO:"COVID-19") pos path(NCIT:"Arm Pain")
+path(DO:"COVID-19") pos path(MESH:Paresthesia)
+
+
+SET Support = "Two patients complained of bad taste (Table S2). Reduced or increased acuity for bitter, reduced acuity for salt or sour were reported by the two patients with dysgeusia"
+path(DO:"COVID-19") pos path(MESH:"Dysgeusia") 
+path(DO:"COVID-19") reg bp(GO:"sensory perception of bitter taste") 
+path(DO:"COVID-19") neg bp(GO:"sensory perception of salty taste")
+path(DO:"COVID-19") neg bp(GO:"sensory perception of sour taste")
+
+
+SET Support = "We observed abundant Iba1+ immune cells in the olfactory mucosa of all four patients (Table S4, Fig. 8B, D and E), and apoptotic cells (cleaved caspase-3 positive) were observed in the samples of all these patients (Fig. 8D and E, Table S4)."
+SET BioAssay = "immunofluorescent labeling"
+path(DO:"COVID-19") -> p(HGNC:CASP3, frag("?"))
+path(DO:"COVID-19") -> p(HGNC:AIF1)
+UNSET BioAssay
+
+SET Support = "Quantification of IL-6 gene expression revealed an up-regulation of this proinflammatory cytokine in the olfactory mucosa of the three patients with high viral load, but not in the case #6, which nevertheless presented SARS-CoV-2 antigens in the neuroepithelium (Table S4)."
+SET MeSHAnatomy = "Olfactory Mucosa"
+SET BioAssay = "real-time PCR "
+path(DO:"COVID-19") pos r(HGNC:IL6)
+UNSET MeSHAnatomy
+UNSET BioAssay
+UNSET Species
+UNSET Section
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Citation

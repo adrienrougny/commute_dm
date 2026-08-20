@@ -1,0 +1,236 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "PMID_31967327"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "Emerging coronaviruses: Genome structure, replication, and \
+pathogenesis"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+# DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+# DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+# DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+# DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE NCBICOVID19 AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+# DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+# DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+# DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+# DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+# DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"PubMed", "31967327"}
+
+SET Support = "Coronaviruses (CoVs) are important pathogens for human and vertebrates. They can infect respiratory, gastrointestinal, hepatic, and central nervous system of human, livestock, birds, bat, mouse, and many other wild animals."
+SET Anatomy = {"respiratory system", "digestive tract", "liver", "central nervous system"}
+a(MESH:"Coronavirus") -> path(MESHD:"Infection")
+UNSET Anatomy
+
+SET Support = "The genome and subgenomes of a typical CoV contain at least six ORFs. The first ORFs (ORF1a/b), about two‐thirds of the whole genome length, encode 16 nsps (nsp1‐16), except Gammacoronavirus that lacks nsp1."
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("1_180"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("1_180"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("819_2763"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("2764_3263"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("3264_3569"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("3570_3859"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("3860_3942"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("3943_4140"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("4141_4253"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("4254_4392"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("4393_5324"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("5325_5925"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("5926_6452"))
+r(UNIPROT:"P0DTD1") >> p(UNIPROT:"P0DTD1", frag("6453_6798"))
+
+
+SET Support = "CoVs belong to the subfamily Coronavirinae in the family of Coronaviridae of the order Nidovirales, and this subfamily includes four genera: Alphacoronavirus, Betacoronavirus, Gammacoronavirus,and Deltacoronavirus."
+a(NCBITAXON:"Orthocoronavirinae") isA a(NCBITAXON:"Coronaviridae")
+a(NCBITAXON:"Coronaviridae") isA a(NCBITAXON:"Nidovirales")
+a(NCBITAXON:"Orthocoronavirinae") hasMembers list(a(NCBITAXON:"Alphacoronavirus"), a(NCBITAXON:"Betacoronavirus"),a(NCBITAXON:"Gammacoronavirus"),a(NCBITAXON:"Deltacoronavirus"))
+
+SET Support = "These polypeptides are processed by virally encoded chymotrypsin‐like protease (3CLpro) or main protease (Mpro) and one or two papain‐like protease into 16 nsps."
+p(UNIPROT:"P0DTD1", frag("3264_3569")) isA p(ECCODE:"3.4.21.39")
+
+SET Support = "Sequence analysis shows that the 2019‐nCoV possesses a typical genome structure of CoV and belongs to the cluster of betacoronaviruses that includes Bat‐SARS‐like (SL)‐ZC45, Bat‐SL ZXC21, SARS‐CoV, and MERS‐CoV."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+
+SET Species = "2697049"
+SET Support = "nsp1 function: Cellular mRNA degradation, inhibiting IFN signaling."
+p(UNIPROT:"P0DTD1", frag("1_180")) -> deg(r(MESHC:"RNA, Messenger"))
+
+SET Support = "nsp3 function: PLP, polypeptides cleaving, blocking host innate immune response, promoting cytokine expression."
+p(UNIPROT:"P0DTD1", frag("819_2763")) -| bp(GOBP:"innate immune response")
+p(UNIPROT:"P0DTD1", frag("819_2763")) -> bp(GOBP:"cytokine production")
+
+SET Support = "nsp4 function: DMV formation."
+p(UNIPROT:"P0DTD1", frag("2764_3263")) -> a(GOCC:"double membrane vesicle viral factory")
+
+SET Support = "nsp6 function: Restricting autophagosome expansion, DMV formation."
+p(UNIPROT:"P0DTD1", frag("3570_3859")) -> a(GOCC:"double membrane vesicle viral factory")
+
+SET Support = "nsp7 function: Cofactor with nsp8 and nsp12."
+complex(p(UNIPROT:"P0DTD1", frag("3860_3942")),p(UNIPROT:"P0DTD1", frag("3943_4140")), p(UNIPROT:"P0DTD1", frag("4393_5324")))
+
+SET Support = "nsp9 function: Dimerization and RNA binding."
+act(p(UNIPROT:"P0DTD1", frag("4141_4253")),ma(GO:"protein dimerization activity"))
+act(p(UNIPROT:"P0DTD1", frag("4141_4253")),ma(GO:"RNA binding"))
+
+SET Support = "nsp10 function: Scaffold protein for nsp14 and nsp16."
+complex(p(UNIPROT:"P0DTD1", frag("4254_4392")), p(UNIPROT:"P0DTD1", frag("5926_6452")))
+complex(p(UNIPROT:"P0DTD1", frag("4254_4392")),p(UNIPROT:"P0DTD1", frag("6799_7096")))
+
+SET Support = "nsp12 function: Primer dependent RdRp."
+p(UNIPROT:"P0DTD1", frag("4393_5324")) isA p(ECCODE:"2.7.7.48")
+
+SET Support = "nsp13 function: RNA helicase, 5′ triphosphatase."
+p(UNIPROT:"P0DTD1", frag("5325_5925")) isA p(ECCODE:"3.6.4.13")
+
+SET Support = "nsp14 function: Exoribonuclease, N7‐MTase."
+p(UNIPROT:"P0DTD1", frag("5926_6452")) isA p(ECCODE:"2.1.1.56")
+
+SET Support = "nsp16 function: 2′‐O‐MTase; avoiding MDA5 recognition,negatively regulating innate immunity."
+p(UNIPROT:"P0DTD1", frag("6799_7096")) isA p(ECCODE:"2.1.1.57")
+p(UNIPROT:"P0DTD1", frag("6799_7096")) -| bp(GOBP:"innate immune response")
+
+SET Support = "Homotrimers of S proteins make up the spikes on the viral surface and they are responsible for attachment to host receptors."
+p(UNIPROT:"P0DTC2") -> bp(MESHPP:"Virus Attachment")
+UNSET Species
+
+SET Support = "Before 2019, there were only six CoVs that were known to infect human and cause respiratory diseases. HCoV‐229E, HCoV‐OC43, HCoV‐NL63, and HKU1 cause only mild upper respiratory disease, and in rare cases some of them can cause severe infection in infants, young children and elders."
+a(NCBITAXON:"Human coronavirus 229E") isA a(MESH:"Coronavirus")
+a(NCBITAXON:"Human coronavirus 229E") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus 229E") -> path(DO:"respiratory system disease")
+a(NCBITAXON:"Human coronavirus OC43") isA a(MESH:"Coronavirus")
+a(NCBITAXON:"Human coronavirus OC43") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus OC43") -> path(DO:"respiratory system disease")
+a(NCBITAXON:"Human coronavirus NL63") isA a(MESH:"Coronavirus")
+a(NCBITAXON:"Human coronavirus NL63") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus NL63") -> path(DO:"respiratory system disease")
+a(NCBITAXON:"Human coronavirus HKU1") isA a(MESH:"Coronavirus")
+a(NCBITAXON:"Human coronavirus HKU1") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Human coronavirus HKU1") -> path(DO:"respiratory system disease")
+
+SET Support = "SARS‐CoV and MERS‐CoV can infect lower respiratory tract and cause severe respiratory syndrome in human."
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") isA a(MESH:"Coronavirus")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") -> path(DO:"lower respiratory tract disease")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(MESH:"Coronavirus")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"Coronavirus infection")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") -> path(DO:"lower respiratory tract disease")
+
+SET Support = "The new CoV, 2019‐nCoV, which belongs to betacoronaviruses based on sequence analysis (Figure 1A), can also infect the lower respiratory tract and cause pneumonia in human, but it seems that the symptoms are milder than SARS and MERS."
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(DO:"lower respiratory tract disease")
+a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2") -> path(DO:"pneumonia")
+
+SET Support = "Among the six death cases, four patients with published information are elder people of over 60 years old and have other illnesses before the infection, such as abdominal tumor and chronic liver disease, myocarditis and renal dysfunction, and cardiovascular disease."
+path(MESHD:"Abdominal Neoplasms") -- path(DO:"COVID-19")
+path(DO:"myocarditis") -- path(DO:"COVID-19")
+path(DO:"cardiovascular system disease") -- path(DO:"COVID-19")
+path(MESHD:"Renal Insufficiency") -- path(DO:"COVID-19")
+
+SET Support = "Virus PRCV/ISU‐1, Genus Alpha, Host Pig, Symptoms Mild respiratory tract infections."
+# The host is pig
+a(NCBITAXON:"PRCV ISU-1") isA a(NCBITAXON:"Alphacoronavirus")
+a(NCBITAXON:"PRCV ISU-1") -> path(MESHD:"Respiratory Tract Diseases")
+
+SET Support = "Virus Camel alphacoronavirus isolate camel/Riyadh, Genus Alpha, Host Camel, Symptoms Asymptomatic."
+# The host is camel
+a(NCBITAXON:"Camel alphacoronavirus") isA a(NCBITAXON:"Alphacoronavirus")
+
+SET Support = "Virus MHV‐A59, Genus Beta, Host Mouse, Symptoms Acute pneumonia and severe lung injuries."
+# The host is mouse
+a(NCBITAXON:"Murine coronavirus inf-MHV-A59") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Murine coronavirus inf-MHV-A59") -> a(MESHD:"Pneumonia")
+a(NCBITAXON:"Murine coronavirus inf-MHV-A59") -> a(MESHD:"Lung Injury")
+
+SET Support = "Virus Beluga Whale CoV/SW1, Genus Gamma, Host Whale, Symptoms Pulmonary disease, terminal acute liver failure."
+# The host is Whale
+a(NCBITAXON:"Beluga whale coronavirus SW1") isA a(NCBITAXON:"Gammacoronavirus")
+a(NCBITAXON:"Beluga whale coronavirus SW1") -> a(MESHD:"Liver Failure, Acute")
+
+SET Support = "Virus IBV, Genus Gamma, Host Chicken, Symptoms Severe respiratory disease."
+# The host is Chicken
+a(NCBITAXON:"Infectious bronchitis virus") isA a(NCBITAXON:"Gammacoronavirus")
+a(NCBITAXON:"Infectious bronchitis virus") -> path(MESHD:"Respiratory Tract Diseases")
+
+SET Support = "Virus Bulbul coronavirus HKU11, Genus Delta, Host Bulbul, Symptoms Respiratory disease (collected from respiratory tract of dead wild birds)."
+# The host is Bulbul
+a(NCBITAXON:"Bulbul coronavirus HKU11") isA a(NCBITAXON:"Deltacoronavirus")
+a(NCBITAXON:"Bulbul coronavirus HKU11") -> path(MESHD:"Respiratory Tract Diseases")
+
+SET Support = "Virus Sparrow coronavirus HKU17, Genus Delta, Host Sparrow, Symptoms Respiratory disease (collected from respiratory tract of dead wild birds)."
+# The host is Sparrow
+a(NCBITAXON:"Sparrow coronavirus HKU17") isA a(NCBITAXON:"Deltacoronavirus")
+a(NCBITAXON:"Sparrow coronavirus HKU17") -> path(MESHD:"Respiratory Tract Diseases")
+
+SET Support = "Plasma and antibodies obtained from the convalescent patients have been proposed for use in treatment."
+bp(MESH:"Immunization, Passive") -| path(DO:"COVID-19")
+
+SET Support = "In addition, various vaccine strategies, such as using inactivated viruses, live‐attenuated viruses, viral vector‐based vaccines, subunit vaccines, recombinant proteins, and DNA vaccines, have been developed but have only been evaluated in animals so far."
+a(MESHC:"Vaccines, Subunit") -| path(DO:"COVID-19")
+a(MESHC:"Recombinant Proteins") -| path(DO:"COVID-19")
+a(MESHC:"Vaccines, DNA")  -| path(DO:"COVID-19")
+a(MESHC:"Vaccines, Inactivated") -| path(DO:"COVID-19")
+a(MESHC:"Vaccines, Attenuated") -| path(DO:"COVID-19")

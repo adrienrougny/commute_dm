@@ -1,0 +1,236 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "33360731.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causlitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+#DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+ 
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+#DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE TAX AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+#DEFINE NAMESPACE NCBIGENE AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"perivascular edema", "endothelial cell mummification", "focal basement membrane duplication", "microthrombus"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+
+DEFINE ANNOTATION Custom_CellLine AS LIST {"HUVEC cell line", "NSC-34"}
+DEFINE ANNOTATION Mouse_Strain AS LIST {"C57BL/6"}
+DEFINE ANNOTATION Age AS LIST {"9 months"}
+DEFINE ANNOTATION Concentration AS LIST {"350 ng/ ml", "70 ng/ ml"}
+DEFINE ANNOTATION Technique AS LIST {"Hematoxylin and eosin staining"}
+##################################################################################
+# Statements #
+##################################################################################
+
+
+SET Citation = {"PubMed", "Ann Diagn Pathol. 2021 Apr:51:151682. doi: 10.1016/j.anndiagpath.2020.151682.", "33360731"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Species = "9606"
+SET Support = "The hematoxylin and eosin findings revealed two differences: 1) Microvessels of the brain of COVID-19 patients showed perivascular edema as defined by a zone of edema at least 50 μm in size around a capillary. 2) Less commonly, microvessels in the COVID-19 cases had endothelial cells that were degenerated, mummified, and detached, showed focal basement membrane duplication, and/or microthrombi."
+
+SET Technique = "Hematoxylin and eosin staining"    
+SET MeSHAnatomy = {"Brain", "Microvessels"}
+path(DO:"COVID-19") -> path(FIXME:"perivascular edema")
+SET Cell = "endothelial cell"
+path(DO:"COVID-19") -> deg(a(MESH:"Endothelial Cells"))
+path(DO:"COVID-19") -> bp(FIXME:"endothelial cell mummification")
+path(DO:"COVID-19") -| bp(GO:"cell adhesion")
+path(DO:"COVID-19") -> bp(FIXME:"focal basement membrane duplication")
+path(DO:"COVID-19") -> a(FIXME:microthrombus)
+UNSET Technique
+UNSET MeSHAnatomy
+UNSET Cell
+
+SET Support = "The data presented in Table 1 highlights the significant association between each cytokine and SARS CoV-2 protein detection in the microvessels (each p < 0.001)."
+
+SET MeSHAnatomy = {"Brain", "Microvessels"}
+SET Cell = "endothelial cell"
+path(DO:"COVID-19") pos p(HGNC:IL6)
+path(DO:"COVID-19") pos p(HGNC:TNF)
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "In comparison, the percentage of neurons with detectable MFSD2A decreased significantly (p < 0.001) in the COVID-19 brains (Table 1) (Fig. 2)."
+
+SET MeSHAnatomy = {"Brain", "Neurons"}
+path(DO:"COVID-19") -| p(HGNC:MFSD2A)
+
+SET Support = "As seen in Table 1, there was a significant decreased expression of SHIP1 in the COVID-19 brain tissues (p value <0.001) (Fig. 2)"
+
+path(DO:"COVID-19") neg p(HGNC:INPP5D)
+
+SET Support = "NMDAR2 was not detected in the normal brain tissues. It was expressed in the COVID-19 brains where it was evident in neurons adjacent to SARS-CoV-2 positive microvessels (Table 1 and Fig. 2)."
+
+path(DO:"COVID-19") pos p(HGNC:GRIN2A) 
+path(DO:"COVID-19") pos p(HGNC:GRIN2B)
+path(DO:"COVID-19") pos p(HGNC:GRIN2C)
+path(DO:"COVID-19") pos p(HGNC:GRIN2D)
+
+SET Support = "Similarly, the percentage of neurons with nNOS was significantly greater (p < 0.001) in the COVID-19 brain tissues compared to the controls (Table 1 and Fig. 2)."
+
+path(DO:"COVID-19") pos p(HGNC:NOS1)
+UNSET BioAssay
+UNSET MeSHAnatomy
+UNSET Species
+
+
+
+SET Support = "Macroscopic changes included increased adhesion and degeneration of the HUVEC cells and degeneration in the MN1 cell lines."
+
+SET Custom_CellLine = "HUVEC cell line"    
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> bp(GO:"cell adhesion")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> bp(MESH:"Cytopathogenic Effect, Viral")
+UNSET Custom_CellLine
+SET Custom_CellLine = "NSC-34"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") -> bp(MESH:"Cytopathogenic Effect, Viral")
+UNSET Custom_CellLine
+
+
+
+SET Support = "Increasing the concentration of S1 spike protein from 70 to 350 ng/ ml resulted in increased HUVEC cell degeneration and adhesion, as well as a significant increase in the % of cells with the spike subunit and caspase-3 (Table 2 and Fig. 3)."
+
+SET Custom_CellLine = "HUVEC cell line"
+SET Concentration = "350 ng/ ml"
+p(UNIPROT:P0DTC2, frag("319_541")) -> bp(MESH:"Cytopathogenic Effect, Viral")
+p(UNIPROT:P0DTC2, frag("319_541")) -> bp(GO:"cell adhesion")
+p(UNIPROT:P0DTC2, frag("319_541")) -> p(HGNC:CASP3)
+UNSET Concentration
+
+
+SET Support = "As seen in Table 2, the % of cells with identifiable spike subunit or caspase-3 was significantly less than for the full length S1 subunit (p < 0.001)."
+
+SET Concentration = "70 ng/ ml"
+p(UNIPROT:P0DTC2, frag("16_685")) -| p(HGNC:CASP3)
+UNSET Concentration
+UNSET Custom_CellLine
+
+
+SET Support = "The mice injected with the S2 subunit showed no behavioral changes; the mice injected with the S1 subunit had significantly increased thirst (consumed 11 g of hydrogel/mouse at day 1 versus 3 g/mouse for sham injected) and showed stress related behavior that included eating the plastic support in their cages."
+
+SET Species = "10090"
+SET Mouse_Strain = "C57BL/6"
+SET Gender = "Female"
+SET Age = "9 months"
+p(UNIPROT:P0DTC2, frag("319_541")) -> path(MESH:Thirst)
+p(UNIPROT:P0DTC2, frag("319_541")) -> path(MESH:"Stress, Psychological")    
+
+
+SET Support = "The mice treated with the full length S1 subunit showed the viral protein primarily in the brain, subcutaneous fat of the skin, and liver. Over 90% of S1 spike positive cells were endothelia in microvessels (Fig. 4)."
+
+p(UNIPROT:P0DTC2, frag("16_685")) -> a(MESH:"Viral Proteins", loc(MESH:Brain))
+p(UNIPROT:P0DTC2, frag("16_685")) -> a(MESH:"Viral Proteins", loc(MESH:"Subcutaneous Fat"))
+p(UNIPROT:P0DTC2, frag("16_685")) -> a(MESH:"Viral Proteins", loc(MESH:Liver))
+
+
+SET Support = "ACE2 analyses by immunohistochemistry showed that the three organs with the strongest expression in the microvessels were the skin/subcutaneous fat, brain, and liver."
+
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Skin", "Brain", "Liver", "Microvessels"}
+p(UNIPROT:P0DTC2) -> p(MGI:Ace2)
+UNSET MeSHAnatomy
+
+SET Support = "Endothelial cell damage, with increased caspase-3, as well as TNFα, IL6, and C5b-9 expression, was seen in the microvessels of the skin and brain in the mouse model with co-localization with the S1 spike protein (Fig. 4)."
+
+SET MeSHAnatomy = {"Skin", "Brain","Microvessels"}
+p(UNIPROT:P0DTC2, frag("319_541")) -> p(MGI:Casp3)  
+p(UNIPROT:P0DTC2, frag("319_541")) -> p(MGI:Il6)
+p(UNIPROT:P0DTC2, frag("319_541")) -> p(MGI:Tnf)
+UNSET MeSHAnatomy
+
+SET Support = "The mice treated with the truncated S1 subunit showed scattered cells positive for this spike protein but not in the endothelia. Rather, the viral protein was seen in cells in the brain and liver that had the morphology of macrophages and microglia, respectively."
+
+p(UNIPROT:P0DTC2, frag("319_541")) -> a(MESH:"Viral Proteins", loc(MESH:Brain))
+p(UNIPROT:P0DTC2, frag("319_541")) -> a(MESH:"Viral Proteins", loc(MESH:Liver))
+
+
+
+SET Support = "Only the mice treated with the full length S1 subunit showed a significant increase in caspase-3, IL6, C5b-9, and TNFα in the brain."
+
+SET MeSHAnatomy = "Brain"
+p(UNIPROT:P0DTC2, frag("16_685")) -> p(MGI:Casp3) 
+p(UNIPROT:P0DTC2, frag("16_685")) -> p(MGI:Il6)
+p(UNIPROT:P0DTC2, frag("16_685")) -> p(MGI:Tnf)
+
+
+SET Support = "Note the significant decrease in MFSD2a and increase in nNOS in the mice brains exposed to the full length S1 subunit, but not in the other mice (Table 1 and Fig. 4) (p < 0.001)."
+
+p(UNIPROT:P0DTC2, frag("16_685")) -| p(MGI:Mfsd2a)
+p(UNIPROT:P0DTC2, frag("16_685")) -> p(MGI:Nos1)
+
+UNSET BioAssay
+UNSET MeSHAnatomy
+UNSET Age
+UNSET Gender
+UNSET Mouse_Strain
+UNSET Species
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Citation

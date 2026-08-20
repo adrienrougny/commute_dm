@@ -1,0 +1,256 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "36781876.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns" 
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"diffuse alveolar damage", "microvascular thrombosis", "microthrombi formation", "perivascular extravasation", "fibrinogen leakage", "thorny ramifications", "infiltration of CD68+/TMEM119− cells","microglial density"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research", "Case Report"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Custom_anatomy AS LIST {"dentate nucleus"}
+DEFINE ANNOTATION Custom_cell AS LIST {"CD206+ perivascular cell", "TMEM119+ microglial cell", "TMEM119+/CD68+ activated microglial cell"}
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "NPJ Parkinsons Dis. 2023 Feb 13;9(1):25. doi: 10.1038/s41531-023-00467-3.", "36781876"}
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+
+SET Support = "The main cause of death in COVID-19 subjects was diffuse alveolar damage"
+SET Disease = "COVID-19"
+path(FIXME:"diffuse alveolar damage") -> path(MESH:Death)
+
+SET Support = "Small vessel thromboses were detected in nine COVID-19 patients at the level of the pons, deep cerebellar nuclei and cerebral cortex, with one patient presenting small vessel thromboses in multiple sites."
+SET MeSHAnatomy = {"Pons", "Cerebellar Nuclei", "Cerebral Cortex"}
+path(DO:"COVID-19") -> a(FIXME:"microvascular thrombosis")
+UNSET MeSHAnatomy
+
+SET Support = "In all COVID-19 cases, CD61 immunoperoxidase staining revealed platelet-rich microthrombi in small parenchymal vessels, with no evidence of arachnoid of meningeal vessels being involved, as seen in Fig. 1d. "
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Brain", "Parenchymal Tissue"}
+path(DO:"COVID-19") -> a(FIXME:"microvascular thrombosis")
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "In three out of nine cases, microthromboses were identified only within the CNS, while in the remaining six subjects, pulmonary thromboses were also detected."
+SET MeSHAnatomy = {"Central Nervous System", "Lung"}
+path(DO:"COVID-19") -> path(DO:thrombosis)
+UNSET MeSHAnatomy
+
+SET Support = "In line with previous findings in literature, CNS microthromboses appear to be peculiar to the COVID-19 cohort, with no control subject presenting either fibrin- or platelet-enriched microthrombi in the CNS or other organs regardless of the cause of death."
+SET MeSHAnatomy = "Central Nervous System"
+path(DO:"COVID-19") -> a(FIXME:"microvascular thrombosis")
+UNSET MeSHAnatomy
+
+SET Support = "Some of these subjects (#7, #9, #11, #17, #18) also displayed endothelial cell immunoreactivity in small vessels of the cerebral cortex (subject #11), deep cerebellar nuclei (#17–18) hippocampus (#7)(Fig. 4) and midbrain (#9) (Fig. 2j); small vessel thromboses,perivascular extravasation and hemorrhagic injury were found within affected regions of these cases."
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Cerebral Cortex", "Cerebellar Nuclei", "Hippocampus", "Microvessels"}             
+SET Cell = "midbrain" 
+path(DO:"COVID-19") -> path(DO:thrombosis)
+path(DO:"COVID-19") -> bp(FIXME:"perivascular extravasation")
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)
+UNSET Cell
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "In case #7, ischemic injury of the right rostral hippocampal formation due to posterior cerebral artery (PCA) occlusion was associated with perivascular extravasation, edema, fibrinogen leakage and viral protein immunoreactivity within small vessel endothelium, further confirmed by RT-PCR."
+SET MeSHAnatomy = {"Brain", "Microvessels"}
+SET Cell = {"hippocampal formation", "endothelial cell"}
+path(DO:ischemia) -- bp(FIXME:"perivascular extravasation")
+path(DO:ischemia) -- path(MESH:Edema)
+path(DO:ischemia) -- bp(FIXME:"fibrinogen leakage")
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "Acute hemorrhagic injury in the territory of the right middle cerebral artery (MCA) in #11 (Fig. 1b) was associated with endothelitis within perilesional tissue, displaying both viral protein immunoreactive endothelium and positive RT-PCR."
+SET MeSHAnatomy = "Middle Cerebral Artery"
+SET Cell = "endothelial cell"
+path(MESH:Hemorrhage) -- bp(GO:"inflammatory response")
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "Similarly, the deep cerebellar white matter and dentate nuclei in cases #17–18 presented small vessel thromboses and extensive hemorrhagic injury (case #17)."
+SET MeSHAnatomy = {"Cerebellum", "White Matter", "Microvessels"}
+SET Anatomy = "dentate nucleus"
+path(DO:"COVID-19") -> path(DO:thrombosis)
+path(DO:"COVID-19") -> path(MESH:Hemorrhage)          
+UNSET Anatomy
+UNSET MeSHAnatomy
+
+SET Support = "In 23 COVID-19 subjects parenchymal microglia displayed an activated phenotype with characteristic thorny ramifications or amoeboid morphology (Fig. 5a, b)."
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = {"Parenchymal Tissue", "Microglia"}
+path(DO:"COVID-19") -> bp(GO:"microglial cell activation")
+path(DO:"COVID-19") -> bp(FIXME:"thorny ramifications")
+path(DO:"COVID-19") -> act(a(GO:lysosome))
+
+SET Support = "Interestingly, homeostatic microglial marker TMEM119 was consistently expressed in our cohort (Fig. 5a–d), even though it is known to be downregulated upon microglial activation in various neuropathological conditions25."
+path(DO:"COVID-19") causesNoChange p(HGNC:TMEM119) 
+UNSET MeSHAnatomy
+
+SET Support = "While microglial cells expressed homeostatic marker TMEM119 as well as lysosomal-activity marker CD68 in both COVID-19 and control subjects (5A–D), COVID-19 subjects displayed a more widespread CD68+ immunoreactivity (5A–B), with statistically significant differences in CD68 immunoreactive area (expressed as percentage, A%) at the level of the medulla and midbrain, but not the pons, when compared to controls (Fig. 5e, Welch ANOVA W = 42.68; medulla p < 0.0001; pons p = 0.733; midbrain p < 0.0001)."
+SET MeSHAnatomy = "Medulla Oblongata"
+SET Cell = "midbrain" 
+path(DO:"COVID-19") -> act(p(HGNC:CD68))
+UNSET Cell
+
+SET Support = "We also found a positive correlation between medullary microgliosis and hospitalization time, as described in detail in the following paragraphs (Fig. 5f)."
+a(NCIT:Microgliosis) pos a(NCIT:"Number of Hospitalization Days")
+#AB: We need to decide if this evidence is needed
+UNSET MeSHAnatomy
+
+SET Support = "Microglial nodules associated with perineuronal HLA-DR +/TMEM119+/CD68+ cells were suggestive of neuronophagia in 18 COVID-19 subjects (Fig. 6a–h) and were identified at the level of the substantia nigra (N = 14), dorsal motor nucleus of the vagus (N = 12), medullary reticular formation (N = 9), area postrema(N = 6) and basal ganglia (N = 5); no microglial nodules were found in control cases, regardless of cause of death. "
+SET MeSHAnatomy = {"Substantia Nigra", "Medulla Oblongata", "Reticular Formation", "Area Postrema", "Basal Ganglia"}
+path(DO:"COVID-19") -> a(NCIT:Neuronophagia)
+UNSET MeSHAnatomy
+
+SET Support = "Moreover,moderate to severe infiltration of CD68+/TMEM119− cells was found in 23 subjects; given their prominent perivascular localization, these were likely monocyte-derived macrophages"
+path(DO:"COVID-19") -> bp(FIXME:"infiltration of CD68+/TMEM119− cells")
+
+SET Support = "Morphometrical quantification of CD206+ perivascular cells revealed statistically significant differences between groups, with COVID-19 subjects presenting higher densities of pro-inflammatory macrophages in both medulla and midbrain (Fig. 7c, d)."
+SET MeSHAnatomy = "Medulla Oblongata"
+SET Cell = "midbrain"
+SET Custom_cell = "CD206+ perivascular cell"
+path(DO:"COVID-19") -> a(CELL:"inflammatory macrophage")
+UNSET Custom_cell 
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "While the expression of M1/M2 cell surface markers was not detected, TMEM119+ microglial cells displayed immunoreactivity for Interleukin-1β, Interleukin-6, TNF-α but not Interleukin-4, indicating a pro-inflammatory phenotype (Fig. 7k–r)."
+SET Custom_cell = "TMEM119+ microglial cell"
+path(DO:"COVID-19") -> act(p(HGNC:IL1B))
+path(DO:"COVID-19") -> act(p(HGNC:IL6))
+path(DO:"COVID-19") -> act(p(HGNC:TNF))
+UNSET Custom_cell
+
+SET Support = "At the level of the medulla oblongata, a topographically defined pattern of microgliosis was detected, as seen in Fig. 8a–c. "
+SET MeSHAnatomy = "Medulla Oblongata"
+path(DO:"COVID-19") -> a(NCIT:Microgliosis)
+UNSET MeSHAnatomy
+
+SET Support = "Welch one-way ANOVA of individual counting fields (FOVs) (Fig. 8d)revealed statistically significant differences (p < 0.001) in TMEM119+/CD68+ activated microglial cell densities between the medullary tegmentum (T, FOV-13; 216.84 ± 52.26 microglia/mm2) and the ventral medulla (pes, P, FOV4–6; 156.09 ± 35.16microglia/mm2)."
+SET Anatomy = "midbrain tegmentum"
+SET Custom_cell = "TMEM119+/CD68+ activated microglial cell"
+path(DO:"COVID-19") -> a(NCIT:"Cell Density")
+UNSET Anatomy
+UNSET Custom_cell
+
+SET Support = "When comparing microglial densities between COVID-19 patients and the control cohort, statistically significant differences were found when considering overall medullary microgliosis, as well as single anatomical compartments (Fig. 8f)."
+SET MeSHAnatomy = "Medulla Oblongata"
+path(DO:"COVID-19") -> a(NCIT:Microgliosis)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+
+SET Support = "This anatomically segregated pattern of inflammation targeting mainly the substantia nigra, but also part of the preacqueductal tegmentum, indicates an increasing dorsal-to-ventral gradient of microgliosis which affects the gray matter of the midbrain, sparing counting fields falling within the cerebral peduncle (FOV5–6)."
+SET MeSHAnatomy = {"Substantia Nigra", "Gray Matter"}
+SET Anatomy = "midbrain tegmentum"
+path(DO:"COVID-19") -> a(NCIT:Microgliosis)
+UNSET Anatomy
+UNSET MeSHAnatomy
+
+SET Support = "Interestingly, in the COVID-19 cohort hospitalization time was positively correlated to microglial density in the medulla (r = 0.44; p = 0.044), but not with microglial density in the pons and midbrain (Fig. 5f)."
+SET MeSHAnatomy = "Medulla Oblongata"
+a(NCIT:"Number of Hospitalization Days") pos a(MESH:Microglia)
+
+
+SET Support = "Conversely, microglial density in the medulla also correlates with hypoxic/ischemic damage of the brainstem, evaluated along a four-tiered semi-quantitative scale (r = 0.59; p = 0.004), as also seen in Thakur et al.19."
+SET Cell = "brainstem"
+a(MESH:Microglia) pos path(DO:ischemia)
+a(MESH:Microglia) pos path(MESH:Hypoxia)
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "Hence, while microgliosis is strongly characteristic of COVID-19 subjects and differs from controls, brainstem hypoxia/ischemia plays a major role in mediating medullary microgliosis, as seen in our cohort and in accordance to previous literature."
+SET MeSHAnatomy = "Medulla Oblongata"
+SET Cell = "brainstem"
+path(DO:ischemia) reg a(NCIT:Microgliosis)
+path(MESH:Hypoxia) reg a(NCIT:Microgliosis)
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "Indeed, subjects with detectable viral genomic sequences and antigens (RT-PCR+/IHC+) were characterized by higher microglial densities in the medullary (p = 0.017) and midbrain tegmentum (p = 0.0074) when compared to negative (RT-PCR−/IHC−) COVID-19 subjects, as seen in Figs. 8h and 10g. "
+SET MeSHAnatomy = "Medulla Oblongata"
+SET Cell = "midbrain tegmentum"
+path(DO:"COVID-19") -> a(FIXME:"microglial density")
+UNSET Cell
+UNSET MeSHAnatomy
+UNSET Disease
+UNSET Species
+UNSET Section
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Citation

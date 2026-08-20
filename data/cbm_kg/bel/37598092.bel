@@ -1,0 +1,637 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "37598092.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"mitochondrial antigen presentation", "function of regulatory T cells", "alpha-synuclein oligomer", "alpha-synuclein fibril", "enhanced regulatory T cell capacity", "senescence markers", "dysregulation of proteasomal genes", "familial glucocerebrosidase Parkinson disease", "psychiatric complications", "Immunosuppression", "specific B cell STIP1 epitopes", "Less cognitive problems", "monocyte cell function", "resting natural killer cells","T cell bias", "B cell bias"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Mouse_Type AS LIST {"PINK1 -/-"}
+DEFINE ANNOTATION Custom_cell AS LIST {"Blood immune cells"}
+DEFINE ANNOTATION Timeline AS LIST {"less than 5 years from diagnosis", "early stage", "more than 5 years from diagnosis", "early stage", "many years before diagnosis", "late onset", "less than 2 years", "With disease progression"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Trends Neurosci. 2023 Oct;46(10):863-878. doi: 10.1016/j.tins.2023.07.005.", "37598092"}
+
+
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+
+SET Species = "9606"
+
+SET Support = "However, to date, ~80% of PD cases are considered idiopathic (iPD), with age constituting one of the biggest risk factors [4]."
+path(DO:"Parkinson's disease") -- a(NCIT:Age)
+
+
+SET Support = "The causes of iPD remain elusive, although several pathological processes are associated with its progression. Mitochondrial dysfunction, impaired proteostasis, calcium dysregulation, and chronic inflammation have been extensively shown in PD animal models and people with PD (reviewed in [5])"
+path(DO:"Parkinson's disease") -> path(HP:"Abnormality of mitochondrial metabolism")
+path(DO:"Parkinson's disease") -> path(MESH:"Proteostasis Deficiencies")
+path(DO:"Parkinson's disease") -| bp(GO:"calcium ion homeostasis")
+path(DO:"Parkinson's disease") -> path(HP:"chronic inflammation")
+
+
+
+SET Support = "For instance, leucine-rich repeated kinase 2 (LRRK2), which regulates Rab-GTPases and is involved in endolysosomal regulation, has a strong relation to the innate immune system (reviewed in [13,14])."
+p(HGNC:LRRK2) reg p(GFAM:"RAB like GTPases")
+p(HGNC:LRRK2) reg a(GO:endolysosome)
+p(HGNC:LRRK2) -- bp(GO:"innate immune response")
+
+
+SET Support = "LRRK2 is highly expressed in neutrophils, monocytes, and B cells and has a lower expression in microglia [15,16]."
+SET MeSHAnatomy = {"Neutrophils", "Monocytes", "B-Lymphocytes"}
+path(DO:"Parkinson's disease") -> p(HGNC:LRRK2)
+UNSET MeSHAnatomy
+
+SET MeSHAnatomy = "Microglia"
+path(DO:"Parkinson's disease") -| p(HGNC:LRRK2)
+UNSET MeSHAnatomy
+
+
+SET Support = "Moreover, LRRK2 mutations can lead to an abnormal type-II interferon (IFN) response, potentially resulting in brain inflammation [20]."
+p(HGNC:LRRK2, var("?")) reg bp(GO:"interferon-gamma-mediated signaling pathway")
+
+
+SET Support = "LRRK2 mutations are also associated with Crohn’s disease, strongly linking gastrointestinal inflammation with PD (reviewed in [21])."
+p(HGNC:LRRK2, var("?")) -> path(MESH:"Crohn Disease")
+
+
+SET Support = "LRRK2 appears to be involved in monocyte maturation and stimulation [16], and, interestingly, LRRK2 is upregulated in blood immune cells during iPD [22,23]."
+SET Custom_cell = "Blood immune cells"
+path(DO:"Parkinson's disease") pos p(HGNC:LRRK2)
+UNSET Custom_cell
+
+
+SET Support = "LRRK2 variant rs76904798, associated with increased PD risk, affects LRRK2 expression in monocytes but not in cells isolated from the cortex, further highlighting the relevance of the peripheral immune system in PD [12]."
+g(dbSNP:"rs76904798") -> path(DO:"Parkinson's disease")
+SET MeSHAnatomy = "Monocytes"
+g(dbSNP:"rs76904798") reg p(HGNC:LRRK2)
+UNSET MeSHAnatomy
+
+
+SET Support = "PTEN-induced serine/threonine kinase 1 (PINK1) and the E3 ubiquitin ligase Parkin, mutations of which are associated with recessive familial PD, are both involved in mitochondrial antigen presentation, and their dysfunction may lead to an inflammatory response [24]."
+p(HGNC:PINK1, var("?")) -- path(DO:"Parkinson's disease")
+p(HGNC:PRKN, var("?")) -- path(DO:"Parkinson's disease")
+p(HGNC:PINK1) -> bp(FIXME:"mitochondrial antigen presentation")
+p(HGNC:PRKN) -> bp(FIXME:"mitochondrial antigen presentation")
+act(p(HGNC:PINK1)) reg bp(GO:"inflammatory response")
+act(p(HGNC:PRKN)) reg bp(GO:"inflammatory response")
+
+SET Support = "PINK1 or Parkin deficiency in myeloid cells (macrophages/microglia) enhances the NLRP3 inflammasome response [25]. Moreover, PINK1 has been associated with the function of regulatory T cells (Tregs) [26] and the antiviral response in macrophages [27]."
+SET MeSHAnatomy = "Myeloid Cells"
+act(p(HGNC:PINK1)) -| act(complex(GO:"NLRP3 inflammasome complex"))
+act(p(HGNC:PRKN)) -| act(complex(GO:"NLRP3 inflammasome complex"))
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Macrophages"
+p(HGNC:PINK1) -- bp(FIXME:"function of regulatory T cells")
+p(HGNC:PINK1) -- bp(GO:"defense response to virus")
+UNSET MeSHAnatomy
+UNSET Species
+
+SET Support = "Additionally, in PINK1-knockout mice, gut infection resulted in dopaminergic degeneration mediated by cytotoxic CD8+ T cells (Tc), which was induced by an autoimmune mechanism [28]."
+SET Species = "10090"
+SET Mouse_Type = "PINK1 -/-"
+a(NCIT:"Digestive System Infection") -> bp(MESH:Autoimmunity)
+bp(MESH:Autoimmunity) -> bp(GO:"T cell mediated cytotoxicity")
+bp(GO:"T cell mediated cytotoxicity") -> deg(a(MESH:"Dopaminergic Neurons"))
+UNSET Mouse_Type
+UNSET Species
+
+
+
+SET Support = "The concept of neuroinflammation in PD was initially proposed based on the presence of responsive microglia in PD postmortem brains, as revealed by upregulated human leukocyte antigen (HLA)- DR (major histocompatibility complex; MHC-II) and CD68 [29,30]. "
+SET Species = "9606"
+SET MeSHAnatomy = "Microglia"
+path(DO:"Parkinson's disease") -> bp(GO:"microglial cell activation")
+path(DO:"Parkinson's disease") pos complex(GO:"MHC class II protein complex")
+complex(GO:"MHC class II protein complex") biomarkerFor bp(GO:"microglial cell activation")
+path(DO:"Parkinson's disease") pos p(HGNC:CD68)
+p(HGNC:CD68) biomarkerFor bp(GO:"microglial cell activation")
+bp(GO:"microglial cell activation") -> bp(GO:"inflammatory response")
+UNSET MeSHAnatomy
+
+
+SET Support = "However, PD-associated transcriptomic profiles in microglia and peripheral monocytes from people with PD are not identical (e.g., upregulation of the S100 family of genes was seen in both, while oxidative phosphorylation (OXPHOS) genes were upregulated in monocytes but downregulated in microglia) [39]."
+SET MeSHAnatomy = {"Microglia", "Monocytes"}
+path(DO:"Parkinson's disease") -> g(GFAM:"S100 calcium binding proteins")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Monocytes"
+path(DO:"Parkinson's disease") -> bp(GO:"oxidative phosphorylation")
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Microglia"
+path(DO:"Parkinson's disease") -| bp(GO:"oxidative phosphorylation")
+UNSET MeSHAnatomy
+
+
+SET Support = "Translocator protein 18 (TSPO) PET signal, which denotes the innate inflammatory response, is seen in the brains of both people with PD and those with rapid eye movement (REM) sleep behavioral disorder (RBD), considered indicative of a prodromal PD [41,42]."
+SET MeSHAnatomy = "Brain"
+path(DO:"Parkinson's disease") -> p(HGNC:TSPO)
+path(DO:"REM sleep behavior disorder") -> p(HGNC:TSPO) 
+UNSET MeSHAnatomy
+
+
+SET Support = "Oligomeric and fibrillar α-syn released by neurons can act as damage-associated molecular patterns (DAMPs) initiating an inflammatory response in microglia/macrophages (reviewed in [46];Box 2)."
+SET MeSHAnatomy = {"Microglia", "Macrophages"}
+a(FIXME:"alpha-synuclein oligomer") -> bp(GO:"inflammatory response")
+a(FIXME:"alpha-synuclein fibril")-> bp(GO:"inflammatory response")
+UNSET MeSHAnatomy
+
+
+SET Support = "TLR-2 and 4 have been highlighted as α-syn targets and shown to be upregulated in the brains and blood monocytes of people with PD (reviewed in [47]). This can induce the production of proinflammatory cytokines and reactive oxygen species, and, ultimately, neuronal death."
+SET MeSHAnatomy = {"Brain", "Blood", "Monocytes"}
+path(DO:"Parkinson's disease") pos p(HGNC:TLR2)
+path(DO:"Parkinson's disease") pos p(HGNC:TLR4)
+p(HGNC:TLR2) -> bp(GO:"cytokine production involved in inflammatory response")
+p(HGNC:TLR4) -> bp(GO:"cytokine production involved in inflammatory response")
+p(HGNC:TLR2) -> a(CHEBI:"reactive oxygen species")
+p(HGNC:TLR4) -> a(CHEBI:"reactive oxygen species")
+UNSET MeSHAnatomy
+
+
+SET Support = "Accordingly, increased TGFβ1, IL1β, and IL6 are consistently observed in the cerebrospinal fluid(CSF) of people with PD [48]."
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"Parkinson's disease") pos p(HGNC:TGFB1)
+path(DO:"Parkinson's disease") pos p(HGNC:IL1B)
+path(DO:"Parkinson's disease") pos p(HGNC:IL6)
+UNSET MeSHAnatomy
+UNSET Species
+
+SET Support = "Proinflammatory cytokines are also increased in the brain tissue of PD mouse models [49,50]."
+SET Species = "10090"
+path(DO:"Parkinson's disease") -> bp(GO:"cytokine production involved in inflammatory response")
+UNSET Species
+
+
+SET Support = "Increased monocytic activation and reduced cytotoxicity in NK cells, which was associated with worse motor performance, have been described in peripheral blood mononuclear cells (PBMCs) from persons with PD [58]."
+SET Species = "9606"
+SET MeSHAnatomy = "Leukocytes, Mononuclear"
+path(DO:"Parkinson's disease") -> bp(GO:"monocyte activation")
+SET Cell = "natural killer cell"
+path(DO:"Parkinson's disease") -| bp(GO:"natural killer cell mediated cytotoxicity")
+bp(GO:"natural killer cell mediated cytotoxicity") -> path(MESH:"Motor Activity")
+UNSET Cell
+UNSET MeSHAnatomy
+
+SET Support = "Interestingly, transcriptomic analysis of monocytes from people with PD showed mitochondrial and lysosomal alterations, although differential transcriptomic profiles were observed between people with familial (glucocerebrosidase) GBA-PD versus iPD [59]."
+SET MeSHAnatomy = "Monocytes"
+path(DO:"Parkinson's disease") -> path(HP:"Abnormality of mitochondrial metabolism")
+path(DO:"Parkinson's disease") -> path(HP:"Abnormality of lysosomal metabolism")
+UNSET MeSHAnatomy
+
+
+SET Support = "Additionally, pharmacological strategies to modify monocytes [60], decrease T cells, or enhance Treg capacity [61–63] are neuroprotective in animal/PD models, with the latter already examined in an early small safety clinical trial [64]."
+a(MESH:"T-Lymphocytes") -| bp(MESH:Neuroprotection)
+a(FIXME:"enhanced regulatory T cell capacity") -> bp(MESH:Neuroprotection)
+
+
+SET Support = "Further confirming an ongoing peripheral immune process in PD, -> in IL6, TNF, IL1β, IL2, IL10, C-reactive protein, and RANTES are seen in blood from people with PD (meta-analysis [67]). The monkey MPTP model shows long-term increased TNF and IFNγ in serum [68]."
+SET MeSHAnatomy = "Blood"
+path(DO:"Parkinson's disease") pos p(HGNC:IL6)
+path(DO:"Parkinson's disease") pos p(HGNC:TNF)
+path(DO:"Parkinson's disease") pos p(HGNC:IL1B)
+path(DO:"Parkinson's disease") pos p(HGNC:IL2)
+path(DO:"Parkinson's disease") pos p(HGNC:IL10)
+path(DO:"Parkinson's disease") pos p(HGNC:CRP)
+path(DO:"Parkinson's disease") pos p(HGNC:CCL5)
+UNSET Species
+UNSET MeSHAnatomy
+SET Species = "9544"
+SET MeSHAnatomy = "Serum"
+path(DO:"Parkinson's disease") pos p(UNIPROT:P48094)
+path(DO:"Parkinson's disease") pos p(UNIPROT:P63310)
+UNSET Species
+UNSET MeSHAnatomy
+
+SET Support = "Notably, a proinflammatory environment in the blood of persons with de novo PD was associated with faster motor and cognitive decline in a longitudinal study [71], and a panel combining cytokines and senescence markers in full blood cells was a good predictor of dementia [72], suggesting that inflammatory changes in the periphery denote a more aggressive form of PD"
+SET Species = "9606"
+bp(GO:"inflammatory response") -| path(MESH:"Motor Activity")
+bp(GO:"inflammatory response") -| bp(GO:cognition)
+composite(a(MESH:Cytokines), a(FIXME:"senescence markers")) -- path(DO:dementia)
+
+
+SET Support = "Some studies in PD cohorts show an increase of classical monocytes [77,78], and the monocytic distribution appears to evolve, since people with RBD or early PD (<5 years from diagnosis) showed increased classical monocytes, while in late-stage disease (>5 years) the intermediate monocytes were the cells increased [73,79]."
+path(DO:"Parkinson's disease") -> a(CELL:"classical monocyte")
+SET MeSHDisease = "Prodromal Symptoms"
+SET Timeline = {"less than 5 years from diagnosis", "early stage"}
+path(DO:"Parkinson's disease") -> a(CELL:"classical monocyte")
+UNSET Timeline
+SET Timeline = "more than 5 years from diagnosis"
+path(DO:"Parkinson's disease") -> a(CELL:"intermediate monocyte")
+UNSET Timeline
+
+SET Support = "Similarly, upregulation of proteins associated with transmigration (CCR2 and CD11b) occurred in RBD and early PD, suggesting an increase in migratory capacity early in PD [73,79]."
+SET Timeline = "early stage"
+path(DO:"Parkinson's disease") -> p(HGNC:CCR2)
+path(DO:"Parkinson's disease") -> p(HGNC:ITGAM)
+UNSET Timeline
+UNSET MeSHDisease
+
+
+SET Support = "Accordingly, people with PD had increased monocyte numbers in the CSF [80]. However, the antigen-presenting (HLA-DR) and phagocytic capacity (CD163) of blood monocytes increased with time, becoming significant at later PD stages [73,79]. "
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"Parkinson's disease") -> a(MESH:Monocytes)
+UNSET MeSHAnatomy
+
+SET Support = "Increased intermediate blood monocytes were associated with higher disease severity in people with PD [81]."
+SET MeSHAnatomy = "Blood"
+a(CELL:"intermediate monocyte") pos path(DO:"Parkinson's disease")
+UNSET MeSHAnatomy
+
+
+SET Support = "Although both classical and intermediate monocytes from people with PD show transcriptomic alterations, this was more pronounced in intermediate monocytes, which showed dysregulation of proteasomal and mitochondrial genes [39]."
+SET Cell = "intermediate monocyte"
+path(DO:"Parkinson's disease") -> bp(FIXME:"dysregulation of proteasomal genes")
+path(DO:"Parkinson's disease") -| bp(GO:"mitochondrial genome maintenance")
+UNSET Cell
+
+
+SET Support = "Analyses of blood from people with PD showed increased neutrophils and decreased lymphocytes many years before diagnosis, thus associating a higher NLR with PD risk [56,5"
+SET Timeline = "many years before diagnosis"
+path(DO:"Parkinson's disease") -> a(MESH:Neutrophils)
+path(DO:"Parkinson's disease") -| a(MESH:Lymphocytes)
+a(EFO:"neutrophil percentage of leukocytes") pos path(DO:"Parkinson's disease")
+UNSET Timeline
+
+SET Support = "Interestingly, the relevance of the increased NLR is true in iPD and genetic GBA-PD, but not in those with genetic LRRK2-PD, supporting a differential immune response in these PD subtypes [90]. "
+path(DO:"Parkinson's disease") -> a(EFO:"neutrophil percentage of leukocytes")
+path(FIXME:"familial glucocerebrosidase Parkinson disease") --  a(EFO:"neutrophil percentage of leukocytes") 
+
+
+SET Support = "Those with a high risk showed higher neutrophil and lower (CD4+) lymphocyte fractions compared with those with a low risk."
+path(DO:"Parkinson's disease") pos a(MESH:Neutrophils)
+path(DO:"Parkinson's disease") neg a(MESH:Lymphocytes)
+a(FIXME:"familial glucocerebrosidase Parkinson disease") pos a(MESH:Neutrophils)
+a(FIXME:"familial glucocerebrosidase Parkinson disease") neg a(MESH:Lymphocytes)
+
+SET Support = "Another study, in which people with PD were divided according to cognitive performance, showed that those with mild cognitive impairment had a higher level of lymphocytes (i.e., lower NLR) compared with those with normal cognition [92]."
+SET MeSHDisease = "Parkinson Disease"
+path(DO:"cognitive disorder") -| a(EFO:"neutrophil percentage of leukocytes")
+bp(GO:cognition) pos a(EFO:"neutrophil percentage of leukocytes")
+UNSET MeSHDisease
+
+
+SET Support = "However, more research has been done on T cells, the decrease of which in the blood is suggested to be due to their infiltration into the brain seen in both people with PD and PD models."
+path(DO:"Parkinson's disease") -| a(MESH:"T-Lymphocytes")
+
+
+SET Support = "CD4 has also been observed in areas with microgliosis in postmortem human brains, especially in PDD [37]."
+SET MeSHDisease = "Parkinson Disease"
+SET MeSHAnatomy = "Brain"
+a(NCIT:Microgliosis) -> p(HGNC:CD4)
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+
+
+SET Support = "Interestingly, analyses of PBMCs showed decreased senescence of CD8 cells in people with late-onset PD compared with those with early-onset PD [58]."
+SET MeSHAnatomy = {"Leukocytes, Mononuclear", "CD8-Positive T-Lymphocytes"}
+SET Timeline = "late onset"
+path(DO:"Parkinson's disease") -| bp(GO:"cellular senescence")
+UNSET Timeline
+UNSET MeSHAnatomy
+
+
+SET Support = "Interestingly, the lack of DJ-1 [an oxidative stress sensor related to familial PD (PARK7) [98]] prevents the immunosenescence of T cells, suggesting a differential role for the aging mechanism with regard to these cells in PD [99]."
+SET MeSHAnatomy = "T-Lymphocytes"
+p(HGNC:PARK7) -> bp(GO:"cellular senescence")
+UNSET MeSHAnatomy
+
+
+
+SET Support = "Despite the decrease in total T cells, the percentage of activated (HLA-DR+) T cells (CD8 and CD4) are increased in the blood and CSF in PD [105]."
+SET MeSHAnatomy = {"Cerebrospinal Fluid", "Blood"}
+path(DO:"Parkinson's disease") -| a(MESH:"T-Lymphocytes")
+path(DO:"Parkinson's disease") -> a(MESH:"CD4-Positive T-Lymphocytes")
+path(DO:"Parkinson's disease") -> a(MESH:"CD8-Positive T-Lymphocytes")
+UNSET MeSHAnatomy
+
+
+SET Support = "Transcriptomic analyses of T cells from people with PD upon in vitro activation showed upregulation of pathways such as IL17, IL10, STAT, and G-proteins, which supports the idea of autoimmunity (IL17) and anti-inflammatory (IL-10) processes occurring in parallel [106]"
+SET MeSHAnatomy = "T-Lymphocytes"
+path(DO:"Parkinson's disease") pos r(HGNC:IL17A)
+path(DO:"Parkinson's disease") pos r(HGNC:IL10)
+path(DO:"Parkinson's disease") pos r(HGNC:STAT1)
+path(DO:"Parkinson's disease") pos r(HGNC:IL17A)
+UNSET MeSHAnatomy
+
+
+SET Support = "This is in agreement with another study describing an increase in Th17, cytotoxic IFNγ-CD8, and Th2 cells in de novo PD (<2 years) [107]. People with PD showed a decrease in naïve CD8 and CD4 T cells, and an increase in both Th17 and central memory CD4 cells; these -> were associated with worse motor impairments [107]."
+SET Timeline = "less than 2 years"
+path(DO:"Parkinson's disease") -> a(MESH:"Th17 Cells")
+SET Cell = "CD8-positive, alpha-beta cytotoxic T cell"
+path(DO:"Parkinson's disease") -> p(HGNC:IFNG)
+path(DO:"Parkinson's disease") -> a(MESH:"Th2 Cells")
+UNSET Timeline
+path(DO:"Parkinson's disease") -| a(MESH:"CD4-Positive T-Lymphocytes")
+path(DO:"Parkinson's disease") -| a(MESH:"CD8-Positive T-Lymphocytes")
+path(DO:"Parkinson's disease") -> a(MESH:"Th17 Cells")
+path(DO:"Parkinson's disease") -> a(CELL:"CD4-positive, alpha-beta memory T cell")
+a(MESH:"Th17 Cells") -- path(MESH:"Motor Disorders")
+a(CELL:"CD4-positive, alpha-beta memory T cell") -- path(MESH:"Motor Activity") 
+UNSET Cell
+
+SET Support = "Another study confirmed the decrease in naïve CD8 T cells and the increase in late-differentiated CD4 T cells during PD [108]. Naïve CD8 T cells in blood were positively correlated with the severity of autonomic dysfunction and psychiatric complications, and negatively with the severity of RBD [108]."
+path(DO:"Parkinson's disease") -| a(MESH:"CD8-Positive T-Lymphocytes")
+path(DO:"Parkinson's disease") -> a(MESH:"CD4-Positive T-Lymphocytes")
+a(MESH:"CD8-Positive T-Lymphocytes") pos path(HP:"Abnormal autonomic nervous system physiology")
+a(MESH:"CD8-Positive T-Lymphocytes") pos a(FIXME:"psychiatric complications")
+SET MeSHDisease = "Parkinson Disease"
+a(MESH:"CD8-Positive T-Lymphocytes") neg path(MESH:"Prodromal Symptoms")
+UNSET MeSHDisease
+
+
+SET Support = "Supporting the idea that chronic inflammation is important in PD, studies showed that people with PD have a reduced immunoregulatory compartment and Tregs of less regulatory-suppressive capacity, which was associated with an increase in proinflammatory effector T cells [81,109]."
+path(DO:"Parkinson's disease") -| bp(GO:"regulation of immune response")
+SET MeSHAnatomy = "T-Lymphocytes, Regulatory"
+path(DO:"Parkinson's disease") -| a(FIXME:Immunosuppression)
+UNSET MeSHAnatomy
+
+SET Support = "scRNAseq of T cells from people with PD revealed clonal expansion of cytotoxic CD4 T cells and bias in terminal effector memory CD8 cells, which showed enrichment of certain genes associated with trans-endothelial migration [101]."
+SET MeSHAnatomy = "T-Lymphocytes" 
+SET Cell = "CD4-positive, alpha-beta cytotoxic T cell"
+path(DO:"Parkinson's disease") -> a(NCIT:"Clonal Expansion")
+UNSET Cell
+UNSET MeSHAnatomy
+SET Cell = "effector memory CD8-positive, alpha-beta T cell"
+path(DO:"Parkinson's disease") -> a(FIXME:"T cell bias")
+UNSET Cell
+path(DO:"Parkinson's disease") -> bp(GO:"cellular extravasation")
+
+
+SET Support = "By contrast, CD4 T cells from people with PD showed decreased migratory capacity in vitro associated with mitochondrial dysfunction [112]. Interestingly, transcriptomic analysis of CD4 T cells upon in vitro activation suggests that mitochondrial dysfunction and defective DNA repair mechanisms contribute to T cell-related PD pathogenesis [106]."
+SET MeSHAnatomy = "CD4-Positive T-Lymphocytes"
+path(DO:"Parkinson's disease") -| bp(GO:"cellular extravasation")
+path(DO:"Parkinson's disease") -> path(HP:"Abnormality of mitochondrial metabolism")
+path(DO:"Parkinson's disease") -| bp(GO:"DNA repair")
+
+
+SET Support = "Notably, Parkin and LRRK2 were downregulated in CD4 and upregulated in CD8 memory T cells in the responder group. However, other enriched pathways were shared across both memory T cell types, such as OXPHOS and TNF signaling, which are well-known PD-associated neurotoxic mechanisms [118]."
+path(DO:"Parkinson's disease") neg p(HGNC:PINK1)
+path(DO:"Parkinson's disease") neg p(HGNC:LRRK2)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "CD8-Positive T-Lymphocytes"
+path(DO:"Parkinson's disease") pos p(HGNC:PINK1)
+path(DO:"Parkinson's disease") pos p(HGNC:LRRK2)
+UNSET MeSHAnatomy
+SET Cell = {"CD4-positive, alpha-beta memory T cell", "CD8-positive, alpha-beta memory T cell"}
+path(DO:"Parkinson's disease") -> bp(GO:"oxidative phosphorylation")
+path(DO:"Parkinson's disease") -> bp(GO:"tumor necrosis factor-mediated signaling pathway")
+UNSET Cell
+
+SET Support = "Besides T cells, people with PD also have a reduced number of B cells [119,120]. Additionally, the B cell compartment during PD shows decreased naïve B cells and increased unswitched memory B cells [107,121]."
+path(DO:"Parkinson's disease") -| a(CELL:"B cell")
+path(DO:"Parkinson's disease") -| a(CELL:"naive B cell")
+path(DO:"Parkinson's disease") -> a(CELL:"unswitched memory B cell")
+
+
+SET Support = "B cells from people with PD showed clonal expansion and higher expression of MHCII genes compared with healthy controls [121]. Moreover, a proinflammatory B cell bias is supported by the decrease in regulatory and anti-inflammatory B cells [109,122] as well as by the increase in TNF [107,121,122] and GM-CSF-producing B cells in people with PD [122]. "
+path(DO:"Parkinson's disease") -> bp(GO:"B cell proliferation")
+path(DO:"Parkinson's disease") -> complex(GO:"MHC class II protein complex")
+path(DO:"Parkinson's disease") -> a(FIXME:"B cell bias")
+path(DO:"Parkinson's disease") -| a(CELL:"regulatory B cell")
+path(DO:"Parkinson's disease") -| a(CELL:"memory B cell")
+path(DO:"Parkinson's disease") -| a(CELL:"naive B cell")
+path(DO:"Parkinson's disease") -> p(HGNC:TNF)
+path(DO:"Parkinson's disease") -> p(HGNC:CSF2)
+
+
+SET Support = "Increased α-syn autoantibodies in the CSF of people with PD have been reported [124], although it is suggested that those α-syn autoantibodies with high affinity are decreased in the blood [125] and CSF [126] as the disease progresses."
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"Parkinson's disease") -> a(CMO:"autoantibody level")
+a(CMO:"autoantibody level") -- p(HGNC:SNCA)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = "Blood"
+SET Timeline = "With disease progression"
+path(DO:"Parkinson's disease") -| a(CMO:"autoantibody level")
+a(CMO:"autoantibody level") -- p(HGNC:SNCA)
+UNSET Timeline
+UNSET MeSHAnatomy
+#AB: Need ro review again
+
+SET Support = "Furthermore, autoantibodies against the neuroprotective compound stress-inducible phosphoprotein-1 (STIP1) and specific B cell STIP1 epitopes have been reported in PD [129]."
+path(DO:"Parkinson's disease") pos act(p(HGNC:STIP1))
+path(DO:"Parkinson's disease") pos a(FIXME:"specific B cell STIP1 epitopes")
+
+SET Support = "Similarly, neuromelanin autoantibodies are found in people with PD and decrease as the disease progresses [131]."
+path(DO:"Parkinson's disease") -> a(CMO:"autoantibody level")
+a(CMO:"autoantibody level") -- a(MESH:neuromelanin)
+SET Timeline = "With disease progression"
+path(DO:"Parkinson's disease") -| a(CMO:"autoantibody level")
+a(CMO:"autoantibody level") -- a(MESH:neuromelanin)
+UNSET Timeline
+
+SET Support = "Females typically show slower progression and develop fewer cognitive problems, but more dyskinesias [135]."
+SET Gender = "Female"
+path(DO:"Parkinson's disease") -- path(MESH:"Disease Progression")
+path(DO:"Parkinson's disease") -- path(FIXME:"Less cognitive problems")
+path(DO:"Parkinson's disease") -> path(MESH:Dyskinesias)
+UNSET Gender
+UNSET Species
+
+
+SET Support = "By contrast, male mice microglia showed higher expression of NF-κB and its inflammatory target genes, higher MHC expression, and ATP responsiveness [138,139]."
+SET Species = "10090"
+SET Gender = "Male"
+SET MeSHAnatomy = "Microglia"
+path(DO:"Parkinson's disease") pos p(MGI:Nfkb1)
+UNSET MeSHAnatomy
+path(DO:"Parkinson's disease") pos complex(GO:"MHC class I protein complex")
+path(DO:"Parkinson's disease") pos complex(GO:"MHC class II protein complex")
+path(DO:"Parkinson's disease") pos bp(GO:"response to ATP")
+UNSET Gender
+UNSET Species
+
+
+SET Support = "The second study found a common over-representation of genes associated with mitochondrial dysfunction, oxidative stress, and inflammation in PD, but with the genes involved differing between sexes [142]."
+SET Species = "9606"
+path(DO:"Parkinson's disease") -> path(HP:"Abnormality of mitochondrial metabolism")
+path(DO:"Parkinson's disease") -> bp(MESH:"Oxidative Stress")
+path(DO:"Parkinson's disease") -> bp(GO:"inflammatory response")
+
+SET Support = "The common genomic signature of aging in human PBMCs includes decreases in T cell functions and -> in cytotoxic effector cells (NK and memory CD8) and monocyte cell functions, which appear to be more pronounced in males [145]."
+SET MeSHAnatomy = "Leukocytes, Mononuclear"
+SET Gender = "Male"
+bp(GO:aging) -- path(HP:"Impaired T cell function")
+bp(GO:aging) -> a(CELL:"natural killer cell")
+bp(GO:aging) -> a(CELL:"effector memory CD8-positive, alpha-beta T cell")
+bp(GO:aging) -> a(FIXME:"monocyte cell function")
+UNSET Gender
+UNSET MeSHAnatomy
+UNSET Species
+
+
+SET Support = "In terms of sex immune dimorphism during PD, more naïve T cells and fewer resting NK cells have been reported in females (vs. males) [147]. Metabolomics studies in blood revealed a sex-associated pattern during de novo PD, with males showing a significantly different profile versus control, but not females [148]."
+SET Species = "10090"
+SET Gender = "Female"
+path(DO:"Parkinson's disease") -> a(CELL:"naive T cell")
+path(DO:"Parkinson's disease") -> a(FIXME:"resting natural killer cells")
+UNSET Gender
+UNSET Species
+
+
+SET Support = "When addressing monocytes in people with PD, disease-associated changes differed between sexes [79,82], with females showing the most robust transcriptomic changes [149], but with males showing higher numbers of monocytes compared with females [147]."
+SET Species = "9606"
+SET Gender = "Male"
+path(DO:"Parkinson's disease") -> a(MESH:Monocytes)
+UNSET Gender
+UNSET Species
+
+
+SET Support = "In an ulcerative colitis mouse model, males exhibited more pronounced immune changes and neurodegeneration [150]."
+SET Species = "10090"
+SET Gender = "Male"
+path(MESH:"Colitis, Ulcerative") reg bp(GO:"immune system process")
+path(MESH:"Colitis, Ulcerative") -> path(MESH:"Nerve Degeneration")
+UNSET Gender
+
+
+SET Support = "Males were affected earlier motorically by Nurr1 deficiency [151] and male MPTP-intoxicated monkeys showed higher inflammation markers [43]."
+SET Gender = "Male"
+p(MGI:Nr4a2) reg bp(GO:"motor behavior")
+UNSET Species
+SET Species = "9544"
+a(CHEBI:"1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine") -> path(GO:"inflammatory response")
+UNSET Species
+UNSET Gender
+
+
+
+SET Support = "However, females (both humans and mice) showed higher repair of oxidative DNA damage in response to α-syn compared with males [152] and higher levels of the anti-inflammatory angiotensin 2 receptor [153]."
+SET Species = {"9606", "10090"}
+SET Gender = "Female"
+path(DO:"Parkinson's disease") -> bp(GO:"DNA repair")
+UNSET Species
+SET Species = "9606"
+path(DO:"Parkinson's disease") -> p(HGNC:AGTR2)
+UNSET Species
+SET Species = "10090"
+path(DO:"Parkinson's disease") -> p(MGI:Agtr2)
+UNSET Species
+UNSET Gender
+
+SET Support = "Studies in animal models strongly support the active role of the peripheral immune system in PD."
+SET MeSHAnatomy = "Peripheral Nervous System"
+bp(GO:"immune response") -- path(DO:"Parkinson's disease")
+UNSET MeSHAnatomy
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Citation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

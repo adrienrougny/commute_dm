@@ -1,0 +1,152 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "36669485.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"number of prior influenza attacks", "Parkinson's disease-like symptoms", "Recentness of influenza infection", "number of prior influenza infections with complications", "influenza infection within 30 days prior to diagnosis of Parkinson's disease like symptom"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION FIXME AS LIST {"influenza and pneumonia", "Preceding Epstein-Barr virus exposure", "Increased risk of multiple sclerosis", "Preceding virus exposure", "Increased risk of developing a neurodegerative disease"}
+DEFINE ANNOTATION Cohort AS LIST {"FinnGen"}
+DEFINE ANNOTATION Ethnicity AS LIST {"European"}
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Neuron. 2023 Apr 5;111(7):1086-1093.e2. doi: 10.1016/j.neuron.2022.12.029.", "36669485"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Species = "9606"
+SET Support = "Dementia had the most replicated associations after multiple test correction, with six viral groupings showing significant results: viral encephalitis, other viral diseases, viral warts, all influenza, influenza and pneumonia, and viral pneumonia."
+SET Ethnicity = "European"
+path(DO:dementia) -- path(DO:"viral encephalitis")
+path(DO:dementia) -- path(DO:"common wart")
+path(DO:dementia) -- path(DO:influenza)
+path(DO:dementia) -- path(DO:pneumonia)
+path(DO:dementia) -- path(DO:"viral pneumonia")
+
+
+SET Support = "Influenza and pneumonia were significantly associated with five of the six NDDs (AD, ALS, dementia, PD, and VAS) in FinnGen; all five were replicated using the cross-sectional data from UKB."
+SET Cohort = "FinnGen"
+path(DO:influenza) -- path(DO:"Alzheimer's disease")
+path(DO:influenza) -- path(DO:"amyotrophic lateral sclerosis")
+path(DO:influenza) -- path(DO:dementia)
+path(DO:influenza) -- path(DO:"Parkinson's disease")
+path(DO:influenza) -- path(DO:"vascular dementia")
+path(DO:pneumonia) -- path(DO:"Alzheimer's disease")
+path(DO:pneumonia) -- path(DO:"amyotrophic lateral sclerosis")
+path(DO:pneumonia) -- path(DO:dementia)
+path(DO:pneumonia) -- path(DO:"Parkinson's disease")
+path(DO:pneumonia) -- path(DO:"vascular dementia")
+
+SET Support = "Viral encephalitis and viral and other specified intestinal infections were significant and replicated for both AD and dementia; the varicella-zoster virus
+was significant and replicated for both MS and VAS (as a note, varicella-zoster virus is referred to as Zoster [herpes zoster] in the FinnGen and UKB coding system)."
+path(DO:"viral encephalitis") -- path(DO:"amyotrophic lateral sclerosis")
+path(DO:"viral encephalitis") -- path(DO:dementia) 
+SET MeSHAnatomy = "Intestines"
+path(DO:"intestinal infectious disease") -- path(DO:"amyotrophic lateral sclerosis")
+path(DO:"intestinal infectious disease") -- path(DO:dementia)
+UNSET MeSHAnatomy
+a(NCIT:"Varicella Zoster Infection") -- path(DO:"multiple sclerosis")
+a(NCIT:"Varicella Zoster Infection") -- path(DO:"vascular dementia")
+
+
+SET Support = "As a positive control, we replicated the previously published findings showing an association between a preceding EBV exposure and increased risk of MS in FinnGen (HR 26.5; CI 3.7–191.6; p = 0.001)."
+path(MESH:"Epstein-Barr Virus Infections") -- path(DO:"multiple sclerosis")
+
+SET Support = "At 1–5 years preceding NDD diagnosis, 15 replicated pairings had significant associations, with hazard ratios ranging from 2.24(PD and influenza and pneumonia) to 24.14 (dementia and viral encephalitis)."
+path(DO:dementia) pos path(DO:"viral encephalitis")
+
+SET Support = "For 100% of these pairings, the hazard ratio for developing an NDD after a viral exposure was higher than the hazard ratio for being infected with a virus after the diagnosis of an NDD."
+path(MESH:"Epstein-Barr Virus Infections") -- path(DO:"neurodegenerative disease")
+
+
+SET Support = "For both pairs (influenza/Alzheimer's and Bell's palsy/dementia), the HR was higher before NDD diagnosis."
+path(DO:"influenza") pos path(DO:"Alzheimer's disease")
+path(DO:"Bell's palsy") pos path(DO:dementia)
+
+
+SET Support = "The HR for varicella-zoster is higher after MS diagnosis, although the confidence intervals do overlap"
+path(DO:"multiple sclerosis") -- a(NCIT:"Varicella Zoster Infection")
+UNSET Cohort
+UNSET Ethnicity
+UNSET Species
+UNSET Section
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Citation

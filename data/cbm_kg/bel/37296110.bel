@@ -1,0 +1,288 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "37296110.bel"
+SET DOCUMENT Authors = "Sutrishna Sen"
+SET DOCUMENT ContactInfo = "sutrishna.sen@causlitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+#DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE PATHWAY AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20200623.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+DEFINE ANNOTATION Specimen AS LIST {"Plasma", "Serum"}
+DEFINE ANNOTATION Post_symptom_onset_days AS LIST {"Greater than or equal to 60 days", "Around 60 days"}
+
+
+##################################################################################
+# Statements #
+##################################################################################
+
+SET Citation = {"PubMed", "Nat Commun. 2023 Jun 9;14(1):3417. doi: 10.1038/s41467-023-38682-4.", "37296110"}
+
+
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+
+SET Support = "Two of the clusters (4 & 5) showed marked enrichment for inflammatory modules including type I and type II interferon signaling, TNF signaling, NFκB signaling, and several others, while clusters 1, 2, and 3 lacked a distinct inflammatory protein signature."
+
+SET Species = "9606"
+SET Specimen = "Serum"
+path(DO:"COVID-19") -> bp(GO:"type I interferon signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"interferon-gamma-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"tumor necrosis factor-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"I-kappaB kinase/NF-kappaB signaling")  
+path(DO:"COVID-19") -> bp(PW:"nuclear factor kappa B signaling pathway")  
+
+SET Support = "Inflammatory PASC participants in clusters 4 & 5 had a significantly higher pre-PASC clinical activity score or higher impact on ADLs (two-sided Wilcoxon test p = 0.002) compared to non-inflammatory PASC participants in clusters 2 & 3 (Fig. 1C)"
+path(DO:"COVID-19") -| a(NCIT:"Activity Hours per Week")
+
+SET Support = "BMI was significantly higher in the inflammatory PASC groups(clusters 4 and 5) compared to participants in the other non-inflammatory clusters (Fig. 1D)"
+path(DO:"COVID-19") -- path(HP:"Increased body mass index")  
+
+
+SET Support = "We noted that well-described BMI associated proteins like (Leptin (LEP) and Fatty Acid Binding Protein(FABP4)) and the Leptin signaling module were significantly increased in participants with high BMI (clusters 4 and 5) in our cohort (Fig. 1E,F)22–24"
+SET Disease = "COVID-19"
+path(MESH:"Body Mass Index") pos p(HGNC:LEP)
+path(MESH:"Body Mass Index") pos p(HGNC:FABP4)
+path(MESH:"Body Mass Index") pos act(p(HGNC:LEP))
+
+SET Support = "We also noted that interleukin-6 (IL-6), identified as part of the inflammatory signature associated with PASC, was positively correlated with BMI (Fig. 1E)"
+path(MESH:"Body Mass Index") pos p(HGNC:IL6)
+
+
+SET Support = "These data suggest that BMI may be a risk factor for exhibiting an inflammatory PASC phenotype but does not account fully for the increased IL-6 observed in inflammatory PASC because a small subset of participants whose BMI was within the 'healthy' range also had increased IL-6 as part of their inflammatory proteomic signature."
+path(MESH:"Body Mass Index") pos p(HGNC:IL6) 
+
+SET Support = "Specifically, CXCL9, CXCL10, and IL18BP in addition to the type II interferon signaling module that have been associated with the process described as 'inflammaging' 25, were positively correlated with higher age in cluster 4 in our cohort (Fig. 1H,I)."
+p(HGNC:CXCL9) pos bp(GO:aging)
+p(HGNC:CXCL10) pos bp(GO:aging)
+p(HGNC:IL18BP) pos bp(GO:aging)
+UNSET Disease
+UNSET Specimen
+
+
+
+SET Support = "Within cluster 4, multiple pathways associated with type II interferon (IFN-γ) signaling (Type II IFN signaling, IL-27, TID (aka: Chaperones modulating interferon signaling)), were among those most highly enriched (Fig. 2B, Supplemental Data S7). Canonical NF-κB signaling and NF-κB activating cytokine pathways(IL-18, TNF, IL-1 were enriched in both clusters 4 and 5 (Fig. 2C). In addition, cluster 5 was also enriched for proteins associated with IFN-α signaling (Fig. 2D)."
+path(DO:"COVID-19") -> bp(GO:"interferon-gamma-mediated signaling pathway")
+path(DO:"COVID-19") pos p(HGNC:IL27)
+path(DO:"COVID-19") pos p(HGNC:DNAJA3)
+path(DO:"COVID-19") -> bp(GO:"I-kappaB kinase/NF-kappaB signaling")
+path(DO:"COVID-19") -> bp(GO:"interleukin-18-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"tumor necrosis factor-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"interleukin-1-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(PW:"interferon mediated signaling pathway")
+
+
+SET Support = "The expression scores of these modules across all samples were significantly correlated with each other, indicating, participants with higher IFN-γ signaling have higher IL-27, IL-18, and NF-κB signaling, and participants with higher TNF signaling have higher IL-1, NF-κB, and IFN-α signaling, suggesting a coordinated activation of immune cascades that drive inflammation (Supplemental Fig. S6)."
+bp(GO:"interferon-gamma-mediated signaling pathway") pos p(HGNC:IL27)
+bp(GO:"interferon-gamma-mediated signaling pathway") pos p(HGNC:IL18)
+bp(GO:"interferon-gamma-mediated signaling pathway") pos bp(GO:"I-kappaB kinase/NF-kappaB signaling") 
+bp(GO:"tumor necrosis factor-mediated signaling pathway") pos p(HGNC:IL1A)
+bp(GO:"tumor necrosis factor-mediated signaling pathway") pos p(HGNC:NFKB1)
+bp(GO:"tumor necrosis factor-mediated signaling pathway") pos bp(PW:"interferon mediated signaling pathway")
+
+SET Support = "IFN-γ was the cytokine that most significantly defines cluster 4 (Fig. 3A, B, Supplemental Fig. S8, Supplemental Data S8). In addition to IFN-γ, increased expression of chemokines and cytokines known to be regulated by IFN-γ including CXCL9, CXCL10, CXCL11 and IL-27 in cluster 4 suggests that it is functionally active"
+path(DO:"COVID-19") pos p(HGNC:IFNG)
+path(DO:"COVID-19") pos p(HGNC:CXCL9)
+path(DO:"COVID-19") pos p(HGNC:CXCL10)
+path(DO:"COVID-19") pos p(HGNC:CXCL11)
+path(DO:"COVID-19") pos p(HGNC:IL27)
+
+SET Support = "We also observed increased expression of IL-12 p40(IL12B) and the IL-12 p40/p70 heterodimer (IL12A_IL12B) in cluster 4,which may drive expression of IFN-γ and an overall Th1 signature(Fig. 3A, B). While not as strongly differentially expressed in cluster 5,IFN-γ and IFN-γ induced chemokines are enriched compared to those that recovered from COVID or were uninfected (Fig. 3B)."
+path(DO:"COVID-19") pos p(HGNC:IL12B)
+path(DO:"COVID-19") pos complex(p(HGNC:IL12A), p(HGNC:IL12B))
+path(DO:"COVID-19") pos p(HGNC:IFNG)
+path(DO:"COVID-19") pos p(HGNC:CXCL9)
+path(DO:"COVID-19") pos p(HGNC:CXCL10)
+path(DO:"COVID-19") pos p(HGNC:CXCL11)
+path(DO:"COVID-19") pos p(HGNC:IL27)
+
+SET Support = "IFN-γ, IL-12 p40, and IFN-γ-driven chemokines were consistently elevated in inflammatory PASC relative to the other 2 groups (Fig. 3C and
+supplemental Fig. S9)."
+path(DO:"COVID-19") pos p(HGNC:IFNG)
+path(DO:"COVID-19") pos p(HGNC:IL12B)
+path(DO:"COVID-19") pos p(HGNC:CXCL9)
+path(DO:"COVID-19") pos p(HGNC:CXCL10)
+path(DO:"COVID-19") pos p(HGNC:CXCL11)
+path(DO:"COVID-19") pos p(HGNC:IL27)
+
+
+SET Support = "To strengthen this observation, we extended our analysis to include all proteins that are part of IFN-γ related signaling modules and show that over time, the differences between inflammatory PASC vs. non-inflammatory PASC and the recovered COVID groups are even more distinct (Fig. 3D and Supplemental Fig. S10A)."
+path(DO:"COVID-19") -> bp(GO:"interferon-gamma-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"tumor necrosis factor-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"I-kappaB kinase/NF-kappaB signaling")
+path(DO:"COVID-19") -> bp(GO:"interleukin-18-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"interleukin-27-mediated signaling pathway")
+#The pathway names are taken from supplementary figure
+
+SET Support = "In addition to the IFN-γ related signature noted above, we also observed that TNF, TNF-driven cytokines and chemokines (including IL-6 and CCL7 (MCP3)), and several TNF receptor superfamily members were also increased in both inflammatory PASC clusters but most extensively in cluster 4 (Fig. 3A, E)."
+path(DO:"COVID-19") pos p(HGNC:TNF)
+path(DO:"COVID-19") pos p(HGNC:IL6) 
+path(DO:"COVID-19") pos p(HGNC:CCL7)
+path(DO:"COVID-19") pos p(HGNC:IFNG)
+path(DO:"COVID-19") pos p(HGNC:TNFRSF18) 
+path(DO:"COVID-19") pos p(HGNC:TNFRSF4)
+path(DO:"COVID-19") pos p(HGNC:CXCL9)
+path(DO:"COVID-19") pos p(HGNC:TNFRSF8)
+path(DO:"COVID-19") pos p(HGNC:TNF) 
+path(DO:"COVID-19") pos p(HGNC:IL18BP)
+path(DO:"COVID-19") pos p(HGNC:CXCL10)
+path(DO:"COVID-19") pos p(HGNC:CCL20) 
+path(DO:"COVID-19") pos p(HGNC:TNFRSF13B)
+
+SET Support = "TNF, IL-6, and CCL7 remained persistently elevated in all inflammatory PASC (clusters 4 + 5) over time when compared to non-inflammatory PASC or individuals who were infected but recovered (Fig. 3F)"
+path(DO:"COVID-19") -> p(HGNC:TNF)
+path(DO:"COVID-19") -> p(HGNC:IL6) 
+path(DO:"COVID-19") -> p(HGNC:CCL7)
+
+SET Support = "In addition to elevated cytokine levels, there is evidence for persistent inflammatory cytokine signaling based on the enrichment of proteins involved in TNF signaling, the IL-18 pathway, and the NF-κB canonical signaling pathway (Fig. 3G and Supplemental Fig. S10B)."
+path(DO:"COVID-19") -> bp(GO:"cytokine-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"tumor necrosis factor-mediated signaling pathway")
+path(DO:"COVID-19") -> bp(GO:"I-kappaB kinase/NF-kappaB signaling")
+path(DO:"COVID-19") -> bp(GO:"interleukin-18-mediated signaling pathway")
+
+SET Support = "In inflammatory PASC cluster 5, we also noted a protein signature suggestive of persistent type I interferon signaling including elevation
+of proteins that are induced by type I IFNs during acute SARS-CoV-2 infection (SAMD9L, DDX58, MNDA, and LAMP3)28,29."
+path(DO:"COVID-19") -> p(HGNC:SAMD9L)
+path(DO:"COVID-19") -> p(HGNC:DDX58)
+path(DO:"COVID-19") -> p(HGNC:MNDA)
+path(DO:"COVID-19") -> p(HGNC:LAMP3)
+
+SET Support = "Similarly, ssGSEA analysis showed enrichment for the pathway associated with regulation of IFN-α signaling in inflammatory PASC that followed a similar kinetic (Fig. 3I and supplemental Fig. S10C)."
+path(DO:"COVID-19") -> bp(GO:"regulation of interferon-alpha production")
+
+SET Support = "Two important observations emerge from this analysis: First, IFN-γ is both the most highly expressed cytokine in cluster 4 and the most highly differentially expressed protein overall in this cluster.Similarly, many of the top 50 most differentially expressed proteins in cluster 4 are the cytokines, chemokines, or cytokine/chemokine receptor subunits highlighted above (Fig. 4A, upper portion). Cluster 4 participants also showed increased levels of cell surface receptors linked to inflammation (CD74) or inflammation-associated checkpoint molecules (CD5, TIM-3 (HAVCR2), PDCD1, and CD83)."
+path(DO:"COVID-19") -> p(HGNC:IFNG)
+path(DO:"COVID-19") -> p(HGNC:CD74)
+path(DO:"COVID-19") -> p(HGNC:CD5)
+path(DO:"COVID-19") -> p(HGNC:HAVCR2)
+path(DO:"COVID-19") -> p(HGNC:PDCD1)
+path(DO:"COVID-19") -> p(HGNC:CD83)
+
+
+SET Support = "Second, we noted that in cluster 5, cytokines, chemokines, and their receptors were less prominent but two of the three most highly differentially expressed proteins overall were annexin-11 (ANXA11) and annexin-3(ANXA3) (Fig. 4A, lower portion)."
+path(DO:"COVID-19") -> p(HGNC:ANXA1)
+path(DO:"COVID-19") -> p(HGNC:ANXA3)
+path(DO:"COVID-19") -> p(HGNC:CD83)
+
+
+
+SET Support = "Pairing this with the presence of neutrophil granule proteins including MMP8(neutrophil collagenase) and MPO, the neutrophil serine protease
+inhibitor SERPINB1, and multiple components of the membrane/vesicle trafficking machinery (SNAP23, STX8, SNAP29) among the 50 most differentially expressed proteins in cluster 5 suggests persistent neutrophil activation, degranulation, and possibly generation of neutrophil extracellular traps (NETosis)."
+path(DO:"COVID-19") -> p(HGNC:MMP8)
+path(DO:"COVID-19") -> p(HGNC:MPO)
+path(DO:"COVID-19") -> p(HGNC:SNAP23)
+path(DO:"COVID-19") -> p(HGNC:STX8)
+path(DO:"COVID-19") -> p(HGNC:SNAP29)
+path(DO:"COVID-19") -> bp(GO:"neutrophil activation")
+path(DO:"COVID-19") -> bp(GO:"neutrophil degranulation")
+path(DO:"COVID-19") -> a(MESH:"Extracellular Traps")
+
+SET Support = "The presence of SAMD9L and MNDA among the top differentially expressed proteins highlights the prominence of the type-I interferon signature noted above and may be indicative of a role for sustained type I IFNs in driving persistent neutrophil activation35"
+path(DO:"COVID-19") -> p(HGNC:SAMD9L)
+path(DO:"COVID-19") -> p(HGNC:MNDA)
+
+
+SET Support = "Despite the different matrices(serum vs. plasma) and different quantification methods (NGS vs.qPCR) used for the two cohorts, results were robust with cluster E demonstrating elevation of cytokines and chemokines observed in our inflammatory PASC cluster 4 (IFN-γ, IL12, CXCL10, CXCL11, TNF, CCL7, etc.) (Fig. 5C) combined with those elevated in our inflammatory PASC cluster 5 (DDX58, LAMP3, etc.) (Supplemental Fig. S12 & Data S9)"
+SET Specimen = "Plasma"
+SET BioAssay = "real-time PCR "
+path(DO:"COVID-19") -> r(HGNC:TNF)
+path(DO:"COVID-19") -> r(HGNC:IL12B)
+path(DO:"COVID-19") -> r(HGNC:CXCL10)
+path(DO:"COVID-19") -> r(HGNC:CXCL11)
+path(DO:"COVID-19") -> r(HGNC:IFNG)
+path(DO:"COVID-19") -> r(HGNC:CCL7)
+path(DO:"COVID-19") -> r(HGNC:DDX58)
+path(DO:"COVID-19") -> r(HGNC:LAMP3)
+UNSET BioAssay
+
+SET Support = "Interestingly, INCOV participants from cluster E predominantly exhibited an acute WHO ordinal score of ≥3 reflecting the association between more severe acute disease and persistent inflammation37 (Fig. 5D)."
+SET Disease = "COVID-19"
+path(DO:"COVID-19") pos path(MESH:Inflammation)
+
+SET Support = "We identified a three protein panel (CCL7, CD40LG and S100A12) that performed well to distinguish inflammatory versus non-inflammatory PASC in this model(See Methods & Supplemental Data S10). These proteins were up regulated in the inflammatory clusters at ≥60 days PSO and persisted over time in the inflammatory PASC group compared to the non-inflammatory PASC group, with the exception of CD40LG that was significantly higher only around the 60 days PSO time point, specifically in the inflammatory cluster 5 participants (Fig. 6)."
+SET Post_symptom_onset_days = "Greater than or equal to 60 days"
+path(DO:"COVID-19") pos r(HGNC:CCL7)
+path(DO:"COVID-19") pos r(HGNC:CD40LG)
+path(DO:"COVID-19") pos r(HGNC:S100A12)
+UNSET Post_symptom_onset_days
+SET Post_symptom_onset_days = "Around 60 days"
+path(DO:"COVID-19") pos r(HGNC:CD40LG)
+UNSET Post_symptom_onset_days
+UNSET Disease
+UNSET Specimen
+UNSET PublicationStatus
+UNSET PublicationType
+UNSET Section
+UNSET Species
+UNSET Citation

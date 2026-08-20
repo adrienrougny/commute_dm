@@ -1,0 +1,194 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "33113348.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"lipid vesicles"}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+DEFINE ANNOTATION population_type AS LIST {"Japanese"}
+DEFINE ANNOTATION Technique AS LIST {"single cell RNA sequencing"}
+DEFINE ANNOTATION DaysPostInfection AS LIST {"4 days"}
+DEFINE ANNOTATION Cell_Type AS LIST {"lipoprotein-expressing cells"}
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Cell Stem Cell. 2020 Dec 3;27(6):951-961.e5. doi: 10.1016/j.stem.2020.10.001. Epub 2020 Oct 13.", "33113348"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+SET Disease = "COVID-19"
+
+SET Support = "Expression of ACE2 and TMPRSS2 was detected predominantly in ChP clusters, but not in the neural progenitor or neuron clusters."
+SET MeSHAnatomy = {"Organoids", "Choroid Plexus", "Telencephalon"}
+SET Technique = "single cell RNA sequencing"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:TMPRSS2)
+UNSET MeSHAnatomy
+UNSET Technique
+
+SET Support = "To examine whether these results were in agreement with the expression in vivo, we analyzed data from the Allen Brain Atlas (Hawrylycz et al., 2012; Miller et al., 2017) reporting expression levels of ACE2 in different human brain regions (Figure 1B). Among all the different brain regions compared, we found highest levels of ACE2 in the ChP (Figure 1B), validating our findings in vitro."
+SET MeSHAnatomy = "Choroid Plexus"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+UNSET MeSHAnatomy
+
+SET Support = "To better characterize the distribution of SARS-CoV-2 entry factors in the different ChP populations, we performed subclustering of all the ChP cell populations, and we identified four prominent clusters of immature ChP, maturing ChP, hem and ChP stroma, as well as two smaller clusters: one that appeared to be neural crest cells and one that was enriched in expression of lipoprotein genes, such as APOA1 and APOA2 (Besler et al., 2012; Wang et al., 2019), suggesting a function in lipid production and transfer."
+SET MeSHAnatomy = {"Organoids", "Choroid Plexus"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:APOA1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:APOA2)
+p(HGNC:APOA1) increases bp(GO:"lipid biosynthetic process")
+p(HGNC:APOA2) increases bp(GO:"lipid biosynthetic process")
+p(HGNC:APOA1) increases bp(GO:"intermembrane lipid transfer activity")
+p(HGNC:APOA2) increases bp(GO:"intermembrane lipid transfer activity")
+
+
+SET Support = "We then looked at the main SARS-CoV-2 entry genes in these cell populations and found the highest expression of ACE2 in lipoprotein-expressing ChP cells although some cells of other ChP clusters expressed ACE2 to a lower extent."
+SET Cell_Type = "lipoprotein-expressing cells"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:ACE2)
+
+SET Support = "Similarly, the co-entry factors TMPRSS2 and TMPRSS4 were most abundant in ChP cells with high levels of lipoprotein expression."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:TMPRSS2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:TMPRSS4)
+UNSET MeSHAnatomy
+UNSET Cell_Type
+
+SET Support = "Examination of apolipoproteins revealed their enrichment in the major adult ChP cluster, which exhibited much higher levels than cells of the embryonic ChP."
+SET MeSHAnatomy = "Choroid Plexus"
+bp(GO:aging) pos a(CHEBI:apolipoprotein)
+UNSET MeSHAnatomy
+
+SET Support = "To explore this timing further, and to examine whether protein levels displayed a similar pattern, we performed immunoblotting for both ACE2 and APOJ, an abundant CSF lipoprotein present in various-sized lipoprotein particles (Wang and Eckel, 2014). We could detect both APOJ and ACE2 in ChP organoid lysates with increasing abundance over time."
+SET MeSHAnatomy = {"Organoids", "Choroid Plexus"}
+SET BioAssay = "immunoblot"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:CLU)
+bp(GO:aging) pos p(HGNC:ACE2)
+bp(GO:aging) pos p(HGNC:CLU)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "Furthermore, we examined a previously published proteomic dataset of CSF-like fluid from ChP organoids spanning day 32 to day 146 (Pellegrini et al., 2020), which revealed increasing secretion of lipoproteins with age."
+SET MeSHAnatomy = {"Choroid Plexus", "Organoids", "Cerebrospinal Fluid"}
+bp(GO:aging) pos a(CHEBI:apolipoprotein)
+UNSET MeSHAnatomy 
+ 
+SET Support = "Next, to validate the observed differences in expression of ACE2 in neuronal and ChP cells, we performed immunostaining of organoids containing cortical (Figure S1D) or ChP identities (Figure 1I). Consistent with scRNA-seq data, the ChP epithelial tissue, marked by the serotonin receptor HTR2C, showed sparse but strong positive signal for ACE2 compared to cortex."
+SET BioAssay ="immunohistochemistry"
+SET MeSHAnatomy = {"Organoids", "Choroid Plexus"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+UNSET BioAssay
+ 
+SET Support = "Together, these findings indicate that ACE2 is expressed in cells of the ChP, but no specific expression of ACE2 is present in neuronal progenitors or neurons."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+ 
+SET Support = "Expression of TMPRSS2 was also detected by immunostaining in the membrane of ChP epithelial cells from organoids."
+SET BioAssay ="immunohistochemistry"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:TMPRSS2)
+UNSET BioAssay
+ 
+SET Support = "We found enriched expression of DPP4 (dipeptidyl peptidase 4) and ANPEP (alanyl aminopeptidase), which both encode for known receptors of human CoVs (Qi et al., 2020) and were similarly enriched in the lipoprotein-producing subcluster."
+SET BioAssay = "bioinformatics method"
+SET Cell_Type = "lipoprotein-expressing cells"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:DPP4)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ANPEP)
+UNSET BioAssay
+UNSET Cell_Type
+
+SET Support = "We performed three independent infections with SARS-CoV-2 Spike pseudovirions of organoids aged more than 55 days to ensure a mature identity, which revealed viral tropism for ChP epithelial tissue, as indicated by the GFP antibody-positive signal."
+p(UNIPROT:P0DTC2) increases bp(MESH:"Viral Tropism")
+UNSET MeSHAnatomy
+
+SET Support = "These findings support the hypothesis that, also in the brain, susceptibility to infection by SARS-CoV-2 is governed by expression of ACE2, which is only present on ChP epithelial cells of the organoids."
+SET MeSHAnatomy = "Brain"
+p(HGNC:ACE2) pos path(DO:"COVID-19")
+UNSET MeSHAnatomy
+
+SET Support = "Further supporting this claim, confocal imaging of infected cells immunostained for ACE2 showed positive signal on the membrane of SARS-CoV-2-infected ChP cells."
+SET MeSHAnatomy = {"Organoids", "Choroid Plexus"}
+SET BioAssay ="immunohistochemistry"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+UNSET BioAssay
+ 
+SET Support = "Again, this infection matched ACE2 expression, with infected cells co-staining for the receptor (Figure 4A) in the ChP epithelium, whereas stromal cells of the ChP were uninfected (Figure S4A)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:ACE2)
+ 
+SET Support = "We also observed expression of APOA1 and abundant lipid vesicles in cells of the ChP epithelium infected with SARS-CoV-2 (Figures 4B and 4C), whereas these cells were absent from cortical neuronal regions (Figure S4B)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(HGNC:APOA1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(FIXME:"lipid vesicles")
+
+SET Support = "We next examined the impact of SARS-CoV-2 infection on the function of the ChP epithelium, specifically its role as an integral part of the blood-CNS barrier. We observed a striking effect on tight junctions, labeled by claudin-5, as early as 2 days post-infection (Figure 4F), with increasing disruption by 4 days post-infection suggesting a potential breakdown of barrier integrity."
+SET DaysPostInfection = "4 days"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases deg(p(HGNC:CLDN5))
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET DaysPostInfection
+
+SET Support = "Taken together, these data suggest that SARS-CoV-2 is capable of infecting ChP epithelial cells, leading to a breakdown of barrier integrity."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+
+UNSET MeSHAnatomy
+UNSET Citation
+
+

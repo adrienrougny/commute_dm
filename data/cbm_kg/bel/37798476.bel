@@ -1,0 +1,285 @@
+##################################################################################
+SET DOCUMENT Name = "37798476.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+DEFINE NAMESPACE FIXME AS LIST {"diffuse alveolar damage","microthrombi", "nutrient transport","hyaline membrane formation", "acute and fibrinous organizing pneumonia", "Fibrotic remodeling", "vascular insufficiency", "microischaemia", "long COVID", "microangiopathy", "multiorgan dysfunction", "perivascular oedema", "secondary pulmonary lobular microischaemia"}
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+DEFINE ANNOTATION Custom_anatomy AS LIST {"extrapulmonary organs"}
+DEFINE ANNOTATION Specimen AS LIST {"post-mortem specimen"}
+
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Nat Microbiol. 2023 Nov;8(11):1986-1994. doi: 10.1038/s41564-023-01488-7. Epub 2023 Oct 5.", "37798476"}
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+SET Support = "Studies employing Syrian hamsters exhibit often mild to moderate disease courses with a pulmonary pathology resembling COVID-19, that is, respiratory tract and lung pathology, alveolar and perivascular oedema and endotheliitis."
+SET Species = "10036"
+path(DO:"COVID-19") increases path(MESH:"Respiratory Tract Diseases")
+SET MeSHAnatomy = "Pulmonary Alveoli"
+path(DO:"COVID-19") increases path(MESH:Edema)
+UNSET MeSHAnatomy
+SET Anatomy = "perivascular space"
+path(DO:"COVID-19") increases path(MESH:Edema)
+UNSET Anatomy
+SET Cell = "endothelial cell"
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+UNSET Cell
+UNSET Species
+
+SET Support = "As early as May 2020, venous thromboembolism was identified as a major complication of COVID-19 (ref. 11), prompting international randomized controlled trials on the coagulation management of patients with COVID-19 (ref. 12)."
+SET Species = "9606"
+path(DO:"COVID-19") increases path(MESH:"Venous Thromboembolism")
+
+SET Support = "Extensive autopsy studies have revealed the leading causes of death in patients undergoing severe and critical COVID-19: respiratory failure (53%) and multiorgan dysfunction."
+path(DO:"COVID-19") increases path(DO:"respiratory failure")
+path(DO:"COVID-19") increases path(MESH:"Multiple Organ Failure")
+path(DO:"respiratory failure") increases path(MESH:Death)
+path(FIXME:"multiorgan dysfunction") increases path(MESH:Death)
+
+SET Support = "For example, acute respiratory distress syndrome (ARDS) was described as the leading cause of death in COVID-19 based on microscopic examination of the lungs of deceased patients. Changes were observed resembling those of diffuse alveolar damage (DAD), the hallmark of ARDS."
+path(DO:"COVID-19") increases path(DO:"adult respiratory distress syndrome")
+path(DO:"adult respiratory distress syndrome") increases path(MESH:Death)
+path(DO:"adult respiratory distress syndrome") increases path(FIXME:"diffuse alveolar damage")
+
+SET Support = "The exact mechanism underlying the induction of ARDS by SARS-CoV-2 remains unclear, but it has been proposed to be a consequence of hyperinflammatory conditions in the lungs associated with the presence of viral RNA."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"inflammatory response")
+bp(GO:"inflammatory response") increases path(DO:"adult respiratory distress syndrome")
+
+SET Support = "In detail, DAD is a multi-stage process with three major phases: exudative, proliferative and fibrotic. These stages can be observed in the lungs of COVID-19 autopsies."
+SET MeSHAnatomy = "Lung"
+SET Specimen = "post-mortem specimen"
+path(DO:"COVID-19") increases path(FIXME:"diffuse alveolar damage")
+UNSET Specimen
+
+SET Support = "The initial exudative phase is characterized by hyaline membrane formation (deposits along the alveolar walls composed of fibrin, mucopolysaccharides and cell debris), cell death, pulmonary oedema and inflammation."
+path(FIXME:"diffuse alveolar damage") increases bp(FIXME:"hyaline membrane formation")
+path(FIXME:"diffuse alveolar damage") increases bp(GO:"cell death")
+path(FIXME:"diffuse alveolar damage") increases path(FIXME:"perivascular oedema")
+path(FIXME:"diffuse alveolar damage") increases bp(GO:"inflammatory response")
+
+SET Support = "Proliferative-phase DAD shows interstitial lymphocytic infiltrates, squamous metaplasia (replacement of alveolar epithelium with squamous epithelium), syncytial multinucleated giant cells (fusions of uninuclear cells such as monocytes and/or macrophages or epithelial cells) and reactive type II pneumocyte (AT2) hyperplasia (reactive proliferation of a specific type of pulmonary epithelial cell.)"
+path(FIXME:"diffuse alveolar damage") increases a(NCIT:"Lymphocytic Infiltrate")
+path(FIXME:"diffuse alveolar damage") increases a(NCIT:"Squamous Metaplasia")
+path(FIXME:"diffuse alveolar damage") increases bp(GO:"induction by virus of host cell-cell fusion")
+path(FIXME:"diffuse alveolar damage") increases a(CELL:"type II pneumocyte")
+
+SET Support = "Although the exact link between viral infections and ARDS is not fully understood, certain alterations can be attributed to direct viral cytopathic effects, in particular, syncytial multinucleated giant cells and reactive AT2 hyperplasia."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"induction by virus of host cell-cell fusion")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(CELL:"type II pneumocyte")
+
+SET Support = "Besides DAD, acute and fibrinous organizing pneumonia (AFOP) 
+has been reported as a rare condition in patients with COVID-19 and is 
+associated with poor prognosis."
+path(DO:"COVID-19") increases path(FIXME:"acute and fibrinous organizing pneumonia")
+path(DO:"COVID-19") increases path(FIXME:"diffuse alveolar damage")
+
+SET Support = " AFOP may represent a form of lung injury distinct from typical ARDS. It may be related to microvascular injury and inflammation, and it is associated with a hypercoagulable state and microvascular thrombosis in the 
+lungs."
+path(FIXME:"acute and fibrinous organizing pneumonia") increases path(HP:Hypercoagulability)
+UNSET MeSHAnatomy
+SET MeSHAnatomy = {"Microvessels", "Lung"}
+path(DO:"COVID-19") increases path(DO:thrombosis)
+UNSET MeSHAnatomy
+
+SET Support = "Other studies have investigated lung damage in depth by employing imaging flow-cytometry approaches, and have revealed that SARS-CoV-2 primarily infects alveolar epithelial cells. It is here that a local hyperinflammatory cell state is induced, predominantly mediated by macrophages."
+SET BioAssay = "flow cytometry"
+SET MeSHAnatomy = {"Lung", "Alveolar Epithelial Cells"}
+path(DO:"COVID-19") increases bp(GO:"macrophage activation")
+bp(GO:"macrophage activation") increases bp(GO:"inflammatory response")
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "These data revealed the loss of alveolar type I (AT1) and AT2 cells and the aberrant activation of monocyte-derived macrophages and alveolar macrophages in the lungs with a specific cytokine profile."
+path(DO:"COVID-19") decreases a(CELL:"type I pneumocyte")
+path(DO:"COVID-19") decreases a(CELL:"type II pneumocyte")
+path(DO:"COVID-19") increases bp(GO:"macrophage activation")
+
+SET Support = "Independent studies have shown that SARS-CoV-2 can infect blood monocytes through an antibody-opsonized virus, which in turn may lead to inflammasome 
+activation and systemic inflammation."
+SET MeSHAnatomy = "Blood"
+SET Cell = "monocyte"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases act(complex(GO:"inflammasome complex"))
+act(complex(GO:"inflammasome complex")) increases bp(GO:"inflammatory response")
+
+SET Support = "Others have shown opposing monocyte and macrophage immune profiles, further aggravating immune dysregulation."
+path(DO:"COVID-19") increases path(HP:"Immune dysregulation")
+
+SET Support = "Fibrotic remodelling in the lungs occurs at late disease stages and in a prolonged disease course."
+path(DO:"COVID-19") increases path(FIXME:"Fibrotic remodeling")
+
+SET Support = "Recent investigations in human autopsy lung tissue showed that vascular insufficiency (compromised pulmonary and bronchial circulation) and secondary pulmonary lobular microischaemia (vascular insufficiency causing microischaemia of secondary lung lobules) precede the fibrotic changes."
+SET MeSHAnatomy = "Lung"
+SET Specimen = "post-mortem specimen"
+path(DO:"COVID-19") increases path(FIXME:"vascular insufficiency")
+SET Anatomy = "secondary pulmonary lobule"
+path(DO:"COVID-19") increases path(FIXME:microischaemia)
+path(FIXME:"vascular insufficiency") increases path(FIXME:"Fibrotic remodeling")
+path(FIXME:"secondary pulmonary lobular microischaemia")increases path(FIXME:"Fibrotic remodeling")
+UNSET MeSHAnatomy
+UNSET Specimen
+
+SET Support = "Fibrotic remodelling and the associated impairment of lung function could also contribute to long COVID."
+path(FIXME:"Fibrotic remodeling") increases path(FIXME:"long COVID")
+
+SET Support = "Autopsy studies reported high frequencies of thromboembolisms in COVID-19 deceased early in the pandemic. In line with this, vascular damage within and outside the lungs is now a recognized hallmark of severe COVID-19."
+path(DO:"COVID-19") increases path(MESH:Thromboembolism)
+path(DO:"COVID-19") increases path(MESH:"Vascular System Injuries")
+
+SET Support = "COVID-19 autopsy lungs revealed endothelial injury, microangiopathy (injury of capillaries with thickening and weakening of the vessel walls) and intussusceptive angiogenesis (an aberrant blood vessel neoformation), and perivascular inflammation."
+SET MeSHAnatomy = "Lung"
+SET Specimen = "post-mortem specimen"
+SET Cell = "endothelial cell"
+path(DO:"COVID-19") increases a(MESH:"Lung Injury")
+path(DO:"COVID-19") increases path(FIXME:microangiopathy)
+path(DO:"COVID-19") increases bp(GO:"intussusceptive angiogenesis")
+path(DO:"COVID-19")increases bp(GO:"inflammatory response")
+UNSET MeSHAnatomy
+
+SET Support = "In addition to changes to the endothelium, autopsy tissues showed increased microthrombi in both venous and arterial vessels and multifocal acute infarctions."
+SET MeSHAnatomy = {"Veins", "Arteries"}
+path(DO:"COVID-19")increases a(FIXME:microthrombi)
+UNSET MeSHAnatomy
+
+SET Support = "Investigating viral tropism using autopsies revealed high viral copy 
+numbers in the lung compared to relatively low copy numbers in all other organs examined."
+SET MeSHAnatomy = "Lung"
+path(DO:"COVID-19")increases bp(GO:"viral genome replication")
+UNSET MeSHAnatomy
+
+SET Support = "In the literature, viraemia is not only predictive of patient survival but is also associated with worse respiratory disease severity, increased markers of inflammation, and increased pulmonary viral RNA load."
+path(MESH:Viremia) neg bp(MESH:Survival)
+path(MESH:Viremia) pos path(MESH:"Respiratory Tract Diseases")
+path(MESH:Viremia) pos bp(GO:"inflammatory response")
+SET MeSHAnatomy = "Lung"
+path(MESH:Viremia) increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+
+SET Support = "Autopsy studies also identified the kidney as another site of COVID-19-related complications, with ~30–50% of hospitalized and critically ill COVID-19 patients developing acute kidney injury."
+SET Specimen = "post-mortem specimen"
+SET MeSHAnatomy = "Kidney"
+path(DO:"COVID-19") increases path(MESH:"Acute Kidney Injury")
+
+SET Support = "In autopsy specimens, renal histomorphological alterations include acute tubular necrosis, thrombotic microangiopathy, interstitial inflammation and fibrosis."
+path(DO:"COVID-19") increases path(HP:"Acute tubular necrosis")
+path(DO:"COVID-19") increases a(NCIT:"Thrombotic Microangiopathy")
+path(DO:"COVID-19") increases path(DO:"interstitial nephritis")
+path(DO:"COVID-19") increases path(DO:"renal fibrosis")
+path(DO:"COVID-19") increases bp(GO:"inflammatory response")
+UNSET MeSHAnatomy
+
+SET Support = "In line with this, microscopic evaluations of the hearts of deceased patients revealed features consistent with pre-existing hypertensive or atherosclerotic disease."
+SET MeSHAnatomy = "Heart"
+path(DO:atherosclerosis) pos path(DO:"COVID-19")
+path(DO:hypertension) pos path(DO:"COVID-19")
+
+SET Support = "The latter are associated with SARS-CoV-2-dependent coagulation activation extending to the myocardium, or ACE2-mediated damage caused by low to moderate viral RNA loads in the heart."
+path(DO:"COVID-19") increases bp(MESH:"Viral Load")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"blood coagulation")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(HP:"cell and tissue damage")
+p(HGNC:ACE2) regulates path(HP:"cell and tissue damage")
+UNSET Specimen
+
+SET Support = "About 30% of patients with COVID-19, including those with mild 
+disease, display neurological symptoms such as an altered mental 
+status, dizziness and headache, and, in rare cases, brain ischaemia."
+path(DO:"COVID-19") increases path(MESH:"Mental Disorders")
+path(DO:"COVID-19") increases path(MESH:Dizziness)
+path(DO:"COVID-19") increases path(MESH:Headache)
+path(DO:"COVID-19") increases path(DO:"brain ischemia")
+
+SET Support = "Histopathological changes in the brain include the recruitment of immune cells and immune activation in the brain stem and olfactory bulbs, as well as in the choroid plexus and the blood–brain barrier, including vascular alterations."
+SET MeSHAnatomy = {"Brain Stem", "Olfactory Bulb", "Choroid Plexus", "Blood-Brain Barrier"}
+path(DO:"COVID-19") increases bp(GO:"cellular extravasation")
+path(DO:"COVID-19") increases bp(GO:"leukocyte activation")
+UNSET MeSHAnatomy
+UNSET Anatomy
+
+SET Support = "Interestingly, COVID-19-induced cytokines alone were shown to be sufficient for significant disturbances to the neuronal expression signature in the absence of detectable SARS-CoV-2."
+path(DO:"COVID-19") increases bp(GO:"cytokine production")
+
+SET Support = "ACE2 and cellular proteases, such as TMPRSS2, have been identified as receptors and priming factors for SARS-CoV-2."
+p(HGNC:ACE2) regulates path(DO:"COVID-19")
+p(HGNC:TMPRSS2) regulates path(DO:"COVID-19")
+
+SET Support = "The most recent autopsy related to Lassa virus infection was published 40 years ago62, although 100,000 to 300,000 infections are estimated to occur annually, with case fatality rates ranging from 15% to 70% (ref. 63). Clinical manifestations of this fatal disease can include acute kidney injury, neurological complications and haemorrhage."
+path(DO:"Lassa fever") increases path(MESH:"Acute Kidney Injury")
+path(DO:"Lassa fever") increases a(NCIT:"Neurological Signs and Symptoms")
+path(DO:"Lassa fever") increases path(MESH:Hemorrhage)
+
+SET Support = "Moreover, and in analogy to long COVID, it has been noted that survivors of acute Ebola virus infection suffer from a range of long-term sequelae, including an increased risk of intermediate-term death and increased prevalence 
+of renal dysfunction."
+path(DO:"Ebola hemorrhagic fever") increases path(MESH:Death)
+path(DO:"Ebola hemorrhagic fever") increases path(HP:"Abnormal renal physiology")
+UNSET Species
+UNSET Disease
+UNSET Citation
+
+
+

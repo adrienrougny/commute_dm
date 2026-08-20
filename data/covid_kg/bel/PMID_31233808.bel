@@ -1,0 +1,219 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "PMID_31233808"
+SET DOCUMENT Authors = "Noura Rayya"
+SET DOCUMENT ContactInfo = "noura.rayya@scai.fraunhofer.de"
+SET DOCUMENT Description = "Broad spectrum antiviral remdesivir inhibits human endemic and \
+zoonotic deltacoronaviruses with a highly divergent RNA dependent RNA \
+polymerase"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2020 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+# DEFINE NAMESPACE CONSO          AS URL "https://raw.githubusercontent.com/pharmacome/conso/3c93a65dc48e6786fe29ae55aa36cf9a902fe8c6/export/conso-names.belns"
+DEFINE NAMESPACE ECCODE         AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/ec-code.belns"
+# DEFINE NAMESPACE EFO            AS URL "https://raw.githubusercontent.com/pharmacome/conso/5d2c2ea6f7112421cc8089a3f021a75ab60bb373/external/efo-names.belns"
+# DEFINE NAMESPACE FB             AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/fb-names.belns"
+# DEFINE NAMESPACE MIRBASE        AS URL "https://raw.githubusercontent.com/pharmacome/conso/c328ad964c08967a0417a887510b97b965a62fa5/external/mirbase-names.belns"
+
+# DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+# DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+# DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+
+# DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+# DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+# DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+# DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+# DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+# DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+# DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+# DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+# DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+# DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+# DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+# DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+# DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+# DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+# DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+# DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+# DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+DEFINE NAMESPACE NCBITAXON AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+# DEFINE NAMESPACE FPLX           AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/d9ec0526c20795146a9a6aef17496efe1a36cac6/export/famplex.belns"
+
+# DEFINE NAMESPACE TAXONOMY       AS PATTERN "^\d+$"
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+# DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+
+# DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+# DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+# DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20190128.belanno"
+# DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+# DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+# DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+# DEFINE ANNOTATION CellStructure AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-structure/cell-structure-20170511.belanno"
+# DEFINE ANNOTATION Confidence    AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/confidence/confidence-1.0.0.belanno"
+# DEFINE ANNOTATION Gender        AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+# --------------------------------------------------------------------------------
+
+##############
+# Statements #
+##############
+SET Citation = {"PubMed", "31233808"}
+
+SET Support = "Here, we show potent antiviral activity of RDV against endemic human CoVs OC43 (HCoV-OC43) and 229E (HCoV-229E) with submicromolar EC50 values."
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Human coronavirus OC43")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Human coronavirus 229E")
+a(NCBITAXON:"Human coronavirus OC43") -> path(MESH:"Endemic Diseases")
+a(NCBITAXON:"Human coronavirus 229E") isA path(MESH:"Endemic Diseases")
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "Nevertheless, RDV is highly efficacious against porcine deltacoronavirus (PDCoV). "
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Porcine deltacoronavirus")
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "The genetically diverse Orthocoronavirinae (CoV) family is divided into four genera (alpha, beta, gamma, and deltacoronavirus) and thus far human CoV are limited to the alpha and beta genera."
+a(NCBITAXON:"Orthocoronavirinae") hasMembers list(a(NCBITAXON:"Alphacoronavirus"),a(NCBITAXON:"Betacoronavirus"),a(NCBITAXON:"Gammacoronavirus"),a(NCBITAXON:"Deltacoronavirus"))
+
+SET Support = "Human CoVs OC43, 229E, NL63 and HKU1 cause 10% of all upper and lower respiratory tract infections, which typically present with common-cold like symptoms but can cause more severe disease in young children as well as people with underlying respiratory conditions (i.e. asthma, COPD) and the elderly."
+a(NCBITAXON:"Human coronavirus OC43") -> path(MESHD:"Respiratory Tract Infections")
+a(NCBITAXON:"Human coronavirus 229E") -> path(MESHD:"Respiratory Tract Infections")
+a(NCBITAXON:"Human coronavirus NL63") -> path(MESHD:"Respiratory Tract Infections")
+a(NCBITAXON:"Human coronavirus HKU1") -> path(MESHD:"Respiratory Tract Infections")
+
+SET Support = "In children, severe respiratory tract CoV infections require hospitalization in about 10% of cases and have been associated with febrile seizure in those less than 1 year old."
+path(DO:"Coronavirus infection") -- a(MESH:"Hospitalization")
+path(DO:"Coronavirus infection") -- path(MESHD:"Seizures, Febrile")
+
+SET Support = "CoV infection can also be severe in the elderly requiring hospitalization and can even cause acute respiratory distress syndrome (ARDS)."
+path(DO:"Coronavirus infection") ->  path(DO:"adult respiratory distress syndrome")
+
+SET Support = "Remdesivir (RDV, GS-5734) is a monophosphoramidate prodrug of an adenosine analog with demonstrated antiviral activity against an array of RNA virus families including Filoviridae, Paramyxoviridae, Pneumoviridae, and CoV."
+a(PUBCHEM:121304016) isA a(CHEBI:"prodrug")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Filoviridae")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Paramyxoviridae")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Pneumoviridae")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Orthocoronavirinae")
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "We previously reported the antiviral activity of RDV against a genetically diverse panel of human endemic, emerging and zoonotic CoV including HCoV-NL63 (alpha 1b), mouse hepatitis virus (MHV, beta 2a), SARS-CoV and related Bat CoVs WIV1 and SHC014 (beta 2b), as well as MERS-CoV and related Bat CoV HKU5 (beta 2c)."
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Human coronavirus NL63")
+a(NCBITAXON:"Human coronavirus NL63") isA a(NCBITAXON:"Alphacoronavirus")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Murine hepatitis virus")
+a(NCBITAXON:"Murine hepatitis virus") isA a(NCBITAXON:"Betacoronavirus")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Bat SARS-like coronavirus WIV1")
+a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+a(NCBITAXON:"Bat SARS-like coronavirus WIV1") isA a(NCBITAXON:"Betacoronavirus")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus")
+a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus") isA a(NCBITAXON:"Betacoronavirus")
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "An RDV dose-dependent reduction in HCoV-229E replication was observed without drug-induced cytotoxicity."
+SET Species = "11137"
+a(PUBCHEM:121304016) -| bp(MESHPP:"Virus Replication")
+UNSET Species
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "Although rare, endemic human CoV like HCoV-229E and HCoV-OC43 can also cause severe respiratory disease (pneumonia, ARDS, etc.) in subsets of patients, with presentation similar to SARS- and MERS-CoV "
+a(NCBITAXON:"Human coronavirus OC43") -> path(DO:"pneumonia")
+a(NCBITAXON:"Human coronavirus 229E") -> path(DO:"pneumonia")
+a(NCBITAXON:"Human coronavirus OC43") -> path(DO:"adult respiratory distress syndrome")
+a(NCBITAXON:"Human coronavirus 229E") -> path(DO:"adult respiratory distress syndrome")
+
+SET Support = "The antimalarial, chloroquine, reportedly has moderate antiviral activity in vitro against SARS-CoV (IC50 = 3 μM), MERS-CoV (IC50 = 3–4 μM), HCoV-OC43 (IC50 = 0.3 μM) and 229E (IC50 = 3.3 μM) but failed to exert an antiviral effect against SARS-CoV in mice."
+SET BioAssay = "in vitro"
+act(a(PUBCHEM:2719), ma(CHEBI:"antiviral agent")) -| a(NCBITAXON:"Human coronavirus 229E")
+act(a(PUBCHEM:2719), ma(CHEBI:"antiviral agent")) -| a(NCBITAXON:"Human coronavirus OC43")
+act(a(PUBCHEM:2719), ma(CHEBI:"antiviral agent")) -| a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus")
+act(a(PUBCHEM:2719), ma(CHEBI:"antiviral agent")) -| a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus")
+# PUBCHEM:2719 corresponds to chloroquine
+UNSET BioAssay
+
+SET Support = "Inhibition of viral protease has also been evaluated with lopinavir, a protease inhibitor designed for human immunodeficiency virus, which like chloroquine exerts a moderate antiviral effect on CoV replication (EC50 values: MERS-CoV 8 μM, SARSCoV 17.1 μM, HCoV-229E 6.6 μM)."
+a(PUBCHEM:2727) isA a(CHEBI:"protease inhibitor")
+act(a(PUBCHEM:2727), ma(CHEBI:"antiviral agent")) -| a(NCBITAXON:"Human coronavirus 229E")
+act(a(PUBCHEM:2727), ma(CHEBI:"antiviral agent")) -| a(NCBITAXON:"Severe acute respiratory syndrome-related coronavirus")
+act(a(PUBCHEM:2727), ma(CHEBI:"antiviral agent")) -| a(NCBITAXON:"Middle East respiratory syndrome-related coronavirus")
+# PUBCHEM:2727 corresponds to lopinavir
+
+SET Support = "RDV is a broad-spectrum antiviral drug with potent in vitro antiviral activity andin vivo therapeutic efficacy against CoV."
+SET BioAssay = {"in vitro", "in vivo"}
+a(PUBCHEM:121304016) isA a(CHEBI:"antiviral drug")
+UNSET BioAssay
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "Thus, with this report, we demonstrate potent antiviral activity of RDV  against representatives capturing near family-wide CoV RdRp diversity including deltacoronavirus which have the most divergent RdRp of known CoV as compared to SARS- and MERS-CoV."
+a(PUBCHEM:121304016) -| act(p(UNIPROT:"P0DTD1", frag("4393_5324")))
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "These data suggest that future emerging CoV may be similarly susceptible to the inhibition by RDV"
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Severe acute respiratory syndrome coronavirus 2")
+# PUBCHEM:121304016 corresponds to Remdesivir
+
+SET Support = "For antiviral drugs that interact and interfere with RdRp function, variation in amino acid sequence and resultant protein structure can have profound effects on susceptibility."
+p(ECCODE:"2.7.7.48", var("?")) --  act(a(PUBCHEM:121304016),ma(CHEBI:"antiviral agent"))
+# PUBCHEM:121304016 corresponds to Remdesivir
+# ECCODE:"2.7.7.48 corresponds to RdRp
+
+SET Support = "Mutations (F476L and V553L), identified through passage of MHV in the presence of RDV, provide partial resistance to RDV antiviral activity (i.e. 2.4-fold and 5-fold shift in EC50, respectively)."
+SET Species = "11138"
+p(ECCODE:"2.7.7.48", var("p.Phe476Leu")) -| act(a(PUBCHEM:121304016),ma(CHEBI:"antiviral agent"))
+p(ECCODE:"2.7.7.48", var("p.Val553Leu")) -| act(a(PUBCHEM:121304016),ma(CHEBI:"antiviral agent"))
+UNSET Species
+# PUBCHEM:121304016 corresponds to Remdesivir
+# ECCODE:"2.7.7.48 corresponds to RdRp
+
+SET Support = "Interestingly, though MHV and SARS-CoV RdRp are 80% identical, resistance is transferable to SARS-CoV via reverse genetic introduction of homologous mutations (F480L and V557L)."
+SET Species = "694009"
+p(ECCODE:"2.7.7.48", var("p.Phe480Leu")) -| act(a(PUBCHEM:121304016),ma(CHEBI:"antiviral agent"))
+p(ECCODE:"2.7.7.48", var("p.Val557Leu")) -| act(a(PUBCHEM:121304016),ma(CHEBI:"antiviral agent"))
+UNSET Species
+# ECCODE:"2.7.7.48 corresponds to RdRp
+
+SET Support = "Here, we show that PDCoV, a member of the deltacoronavirus genus, is exquisitely sensitive to RDV despite naturally harboring a one of the two RdRp resistance mutations identified in MHV."
+a(NCBITAXON:"Porcine deltacoronavirus") isA a(NCBITAXON:"Deltacoronavirus")
+
+SET Support = "In the very recent publication describing the SARS-CoV RdRp structure, the authors suggest the F480L mutation, located in the fingers domain contacting motif B, impacts active site dynamics related to catalysis."
+act(p(ECCODE:"2.7.7.48", var("p.Phe480Leu")),ma(MESHPP:"Catalysis"))
+# ECCODE:"2.7.7.48 corresponds to RdRp
+
+SET Support = "Interestingly, Kirchdorfer and Ward suggest the V557L (V553L in MHV) resistance mutation in the SARS-CoV RdRp increases stringency of base pairing thereby increasing polymerase fidelity allowing for better exclusion of RDV from the active site."
+SET Species = "694009"
+p(ECCODE:"2.7.7.48", var("p.Val557Leu")) -> bp(MESHPP:"Base Pairing")
+UNSET Species
+SET Species = "11138"
+p(ECCODE:"2.7.7.48", var("p.Val553Leu")) -> bp(MESHPP:"Base Pairing")
+UNSET Species
+
+SET Support = "We found that RDV had decreased potency against 229E and PDCoV in the porcine kidney cell line, LLC-PK1, although these viruses were similarly sensitive in the human hepatoma cell, Huh7."
+SET CellLine = "Huh7 cell"
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Human coronavirus 229E")
+a(PUBCHEM:121304016) -| a(NCBITAXON:"Porcine deltacoronavirus")
+# PUBCHEM:121304016 corresponds to Remdesivir
+UNSET CellLine
+
+SET Support = "Interestingly, uptake and the antiviral activity of ribavirin, another nucleoside analog, was reported to vary significantly among human liver cell lines, which was directly correlated with antiviral activity against poliovirus indicating that variation in small molecule uptake/transport can impact antiviral efficacy."
+a(PUBCHEM:37542) isA a(CHEBI:"nucleoside analogue")
+a(PUBCHEM:37542) -| a(NCBITAXON:"Enterovirus C")
+# PUBCHEM:37542 corresponds to ribavirin

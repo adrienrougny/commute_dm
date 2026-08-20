@@ -1,0 +1,262 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "34489403.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE CMO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cmo/cmo-20171030.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+DEFINE NAMESPACE REACTOME AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/reactome/reactome-20170911.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+#DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {"transendothelial electrical resistance"}
+DEFINE NAMESPACE TAX AS PATTERN "^.*$"
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+DEFINE ANNOTATION DaysPostInfection AS LIST {"5 days"}
+DEFINE ANNOTATION Mouse_Strain AS LIST {"K18-hACE2 mice"}
+DEFINE ANNOTATION Technique AS LIST {"Evan's blue dye test","Masson staining"}
+DEFINE ANNOTATION HoursPostInfection AS LIST {"48 hours"}
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+
+##################################################################################
+# Statements #
+##################################################################################
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Signal Transduct Target Ther. 2021 Sep 6;6(1):337. doi: 10.1038/s41392-021-00719-9.", "34489403"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "Viral RNA was also detected in the serum of 67% (4/6) of the challenged K18-hACE2 mice, which suggests viremia exists in these model mice."
+SET Disease = "COVID-19"
+SET Species = "10090"
+SET Mouse_Strain = "K18-hACE2 mice"
+SET MeSHAnatomy = "Serum"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(MESH:Viremia)
+UNSET MeSHAnatomy
+UNSET Species
+UNSET Mouse_Strain
+
+SET Support = "These data indicate that SARS-CoV-2 may infect brain endothelial cells, leading to increased vascular permeability, which supports the probability that SARS-CoV-2 crosses the BBB."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Capillary Permeability")
+
+SET Support = "The co-localization of SARS-CoV-2-S with ACE2 in the vessels and cells suggests the role of ACE2 as the entry receptor for SARS-CoV-2 invading the brain by passing through the BBB."
+p(HGNC:ACE2) increases tloc(a(TAX:"Severe acute respiratory syndrome coronavirus 2"), fromLoc(MESH:Blood), toLoc(MESH:Brain))
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+
+SET Support = "Additionally, we observed perivascular inflammatory cell infiltration in the brain of infected K18-hACE2 mice (Fig. ​(Fig.1f).1f)."
+SET Species = "10090"
+SET Mouse_Strain = "K18-hACE2 mice"
+SET MeSHAnatomy = "Brain"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"cellular extravasation")
+UNSET MeSHAnatomy
+
+SET Support = "On the whole, we found that the vast majority of viruses co-localized with NeuN (a marker for neurons), but not GFAP (a marker for astrocytes) by FISH examination (Fig. 1g, h), leading to neuronal death as shown in Fig. 1i, j, k."
+SET BioAssay = "fluorescent DNA hybridization probe method"
+SET MeSHAnatomy = "Neurons"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2", loc(MESH:Neurons)) increases bp(GO:"neuron death")
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "To further verify the central nervous system effects of SARS-CoV-2, transmission electron microscopy (TEM) was performed. Indeed, virus-like particles appeared in the cortex of K18-hACE2 mice (Fig. ​(Fig.1l).1l)."
+SET MeSHAnatomy = "Cerebral Cortex"
+SET BioAssay = "transmission electron microscopy"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Viral Load")
+UNSET Species
+UNSET Mouse_Strain
+
+SET Support = "In hamsters, although we did not detect clear SARS-CoV-2-S RNA by FISH, ACE2 can be slightly found in blood vessels, meninges, choroid plexus, and ependyma."
+SET Species = "10036"
+SET MeSHAnatomy = {"Blood Vessels", "Meninges", "Choroid Plexus", "Ependyma"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(UNIPROT:A0A1U7QTA1)
+UNSET MeSHAnatomy
+
+SET Support = "Meanwhile, pyknotic cells, abnormal mitochondrial ultrastructure, vascular injury, and cell apoptosis were detected (Fig. 1m–t)."
+SET MeSHAnatomy = "Cerebral Cortex"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"apoptotic chromosome condensation")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(HP:"Abnormal mitochondrial morphology")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(MESH:"Vascular System Injuries")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"apoptotic process")
+UNSET MeSHAnatomy
+UNSET Species
+
+SET Support = "The expression of Iba1, a marker for microglia, was evidence of microglial cell activation and proliferation in K18-hACE2 mice infected with SARS-CoV-2 (Fig. 2a, b)."
+SET Species = "10090"
+SET Mouse_Strain = "K18-hACE2 mice"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"microglial cell activation")
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(MGI:Aif1)
+UNSET Species
+UNSET Mouse_Strain
+
+SET Support = "There was no significant increase in the number of microglia in infected hamsters, but microglial activation (M1 and M2) was noticeable by morphological observation."
+SET Species = "10036"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"microglial cell activation")
+UNSET Species
+
+SET Support = "We also tested for CD68, a marker of activated microglia (M1), and found that the number of Iba1-positive cells co-staining for CD68 was increased in infected K18-hACE2 mice and hamsters (Fig. 2c, d). With respect to astrocytes, there was distinct activation in the cortex and hippocampus of infected K18-hACE2 mice compared to the mock-treated group, but little activation or proliferation in infected hamsters."
+SET Species = {"10090","10036"}
+SET Mouse_Strain = "K18-hACE2 mice"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"microglial cell activation")
+SET MeSHAnatomy = {"Cerebral Cortex", "Hippocampus"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"astrocyte activation")
+UNSET Species
+UNSET Mouse_Strain
+SET Species = "10036"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"astrocyte activation")
+UNSET MeSHAnatomy
+
+SET Support = "In the present study, we also detected increased levels of IL-6, TNF-ɑ, and MCP1 in the brain of infected K18-hACE2 mice and hamsters by RT-PCR."
+SET Species = "10090"
+SET Mouse_Strain = "K18-hACE2 mice"
+SET MeSHAnatomy = "Brain"
+SET BioAssay = "quantitative PCR"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(MGI:Il6)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(MGI:Tnf)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(MGI:Ccl2)
+UNSET Species
+UNSET Mouse_Strain
+SET Species = "10036"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(UNIPROT:Q9WVQ8)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(UNIPROT:A0A1U7RE37)
+UNSET MeSHAnatomy
+UNSET BioAssay
+UNSET Species
+
+SET Support = "To assess BBB integrity, we administered Evans blue dye (EBD) by i.p. injection in both mock-treated and SARS-CoV-2-infected hamsters at 6 dpi and evaluated its leakage into the brain, which is a classic method for evaluating BBB integrity. Compared with the mock-treated hamsters, infected animals displayed visible leakage of the EBD in the cortex (Fig. ​(Fig.3a).3a)."
+SET Species = "10036"
+SET Technique ="Evan's blue dye test"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET Species
+UNSET Technique
+
+SET Support = "To further determine whether the BMs of brain vessels suffered damage, Masson staining was carried out. As shown in Fig. ​Fig.2d,2d, blue-stained collagen in BM was destroyed in the brains of infected K18-hACE2 mice and hamsters."
+SET Species = {"10036", "10090"}
+SET MeSHAnatomy = "Brain"
+SET Technique = "Masson staining"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases deg(a(GO:"basement membrane"))
+UNSET Technique
+UNSET MeSHAnatomy
+
+SET Support = "The expression of collagen IV, a major component of BMs, was measured by IHC and found to be significantly decreased in the cerebral vessels of infected animals, compared to the mock group."
+SET BioAssay = "immunohistochemistry"
+SET MeSHAnatomy = "Cerebral Arteries"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases complex(GO:"collagen type IV trimer")
+a(GO:"basement membrane") hasComponent complex(GO:"collagen type IV trimer")
+
+SET Support = "Here, the level of MMP9 expression was remarkably increased in the cerebral vessels compared to mock-treated animals (Fig. 3e, g). These results provide a clue that SARS-CoV-2 infection could damage BBB via MMP9-mediated BMs disruption."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(MGI:Mmp9)
+p(MGI:Mmp9) decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+UNSET BioAssay
+UNSET MeSHAnatomy
+
+SET Support = "If SARS-CoV-2 particles could pass through barrier cells, they would exist in the basal chamber. The results showed clearly that the SARS-CoV-2 viral RNA could be detected in the basal chamber in both hamsters and K18-hACE2 mice in vitro models (Fig. ​4f)."
+SET MeSHAnatomy = "Basal Ganglia"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Viral Load")
+UNSET MeSHAnatomy
+
+SET Support = "As exhibited in Fig. ​Fig.4g,4g, SARS-CoV-2 infected and replicated in the BMECs and the viral RNA load in compartment supernatants peaked at 48 hpi and maintained a steady level up to 96h. Using FISH, we detected SARS-CoV-2-S in Vero E6 and BMECs at 48 hpi."
+SET Cell = "microvascular endothelial cell"
+SET MeSHAnatomy = "Brain"
+SET HoursPostInfection = "48 hours"
+SET BioAssay = "quantitative PCR"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(MESH:"Viral Load")
+UNSET BioAssay
+UNSET HoursPostInfection
+UNSET MeSHAnatomy
+UNSET Cell
+UNSET Species
+
+SET Support = "In BBB models from hamster, the TEER was decreased slightly at 48 hpi compared to the mock-treated group (Fig. ​(Fig.5a).5a)."
+SET Species = "10036"
+SET HoursPostInfection = "48 hours"
+SET MeSHAnatomy = "Brain"
+SET Cell = "microvascular endothelial cell"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases a(FIXME:"transendothelial electrical resistance")
+UNSET Species
+UNSET HoursPostInfection
+
+SET Support = "But the permeability to NaFl was increased in both BBB models at 48 hpi (Fig. ​(Fig.5c5c)."
+SET Species = {"10090", "10036"}
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+
+SET Support = "To further assess the BBB impairment due to SARS-CoV-2 infection in vitro, we examined the expression of collagen IV. In line with the above in vivo results, collagen IV was decreased in the BBB models using BMECs from both K18-hACE2 mice and hamsters at 48 hpi."
+SET HoursPostInfection = "48 hours"
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") decreases complex(GO:"collagen type IV trimer")
+
+SET Support = "Moreover, both the mRNA and protein levels of MMP9 were increased in the BMEC BBB models at 48 hpi compared with the mock group (Fig. 5k–m)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases p(MGI:Mmp9)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(MGI:Mmp9)
+UNSET HoursPostInfection
+
+SET Support = "Identical to the results in vivo, the relative mRNA levels of the inflammatory factors, IL-6, TNF-ɑ, and MCP1 were much higher in the infected group than the mock control in both in vitro models of K18-hACE2 mice and hamsters (Fig. ​(Fig.5n).5n)."
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(MGI:Il6)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(MGI:Tnf)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(MGI:Ccl2)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(UNIPROT:Q9WVQ8)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(UNIPROT:A0A1U7RE37)
+
+UNSET Species
+UNSET MeSHAnatomy
+UNSET Cell
+UNSET Citation
+
+
+

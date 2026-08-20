@@ -1,0 +1,302 @@
+##################################################################################
+# Document Properties
+##################################################################################
+SET DOCUMENT Name = "37907966.bel"
+SET DOCUMENT Authors = "Febin Seethi V"
+SET DOCUMENT ContactInfo = "febin.seethi@causalitybiomodels"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE PW AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pw/pw-20171007.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE CL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE EFO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/efo/efo-20171206.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MESHA AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE MESHF AS URL"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-psychology/mesh-psychology-20170419.belns"
+
+DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXMECHEM AS LIST {".."}
+DEFINE NAMESPACE FIXME AS LIST {".."}
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/disease/disease-20200622.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20170511.belanno"
+DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION Gender AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results", "Discussions"}
+DEFINE ANNOTATION Model AS LIST {"isogenic model of the neurovascular unit"}
+DEFINE ANNOTATION Disease_Type AS LIST {"late-onset Alzheimers disease"}
+DEFINE ANNOTATION Custom_cell AS LIST {"microglia-like cell", "brain capillary endothelial-like cells"}
+##################################################################################
+# Statements #
+##################################################################################
+#example#
+SET Citation = {"PubMed", "Fluids Barriers CNS. 2023 Oct 31;20(1):78. doi: 10.1186/s12987-023-00471-y.", "37907966"}
+SET PublicationType = "Research"
+SET PublicationStatus = "Published"
+SET Section = "Results"
+
+SET Support = "We found no changes in hiPSCs and PCs but a LOAD-dependent decrease in telomere length in ACs, BCECs, and NSCs, thus integrating a disease-related molecular phenotype for LOAD in our isogenic in vitro model of the NVU."
+SET Model = "isogenic model of the neurovascular unit"
+SET Custom_cell = "brain capillary endothelial-like cells"
+SET Cell = "astrocyte"
+SET MeSHAnatomy = "Neural Stem Cells"
+SET Disease_Type = "late-onset Alzheimers disease"
+path(DO:"Alzheimer's disease") increases bp(MESH:"Telomere Shortening")
+
+UNSET Cell
+UNSET Custom_cell
+UNSET MeSHAnatomy
+
+SET Support = "In the CON NVU model, barrier integrity of BCECs was significantly increased by NSCs (p = 0.02; TEER = 2674 ± 670 Ω*cm2) compared to BCEC mono-cultures (TEER= 2299 ± 123 Ω*cm2) (Fig. 1G). The supporting effect was suppressed in the LOAD NVU model."
+path(DO:"Alzheimer's disease") decreases bp(GO:"maintenance of permeability of blood-brain barrier")
+
+SET Support = "In LOAD BCECs, we found a predominance of down-regulated transcripts in all co-cultures (Fig. 2D)."
+SET BioAssay = {"co-culture","quantitative PCR"}
+SET Custom_cell = "brain capillary endothelial-like cells"
+SET Cell = "pericyte cell"
+path(DO:"Alzheimer's disease") neg r(HGNC:ABCC4)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC16A1)
+path(DO:"Alzheimer's disease") neg r(HGNC:LRP8)
+path(DO:"Alzheimer's disease") neg r(HGNC:OCLN)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN14)
+UNSET Cell
+SET Cell = "astrocyte"
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN3)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN24)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN22)
+UNSET Cell
+SET Custom_cell = "microglia-like cell"
+path(DO:"Alzheimer's disease") neg r(HGNC:KRT8)
+path(DO:"Alzheimer's disease") neg r(HGNC:AQP11)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN15)
+path(DO:"Alzheimer's disease") neg r(HGNC:MARVELD2)
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN9)
+UNSET Custom_cell
+SET MeSHAnatomy = "Neural Stem Cells"
+path(DO:"Alzheimer's disease") pos r(HGNC:CDH5)
+path(DO:"Alzheimer's disease") neg r(HGNC:JAM2)
+path(DO:"Alzheimer's disease") neg r(HGNC:TFRC)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A3)
+path(DO:"Alzheimer's disease") neg r(HGNC:JAM3)
+path(DO:"Alzheimer's disease") neg r(HGNC:ABCC4)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC16A1)
+path(DO:"Alzheimer's disease") neg r(HGNC:F11R)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A5)
+path(DO:"Alzheimer's disease") neg r(HGNC:WWC2)
+UNSET MeSHAnatomy
+
+SET Support = "Second, we studied differences between the CON and LOAD NVU model to investigate the influence of LOAD on the mRNA expression of BBB markers in the related isogenic BCECs (Fig. 3). Our analysis revealed transcriptional changes in LOAD BCECs compared with CON BCECs. The heat map of Log2FC values shows 90 BBB markers in LOAD BCECs compared to CON BCECs."
+SET Cell = "astrocyte"
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN2)
+path(DO:"Alzheimer's disease") pos r(HGNC:PECAM1)
+UNSET Cell
+SET Custom_cell = "microglia-like cell" 
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN2)
+r(HGNC:CLDN18, var("tv2a"))
+UNSET Custom_cell
+SET MeSHAnatomy = "Neural Stem Cells"
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN19)
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN20)
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN22)
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN23)
+path(DO:"Alzheimer's disease") pos r(HGNC:CLDN24)
+UNSET MeSHAnatomy
+
+SET Support = "For example, PCs down-regulated claudins (CLDN5, -7, -10 tvb), TJ transcripts (TJP1, OCLN), transporters and receptors (ABCC4, LRP8, LSR, SLC7A5), and mucins (MUC1 tva, MUC18) in LOAD BCECs (Fig. 3C)."
+SET Cell = "pericyte cell"
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN5)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN7)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN10, var("?"))
+path(DO:"Alzheimer's disease") neg r(HGNC:TJP1)
+path(DO:"Alzheimer's disease") neg r(HGNC:OCLN)
+path(DO:"Alzheimer's disease") neg r(HGNC:ABCC4)
+path(DO:"Alzheimer's disease") neg r(HGNC:LRP8)
+path(DO:"Alzheimer's disease") neg r(HGNC:LSR)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A5)
+path(DO:"Alzheimer's disease") neg r(HGNC:MUC1)
+path(DO:"Alzheimer's disease") neg r(HGNC:MCAM )
+UNSET Cell
+
+SET Support = "ACs decreased the transcription of claudins (CLDN17, -23) in LOAD BCECs compared to CON BCECs. Mucins were altered with transcript variant a (tva) of MUC1 being reduced and tvb being increased (Fig. 3C)."
+SET Cell = "astrocyte"
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN17)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN23)
+path(DO:"Alzheimer's disease") neg r(HGNC:AQP10)
+path(DO:"Alzheimer's disease") neg r(HGNC:MUC1, var("?"))
+path(DO:"Alzheimer's disease") pos r(HGNC:MUC1, var("?"))
+UNSET Cell
+
+SET Support = "MGCs altered the transcription of claudins (CLDN7, -25 tv1-4) and other TJ (F11R, JAM3, TJP1, TJP2) and adherens junction makers (AJs; CDH1), transporters and receptors (ABCB1, ABCC4, INSR, LRP1, LSR, MFSD2A, SLC2A1, SLC7A1, SLC7A3, SLC7A5, SLC16A2), and other factors (KRT18, FN1, MUC1 tva, WWC2) in LOAD BCECs (Fig. 3C)."
+SET Custom_cell = "microglia-like cell"
+path(DO:"Alzheimer's disease") neg r(HGNC:CLCN7)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN25, var("?"))
+path(DO:"Alzheimer's disease") neg r(HGNC:F11R)
+path(DO:"Alzheimer's disease") neg r(HGNC:TJP1)
+path(DO:"Alzheimer's disease") neg r(HGNC:TJP2)
+path(DO:"Alzheimer's disease") neg r(HGNC:INSR)
+path(DO:"Alzheimer's disease") neg r(HGNC:LRP1)
+path(DO:"Alzheimer's disease") neg r(HGNC:LSR)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC2A1)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A1)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A5)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC16A2)
+path(DO:"Alzheimer's disease") neg r(HGNC:CDH1)
+path(DO:"Alzheimer's disease") neg r(HGNC:KRT18)
+path(DO:"Alzheimer's disease") neg r(HGNC:FN1)
+path(DO:"Alzheimer's disease") neg r(HGNC:MUC1, var("?"))
+path(DO:"Alzheimer's disease") neg r(HGNC:WWC2)
+path(DO:"Alzheimer's disease") pos r(HGNC:ABCB1)
+path(DO:"Alzheimer's disease") pos r(HGNC:ABCC4)
+path(DO:"Alzheimer's disease") pos r(HGNC:MFSD2A)
+path(DO:"Alzheimer's disease") pos r(HGNC:JAM3)
+path(DO:"Alzheimer's disease") pos r(HGNC:SLC7A3)
+UNSET Custom_cell
+
+SET Support = "NSCs had the strongest effect on transcriptional changes in LOAD BCECs (Fig. 3C) including increased, but mainly decreased expression of numerous claudins (CLDN3, -4, -7, -8, -10, -11, -12 tv2, -17, -19, -21, -22, -24) and TJ proteins (F11R, JAM2, JAM3, TJP1, TJP3, OCLN, MARVELD2)."
+SET MeSHAnatomy = "Neural Stem Cells"
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN3)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN4)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN7)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN8)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN10, var("?"))
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN11)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN12, var("?"))
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN17)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN19)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN22)
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN24)
+path(DO:"Alzheimer's disease") neg r(HGNC:F11R)
+path(DO:"Alzheimer's disease") neg r(HGNC:JAM2)
+path(DO:"Alzheimer's disease") neg r(HGNC:JAM3)
+path(DO:"Alzheimer's disease") neg r(HGNC:TJP1)
+path(DO:"Alzheimer's disease") neg r(HGNC:TJP3)
+path(DO:"Alzheimer's disease") neg r(HGNC:OCLN)
+path(DO:"Alzheimer's disease") pos r(HGNC:MARVELD2)
+path(DO:"Alzheimer's disease") pos r(HGNC:ABCA1)
+path(DO:"Alzheimer's disease") pos r(HGNC:ABCA7)
+path(DO:"Alzheimer's disease") neg r(HGNC:ABCB1)
+path(DO:"Alzheimer's disease") neg r(HGNC:ABCC4)
+path(DO:"Alzheimer's disease") neg r(HGNC:ABCG2)
+path(DO:"Alzheimer's disease") pos r(HGNC:AGER)
+path(DO:"Alzheimer's disease") neg r(HGNC:INSR)
+path(DO:"Alzheimer's disease") neg r(HGNC:LRP1)
+path(DO:"Alzheimer's disease") neg r(HGNC:LRP8)
+path(DO:"Alzheimer's disease") neg r(HGNC:LSR)
+path(DO:"Alzheimer's disease") pos r(HGNC:MFSD2A)
+path(DO:"Alzheimer's disease") pos r(HGNC:RARB, var("?"))
+path(DO:"Alzheimer's disease") pos r(HGNC:RXRA)
+path(DO:"Alzheimer's disease") pos r(HGNC:RXRB)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC2A1)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A1)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A3)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A5)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC16A1)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC16A2)
+path(DO:"Alzheimer's disease") neg r(HGNC:TFRC)
+path(DO:"Alzheimer's disease") pos r(HGNC:KRT19)
+path(DO:"Alzheimer's disease") pos r(HGNC:VIM)
+path(DO:"Alzheimer's disease") pos r(HGNC:AQP11)
+path(DO:"Alzheimer's disease") pos r(HGNC:APOE)
+path(DO:"Alzheimer's disease") pos r(HGNC:CTNNB1)
+path(DO:"Alzheimer's disease") pos r(HGNC:MUC1, var("?"))
+path(DO:"Alzheimer's disease") neg r(HGNC:AQP10)
+path(DO:"Alzheimer's disease") neg r(HGNC:FN1)
+path(DO:"Alzheimer's disease") neg r(HGNC:MUC1, var("?"))
+path(DO:"Alzheimer's disease") neg r(HGNC:VEGFA)
+path(DO:"Alzheimer's disease") neg r(HGNC:VWF)
+path(DO:"Alzheimer's disease") neg r(HGNC:WWC2)
+UNSET MeSHAnatomy
+UNSET BioAssay
+
+SET Support = "We also found increased transcription of the six SLC transporters SLC2A1/GLUT1, SLC7A1 (cationic amino acid transporter 1, CAT1), SLC7A3 (CAT3), SLC7A5 (large neutral amino acid transporter 1, LAT1), SLC16A1 (monocarboxylate transporter 1, MCT1, and SLC16A2 (MCT8)."
+SET BioAssay = "quantitative PCR"
+SET Custom_cell = "brain capillary endothelial-like cells"
+path(DO:"Alzheimer's disease") pos r(HGNC:SLC2A1)
+path(DO:"Alzheimer's disease") pos r(HGNC:SLC16A2)
+path(DO:"Alzheimer's disease") pos r(HGNC:SLC7A3)
+path(DO:"Alzheimer's disease") pos r(HGNC:SLC7A5)
+path(DO:"Alzheimer's disease") pos r(HGNC:SLC16A1)
+path(DO:"Alzheimer's disease") pos r(HGNC:MCAT)
+
+SET Support = "Transcripts involved in lipid metabolism were significantly altered including APOE, two APOE receptors (low density lipoprotein receptor-related protein 1, LRP1 and LRP8), and the gene encoding the lipolysis-stimulated lipoprotein receptor (LSR). Two intermediate filaments (KRT19, VIM) were significantly upregulated."
+path(DO:"Alzheimer's disease") reg r(HGNC:APOE)
+path(DO:"Alzheimer's disease") reg r(HGNC:LRP1)
+path(DO:"Alzheimer's disease") reg r(HGNC:LRP8)
+path(DO:"Alzheimer's disease") reg r(HGNC:LSR)
+p(HGNC:APOE) -- bp(GO:"lipid metabolic process")
+p(HGNC:LRP1) -- bp(GO:"lipid metabolic process")
+p(HGNC:LRP8) -- bp(GO:"lipid metabolic process")
+path(DO:"Alzheimer's disease") pos r(HGNC:KRT19)
+path(DO:"Alzheimer's disease") pos r(HGNC:VIM)
+
+SET Support = "The gene encoding the aging marker advanced glycosylation end-product specific receptor (AGER; receptor for advanced glycosylation end-product, RAGE) was increased. Finally, mucins were also altered including two MUC1 transcripts (tva was reduced and tvb increased) (Fig. 3C)."
+path(DO:"Alzheimer's disease") neg r(HGNC:MUC1, var("tva"))
+path(DO:"Alzheimer's disease") pos r(HGNC:MUC1, var("tvb"))
+UNSET Custom_cell
+
+SET Support = "Indeed, down-regulation of tva of MUC1 was observed independent of the respective brain cell type and the only significantly, differentially regulated transcript shared by all LOAD NVU models (PCs, p = 0.014; ACs, p = 0.0004; MGCs, p = 0.00004; NSCs, p = 0.00002) (Fig. 3D)."
+SET Cell = {"astrocyte", "pericyte cell"}
+SET Custom_cell = "microglia-like cell"
+SET MeSHAnatomy = "Neural Stem Cells"
+path(DO:"Alzheimer's disease") neg r(HGNC:MUC1, var("tva"))
+UNSET Cell
+
+SET Support = "Five significantly regulated transcripts were shared by all three (co-cultures with PCs, MGCs, and NSCs) LOAD NVU models compared to CON NVU models, including modulation of ABCC4 and down-regulation of CLDN7, TJP1, LSR, and SLC7A5 (Fig. 3C, D)."
+SET Cell = "pericyte cell"
+p(HGNC:ABCC4) reg path(DO:"Alzheimer's disease")
+path(DO:"Alzheimer's disease") neg r(HGNC:CLDN7)
+path(DO:"Alzheimer's disease") neg r(HGNC:TJP1)
+path(DO:"Alzheimer's disease") neg r(HGNC:LSR)
+path(DO:"Alzheimer's disease") neg r(HGNC:SLC7A5)
+UNSET BioAssay
+UNSET Cell
+UNSET Custom_cell
+UNSET MeSHAnatomy
+UNSET Disease_Type
+UNSET Model
+
+UNSET Citation

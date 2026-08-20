@@ -12,6 +12,7 @@ dependencies = [
   "pybiomart>=0.2.0",
   "momapy-kb[neo4j]",
   "momapy[skia]",
+  "momapy-bel",
   "pd2af",
   "fieldz-kb",
   "pylpg",
@@ -19,6 +20,8 @@ dependencies = [
   "powerlaw",
   "scipy",
   "networkx>=3.4.2",
+  "archs4py>=1.0.4",
+  "pydeseq2>=0.5.4",
 ]
 requires-python = ">=3.12"
 readme = "README.md"
@@ -34,6 +37,10 @@ momapy = { path = "../../../code/momapy", editable = true }
 fieldz-kb = { path = "../../../code/fieldz_kb", editable = true }
 pylpg = { path = "../../../code/pylpg", editable = true }
 pd2af = { path = "../../../code/pd2af", editable = true }
+momapy-bel = { path = "/home/rougny/code/momapy_bel", editable = true }
 
 [dependency-groups]
-dev = ["jupyter-ruff>=0.3.1", "pd2af"]
+dev = [
+    "jupyter-ruff>=0.3.1",
+    "pd2af",
+]

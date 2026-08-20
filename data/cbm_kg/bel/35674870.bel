@@ -1,0 +1,646 @@
+SET DOCUMENT Name = "35674870.bel"
+SET DOCUMENT Authors = "Aneetta Baby"
+SET DOCUMENT ContactInfo = "aneetta@causalitybiomodels.com"
+SET DOCUMENT Description = "COMMUTE-WP4-BEL_curation"
+
+SET DOCUMENT Licenses = "Private Ownership to Fraunhofer Institute SCAI"
+SET DOCUMENT Copyright = "Copyright © 2024 Fraunhofer Institute SCAI, All rights reserved"
+SET DOCUMENT Version = "2.0"
+
+
+##################################################################################
+# NAMESPACES Section
+##################################################################################
+
+DEFINE NAMESPACE ADO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/alzheimer-disease-ontology/alzheimer-disease-ontology-1.0.2.belns"
+DEFINE NAMESPACE BRCO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/brain-region-ontology/brain-region-ontology-1.0.0.belns"
+DEFINE NAMESPACE NIFT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/nift/NIFT.belns"
+DEFINE NAMESPACE CELL AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/cell/cell-20200623.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc/hgnc-20190708.belns"
+DEFINE NAMESPACE MGI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mgi-mouse-genes/mgi-mouse-genes-20190128.belns"
+DEFINE NAMESPACE RGD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/rgd-rat-genes/rgd-rat-genes-20190128.belns"
+DEFINE NAMESPACE GFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-gene-families/hgnc-genefamily-names-20181221.belns"
+DEFINE NAMESPACE SCOMP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-named-complexes/selventa-named-complexes-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE SFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/selventa-protein-families/selventa-protein-families-20190128.belns"
+DEFINE NAMESPACE HP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hp/hp-20190130.belns"
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi/chebi-20190708.belns"
+DEFINE NAMESPACE DRUGBANK AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/drugbank/drugbank-20180906.belns"
+DEFINE NAMESPACE INTERPRO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-names-20181021.belns"
+DEFINE NAMESPACE PFAM AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/pfam/pfam-names-20181024.belns"
+DEFINE NAMESPACE DO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE NAMESPACE GO AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE GOBP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-biological-process/go-biological-process-20190128.belns"
+DEFINE NAMESPACE GOCC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go-cellular-component/go-cellular-component-20190128.belns"
+
+DEFINE NAMESPACE MESH AS URL 	"https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh/mesh-names-20181007.belns"
+
+DEFINE NAMESPACE MESHC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-chemicals/mesh-chemicals-20190128.belns"
+DEFINE NAMESPACE MESHD AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-diseases/mesh-diseases-20190128.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-anatomy/mesh-anatomy-20190128.belns"
+DEFINE NAMESPACE MESHCS AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-cellular-structures/mesh-cellular-structures-20190128.belns"
+DEFINE NAMESPACE NCBIGENE AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-gene/ncbi-gene-20190224.belns"
+
+DEFINE NAMESPACE COVID AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-covid19/ncbi-covid19-20200326.belns"
+DEFINE NAMESPACE NCIT AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncit/ncit-20200603.belns"
+DEFINE NAMESPACE MESHPP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20190128.belns"
+DEFINE NAMESPACE TAX  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/ncbi-taxonomy/ncbi-taxonomy-20200322.belns"
+DEFINE NAMESPACE ZFIN  AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/zfin/zfin-20210312.belns"
+#DEFINE NAMESPACE UNIPROT AS PATTERN "^([A-N,R-Z][0-9]([A-Z][A-Z, 0-9][A-Z, 0-9][0-9]){1,2})|([O,P,Q][0-9][A-Z, 0-9][A-Z, 0-9][A-Z, 0-9][0-9])(\.\d+)?$"
+#DEFINE NAMESPACE PUBCHEM AS PATTERN "^\d+$"
+#DEFINE NAMESPACE dbSNP AS PATTERN "rs[0-9]+"
+DEFINE NAMESPACE FIXME AS LIST {"viral dsRNA","microbial-derived products","meningeal lymphatic drainage","damaged mitochondria","alpha-synuclein redistribution","alpha-synuclein aggregation","alpha-synuclein fibrillation","intestinal dysfunction","neurotoxicity","anti-microbial defense mechanism","mitochondrial function","adaptive inflammation","cGAS/STING signaling pathway","mitochondrial quality control"}
+
+
+##################################################################################
+# ANNOTATIONS Section
+##################################################################################
+DEFINE ANNOTATION Anatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/anatomy/anatomy-20190128.belanno"
+DEFINE ANNOTATION CellLine AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell-line/cell-line-20190128.belanno"
+DEFINE ANNOTATION Cell AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/cell/cell-20190128.belanno"
+DEFINE ANNOTATION Disease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/disease-ontology/disease-ontology-20200407.belns"
+DEFINE ANNOTATION MeSHAnatomy AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-anatomy/mesh-anatomy-20190128.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/mesh-diseases/mesh-diseases-20190128.belanno"
+DEFINE ANNOTATION Species AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/species-taxonomy-id/species-taxonomy-id-20200622.belanno"
+#DEFINE ANNOTATION TextLocation AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/text-location/text-location-1.0.1.belanno"
+DEFINE ANNOTATION BioAssay AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/bao/bao-20190130.belanno"
+DEFINE ANNOTATION CovidAccession AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/ncbi-covid19/ncbi-accession-covid19-20200326.belanno"
+DEFINE ANNOTATION Gender AS URL   "https://arty.scai.fraunhofer.de/artifactory/bel/annotation/gender/gender-1.0.0.belanno"
+
+
+# Document Annotations #
+DEFINE ANNOTATION PublicationType AS LIST {"Review", "Research"}
+DEFINE ANNOTATION PublicationStatus AS LIST {"Preprint", "Published"}
+DEFINE ANNOTATION Section AS LIST {"Full Text", "Abstract", "Results"}
+DEFINE ANNOTATION TimeLine AS LIST {"6 hours", "18 hours","1 hour"}
+DEFINE ANNOTATION Specimen AS LIST {"Feces","Serum","Plasma", "Cerebrospinal Fluid","Blood"}
+DEFINE ANNOTATION Disease_Type AS LIST {"sporadic","familial","autosomal dominant","autosomal recessive","early onset","late onset","prodromal"}
+DEFINE ANNOTATION Technique AS LIST {"Single-nucleus RNA sequencing", "RNA sequencing"}
+DEFINE ANNOTATION Protein_Type AS LIST {"insoluble","fibrillar","pre-formed fibril","fibril"}
+DEFINE ANNOTATION Mouse_Strain AS LIST {"FVB/N-Khdrbs2Tg(LRRK2*R1441G)135Cjli/J"}
+DEFINE ANNOTATION Mouse_Type AS LIST {"Pink1-/-","Park7-/-"}
+DEFINE ANNOTATION Zebrafish_Type AS LIST {"park7-/-"}
+DEFINE ANNOTATION Gene_Type AS LIST {"GBA-/-"}
+DEFINE ANNOTATION Custom_Cell AS LIST {"lymphoblast"}
+
+SET Citation = {"PubMed", "Curr Neurol Neurosci Rep. 2022 Aug;22(8):427-440. doi: 10.1007/s11910-022-01207-5. Epub 2022 Jun 8.","35674870"}
+SET PublicationType = "Review"
+SET PublicationStatus = "Published"
+SET Section = "Full Text"
+
+SET Support = "Parkinson’s disease (PD) is characterized by the cardinal signs of the movement disorder such as tremor and postural instability, as well as the histopathological hallmarks of alpha-synuclein (α-syn) accumulation and loss of dopaminergic neurons in the substantia nigra (SN)."
+SET Species = "9606"
+SET MeSHDisease = "Parkinson Disease"
+SET MeSHAnatomy = "Substantia Nigra"
+path(DO:"Parkinson's disease") -> path(MESH:"Nerve Degeneration")
+path(DO:"Parkinson's disease") -> path(MESH:"Tremor")
+path(DO:"Parkinson's disease") -> path(HP:"Postural instability")
+path(DO:"Parkinson's disease") -| a(CELL:"dopaminergic neuron")
+path(DO:"Parkinson's disease") association p(HGNC:SNCA)
+UNSET MeSHAnatomy
+
+SET Support = "Among these, pathogen-associated molecular patterns (PAMPs), including, e.g. bacterial lipopolysaccharides (LPS), peptidoglycans, CpG oligonucleotides and viral double-stranded RNAs (dsRNAs), can trigger the innate immune system by acting as ligands for the corresponding pattern recognition receptors (PRRs) on the surface of host cells"
+a(MESH:"Pathogen-Associated Molecular Pattern Molecules") -> bp(GO:"activation of innate immune response")
+a(CHEBI:lipopolysaccharide) -> bp(GO:"activation of innate immune response")
+a(CHEBI:peptidoglycan) -> bp(GO:"activation of innate immune response")
+bp(MESH:"CpG Islands")-> bp(GO:"activation of innate immune response")
+a(FIXME:"viral dsRNA")-> bp(GO:"activation of innate immune response")
+
+SET Support = "Conversely, modifications in the composition of microorganisms that populate the gut, also known as dysbiosis, may lead to dysregulated TLR signaling, persistent production of proinflammatory cytokines and disruption of the gut epithelial barrier."
+SET MeSHAnatomy = "Gastrointestinal Tract"
+path(MESH:Dysbiosis) reg bp(GO:"toll-like receptor signaling pathway")
+path(MESH:Dysbiosis) -> bp(GO:"cytokine production involved in inflammatory response")
+path(MESH:Dysbiosis) -| bp(GO:"intestinal epithelial structure maintenance")
+
+SET Support = "In turn, this results in a leakage of microbial-derived products and inflammatory mediators into the bloodstream, through which they can cross the blood-brain barrier (BBB) and finally reach the brain [34] (Fig. 1)."
+bp(GO:"toll-like receptor signaling pathway") -> tloc(a(FIXME:"microbial-derived products"), fromLoc(MESH:"Gastrointestinal Tract"), toLoc(MESH:Blood))
+bp(GO:"toll-like receptor signaling pathway") -> tloc(a(MESH:"Inflammation Mediators"), fromLoc(MESH:"Gastrointestinal Tract"), toLoc(MESH:Blood))
+bp(GO:"cytokine production involved in inflammatory response") -> tloc(a(FIXME:"microbial-derived products"), fromLoc(MESH:"Gastrointestinal Tract"), toLoc(MESH:Blood))
+bp(GO:"cytokine production involved in inflammatory response")-> tloc(a(MESH:"Inflammation Mediators"), fromLoc(MESH:"Gastrointestinal Tract"), toLoc(MESH:Blood))
+bp(GO:"intestinal epithelial structure maintenance") -| tloc(a(FIXME:"microbial-derived products"), fromLoc(MESH:"Gastrointestinal Tract"), toLoc(MESH:Blood))
+bp(GO:"intestinal epithelial structure maintenance") -| tloc(a(MESH:"Inflammation Mediators"), fromLoc(MESH:"Gastrointestinal Tract"), toLoc(MESH:Blood))
+UNSET MeSHAnatomy
+UNSET MeSHDisease
+
+SET Support = "Of note, in PD as well as in other brain diseases, neuroinflammation also dampens BBB integrity, making it more porous to substances, including toxins and bacterial metabolites, which may otherwise not be permitted through"
+SET MeSHDisease = {"Parkinson Disease", "Brain Diseases"}
+SET MeSHAnatomy = "Central Nervous System"
+path(ADO:neuroinflammation) -| a(MESH:"Blood-Brain Barrier")
+UNSET MeSHDisease
+
+SET Support = "Other products of microbial metabolism, such as short-chain fatty acids (SCFAs), tryptophan metabolites and the amyloid curli, can have an impact of neuronal activity and modulate neuroinflammation [36–38]."
+a(CHEBI:"short-chain fatty acid") reg bp(GO:"neuronal signal transduction")
+a(CHEBI:"short-chain fatty acid") reg bp(GO:"inflammatory response")
+bp(GO:"tryptophan catabolic process") reg bp(GO:"neuronal signal transduction")
+bp(GO:"tryptophan catabolic process") reg path(MESH:Inflammation)
+complex(GO:curli) reg bp(GO:"neuronal signal transduction")
+complex(GO:curli) reg path(ADO:neuroinflammation)
+UNSET MeSHAnatomy
+
+SET Support = "Most SCFAs have anti-inflammatory properties (e.g. butyrate, valerate) and contribute to maintain the integrity of intestinal barrier; as a consequence, a low abundance of SCFA-producing bacteria may cause leakiness of the gut epithelium thus promoting the passage of intestinal pathogens into the bloodstream and systemic inflammation [39, 40]."
+a(CHEBI:butyrate) -> bp(GO:"intestinal epithelial structure maintenance")
+a(CHEBI:valerate) -> bp(GO:"intestinal epithelial structure maintenance")
+a(CHEBI:"short-chain fatty acid") -| bp(GO:"inflammatory response")
+
+SET Support = " Accordingly, reduced levels of the SCFA acetate, propionate and butyrate were detected in the stool of PD patients compared to age-matched controls and paralleled by a decreased amount of SCFA-producing bacteria, in particular from the families Prevotellaceae and Lachnospiracae"
+SET Specimen = "Feces"
+path(DO:"Parkinson's disease") neg a(CHEBI:acetate)
+path(DO:"Parkinson's disease") neg a(CHEBI:propionate)
+path(DO:"Parkinson's disease") neg a(CHEBI:butyrate)
+path(DO:"Parkinson's disease") neg a(TAX:Prevotellaceae)
+path(DO:"Parkinson's disease") neg a(TAX:Lachnospiraceae)
+
+SET Support = "In support of these observations, transplantation of fecal microbiota from healthy donors as well as butyrate supplementation improved dopamine deficiency and motor impairment in different animal models of PD"
+ a(MESH:"Fecal Microbiota Transplantation") pos a(CHEBI:dopamine)
+ a(CHEBI:butyrate) pos a(CHEBI:dopamine)
+ a(MESH:"Fecal Microbiota Transplantation") -> path(MESH:"Motor Activity")
+ a(CHEBI:butyrate) -> path(MESH:"Motor Activity")
+ 
+SET Support = "In parallel, we and others recently reported increased levels of Lactobacillus, Christensenella and Akkermansia in stool samples from PD patients"
+path(DO:"Parkinson's disease") pos a(TAX:Lactobacillus)
+path(DO:"Parkinson's disease") pos a(TAX:Christensenella)
+path(DO:"Parkinson's disease") pos a(TAX:Akkermansia)
+UNSET Specimen
+
+SET Support = "To this regard, it is worth noting that GABA receptors have been found not only in the CNS but also in the ENS, where they could transduce signals regulating gastric motility and secretion."
+SET MeSHAnatomy = {"Central Nervous System", "Enteric Nervous System"}
+complex(GO:"GABA receptor complex") reg bp(GO:"gastric motility")
+complex(GO:"GABA receptor complex") reg bp(GO:"gastric acid secretion")
+UNSET MeSHAnatomy
+
+SET Support = "Importantly, GABAergic dysfunctions have been reported both in prodromal PD (mostly linked to gastrointestinal symptoms) and at later disease stages, but GABA contribution to neurodegeneration is still debated, as demonstrated by multiple studies showing controversial results"
+SET Disease_Type = {"prodromal", "late onset"}
+path(DO:"Parkinson's disease") neg bp(GO:"synaptic transmission, GABAergic")
+UNSET Disease_Type
+
+SET Support = "Interestingly, our study also highlighted a higher abundance of Bifidobacteria but only in constipated PD cases, thus suggesting a link between microbiota composition and intestinal non-motor symptoms in PD"
+SET MeSHDisease = "Constipation"
+path(DO:"Parkinson's disease") pos a(TAX:Bifidobacterium)
+UNSET MeSHDisease 
+
+SET Support = "Of note, also pathogens that belong to the families Enterococcaceae and Enterobacteriacee significantly increased in fecal samples from PD patients, and this positively correlated with disease duration and severity [44, 45]."
+SET Specimen = "Feces"
+path(DO:"Parkinson's disease") pos a(TAX:Enterococcaceae) 
+path(DO:"Parkinson's disease") pos a(TAX:Enterobacteriaceae)
+
+SET Support = "Last but not the least, Helicobacter pylori infection has been also associated to an increased risk to develop PD."
+path(MESH:"Helicobacter Infections") pos path(DO:"Parkinson's disease")
+
+SET Support = "Indeed, H. pylori-positive PD patients displayed higher mortality rate and motor dysfunction compared to healthy controls, a clinical phenotype significantly improved following Helicobacter eradication"
+SET MeSHDisease = "Parkinson Disease"
+path(MESH:"Helicobacter Infections") -> path(MESH:Mortality)
+
+SET Support = "While at rest, they are involved in synaptic pruning and remodeling thereby regulating brain connectivity"
+a(MESH:Microglia) reg bp(GO:"excitatory synapse disassembly")
+a(MESH:Microglia) reg bp(GO:"modification of synaptic structure")
+bp(GO:"modification of synaptic structure") reg bp(GO:"neuron-neuron synaptic transmission")
+
+SET Support = "Accordingly, microgliosis is a typical histopathological hallmark of PD that was discovered as early as in 1988"
+path(DO:"Parkinson's disease") pos a(NCIT:Microgliosis)
+
+SET Support = "In support of the latter hypothesis, PET studies using the 11C-(R)-PK11195 ligand that specifically binds to active microglia revealed that microgliosis can be observed during the early stages of the disease"
+SET Disease_Type = "early onset"
+path(DO:"Parkinson's disease") pos a(NCIT:Microgliosis)
+UNSET Disease_Type
+
+SET Support = "Recently, we also demonstrated, by means of single-nuclei sequencing, a specific upregulation of microglia in the midbrain tissue from sporadic PD (sPD) patients compared to controls"
+SET Disease_Type = "sporadic"
+SET Technique = "Single-nucleus RNA sequencing"
+path(DO:"Parkinson's disease") -> a(MESH:Microglia)
+UNSET Technique
+
+SET Support = "In addition, quantitative imaging analysis of sPD and control midbrain sections revealed a reduction in microglial branching exclusively in the SN of PD patients "
+SET MeSHAnatomy = "Substantia Nigra"
+path(DO:"Parkinson's disease") -| bp(GO:"microglial cell activation")
+UNSET MeSHAnatomy
+UNSET Disease_Type
+
+SET Support = "The inheritance of specific gene mutations in autosomal dominant (e.g. SNCA, LRRK2) and autosomal recessive (e.g. PINK1, PRKN, DJ-1) manner has been associated with the development of familial PD."
+SET Disease_Type = {"familial", "autosomal dominant"}
+p(HGNC:SNCA, var("?")) association path(DO:"Parkinson's disease") 
+p(HGNC:LRRK2, var("?")) association path(DO:"Parkinson's disease") 
+UNSET Disease_Type
+SET Disease_Type = {"familial", "autosomal dominant"}
+p(HGNC:PINK1, var("?"))association path(DO:"Parkinson's disease") 
+p(HGNC:PRKN, var("?")) association path(DO:"Parkinson's disease") 
+p(HGNC:PARK7, var("?")) association path(DO:"Parkinson's disease") 
+UNSET Disease_Type
+
+SET Support = "Duplication, triplication and point mutations in SNCA, the gene which codes for α-syn, are equally linked with late and early onset PD"
+SET Disease_Type = {"early onset","late onset"}
+p(HGNC:SNCA, var("?")) association path(DO:"Parkinson's disease") 
+
+SET Support = "In the brain, the function of α-syn is to aid neurotransmission via the regulation of the synaptic vesicles and synaptic membranes [59]."
+p(HGNC:SNCA) reg bp(GO:"chemical synaptic transmission")
+UNSET Disease_Type
+
+SET Support = "In contrast, insoluble aggregates of α-syn, which are also a feature of sporadic PD, can trigger neuroinflammation [60]. "
+SET Disease_Type = "familial"
+SET Protein_Type = "insoluble"
+SET MeSHAnatomy = "Central Nervous System" 
+path(FIXME:"alpha-synuclein aggregation") -> path(ADO:neuroinflammation)
+UNSET Protein_Type
+UNSET Disease_Type
+
+SET Support = "Not only aggregation, but also the overexpression and post-translational modifications (e.g. nitration) of α-syn are linked to sustained microglial activation [61–66], an effect likely mediated by the NFkB and MAPK signaling pathways"
+p(HGNC:SNCA) -> bp(GO:"microglial cell activation")
+p(HGNC:SNCA, pmod(GO:"post-translational protein modification")) -> bp(GO:"microglial cell activation")
+complex(GO:"NF-kappaB complex") -> bp(GO:"microglial cell activation")
+bp(GO:"stress-activated MAPK cascade") -> bp(GO:"microglial cell activation")
+
+SET Support = "Accordingly, the levels of neuroinflammatory markers, TNF, ICAM, IL-6 and IL-1α, are increased in the SN of mouse brain overexpressing α-syn"
+SET Species = "10090"
+SET MeSHAnatomy = "Substantia Nigra"
+p(MGI:Snca) -> p(MGI:Tnf)
+p(MGI:Snca) -> p(MGI:Icam1)
+p(MGI:Snca) -> p(MGI:Il6)
+p(MGI:Snca) -> p(MGI:Il1a)
+UNSET Species 
+
+SET Support = "Other studies have shown an activation of NLRP3 inflammasome in distinct α-syn PD models, including primary monocytes and primary microglia exposed to fibrillar α-syn, mouse striatum subjected to 6-OHDA treatment, α-syn pre-formed fibrils (PFF)-injected mice, post-mortem SN sections from PD brains and also blood and CSF samples from PD patients [68, 69, 70•]."
+SET Species = "9606"
+SET Specimen = {"Blood","Cerebrospinal Fluid"}
+SET Protein_Type = "fibrillar"
+p(HGNC:SNCA) -> act(complex(GO:"NLRP3 inflammasome complex"))
+UNSET Protein_Type
+a(CHEBI:oxidopamine) -> act(complex(GO:"NLRP3 inflammasome complex"))
+SET Protein_Type = "pre-formed fibril"
+p(HGNC:SNCA) -> act(complex(GO:"NLRP3 inflammasome complex"))
+UNSET Protein_Type
+UNSET Specimen
+
+SET Support = "Recent studies suggested that α-syn aggregation at nerve terminals as well as its capability to leave the cell into exosomes can trigger neuroinflammation and could be used as a potential biomarker for early PD diagnosis and a prognostic tool for disease progression"
+SET MeSHAnatomy = {"Central Nervous System", "Nerve Endings"}
+path(FIXME:"alpha-synuclein aggregation") -> path(ADO:neuroinflammation)
+path(FIXME:"alpha-synuclein aggregation") pos path(DO:"Parkinson's disease")
+path(FIXME:"alpha-synuclein aggregation") biomarkerFor path(DO:"Parkinson's disease")
+UNSET MeSHAnatomy
+
+SET Support = "Interestingly, also α-syn silencing may cause neuroinflammation, suggesting that not only excessive α-syn concentrations but also perturbation of physiological α-syn levels could support PD pathogenesis"
+SET MeSHAnatomy = "Central Nervous System"
+act(p(HGNC:SNCA)) -| path(ADO:neuroinflammation)
+p(HGNC:SNCA)-> bp(GO:"inflammatory response")
+UNSET MeSHAnatomy
+
+SET Support = "Mutations in LRRK2 can cause autosomal dominant PD"
+SET Disease_Type = "autosomal dominant"
+p(HGNC:LRRK2, var("?")) -> path(DO:"Parkinson's disease")
+
+SET Support = "The expression of LRRK2 is increased in monocytes activated by IFNγ, suggesting that it could play a role in monocyte maturation"
+p(HGNC:IFNG) -> bp(GO:"monocyte activation")
+bp(GO:"monocyte activation")-> p(HGNC:LRRK2)
+UNSET Disease_Type
+UNSET Species
+
+SET Support = "LPS-treated R1141G LRRK2 transgenic mice showed increased secretion of pro-inflammatory TNFα, IL-1b and IL-6, as well as a decreased expression of anti-inflammatory IL-10"
+SET Species = "10090" 
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) -> sec(p(MGI:Tnf))
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) -> sec(p(MGI:Il1b))
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) -> sec(p(MGI:Il6))
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) -| p(MGI:Il10)
+p(MGI:Il10) -| path(MESH:Inflammation)
+p(MGI:Il6) -> path(MESH:Inflammation)
+p(MGI:Tnf) -> path(MESH:Inflammation)
+p(MGI:Il1b) -> path(MESH:Inflammation)
+
+SET Support = "mRNA levels of the pro-inflammatory cytokines TNF, IL-1, IL-12, CCL4, CXCL1, CCL3L1 were also increased, suggesting an upstream regulation by LRRK2"
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Tnf)
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Il1a)
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Il12b)
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Il12a)
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Ccl4)
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Cxcl1)
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Ccl3)
+composite(a(CHEBI:lipopolysaccharide),p(MGI:Lrrk2,var("p.Arg1441Gly"))) association r(MGI:Lrrk2)
+p(MGI:Tnf) -> path(MESH:Inflammation)
+p(MGI:Il1a) -> path(MESH:Inflammation)
+p(MGI:Il12b) -> path(MESH:Inflammation)
+p(MGI:Ccl4) -> path(MESH:Inflammation)
+p(MGI:Cxcl1) -> path(MESH:Inflammation)
+p(MGI:Ccl3) -> path(MESH:Inflammation)
+p(MGI:Lrrk2) -> path(MESH:Inflammation)
+
+SET Support = "The expression and kinase activity of LRRK2 were increased in LPS-treated lymphoblasts"
+SET Custom_Cell = "lymphoblast"
+a(CHEBI:lipopolysaccharide) -> p(MGI:Lrrk2)
+a(CHEBI:lipopolysaccharide) -> act(p(MGI:Lrrk2), ma(GO:"kinase activity"))
+
+SET Support = "LPS-dependent activation of TLR signaling pathway, increase in LRRK2/TRAF6 interaction and increased phosphorylation of both MAPK and IkB were reduced upon treatment with a LRRK2 inhibitor, leading to reduced TNFα secretion and thus confirming the involvement of LRRK2 in the generation of pro-inflammatory responses in lymphoblasts"
+a(CHEBI:lipopolysaccharide) -> bp(GO:"toll-like receptor signaling pathway")
+a(CHEBI:lipopolysaccharide) -> complex(p(MGI:Lrrk2),p(MGI:Traf6))
+a(CHEBI:lipopolysaccharide) -> p(MGI:Nfkbib,pmod(Ph))
+a(CHEBI:lipopolysaccharide) -> p(GFAM:"Mitogen-activated protein kinases",pmod(Ph))
+act(p(MGI:Lrrk2)) -> p(MGI:Nfkbib,pmod(Ph))
+act(p(MGI:Lrrk2)) -> p(GFAM:"Mitogen-activated protein kinases",pmod(Ph))
+act(p(MGI:Lrrk2)) -> bp(GO:"toll-like receptor signaling pathway")
+act(p(MGI:Lrrk2)) -> complex(p(MGI:Lrrk2),p(MGI:Traf6))
+bp(GO:"toll-like receptor signaling pathway") -| sec(p(MGI:Tnf))
+p(MGI:Nfkbib,pmod(Ph))-| sec(p(MGI:Tnf))
+p(GFAM:"Mitogen-activated protein kinases",pmod(Ph)) -| sec(p(MGI:Tnf))
+complex(p(MGI:Lrrk2),p(MGI:Traf6)) -| sec(p(MGI:Tnf))
+UNSET Custom_Cell
+UNSET Species
+
+SET Support = "Mutations in the PARK6 gene encoding PINK1 can cause autosomal recessive PD"
+SET Species = "9606"
+SET Disease_Type = "autosomal recessive"
+p(HGNC:PINK1, var("?")) -> path(DO:"Parkinson's disease")
+
+SET Support = "PINK1 phosphorylates ubiquitin, regulates mitochondrial quality control and plays a key role in mitophagy (the removal of damaged mitochondria from cells). "
+p(HGNC:PINK1) -> p(PFAM:ubiquitin,pmod(Ph))
+p(HGNC:PINK1) reg bp(FIXME:"mitochondrial quality control")
+p(HGNC:PINK1) reg bp(GO:mitophagy)
+
+SET Support = "PINK1 is involved in the recruitment of cytosolic Parkin to damaged mitochondria "
+p(HGNC:PINK1) -> tloc(p(HGNC:PRKN), fromLoc(GO:"cytosol"), toLoc(FIXME:"damaged mitochondria"))
+
+SET Support = "Mutations in the PARK2 gene encoding Parkin also cause autosomal recessive PD"
+p(HGNC:PRKN, var("?")) -> path(DO:"Parkinson's disease")
+
+SET Support = "Parkin is an E3-ubiquitin ligase that is responsible for the ubiquitylation and degradation of mitochondrial proteins and the recruitment of autophagy receptors that facilitate the removal of damaged mitochondria during mitophagy"
+SET MeSHAnatomy = "Mitochondria"
+p(HGNC:PRKN) -> bp(GO:"protein ubiquitination")
+p(HGNC:PRKN) -> bp(GO:"mitochondrial protein catabolic process")
+p(HGNC:PRKN)-> bp(GO:mitophagy)
+UNSET MeSHAnatomy
+
+SET Support = "Parkin is known to regulate oxidative stress and maintain mitochondrial function within the cell and, together with PINK1, was originally shown to provide neuroprotection by activating the NFkB transcription factor that regulates immune response among others"
+p(HGNC:PRKN) reg bp(MESH:"Oxidative Stress")
+p(HGNC:PRKN) reg bp(FIXME:"mitochondrial function")
+composite(p(HGNC:PRKN),p(HGNC:PINK1)) -> act(complex(GO:"NF-kappaB complex"))
+act(complex(GO:"NF-kappaB complex")) -> bp(MESH:Neuroprotection)
+act(complex(GO:"NF-kappaB complex")) reg bp(GO:"immune response")
+UNSET Disease_Type
+UNSET Species
+
+SET Support = "However, both increased and reduced activation of NFkB signaling have been observed in PINK1 KO mice and mouse macrophage cultures subjected to PINK1 knockdown"
+SET Species = "10090"
+SET Mouse_Type = "Pink1-/-"
+SET Cell = "macrophage"
+p(MGI:Pink1) reg act(complex(GO:"NF-kappaB complex"))
+UNSET Cell
+UNSET Mouse_Type
+UNSET Species
+
+SET Support = "Parkin also suppresses inflammation by degrading TRAF2/6 and preventing the activation of NFkB and JNK signaling pathways"
+p(HGNC:PRKN) -> deg(p(HGNC:TRAF2))
+p(HGNC:PRKN) -> deg(p(HGNC:TRAF6))
+deg(p(HGNC:TRAF2)) -| bp(GO:"inflammatory response")
+deg(p(HGNC:TRAF6)) -| bp(GO:"inflammatory response")
+p(HGNC:PRKN) -| act(complex(GO:"NF-kappaB complex"))
+p(HGNC:PRKN) -| bp(GO:"JNK cascade")
+
+SET Support = "Several studies have suggested that wild type PINK1 inhibits peripheral inflammation [92], and both PINK1 and Parkin repress mitochondrial antigen presentation thereby preventing adaptive inflammation"
+p(HGNC:PINK1)-| bp(GO:"inflammatory response")
+SET MeSHAnatomy = "Mitochondria"
+composite(p(HGNC:PRKN),p(HGNC:PINK1)) -| bp(GO:"antigen processing and presentation")
+bp(GO:"antigen processing and presentation") -> path(FIXME:"adaptive inflammation")
+UNSET MeSHAnatomy
+
+SET Support = "Accordingly, PINK1 deficiency triggers an innate immune response mediated by mitochondrial dysfunction and a dysregulation in anti-microbial defense mechanisms "
+p(HGNC:PINK1) reg bp(GO:"innate immune response")
+p(HGNC:PINK1) -> bp(HP:"Abnormality of mitochondrial metabolism")
+p(HGNC:PINK1) -> bp(GO:"antimicrobial humoral response")
+
+SET Support = "When subjected to exhaustive exercise, both PINK1- and Parkin-deficient mice trigger the pro-inflammatory cGAS-STING mediated Type-1 interferon response to foreign DNA [95•], resulting in increased serum levels of IL-6, IFN-β1, IL-12(p70), IL-13, CXCL1, CCL2 and CCL4"
+SET Species = "10090"
+composite(p(MGI:Prkn),p(MGI:Pink1)) -| sec(p(MGI:Il6))
+composite(p(MGI:Prkn),p(MGI:Pink1)) -| sec(p(MGI:Ifnb1))
+composite(p(MGI:Prkn),p(MGI:Pink1)) -| sec(p(MGI:Il12b))
+composite(p(MGI:Prkn),p(MGI:Pink1)) -| sec(p(MGI:Il13))
+composite(p(MGI:Prkn),p(MGI:Pink1)) -| sec(p(MGI:Cxcl1))
+composite(p(MGI:Prkn),p(MGI:Pink1)) -| sec(p(MGI:Ccl2))
+composite(p(MGI:Prkn),p(MGI:Pink1)) -| sec(p(MGI:Ccl4))
+composite(p(MGI:Prkn),p(MGI:Pink1)) reg bp(FIXME:"cGAS/STING signaling pathway")
+
+SET Support = "More recently, it was shown that intestinal infection/dysfunction in PINK1-KO mice and PINK1-mutant flies also leads to neuroinflammation and neurotoxicity"
+SET Mouse_Type = "Pink1-/-"
+p(MGI:Pink1) -| path(FIXME:"intestinal dysfunction")
+p(MGI:Pink1, var("?")) -> path(FIXME:"intestinal dysfunction")
+SET MeSHAnatomy = "Central Nervous System"
+p(MGI:Pink1) -| path(ADO:neuroinflammation)
+p(MGI:Pink1, var("?")) -> path(ADO:neuroinflammation)
+UNSET MeSHAnatomy
+p(MGI:Pink1) -| path(FIXME:neurotoxicity)
+p(MGI:Pink1, var("?")) -> path(FIXME:neurotoxicity)
+UNSET Mouse_Type
+UNSET Species
+
+SET Support = "The consensus is that the wild type PD proteins PINK1 and Parkin contribute to an overall inflammatory defense."
+SET Species = "9606"
+p(HGNC:PINK1) pos bp(GO:"inflammatory response")
+p(HGNC:PRKN) pos bp(GO:"inflammatory response")
+
+SET Support = "Mutations in DJ-1 cause autosomal recessive PD"
+SET Disease_Type = "autosomal recessive"
+p(HGNC:PARK7, var("?")) -> path(DO:"Parkinson's disease")
+
+SET Support = "DJ-1 has multiple neuroprotective functions, including the regulation of oxidative stress [106], but the link with inflammation is less clear."
+p(HGNC:PARK7) reg bp(MESH:"Oxidative Stress")
+UNSET Disease_Type
+UNSET Species
+
+SET Support = "In Zebrafish, overexpression of DJ-1 in astrocytes was found to upregulate HMGB1 and Cyclophilin-A [107], which have both anti-inflammatory and pro-inflammatory functions."
+SET Species = "7955"
+SET MeSHAnatomy = "Astrocytes"
+p(ZFIN:park7) -> p(ZFIN:hmgb1a)
+p(ZFIN:park7) -> p(ZFIN:hmgb1b)
+p(ZFIN:park7) -> p(ZFIN:ppiaa)
+UNSET MeSHAnatomy
+
+SET Support = "Proteomic analysis in the brain of DJ-1 knockout (KO) fish revealed downregulation of some inflammatory regulators, including the complement proteins c3a and c3b"
+SET MeSHAnatomy = "Brain"
+SET Zebrafish_Type = "park7-/-"
+p(ZFIN:park7) -> p(ZFIN:"c3a.1")
+p(ZFIN:park7) -> p(ZFIN:"c3a.2")
+p(ZFIN:park7) -> p(ZFIN:"c3a.3")
+p(ZFIN:park7) -> p(ZFIN:"c3a.4")
+p(ZFIN:park7) -> p(ZFIN:"c3a.5")
+p(ZFIN:park7) -> p(ZFIN:"c3a.6")
+p(ZFIN:park7) -> p(ZFIN:"c3b.1")
+p(ZFIN:park7) -> p(ZFIN:"c3b.2")
+UNSET MeSHAnatomy
+UNSET Zebrafish_Type
+UNSET Species
+
+SET Support = "RNA sequencing analysis in the midbrain of DJ-1 KO mice also allowed to identify several genes potentially involved in neuroinflammation (e.g. Parp-1, Mmp8, Hmgn1, IL-1, Nfkbid), most of which were significantly upregulated[109•]"
+SET Species = "10090"
+SET Mouse_Type = "Park7-/-"
+SET Technique = "RNA sequencing"
+SET MeSHAnatomy = "Mesencephalon"
+p(MGI:Park7) -| r(MGI:Parp1)
+p(MGI:Park7) -| r(MGI:Mmp8)
+p(MGI:Park7) -| r(MGI:Hmgn1)
+p(MGI:Park7) -| r(MGI:Il1a)
+p(MGI:Park7) -| r(MGI:Nfkbid)
+UNSET MeSHAnatomy
+UNSET Mouse_Type
+UNSET Species
+
+SET Support = "Recently, DJ-1 was shown to suppress NFkB signaling by directly interacting with its p65 subunit [110] and to mitigate inflammation mediated by the STING pathway"
+complex(p(MGI:Rela),p(MGI:Park7)) -| act(complex(GO:"NF-kappaB complex"))
+complex(p(MGI:Rela),p(MGI:Park7)) reg bp(GO:"inflammatory response")
+complex(p(MGI:Rela),p(MGI:Park7)) reg bp(FIXME:"cGAS/STING signaling pathway")
+
+SET Support = "In particular, DJ-1 KO mice display a significant increase in Rikenella and Alistipes, accompanied by higher levels of malonate in stool and serum, and elevated expression of fecal inflammatory proteins calprotectin and MCP-1."
+SET Species = "10090"
+SET Mouse_Type = "Park7-/-"
+p(MGI:Park7) -| a(TAX:Rikenellaceae)
+p(MGI:Park7) -| a(TAX:Alistipes)
+SET Specimen = {"Feces", "Serum"}
+p(MGI:Park7) -| a(CHEBI:"malonate(2-)")
+UNSET Specimen
+SET Specimen = "Feces"
+p(MGI:Park7) -| complex(p(HGNC:S100A8),p(HGNC:S100A9))
+p(MGI:Park7) -| p(MGI:Ccl2)
+UNSET Specimen
+UNSET Mouse_Type
+UNSET Species
+
+SET Support = "Biallelic homozygous and compound heterozygous mutations in the GBA gene are known to cause Gaucher Disease, whereas individuals with heterozygous GBA mutations have a risk to develop PD which is 5 to 20 times higher compared to non-carriers"
+SET Species = "9606"
+p(HGNC:GBA,var("?")) -> path(DO:"Gaucher's disease")
+p(HGNC:GBA,var("?")) pos path(DO:"Parkinson's disease")
+
+SET Support = "Knocking down GBA leads to α-syn aggregation, which in turn further impinges on GCase activity"
+SET Gene_Type = "GBA-/-"
+act(p(HGNC:GBA)) neg path(FIXME:"alpha-synuclein aggregation")
+path(FIXME:"alpha-synuclein aggregation") reg act(p(HGNC:GBA), ma(GO:"glucosylceramidase activity"))
+UNSET Gene_Type
+UNSET Species
+
+SET Support = "In contrast, specific inhibition of GCase in mice resulted in α-syn neuropathology and inflammation, as revealed by elevated GFAP levels that are indicative of astrogliosis"
+SET Species = "10090"
+a(MESH:Glucosylceramidase) -| path(DO:synucleinopathy)
+a(MESH:Glucosylceramidase) -| bp(GO:"inflammatory response")
+SET MeSHAnatomy = "Astrocytes"
+a(MESH:Glucosylceramidase) -| p(MGI:Gfap)
+p(MGI:Gfap) neg path(MESH:Gliosis)
+UNSET MeSHAnatomy
+UNSET Species
+
+SET Support = "Based on recent studies, the cell-to-cell spreading of α-syn aggregates, and in particular the fibrillar forms of α-syn, can trigger an inflammatory response that contributes to PD progression [68, 119]."
+SET Species = "9606"
+SET Protein_Type = "fibril"
+path(FIXME:"alpha-synuclein fibrillation") -> bp(GO:"inflammatory response")
+path(FIXME:"alpha-synuclein fibrillation") reg path(DO:"Parkinson's disease")
+
+
+SET Support = "In fact, α-syn fibrils are able to induce the TLR2-NFkB signaling pathway in glial cells, resulting in microglia activation and release of proinflammatory cytokines [119, 120]."
+SET MeSHAnatomy = "Neuroglia"
+path(FIXME:"alpha-synuclein fibrillation") -> bp(GO:"I-kappaB kinase/NF-kappaB signaling")
+bp(GO:"I-kappaB kinase/NF-kappaB signaling") -> bp(GO:"microglial cell activation")
+bp(GO:"I-kappaB kinase/NF-kappaB signaling") -> sec(a(MESH:Cytokines))
+UNSET Protein_Type
+
+SET Support = "The authors also demonstrated that, upon α-syn exposure, the number of intercellular microglial connections (i.e. tunneling nanotubes and gap junctions) dramatically increased, and this was accompanied by efficient transfer of α-syn aggregates from donor to acceptor cells [125•]."
+p(HGNC:SNCA) -> a(GO:"gap junction")
+p(HGNC:SNCA) -> a(GO:cytoneme)
+UNSET Species
+
+SET Support = "LRRK2 mutation impairs this 'double-rescue' strategy, as demonstrated by less efficient redistribution of α-syn between microglial cells from LRRK2 G2019S mice, thereby amplifying neuroinflammation [125•]."
+SET Species = "10090"
+p(MGI:Lrrk2, var("p.Gly2019Ser")) -| bp(FIXME:"alpha-synuclein redistribution")
+p(MGI:Lrrk2, var("p.Gly2019Ser")) -> bp(GO:"inflammatory response") 
+UNSET Species
+
+SET Support = "Damaged or dysfunctional mitochondria are the main source of damage-associated molecular patterns (DAMPs), which play additional functions outside the organelle and are recognized by the immune system in a similar way to PAMPs (see above).They often stimulate an inflammatory response and any necessary regeneration."
+SET Species = "9606"
+a(MESH:Alarmins) -> bp(GO:"inflammatory response") 
+
+SET Support = "Mitochondrial DAMPs induce cytotoxicity, and cells have been shown to use the secretion of harmful molecules via EVs for cell homeostasis."
+SET MeSHAnatomy = "Mitochondria"
+a(MESH:Alarmins) -> bp( MESH:"Cytotoxicity, Immunologic")
+UNSET MeSHAnatomy
+
+SET Support = "Cytoplasmic release of damaged mitochondria DNA (mtDNA) is an important DAMP that initiates multiple inflammatory pathways, including STING, NLRP3 inflammasome and NFKB signaling [133]."
+tloc(a(GO:"mitochondrial chromosome"), fromLoc(FIXME:"damaged mitochondria"), toLoc(GO:cytosol)) -> bp(FIXME:"cGAS/STING signaling pathway")
+tloc(a(GO:"mitochondrial chromosome"), fromLoc(FIXME:"damaged mitochondria"), toLoc(GO:cytosol)) -> complex(GO:"NLRP3 inflammasome complex")
+tloc(a(GO:"mitochondrial chromosome"), fromLoc(FIXME:"damaged mitochondria"), toLoc(GO:cytosol)) -> act(complex(GO:"NF-kappaB complex"))
+
+SET Support = "Early findings mainly looked at cytokines and other inflammatory markers in the cerebral spinal fluid (CSF) of PD patients, revealing increased levels of IL-1β and IL-6 [135, 136]"
+SET MeSHAnatomy = "Cerebrospinal Fluid"
+path(DO:"Parkinson's disease") pos p(HGNC:IL1B)
+path(DO:"Parkinson's disease") pos p(HGNC:IL6)
+UNSET MeSHAnatomy
+
+SET Support = "Based on growing evidence including the pioneering studies showing reactive microglia in the SN of PD patients [48], it has now been accepted that chronic inflammation in the basal ganglia of PD brains can contribute to the progressive loss of dopaminergic neurons."
+SET MeSHAnatomy = "Basal Ganglia"
+path(HP:"chronic inflammation") -| a(MESH:"Dopaminergic Neurons")
+UNSET MeSHAnatomy
+
+SET Support = "Despite the early findings, few studies have convincingly shown increased inflammation in sporadic PD patients compared to healthy individuals [14, 139–141], and no inflammatory blood marker has been recommended as a potential biomarker for PD."
+SET Disease_Type = "sporadic"
+path(DO:"Parkinson's disease") -> bp(GO:"inflammatory response") 
+UNSET Disease_Type
+
+SET Support = "So far, the most reliable biomarkers are limited to IL-1β and NLRP3 levels in genetic PD models."
+p(HGNC:IL1B) biomarkerFor path(DO:"Parkinson's disease")
+p(HGNC:NLRP3) biomarkerFor path(DO:"Parkinson's disease")
+
+SET Support = "Another study observed a defective meningeal lymphatic drainage in sporadic PD patients [144], known to impair clearance of toxic CSF waste from the brain leading to an aggravated inflammatory response [145]."
+path(DO:"Parkinson's disease") neg bp(FIXME:"meningeal lymphatic drainage")
+path(DO:"Parkinson's disease") pos bp(GO:"inflammatory response") 
+
+SET Support = "Increased plasma levels of IL-8, MCP-1, MIP-1-a, IL-1β and TNFα were shown to be associated with GBA-PD compared to sporadic PD [146, 147]."
+SET MeSHDisease = "Parkinson Disease"
+SET Specimen = "Plasma"
+p(HGNC:GBA,var("?")) -> p(HGNC:CXCL8)
+p(HGNC:GBA,var("?")) -> p(HGNC:CCL2)
+p(HGNC:GBA,var("?")) -> p(HGNC:CCL3)
+p(HGNC:GBA,var("?")) -> p(HGNC:IL1B)
+p(HGNC:GBA,var("?")) -> p(HGNC:TNF)
+UNSET Specimen
+UNSET MeSHDisease
+
+SET Support = "In a separate study, GBA mutation carriers without PD were found to have increased microglial activation compared to age matched healthy controls, suggesting that inflammation could be an early event."
+p(HGNC:GBA, var("?")) -> bp(GO:"microglial cell activation")
+
+SET Support = "Plasma levels of ferritin, CCL18 and MIP1a were increased in PD patients with biallelic GBA mutations."
+SET MeSHDisease = "Parkinson Disease"
+SET Specimen = "Plasma"
+p(HGNC:GBA, var("?")) -> a(CHEBI:Ferritin)
+p(HGNC:GBA, var("?")) -> p(HGNC:CCL18)
+p(HGNC:GBA, var("?")) -> p(HGNC:CCL3)
+UNSET Specimen
+
+SET Support = "Serum of PD patients with biallelic PINK1 and Parkin mutations have high levels of IL-6 [24•, 96]."
+SET Specimen = "Serum"
+p(HGNC:PINK1, var("?")) -> p(HGNC:IL6)
+p(HGNC:PRKN, var("?")) -> p(HGNC:IL6)
+UNSET Specimen 
+
+SET Support = "Increased circulating cell free levels of mtDNA (discussed as an inflammation trigger) were also observed in PD patients with PINK1 mutations."
+p(HGNC:PINK1, var("?")) pos a(GO:"mitochondrial chromosome")
+
+SET Support = "The study describes IL-6 as a PD state marker and circulating cell free mtDNA as a PD progression marker [24•]."
+p(HGNC:IL6)  biomarkerFor path(DO:"Parkinson's disease")
+a(GO:"mitochondrial chromosome", loc(MESH:Serum)) biomarkerFor path(DO:"Parkinson's disease")
+
+SET Support = "Studies in the serum and cerebral spinal fluid (CSF) of asymptomatic LRRK2 mutation carriers, showing increased levels of IL-1β, PDGF, VEGF and IL-8 compared to healthy controls, have suggested these molecules as pre-clinical markers of PD onset and development [150]."
+SET Specimen = {"Serum", "Cerebrospinal Fluid"}
+p(HGNC:LRRK2, var("?")) -> p(HGNC:IL1B)
+p(HGNC:LRRK2, var("?")) -> p(PFAM:PDGF)
+p(HGNC:LRRK2, var("?")) -> p(HGNC:VEGFA)
+p(HGNC:LRRK2, var("?")) -> p(HGNC:CXCL8)
+UNSET Specimen
+
+SET Support = "Interestingly, LRRK2 expression was upregulated in B cells, T cells and CD16 monocytes from sporadic PD patients compared to healthy controls [152], highlighting cell type specificity as an important factor in biomarker studies."
+SET MeSHAnatomy = {"B-Lymphocytes","T-Lymphocytes","Monocytes"}
+path(DO:"Parkinson's disease") pos p(HGNC:LRRK2)
+UNSET MeSHAnatomy
+
+SET Support = "It was shown that regular intake of nonsteroidal anti-inflammatory drugs (NSAID) was associated with a reduced risk for PD [153]."
+a(CHEBI:"non-steroidal anti-inflammatory drug") -| path(DO:"Parkinson's disease") 
+
+SET Support = "Therefore, it was speculated that the same LRRK2 gene that is also associated with inflammatory bowel disease [154] may modulate inflammatory pathways related to neurodegeneration."
+p(HGNC:LRRK2) association path(DO:"inflammatory bowel disease")
+
+SET Support = "Here, it was shown that the penetrance of PD-linked LRRK2 mutations was reduced based on NSAID treatment [155]. "
+p(HGNC:LRRK2, var("?")) pos a(CHEBI:"non-steroidal anti-inflammatory drug")
+UNSET Species
+UNSET PublicationType
+UNSET PublicationStatus
+UNSET Section
+UNSET Citation
