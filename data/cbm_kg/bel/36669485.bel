@@ -114,7 +114,7 @@ path(DO:pneumonia) -- path(DO:dementia)
 path(DO:pneumonia) -- path(DO:"Parkinson's disease")
 path(DO:pneumonia) -- path(DO:"vascular dementia")
 
-SET Support = "Viral encephalitis and viral and other specified intestinal infections were significant and replicated for both AD and dementia; the varicella-zoster virus
+SET Support = "Viral encephalitis and viral and other specified intestinal infections were significant and replicated for both AD and dementia; the varicella-zoster virus \
 was significant and replicated for both MS and VAS (as a note, varicella-zoster virus is referred to as Zoster [herpes zoster] in the FinnGen and UKB coding system)."
 path(DO:"viral encephalitis") -- path(DO:"amyotrophic lateral sclerosis")
 path(DO:"viral encephalitis") -- path(DO:dementia) 

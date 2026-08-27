@@ -1,75 +1,15 @@
-import fieldz_kb.lpg.core
-import momapy.celldesigner
-
-
-def prewarm_session(session):
-    """Ensure pylpg node classes exist for every momapy type that may appear
-    in saved CellDesigner maps (model elements, layout elements, glyphs,
-    shapes, drawing primitives). Required before hydrating query results,
-    because the session only registers node classes for types it has saved
-    or for types reachable via static type hints — concrete subclasses are
-    missed by the static walk.
-    """
-    import momapy.core.elements
-    import momapy.core.layout
-    import momapy.core.model
-    import momapy.drawing
-    import momapy.geometry
-    import momapy.coloring
-
-    ctx = session._context
-    fieldz_kb.lpg.core.get_or_make_node_class_from_type(
-        ctx, momapy.celldesigner.CellDesignerMap
-    )
-
-    def _all_subclasses(cls):
-        seen = set()
-        stack = [cls]
-        while stack:
-            current = stack.pop()
-            for sub in current.__subclasses__():
-                if sub not in seen:
-                    seen.add(sub)
-                    stack.append(sub)
-        return seen
-
-    bases = []
-    for module in (
-        momapy.core.elements,
-        momapy.core.layout,
-        momapy.core.model,
-        momapy.drawing,
-        momapy.geometry,
-        momapy.coloring,
-    ):
-        for attr in vars(module).values():
-            if isinstance(attr, type):
-                bases.append(attr)
-
-    for base in bases:
-        try:
-            fieldz_kb.lpg.core.get_or_make_node_class_from_type(ctx, base)
-        except Exception:
-            pass
-        for cls in _all_subclasses(base):
-            try:
-                fieldz_kb.lpg.core.get_or_make_node_class_from_type(ctx, cls)
-            except Exception:
-                pass
-
-
 def get_collections_for_nodes(session, nodes):
     """Return {node: set[collection_name]} for each input node.
 
-    Uses the HAS_MODEL_ELEMENT membership edge emitted when collections are
-    saved with `with_membership_edges=True`.
+    Uses the HAS_MEMBER_MODEL_ELEMENT membership edge emitted when
+    collections are saved with `with_membership_edges=True`.
     """
     element_ids = [n.element_id for n in nodes]
     query = """
         UNWIND $eids AS eid
         MATCH (n) WHERE elementId(n) = eid
         OPTIONAL MATCH
-            (n)<-[:HAS_MODEL_ELEMENT]-(model)<-[:HAS_MODEL]-(:CellDesignerMap)
+            (n)<-[:HAS_MEMBER_MODEL_ELEMENT]-(model)<-[:HAS_MODEL]-(:CellDesignerMap)
                 <-[:HAS_OBJ]-(:CollectionEntry)<-[:HAS_ENTRY]-(c:Collection)
         RETURN n AS node, collect(DISTINCT c.name) AS collections
     """

@@ -22,6 +22,14 @@ The structural `HAS__*` edges (and the derived `HAS_MODIFIED_PROTEIN`,
 `HAS_VARIANT_PROTEIN`, `HAS_LOCATED_*`, `HAS_FRAGMENTED_PROTEIN` ones) are
 dropped: they are pybel's reification of what the `bel` strings already say,
 and emitting them would invent statements the document never made.
+
+A term is a sub-term when another term points **at** it through a double
+underscore `HAS__*` edge -- a complex member, an activity's subject, a `pmod()`.
+It is not one because it *has* sub-terms of its own, which is what a complex
+always does. The derived single-underscore edges run the other way, from a
+protein to its own proteoform (`p(APP) -> p(APP,frag("672_711"))`), and a
+proteoform is a term in its own right, so they do not make one a sub-term
+either.
 """
 
 import collections
@@ -36,7 +44,7 @@ import neo4j
 
 COLLECTION_NAME = "COVID_KG_BEL"
 CURATED_BEL_DIR = pathlib.Path("data/covid_kg/bel")
-OUTPUT_FILE_PATH = pathlib.Path("build/maps/covid_kg/bel/covid_kg.bel")
+OUTPUT_FILE_PATH = pathlib.Path("data/covid_kg/bel/covid_kg.bel")
 
 DOCUMENT_VALUES = [
     ("Name", "COVID-19 Knowledge Graph"),
@@ -110,6 +118,8 @@ def get_definitions_from_curated_files(directory):
     """
     kind_and_name_to_values = collections.defaultdict(collections.Counter)
     for file_path in sorted(directory.glob("*.bel")):
+        if file_path.resolve() == OUTPUT_FILE_PATH.resolve():
+            continue
         with open(file_path, encoding="utf-8") as f:
             for line in f:
                 match = _DEFINE_PATTERN.match(line.strip())
@@ -126,7 +136,12 @@ def get_definitions_from_curated_files(directory):
 
 
 def get_statements_and_isolated_nodes(session, collection_name):
-    """Return the statement edges and the nodes carrying none of them."""
+    """Return the statement edges and the top-level terms carrying none of them.
+
+    A term with no statement edge is written as a bare term line, so that the
+    document keeps the isolated nodes a triple-shaped export cannot carry. Its
+    own sub-terms are not written: reading the line rebuilds them.
+    """
     query = """
         MATCH (:Collection {name: $collection_name})-[:HAS_ENTRY]->()
               -[:HAS_OBJ]->(:BELModel)-[:HAS_NODE]->(source)-[relation]->(target)
@@ -148,8 +163,8 @@ def get_statements_and_isolated_nodes(session, collection_name):
             WHERE type(relation) IN $relation_types
         }
         AND NOT EXISTS {
-            MATCH (node)-[relation]-()
-            WHERE type(relation) STARTS WITH 'HAS_' AND type(relation) <> 'HAS_NODE'
+            MATCH ()-[relation]->(node)
+            WHERE type(relation) STARTS WITH 'HAS__'
         }
         RETURN DISTINCT node.bel AS bel
     """
@@ -290,12 +305,17 @@ def make_bel_document(statements, isolated_bels, definitions):
         citation_type, citation_ref = citation
         output_lines.append("")
         output_lines.append(make_set_string("Citation", [citation_type, citation_ref]))
+        # The evidence is part of the key: two statements can share endpoints
+        # and relation, and without it their order follows the database's row
+        # order, which differs from one run to the next.
         for statement in sorted(
             citation_to_statements[citation],
             key=lambda statement: (
                 statement["source"],
                 statement["relation_type"],
                 statement["target"],
+                str(statement["properties"].get("evidence", "")),
+                sorted(str(item) for item in statement["properties"].items()),
             ),
         ):
             properties = statement["properties"]

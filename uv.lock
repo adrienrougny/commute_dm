@@ -879,14 +879,14 @@ requires-dist = [
     { name = "clorm", marker = "extra == 'clingo'", specifier = ">=1.6.1" },
     { name = "fieldz", specifier = ">=0.1.2" },
     { name = "inflect", specifier = ">=7.5.0" },
-    { name = "pylpg", marker = "extra == 'all'", specifier = ">=0.2.4" },
-    { name = "pylpg", marker = "extra == 'biocypher'", specifier = ">=0.2.4" },
-    { name = "pylpg", extras = ["falkordb"], marker = "extra == 'all'", specifier = ">=0.2.4" },
-    { name = "pylpg", extras = ["falkordb"], marker = "extra == 'falkordb'", specifier = ">=0.2.4" },
-    { name = "pylpg", extras = ["falkordblite"], marker = "extra == 'all'", specifier = ">=0.2.4" },
-    { name = "pylpg", extras = ["falkordblite"], marker = "extra == 'falkordblite'", specifier = ">=0.2.4" },
-    { name = "pylpg", extras = ["neo4j"], marker = "extra == 'all'", specifier = ">=0.2.4" },
-    { name = "pylpg", extras = ["neo4j"], marker = "extra == 'neo4j'", specifier = ">=0.2.4" },
+    { name = "pylpg", marker = "extra == 'all'", specifier = ">=0.3.0" },
+    { name = "pylpg", marker = "extra == 'biocypher'", specifier = ">=0.3.0" },
+    { name = "pylpg", extras = ["falkordb"], marker = "extra == 'all'", specifier = ">=0.3.0" },
+    { name = "pylpg", extras = ["falkordb"], marker = "extra == 'falkordb'", specifier = ">=0.3.0" },
+    { name = "pylpg", extras = ["falkordblite"], marker = "extra == 'all'", specifier = ">=0.3.0" },
+    { name = "pylpg", extras = ["falkordblite"], marker = "extra == 'falkordblite'", specifier = ">=0.3.0" },
+    { name = "pylpg", extras = ["neo4j"], marker = "extra == 'all'", specifier = ">=0.3.0" },
+    { name = "pylpg", extras = ["neo4j"], marker = "extra == 'neo4j'", specifier = ">=0.3.0" },
     { name = "pyyaml", marker = "extra == 'all'", specifier = ">=6.0" },
     { name = "pyyaml", marker = "extra == 'biocypher'", specifier = ">=6.0" },
 ]
@@ -897,7 +897,7 @@ dev = [
     { name = "clorm", specifier = ">=1.6.1" },
     { name = "falkordblite", marker = "python_full_version >= '3.12'", specifier = ">=0.1" },
     { name = "pre-commit", specifier = ">=4.0" },
-    { name = "pylpg", extras = ["neo4j", "falkordb"], specifier = ">=0.2.4" },
+    { name = "pylpg", extras = ["neo4j", "falkordb"], specifier = ">=0.3.0" },
     { name = "pytest", specifier = ">=9.0.2" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "ruff", specifier = ">=0.12.8" },
@@ -906,7 +906,7 @@ dev = [
 test = [
     { name = "clorm", specifier = ">=1.6.1" },
     { name = "falkordblite", marker = "python_full_version >= '3.12'", specifier = ">=0.1" },
-    { name = "pylpg", extras = ["neo4j", "falkordb"], specifier = ">=0.2.4" },
+    { name = "pylpg", extras = ["neo4j", "falkordb"], specifier = ">=0.3.0" },
     { name = "pytest", specifier = ">=9.0.2" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "testcontainers", extras = ["neo4j"], specifier = ">=4.0" },
@@ -2023,14 +2023,8 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [
-    { name = "pytest", specifier = ">=8.0" },
-    { name = "pyyaml", specifier = ">=6.0.3" },
-]
-test = [
-    { name = "pytest", specifier = ">=8.0" },
-    { name = "pyyaml", specifier = ">=6.0.3" },
-]
+dev = [{ name = "pytest", specifier = ">=8.0" }]
+test = [{ name = "pytest", specifier = ">=8.0" }]
 
 [[package]]
 name = "momapy-kb"
@@ -2054,7 +2048,7 @@ neo4j = [
 [package.metadata]
 requires-dist = [
     { name = "colorama", specifier = ">=0.4.6" },
-    { name = "fieldz-kb", specifier = ">=0.4.0" },
+    { name = "fieldz-kb", specifier = ">=0.4.1" },
     { name = "fieldz-kb", extras = ["clingo"], marker = "extra == 'all'" },
     { name = "fieldz-kb", extras = ["clingo"], marker = "extra == 'clingo'" },
     { name = "fieldz-kb", extras = ["falkordb"], marker = "extra == 'all'" },

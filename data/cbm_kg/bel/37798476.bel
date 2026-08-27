@@ -134,13 +134,13 @@ SET Support = "Although the exact link between viral infections and ARDS is not 
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"induction by virus of host cell-cell fusion")
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases a(CELL:"type II pneumocyte")
 
-SET Support = "Besides DAD, acute and fibrinous organizing pneumonia (AFOP) 
-has been reported as a rare condition in patients with COVID-19 and is 
+SET Support = "Besides DAD, acute and fibrinous organizing pneumonia (AFOP) \
+has been reported as a rare condition in patients with COVID-19 and is \
 associated with poor prognosis."
 path(DO:"COVID-19") increases path(FIXME:"acute and fibrinous organizing pneumonia")
 path(DO:"COVID-19") increases path(FIXME:"diffuse alveolar damage")
 
-SET Support = " AFOP may represent a form of lung injury distinct from typical ARDS. It may be related to microvascular injury and inflammation, and it is associated with a hypercoagulable state and microvascular thrombosis in the 
+SET Support = " AFOP may represent a form of lung injury distinct from typical ARDS. It may be related to microvascular injury and inflammation, and it is associated with a hypercoagulable state and microvascular thrombosis in the \
 lungs."
 path(FIXME:"acute and fibrinous organizing pneumonia") increases path(HP:Hypercoagulability)
 UNSET MeSHAnatomy
@@ -161,7 +161,7 @@ path(DO:"COVID-19") decreases a(CELL:"type I pneumocyte")
 path(DO:"COVID-19") decreases a(CELL:"type II pneumocyte")
 path(DO:"COVID-19") increases bp(GO:"macrophage activation")
 
-SET Support = "Independent studies have shown that SARS-CoV-2 can infect blood monocytes through an antibody-opsonized virus, which in turn may lead to inflammasome 
+SET Support = "Independent studies have shown that SARS-CoV-2 can infect blood monocytes through an antibody-opsonized virus, which in turn may lead to inflammasome \
 activation and systemic inflammation."
 SET MeSHAnatomy = "Blood"
 SET Cell = "monocyte"
@@ -207,7 +207,7 @@ SET MeSHAnatomy = {"Veins", "Arteries"}
 path(DO:"COVID-19")increases a(FIXME:microthrombi)
 UNSET MeSHAnatomy
 
-SET Support = "Investigating viral tropism using autopsies revealed high viral copy 
+SET Support = "Investigating viral tropism using autopsies revealed high viral copy \
 numbers in the lung compared to relatively low copy numbers in all other organs examined."
 SET MeSHAnatomy = "Lung"
 path(DO:"COVID-19")increases bp(GO:"viral genome replication")
@@ -246,8 +246,8 @@ a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases path(HP:"cell
 p(HGNC:ACE2) regulates path(HP:"cell and tissue damage")
 UNSET Specimen
 
-SET Support = "About 30% of patients with COVID-19, including those with mild 
-disease, display neurological symptoms such as an altered mental 
+SET Support = "About 30% of patients with COVID-19, including those with mild \
+disease, display neurological symptoms such as an altered mental \
 status, dizziness and headache, and, in rare cases, brain ischaemia."
 path(DO:"COVID-19") increases path(MESH:"Mental Disorders")
 path(DO:"COVID-19") increases path(MESH:Dizziness)
@@ -273,7 +273,7 @@ path(DO:"Lassa fever") increases path(MESH:"Acute Kidney Injury")
 path(DO:"Lassa fever") increases a(NCIT:"Neurological Signs and Symptoms")
 path(DO:"Lassa fever") increases path(MESH:Hemorrhage)
 
-SET Support = "Moreover, and in analogy to long COVID, it has been noted that survivors of acute Ebola virus infection suffer from a range of long-term sequelae, including an increased risk of intermediate-term death and increased prevalence 
+SET Support = "Moreover, and in analogy to long COVID, it has been noted that survivors of acute Ebola virus infection suffer from a range of long-term sequelae, including an increased risk of intermediate-term death and increased prevalence \
 of renal dysfunction."
 path(DO:"Ebola hemorrhagic fever") increases path(MESH:Death)
 path(DO:"Ebola hemorrhagic fever") increases path(HP:"Abnormal renal physiology")

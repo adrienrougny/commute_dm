@@ -1,10 +1,11 @@
 """`momapy_bel` elements as real activity-flow CellDesigner content.
 
-`commute_dm.bel_export` loads a BEL knowledge graph's influence-graph projection
-as a `momapy_bel.core.BELModel`. This module is the half that knows what a BEL
+`commute_dm.bel_projection` keeps of a BEL model its influence-graph
+projection, as a `momapy_bel.core.BELModel`. This module knows what a BEL
 *element* is worth in CellDesigner: it describes each element in CellDesigner
-vocabulary and builds the frozen momapy species and glyphs. `bel_export` imports
-`bel2cd`, never the reverse.
+vocabulary, builds the frozen momapy species and glyphs, and assembles them
+into a `CellDesignerMap` with its HGNC annotations. `bel2cd` imports
+`bel_projection`, never the reverse.
 
 Everything is read off the elements' fields -- `modifications`, `variants`,
 `fragment`, `location`, `members`, `abundance` -- so nothing here parses a BEL
@@ -56,7 +57,8 @@ whose `id()` is in that index. `ProteinAbundance("APP")` is both a projected
 element and a member of several complexes, so memoising species by element --
 the obvious way to get value-collapse -- would make APP's own glyph disappear.
 :func:`make_species` therefore always builds a **fresh object tree**; interning
-happens only at the top level, in `bel_export`.
+happens only at the top level, in
+:func:`make_cd_map_from_bel_influence_graph_projection`.
 
 This one is an **in-memory property of the export only, and does not survive the
 save**: a top-level `p(X)` and the same `p(X)` inside a complex are value-equal,
@@ -80,6 +82,8 @@ one `outside=default`, so they can never be value-equal and neither can the
 species inside them.
 """
 
+import collections
+import csv
 import dataclasses
 import math
 import re
@@ -87,11 +91,15 @@ import re
 import momapy.celldesigner
 import momapy.coloring
 import momapy.core.layout
+import momapy.core.mapping
 import momapy.drawing
 import momapy.geometry
+import momapy.sbml.model
 import momapy_bel.core
 import pd2af.celldesigner.building_layout
+import pd2af.celldesigner.building_model
 
+import commute_dm.bel_projection
 import commute_dm.submaps
 
 
@@ -182,17 +190,24 @@ TEMPLATE_RESIDUE_FIELDS = {
     ),
 }
 
-# A BEL `pmod` type code to the CellDesigner state its badge shows. A
+# A BEL `pmod` code, as written in the BEL file, to the CellDesigner state its
+# badge shows. The codes are the abbreviations of BEL's default `pmod`
+# namespace, and only those with a CellDesigner state are here. A
 # `ProteinModification` with a namespace is an ontology pmod
 # (`pmod(GO:"protein oxidation")`), which names a process rather than a residue
 # state and becomes a structural state.
 PMOD_TYPE_TO_MODIFICATION_STATE = {
-    "pho": momapy.celldesigner.ModificationState.PHOSPHORYLATED,
-    "ubi": momapy.celldesigner.ModificationState.UBIQUITINATED,
-    "ace": momapy.celldesigner.ModificationState.ACETYLATED,
-    "me0": momapy.celldesigner.ModificationState.METHYLATED,
-    "gly": momapy.celldesigner.ModificationState.GLYCOSYLATED,
-    "ogl": momapy.celldesigner.ModificationState.GLYCOSYLATED,
+    "Ph": momapy.celldesigner.ModificationState.PHOSPHORYLATED,
+    "Ac": momapy.celldesigner.ModificationState.ACETYLATED,
+    "Ub": momapy.celldesigner.ModificationState.UBIQUITINATED,
+    "Me": momapy.celldesigner.ModificationState.METHYLATED,
+    "Hy": momapy.celldesigner.ModificationState.HYDROXYLATED,
+    "Glyco": momapy.celldesigner.ModificationState.GLYCOSYLATED,
+    "NGlyco": momapy.celldesigner.ModificationState.GLYCOSYLATED,
+    "OGlyco": momapy.celldesigner.ModificationState.GLYCOSYLATED,
+    "Myr": momapy.celldesigner.ModificationState.MYRISTOYLATED,
+    "Palm": momapy.celldesigner.ModificationState.PALMITOYLATED,
+    "Sulf": momapy.celldesigner.ModificationState.SULFATED,
 }
 
 # A BEL1 modification code, as written inside a `var()`, to the CellDesigner
@@ -418,6 +433,7 @@ def _read_species_fields(element, species_fields, active_abundances):
     modifiers = [
         _read_protein_modification(protein_modification)
         for protein_modification in getattr(element, "modifications", ())
+        if isinstance(protein_modification, momapy_bel.core.ProteinModification)
     ] + [_read_variant(variant) for variant in getattr(element, "variants", ())]
     residue_states = []
     structural_states = []
@@ -594,7 +610,8 @@ def make_species(
     element -- the obvious way to get value-collapse -- would make the own glyph
     of every protein that is also a complex member disappear, and reroute every
     modulation targeting it to the enclosing complex. Interning happens only at
-    the top level, on the finished object, in `commute_dm.bel_export`.
+    the top level, on the finished object, in
+    :func:`make_cd_map_from_bel_influence_graph_projection`.
 
     A subunit keeps no compartment: CellDesigner puts an included species inside
     its complex, not inside a compartment box, and only top-level species
@@ -973,3 +990,255 @@ def make_compartment_layout(compartment):
         height=1.0,
         label=label,
     )
+
+
+# ---------------------------------------------------------------------------
+# the map
+# ---------------------------------------------------------------------------
+
+# The causal relations, as the CellDesigner modulations they are drawn as.
+# `Regulates` carries no sign and becomes CellDesigner's unsigned `Modulation`.
+# The sub-map walk of `commute_dm.submaps` reads signed modulations only, so
+# these arcs appear on this map and never on a sub-map.
+BEL_RELATION_CLASS_TO_MODULATION_CLASS = {
+    momapy_bel.core.Increases: momapy.celldesigner.PositiveInfluence,
+    momapy_bel.core.DirectlyIncreases: momapy.celldesigner.PositiveInfluence,
+    momapy_bel.core.TranslatedTo: momapy.celldesigner.PositiveInfluence,
+    momapy_bel.core.Decreases: momapy.celldesigner.NegativeInfluence,
+    momapy_bel.core.DirectlyDecreases: momapy.celldesigner.NegativeInfluence,
+    momapy_bel.core.Regulates: momapy.celldesigner.Modulation,
+}
+
+# The namespaces written as annotations, and the HGNC dataset column each is
+# read from. `uniprot` is what the interface joins collections on, `ncbigene`
+# what GOAT matches and `hgnc.symbol` what the intersection matches.
+HGNC_ANNOTATION_NAMESPACE_TO_COLUMN = {
+    "hgnc.symbol": "symbol",
+    "hgnc": "hgnc_id",
+    "uniprot": "uniprot_ids",
+    "ncbigene": "entrez_id",
+}
+
+
+def make_hgnc_symbol_to_annotations(hgnc_file_path):
+    """`{HGNC symbol: frozenset[RDFAnnotation]}` from the HGNC dataset.
+
+    One annotation **per identifier**, not one listing them all: the identifiers
+    are alternatives -- a symbol with two UniProt accessions means one or the
+    other -- so each carries a single resource and the `BQBiol IS` qualifier,
+    and they sit together in one bag. That is the encoding the stored
+    CellDesigner maps use for their own species.
+    """
+    symbol_to_annotations = {}
+    with open(hgnc_file_path, newline="") as f:
+        for row in csv.DictReader(f, delimiter="\t"):
+            annotations = frozenset(
+                momapy.sbml.model.RDFAnnotation(
+                    qualifier=momapy.sbml.model.BQBiol.IS,
+                    resources=frozenset([f"urn:miriam:{namespace}:{identifier}"]),
+                )
+                for namespace, column in HGNC_ANNOTATION_NAMESPACE_TO_COLUMN.items()
+                for identifier in _read_hgnc_identifiers(namespace, row[column])
+            )
+            if annotations:
+                symbol_to_annotations[row["symbol"]] = annotations
+    return symbol_to_annotations
+
+
+def _read_hgnc_identifiers(namespace, value):
+    if not value:
+        return []
+    if namespace == "hgnc":
+        return [value.split(":")[-1]]
+    return [identifier.strip() for identifier in value.split("|") if identifier.strip()]
+
+
+def make_cd_map_from_bel_influence_graph_projection(
+    projection,
+    hgnc_symbol_to_annotations,
+    root_compartment_name="BEL",
+    drop_isolated_species=True,
+):
+    """`(cd_map, element_to_annotations)` for an influence-graph projection.
+
+    The map holds exactly what `commute_dm.submaps.make_submap_from_model_elements`
+    reads out of a `source_map`: the model elements, a layout element per model
+    element, and the `LayoutModelMapping` tying them together. No arcs -- a
+    modulation the source map does not draw gets one from
+    `submaps._make_modulation_arc`.
+
+    Top-level species are **interned by value**: `act(p(X),ma(kin))` and
+    `act(p(X),ma(pep))` describe identically once the `ma()` code is dropped, as
+    do `act(p(X))` and `p(X)`, so several elements can stand for one species.
+
+    `drop_isolated_species` removes the species that carry no modulation.
+    Nothing walks or draws them, so they would stand stranded in the collection.
+    The drop happens **after** the species are interned and the modulations
+    built, so a protein isolated in its own right but wired through its activity
+    form survives. A dropped species that is a member of a kept complex still
+    appears as that complex's subunit; only its own top-level glyph goes.
+
+    The glyph positions are throwaway, as everywhere here: the caller runs
+    `pd2af.utils.make_auto_layout` on the finished sub-map, which recomputes
+    every position and segment.
+    """
+    relations = [
+        statement
+        for statement in projection.statements
+        if isinstance(
+            statement, commute_dm.bel_projection.INFLUENCE_RELATION_CLASSES
+        )
+    ]
+    # Sorted by BEL string, so a given knowledge graph always yields the same glyph
+    # order and the same `renumber_ids` numbering.
+    elements = sorted(
+        {
+            element
+            for relation in relations
+            for element in (relation.source, relation.target)
+        }
+        | {
+            statement
+            for statement in projection.statements
+            if not isinstance(
+                statement, commute_dm.bel_projection.INFLUENCE_RELATION_CLASSES
+            )
+        },
+        key=commute_dm.bel_projection.get_element_bel_string,
+    )
+    species_fields = make_species_fields(elements)
+    templates = make_templates(species_fields)
+    compartments, compartment_root = make_compartments(
+        species_fields, root_compartment_name
+    )
+    element_to_species = {}
+    interned = {}
+    species_records = []
+    for element in elements:
+        species = make_species(
+            element, species_fields, templates, compartments, record=species_records
+        )
+        element_to_species[element] = interned.setdefault(species, species)
+    distinct_species = list(dict.fromkeys(element_to_species.values()))
+
+    # The modulations first, because whether a species is isolated is a property
+    # of them.
+    modulations = []
+    for relation in relations:
+        modulation_class = BEL_RELATION_CLASS_TO_MODULATION_CLASS[type(relation)]
+        source = element_to_species[relation.source]
+        target = element_to_species[relation.target]
+        # A self-loop is drawable but says nothing, and pd2af's arc geometry needs
+        # two distinct endpoints. Interning creates species-level ones (an
+        # `act(X) -> X` relation, say) that no element-level filter could see.
+        if source is target:
+            continue
+        # One modulation per class, so a pair asserted to both increase and
+        # decrease keeps both: BEL sources disagree, and dropping one would pick a
+        # winner. `modulations` is a frozenset, so two relation classes that map to
+        # the same modulation class collapse on their own.
+        modulations.append(modulation_class(source=source, target=target))
+
+    if drop_isolated_species:
+        wired = set()
+        for modulation in modulations:
+            wired.add(id(modulation.source))
+            wired.add(id(modulation.target))
+        distinct_species = [
+            species for species in distinct_species if id(species) in wired
+        ]
+    # Only the species the map actually holds may contribute annotations, and
+    # membership is by **value**: a top-level species and a value-equal subunit
+    # share one `element_to_annotations` entry, which is exactly what the writer
+    # looks up.
+    drawn_values = set(commute_dm.submaps.iter_species_and_subunits(distinct_species))
+    # **Every** species built, subunits included, which is what the annotations
+    # need: a subunit is a per-occurrence object, and it carries interface
+    # identifiers of its own.
+    element_to_species_and_subunits = collections.defaultdict(list)
+    for element, species in species_records:
+        if species in drawn_values:
+            element_to_species_and_subunits[element].append(species)
+
+    mapping = momapy.core.mapping.LayoutModelMappingBuilder()
+    layout_elements = list(make_species_layouts(distinct_species, mapping))
+    for species, layout_element in zip(distinct_species, layout_elements):
+        mapping.add_mapping(layout_element, species)
+
+    # Only the compartments a *top-level* species sits in: a subunit carries none,
+    # and an unused `loc()` would be an empty box. The undrawn root comes along as
+    # `outside`, and gets no layout and no mapping entry -- exactly like the stored
+    # maps' `default` root, so no box is drawn for it.
+    drawn_compartments = list(
+        dict.fromkeys(
+            species.compartment
+            for species in distinct_species
+            if species.compartment is not None
+        )
+    )
+    for compartment in drawn_compartments:
+        compartment_layout = make_compartment_layout(compartment)
+        layout_elements.append(compartment_layout)
+        mapping.add_mapping(compartment_layout, compartment)
+
+    species = frozenset(distinct_species)
+    cd_map = momapy.celldesigner.CellDesignerMap(
+        model=momapy.celldesigner.CellDesignerModel(
+            compartments=frozenset(drawn_compartments + [compartment_root]),
+            species=species,
+            species_templates=frozenset(
+                pd2af.celldesigner.building_model.collect_templates_from_species(species)
+            ),
+            boolean_logic_gates=frozenset(),
+            modulations=frozenset(modulations),
+        ),
+        # This map is only ever a lookup structure, but `Node.position`, `width`
+        # and `height` have no defaults, so they have to be given.
+        layout=momapy.celldesigner.CellDesignerLayout(
+            position=momapy.geometry.Point(0.0, 0.0),
+            width=0.0,
+            height=0.0,
+            layout_elements=tuple(layout_elements),
+        ),
+        layout_model_mapping=mapping.build(),
+    )
+    element_to_annotations = _make_element_to_annotations(
+        element_to_species_and_subunits, hgnc_symbol_to_annotations
+    )
+    return cd_map, element_to_annotations
+
+
+def _make_element_to_annotations(
+    element_to_species_and_subunits, hgnc_symbol_to_annotations
+):
+    """`{species: frozenset[RDFAnnotation]}` for the exported BEL species.
+
+    An **activity's subject is followed** -- `act(p(X))` is X in another form --
+    while a **complex's members are not**, because each is drawn as its own
+    subunit species and annotated in its own right. Only HGNC-encoded protein
+    abundances are annotated: the symbol is the identifier the knowledge graph
+    itself uses, and the HGNC dataset is keyed the same way.
+
+    Accumulated **by value**. A top-level species and a value-equal subunit are
+    two objects but one key, which is what the CellDesigner writer's
+    `element_to_annotations.get(species)` looks up -- both for a `<species>` and
+    for an included species, whose RDF goes inside `<celldesigner:notes>`.
+    """
+    element_to_annotations = collections.defaultdict(set)
+    for element, species_list in element_to_species_and_subunits.items():
+        while isinstance(element, momapy_bel.core.Activity):
+            element = element.abundance
+        if (
+            type(element) is not momapy_bel.core.ProteinAbundance
+            or element.namespace != "HGNC"
+        ):
+            continue
+        annotations = hgnc_symbol_to_annotations.get(element.identifier)
+        if annotations is None:
+            continue
+        for species in species_list:
+            element_to_annotations[species] |= annotations
+    return {
+        species: frozenset(annotations)
+        for species, annotations in element_to_annotations.items()
+    }

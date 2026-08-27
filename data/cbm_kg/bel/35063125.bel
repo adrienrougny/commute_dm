@@ -105,12 +105,12 @@ a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases bp(GO:"antige
 
 SET Support = "In addition, we found that interferon-γ signaling was enhanced in COVID-19 (Figure 1F)."
 path(DO:"COVID-19") pos bp(PW:"type II interferon signaling pathway")
-a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HLA-DPA1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-DPA1")
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:STAT1)
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:B2M)
-a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HLA-DRB3)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-DRB3")
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:IFNGR1)
-a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:HLA-DQB1)
+a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-DQB1")
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:CD44)
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:PARP9)
 a(TAX:"Severe acute respiratory syndrome coronavirus 2") increases r(HGNC:"HLA-C")

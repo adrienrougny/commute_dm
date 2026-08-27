@@ -41,12 +41,10 @@ import momapy.celldesigner
 import momapy.core.layout
 import momapy.core.mapping
 import momapy.geometry
+import momapy_kb.lpg.celldesigner
 import pd2af.celldesigner.building_layout
 import pd2af.celldesigner.building_model
 import pd2af.utils
-
-import commute_dm.queries
-
 
 # ---------------------------------------------------------------------------
 # the influence structure, as node ids
@@ -74,7 +72,7 @@ SIGNED_MODULATION_CLASSES = (
 
 _SIGNED_INFLUENCES_QUERY = """
 MATCH (collection:Collection)-[:HAS_ENTRY]->(:CollectionEntry)-[:HAS_OBJ]->(:CellDesignerMap)
-    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MODEL_ELEMENT]->(modulation:Modulation)
+    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MEMBER_MODEL_ELEMENT]->(modulation:Modulation)
 WHERE collection.name IN $collection_names
   AND any(label IN labels(modulation) WHERE label IN $signed_classes)
 MATCH (modulation)-[:HAS_SOURCE]->(source), (modulation)-[:HAS_TARGET]->(target)
@@ -87,7 +85,7 @@ RETURN DISTINCT elementId(source) AS source_node_id, elementId(target) AS target
 # `make_ig_in_db` rotted into dead code after momapy renamed things under it.
 _EXCLUDED_INFLUENCES_QUERY = """
 MATCH (collection:Collection)-[:HAS_ENTRY]->(:CollectionEntry)-[:HAS_OBJ]->(:CellDesignerMap)
-    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MODEL_ELEMENT]->(modulation:KnownOrUnknownModulation)
+    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MEMBER_MODEL_ELEMENT]->(modulation:KnownOrUnknownModulation)
 WHERE collection.name IN $collection_names
   AND NOT any(label IN labels(modulation) WHERE label IN $signed_classes)
 RETURN DISTINCT elementId(modulation) AS modulation_node_id,
@@ -95,12 +93,12 @@ RETURN DISTINCT elementId(modulation) AS modulation_node_id,
 """
 
 # The species of the collections, so that a selection can be narrowed to the
-# nodes that can carry an annotation. `HAS_MODEL_ELEMENT` is deliberate: it
-# reaches the 1344 complex-subunit species as well as the 3540 top-level ones,
+# nodes that can carry an annotation. `HAS_MEMBER_MODEL_ELEMENT` is deliberate:
+# it reaches the 1344 complex-subunit species as well as the 3540 top-level ones,
 # and a subunit does carry annotations.
 _SPECIES_QUERY = """
 MATCH (collection:Collection)-[:HAS_ENTRY]->(:CollectionEntry)-[:HAS_OBJ]->(:CellDesignerMap)
-    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MODEL_ELEMENT]->(species:Species)
+    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MEMBER_MODEL_ELEMENT]->(species:Species)
 WHERE collection.name IN $collection_names
 RETURN collect(DISTINCT elementId(species)) AS species_node_ids
 """
@@ -110,7 +108,7 @@ RETURN collect(DISTINCT elementId(species)) AS species_node_ids
 # rows.
 _GATE_INPUTS_QUERY = """
 MATCH (collection:Collection)-[:HAS_ENTRY]->(:CollectionEntry)-[:HAS_OBJ]->(:CellDesignerMap)
-    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MODEL_ELEMENT]->(gate:BooleanLogicGate)
+    -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_MEMBER_MODEL_ELEMENT]->(gate:BooleanLogicGate)
 WHERE collection.name IN $collection_names
 MATCH (gate)-[:HAS_INPUT]->(:SimpleSpeciesReference)-[:HAS_REFERRED_ELEMENT]->(species:Species)
 RETURN elementId(gate) AS gate_node_id,
@@ -293,13 +291,13 @@ def load_collections_as_map(session, collection_names, node_id_to_object):
     node ids the walk returns into model elements, and sharing it across the
     whole run is what makes the merge sound -- see the module docstring.
 
-    `prewarm_session` is a momapy_kb requirement, not something this module
-    introduces: `execute_query_as_objects` can only rebuild an object whose
-    momapy class has a registered pylpg node class, and the session registers
-    only what it saved or what a static type hint mentions -- concrete
-    subclasses like `GenericProteinLayout` are missed.
+    Importing `momapy_kb.lpg.celldesigner`, which this module does for its
+    effect alone, is what makes the rebuilding possible:
+    `execute_query_as_objects` can only rebuild an object whose momapy class
+    has a registered pylpg node class, and the session registers only what it
+    saved or what a static type hint mentions -- concrete subclasses like
+    `GenericProteinLayout` are missed.
     """
-    commute_dm.queries.prewarm_session(session)
     return merge_maps(
         [
             row[0]

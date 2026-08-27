@@ -121,7 +121,7 @@ SET MeSHAnatomy = "Olfactory Mucosa"
 SET MeSHDisease = "Olfaction Disorders"
 path(DO:"COVID-19") association bp(GO:"inflammatory response")
 
-SET Support = "Expression of gene transcript of Cxcl10 was elevated in the olfactory mucosa in most patients with detectable SARS-CoV-2 antigens 
+SET Support = "Expression of gene transcript of Cxcl10 was elevated in the olfactory mucosa in most patients with detectable SARS-CoV-2 antigens \
 as compared to control patients, and in contrast, an interindividual variability, both in SARS-CoV-2-infected and control individuals, was observed in Il-6, Ccl5, Isg20 and Mx1 gene transcript expression (Fig. 2D, Tables S1 and S2)." 
 SET BioAssay = "real-time PCR "
 path(DO:"COVID-19") pos r(HGNC:CXCL10)  

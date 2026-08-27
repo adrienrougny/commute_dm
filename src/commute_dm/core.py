@@ -49,15 +49,22 @@ def _gea():
 def get_interface(
     session,
     collection_names,
+    with_subunits=True,
 ):
     """Compute the shared-UniProt protein interface between given collections.
 
-    All collections (CellDesigner maps and the BEL KGs alike) now carry their
-    protein cross-references as uniform UniProt RDF annotations
-    (`urn:miriam:uniprot:<id>` on a `:Protein` annotation key), so the interface
-    is a single join over those annotations -- no CellDesigner/BEL special casing,
-    no reaching inside BEL nodes, no `hgnc.symbol`. A UniProt id is in the
-    interface when it is shared by **all** of `collection_names`.
+    A UniProt id is in the interface when it is shared by **all** of
+    `collection_names`, the join being over the `urn:miriam:uniprot:<id>`
+    resources of the entries' RDF annotations.
+
+    **CellDesigner collections only**, in two ways that both matter. The query
+    keys on `(:Item)-[:HAS_KEY]->(:Protein)`, and a BEL protein node is a
+    `ProteinAbundance`, which carries no `Protein` label. And a stored BEL
+    collection holds no cross-reference at all: its annotations are BEL's own
+    per-statement ones (citation, evidence), a `.bel` document stating identity
+    inline as `p(HGNC:"MAPT")`. The AD knowledge graph is reachable here because
+    `bel2cd` writes the UniProt annotations onto the species of the CellDesigner
+    map it exports, which is what `AD_KG_CD_AF` stores.
 
     Args:
         collection_names: the collections to intersect. Passing an explicit set
@@ -66,6 +73,16 @@ def get_interface(
             `size(collect(DISTINCT collection.name))` against
             `size($collection_names)`, so a repeated name makes this return `{}`
             with no error.
+        with_subunits: whether a protein counts for a collection when that
+            collection only holds it as a complex member. With subunits the
+            result answers "which proteins do these collections share"; without
+            them it answers "which of those can start a walk", a member having
+            no glyph and no modulation of its own. The comorbidity graphs want
+            the second. The test is that the collection's model lists the
+            protein among its species, not that nothing holds it as a subunit:
+            collections are saved with `integration_mode="hash"`, so a species
+            and a member with the same content are one node, and 651 of the AD
+            map's members are also their own top-level species.
 
     Returns:
         A dict mapping each shared UniProt accession to the list of
@@ -81,6 +98,13 @@ def get_interface(
             (item)-[:HAS_VALUE]->(annotations_bag:Bag)-[:HAS_ITEM]->(annotation:RDFAnnotation)
         WHERE
             collection.name IN $collection_names
+            AND (
+                $with_subunits
+                OR EXISTS {
+                    MATCH (collection)-[:HAS_ENTRY]->()-[:HAS_OBJ]->(:CellDesignerMap)
+                          -[:HAS_MODEL]->(:CellDesignerModel)-[:HAS_SPECIES]->(protein)
+                }
+            )
         UNWIND annotation.resources AS resource
         WITH collection, entry, protein, resource
         WHERE resource STARTS WITH "urn:miriam:uniprot:"
@@ -96,7 +120,10 @@ def get_interface(
     """
     result = session.execute_query(
         query,
-        params={"collection_names": collection_names},
+        params={
+            "collection_names": collection_names,
+            "with_subunits": with_subunits,
+        },
     )
     interface = {}
     for row in result:

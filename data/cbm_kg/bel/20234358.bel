@@ -96,7 +96,7 @@ SET Support = "In patients with Alzheimer disease (AD), initial studies suggest 
 SET MeSHDisease = "Alzheimer Disease"
 bp(GO:"microglial cell activation") neg bp(GO:cognition)
 
-SET Support = "Furthermore, as cognitive
+SET Support = "Furthermore, as cognitive \
 function declines over time, the C-R-PK11195 signal increases without a change in the signal from the Pet ligand Pittsburgh compound B (C-PIB), which binds to amyloid."
 bp(GO:"microglial cell activation") neg bp(GO:cognition)
 UNSET MeSHDisease 
@@ -128,8 +128,8 @@ SET Support = "Evidence from animal models of acute injury indicates that the in
 bp(GO:"inflammatory response") -| a(FIXME:"lesion size") 
 
 SET Support = "Wallerian degeneration in the CNS is accompanied by the activation of microglia along the degenerating fiber tracts and, over time, foam cells, which are responsible for the removal of degenerating axons and myelin, become evident."
-path(MESH:"Wallerian Degeneration") associationbp(GO:"microglial cell activation")
-path(MESH:"Wallerian Degeneration") associationdeg(a(MESH:"Nerve Fibers")) 
+path(MESH:"Wallerian Degeneration") association bp(GO:"microglial cell activation")
+path(MESH:"Wallerian Degeneration") association deg(a(MESH:"Nerve Fibers")) 
 
 SET Support = "Interest in activated microglia as contributors to the progression of chronic neurodegeneration, rather than simply being a consequence of the pathology, was first proposed in AD"
 SET MeSHDisease = "Alzheimer Disease"
@@ -169,7 +169,7 @@ SET MeSHDisease = {"Parkinson Disease", "Amyotrophic Lateral Sclerosis","Hunting
 p(FIXME:"misfolded protein",loc(GO:"intracellular")) -> bp(GO:"microglial cell activation")
 UNSET MeSHDisease
 
-SET Support = "Raised levels of proinflammatory cytokines and inducible nitric oxide synthase have also been detected
+SET Support = "Raised levels of proinflammatory cytokines and inducible nitric oxide synthase have also been detected \
 in these brain regions, providing evidence of a local inflammatory reaction"
 SET MeSHDisease = "Parkinson Disease"
 path(DO:"Parkinson's disease") pos a(MESH:Cytokines)
@@ -187,7 +187,7 @@ UNSET Cell
 UNSET MeSHAnatomy
 UNSET Species
 
-SET Support = "Evidence that activated
+SET Support = "Evidence that activated \
 microglia contribute to disease progression in ALS comes from elegant studies in transgenic mice that express mutated superoxide dismutase 1 (SOD1) as a model of familial ALS"
 SET Species = "10090"
 SET MeSHDisease = "Amyotrophic Lateral Sclerosis"
@@ -198,7 +198,7 @@ bp(GO:"microglial cell activation") pos path(DO:"amyotrophic lateral sclerosis")
 SET Support = "When the mouse lines are manipulated to reduce the expression of mutant SOD1 in microglia, including those adjacent to the diseased motor neurons, the rate of disease progression is slowed and lifespan extended"
 p(MGI:Sod1, var("?")) pos path(DO:"amyotrophic lateral sclerosis")
 
-SET Support = "Microglia expressing the mutated soD1 protein generate more
+SET Support = "Microglia expressing the mutated soD1 protein generate more \
 superoxide and nitric oxide when challenged with endotoxin than do wild-type microglia"
 composite(a(MESH:Endotoxins),p(MGI:Sod1, var("?"))) -> a(CHEBI:superoxide)
 composite(a(MESH:Endotoxins),p(MGI:Sod1, var("?"))) -> a(CHEBI:"nitric oxide")
@@ -211,7 +211,7 @@ SET Species = "9606"
 SET MeSHDisease = "Alzheimer Disease"
 path(DO:"Alzheimer's disease") pos deg(a(GO:synapse))
 
-SET Support = "Synaptic loss correlates
+SET Support = "Synaptic loss correlates \
 positively with dementia progression,and is probably an early component of the neuronal degeneration"
 deg(a(GO:synapse)) pos path(DO:dementia)
 UNSET MeSHDisease
