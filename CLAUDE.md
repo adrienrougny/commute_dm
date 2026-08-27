@@ -55,12 +55,18 @@ numbered, ordered driver notebooks. Outputs land under `data/`.
   (`pyproject.toml`), pinned by `uv.lock` at **3.6.7**, which requires **R ≥ 4.5.0**: it declares
   and binds `R_getVar` / `R_ParentEnv` with no version gate (`rinterface_lib/_rinterface_capi.py`),
   both added in R 4.5. Against an older R the API-mode extension fails on `R_ParentEnv`, rpy2 falls
-  back to ABI mode, and that dies with `symbol 'R_getVar' not found in library 'libR.so'`. The
-  user's machine has R 4.6.1 and is fine; **Claude's sandbox is a Debian 12 container whose R is
-  4.2.2**, so GOAT cannot be run from there — the R version is the thing to check, not the venv.
-  Everything upstream of the R call (gene sets, GMT, the summary assembly) is testable in the
-  sandbox by shimming `sys.modules` for `rpy2*`, and the intersection analysis needs no R at all
-  beyond `gea`'s module-scope import.
+  back to ABI mode, and that dies with `symbol 'R_getVar' not found in library 'libR.so'`. Both
+  machines are fine now: the user's R is 4.6.1, and **Claude's sandbox (a Debian 12 container) has
+  R 4.6.1 too** — it used to be 4.2.2, which is why an older note said GOAT could not run there.
+  The R version is the thing to check, not the venv.
+  Installing `goat` in the sandbox is the one wrinkle. There is **no root and no `sudo`**, and the
+  `-dev` headers `systemfonts` needs are absent, so a CRAN *source* install fails all the way up
+  the chain (`systemfonts` → `ggforce`/`sass` → `ggraph`/`shiny`/`treemap` → `goat`); the runtime
+  `libfontconfig.so.1` / `libfreetype.so.6` *are* present, so **Posit's binary repo installs
+  cleanly**:
+  `install.packages("goat", repos="https://packagemanager.posit.co/cran/__linux__/bookworm/latest",
+  lib="/tmp/claudehome/.local/lib/R/library")` with `options(HTTPUserAgent=...)` set so P3M serves
+  binaries. That library is `.libPaths()[1]`, which is what `gea._ensure_r_packages` writes to.
 - There is no test suite (only an empty `tests/__init__.py`) and no lint/build config beyond
   hatchling packaging. "Running" the project means executing the notebooks in order.
 
@@ -137,7 +143,7 @@ store; afterwards any notebook can be opened standalone.
   isolated species on purpose: those identifiers could never seed a walk, so after the drop the
   interface *is* the seedable set. These are the **full** interfaces, subunits included, which is
   the right answer to "which proteins do these maps share"; `4_10` asks the same question without
-  subunits and gets 121 and 82 (see `get_interface`'s `with_subunits`).
+  subunits and gets 121 and 82, as `4_20` does (see `get_interface`'s `with_subunits`).
 - `4_00_make_goat_gene_lists` — turn raw RNA-seq DE CSVs (`data/rnaseq/`) into GOAT gene-list
   CSVs, mapping Ensembl→Entrez/symbol via the HGNC dataset.
 - `4_10_make_interface_graphs` — **both pairings**, in a `PAIRINGS` list of the same shape as
@@ -165,9 +171,31 @@ store; afterwards any notebook can be opened standalone.
   subgraphs vs. the gene lists, for **both pairings and all three modes** (`upstream`,
   `downstream`, `upstream_and_downstream`). Influences come straight from
   `submaps.load_signed_influences` — seconds, since no map is hydrated.
-  *Not runnable from Claude's sandbox*, whose Debian 12 R is 4.2.2 against a pinned rpy2 3.6.7
-  that needs R ≥ 4.5 (see "Environment & tooling"). Nothing to do with the venv — the user's R is
-  4.6.1 and the cell runs there.
+  Runs in Claude's sandbox now that its R is 4.6.1 and `goat` is installed there (see
+  "Environment & tooling"); the note that it could not is stale.
+  Its interface is taken **without subunits**, as `4_10`'s is. **The two flags are unrelated.**
+  `4_20`'s own `WITH_SUBUNITS` stays `True` — it is `gea`'s widening of a selection to its species'
+  subunits, what makes a subunit contribute its gene — while `get_interface`'s decides only which
+  **seeds** the walks start from. Gene sets keep their subunits; the walks lose only seeds that
+  could not legitimately start one.
+  What the interface flag drops, classified over every interface row: **none of them is a
+  legitimate seed**. COVID×AD keeps 485 rows and drops 195 — 143 *inert* (the node is a subunit of
+  nothing that modulates anything, so it contributes no edge to any walk) and 52 *wrongly sided*
+  (hash integration made the node one with a species of the **other** collection, and the
+  collection-blind `_split_interface_seeds` therefore had it walking the wrong side's edges).
+  Three-way: 728 kept, 251 inert, 76 wrongly sided. Zero rows are a subunit-only node that is a
+  modulation endpoint of its own collection.
+  The effect is still not nil, because a selection loses the nodes those wrong seeds reached.
+  Measured across the flip: COVID→AD goes 50 proteins → **45** (`TLR2`, `IFNG`, `CCL2`, `NFKB1`,
+  `ADAM17`) and COVID→PD 45 → **40** (`O14920`, `TLR2`, `NFKB1`, `CASP7`, `NLRP3`) — all but
+  `CCL2` **stay in the interface** and fall out only by dropping under `MIN_N_NODES=5` — and 9 of
+  the 45 remaining COVID→AD proteins moved in the GOAT summary, 6 in the intersection one,
+  enrichments both lost and gained (a smaller gene set moves p-values in either direction). An
+  inert seed is not quite free either: it still counts as itself in its selection, so it can shave
+  a node off one sitting exactly at the threshold.
+  The flip also made the two notebooks agree: `4_20`'s 45 COVID→AD proteins are **exactly** the 45
+  `4_10` draws, which they were not before (50 against 45). Same interface, same `MIN_N_NODES`, so
+  that is the invariant to expect — a divergence means one of the two moved.
 - `5_00_make_annotations_for_bel` — annotation tooling (see `annotations/` helper scripts).
 - `6_00` / `6_10` — immuno-target analysis and graphs.
 
@@ -530,9 +558,11 @@ Every name in an interface tuple must be **distinct**:
 `size($collection_names)`, so a repeated name returns `{}` with no error.
 `get_interface` takes **`with_subunits`** (default `True`). With subunits it answers "which
 proteins do these collections share"; without them, "which of those can start a walk", a protein a
-collection holds only as a complex member having no glyph and no modulation of its own. **Only
-`4_10` passes `False`** — `3_00` writes the full interfaces and `4_20` keeps the default, so no
-gene-set result moves. The test is one extra condition on the existing query, that the collection's
+collection holds only as a complex member having no glyph and no modulation of its own. **`4_10`
+and `4_20` both pass `False`**; only `3_00` keeps the default, since the full interface is the
+right answer to what it asks. Note `4_20`'s own `WITH_SUBUNITS` is a different flag — `gea`'s
+widening of a selection to its species' subunits — and stays `True`: gene sets keep their subunits
+either way. The test is one extra condition on the existing query, that the collection's
 model lists the protein among its species
 (`(:CellDesignerModel)-[:HAS_SPECIES]->`). It is deliberately **not** "nothing points at it with
 `HAS_SUBUNIT`": under hash integration a species and a member with the same content are one node,
