@@ -108,6 +108,67 @@ def get_ids_and_context(session, nodes):
     return formatted_result
 
 
+def get_top_level_species_for_nodes(session, nodes, collection_name):
+    """Return, per node, the species of `collection_name` that are it or contain it.
+
+    A species here is a top-level element of the collection's model, so a
+    complex counts and a complex nested inside another complex does not -- its
+    outermost complex is the answer instead. A node listed by the model gives
+    itself, and every listed complex reaching it through `HAS_SUBUNIT` gives
+    that complex; a node can therefore give several species.
+
+    The collection matters and is part of the query. Collections are saved with
+    `integration_mode="hash"`, so one node can be a species of one collection
+    and a subunit of another, and looking for the holding complex anywhere would
+    let a walk start in the wrong collection.
+    """
+    element_ids = [node.element_id for node in nodes]
+    if not element_ids:
+        return []
+    query = """
+        UNWIND $element_ids AS element_id
+        MATCH (node) WHERE elementId(node) = element_id
+        MATCH
+            (:Collection {name: $collection_name})-[:HAS_ENTRY]->(:CollectionEntry)
+                -[:HAS_OBJ]->(:CellDesignerMap)-[:HAS_MODEL]->(:CellDesignerModel)
+                -[:HAS_SPECIES]->(species)
+        WHERE species = node OR (species)-[:HAS_SUBUNIT*1..]->(node)
+        RETURN node AS node, collect(DISTINCT species) AS species
+    """
+    result = session.execute_query(
+        query,
+        params={"element_ids": element_ids, "collection_name": collection_name},
+    )
+    return [(row["node"], row["species"]) for row in result]
+
+
+def get_symbols_for_identifiers(session, identifiers, namespace="hgnc.symbol"):
+    """Return {UniProt accession: [symbol]} for the given accessions.
+
+    One element's annotations sit in one bag, so the symbol is found next to the
+    accession. The lookup depends on the accession only, never on which node
+    carries it.
+    """
+    identifiers = list(identifiers)
+    if not identifiers:
+        return {}
+    query = """
+        UNWIND $identifiers AS identifier
+        MATCH (bag:Bag)-[:HAS_ITEM]->(uniprot:RDFAnnotation)
+        WHERE "urn:miriam:uniprot:" + identifier IN uniprot.resources
+        MATCH (bag)-[:HAS_ITEM]->(annotation:RDFAnnotation)
+        UNWIND annotation.resources AS resource
+        WITH identifier, resource
+        WHERE resource STARTS WITH "urn:miriam:" + $namespace + ":"
+        RETURN identifier AS identifier,
+               collect(DISTINCT split(resource, ":")[-1]) AS symbols
+    """
+    result = session.execute_query(
+        query, params={"identifiers": identifiers, "namespace": namespace}
+    )
+    return {row["identifier"]: row["symbols"] for row in result}
+
+
 def get_nodes(session, element_ids):
     """Return the DB nodes for the given element ids.
 

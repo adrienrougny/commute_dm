@@ -129,21 +129,53 @@ store; afterwards any notebook can be opened standalone.
   models give what parsing those files gives, to the number — **measured, since nothing had ever
   read a `BELModel` back out of the database before**. Hydrating is also no slower: 4.3 s for the
   four collections against about 7 s to parse the 62 files.
-  Against the cypher dumps (3979/4910, 1832/1760, 2255/1690, 2074/2145), **the edge counts are the
-  ones that must match**, and AD's and COVID's do exactly (their node-level differences are the
-  `pmod(pho)` / `pmod(Ph)` spelling, not content). Their node counts run slightly *higher* because
-  this projection prunes less: it drops a complex's members and an activity's subject, while the
-  graph-based one also dropped anything reached by pybel's derived base→proteoform edges, so
-  `p(HGNC:"ACE2",loc(MESHA:"Kidney"))` is again the top-level term it always was in the document.
-  PD's and CBM's are further off on both counts; both are curated sources whose dumps drifted, and
-  that is to confirm rather than chase.
+  **Against the cypher dumps this has now been checked term by term, not by counting**, since a
+  count can agree while the content does not. The dump carries each node's BEL string, so the
+  comparison is between *sets of causal edges written as BEL triples* — the dump restricted to the
+  same causal relations (`INCREASES`, `DIRECTLY_INCREASES`, `DECREASES`, `DIRECTLY_DECREASES`,
+  `REGULATES`, `TRANSLATED_TO`) and the same projected classes, both sides canonicalised for
+  quoting, whitespace and the order of a complex's members and a protein's modifiers, which BEL
+  does not fix. The result, dump vs `.bel`:
+  - **AD: identical. 4910 = 4910 edges, 2788 = 2788 nodes, and the same 776 `p(HGNC:…)` symbols,
+    with an empty difference in both directions.** This is the one that matters for everything
+    downstream, and it settles it: the AD substrate did not change.
+  - **COVID: 1690 = 1690, one edge apart** — a `composite()` naming the same member twice, which
+    `frozenset[Species]` collapses (the documented homomultimer limitation).
+  - **PD: 1760 = 1760, nine edges apart**, of three kinds. Three are `gmod(TestNS:TestName)`
+    against `gmod(Me)`, and here **the dump is the wrong one**: the file says `gmod(Me)` (all 36 of
+    its `gmod`s do) and pybel let a placeholder namespace through. Four are `pmod(Ph,Y)` against
+    `pmod(Ph,Tyr)` — the *file itself* writes both spellings (`Tyr` for MAPK9/MAPK14/IGF1R/IRS1/
+    INSR, `Y` for Grin2a/Grin2b), pybel canonicalises three-letter to one-letter and `momapy_bel`
+    keeps what is written; same residue, and **verbatim reading splits nothing**: 0 of the 1315
+    nodes are one term written both ways. The last two are `complex(p(HGNC:PARK7),p(HGNC:PARK7))`
+    against `complex(p(HGNC:PARK7))` — a real loss, the same homomultimer collapse as COVID's.
+  **Total content actually lost by the new path across all four KGs: 3 edges, all homomultimers**
+  (2 PD, 1 COVID). Everything else that differs is rendering, or the dump being wrong.
+  - **CBM: 2146 against 1900, the one real difference.** 246 of the 257 dump-only edges are
+    supported *only* by four PMIDs that have no `.bel` file at all (22899644, 30342839, 36231087,
+    36526429) — the dump covers 63 papers, the directory has 59, and all 59 are in the dump. The
+    remaining 11-or-so pairs are curation edits, the same assertion re-namespaced
+    (`a(NCIT:Remdesivir)` → `a(CHEBI:remdesivir)`). So CBM's gap is **corpus coverage, not the
+    reader**: the four papers are missing from `data/cbm_kg/bel/`.
+  The earlier note here compared raw dump totals (3979/4910, 1832/1760, 2255/1690, 2074/2145) and
+  read PD as far off; that was an artefact of counting the dump's non-projected nodes (reactions,
+  translocations, degradations, lists) rather than a content difference. Node counts in the table
+  above still run *higher* than the dumps' because this projection prunes less — it drops a
+  complex's members and an activity's subject, while the graph-based one also dropped anything
+  reached by pybel's derived base→proteoform edges, so `p(HGNC:"ACE2",loc(MESHA:"Kidney"))` is
+  again the top-level term it always was in the document — and because the projection keeps
+  isolated elements, which have no edge to appear in.
 - `3_00_get_interfaces` — query proteins present across collections (joined on **UniProt RDF
   annotations**), write `data/.../interface/*.json`. The COVID×AD interface is **159** two-way and
   **111** three-way, smaller than the 189/127 of the old BEL pairing because `1_10` drops the
   isolated species on purpose: those identifiers could never seed a walk, so after the drop the
   interface *is* the seedable set. These are the **full** interfaces, subunits included, which is
-  the right answer to "which proteins do these maps share"; `4_10` asks the same question without
-  subunits and gets 121 and 82, as `4_20` does (see `get_interface`'s `with_subunits`).
+  the right answer to "which proteins do these maps share". Every notebook now asks for them the
+  same way (`with_subunits=True`, the default), so the identifier counts are the same everywhere;
+  what the flag changes is which **species** each protein stands on (see `get_interface`'s
+  `with_subunits`). The archived rows record that: `species_*` is the species standing for the
+  protein and `subunit_*` the protein itself whenever that species is a complex. Three-way:
+  **1190 rows, 572 of them through a complex**.
 - `4_00_make_goat_gene_lists` — turn raw RNA-seq DE CSVs (`data/rnaseq/`) into GOAT gene-list
   CSVs, mapping Ensembl→Entrez/symbol via the HGNC dataset.
 - `4_10_make_interface_graphs` — **both pairings**, in a `PAIRINGS` list of the same shape as
@@ -153,18 +185,25 @@ store; afterwards any notebook can be opened standalone.
   collections, so `core.load_submap_inputs` has one path and there is no BEL case anywhere.
   `max_levels` stays per pairing, and that is a property of the downstream graph, not of the code:
   `[1,2,3]` for AD against `[2,3,4,5,6]` for PD, because the AD influence graph is much denser.
-  Both pairings take their interface **without subunits** (`with_subunits=False`): a protein a
-  collection holds only as a complex member has no glyph and no modulation of its own, so it can
-  seed no walk. COVID×AD goes 159 → 121 and the three-way one 111 → 82.
-  Current COVID→AD output: **95 maps over 45 proteins** (11 / 39 / 45 at 1 / 2 / 3 hops), against
-  101 over 47 with subunits. The three proteins that move all move for the same reason, and it is
-  a fix: `CCL2` (a subunit in COVID, a species in AD) and `IFNG` and `CHI3L1` each had an
-  interface row pairing the COVID collection with a node that is really an **AD** species — hash
-  integration makes a COVID complex member and a content-equal AD species one node — so
-  `_split_interface_seeds`, which is collection-blind, made that node a *COVID upstream* seed and
-  let it walk AD edges. Dropping those rows loses `CCL2` and `IFNG` entirely and `CHI3L1`'s
-  one-hop map. COVID→PD is unchanged at **190 maps over 40 proteins** despite its interface
-  shrinking, its seeds all being real species of their own collection.
+  Both pairings take their interface **with subunits** (the default), which is what makes a
+  protein seedable rather than what makes it unseedable: a protein stands on every species of its
+  collection that **is it, or contains it**. A protein a collection holds only inside a complex
+  stands on that complex; one that is both free and bound stands on both.
+  Current output: **180 maps over 77 proteins** COVID→AD and **375 over 76** COVID→PD, against 95
+  over 45 and 190 over 40 when the interface was taken without subunits. Everything gained is a
+  protein whose wiring lives on a complex — `NTRK1`, `NTRK2`, `TLR2`, `TLR4`, `NFKB1/2`, `STAT3`,
+  `SOCS1/3`, `TGFB1`, `CCL2`, `IFNG`, `NGFR`, `TRAF6`, `TRADD`, `FADD`, `APAF1`, `JUN`, `FOS`, and
+  the mitochondrial respiratory chain (`COX4I1`, `COX5A`, `NDUFS1`, `MT-CO2`).
+  The free protein and the complex holding it are usually **not** linked by any arrow: on the AD
+  map they never are, since BEL states no complex formation — 73 of the 83 COVID→AD pairs of that
+  shape have no edge between them at any hop. So standing a protein on its complexes is the only
+  way those complexes are reachable, and it is not a shortcut for something the walk would find
+  anyway.
+  Accepted consequence: a protein that is one of a **large** complex's members gets that whole
+  complex's neighbourhood attributed to it. Complexes are 3–5 members at the median but run to 49,
+  which is what brings the respiratory chain in. Refusing to seed on complexes above a size would
+  drop that group and almost nothing else (66 and 72 proteins instead of 76 and 77); it is one more
+  setting to tune and was deliberately left out.
   The binding constraint is `MIN_N_NODES=5` on the **COVID upstream** side. The last cell reads
   every written file back, which is the assertion the identity invariants exist for.
 - `4_20_make_interface_goat_analysis` — GOAT enrichment + intersection analyses of interface
@@ -173,29 +212,16 @@ store; afterwards any notebook can be opened standalone.
   `submaps.load_signed_influences` — seconds, since no map is hydrated.
   Runs in Claude's sandbox now that its R is 4.6.1 and `goat` is installed there (see
   "Environment & tooling"); the note that it could not is stale.
-  Its interface is taken **without subunits**, as `4_10`'s is. **The two flags are unrelated.**
+  Its interface is taken **with subunits**, as `4_10`'s is. **The two flags are unrelated.**
   `4_20`'s own `WITH_SUBUNITS` stays `True` — it is `gea`'s widening of a selection to its species'
-  subunits, what makes a subunit contribute its gene — while `get_interface`'s decides only which
-  **seeds** the walks start from. Gene sets keep their subunits; the walks lose only seeds that
-  could not legitimately start one.
-  What the interface flag drops, classified over every interface row: **none of them is a
-  legitimate seed**. COVID×AD keeps 485 rows and drops 195 — 143 *inert* (the node is a subunit of
-  nothing that modulates anything, so it contributes no edge to any walk) and 52 *wrongly sided*
-  (hash integration made the node one with a species of the **other** collection, and the
-  collection-blind `_split_interface_seeds` therefore had it walking the wrong side's edges).
-  Three-way: 728 kept, 251 inert, 76 wrongly sided. Zero rows are a subunit-only node that is a
-  modulation endpoint of its own collection.
-  The effect is still not nil, because a selection loses the nodes those wrong seeds reached.
-  Measured across the flip: COVID→AD goes 50 proteins → **45** (`TLR2`, `IFNG`, `CCL2`, `NFKB1`,
-  `ADAM17`) and COVID→PD 45 → **40** (`O14920`, `TLR2`, `NFKB1`, `CASP7`, `NLRP3`) — all but
-  `CCL2` **stay in the interface** and fall out only by dropping under `MIN_N_NODES=5` — and 9 of
-  the 45 remaining COVID→AD proteins moved in the GOAT summary, 6 in the intersection one,
-  enrichments both lost and gained (a smaller gene set moves p-values in either direction). An
-  inert seed is not quite free either: it still counts as itself in its selection, so it can shave
-  a node off one sitting exactly at the threshold.
-  The flip also made the two notebooks agree: `4_20`'s 45 COVID→AD proteins are **exactly** the 45
-  `4_10` draws, which they were not before (50 against 45). Same interface, same `MIN_N_NODES`, so
-  that is the invariant to expect — a divergence means one of the two moved.
+  subunits, what makes a subunit contribute its gene — while `get_interface`'s decides which
+  **species** a protein stands on, and so what its walks start from.
+  Note the two compose: a seed that is a complex contributes its members' genes through
+  `WITH_SUBUNITS`, so standing a protein on a complex widens its gene set by that complex's
+  members. That is intended — the complex is what the collection asserts — but it is why every
+  GOAT and intersection number moves with this change.
+  `4_20`'s protein list must equal `4_10`'s: same interface, same `MIN_N_NODES`, so a divergence
+  means one of the two moved.
 - `5_00_make_annotations_for_bel` — annotation tooling (see `annotations/` helper scripts).
 - `6_00` / `6_10` — immuno-target analysis and graphs.
 
@@ -543,6 +569,17 @@ in `momapy_kb` and there will not be one; that is the whole of it.
   `HAS__*` branch it used to carry is gone with the BEL branch of the pipeline — the AD KG is a
   CellDesigner collection by the time anything queries it, and the export reads its annotations by
   `(class, namespace, identifier)` instead.
+- **`get_top_level_species_for_nodes(session, nodes, collection_name)`** — "which species of this
+  collection are this node, or contain it". A species here is a top-level element of the
+  collection's model, so a complex counts and a complex nested in another complex does not — its
+  outermost complex is the answer. A node the model lists gives itself, every listed complex
+  reaching it by `HAS_SUBUNIT` gives that complex, and a node can give several. **The collection
+  is part of the query and must be**: under hash integration one node can be a species of one
+  collection and a subunit of another, so an unscoped lookup would let a walk start in the wrong
+  collection. This is what `get_interface(..., with_subunits=True)` stands its rows on.
+- **`get_symbols_for_identifiers(session, identifiers)`** — UniProt accession → gene symbols, keyed
+  on the **accession** and never on a node. One element's annotations sit in one bag, so the symbol
+  is found next to the accession. `core.get_interface_display_names` is built on it.
 - `get_nodes(session, element_ids)` — the bridge from the id-only traversal back to DB nodes, for
   the node-taking `gea` helpers.
 
@@ -556,18 +593,24 @@ COVID→AD.
 Every name in an interface tuple must be **distinct**:
 `get_interface` compares `size(collect(DISTINCT collection.name))` against
 `size($collection_names)`, so a repeated name returns `{}` with no error.
-`get_interface` takes **`with_subunits`** (default `True`). With subunits it answers "which
-proteins do these collections share"; without them, "which of those can start a walk", a protein a
-collection holds only as a complex member having no glyph and no modulation of its own. **`4_10`
-and `4_20` both pass `False`**; only `3_00` keeps the default, since the full interface is the
-right answer to what it asks. Note `4_20`'s own `WITH_SUBUNITS` is a different flag — `gea`'s
-widening of a selection to its species' subunits — and stays `True`: gene sets keep their subunits
-either way. The test is one extra condition on the existing query, that the collection's
-model lists the protein among its species
-(`(:CellDesignerModel)-[:HAS_SPECIES]->`). It is deliberately **not** "nothing points at it with
-`HAS_SUBUNIT`": under hash integration a species and a member with the same content are one node,
-651 of the AD map's members *are* their own top-level species, and that test leaves 90 proteins
-instead of 121.
+`get_interface` takes **`with_subunits`** (default `True`), and it decides **which species a
+protein stands on in each collection**, not whether the protein is in the interface at all.
+`False` keeps only the proteins a collection lists among its species, each standing on itself, and
+is the old behaviour. `True` stands a protein on **every species of the collection that is it, or
+that contains it** — so a protein held only inside a complex stands on that complex, and a protein
+that is both free and bound stands on both. **Nothing passes `False` any more**; it is kept
+because it is the plain reading of the question "which proteins does this collection list".
+The expansion is a second query, `queries.get_top_level_species_for_nodes`, not a condition on the
+first, and it is **per collection**: under hash integration one node can be a species of one
+collection and a subunit of another, so looking for the holding complex anywhere would let a walk
+start in the wrong collection. It is also **per row**, not per protein, which is what reaches a
+protein that is a species in one collection and a member in the other.
+A row gains a fourth key, `subunit`: the protein a complex stands for, `None` when the node is the
+protein itself. **Nothing branches on it** — only `3_00` reads it, to archive why a complex
+represents a protein.
+Note `4_20`'s own `WITH_SUBUNITS` is a different flag — `gea`'s widening of a selection to its
+species' subunits — and stays `True`. The two compose: a seed that is a complex contributes its
+members' genes.
 `get_interface` joins collections on shared UniProt annotations, and is **CellDesigner-only** —
 it keys on `(:Item)-[:HAS_KEY]->(:Protein)`, which a BEL `ProteinAbundance` does not carry, and a
 stored BEL collection holds no cross-reference anyway (its annotations are BEL's own per-statement
@@ -586,15 +629,22 @@ sub-map upstream of the upstream seeds and downstream of the downstream seeds ar
 interface protein, with a synthetic central node and a fill per walk direction; then
 `make_goat_analysis_from_interface`, `make_intersection_analysis_from_interface`,
 `make_goat_gene_lists`.
+`get_interface_display_names` names each map by the **accession**, through
+`queries.get_symbols_for_identifiers`: one element's annotations sit in one bag, so the symbol is
+found next to the accession. It deliberately does **not** read the symbol off the rows' nodes any
+more — a complex standing for a protein carries no symbol, and the name must not depend on which
+node represents the protein. It still suffixes the accession when two accessions share a symbol
+(`BBC3`), and still falls back to the accession when an accession gives no single symbol
+(`O14920` is annotated alongside both `IKBKB` and `CHUK`; `P09429` and `P37840` alongside four
+symbols each). The old fallback to a BEL node's `name` is gone — it resolved nothing.
 `_split_interface_seeds` returns `"upstream"` / `"downstream"` keyed **node ids**, so pointing
-the analysis at another pair of collections is a parameter change; passing
-`node_id_to_object` and `source_map` also drops seeds that exist only as complex subunits, which
-cannot seed a walk. That filter is **collection-blind**: it asks whether a node is a top-level
-species of the *merged* source map, not of the collection its interface row names, so a node that
-is a subunit in one collection and a species in the other is kept and walks the wrong side's edges
-(this is what kept `CCL2`, `IFNG` and `CHI3L1` alive in `4_10`). `with_subunits=False` makes it
-moot there — every interface node is then already one of its own collection's species — and it
-stays wrong for anything calling `get_interface` with subunits. There is no seed widening any more — it existed because a BEL KG kept the
+the analysis at another pair of collections is a parameter change. It **filters nothing**, and
+needs to filter nothing: `get_interface` has already made every row's node a species of the
+collection that row names. It used to take `node_id_to_object` and `source_map` and drop seeds
+that are not species of the merged source map, and that test was **collection-blind** — it asked
+whether a node is a species of *either* collection, not of the one its row names — so it was
+removed rather than left doing a right test's job wrongly.
+`load_submap_inputs` still returns both — the map assembly needs them. There is no seed widening any more — it existed because a BEL KG kept the
 UniProt annotation on `p(HGNC:X)` and the wiring on `act(p(HGNC:X))`, and the export makes those
 one species. `max_level` means hops, plainly. All three interface entry points take
 `influences` and the two collection names, but only the map one takes the `source_map`.

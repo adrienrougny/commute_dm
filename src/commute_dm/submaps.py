@@ -35,6 +35,7 @@ recomputes every position and segment, and fits the root layout.
 import collections
 import dataclasses
 import re
+import types
 
 import momapy.builder
 import momapy.celldesigner
@@ -743,6 +744,13 @@ _EXTRA_MODULATION_ARC_CLASSES = {
 }
 
 
+# pd2af's arc builders take the transformation context they run in and read one
+# field of it, `layout_mode`: "dot" gives placeholder segments for graphviz to
+# replace, anything else real ones. No transformation runs here, and the sub-maps
+# want real segments, so a stand-in carrying just that field is what they get.
+_ARC_CONTEXT = types.SimpleNamespace(layout_mode=None)
+
+
 def _make_modulation_arc(modulation, source_layout_element, target_layout_element):
     """An arc for a modulation the source map does not draw.
 
@@ -751,7 +759,7 @@ def _make_modulation_arc(modulation, source_layout_element, target_layout_elemen
     arc_class = _EXTRA_MODULATION_ARC_CLASSES.get(type(modulation))
     if arc_class is None:
         return pd2af.celldesigner.building_layout.make_modulation_arc(
-            modulation, source_layout_element, target_layout_element
+            _ARC_CONTEXT, modulation, source_layout_element, target_layout_element
         )
     return arc_class(
         source=source_layout_element,
@@ -994,6 +1002,7 @@ def make_submap_from_model_elements(
         for gate_input in gate.inputs:
             layout_elements.append(
                 pd2af.celldesigner.building_layout.make_logic_arc(
+                    _ARC_CONTEXT,
                     layout_element_of[gate],
                     layout_element_of[gate_input.referred_element],
                 )

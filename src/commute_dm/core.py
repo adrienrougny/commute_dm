@@ -73,21 +73,25 @@ def get_interface(
             `size(collect(DISTINCT collection.name))` against
             `size($collection_names)`, so a repeated name makes this return `{}`
             with no error.
-        with_subunits: whether a protein counts for a collection when that
-            collection only holds it as a complex member. With subunits the
-            result answers "which proteins do these collections share"; without
-            them it answers "which of those can start a walk", a member having
-            no glyph and no modulation of its own. The comorbidity graphs want
-            the second. The test is that the collection's model lists the
-            protein among its species, not that nothing holds it as a subunit:
-            collections are saved with `integration_mode="hash"`, so a species
-            and a member with the same content are one node, and 651 of the AD
-            map's members are also their own top-level species.
+        with_subunits: what a protein stands on in each collection. False keeps
+            only the proteins the collection lists among its species, each
+            standing on itself -- a protein held solely as a complex member has
+            no glyph and no modulation of its own, and is dropped. True stands a
+            protein on **every species of the collection that is it, or that
+            contains it**, so a protein held only inside a complex stands on
+            that complex, and a protein that is both free and bound stands on
+            both. The second is what the analyses want: a complex carries the
+            wiring of the protein it holds, and the two are often not linked by
+            any arrow -- on the AD map they never are, since BEL states no
+            complex formation.
 
     Returns:
         A dict mapping each shared UniProt accession to the list of
         `{"collection": <Collection node>, "entry": <CollectionEntry node>,
-        "node": <Protein node>}` it was found in.
+        "node": <Species node>, "subunit": <Protein node> or None}` it was found
+        in. `subunit` records the protein a complex stands for, and is `None`
+        when the node is the protein itself. Nothing branches on it; it is there
+        so the interface can say why a complex represents a protein.
     """
     collection_names = list(collection_names)
     query = """
@@ -133,10 +137,58 @@ def get_interface(
                 "collection": collection_entry_protein[0],
                 "entry": collection_entry_protein[1],
                 "node": collection_entry_protein[2],
+                "subunit": None,
             }
             for collection_entry_protein in row["collections_entries_proteins"]
         ]
+    if with_subunits:
+        interface = _stand_interface_on_species(session, interface)
     return interface
+
+
+def _stand_interface_on_species(session, interface):
+    """Replace each interface row by one row per species standing for it.
+
+    A row whose node the collection lists among its species keeps that node and
+    no subunit; a row whose node the collection holds inside complexes gives one
+    row per complex, each remembering the protein. A node that is both gives
+    both kinds of row.
+    """
+    nodes_by_collection_name = collections.defaultdict(set)
+    for nodes_with_context in interface.values():
+        for node_with_context in nodes_with_context:
+            collection_name = node_with_context["collection"]["name"]
+            nodes_by_collection_name[collection_name].add(node_with_context["node"])
+    species_by_collection_name_and_element_id = {}
+    for collection_name, nodes in nodes_by_collection_name.items():
+        for node, species in commute_dm.queries.get_top_level_species_for_nodes(
+            session, sorted(nodes, key=lambda node: node.element_id), collection_name
+        ):
+            species_by_collection_name_and_element_id[
+                collection_name, node.element_id
+            ] = species
+    stood_interface = {}
+    for identifier, nodes_with_context in interface.items():
+        rows = {}
+        for node_with_context in nodes_with_context:
+            collection_name = node_with_context["collection"]["name"]
+            for species in species_by_collection_name_and_element_id.get(
+                (collection_name, node_with_context["node"].element_id), []
+            ):
+                subunit = (
+                    None
+                    if species.element_id == node_with_context["node"].element_id
+                    else node_with_context["node"]
+                )
+                subunit_element_id = subunit.element_id if subunit else None
+                rows[collection_name, species.element_id, subunit_element_id] = {
+                    "collection": node_with_context["collection"],
+                    "entry": node_with_context["entry"],
+                    "node": species,
+                    "subunit": subunit,
+                }
+        stood_interface[identifier] = list(rows.values())
+    return stood_interface
 
 
 def get_interface_display_names(session, interface, namespace="hgnc.symbol"):
@@ -146,36 +198,25 @@ def get_interface_display_names(session, interface, namespace="hgnc.symbol"):
     collections but is unreadable in a map. Every interface protein carries an
     `hgnc.symbol` annotation, so the symbol is used instead.
 
+    The symbol is looked up from the **accession**, not from the rows' nodes: a
+    complex standing for a protein carries no symbol of its own, and the name
+    must not depend on which node happens to represent the protein.
+
     A symbol is not guaranteed unique across the interface -- `BBC3` is the
     symbol of two UniProt accessions in the current data -- so an ambiguous
     symbol is suffixed with its accession, for *both* identifiers sharing it,
-    rather than letting two maps collide on one file name. An identifier with no
-    symbol keeps its accession.
-
-    When the annotations give no single symbol, a BEL node's `name` property is
-    tried: it holds the bare namespace identifier (`p(HGNC:"MAPT")` -> `MAPT`).
-    That fallback is no longer load-bearing -- `2_00` writes `hgnc.symbol` on the
-    BEL proteins and labels them `ModelElement`, so they answer
-    `commute_dm.queries.get_identifiers` like any other node, and none of the 189
-    COVID x AD interface proteins falls through to its accession. It is kept for
-    a node the HGNC dataset does not resolve.
+    rather than letting two maps collide on one file name. An accession giving
+    no single symbol keeps its accession: `O14920` is annotated alongside both
+    `IKBKB` and `CHUK`, `P09429` and `P37840` alongside four symbols each.
     """
+    symbols_by_identifier = commute_dm.queries.get_symbols_for_identifiers(
+        session, interface, namespace
+    )
     identifier_to_symbol = {}
-    for identifier, nodes_with_context in interface.items():
-        symbols = set()
-        nodes = [nwc["node"] for nwc in nodes_with_context]
-        for _, identifiers in commute_dm.queries.get_identifiers(
-            session, nodes, namespace
-        ):
-            symbols.update(identifiers)
-        if len(symbols) != 1:
-            symbols = {
-                node["name"]
-                for node in nodes
-                if node.get("namespace") == "HGNC" and node.get("name")
-            }
+    for identifier in interface:
+        symbols = symbols_by_identifier.get(identifier, [])
         if len(symbols) == 1:
-            identifier_to_symbol[identifier] = symbols.pop()
+            identifier_to_symbol[identifier] = symbols[0]
     symbol_counts = collections.Counter(identifier_to_symbol.values())
     display_names = {}
     for identifier in interface:
@@ -193,8 +234,6 @@ def _split_interface_seeds(
     interface,
     upstream_collection_name,
     downstream_collection_name,
-    node_id_to_object=None,
-    source_map=None,
 ):
     """Split each interface entry into its upstream and downstream seed node ids.
 
@@ -203,31 +242,28 @@ def _split_interface_seeds(
     (e.g. COVID -> AD) is a parameter change, not a rewrite. Seeds are DB node
     ids, which is what the influence graph is keyed on.
 
-    Passing `node_id_to_object` and `source_map` keeps only the seeds that are
-    species **of the model**: an interface protein that appears solely as a
-    complex subunit is not one, so it has no glyph of its own and cannot seed a
-    walk. The map path filters; the gene-set path, which loads no map, does not
-    -- such a seed reaches nothing there either way.
+    Nothing is filtered out here, and nothing needs to be: `get_interface` has
+    already made every row's node a species of the collection the row names,
+    either the protein itself or a complex holding it. This used to filter as
+    well, against the species of the merged source map, and that test was
+    collection-blind -- it asked whether a node is a species of *either*
+    collection, not of the one its row names -- so it went rather than stay as a
+    wrong test doing a right test's job.
 
     There is no seed widening any more. It existed because a BEL KG kept the
     UniProt annotation on `p(HGNC:X)` and the causal wiring on `act(p(HGNC:X))`;
     the export describes the two identically and interns them into one species, so
     there is exactly one node per entity for a seed to land on.
     """
-    filtering = node_id_to_object is not None and source_map is not None
-
-    def keep(node_id):
-        if not filtering:
-            return True
-        return node_id_to_object.get(node_id) in source_map.model.species
 
     def seed_node_ids(nodes_with_context, collection_name):
-        node_ids = {
-            nwc["node"].element_id
-            for nwc in nodes_with_context
-            if nwc["collection"]["name"] == collection_name
-        }
-        return sorted(node_id for node_id in node_ids if keep(node_id))
+        return sorted(
+            {
+                node_with_context["node"].element_id
+                for node_with_context in nodes_with_context
+                if node_with_context["collection"]["name"] == collection_name
+            }
+        )
 
     seeds = {}
     for identifier, nodes_with_context in interface.items():
@@ -342,8 +378,6 @@ def make_and_write_submaps_from_interface(
         interface,
         upstream_collection_name,
         downstream_collection_name,
-        node_id_to_object=node_id_to_object,
-        source_map=source_map,
     )
     records = []
     for identifier in interface:
